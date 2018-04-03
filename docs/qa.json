@@ -1,7 +1,7 @@
 ﻿{
-  "url" : "http://fhir.org/guides/argonaut-clinicalnotes/ImplementationGuide/ig",
-  "name" : "Argonaut Clinical Notes",
-  "date" : "Tue, 03 Apr, 2018 13:51:28 -0700",
+  "url" : "http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig",
+  "name" : "Argonaut Questionnaire",
+  "date" : "Tue, 03 Apr, 2018 14:00:27 -0700",
   "errs" : "4",
   "warnings" : "0",
   "hints" : "0",

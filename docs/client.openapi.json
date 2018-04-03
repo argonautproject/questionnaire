@@ -9,7 +9,7 @@
     "contact": {}
   },
   "externalDocs": {
-    "url": "http://fhir.org/guides/argonaut-clinicalnotes/CapabilityStatement/client",
+    "url": "http://fhir.org/guides/argonaut-questionnaire/CapabilityStatement/client",
     "description": "FHIR CapabilityStatement"
   }
 }

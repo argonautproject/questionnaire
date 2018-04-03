@@ -3,10 +3,10 @@
   "id": "ig",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Argonaut Clinical Notes</h2><p>The official URL for this implementation guide is: </p><pre>http://fhir.org/guides/argonaut-clinicalnotes/ImplementationGuide/ig</pre></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Argonaut Questionnaire</h2><p>The official URL for this implementation guide is: </p><pre>http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig</pre></div>"
   },
-  "url": "http://fhir.org/guides/argonaut-clinicalnotes/ImplementationGuide/ig",
-  "name": "Argonaut Clinical Notes",
+  "url": "http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig",
+  "name": "Argonaut Questionnaire",
   "status": "draft",
   "experimental": true,
   "publisher": "Argonaut Project",
@@ -44,12 +44,12 @@
   ],
   "page": {
     "source": "index.md",
-    "title": "Argonaut Clinical Notes Homepage",
+    "title": "Argonaut Questionnaire Homepage",
     "kind": "page",
     "page": [
       {
         "source": "_includes/toc.md",
-        "title": "Argonaut Clinical Notes Table of Contents",
+        "title": "Argonaut Questionnaire Table of Contents",
         "kind": "page"
       }
     ]
