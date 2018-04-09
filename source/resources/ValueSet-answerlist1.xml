@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir">
+	<id value="example-answerlist1"/>
+	<url value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/example-answerlist1"/>
+	<version value="1.0.0"/>
+	<name value="Argonaut_Example_Answer_List1"/>
+	<title value="Argonaut Example Answer List 1"/>
+	<status value="active"/>
+	<date value="2018-04-05T19:40:10+00:00"/>
+	<description value="Argonaut Example Answer List 1 are used in the AUDIT questionnaire example for questions 9 and 10."/>
+	<jurisdiction>
+		<coding>
+			<system value="urn:iso:std:iso:3166"/>
+			<code value="US"/>
+			<display value="United States of America"/>
+		</coding>
+	</jurisdiction>
+	<compose>
+		<include>
+			<system value="http://loinc.org"/>
+			<concept>
+				<code value="LA15519-4"/>
+			</concept>
+		</include>
+		<include>
+			<system value="http://snomed.info/sct"/>
+			<concept>
+				<code value="373067005"/>
+			</concept>
+		</include>
+		<include>
+			<system value="http://fhir.org/guides/argonaut-questionnaire/CodeSystem/answer-codes"/>
+			<concept>
+				<code value="not-last-year"/>
+			</concept>
+		</include>
+	</compose>
+</ValueSet>
