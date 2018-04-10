@@ -5,10 +5,10 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
    <meta charset="UTF-8"/>
-  <title>Argonaut Clinical Notes</title>
+  <title>Argonaut Questionnaire</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Argonaut Clinical Notes Implemenation Guide" />
+<meta name="description" content="Argonaut Questionnaire Implemenation Guide" />
 <meta name="author" content="Argonaut Project"/>
   <link href="fhir.css" rel="stylesheet"/>
 
@@ -68,7 +68,7 @@
       <div id="project-status" class="project-status"> <!-- ig title text -->
 
       
-      <strong>Argonaut Clinical Notes Implementation Guide CI Build</strong>
+      <strong>Argonaut Questionnaire Implementation Guide CI Build</strong>
       
 
     </div><!-- end ig title text -->
@@ -220,26 +220,129 @@
 <nav class="breadcrumb">
   
     
-      <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a><a class="breadcrumb-item" href="index.html">Home</a>
-      /
-      <span class="breadcrumb-item active">Structure Maps defined as part of this Guide</span>
     
-    
+      
+        <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a><a class="breadcrumb-item" href="index.html">Home</a>
+        /
+        <a class="breadcrumb-item" href="terminology.html">Terminology</a>
+        /
+        <span class="breadcrumb-item active">CodeSystem-answer-codes.xml</span>
+
+      
+  
 
 </nav>
 
 
+
+<!-- ============nav-tabs=============== -->
+
+
+  
+    <!--  - choose what you want  comment out or Change what you don't-->
+<ul class="nav nav-tabs">
+
+	<li><a href="CodeSystem-answer-codes.html">Narrative Content</a></li>
+
+<!--
+{ % if CodeSystem == "StructureDefinition"  % }
+	{ % if xml == "definitions"  % }
+		<li class="active"><a href="#">Detailed Descriptions</a></li>
+	{ % else % }
+		<li><a href="CodeSystem-answer-codes-definitions.html">Detailed Descriptions</a></li>
+	{ % endif % }
+	{ % if xml == "mappings" % }
+		<li class="active"><a href="#">Mappings</a></li>
+	{ % else % }
+		<li><a href="CodeSystem-answer-codes-mappings.html">Mappings</a></li>
+	{ % endif % }
+{ % endif % }
+-->
+
+	<li class="active"><a href="#">XML</a></li>
+
+
+	<li><a href="CodeSystem-answer-codes.json.html">JSON</a></li>
+
+<!--
+{ % if xml == "turtle" % }
+	<li class="active"><a href="#">Turtle</a></li>
+{ % else % }
+	<li><a href="CodeSystem-answer-codes.ttl.html">Turtle</a></li>
+{ % endif % }
+-->
+</ul>
+
+    <h2>XML Format: CodeSystem-answer-codes</h2>
+  
+<!--
+   { % elsif page.template == 'definitions'% }
+    { % include nav-tabs.html type=page.type id=page.id active="definitions" % }
+  { % elsif page.template == 'mappings' %} 
+    { % include nav-tabs.html type=page.type id=page.id active="mappings" % }
+ -->
+  
+
   <!-- ============CONTENT CONTENT=============== -->
 
-<h1>Structure Maps defined as part of this Guide</h1>
 
-<!-- page source: structuremaps.md  -->
+<!-- ============ CONTENT CONTENT=============== -->
 
-<h4 id="structure-maps">Structure Maps</h4>
+  <!-- ============ default xml or json content for structuredefinition CONTENT CONTENT=============== -->
+  <p>
+  Raw <a href="CodeSystem-answer-codes.xml" download>xml</a>
+  </p>
 
-<p>This is the mappings between FHIR resources and Logical Models:</p>
+<pre class="xml">
 
-<hr />
+&lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem">CodeSystem</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;answer-codes&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;Argonaut Answer Codes&lt;/h2&gt;&lt;div&gt;&lt;p&gt;Argonaut Example Answer Codes are used in the questionnaire examples&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;This code system http://fhir.org/guides/argonaut-questionnaire/CodeSystem/answer-codes defines the following codes:&lt;/p&gt;&lt;table class=&quot;codes&quot;&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;not-last-year&lt;a name=&quot;answer-codes-not-last-year&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Yes, but not in the last year&lt;/td&gt;&lt;td&gt;'Yes, but not in the last year' is a response to  a questionnaire question&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;
+  &lt;/text&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.url">url</a>
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/CodeSystem/answer-codes&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.version">version</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;0.0.0&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Argonaut_Answer_Codes&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.title">title</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Argonaut Answer Codes&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.experimental">experimental</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.date">date</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2018-04-05T09:46:45-07:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.description">description</a>
+               <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">value</a>=&quot;Argonaut Example Answer Codes are used in the questionnaire examples&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.jurisdiction">jurisdiction</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;urn:iso:std:iso:3166&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;US&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;United States of America&quot;/&gt;
+    &lt;/coding&gt;
+  &lt;/jurisdiction&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.caseSensitive">caseSensitive</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.valueSet">valueSet</a>
+            <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/ValueSet/answer-codes&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.content">content</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;complete&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept">concept</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;not-last-year&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Yes, but not in the last year&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/codesystem.html#CodeSystem.concept.definition">definition</a>
+                <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;&amp;#39;Yes, but not in the last year&amp;#39; is a response to  a questionnaire question&quot;/&gt;
+  &lt;/concept&gt;
+&lt;/CodeSystem&gt;</pre>
+
+
+<!-- ============ default xml or json content CONTENT CONTENT=============== -->
+
+
+<!-- simple format links
+<p>
+Formats: <a href="CodeSystem-answer-codes.html">Narrative</a>, <a href="CodeSystem-answer-codes.xml.html">XML</a>, <a href="CodeSystem-answer-codes.json.html">JSON</a>, <a href="CodeSystem-answer-codes.ttl.html">Turtle</a>
+</p>
+-->
+
+
+  <!-- ==============END CONTENT END CONTENT=================== -->
 
 
 
@@ -256,6 +359,7 @@
 
 
 
+
 </div>
 
     </div>  <!-- /inner-wrapper -->
@@ -266,6 +370,8 @@
 
 <!-- back to top arrow -->
 
+<a id="back-to-top" href="#" class="btn btn-info btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
+
 
 <!-- end back to top arrow -->
 
@@ -273,7 +379,7 @@
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Argonaut Clinical Notes Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, Apr 10, 2018 15:55-0700. |
+            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Tue, Apr 10, 2018 16:17-0700. |
              <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>
@@ -300,6 +406,8 @@
 <script src="./assets/js/anchor.min.js"> </script>
 <script src="./assets/js/fhir.js"> </script>
 
+
+<script src="./assets/js/topofpage.js"> </script>
 
 
 

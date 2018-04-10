@@ -3,10 +3,10 @@
   "id": "ig",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Argonaut Clinical Notes</h2><p>The official URL for this implementation guide is: </p><pre>http://fhir.org/guides/argonaut-clinicalnotes/ImplementationGuide/ig</pre></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Argonaut Questionnaire</h2><p>The official URL for this implementation guide is: </p><pre>http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig</pre></div>"
   },
-  "url": "http://fhir.org/guides/argonaut-clinicalnotes/ImplementationGuide/ig",
-  "name": "Argonaut Clinical Notes",
+  "url": "http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig",
+  "name": "Argonaut Questionnaire",
   "status": "draft",
   "experimental": true,
   "publisher": "Argonaut Project",
@@ -19,12 +19,84 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "valueUri": "StructureDefinition-argo-clinicalnotes.html"
+              "valueUri": "Questionnaire-questionnaire-example-phq-9.html"
+            }
+          ],
+          "example": true,
+          "sourceReference": {
+            "reference": "Questionnaire/questionnaire-example-phq-9"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Questionnaire-questionnaire-example-dast.html"
+            }
+          ],
+          "example": true,
+          "sourceReference": {
+            "reference": "Questionnaire/questionnaire-example-dast"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Questionnaire-questionnaire-example-audit.html"
+            }
+          ],
+          "example": true,
+          "sourceReference": {
+            "reference": "Questionnaire/questionnaire-example-audit"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "ValueSet-example-answerlist1.html"
             }
           ],
           "example": false,
           "sourceReference": {
-            "reference": "StructureDefinition/argo-clinicalnotes"
+            "reference": "ValueSet/example-answerlist1"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-qr.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition/qr"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-q.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition/q"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "CodeSystem-answer-codes.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "CodeSystem/answer-codes"
           }
         },
         {
@@ -52,16 +124,52 @@
           }
         }
       ]
+    },
+    {
+      "id": "Q-profile-spreadsheet.xml",
+      "name": "Argonaut_Q_Profile",
+      "resource": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-q.html"
+            }
+          ],
+          "name": "Argonaut_Q_Profile",
+          "sourceReference": {
+            "reference": "StructureDefinition/q"
+          }
+        }
+      ]
+    },
+    {
+      "id": "QR-profile-spreadsheet.xml",
+      "name": "Argonaut_QR_Profile",
+      "resource": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-qr.html"
+            }
+          ],
+          "name": "Argonaut_QR_Profile",
+          "sourceReference": {
+            "reference": "StructureDefinition/qr"
+          }
+        }
+      ]
     }
   ],
   "page": {
     "source": "index.md",
-    "title": "Argonaut Clinical Notes Homepage",
+    "title": "Argonaut Questionnaire Homepage",
     "kind": "page",
     "page": [
       {
         "source": "_includes/toc.md",
-        "title": "Argonaut Clinical Notes Table of Contents",
+        "title": "Argonaut Questionnaire Table of Contents",
         "kind": "page"
       }
     ]
