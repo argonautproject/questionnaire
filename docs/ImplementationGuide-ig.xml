@@ -3,10 +3,10 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="ig"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Argonaut Questionnaire</h2><p>The official URL for this implementation guide is: </p><pre>http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig</pre></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Argonaut Clinical Notes</h2><p>The official URL for this implementation guide is: </p><pre>http://fhir.org/guides/argonaut-clinicalnotes/ImplementationGuide/ig</pre></div>
   </text>
-  <url value="http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig"/>
-  <name value="Argonaut Questionnaire"/>
+  <url value="http://fhir.org/guides/argonaut-clinicalnotes/ImplementationGuide/ig"/>
+  <name value="Argonaut Clinical Notes"/>
   <status value="draft"/>
   <experimental value="true"/>
   <publisher value="Argonaut Project"/>
@@ -14,56 +14,11 @@
     <name value="base"/>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="Questionnaire-questionnaire-example-phq-9.html"/>
-      </extension>
-      <example value="true"/>
-      <sourceReference>
-        <reference value="Questionnaire/questionnaire-example-phq-9"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="Questionnaire-questionnaire-example-audit.html"/>
-      </extension>
-      <example value="true"/>
-      <sourceReference>
-        <reference value="Questionnaire/questionnaire-example-audit"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="ValueSet-example-answerlist1.html"/>
+        <valueUri value="StructureDefinition-argo-clinicalnotes.html"/>
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="ValueSet/example-answerlist1"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-qr.html"/>
-      </extension>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/qr"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-q.html"/>
-      </extension>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/q"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="CodeSystem-answer-codes.html"/>
-      </extension>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="CodeSystem/answer-codes"/>
+        <reference value="StructureDefinition/argo-clinicalnotes"/>
       </sourceReference>
     </resource>
     <resource>
@@ -85,37 +40,13 @@
       </sourceReference>
     </resource>
   </package>
-  <package id="Q-profile-spreadsheet.xml">
-    <name value="Argonaut_Q_Profile"/>
-    <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-q.html"/>
-      </extension>
-      <name value="Argonaut_Q_Profile"/>
-      <sourceReference>
-        <reference value="StructureDefinition/q"/>
-      </sourceReference>
-    </resource>
-  </package>
-  <package id="QR-profile-spreadsheet.xml">
-    <name value="Argonaut_QR_Profile"/>
-    <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-qr.html"/>
-      </extension>
-      <name value="Argonaut_QR_Profile"/>
-      <sourceReference>
-        <reference value="StructureDefinition/qr"/>
-      </sourceReference>
-    </resource>
-  </package>
   <page>
     <source value="index.md"/>
-    <title value="Argonaut Questionnaire Homepage"/>
+    <title value="Argonaut Clinical Notes Homepage"/>
     <kind value="page"/>
     <page>
       <source value="_includes/toc.md"/>
-      <title value="Argonaut Questionnaire Table of Contents"/>
+      <title value="Argonaut Clinical Notes Table of Contents"/>
       <kind value="page"/>
     </page>
   </page>

@@ -15,10 +15,10 @@ The following Profiles have been defined for this implementation guide.
 
 These extensions have been defined for this implementation guide.
 
-<!-- remove this line to list profiles  -->{% raw %} *use this line to list the profiles*
+<!-- remove this line to list extensions  -->{% raw %} *use this line to list the extensions*
 
 {% include list-extensions.xhtml %}
 
-{% endraw %} <!-- remove this line to list profiles  -->
+{% endraw %} <!-- remove this line to list extensions  -->
 
 <br />
