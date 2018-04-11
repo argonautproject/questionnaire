@@ -1,9 +1,9 @@
 ﻿{
   "url" : "http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig",
   "name" : "Argonaut Questionnaire",
-  "date" : "Tue, 10 Apr, 2018 16:17:25 -0700",
-  "errs" : "94",
-  "warnings" : "2",
+  "date" : "Tue, 10 Apr, 2018 17:58:43 -0700",
+  "errs" : "100",
+  "warnings" : "4",
   "hints" : "4",
   "version" : "3.0.1",
   "tool" : "3.3.0-13659"

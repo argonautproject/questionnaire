@@ -6,8 +6,7 @@
     <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"/>
   </meta>
   <text>
-    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><h3>Drug Abuse Screening Test (DAST-10)</h3><img src="data:image/gif;base64,
-R0lGODlh0gJkAXcAMSH+GlNvZnR3YXJlOiBNaWNyb3NvZnQgT2ZmaWNlACH5BAEAAAAALAEAAQDQ
+    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><h3>Drug Abuse Screening Test (DAST-10)</h3><img src="data:image/gif;base64,R0lGODlh0gJkAXcAMSH+GlNvZnR3YXJlOiBNaWNyb3NvZnQgT2ZmaWNlACH5BAEAAAAALAEAAQDQ
 AmIBhwAAAAAAAAAAMwAAZgAAmQAAzAAA/wAzAAAzMwAzZgAzmQAzzAAz/wBmAABmMwBmZgBmmQBm
 zABm/wCZAACZMwCZZgCZmQCZzACZ/wDMAADMMwDMZgDMmQDMzADM/wD/AAD/MwD/ZgD/mQD/zAD/
 /zMAADMAMzMAZjMAmTMAzDMA/zMzADMzMzMzZjMzmTMzzDMz/zNmADNmMzNmZjNmmTNmzDNm/zOZ

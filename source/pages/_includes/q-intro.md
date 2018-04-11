@@ -21,6 +21,8 @@ The following data-elements are mandatory (i.e data MUST be present). blah blah 
 
 #### Examples
 
+{% include list-simple-questionnaires.xhtml %}
+
 - [PHQ-9](Questionnaire-questionnaire-example-phq-9.html)
 - [AUDIT](Questionnaire-questionnaire-example-audit.html)
 - [DAST](Questionnaire-questionnaire-example-dast.html)

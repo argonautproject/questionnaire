@@ -31,6 +31,18 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Questionnaire-questionnaire-example-housing.html"
+            }
+          ],
+          "example": true,
+          "sourceReference": {
+            "reference": "Questionnaire/questionnaire-example-housing"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "Questionnaire-questionnaire-example-dast.html"
             }
           ],

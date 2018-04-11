@@ -23,6 +23,15 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Questionnaire-questionnaire-example-housing.html"/>
+      </extension>
+      <example value="true"/>
+      <sourceReference>
+        <reference value="Questionnaire/questionnaire-example-housing"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="Questionnaire-questionnaire-example-dast.html"/>
       </extension>
       <example value="true"/>
