@@ -5,11 +5,11 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
    <meta charset="UTF-8"/>
-  <title>IG-Test3</title>
+  <title>Argonaut Questionnaire</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="IG-Test3 Implemenation Guide" />
-<meta name="author" content="Health eData Inc"/>
+<meta name="description" content="Argonaut Questionnaire Implemenation Guide" />
+<meta name="author" content="Argonaut Project"/>
   <link href="fhir.css" rel="stylesheet"/>
 
 
@@ -25,8 +25,6 @@
   <link href="assets/css/project.css" rel="stylesheet"/>
   <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
 	<link href="assets/css/jquery-ui.css" rel="stylesheet"/>
-
-<link href="assets/css/argo-sched.css" rel="stylesheet"/>
 
 
 
@@ -57,18 +55,11 @@
 <img height="50" alt="visit the hl7 website" width="42" src="assets/images/hl7-logo.png"/>
 </a>
 
-your logo here
-
-[![visit our website](assets/images/org_logo.png)](your web site.html)
-{: .img-responsive #org_logo}
-
-can only resize using html  or css ;-(
-
+================THIS IS FOR THE PROJECT LOGO AND URL ===============
 -->
 
-
-<a no-external="true" href="http://www.openmhealth.org/">
-<img alt="visit our website" class="img-responsive project-logo" src="assets/images/org_logo.jpg"/>
+<a no-external="true" href="http://argonautwiki.hl7.org">
+<img alt="visit our website" class="img-responsive project-logo" src="assets/images/ArgonautProject_logo_black.png"/>
 </a>
 
   <!-- end org logo -->
@@ -77,7 +68,7 @@ can only resize using html  or css ;-(
       <div id="project-status" class="project-status"> <!-- ig title text -->
 
       
-      <strong>IG-Test3 Implementation Guide CI Build</strong>
+      <strong>Argonaut Questionnaire Implementation Guide CI Build</strong>
       
 
     </div><!-- end ig title text -->
@@ -110,19 +101,56 @@ can only resize using html  or css ;-(
         <a class="navbar-brand hidden" href="http://hl7.org/fhir/STU3/index.html">FHIR</a>
         <div class="nav-collapse collapse navbar-inverse-collapse">
 
-       <!-- don't remove the line above - to add or remove a menu item commeent in or out -->
+       
+<!--{:.nav .navbar-nav} don't remove the line above - to add or remove a menu item commeent in or out - [Home](index.html)- [Use Cases...](guidance.html){: .dropdown-toggle data-toggle="dropdown"}  - [Patient Based Scheduling](patient-scheduling.html)  - [Provider based Scheduling](provider-scheduling.html)  {: .dropdown-menu}- [Operations](operations.html)- [Profiles/Extensions](profiles.html)- [Terminology](terminology.html)- [Capability Statements...](capstatements.html){: .dropdown-toggle data-toggle="dropdown"}  - [Conformance requirements for Server](CapabilityStatement-server.html)  - [Conformance requirements for Client](client-capstatement.html)  {: .dropdown-menu}- [Downloads](downloads.html)-->
 <ul class="nav navbar-nav">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="guidance.html">General Guidance</a></li>
-  <li><a href="profiles.html">Profiles and Logical Models</a></li>
-  <li><a href="structuremaps.html">Mappings</a>
-<!-- - [Extensions](extensions.html) --></li>
-  <li><a href="terminology.html">Terminology</a>
-<!-- - [Search Parameters](searchparams.html) --></li>
-  <li><a href="capstatements.html">Capability Statements</a>
-<!-- - [Security](security.html) -->
-<!-- - [Examples](examples.html) --></li>
-  <li><a href="downloads.html">Downloads</a></li>
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="guidance.html">Guidance</a>
+  </li>
+
+  <!--
+  <li class="dropdown">
+    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Use Cases<b class="caret">
+    </b>
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <a href="patient-scheduling.html">Patient Based Scheduling</a>
+    </li>
+    <li>
+      <a href="provider-scheduling.html">Provider Based Scheduling</a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="operations.html">Operations</a>
+</li>
+-->
+<li>
+  <a href="profiles.html">Profiles/Extensions</a>
+</li>
+<li>
+  <a href="terminology.html">Terminology</a>
+</li>
+<li class="dropdown">
+  <a href="#" data-toggle="dropdown" class="dropdown-toggle">Capability Statements<b class="caret">
+  </b>
+</a>
+<ul class="dropdown-menu">
+  <li>
+    <a href="CapabilityStatement-server.html">Conformance requirements for Server</a>
+  </li>
+  <li>
+    <a href="CapabilityStatement-client.html">Conformance requirements for Client</a>
+  </li>
+</ul>
+</li>
+<li>
+  <a href="downloads.html">Downloads</a>
+</li>
 </ul>
 
 
@@ -207,223 +235,34 @@ can only resize using html  or css ;-(
 
 <!-- page source: downloads.md  -->
 
-<!-- TOC  the css styling for this is \pages\assets\css\project.css under 'markdown-toc'-->
+<p><strong>Validator Pack and Definitions:</strong></p>
 
-<ul id="markdown-toc">
-  <li><a href="#argonaut-implementation-guide" id="markdown-toc-argonaut-implementation-guide">Argonaut Implementation Guide</a>    <ul>
-      <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
-      <li><a href="#scope" id="markdown-toc-scope">Scope</a>        <ul>
-          <li><a href="#patient-based-scheduling" id="markdown-toc-patient-based-scheduling">Patient Based Scheduling</a></li>
-          <li><a href="#provider-based-scheduling" id="markdown-toc-provider-based-scheduling">Provider based Scheduling</a></li>
-        </ul>
-      </li>
-      <li><a href="#actors" id="markdown-toc-actors">Actors</a></li>
-      <li><a href="#assumptions-and-preconditions" id="markdown-toc-assumptions-and-preconditions">Assumptions and Preconditions</a></li>
-      <li><a href="#security" id="markdown-toc-security">Security</a></li>
-      <li><a href="#best-practices" id="markdown-toc-best-practices">Best Practices</a></li>
-      <li><a href="#future-scope" id="markdown-toc-future-scope">Future Scope</a></li>
-      <li><a href="#patient-based-scheduling-1" id="markdown-toc-patient-based-scheduling-1">Patient Based Scheduling</a>        <ul>
-          <li><a href="#introduction-1" id="markdown-toc-introduction-1">Introduction</a></li>
-          <li><a href="#use-case-1-patient-portal-scheduling-for-existing-patients" id="markdown-toc-use-case-1-patient-portal-scheduling-for-existing-patients">Use Case 1: Patient Portal Scheduling for existing patients</a>            <ul>
-              <li><a href="#patient-login" id="markdown-toc-patient-login">Patient login</a></li>
-              <li><a href="#appointment-availability-discovery-and-search" id="markdown-toc-appointment-availability-discovery-and-search">Appointment Availability Discovery and Search</a></li>
-              <li><a href="#optional-hold-appointment-operation" id="markdown-toc-optional-hold-appointment-operation">Optional Hold Appointment Operation</a></li>
-              <li><a href="#book-appointment" id="markdown-toc-book-appointment">Book Appointment</a></li>
-            </ul>
-          </li>
-          <li><a href="#use-case-2-open-scheduling-for-new-patient-or-existing-patient" id="markdown-toc-use-case-2-open-scheduling-for-new-patient-or-existing-patient">Use Case 2: Open Scheduling for new patient or existing patient</a>            <ul>
-              <li><a href="#patient-registration-option-a" id="markdown-toc-patient-registration-option-a">Patient Registration Option A</a></li>
-              <li><a href="#appointment-availability-discovery-and-search-1" id="markdown-toc-appointment-availability-discovery-and-search-1">Appointment Availability Discovery and Search</a></li>
-              <li><a href="#optional-hold-appointment-operation-1" id="markdown-toc-optional-hold-appointment-operation-1">Optional Hold Appointment Operation</a></li>
-              <li><a href="#patient-registration-option-b" id="markdown-toc-patient-registration-option-b">Patient Registration Option B</a></li>
-              <li><a href="#book-appointment-1" id="markdown-toc-book-appointment-1">Book Appointment</a></li>
-              <li><a href="#patient-coverage-update-option-c" id="markdown-toc-patient-coverage-update-option-c">Patient Coverage Update Option C</a></li>
-            </ul>
-          </li>
-          <li><a href="#use-case-3-prefetching-open-slots" id="markdown-toc-use-case-3-prefetching-open-slots">Use Case 3 Prefetching Open Slots</a>            <ul>
-              <li><a href="#share-business-rules" id="markdown-toc-share-business-rules">Share Business Rules</a></li>
-              <li><a href="#subscribe-for-schedule-change-notifications" id="markdown-toc-subscribe-for-schedule-change-notifications">Subscribe for Schedule Change Notifications</a></li>
-              <li><a href="#initial-load" id="markdown-toc-initial-load">Initial Load</a></li>
-              <li><a href="#notification-of-schedule-changes" id="markdown-toc-notification-of-schedule-changes">Notification of schedule changes</a></li>
-              <li><a href="#smart-polling-for-updated-slots" id="markdown-toc-smart-polling-for-updated-slots">“Smart Polling” for Updated Slots</a></li>
-              <li><a href="#patient-registration-option-a-1" id="markdown-toc-patient-registration-option-a-1">Patient Registration Option A</a></li>
-              <li><a href="#appointment-availability-discovery-and-search-2" id="markdown-toc-appointment-availability-discovery-and-search-2">Appointment Availability Discovery and Search</a></li>
-              <li><a href="#optional-hold-appointment-operation-2" id="markdown-toc-optional-hold-appointment-operation-2">Optional Hold Appointment Operation</a></li>
-              <li><a href="#patient-registration-option-b-1" id="markdown-toc-patient-registration-option-b-1">Patient Registration Option B</a></li>
-              <li><a href="#book-appointment-2" id="markdown-toc-book-appointment-2">Book Appointment</a></li>
-              <li><a href="#patient-coverage-update-option-c-1" id="markdown-toc-patient-coverage-update-option-c-1">Patient Coverage Update Option C</a></li>
-            </ul>
-          </li>
-          <li><a href="#cancelingrescheduling-appointments" id="markdown-toc-cancelingrescheduling-appointments">Canceling/Rescheduling Appointments</a>            <ul>
-              <li><a href="#usage" id="markdown-toc-usage">Usage</a></li>
-            </ul>
-          </li>
-          <li><a href="#releasing-holds" id="markdown-toc-releasing-holds">Releasing Holds</a>            <ul>
-              <li><a href="#usage-1" id="markdown-toc-usage-1">Usage</a></li>
-            </ul>
-          </li>
-          <li><a href="#retrieving-appointments" id="markdown-toc-retrieving-appointments">Retrieving appointments</a>            <ul>
-              <li><a href="#apis" id="markdown-toc-apis">APIs</a></li>
-              <li><a href="#usage-2" id="markdown-toc-usage-2">Usage</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li><a href="#provider-based-scheduling-1" id="markdown-toc-provider-based-scheduling-1">Provider Based Scheduling</a>        <ul>
-          <li><a href="#introduction-2" id="markdown-toc-introduction-2">Introduction</a></li>
-          <li><a href="#use-case-1-scheduling-across-systems" id="markdown-toc-use-case-1-scheduling-across-systems">Use Case 1: Scheduling across systems</a>            <ul>
-              <li><a href="#optional-find-patient" id="markdown-toc-optional-find-patient">Optional Find Patient</a></li>
-              <li><a href="#new-patient-registrationcoverage-information-option-a" id="markdown-toc-new-patient-registrationcoverage-information-option-a">New Patient Registration/Coverage Information Option A</a></li>
-              <li><a href="#appointment-availability-discovery-and-search-3" id="markdown-toc-appointment-availability-discovery-and-search-3">Appointment Availability Discovery and Search</a></li>
-              <li><a href="#optional-hold-appointment-operation-3" id="markdown-toc-optional-hold-appointment-operation-3">Optional hold appointment operation</a></li>
-              <li><a href="#new-patient-registrationcoverage-information-option-b" id="markdown-toc-new-patient-registrationcoverage-information-option-b">New Patient Registration/Coverage Information Option B</a></li>
-              <li><a href="#book-appointment-3" id="markdown-toc-book-appointment-3">Book appointment</a></li>
-              <li><a href="#optional-exchange-of-patient-information" id="markdown-toc-optional-exchange-of-patient-information">Optional exchange of patient information</a></li>
-            </ul>
-          </li>
-          <li><a href="#use-case-2-scheduling-for-existing-patient-across-systems" id="markdown-toc-use-case-2-scheduling-for-existing-patient-across-systems">Use Case 2: Scheduling for existing patient across systems</a></li>
-          <li><a href="#use-case-3-scheduling-for-existing-patient-within-a-system" id="markdown-toc-use-case-3-scheduling-for-existing-patient-within-a-system">Use Case 3: Scheduling for existing patient <em>within</em> a system</a></li>
-          <li><a href="#cancelingrescheduling-appointments-1" id="markdown-toc-cancelingrescheduling-appointments-1">Canceling/Rescheduling appointments</a></li>
-          <li><a href="#releasing-holds-1" id="markdown-toc-releasing-holds-1">Releasing holds</a></li>
-          <li><a href="#retrieving-patient-appointments" id="markdown-toc-retrieving-patient-appointments">Retrieving Patient appointments</a></li>
-        </ul>
-      </li>
-      <li><a href="#downloads" id="markdown-toc-downloads">Downloads</a>        <ul>
-          <li><a href="#implemenationguide-resource" id="markdown-toc-implemenationguide-resource">ImplemenationGuide Resource</a></li>
-          <li><a href="#validator-pack-and-definitions" id="markdown-toc-validator-pack-and-definitions">Validator Pack and Definitions</a></li>
-          <li><a href="#schematrons" id="markdown-toc-schematrons">Schematrons</a></li>
-          <li><a href="#examples" id="markdown-toc-examples">Examples</a></li>
-        </ul>
-      </li>
-    </ul>
-  </li>
+<p>The following file contains all the value sets, profiles, extensions, list of pages and urls in the IG, etc defined as part of the this Implementation Guides.:</p>
+
+<ul>
+  <li><a href="validator.pack">Validator Pack</a></li>
 </ul>
 
-<h1 id="argonaut-implementation-guide">Argonaut Implementation Guide</h1>
+<p>In addition there are format specific definitions files.
+- <a href="definitions.xml.zip">XML</a>
+- <a href="definitions.json.zip">JSON</a>
+- <a href="definitions.ttl.zip">TTL</a></p>
 
-<h2 id="introduction">Introduction</h2>
+<p>These files should be the first choice whenever generating any implementation artifacts since they contain all of the rules about what makes these US-Core profiles valid. Implementers will still need to be familiar with the content of the specification and profiles that apply in order to make a conformant implementation.  See the overview on <a href="http://hl7.org/fhir/STU3/validation.html">validating FHIR profiles and resources</a></p>
 
-<h2 id="scope">Scope</h2>
+<p><strong>Schematrons</strong> are also available and listed below:</p>
 
-<h3 id="patient-based-scheduling">Patient Based Scheduling</h3>
+<ul>
+  <li><a href="#">Schematrons</a></li>
+</ul>
 
-<h3 id="provider-based-scheduling">Provider based Scheduling</h3>
+<p><strong>Examples:</strong> all the examples that are used in this Implementation Guide available for download:</p>
 
-<h2 id="actors">Actors</h2>
-
-<h2 id="assumptions-and-preconditions">Assumptions and Preconditions</h2>
-
-<h2 id="security">Security</h2>
-
-<h2 id="best-practices">Best Practices</h2>
-
-<h2 id="future-scope">Future Scope</h2>
-
-<h2 id="patient-based-scheduling-1">Patient Based Scheduling</h2>
-
-<h3 id="introduction-1">Introduction</h3>
-
-<h3 id="use-case-1-patient-portal-scheduling-for-existing-patients">Use Case 1: Patient Portal Scheduling for existing patients</h3>
-
-<h4 id="patient-login">Patient login</h4>
-
-<h4 id="appointment-availability-discovery-and-search">Appointment Availability Discovery and Search</h4>
-
-<h4 id="optional-hold-appointment-operation">Optional Hold Appointment Operation</h4>
-
-<h4 id="book-appointment">Book Appointment</h4>
-
-<h3 id="use-case-2-open-scheduling-for-new-patient-or-existing-patient">Use Case 2: Open Scheduling for new patient or existing patient</h3>
-
-<h4 id="patient-registration-option-a">Patient Registration Option A</h4>
-
-<h4 id="appointment-availability-discovery-and-search-1">Appointment Availability Discovery and Search</h4>
-
-<h4 id="optional-hold-appointment-operation-1">Optional Hold Appointment Operation</h4>
-
-<h4 id="patient-registration-option-b">Patient Registration Option B</h4>
-
-<h4 id="book-appointment-1">Book Appointment</h4>
-
-<h4 id="patient-coverage-update-option-c">Patient Coverage Update Option C</h4>
-
-<h3 id="use-case-3-prefetching-open-slots">Use Case 3 Prefetching Open Slots</h3>
-
-<h4 id="share-business-rules">Share Business Rules</h4>
-
-<h4 id="subscribe-for-schedule-change-notifications">Subscribe for Schedule Change Notifications</h4>
-
-<h4 id="initial-load">Initial Load</h4>
-
-<h4 id="notification-of-schedule-changes">Notification of schedule changes</h4>
-
-<h4 id="smart-polling-for-updated-slots">“Smart Polling” for Updated Slots</h4>
-
-<h4 id="patient-registration-option-a-1">Patient Registration Option A</h4>
-
-<h4 id="appointment-availability-discovery-and-search-2">Appointment Availability Discovery and Search</h4>
-
-<h4 id="optional-hold-appointment-operation-2">Optional Hold Appointment Operation</h4>
-
-<h4 id="patient-registration-option-b-1">Patient Registration Option B</h4>
-
-<h4 id="book-appointment-2">Book Appointment</h4>
-
-<h4 id="patient-coverage-update-option-c-1">Patient Coverage Update Option C</h4>
-
-<h3 id="cancelingrescheduling-appointments">Canceling/Rescheduling Appointments</h3>
-
-<h4 id="usage">Usage</h4>
-
-<h3 id="releasing-holds">Releasing Holds</h3>
-
-<h4 id="usage-1">Usage</h4>
-
-<h3 id="retrieving-appointments">Retrieving appointments</h3>
-
-<h4 id="apis">APIs</h4>
-
-<h4 id="usage-2">Usage</h4>
-
-<h2 id="provider-based-scheduling-1">Provider Based Scheduling</h2>
-
-<h3 id="introduction-2">Introduction</h3>
-
-<h3 id="use-case-1-scheduling-across-systems">Use Case 1: Scheduling across systems</h3>
-
-<h4 id="optional-find-patient">Optional Find Patient</h4>
-
-<h4 id="new-patient-registrationcoverage-information-option-a">New Patient Registration/Coverage Information Option A</h4>
-
-<h4 id="appointment-availability-discovery-and-search-3">Appointment Availability Discovery and Search</h4>
-
-<h4 id="optional-hold-appointment-operation-3">Optional hold appointment operation</h4>
-
-<h4 id="new-patient-registrationcoverage-information-option-b">New Patient Registration/Coverage Information Option B</h4>
-
-<h4 id="book-appointment-3">Book appointment</h4>
-
-<h4 id="optional-exchange-of-patient-information">Optional exchange of patient information</h4>
-
-<h3 id="use-case-2-scheduling-for-existing-patient-across-systems">Use Case 2: Scheduling for existing patient across systems</h3>
-
-<h3 id="use-case-3-scheduling-for-existing-patient-within-a-system">Use Case 3: Scheduling for existing patient <em>within</em> a system</h3>
-
-<h3 id="cancelingrescheduling-appointments-1">Canceling/Rescheduling appointments</h3>
-
-<h3 id="releasing-holds-1">Releasing holds</h3>
-
-<h3 id="retrieving-patient-appointments">Retrieving Patient appointments</h3>
-
-<h2 id="downloads">Downloads</h2>
-
-<h3 id="implemenationguide-resource">ImplemenationGuide Resource</h3>
-
-<h3 id="validator-pack-and-definitions">Validator Pack and Definitions</h3>
-
-<h3 id="schematrons">Schematrons</h3>
-
-<h3 id="examples">Examples</h3>
+<ul>
+  <li><a href="examples.xml.zip">XML</a></li>
+  <li><a href="examples.json.zip">JSON</a></li>
+  <li><a href="examples.ttl.zip">TTl</a></li>
+</ul>
 
 
 
@@ -457,7 +296,7 @@ can only resize using html  or css ;-(
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            IG-Test3 Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, Apr 18, 2018 06:04-0700. |
+            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, Apr 18, 2018 09:11-0700. |
              <!--  <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>

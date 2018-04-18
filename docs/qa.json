@@ -1,10 +1,10 @@
 ﻿{
-  "url" : "http://www.fhir.org/guides/test3/ImplementationGuide/ig",
-  "name" : "IG-Test3",
-  "date" : "Wed, 18 Apr, 2018 06:04:01 -0700",
-  "errs" : "22",
-  "warnings" : "2",
-  "hints" : "0",
+  "url" : "http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig",
+  "name" : "Argonaut Questionnaire",
+  "date" : "Wed, 18 Apr, 2018 09:11:51 -0700",
+  "errs" : "142",
+  "warnings" : "6",
+  "hints" : "4",
   "version" : "3.0.1",
   "tool" : "3.4.0-13690"
 }
