@@ -18,15 +18,6 @@
   fhir:StructureDefinition.status [ fhir:value "active"];
   fhir:StructureDefinition.date [ fhir:value "2018-04-04T00:00:00-07:00"^^xsd:dateTime];
   fhir:StructureDefinition.description [ fhir:value "The  Argonaut QR pofile sets the minimum expectations for the QR resource to record, search and fetch QR from simple assessments, surveys, etc as defined in this implementation guide"];
-  fhir:StructureDefinition.jurisdiction [
-     fhir:index 0;
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
-       fhir:Coding.code [ fhir:value "US" ];
-       fhir:Coding.display [ fhir:value "United States of America" ]
-     ]
-  ];
   fhir:StructureDefinition.fhirVersion [ fhir:value "3.0.1"];
   fhir:StructureDefinition.mapping [
      fhir:index 0;

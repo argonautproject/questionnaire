@@ -1064,7 +1064,7 @@ LziDN7iDPziER7iEV2hAAAA7
   </identifier>
   <title value="Ages and Stages Questionnaire (ASQ-3) Sample 16 Month Questionnaire"/>
   <status value="draft"/>
-  <date value="2018-04-11 20:02:15.530000"/>
+  <date value="2018-04-21T01:22:33Z"/>
   <publisher value="ArgonautProject"/>
   <jurisdiction>
     <coding>
@@ -1090,15 +1090,14 @@ LziDN7iDPziER7iEV2hAAAA7
     <linkId value="Instructions"/>
     <text value="On the following pages are questions about activities babies may do. Your baby may have already done some of the activities described here, and there may be some your baby has not begun doing yet. For each item, please fill in the circle that indicates whether your baby is doing the activity regularly, sometimes, or not yet.  Important Points to Remember: Try each activity with your baby before marking a response. Make completing this questionnaire a game that is fun for you and your child. Make sure your child is rested and fed. Please return this questionnaire by _______________."/>
     <type value="display"/>
-    <required value="true"/>
   </item>
   <item>
-    <linkId value="G1"/>
+    <linkId value="g1"/>
     <text value="GROSS MOTOR"/>
     <type value="group"/>
     <required value="true"/>
     <item>
-      <linkId value="G1.4"/>
+      <linkId value="g1.4"/>
       <prefix value="4"/>
       <text value="Does your child move around by walking, rather than crawling on her hands and knees"/>
       <type value="choice"/>
@@ -1136,7 +1135,7 @@ LziDN7iDPziER7iEV2hAAAA7
       </option>
     </item>
     <item>
-      <linkId value="G1.5"/>
+      <linkId value="g1.5"/>
       <prefix value="5"/>
       <text value="Does your child walk well and seldom fall?"/>
       <type value="choice"/>
@@ -1174,7 +1173,7 @@ LziDN7iDPziER7iEV2hAAAA7
       </option>
     </item>
     <item>
-      <linkId value="G1.6"/>
+      <linkId value="g1.6"/>
       <prefix value="6"/>
       <text value="Does your child climb on an object such as a chair to reach something he wants ( for example, to get a toy on the counter or to &quot;help&quot; you in the kitchen)?"/>
       <type value="choice"/>
@@ -1213,12 +1212,12 @@ LziDN7iDPziER7iEV2hAAAA7
     </item>
   </item>
   <item>
-    <linkId value="G2"/>
+    <linkId value="g2"/>
     <text value="FINE MOTOR"/>
     <type value="group"/>
     <required value="true"/>
     <item>
-      <linkId value="G2.4"/>
+      <linkId value="g2.4"/>
       <prefix value="4"/>
       <text value="Does your child help turn pages of a book? (You may lift a page for her to grasp.)"/>
       <type value="choice"/>
@@ -1256,7 +1255,7 @@ LziDN7iDPziER7iEV2hAAAA7
       </option>
     </item>
     <item>
-      <linkId value="G2.5"/>
+      <linkId value="g2.5"/>
       <prefix value="5"/>
       <text value="Does your child throw a small ball with a forward arm motion? (if he simply drops the ball, mark &quot;not yet&quot; for this item)"/>
       <type value="choice"/>
@@ -1294,7 +1293,7 @@ LziDN7iDPziER7iEV2hAAAA7
       </option>
     </item>
     <item>
-      <linkId value="G2.6"/>
+      <linkId value="g2.6"/>
       <prefix value="6"/>
       <text value="Does your child stack a small block or toy on top of another one? (You could also use spools of thread, small boxes, or toys that are about 1 inch in size.)"/>
       <type value="choice"/>

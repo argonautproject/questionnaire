@@ -5,7 +5,19 @@ source file: source/pages/\_includes/{{id}}-intro.md
 
 #### Scope and Usage
 
-scope and usage text here
+The Argonaut Questionnaire resource supports:
+
+- Instructions for Subjects (“form filler outers”)
+- Instructions for the Providers (e., Scoring instructions)
+- Text based questions
+  - Including standardized concepts like LOINC
+- Answers
+  - T/F, multiple choice (Including standardized concepts like LOINC)
+  - hort answer, narrative, etc
+- Provisions for scoring of answers
+  - Textual based description how to calculate the total scores
+  - Associated scores for each question-answer/answer choice
+- Other Details like whether required or not, Provider instructions hidden or not, etc.`
 
 #### Mandatory Data Elements and Terminology
 

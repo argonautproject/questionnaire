@@ -694,7 +694,7 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
   </identifier>
   <title value="Drug Abuse Screening Test (DAST-10)"/>
   <status value="draft"/>
-  <date value="2018-04-10 10:44:28.220000"/>
+  <date value="2018-04-21T01:22:33Z"/>
   <publisher value="Argonaut Project"/>
   <jurisdiction>
     <coding>
@@ -717,13 +717,12 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
   </code>
   <subjectType value="Patient"/>
   <item>
-    <linkId value="1"/>
+    <linkId value="d1"/>
     <text value="The following questions concern information about your possible involvement with drugs not including alcoholic beverages during the past 12 months. &quot;Drug abuse&quot; refers to (1) the use of prescribed or over-the-counter drugs in excess of the directions, and (2) any nonmedical use of drugs. The various classes of drugs may include cannabis (marijuana, hashish), solvents (e.g., paint thinner), tranquilizers (e.g., Valium), barbiturates, cocaine, stimulants (e.g., speed), hallucinogens (e.g., LSD) or narcotics (e.g., heroin). Remember that the questions do not include alcoholic beverages. Please answer every question. If you have difficulty with a statement, then choose the response that is mostly right."/>
     <type value="display"/>
-    <required value="true"/>
   </item>
   <item>
-    <linkId value="2"/>
+    <linkId value="d2"/>
     <prefix value="1"/>
     <text value="Have you used drugs other than those required for medical reasons?"/>
     <type value="choice"/>
@@ -742,7 +741,7 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
     </option>
   </item>
   <item>
-    <linkId value="3"/>
+    <linkId value="d3"/>
     <prefix value="2"/>
     <text value="Do you abuse more than one drug at a time?"/>
     <type value="choice"/>
@@ -761,7 +760,7 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
     </option>
   </item>
   <item>
-    <linkId value="4"/>
+    <linkId value="d4"/>
     <prefix value="3"/>
     <text value="Are you unable to stop abusing drugs when you want to?"/>
     <type value="choice"/>
@@ -780,7 +779,7 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
     </option>
   </item>
   <item>
-    <linkId value="5"/>
+    <linkId value="d5"/>
     <prefix value="4"/>
     <text value="Have you ever had blackouts or flashbacks as a result of drug use?"/>
     <type value="choice"/>
@@ -799,7 +798,7 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
     </option>
   </item>
   <item>
-    <linkId value="6"/>
+    <linkId value="d6"/>
     <prefix value="5"/>
     <text value="Do you ever feel bad or guilty about your drug use?"/>
     <type value="choice"/>
@@ -818,7 +817,7 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
     </option>
   </item>
   <item>
-    <linkId value="7"/>
+    <linkId value="d7"/>
     <prefix value="6"/>
     <text value="Does your spouse (or parents) ever complain about your involvement with drugs?"/>
     <type value="choice"/>
@@ -837,7 +836,7 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
     </option>
   </item>
   <item>
-    <linkId value="8"/>
+    <linkId value="d8"/>
     <prefix value="7"/>
     <text value="Have you neglected your family because of your use of drugs?"/>
     <type value="choice"/>
@@ -856,7 +855,7 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
     </option>
   </item>
   <item>
-    <linkId value="9"/>
+    <linkId value="d9"/>
     <prefix value="8"/>
     <text value="Have you engaged in illegal activities in order to obtain drugs?"/>
     <type value="choice"/>
@@ -875,7 +874,7 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
     </option>
   </item>
   <item>
-    <linkId value="10"/>
+    <linkId value="d10"/>
     <prefix value="9"/>
     <text value="Have you ever experienced withdrawal symptoms (felt sick) when you stopped&#xA;taking drugs?"/>
     <type value="choice"/>
@@ -894,7 +893,7 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
     </option>
   </item>
   <item>
-    <linkId value="11"/>
+    <linkId value="d11"/>
     <prefix value="10"/>
     <text value="Have you had medical problems as a result of your drug use (e.g. memory loss, hepatitis, convulsions, bleeding)?"/>
     <type value="choice"/>

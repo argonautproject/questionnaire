@@ -18,7 +18,7 @@
   ],
   "title": "Drug Abuse Screening Test (DAST-10)",
   "status": "draft",
-  "date": "2018-04-10 10:44:28.220000",
+  "date": "2018-04-21T01:22:33Z",
   "publisher": "Argonaut Project",
   "jurisdiction": [
     {
@@ -54,13 +54,12 @@
   ],
   "item": [
     {
-      "linkId": "1",
+      "linkId": "d1",
       "text": "The following questions concern information about your possible involvement with drugs not including alcoholic beverages during the past 12 months. \"Drug abuse\" refers to (1) the use of prescribed or over-the-counter drugs in excess of the directions, and (2) any nonmedical use of drugs. The various classes of drugs may include cannabis (marijuana, hashish), solvents (e.g., paint thinner), tranquilizers (e.g., Valium), barbiturates, cocaine, stimulants (e.g., speed), hallucinogens (e.g., LSD) or narcotics (e.g., heroin). Remember that the questions do not include alcoholic beverages. Please answer every question. If you have difficulty with a statement, then choose the response that is mostly right.",
-      "type": "display",
-      "required": true
+      "type": "display"
     },
     {
-      "linkId": "2",
+      "linkId": "d2",
       "prefix": "1",
       "text": "Have you used drugs other than those required for medical reasons?",
       "type": "choice",
@@ -87,7 +86,7 @@
       ]
     },
     {
-      "linkId": "3",
+      "linkId": "d3",
       "prefix": "2",
       "text": "Do you abuse more than one drug at a time?",
       "type": "choice",
@@ -114,7 +113,7 @@
       ]
     },
     {
-      "linkId": "4",
+      "linkId": "d4",
       "prefix": "3",
       "text": "Are you unable to stop abusing drugs when you want to?",
       "type": "choice",
@@ -141,7 +140,7 @@
       ]
     },
     {
-      "linkId": "5",
+      "linkId": "d5",
       "prefix": "4",
       "text": "Have you ever had blackouts or flashbacks as a result of drug use?",
       "type": "choice",
@@ -168,7 +167,7 @@
       ]
     },
     {
-      "linkId": "6",
+      "linkId": "d6",
       "prefix": "5",
       "text": "Do you ever feel bad or guilty about your drug use?",
       "type": "choice",
@@ -195,7 +194,7 @@
       ]
     },
     {
-      "linkId": "7",
+      "linkId": "d7",
       "prefix": "6",
       "text": "Does your spouse (or parents) ever complain about your involvement with drugs?",
       "type": "choice",
@@ -222,7 +221,7 @@
       ]
     },
     {
-      "linkId": "8",
+      "linkId": "d8",
       "prefix": "7",
       "text": "Have you neglected your family because of your use of drugs?",
       "type": "choice",
@@ -249,7 +248,7 @@
       ]
     },
     {
-      "linkId": "9",
+      "linkId": "d9",
       "prefix": "8",
       "text": "Have you engaged in illegal activities in order to obtain drugs?",
       "type": "choice",
@@ -276,7 +275,7 @@
       ]
     },
     {
-      "linkId": "10",
+      "linkId": "d10",
       "prefix": "9",
       "text": "Have you ever experienced withdrawal symptoms (felt sick) when you stopped\ntaking drugs?",
       "type": "choice",
@@ -303,7 +302,7 @@
       ]
     },
     {
-      "linkId": "11",
+      "linkId": "d11",
       "prefix": "10",
       "text": "Have you had medical problems as a result of your drug use (e.g. memory loss, hepatitis, convulsions, bleeding)?",
       "type": "choice",

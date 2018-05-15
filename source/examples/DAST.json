@@ -17,7 +17,7 @@
        }
    ],
    "copyright": "copyright information here\u2026todo\u2026.",
-   "date": "2018-04-10 10:44:28.220000",
+   "date": "2018-04-21T01:22:33Z",
    "id": "questionnaire-example-dast",
    "identifier": [
        {
@@ -27,13 +27,12 @@
    ],
    "item": [
        {
-           "linkId": "1",
-           "required": true,
+           "linkId": "d1",
            "text": "The following questions concern information about your possible involvement with drugs not including alcoholic beverages during the past 12 months. \"Drug abuse\" refers to (1) the use of prescribed or over-the-counter drugs in excess of the directions, and (2) any nonmedical use of drugs. The various classes of drugs may include cannabis (marijuana, hashish), solvents (e.g., paint thinner), tranquilizers (e.g., Valium), barbiturates, cocaine, stimulants (e.g., speed), hallucinogens (e.g., LSD) or narcotics (e.g., heroin). Remember that the questions do not include alcoholic beverages. Please answer every question. If you have difficulty with a statement, then choose the response that is mostly right.",
            "type": "display"
        },
        {
-           "linkId": "2",
+           "linkId": "d2",
            "option": [
                {
                    "extension": [
@@ -60,7 +59,7 @@
            "type": "choice"
        },
        {
-           "linkId": "3",
+           "linkId": "d3",
            "option": [
                {
                    "extension": [
@@ -87,7 +86,7 @@
            "type": "choice"
        },
        {
-           "linkId": "4",
+           "linkId": "d4",
            "option": [
                {
                    "extension": [
@@ -114,7 +113,7 @@
            "type": "choice"
        },
        {
-           "linkId": "5",
+           "linkId": "d5",
            "option": [
                {
                    "extension": [
@@ -141,7 +140,7 @@
            "type": "choice"
        },
        {
-           "linkId": "6",
+           "linkId": "d6",
            "option": [
                {
                    "extension": [
@@ -168,7 +167,7 @@
            "type": "choice"
        },
        {
-           "linkId": "7",
+           "linkId": "d7",
            "option": [
                {
                    "extension": [
@@ -195,7 +194,7 @@
            "type": "choice"
        },
        {
-           "linkId": "8",
+           "linkId": "d8",
            "option": [
                {
                    "extension": [
@@ -222,7 +221,7 @@
            "type": "choice"
        },
        {
-           "linkId": "9",
+           "linkId": "d9",
            "option": [
                {
                    "extension": [
@@ -249,7 +248,7 @@
            "type": "choice"
        },
        {
-           "linkId": "10",
+           "linkId": "d10",
            "option": [
                {
                    "extension": [
@@ -276,7 +275,7 @@
            "type": "choice"
        },
        {
-           "linkId": "11",
+           "linkId": "d11",
            "option": [
                {
                    "extension": [

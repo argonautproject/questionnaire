@@ -25,7 +25,7 @@
   ];
   fhir:Questionnaire.title [ fhir:value "Ages and Stages Questionnaire (ASQ-3) Sample 16 Month Questionnaire"];
   fhir:Questionnaire.status [ fhir:value "draft"];
-  fhir:Questionnaire.date [ fhir:value "2018-04-11 20:02:15.530000"^^xsd:dateTime];
+  fhir:Questionnaire.date [ fhir:value "2018-04-21T01:22:33Z"^^xsd:dateTime];
   fhir:Questionnaire.publisher [ fhir:value "ArgonautProject"];
   fhir:Questionnaire.jurisdiction [
      fhir:index 0;
@@ -59,17 +59,16 @@
      fhir:index 0;
      fhir:Questionnaire.item.linkId [ fhir:value "Instructions" ];
      fhir:Questionnaire.item.text [ fhir:value "On the following pages are questions about activities babies may do. Your baby may have already done some of the activities described here, and there may be some your baby has not begun doing yet. For each item, please fill in the circle that indicates whether your baby is doing the activity regularly, sometimes, or not yet.  Important Points to Remember: Try each activity with your baby before marking a response. Make completing this questionnaire a game that is fun for you and your child. Make sure your child is rested and fed. Please return this questionnaire by _______________." ];
-     fhir:Questionnaire.item.type [ fhir:value "display" ];
-     fhir:Questionnaire.item.required [ fhir:value "true"^^xsd:boolean ]
+     fhir:Questionnaire.item.type [ fhir:value "display" ]
   ], [
      fhir:index 1;
-     fhir:Questionnaire.item.linkId [ fhir:value "G1" ];
+     fhir:Questionnaire.item.linkId [ fhir:value "g1" ];
      fhir:Questionnaire.item.text [ fhir:value "GROSS MOTOR" ];
      fhir:Questionnaire.item.type [ fhir:value "group" ];
      fhir:Questionnaire.item.required [ fhir:value "true"^^xsd:boolean ];
      fhir:Questionnaire.item.item [
        fhir:index 0;
-       fhir:Questionnaire.item.linkId [ fhir:value "G1.4" ];
+       fhir:Questionnaire.item.linkId [ fhir:value "g1.4" ];
        fhir:Questionnaire.item.prefix [ fhir:value "4" ];
        fhir:Questionnaire.item.text [ fhir:value "Does your child move around by walking, rather than crawling on her hands and knees" ];
        fhir:Questionnaire.item.type [ fhir:value "choice" ];
@@ -114,7 +113,7 @@
        ]
      ], [
        fhir:index 1;
-       fhir:Questionnaire.item.linkId [ fhir:value "G1.5" ];
+       fhir:Questionnaire.item.linkId [ fhir:value "g1.5" ];
        fhir:Questionnaire.item.prefix [ fhir:value "5" ];
        fhir:Questionnaire.item.text [ fhir:value "Does your child walk well and seldom fall?" ];
        fhir:Questionnaire.item.type [ fhir:value "choice" ];
@@ -159,7 +158,7 @@
        ]
      ], [
        fhir:index 2;
-       fhir:Questionnaire.item.linkId [ fhir:value "G1.6" ];
+       fhir:Questionnaire.item.linkId [ fhir:value "g1.6" ];
        fhir:Questionnaire.item.prefix [ fhir:value "6" ];
        fhir:Questionnaire.item.text [ fhir:value "Does your child climb on an object such as a chair to reach something he wants ( for example, to get a toy on the counter or to \"help\" you in the kitchen)?" ];
        fhir:Questionnaire.item.type [ fhir:value "choice" ];
@@ -205,13 +204,13 @@
      ]
   ], [
      fhir:index 2;
-     fhir:Questionnaire.item.linkId [ fhir:value "G2" ];
+     fhir:Questionnaire.item.linkId [ fhir:value "g2" ];
      fhir:Questionnaire.item.text [ fhir:value "FINE MOTOR" ];
      fhir:Questionnaire.item.type [ fhir:value "group" ];
      fhir:Questionnaire.item.required [ fhir:value "true"^^xsd:boolean ];
      fhir:Questionnaire.item.item [
        fhir:index 0;
-       fhir:Questionnaire.item.linkId [ fhir:value "G2.4" ];
+       fhir:Questionnaire.item.linkId [ fhir:value "g2.4" ];
        fhir:Questionnaire.item.prefix [ fhir:value "4" ];
        fhir:Questionnaire.item.text [ fhir:value "Does your child help turn pages of a book? (You may lift a page for her to grasp.)" ];
        fhir:Questionnaire.item.type [ fhir:value "choice" ];
@@ -256,7 +255,7 @@
        ]
      ], [
        fhir:index 1;
-       fhir:Questionnaire.item.linkId [ fhir:value "G2.5" ];
+       fhir:Questionnaire.item.linkId [ fhir:value "g2.5" ];
        fhir:Questionnaire.item.prefix [ fhir:value "5" ];
        fhir:Questionnaire.item.text [ fhir:value "Does your child throw a small ball with a forward arm motion? (if he simply drops the ball, mark \"not yet\" for this item)" ];
        fhir:Questionnaire.item.type [ fhir:value "choice" ];
@@ -301,7 +300,7 @@
        ]
      ], [
        fhir:index 2;
-       fhir:Questionnaire.item.linkId [ fhir:value "G2.6" ];
+       fhir:Questionnaire.item.linkId [ fhir:value "g2.6" ];
        fhir:Questionnaire.item.prefix [ fhir:value "6" ];
        fhir:Questionnaire.item.text [ fhir:value "Does your child stack a small block or toy on top of another one? (You could also use spools of thread, small boxes, or toys that are about 1 inch in size.)" ];
        fhir:Questionnaire.item.type [ fhir:value "choice" ];

@@ -17,22 +17,25 @@
 	</jurisdiction>
 	<compose>
 		<include>
-			<system value="http://loinc.org"/>
-			<concept>
-				<code value="LA15519-4"/>
-			</concept>
-		</include>
-		<include>
 			<system value="http://snomed.info/sct"/>
 			<concept>
 				<code value="373067005"/>
+        <display value = "No"/>
 			</concept>
 		</include>
 		<include>
 			<system value="http://fhir.org/guides/argonaut-questionnaire/CodeSystem/answer-codes"/>
 			<concept>
 				<code value="not-last-year"/>
+        <display value = "Yes, but not in the last year"/>
 			</concept>
 		</include>
+    <include>
+      <system value="http://loinc.org"/>
+      <concept>
+        <code value="LA15519-4"/>
+        <display value = "Yes, during the last year"/>
+      </concept>
+    </include>
 	</compose>
 </ValueSet>

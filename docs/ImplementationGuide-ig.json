@@ -19,12 +19,12 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "valueUri": "Questionnaire-questionnaire-example-phq-9.html"
+              "valueUri": "Questionnaire-questionnaire-example-phq9.html"
             }
           ],
           "example": true,
           "sourceReference": {
-            "reference": "Questionnaire/questionnaire-example-phq-9"
+            "reference": "Questionnaire/questionnaire-example-phq9"
           }
         },
         {
@@ -73,6 +73,42 @@
           "example": true,
           "sourceReference": {
             "reference": "Questionnaire/questionnaire-example-asq3"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "ValueSet-SAMHSA-dad.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "ValueSet/SAMHSA-dad"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "ValueSet-SAMHSA-6.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "ValueSet/SAMHSA-6"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "ValueSet-PHQ-9.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "ValueSet/PHQ-9"
           }
         },
         {

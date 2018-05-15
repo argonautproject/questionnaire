@@ -26,7 +26,7 @@
   ];
   fhir:Questionnaire.title [ fhir:value "Drug Abuse Screening Test (DAST-10)"];
   fhir:Questionnaire.status [ fhir:value "draft"];
-  fhir:Questionnaire.date [ fhir:value "2018-04-10 10:44:28.220000"^^xsd:dateTime];
+  fhir:Questionnaire.date [ fhir:value "2018-04-21T01:22:33Z"^^xsd:dateTime];
   fhir:Questionnaire.publisher [ fhir:value "Argonaut Project"];
   fhir:Questionnaire.jurisdiction [
      fhir:index 0;
@@ -59,13 +59,12 @@
   ];
   fhir:Questionnaire.item [
      fhir:index 0;
-     fhir:Questionnaire.item.linkId [ fhir:value "1" ];
+     fhir:Questionnaire.item.linkId [ fhir:value "d1" ];
      fhir:Questionnaire.item.text [ fhir:value "The following questions concern information about your possible involvement with drugs not including alcoholic beverages during the past 12 months. \"Drug abuse\" refers to (1) the use of prescribed or over-the-counter drugs in excess of the directions, and (2) any nonmedical use of drugs. The various classes of drugs may include cannabis (marijuana, hashish), solvents (e.g., paint thinner), tranquilizers (e.g., Valium), barbiturates, cocaine, stimulants (e.g., speed), hallucinogens (e.g., LSD) or narcotics (e.g., heroin). Remember that the questions do not include alcoholic beverages. Please answer every question. If you have difficulty with a statement, then choose the response that is mostly right." ];
-     fhir:Questionnaire.item.type [ fhir:value "display" ];
-     fhir:Questionnaire.item.required [ fhir:value "true"^^xsd:boolean ]
+     fhir:Questionnaire.item.type [ fhir:value "display" ]
   ], [
      fhir:index 1;
-     fhir:Questionnaire.item.linkId [ fhir:value "2" ];
+     fhir:Questionnaire.item.linkId [ fhir:value "d2" ];
      fhir:Questionnaire.item.prefix [ fhir:value "1" ];
      fhir:Questionnaire.item.text [ fhir:value "Have you used drugs other than those required for medical reasons?" ];
      fhir:Questionnaire.item.type [ fhir:value "choice" ];
@@ -89,7 +88,7 @@
      ]
   ], [
      fhir:index 2;
-     fhir:Questionnaire.item.linkId [ fhir:value "3" ];
+     fhir:Questionnaire.item.linkId [ fhir:value "d3" ];
      fhir:Questionnaire.item.prefix [ fhir:value "2" ];
      fhir:Questionnaire.item.text [ fhir:value "Do you abuse more than one drug at a time?" ];
      fhir:Questionnaire.item.type [ fhir:value "choice" ];
@@ -113,7 +112,7 @@
      ]
   ], [
      fhir:index 3;
-     fhir:Questionnaire.item.linkId [ fhir:value "4" ];
+     fhir:Questionnaire.item.linkId [ fhir:value "d4" ];
      fhir:Questionnaire.item.prefix [ fhir:value "3" ];
      fhir:Questionnaire.item.text [ fhir:value "Are you unable to stop abusing drugs when you want to?" ];
      fhir:Questionnaire.item.type [ fhir:value "choice" ];
@@ -137,7 +136,7 @@
      ]
   ], [
      fhir:index 4;
-     fhir:Questionnaire.item.linkId [ fhir:value "5" ];
+     fhir:Questionnaire.item.linkId [ fhir:value "d5" ];
      fhir:Questionnaire.item.prefix [ fhir:value "4" ];
      fhir:Questionnaire.item.text [ fhir:value "Have you ever had blackouts or flashbacks as a result of drug use?" ];
      fhir:Questionnaire.item.type [ fhir:value "choice" ];
@@ -161,7 +160,7 @@
      ]
   ], [
      fhir:index 5;
-     fhir:Questionnaire.item.linkId [ fhir:value "6" ];
+     fhir:Questionnaire.item.linkId [ fhir:value "d6" ];
      fhir:Questionnaire.item.prefix [ fhir:value "5" ];
      fhir:Questionnaire.item.text [ fhir:value "Do you ever feel bad or guilty about your drug use?" ];
      fhir:Questionnaire.item.type [ fhir:value "choice" ];
@@ -185,7 +184,7 @@
      ]
   ], [
      fhir:index 6;
-     fhir:Questionnaire.item.linkId [ fhir:value "7" ];
+     fhir:Questionnaire.item.linkId [ fhir:value "d7" ];
      fhir:Questionnaire.item.prefix [ fhir:value "6" ];
      fhir:Questionnaire.item.text [ fhir:value "Does your spouse (or parents) ever complain about your involvement with drugs?" ];
      fhir:Questionnaire.item.type [ fhir:value "choice" ];
@@ -209,7 +208,7 @@
      ]
   ], [
      fhir:index 7;
-     fhir:Questionnaire.item.linkId [ fhir:value "8" ];
+     fhir:Questionnaire.item.linkId [ fhir:value "d8" ];
      fhir:Questionnaire.item.prefix [ fhir:value "7" ];
      fhir:Questionnaire.item.text [ fhir:value "Have you neglected your family because of your use of drugs?" ];
      fhir:Questionnaire.item.type [ fhir:value "choice" ];
@@ -233,7 +232,7 @@
      ]
   ], [
      fhir:index 8;
-     fhir:Questionnaire.item.linkId [ fhir:value "9" ];
+     fhir:Questionnaire.item.linkId [ fhir:value "d9" ];
      fhir:Questionnaire.item.prefix [ fhir:value "8" ];
      fhir:Questionnaire.item.text [ fhir:value "Have you engaged in illegal activities in order to obtain drugs?" ];
      fhir:Questionnaire.item.type [ fhir:value "choice" ];
@@ -257,7 +256,7 @@
      ]
   ], [
      fhir:index 9;
-     fhir:Questionnaire.item.linkId [ fhir:value "10" ];
+     fhir:Questionnaire.item.linkId [ fhir:value "d10" ];
      fhir:Questionnaire.item.prefix [ fhir:value "9" ];
      fhir:Questionnaire.item.text [ fhir:value "Have you ever experienced withdrawal symptoms (felt sick) when you stopped\ntaking drugs?" ];
      fhir:Questionnaire.item.type [ fhir:value "choice" ];
@@ -281,7 +280,7 @@
      ]
   ], [
      fhir:index 10;
-     fhir:Questionnaire.item.linkId [ fhir:value "11" ];
+     fhir:Questionnaire.item.linkId [ fhir:value "d11" ];
      fhir:Questionnaire.item.prefix [ fhir:value "10" ];
      fhir:Questionnaire.item.text [ fhir:value "Have you had medical problems as a result of your drug use (e.g. memory loss, hepatitis, convulsions, bleeding)?" ];
      fhir:Questionnaire.item.type [ fhir:value "choice" ];

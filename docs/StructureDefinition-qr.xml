@@ -31,13 +31,6 @@
   <status value="active"/>
   <date value="2018-04-04T00:00:00-07:00"/>
   <description value="The  Argonaut QR pofile sets the minimum expectations for the QR resource to record, search and fetch QR from simple assessments, surveys, etc as defined in this implementation guide"/>
-  <jurisdiction>
-    <coding>
-      <system value="urn:iso:std:iso:3166"/>
-      <code value="US"/>
-      <display value="United States of America"/>
-    </coding>
-  </jurisdiction>
   <fhirVersion value="3.0.1"/>
   <mapping>
     <identity value="r4"/>

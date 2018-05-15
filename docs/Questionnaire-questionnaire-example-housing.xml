@@ -671,7 +671,7 @@ u/ALw3AMy/AM03AN2/AN43AO67DnBgQAOw==
   </identifier>
   <title value="Housing Questions"/>
   <status value="draft"/>
-  <date value="2018-04-11 18:11:41.650000"/>
+  <date value="2018-04-24"/>
   <publisher value="ArgonautProject"/>
   <jurisdiction>
     <coding>
@@ -694,13 +694,12 @@ u/ALw3AMy/AM03AN2/AN43AO67DnBgQAOw==
   </code>
   <subjectType value="Patient"/>
   <item>
-    <linkId value="1"/>
+    <linkId value="h1"/>
     <text value="Accountable Health Communities Core Health-Related Social Needs Screening Questions &#xA;Underlined answer options indicate positive responses for the associated health-related social need. &#xA;A value greater than 10 when the numerical values for answers to questions 7-10 are summed indicates a positive screen for interpersonal safety."/>
     <type value="display"/>
-    <required value="true"/>
   </item>
   <item>
-    <linkId value="2"/>
+    <linkId value="h2"/>
     <prefix value="1"/>
     <text value="What is your housing situation today?"/>
     <type value="choice"/>
@@ -709,9 +708,15 @@ u/ALw3AMy/AM03AN2/AN43AO67DnBgQAOw==
     <option>
       <valueString value="I do not have housing (I am staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, abandoned building, bus or train station, or in a park)"/>
     </option>
+    <option>
+      <valueString value="I have housing today, but I am worried about losing housing in the future"/>
+    </option>
+    <option>
+      <valueString value="I have housing"/>
+    </option>
   </item>
   <item>
-    <linkId value="3"/>
+    <linkId value="h3"/>
     <prefix value="2"/>
     <text value="Think about the place you live. Do you have problems with any of the following? (check all that apply)"/>
     <type value="choice"/>

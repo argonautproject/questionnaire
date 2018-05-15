@@ -1,0 +1,82 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-9> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "PHQ-9"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>PHQ-9</h2><div><p>PHQ / Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day   http://loinc.org/vs/LL358-3</p>\n</div><p><b>Copyright Statement:</b> This content LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use</p><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://details.loinc.org/LOINC/LA6568-5.html\">LA6568-5</a></td><td>Not at all</td><td/></tr><tr><td><a href=\"http://details.loinc.org/LOINC/LA6569-3.html\">LA6569-3</a></td><td>Several days</td><td/></tr><tr><td><a href=\"http://details.loinc.org/LOINC/LA6570-1.html\">LA6570-1</a></td><td>More than half the days</td><td/></tr><tr><td><a href=\"http://details.loinc.org/LOINC/LA6571-9.html\">LA6571-9</a></td><td>Nearly every day</td><td/></tr></table></li></ul></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-9"];
+  fhir:ValueSet.version [ fhir:value "0.0.0"];
+  fhir:ValueSet.name [ fhir:value "PHQ-9"];
+  fhir:ValueSet.title [ fhir:value "PHQ / Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"];
+  fhir:ValueSet.status [ fhir:value "active"];
+  fhir:ValueSet.date [ fhir:value "2018-04-05T12:40:10-07:00"^^xsd:dateTime];
+  fhir:ValueSet.description [ fhir:value "PHQ / Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day   http://loinc.org/vs/LL358-3"];
+  fhir:ValueSet.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "US" ];
+       fhir:Coding.display [ fhir:value "United States of America" ]
+     ]
+  ];
+  fhir:ValueSet.copyright [ fhir:value "This content LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use"];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://loinc.org" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+           fhir:Extension.valueDecimal [ fhir:value "0"^^xsd:decimal ]
+         ];
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "LA6568-5" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Not at all" ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+           fhir:Extension.valueDecimal [ fhir:value "1"^^xsd:decimal ]
+         ];
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "LA6569-3" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Several days" ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+           fhir:Extension.valueDecimal [ fhir:value "2"^^xsd:decimal ]
+         ];
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "LA6570-1" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "More than half the days" ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+           fhir:Extension.valueDecimal [ fhir:value "3"^^xsd:decimal ]
+         ];
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "LA6571-9" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nearly every day" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-9.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd%20-STU3/fhir-all.xsd">
+	<id value="SAMHSA-6"/>
+	<url value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/SAMHSA-6"/>
+	<version value="1.0.0"/>
+	<name value="SAMHSA-6-drinks"/>
+	<title value="SAMHSA-6 drinks / Never/Less than monthly/Monthly/Weekly/Daily/Almost daily"/>
+	<status value="active"/>
+	<date value="2018-04-05T19:40:10+00:00"/>
+	<description value="SAMHSA-6 drinks / Never/Less than monthly/Monthly/Weekly/Daily/Almost daily http://loinc.org/vs/LL2181-7"/>
+	<jurisdiction>
+		<coding>
+			<system value="urn:iso:std:iso:3166"/>
+			<code value="US"/>
+			<display value="United States of America"/>
+		</coding>
+	</jurisdiction>
+	<copyright value="World Health Organization (WHO) Questionnaires, This content LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use"/>
+	<compose>
+		<include>
+			<system value="http://loinc.org"/>
+			<concept>
+				<extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+					<valueDecimal value="0"/>
+				</extension>
+				<code value="LA6270-8"/>
+				<display value="Never"/>
+			</concept>
+			<concept>
+				<extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+					<valueDecimal value="1"/>
+				</extension>
+				<code value="LA18933-4"/>
+				<display value="Less than Monthly"/>
+			</concept>
+			<concept>
+				<extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+					<valueDecimal value="2"/>
+				</extension>
+				<code value="LA18876-5"/>
+				<display value="Monthly"/>
+			</concept>
+			<concept>
+				<extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+					<valueDecimal value="3"/>
+				</extension>
+				<code value="LA18891-4"/>
+				<display value="Weekly"/>
+			</concept>
+			<concept>
+				<extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+					<valueDecimal value="4"/>
+				</extension>
+				<code value="LA18934-2"/>
+				<display value="Daily or Almost Daily"/>
+			</concept>
+		</include>
+	</compose>
+</ValueSet>

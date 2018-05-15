@@ -16,12 +16,13 @@
 
   <link rel="stylesheet" href="assets/css/bootstrap.css"/>
   <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
-  <link rel="stylesheet" href="assets/css/bootstrap-glyphicons.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-glyphicons.css"/>
 
     <!-- Project extras -->
   <link rel="stylesheet" href="assets/css/project.css"/>
   <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
 	<link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+
 
 
 
@@ -53,7 +54,7 @@
 
 ================THIS IS FOR THE PROJECT LOGO AND URL =============== -->
 
-<a no-external="true" href="http://argonautwiki.hl7.org">
+<a no-external="true" href="http://argonautwiki.hl7.org"><a name="d68f49ac-42e3-4012-aba2-15c034c91ca5">​</a>
 <img src="assets/images/ArgonautProject_logo_black.png" alt="visit our website" class="img-responsive project-logo"/>
 </a>
 
@@ -297,7 +298,30 @@ Formats: <a href="StructureDefinition-q.html">Narrative</a>, <a href="StructureD
 
 <h4 id="scope-and-usage">Scope and Usage</h4>
 
-<p>scope and usage text here</p>
+<p>The Argonaut Questionnaire resource supports:</p>
+
+<ul>
+  <li>Instructions for Subjects (“form filler outers”)</li>
+  <li>Instructions for the Providers (e., Scoring instructions)</li>
+  <li>Text based questions
+    <ul>
+      <li>Including standardized concepts like LOINC</li>
+    </ul>
+  </li>
+  <li>Answers
+    <ul>
+      <li>T/F, multiple choice (Including standardized concepts like LOINC)</li>
+      <li>hort answer, narrative, etc</li>
+    </ul>
+  </li>
+  <li>Provisions for scoring of answers
+    <ul>
+      <li>Textual based description how to calculate the total scores</li>
+      <li>Associated scores for each question-answer/answer choice</li>
+    </ul>
+  </li>
+  <li>Other Details like whether required or not, Provider instructions hidden or not, etc.`</li>
+</ul>
 
 <h4 id="mandatory-data-elements-and-terminology">Mandatory Data Elements and Terminology</h4>
 
@@ -315,14 +339,14 @@ Formats: <a href="StructureDefinition-q.html">Narrative</a>, <a href="StructureD
 
 <h4 id="examples">Examples</h4>
 
-<li><a href="Questionnaire-questionnaire-example-phq-9.html">Questionnaire questionnaire-example-phq-9</a></li>
+<li><a href="Questionnaire-questionnaire-example-phq9.html">Questionnaire questionnaire-example-phq9</a></li>
 <li><a href="Questionnaire-questionnaire-example-housing.html">Questionnaire questionnaire-example-housing</a></li>
 <li><a href="Questionnaire-questionnaire-example-dast.html">Questionnaire questionnaire-example-dast</a></li>
 <li><a href="Questionnaire-questionnaire-example-audit.html">Questionnaire questionnaire-example-audit</a></li>
 <li><a href="Questionnaire-questionnaire-example-asq3.html">Questionnaire questionnaire-example-asq3</a></li>
 
 <ul>
-  <li><a href="Questionnaire-questionnaire-example-phq-9.html">PHQ-9</a></li>
+  <li><a name="ae1f4523-2df1-4c9d-bd8e-eedfb98a68f0">​</a><a href="Questionnaire-questionnaire-example-phq-9.html">PHQ-9</a></li>
   <li><a href="Questionnaire-questionnaire-example-audit.html">AUDIT</a></li>
   <li><a href="Questionnaire-questionnaire-example-dast.html">DAST</a></li>
 </ul>
@@ -544,7 +568,7 @@ Any information provided in these elements on a Questionnaire Item overrides the
 
 
 
- <div id="tabs-all">
+ <div id="tabs-all" class="no-external">
   <!-- =======Summary======== -->
 
   <div id="all-tbl-summ">
@@ -559,7 +583,7 @@ Summary
    </div>
   </div>
 
-  <!-- =======Differential======== -->
+  <!-- =======Differential level 1======== -->
  <div id="all-tbl-diff">
    <p><b>Differential View</b></p>
    <div id="all-tbl-diff-inner">
@@ -606,6 +630,17 @@ Summary
 <tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item.item">item</a><a name="Questionnaire.item.item"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
 <tr><td colspan="5" class="hierarchy"><br/><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Legend for this format"><img src="http://hl7.org/fhir/STU3/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table>
    </div>
+     <!-- =======Differential level 2 ( if want to show an intermediate diff if profiling a profile) ========= -->
+      <div id="all-tbl-diff2-inner">
+        
+  <!-- stubbed file need actual file name of diff fragment 
+{% assign id = {{include.id}} %}
+<p><b>Intermediate Differential View ({{include.type}}-{{include.id}} Profile + {{site.data.structuredefinitions.[id].basename}} Profile)</b></p>
+<div id="all-tbl-diff2-inner">
+  {% include {{include.type}}-argo-clinicalnotes-diff.xhtml %}
+</div> -->
+
+      </div>
 </div>
   <!-- =======Snapshot======== -->
 
@@ -694,7 +729,7 @@ Any information provided in these elements on a Questionnaire Item overrides the
     <div id="all-json">
      <p><b>JSON Template</b></p>
      <div id="all-json-inner">
-        <pre class="spec"><a name="514bccaf-6860-4226-b905-d233f0878c63">​</a>
+        <pre class="spec"><a name="a3eb48d0-7b44-4c39-92a9-f21cdabe07f3">​</a>
           // <span style="color: navy; opacity: 0.8"></span>
  {
    "resourceType" : "Questionnaire",
@@ -889,9 +924,7 @@ $( '#tabs' ).tabs({
   <div class="container">    <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, Apr 18, 2018 09:11-0700. |
-               <!-- <a style="color: #81BEF7" rel="license"  <href="../license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> -->
-                <a rel="license" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
+            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Mon, May 14, 2018 23:56-0700. | <a rel="license" no-external="true" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
         
         </p>
    </div>    <!-- /inner-wrapper -->
@@ -926,7 +959,7 @@ $( '#tabs' ).tabs({
   <!-- Analytics Below
 ================================================== -->
 
-  <!-- add acnhors before the closing body tag. -->
+  <!-- add anchors before the closing body tag. -->
 <script> anchors.add()</script>
 
 
@@ -934,4 +967,4 @@ $( '#tabs' ).tabs({
 
 
 
-</hr></div></div></div></div></div></div></body></link></head></html>
+</hr></div></div></div></div></div></div></body></head></html>

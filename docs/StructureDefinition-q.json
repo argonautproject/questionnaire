@@ -11,17 +11,6 @@
   "status": "active",
   "date": "2018-04-04T00:00:00-07:00",
   "description": "The  Argonaut Q pofile sets the minimum expectations for the Q resource to record, search and fetch Q for simple assessments, surveys, etc as defined in this implementation guide",
-  "jurisdiction": [
-    {
-      "coding": [
-        {
-          "system": "urn:iso:std:iso:3166",
-          "code": "US",
-          "display": "United States of America"
-        }
-      ]
-    }
-  ],
   "fhirVersion": "3.0.1",
   "mapping": [
     {

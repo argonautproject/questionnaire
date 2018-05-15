@@ -18,7 +18,7 @@
   ],
   "title": "Ages and Stages Questionnaire (ASQ-3) Sample 16 Month Questionnaire",
   "status": "draft",
-  "date": "2018-04-11 20:02:15.530000",
+  "date": "2018-04-21T01:22:33Z",
   "publisher": "ArgonautProject",
   "jurisdiction": [
     {
@@ -56,17 +56,16 @@
     {
       "linkId": "Instructions",
       "text": "On the following pages are questions about activities babies may do. Your baby may have already done some of the activities described here, and there may be some your baby has not begun doing yet. For each item, please fill in the circle that indicates whether your baby is doing the activity regularly, sometimes, or not yet.  Important Points to Remember: Try each activity with your baby before marking a response. Make completing this questionnaire a game that is fun for you and your child. Make sure your child is rested and fed. Please return this questionnaire by _______________.",
-      "type": "display",
-      "required": true
+      "type": "display"
     },
     {
-      "linkId": "G1",
+      "linkId": "g1",
       "text": "GROSS MOTOR",
       "type": "group",
       "required": true,
       "item": [
         {
-          "linkId": "G1.4",
+          "linkId": "g1.4",
           "prefix": "4",
           "text": "Does your child move around by walking, rather than crawling on her hands and knees",
           "type": "choice",
@@ -115,7 +114,7 @@
           ]
         },
         {
-          "linkId": "G1.5",
+          "linkId": "g1.5",
           "prefix": "5",
           "text": "Does your child walk well and seldom fall?",
           "type": "choice",
@@ -164,7 +163,7 @@
           ]
         },
         {
-          "linkId": "G1.6",
+          "linkId": "g1.6",
           "prefix": "6",
           "text": "Does your child climb on an object such as a chair to reach something he wants ( for example, to get a toy on the counter or to \"help\" you in the kitchen)?",
           "type": "choice",
@@ -215,13 +214,13 @@
       ]
     },
     {
-      "linkId": "G2",
+      "linkId": "g2",
       "text": "FINE MOTOR",
       "type": "group",
       "required": true,
       "item": [
         {
-          "linkId": "G2.4",
+          "linkId": "g2.4",
           "prefix": "4",
           "text": "Does your child help turn pages of a book? (You may lift a page for her to grasp.)",
           "type": "choice",
@@ -270,7 +269,7 @@
           ]
         },
         {
-          "linkId": "G2.5",
+          "linkId": "g2.5",
           "prefix": "5",
           "text": "Does your child throw a small ball with a forward arm motion? (if he simply drops the ball, mark \"not yet\" for this item)",
           "type": "choice",
@@ -319,7 +318,7 @@
           ]
         },
         {
-          "linkId": "G2.6",
+          "linkId": "g2.6",
           "prefix": "6",
           "text": "Does your child stack a small block or toy on top of another one? (You could also use spools of thread, small boxes, or toys that are about 1 inch in size.)",
           "type": "choice",

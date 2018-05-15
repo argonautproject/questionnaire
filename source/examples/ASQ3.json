@@ -17,7 +17,7 @@
        }
    ],
    "copyright": "Ages &amp; Stages Questionnaires\u00ae, Third Edition (ASQ-3\u2122), Squires &amp; Bricker \u00a9 2009 Paul H. Brookes Publishing Co. All rights reserved.",
-   "date": "2018-04-11 20:02:15.530000",
+   "date": "2018-04-21T01:22:33Z",
    "id": "questionnaire-example-asq3",
    "identifier": [
        {
@@ -28,14 +28,13 @@
    "item": [
        {
            "linkId": "Instructions",
-           "required": true,
            "text": "On the following pages are questions about activities babies may do. Your baby may have already done some of the activities described here, and there may be some your baby has not begun doing yet. For each item, please fill in the circle that indicates whether your baby is doing the activity regularly, sometimes, or not yet.  Important Points to Remember: Try each activity with your baby before marking a response. Make completing this questionnaire a game that is fun for you and your child. Make sure your child is rested and fed. Please return this questionnaire by _______________.",
            "type": "display"
        },
        {
            "item": [
                {
-                   "linkId": "G1.4",
+                   "linkId": "g1.4",
                    "option": [
                        {
                            "extension": [
@@ -84,7 +83,7 @@
                    "type": "choice"
                },
                {
-                   "linkId": "G1.5",
+                   "linkId": "g1.5",
                    "option": [
                        {
                            "extension": [
@@ -133,7 +132,7 @@
                    "type": "choice"
                },
                {
-                   "linkId": "G1.6",
+                   "linkId": "g1.6",
                    "option": [
                        {
                            "extension": [
@@ -182,7 +181,7 @@
                    "type": "choice"
                }
            ],
-           "linkId": "G1",
+           "linkId": "g1",
            "required": true,
            "text": "GROSS MOTOR",
            "type": "group"
@@ -190,7 +189,7 @@
        {
            "item": [
                {
-                   "linkId": "G2.4",
+                   "linkId": "g2.4",
                    "option": [
                        {
                            "extension": [
@@ -239,7 +238,7 @@
                    "type": "choice"
                },
                {
-                   "linkId": "G2.5",
+                   "linkId": "g2.5",
                    "option": [
                        {
                            "extension": [
@@ -288,7 +287,7 @@
                    "type": "choice"
                },
                {
-                   "linkId": "G2.6",
+                   "linkId": "g2.6",
                    "option": [
                        {
                            "extension": [
@@ -337,7 +336,7 @@
                    "type": "choice"
                }
            ],
-           "linkId": "G2",
+           "linkId": "g2",
            "required": true,
            "text": "FINE MOTOR",
            "type": "group"
