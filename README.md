@@ -15,6 +15,29 @@ Support Guidance on creating and using basic FHIR Questionnaires for simple Asse
 
 ## TimeLine
 
+**April 2018**:
+
+  - Argo Questionnaire Kickoff
+  - Refine Scope
+  - Define Content and technical Specifications for Draft Implementation Guide"
+  
+**Summer 2018**:
+
+- Initial Connectathon for interested parties to start experimenting with proposed technical specification
+- Publish and refine Draft IG"
+
+**Sept 2018**:
+
+- FHIR Connectathon events to refine and develop the technical specification
+
+**Fall 2018**:
+
+- Publish and refine Draft IG
+
+**January 2019**:
+
+- Published IG
+
 ## Repository Directory
 
 ## Directory Tree
