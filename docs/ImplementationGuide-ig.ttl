@@ -134,6 +134,18 @@
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-extension-score.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/extension-score" ]
+       ]
+     ], [
+       fhir:index 10;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
          fhir:Extension.valueUri [ fhir:value "StructureDefinition-qr.html" ]
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
@@ -142,7 +154,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/qr" ]
        ]
      ], [
-       fhir:index 10;
+       fhir:index 11;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -154,7 +166,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/q" ]
        ]
      ], [
-       fhir:index 11;
+       fhir:index 12;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -166,7 +178,7 @@
          fhir:Reference.reference [ fhir:value "CodeSystem/answer-codes" ]
        ]
      ], [
-       fhir:index 12;
+       fhir:index 13;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -178,7 +190,7 @@
          fhir:Reference.reference [ fhir:value "CapabilityStatement/server" ]
        ]
      ], [
-       fhir:index 13;
+       fhir:index 14;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -188,6 +200,30 @@
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <http://fhir.org/guides/argonaut-questionnaire/CapabilityStatement/client>;
          fhir:Reference.reference [ fhir:value "CapabilityStatement/client" ]
+       ]
+     ], [
+       fhir:index 15;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "CapabilityStatement-assessmentbank.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/CapabilityStatement/assessmentbank>;
+         fhir:Reference.reference [ fhir:value "CapabilityStatement/assessmentbank" ]
+       ]
+     ], [
+       fhir:index 16;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "CapabilityStatement-answerbank.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/CapabilityStatement/answerbank>;
+         fhir:Reference.reference [ fhir:value "CapabilityStatement/answerbank" ]
        ]
      ]
   ], [

@@ -27,7 +27,7 @@ This implementation Guide is organized as follows:
 - Detailed guidance on using the Argonaut Questionnaire FHIR artifacts such as profiles and extensions can be found on the [Scenario 1] page.
 - FHIR profiles and extensions are listed on the [Profiles] page.
 - Implementation Guide specific value sets, and code systems on the [Terminology]  page.
-- Conformance requirements for both a server and client that claim conformance to this guide are found in the [server] and [client] CapabilityStatements.
+- Conformance requirements for the servers and clients that claim conformance to this guide are found in the [Assessment-Bank], [Answer-Bank],  [Provider EHR] and [client] CapabilityStatements.
 - The [Downloads] page contains many downloadable files to help with implementation of this specification.
 
 ## Scope
@@ -74,9 +74,9 @@ there is clearly a need for a common form standard with a focus on simple assess
 
 1. **[Argonaut Questionnaire Profile]**
 1. **[Argonaut QuestionnaireResponse Profile]**
-1. **"Assessment-Bank"**[^1]: A form repository for the collection of the assessments. It is accessible to both the providers and form editors as a FHIR Questionnaire endpoint.
-1. (Optionally) **"Answer-Bank"**[^2]: A repository for the collection of the completed assessments ('answers'). It is accessible to both the providers and form editors as a FHIR QuestionnaireResponse endpoint.  ...TODO: discus...
-1. **Provider EHR**[^3]: The System that is capable of retrieving, rendering and displaying the assessment to a subject or a provider to fill out.  This may be the same system as in the Answers section below.
+1. **"[Assessment-Bank]"**[^1]: A form repository for the collection of the assessments. It is accessible to both the providers and form editors as a FHIR Questionnaire endpoint.
+1. (Optionally) **"[Answer-Bank]"**[^2]: A repository for the collection of the completed assessments ('answers'). It is accessible to both the providers and form editors as a FHIR QuestionnaireResponse endpoint.  ...TODO: discus...
+1. **[Provider EHR]**[^3]: The System that is capable of retrieving, rendering and displaying the assessment to a subject or a provider to fill out.  This may be the same system as in the Answers section below.
 1. **Form Author/Editor**: A system or person authorized to create update and deprecate assessments forms.
 1. **Practitioner**: A healthcare provider authorized to administer the assessment to a subject.
 1. **Provider administrator**: A practitioner or staff member authorized to fill out an assessment on behalf of a subject or with input from a subject.
@@ -131,6 +131,7 @@ For general security consideration refer to the [Security section] in the US Cor
 - preference to contain or include return bundle
 - Defining a single way to do X?  e.g choice questions.  (there is more than one way!)
 - Scoring -  Currently formal logic is not in scope.
+- retrieval of forms as a printable pdf.
 
 
 

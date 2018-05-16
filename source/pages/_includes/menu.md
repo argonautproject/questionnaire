@@ -37,6 +37,13 @@
   </b>
 </a>
 <ul class="dropdown-menu">
+<li>
+  <a href="CapabilityStatement-assessmentbank.html">Conformance requirements for Assessment Bank</a>
+</li>
+<li>
+  <a href="CapabilityStatement-answerbank.html">Conformance requirements for Answer Bank</a>
+</li>
+
   <li>
     <a href="CapabilityStatement-server.html">Conformance requirements for Server</a>
   </li>

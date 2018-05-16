@@ -127,6 +127,18 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-extension-score.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition/extension-score"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "StructureDefinition-qr.html"
             }
           ],
@@ -181,6 +193,30 @@
           "example": false,
           "sourceReference": {
             "reference": "CapabilityStatement/client"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "CapabilityStatement-assessmentbank.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "CapabilityStatement/assessmentbank"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "CapabilityStatement-answerbank.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "CapabilityStatement/answerbank"
           }
         }
       ]

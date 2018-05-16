@@ -95,6 +95,15 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-extension-score.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/extension-score"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="StructureDefinition-qr.html"/>
       </extension>
       <example value="false"/>
@@ -136,6 +145,24 @@
       <example value="false"/>
       <sourceReference>
         <reference value="CapabilityStatement/client"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="CapabilityStatement-assessmentbank.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CapabilityStatement/assessmentbank"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="CapabilityStatement-answerbank.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CapabilityStatement/answerbank"/>
       </sourceReference>
     </resource>
   </package>

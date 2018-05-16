@@ -4,46 +4,23 @@
   <id value="q"/>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Legend for this format"><img src="http://hl7.org/fhir/STU3/help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire">Questionnaire</a><a name="Questionnaire"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.url">url</a><a name="Questionnaire.url"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#uri">uri</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.identifier">identifier</a><a name="Questionnaire.identifier"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#Identifier">Identifier</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.version">version</a><a name="Questionnaire.version"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.name">name</a><a name="Questionnaire.name"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.title">title</a><a name="Questionnaire.title"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.status">status</a><a name="Questionnaire.status"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.experimental">experimental</a><a name="Questionnaire.experimental"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#boolean">boolean</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.date">date</a><a name="Questionnaire.date"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">dateTime</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.publisher">publisher</a><a name="Questionnaire.publisher"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.description">description</a><a name="Questionnaire.description"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#markdown">markdown</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.purpose">purpose</a><a name="Questionnaire.purpose"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#markdown">markdown</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.approvalDate">approvalDate</a><a name="Questionnaire.approvalDate"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#date">date</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.lastReviewDate">lastReviewDate</a><a name="Questionnaire.lastReviewDate"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#date">date</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.effectivePeriod">effectivePeriod</a><a name="Questionnaire.effectivePeriod"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#Period">Period</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.useContext">useContext</a><a name="Questionnaire.useContext"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#UsageContext">UsageContext</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.jurisdiction">jurisdiction</a><a name="Questionnaire.jurisdiction"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept">CodeableConcept</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.contact">contact</a><a name="Questionnaire.contact"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#ContactDetail">ContactDetail</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.copyright">copyright</a><a name="Questionnaire.copyright"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#markdown">markdown</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.code">code</a><a name="Questionnaire.code"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#Coding">Coding</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.subjectType">subjectType</a><a name="Questionnaire.subjectType"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item">item</a><a name="Questionnaire.item"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#BackboneElement">BackboneElement</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item.linkId">linkId</a><a name="Questionnaire.item.linkId"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item.definition">definition</a><a name="Questionnaire.item.definition"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#uri">uri</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item.code">code</a><a name="Questionnaire.item.code"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#Coding">Coding</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item.prefix">prefix</a><a name="Questionnaire.item.prefix"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item.text">text</a><a name="Questionnaire.item.text"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item.type">type</a><a name="Questionnaire.item.type"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck011.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item.enableWhen">enableWhen</a><a name="Questionnaire.item.enableWhen"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#BackboneElement">BackboneElement</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item.enableWhen.question">question</a><a name="Questionnaire.item.enableWhen.question"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0110.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item.enableWhen.hasAnswer">hasAnswer</a><a name="Questionnaire.item.enableWhen.hasAnswer"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#boolean">boolean</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0100.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item.enableWhen.answer[x]">answer[x]</a><a name="Questionnaire.item.enableWhen.answer_x_"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#boolean">boolean</a><span style="opacity: 0.4">, </span><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#decimal">decimal</a><span style="opacity: 0.4">, </span><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#integer">integer</a><span style="opacity: 0.4">, </span><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#date">date</a><span style="opacity: 0.4">, </span><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">dateTime</a><span style="opacity: 0.4">, </span><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#time">time</a><span style="opacity: 0.4">, </span><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a><span style="opacity: 0.4">, </span><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#uri">uri</a><span style="opacity: 0.4">, </span><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#Attachment">Attachment</a><span style="opacity: 0.4">, </span><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#Coding">Coding</a><span style="opacity: 0.4">, </span><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#Quantity">Quantity</a><span style="opacity: 0.4">, </span><a href="http://hl7.org/fhir/STU3/references.html">Reference</a>(<a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/resource.html">Resource</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item.required">required</a><a name="Questionnaire.item.required"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#boolean">boolean</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item.repeats">repeats</a><a name="Questionnaire.item.repeats"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#boolean">boolean</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item.readOnly">readOnly</a><a name="Questionnaire.item.readOnly"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#boolean">boolean</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item.maxLength">maxLength</a><a name="Questionnaire.item.maxLength"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#integer">integer</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item.options">options</a><a name="Questionnaire.item.options"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/references.html">Reference</a>(<a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/valueset.html">ValueSet</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck011.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item.option">option</a><a name="Questionnaire.item.option"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#BackboneElement">BackboneElement</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0100.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item.option.value[x]">value[x]</a><a name="Questionnaire.item.option.value_x_"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#integer">integer</a><span style="opacity: 0.4">, </span><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#date">date</a><span style="opacity: 0.4">, </span><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#time">time</a><span style="opacity: 0.4">, </span><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a><span style="opacity: 0.4">, </span><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#Coding">Coding</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item.initial[x]">initial[x]</a><a name="Questionnaire.item.initial_x_"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#boolean">boolean</a><span style="opacity: 0.4">, </span><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#decimal">decimal</a><span style="opacity: 0.4">, </span><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#integer">integer</a><span style="opacity: 0.4">, </span><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#date">date</a><span style="opacity: 0.4">, </span><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">dateTime</a><span style="opacity: 0.4">, </span><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#time">time</a><span style="opacity: 0.4">, </span><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a><span style="opacity: 0.4">, </span><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#uri">uri</a><span style="opacity: 0.4">, </span><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#Attachment">Attachment</a><span style="opacity: 0.4">, </span><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#Coding">Coding</a><span style="opacity: 0.4">, </span><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#Quantity">Quantity</a><span style="opacity: 0.4">, </span><a href="http://hl7.org/fhir/STU3/references.html">Reference</a>(<a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/resource.html">Resource</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item.item">item</a><a name="Questionnaire.item.item"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.url">url</a><a name="Questionnaire.url"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#uri">uri</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.version">version</a><a name="Questionnaire.version"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.title">title</a><a name="Questionnaire.title"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.status">status</a><a name="Questionnaire.status"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.description">description</a><a name="Questionnaire.description"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#markdown">markdown</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item">item</a><a name="Questionnaire.item"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#BackboneElement">BackboneElement</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item.linkId">linkId</a><a name="Questionnaire.item.linkId"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item.code">code</a><a name="Questionnaire.item.code"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#Coding">Coding</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item.prefix">prefix</a><a name="Questionnaire.item.prefix"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item.text">text</a><a name="Questionnaire.item.text"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item.type">type</a><a name="Questionnaire.item.type"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item.required">required</a><a name="Questionnaire.item.required"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#boolean">boolean</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item.repeats">repeats</a><a name="Questionnaire.item.repeats"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#boolean">boolean</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item.options">options</a><a name="Questionnaire.item.options"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/STU3/references.html">Reference</a>(<a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/valueset.html">ValueSet</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck011.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item.option">option</a><a name="Questionnaire.item.option"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#BackboneElement">BackboneElement</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0100.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item.option.value[x]">value[x]</a><a name="Questionnaire.item.option.value_x_"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#integer">integer</a><span style="opacity: 0.4">, </span><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#date">date</a><span style="opacity: 0.4">, </span><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#time">time</a><span style="opacity: 0.4">, </span><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a><span style="opacity: 0.4">, </span><a style="opacity: 0.4" href="http://hl7.org/fhir/STU3/datatypes.html#Coding">Coding</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white;"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-q-definitions.html#Questionnaire.item.item">item</a><a name="Questionnaire.item.item"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.4">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.4">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/></tr>
 <tr><td colspan="5" class="hierarchy"><br/><a href="http://hl7.org/fhir/STU3/formats.html#table" title="Legend for this format"><img src="http://hl7.org/fhir/STU3/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
   </text>
   <url value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"/>
@@ -348,8 +325,8 @@
       <short value="Logical URI to reference this questionnaire (globally unique)"/>
       <definition value="An absolute URI that is used to identify this questionnaire when it is referenced in a specification, model, design or an instance. This SHALL be a URL, SHOULD be globally unique, and SHOULD be an address at which this questionnaire is (or will be) published. The URL SHOULD include the major version of the questionnaire. For more information see [Technical and Business Versions](resource.html#versions)."/>
       <comment value="Can be a urn:uuid: or a urn:oid:, but real http: addresses are preferred.  Multiple instances may share the same url if they have a distinct version."/>
-      <requirements value="&#x2026;  This is the id that will be used to link a QuestionnaireResponse to the Questionnaire the response is for."/>
-      <min value="0"/>
+      <requirements value="This is the id that will be used to link a QuestionnaireResponse to the Questionnaire ."/>
+      <min value="1"/>
       <max value="1"/>
       <base>
         <path value="Questionnaire.url"/>
@@ -359,7 +336,7 @@
       <type>
         <code value="uri"/>
       </type>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
       <isSummary value="true"/>
       <mapping>
         <identity value="rim"/>
@@ -394,7 +371,6 @@
       <type>
         <code value="Identifier"/>
       </type>
-      <mustSupport value="false"/>
       <isSummary value="true"/>
       <mapping>
         <identity value="rim"/>
@@ -407,14 +383,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="id"/>
-      </mapping>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.identifier"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="Questionnaire.identifier"/>
       </mapping>
     </element>
     <element id="Questionnaire.version">
@@ -432,7 +400,7 @@
       <type>
         <code value="string"/>
       </type>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
       <isSummary value="true"/>
       <mapping>
         <identity value="rim"/>
@@ -467,19 +435,10 @@
       <type>
         <code value="string"/>
       </type>
-      <mustSupport value="false"/>
       <isSummary value="true"/>
       <mapping>
         <identity value="rim"/>
         <map value="N/A"/>
-      </mapping>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.name"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
       </mapping>
     </element>
     <element id="Questionnaire.title">
@@ -487,7 +446,7 @@
       <short value="Name for this questionnaire (human friendly)"/>
       <definition value="A short, descriptive, user-friendly title for the questionnaire."/>
       <comment value="This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc."/>
-      <min value="0"/>
+      <min value="1"/>
       <max value="1"/>
       <base>
         <path value="Questionnaire.title"/>
@@ -497,7 +456,7 @@
       <type>
         <code value="string"/>
       </type>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
       <isSummary value="true"/>
       <mapping>
         <identity value="rim"/>
@@ -527,7 +486,7 @@
       <type>
         <code value="code"/>
       </type>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
       <isModifier value="true"/>
       <isSummary value="true"/>
       <binding>
@@ -576,7 +535,6 @@
       <type>
         <code value="boolean"/>
       </type>
-      <mustSupport value="false"/>
       <isModifier value="true"/>
       <isSummary value="true"/>
       <mapping>
@@ -586,14 +544,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="class"/>
-      </mapping>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.experimental"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
       </mapping>
     </element>
     <element id="Questionnaire.date">
@@ -612,7 +562,6 @@
       <type>
         <code value="dateTime"/>
       </type>
-      <mustSupport value="false"/>
       <isSummary value="true"/>
       <mapping>
         <identity value="rim"/>
@@ -621,14 +570,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="when.recorded"/>
-      </mapping>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.date"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="Questionnaire.date"/>
       </mapping>
     </element>
     <element id="Questionnaire.publisher">
@@ -647,7 +588,6 @@
       <type>
         <code value="string"/>
       </type>
-      <mustSupport value="false"/>
       <isSummary value="true"/>
       <mapping>
         <identity value="rim"/>
@@ -656,14 +596,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="who.witness"/>
-      </mapping>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.publisher"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="Questionnaire.publisher"/>
       </mapping>
     </element>
     <element id="Questionnaire.description">
@@ -681,7 +613,7 @@
       <type>
         <code value="markdown"/>
       </type>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
       <mapping>
         <identity value="rim"/>
         <map value=".text"/>
@@ -710,7 +642,6 @@
       <type>
         <code value="markdown"/>
       </type>
-      <mustSupport value="false"/>
       <mapping>
         <identity value="rim"/>
         <map value=".reasonCode.text"/>
@@ -722,14 +653,6 @@
       <mapping>
         <identity value="w5"/>
         <map value="why"/>
-      </mapping>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.purpose"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
       </mapping>
     </element>
     <element id="Questionnaire.approvalDate">
@@ -747,7 +670,6 @@
       <type>
         <code value="date"/>
       </type>
-      <mustSupport value="false"/>
       <mapping>
         <identity value="rim"/>
         <map value=".outboundRelationship[typeCode=&quot;SUBJ&quot;].act[classCode=CACT;moodCode=EVN;code=&quot;approval&quot;].effectiveTime"/>
@@ -755,14 +677,6 @@
       <mapping>
         <identity value="objimpl"/>
         <map value="no-gen-base"/>
-      </mapping>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.approvalDate"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
       </mapping>
     </element>
     <element id="Questionnaire.lastReviewDate">
@@ -781,7 +695,6 @@
       <type>
         <code value="date"/>
       </type>
-      <mustSupport value="false"/>
       <mapping>
         <identity value="rim"/>
         <map value=".outboundRelationship[typeCode=&quot;SUBJ&quot;; subsetCode=&quot;RECENT&quot;].act[classCode=CACT;moodCode=EVN;code=&quot;review&quot;].effectiveTime"/>
@@ -789,14 +702,6 @@
       <mapping>
         <identity value="objimpl"/>
         <map value="no-gen-base"/>
-      </mapping>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.lastReviewDate"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
       </mapping>
     </element>
     <element id="Questionnaire.effectivePeriod">
@@ -815,7 +720,6 @@
       <type>
         <code value="Period"/>
       </type>
-      <mustSupport value="false"/>
       <isSummary value="true"/>
       <mapping>
         <identity value="rim"/>
@@ -824,14 +728,6 @@
       <mapping>
         <identity value="objimpl"/>
         <map value="no-gen-base"/>
-      </mapping>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.effectivePeriod"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
       </mapping>
     </element>
     <element id="Questionnaire.useContext">
@@ -850,19 +746,10 @@
       <type>
         <code value="UsageContext"/>
       </type>
-      <mustSupport value="false"/>
       <isSummary value="true"/>
       <mapping>
         <identity value="rim"/>
         <map value="N/A (to add?)"/>
-      </mapping>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.useContext"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
       </mapping>
     </element>
     <element id="Questionnaire.jurisdiction">
@@ -880,7 +767,6 @@
       <type>
         <code value="CodeableConcept"/>
       </type>
-      <mustSupport value="false"/>
       <isSummary value="true"/>
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -899,14 +785,6 @@
         <identity value="rim"/>
         <map value="N/A (to add?)"/>
       </mapping>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.jurisdiction"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
-      </mapping>
     </element>
     <element id="Questionnaire.contact">
       <path value="Questionnaire.contact"/>
@@ -923,19 +801,10 @@
       <type>
         <code value="ContactDetail"/>
       </type>
-      <mustSupport value="false"/>
       <isSummary value="true"/>
       <mapping>
         <identity value="rim"/>
         <map value=".participation[typeCode=CALLBCK].role"/>
-      </mapping>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.contact"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="Questionnaire.telecom"/>
       </mapping>
     </element>
     <element id="Questionnaire.copyright">
@@ -955,7 +824,6 @@
       <type>
         <code value="markdown"/>
       </type>
-      <mustSupport value="false"/>
       <mapping>
         <identity value="rim"/>
         <map value="N/A (to add?)"/>
@@ -963,14 +831,6 @@
       <mapping>
         <identity value="objimpl"/>
         <map value="no-gen-base"/>
-      </mapping>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.copyright"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
       </mapping>
     </element>
     <element id="Questionnaire.code">
@@ -988,7 +848,6 @@
       <type>
         <code value="Coding"/>
       </type>
-      <mustSupport value="false"/>
       <isSummary value="true"/>
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -1003,14 +862,6 @@
       <mapping>
         <identity value="rim"/>
         <map value=".code"/>
-      </mapping>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.code"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
       </mapping>
     </element>
     <element id="Questionnaire.subjectType">
@@ -1028,7 +879,6 @@
       <type>
         <code value="code"/>
       </type>
-      <mustSupport value="false"/>
       <isSummary value="true"/>
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -1046,14 +896,6 @@
       <mapping>
         <identity value="rim"/>
         <map value=".outboundRelationship[typeCode=META].target[classCode=OBS, moodCode=DEFN, isCriterion=true].participation.role.classCode"/>
-      </mapping>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.subjectType"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="Questionnaire.subjectType"/>
       </mapping>
     </element>
     <element id="Questionnaire.item">
@@ -1144,7 +986,7 @@
         <xpath value="not((f:type/@value=&#39;group&#39; and not(f:item)) or (f:type/@value=&#39;display&#39; and f:item))"/>
         <source value="Questionnaire.item"/>
       </constraint>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
       <mapping>
         <identity value="rim"/>
         <map value=".outboundRelationship[typeCode=COMP].target[classCode=OBS, moodCode=DEF]"/>
@@ -1241,7 +1083,7 @@
       <type>
         <code value="string"/>
       </type>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
       <mapping>
         <identity value="rim"/>
         <map value=".id"/>
@@ -1271,18 +1113,9 @@
       <type>
         <code value="uri"/>
       </type>
-      <mustSupport value="false"/>
       <mapping>
         <identity value="rim"/>
         <map value=".outboundRelationship[typeCode=INST].target[classCode=OBS, moodCode=DEF]"/>
-      </mapping>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.item.definition"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
       </mapping>
     </element>
     <element id="Questionnaire.item.code">
@@ -1302,7 +1135,7 @@
         <code value="Coding"/>
       </type>
       <condition value="que-3"/>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
       <isSummary value="true"/>
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
@@ -1344,7 +1177,7 @@
       <type>
         <code value="string"/>
       </type>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
       <mapping>
         <identity value="rim"/>
         <map value="Not supported"/>
@@ -1372,7 +1205,7 @@
       <type>
         <code value="string"/>
       </type>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
       <isSummary value="true"/>
       <mapping>
         <identity value="rim"/>
@@ -1403,7 +1236,7 @@
       <type>
         <code value="code"/>
       </type>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="QuestionnaireItemType"/>
@@ -1457,22 +1290,12 @@
         <human value="enableWhen must contain either a &#39;answer&#39; or a &#39;hasAnswer&#39; element"/>
         <expression value="hasAnswer.exists() xor answer.exists()"/>
         <xpath value="count(f:*[starts-with(local-name(.), &#39;answer&#39;)]|self::f:hasAnswer) = 1"/>
-        <source value="Questionnaire.item.enableWhen"/>
       </constraint>
-      <mustSupport value="false"/>
       <isModifier value="true"/>
       <isSummary value="true"/>
       <mapping>
         <identity value="rim"/>
         <map value="N/A - MIF rather than RIM level"/>
-      </mapping>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.item.enableWhen"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
       </mapping>
     </element>
     <element id="Questionnaire.item.enableWhen.id">
@@ -1557,18 +1380,9 @@
       <type>
         <code value="string"/>
       </type>
-      <mustSupport value="false"/>
       <mapping>
         <identity value="rim"/>
         <map value="N/A - MIF rather than RIM level"/>
-      </mapping>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.item.enableWhen.question"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
       </mapping>
     </element>
     <element id="Questionnaire.item.enableWhen.hasAnswer">
@@ -1587,18 +1401,9 @@
         <code value="boolean"/>
       </type>
       <condition value="que-7"/>
-      <mustSupport value="false"/>
       <mapping>
         <identity value="rim"/>
         <map value="N/A - MIF rather than RIM level"/>
-      </mapping>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.item.enableWhen.operator"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
       </mapping>
     </element>
     <element id="Questionnaire.item.enableWhen.answer[x]">
@@ -1651,7 +1456,6 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource"/>
       </type>
       <condition value="que-7"/>
-      <mustSupport value="false"/>
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="QuestionnaireQuestionOption2"/>
@@ -1665,14 +1469,6 @@
       <mapping>
         <identity value="rim"/>
         <map value="N/A - MIF rather than RIM level"/>
-      </mapping>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.item.enableWhen.answer[x]"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
       </mapping>
     </element>
     <element id="Questionnaire.item.required">
@@ -1692,7 +1488,7 @@
       </type>
       <defaultValueBoolean value="false"/>
       <condition value="que-6"/>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
       <mapping>
         <identity value="rim"/>
         <map value="N/A - MIF rather than RIM level"/>
@@ -1724,7 +1520,7 @@
       </type>
       <defaultValueBoolean value="false"/>
       <condition value="que-6"/>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
       <mapping>
         <identity value="rim"/>
         <map value="N/A - MIF rather than RIM level"/>
@@ -1755,18 +1551,9 @@
         <code value="boolean"/>
       </type>
       <condition value="que-9"/>
-      <mustSupport value="false"/>
       <mapping>
         <identity value="rim"/>
         <map value="N/A - MIF rather than RIM level"/>
-      </mapping>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.item.readOnly"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
       </mapping>
     </element>
     <element id="Questionnaire.item.maxLength">
@@ -1785,7 +1572,6 @@
         <code value="integer"/>
       </type>
       <condition value="que-10"/>
-      <mustSupport value="false"/>
       <mapping>
         <identity value="v2"/>
         <map value="N/A"/>
@@ -1793,14 +1579,6 @@
       <mapping>
         <identity value="rim"/>
         <map value="N/A - MIF rather than RIM level"/>
-      </mapping>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.item.maxLength"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
       </mapping>
     </element>
     <element id="Questionnaire.item.options">
@@ -1821,7 +1599,7 @@
       </type>
       <condition value="que-4"/>
       <condition value="que-5"/>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
       <mapping>
         <identity value="rim"/>
         <map value="N/A - MIF rather than RIM level"/>
@@ -1860,7 +1638,7 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="Element"/>
       </constraint>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
       <mapping>
         <identity value="rim"/>
         <map value="N/A - MIF rather than RIM level"/>
@@ -1968,7 +1746,7 @@
       <type>
         <code value="Coding"/>
       </type>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="QuestionnaireQuestionOption"/>
@@ -2043,7 +1821,6 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource"/>
       </type>
       <condition value="que-8"/>
-      <mustSupport value="false"/>
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="QuestionnaireQuestionOption2"/>
@@ -2057,14 +1834,6 @@
       <mapping>
         <identity value="rim"/>
         <map value="N/A - MIF rather than RIM level"/>
-      </mapping>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.item.initial.value[x]"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
       </mapping>
     </element>
     <element id="Questionnaire.item.item">
@@ -2082,7 +1851,7 @@
       </base>
       <contentReference value="#Questionnaire.item"/>
       <condition value="que-1"/>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
       <mapping>
         <identity value="rim"/>
         <map value=".outboundRelationship[typeCode=COMP].target"/>
@@ -2113,7 +1882,10 @@
     </element>
     <element id="Questionnaire.url">
       <path value="Questionnaire.url"/>
-      <mustSupport value="false"/>
+      <requirements value="This is the id that will be used to link a QuestionnaireResponse to the Questionnaire ."/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <mapping>
         <identity value="r4"/>
@@ -2124,22 +1896,9 @@
         <map value="New Element in R3"/>
       </mapping>
     </element>
-    <element id="Questionnaire.identifier">
-      <path value="Questionnaire.identifier"/>
-      <mustSupport value="false"/>
-      <isModifier value="false"/>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.identifier"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="Questionnaire.identifier"/>
-      </mapping>
-    </element>
     <element id="Questionnaire.version">
       <path value="Questionnaire.version"/>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <mapping>
         <identity value="r4"/>
@@ -2148,24 +1907,13 @@
       <mapping>
         <identity value="r2"/>
         <map value="Questionnaire.version"/>
-      </mapping>
-    </element>
-    <element id="Questionnaire.name">
-      <path value="Questionnaire.name"/>
-      <mustSupport value="false"/>
-      <isModifier value="false"/>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.name"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
       </mapping>
     </element>
     <element id="Questionnaire.title">
       <path value="Questionnaire.title"/>
-      <mustSupport value="false"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <mapping>
         <identity value="r4"/>
@@ -2178,7 +1926,7 @@
     </element>
     <element id="Questionnaire.status">
       <path value="Questionnaire.status"/>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <mapping>
         <identity value="r4"/>
@@ -2187,50 +1935,11 @@
       <mapping>
         <identity value="r2"/>
         <map value="Questionnaire.status"/>
-      </mapping>
-    </element>
-    <element id="Questionnaire.experimental">
-      <path value="Questionnaire.experimental"/>
-      <mustSupport value="false"/>
-      <isModifier value="false"/>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.experimental"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
-      </mapping>
-    </element>
-    <element id="Questionnaire.date">
-      <path value="Questionnaire.date"/>
-      <mustSupport value="false"/>
-      <isModifier value="false"/>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.date"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="Questionnaire.date"/>
-      </mapping>
-    </element>
-    <element id="Questionnaire.publisher">
-      <path value="Questionnaire.publisher"/>
-      <mustSupport value="false"/>
-      <isModifier value="false"/>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.publisher"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="Questionnaire.publisher"/>
       </mapping>
     </element>
     <element id="Questionnaire.description">
       <path value="Questionnaire.description"/>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <mapping>
         <identity value="r4"/>
@@ -2241,139 +1950,9 @@
         <map value="New Element in R3"/>
       </mapping>
     </element>
-    <element id="Questionnaire.purpose">
-      <path value="Questionnaire.purpose"/>
-      <mustSupport value="false"/>
-      <isModifier value="false"/>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.purpose"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
-      </mapping>
-    </element>
-    <element id="Questionnaire.approvalDate">
-      <path value="Questionnaire.approvalDate"/>
-      <mustSupport value="false"/>
-      <isModifier value="false"/>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.approvalDate"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
-      </mapping>
-    </element>
-    <element id="Questionnaire.lastReviewDate">
-      <path value="Questionnaire.lastReviewDate"/>
-      <mustSupport value="false"/>
-      <isModifier value="false"/>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.lastReviewDate"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
-      </mapping>
-    </element>
-    <element id="Questionnaire.effectivePeriod">
-      <path value="Questionnaire.effectivePeriod"/>
-      <mustSupport value="false"/>
-      <isModifier value="false"/>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.effectivePeriod"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
-      </mapping>
-    </element>
-    <element id="Questionnaire.useContext">
-      <path value="Questionnaire.useContext"/>
-      <mustSupport value="false"/>
-      <isModifier value="false"/>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.useContext"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
-      </mapping>
-    </element>
-    <element id="Questionnaire.jurisdiction">
-      <path value="Questionnaire.jurisdiction"/>
-      <mustSupport value="false"/>
-      <isModifier value="false"/>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.jurisdiction"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
-      </mapping>
-    </element>
-    <element id="Questionnaire.contact">
-      <path value="Questionnaire.contact"/>
-      <mustSupport value="false"/>
-      <isModifier value="false"/>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.contact"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="Questionnaire.telecom"/>
-      </mapping>
-    </element>
-    <element id="Questionnaire.copyright">
-      <path value="Questionnaire.copyright"/>
-      <mustSupport value="false"/>
-      <isModifier value="false"/>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.copyright"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
-      </mapping>
-    </element>
-    <element id="Questionnaire.code">
-      <path value="Questionnaire.code"/>
-      <mustSupport value="false"/>
-      <isModifier value="false"/>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.code"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
-      </mapping>
-    </element>
-    <element id="Questionnaire.subjectType">
-      <path value="Questionnaire.subjectType"/>
-      <mustSupport value="false"/>
-      <isModifier value="false"/>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.subjectType"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="Questionnaire.subjectType"/>
-      </mapping>
-    </element>
     <element id="Questionnaire.item">
       <path value="Questionnaire.item"/>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <mapping>
         <identity value="r4"/>
@@ -2386,7 +1965,7 @@
     </element>
     <element id="Questionnaire.item.linkId">
       <path value="Questionnaire.item.linkId"/>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <mapping>
         <identity value="r4"/>
@@ -2397,22 +1976,9 @@
         <map value="Questionnaire.group.linkId, Questionnaire.group.question.linkId"/>
       </mapping>
     </element>
-    <element id="Questionnaire.item.definition">
-      <path value="Questionnaire.item.definition"/>
-      <mustSupport value="false"/>
-      <isModifier value="false"/>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.item.definition"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
-      </mapping>
-    </element>
     <element id="Questionnaire.item.code">
       <path value="Questionnaire.item.code"/>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <mapping>
         <identity value="r4"/>
@@ -2425,7 +1991,7 @@
     </element>
     <element id="Questionnaire.item.prefix">
       <path value="Questionnaire.item.prefix"/>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <mapping>
         <identity value="r4"/>
@@ -2438,7 +2004,7 @@
     </element>
     <element id="Questionnaire.item.text">
       <path value="Questionnaire.item.text"/>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <mapping>
         <identity value="r4"/>
@@ -2451,7 +2017,7 @@
     </element>
     <element id="Questionnaire.item.type">
       <path value="Questionnaire.item.type"/>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <mapping>
         <identity value="r4"/>
@@ -2462,61 +2028,9 @@
         <map value="Questionnaire.group.question.type"/>
       </mapping>
     </element>
-    <element id="Questionnaire.item.enableWhen">
-      <path value="Questionnaire.item.enableWhen"/>
-      <mustSupport value="false"/>
-      <isModifier value="false"/>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.item.enableWhen"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
-      </mapping>
-    </element>
-    <element id="Questionnaire.item.enableWhen.question">
-      <path value="Questionnaire.item.enableWhen.question"/>
-      <mustSupport value="false"/>
-      <isModifier value="false"/>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.item.enableWhen.question"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
-      </mapping>
-    </element>
-    <element id="Questionnaire.item.enableWhen.hasAnswer">
-      <path value="Questionnaire.item.enableWhen.hasAnswer"/>
-      <mustSupport value="false"/>
-      <isModifier value="false"/>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.item.enableWhen.operator"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
-      </mapping>
-    </element>
-    <element id="Questionnaire.item.enableWhen.answer[x]">
-      <path value="Questionnaire.item.enableWhen.answer[x]"/>
-      <mustSupport value="false"/>
-      <isModifier value="false"/>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.item.enableWhen.answer[x]"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
-      </mapping>
-    </element>
     <element id="Questionnaire.item.required">
       <path value="Questionnaire.item.required"/>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <mapping>
         <identity value="r4"/>
@@ -2529,7 +2043,7 @@
     </element>
     <element id="Questionnaire.item.repeats">
       <path value="Questionnaire.item.repeats"/>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <mapping>
         <identity value="r4"/>
@@ -2540,35 +2054,9 @@
         <map value="Questionnaire.group.repeats,Questionnaire.group.question.repeats"/>
       </mapping>
     </element>
-    <element id="Questionnaire.item.readOnly">
-      <path value="Questionnaire.item.readOnly"/>
-      <mustSupport value="false"/>
-      <isModifier value="false"/>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.item.readOnly"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
-      </mapping>
-    </element>
-    <element id="Questionnaire.item.maxLength">
-      <path value="Questionnaire.item.maxLength"/>
-      <mustSupport value="false"/>
-      <isModifier value="false"/>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.item.maxLength"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
-      </mapping>
-    </element>
     <element id="Questionnaire.item.options">
       <path value="Questionnaire.item.options"/>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <mapping>
         <identity value="r4"/>
@@ -2581,7 +2069,7 @@
     </element>
     <element id="Questionnaire.item.option">
       <path value="Questionnaire.item.option"/>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <mapping>
         <identity value="r4"/>
@@ -2594,7 +2082,7 @@
     </element>
     <element id="Questionnaire.item.option.value[x]">
       <path value="Questionnaire.item.option.value[x]"/>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <mapping>
         <identity value="r4"/>
@@ -2605,22 +2093,9 @@
         <map value="New Element in R3"/>
       </mapping>
     </element>
-    <element id="Questionnaire.item.initial[x]">
-      <path value="Questionnaire.item.initial[x]"/>
-      <mustSupport value="false"/>
-      <isModifier value="false"/>
-      <mapping>
-        <identity value="r4"/>
-        <map value="Questionnaire.item.initial.value[x]"/>
-      </mapping>
-      <mapping>
-        <identity value="r2"/>
-        <map value="New Element in R3"/>
-      </mapping>
-    </element>
     <element id="Questionnaire.item.item">
       <path value="Questionnaire.item.item"/>
-      <mustSupport value="false"/>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <mapping>
         <identity value="r4"/>

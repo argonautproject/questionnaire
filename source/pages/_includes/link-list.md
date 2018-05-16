@@ -14,10 +14,20 @@
 [Scenario 1]: guidance.html
 [Downloads]: downloads.html
 [server]: CapabilityStatement-server.html
-[client]:CapabilityStatement-client.html
+[client]: CapabilityStatement-client.html
 [Terminology]: terminology.html
 [Profiles]: profiles.html
 [FHIR Version 3.0.1]: {{site.data.fhir.path}}
 [^1]: This is called the 'Form Manager' in the [Structured Data Capture Initiative] (SDC)
 [^2]: This is called the 'Form Receiver/Archiver' in the [Structured Data Capture Initiative] (SDC)
 [^3]: This is called the 'Form Filler' and/or 'Form Response Handler' in the [Structured Data Capture Initiative] (SDC)
+[see issues]: index.html#outstanding-issuesfuture-scope
+[FHIR RESTful API]: {{site.data.fhir.path}}/http.html
+[Assessment-Bank]: CapabilityStatement-assessmentbank.html
+[Answer-Bank]: CapabilityStatement-answerbank.html
+[Provider EHR]: CapabilityStatement-server.html
+[Argonaut Questionnaire Score]: StructureDefinition-extension-score.html
+[Must Support]: {{site.data.fhir.uscore}}/guidance.html#must-support
+[LOINC]: http://loinc.org
+[FHIR RESTful search API]: {{site.data.fhir.path}}/search.html
+[Questionnaire examples]: StructureDefinition-q.html#examples

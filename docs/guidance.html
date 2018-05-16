@@ -54,7 +54,7 @@
 
 ================THIS IS FOR THE PROJECT LOGO AND URL =============== -->
 
-<a no-external="true" href="http://argonautwiki.hl7.org"><a name="1fd3bf56-1004-443e-a966-757d4626823d">​</a>
+<a no-external="true" href="http://argonautwiki.hl7.org">
 <img src="assets/images/ArgonautProject_logo_black.png" alt="visit our website" class="img-responsive project-logo"/>
 </a>
 
@@ -134,6 +134,13 @@
   </b>
 </a>
 <ul class="dropdown-menu">
+<li>
+  <a href="CapabilityStatement-assessmentbank.html">Conformance requirements for Assessment Bank</a>
+</li>
+<li>
+  <a href="CapabilityStatement-answerbank.html">Conformance requirements for Answer Bank</a>
+</li>
+
   <li>
     <a href="CapabilityStatement-server.html">Conformance requirements for Server</a>
   </li>
@@ -234,7 +241,11 @@
 
 <ul id="markdown-toc">
   <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
-  <li><a href="#scenario-1" id="markdown-toc-scenario-1">Scenario 1</a></li>
+  <li><a href="#scenario-1" id="markdown-toc-scenario-1">Scenario 1</a>    <ul>
+      <li><a href="#usage-3" id="markdown-toc-usage-3">Usage</a></li>
+      <li><a href="#usage-4" id="markdown-toc-usage-4">Usage</a></li>
+    </ul>
+  </li>
 </ul>
 
 <h2 id="introduction">Introduction</h2>
@@ -261,37 +272,275 @@ Each assessment tool (i.e., set of questions and answer choices) is created once
 </code></pre>
 </div>
 
-<p>example how to use a button to expand an inline example….</p>
+<h3 id="form-authoreditor-creates-or-updates-assessment" class="no_toc">Form Author/Editor creates or updates Assessment</h3>
+
+<p>Before an assessment can retrieved it must be created.  This step MAY include updating or deprecation of an assessment.  The Form Author/Editor creates a Questionnaire resource based on a set of assessment questions and answers and associated scores as defined by the program coordinators.  The Questionnaire conforms to the <a href="StructureDefinition-q.html" title="Argonaut Questionnaire Profile">Argonaut Questionnaire Profile</a>.  How these questions and answer and scores are defined and how the Questionnaire is created are out of scope.  ( note: there are several tools available for authoring fhir resources. )</p>
+
+<h3 id="form-authoreditor-uploads-the-assessments-to-the-assessment-bank" class="no_toc">Form Author/Editor uploads the Assessments to the Assessment-Bank</h3>
+
+<p>The Author/Editor is able to upload the Questionnaires to a FHIR server which serves as a repository where all the program participants can search and download the standard assessment when they need them.  Multiple version of each assessment may be available. <a href="index.html#outstanding-issuesfuture-scope">see issues</a></p>
+
+  <!-- >{% include img.html img="diagrams/Slide30.png" caption="Appointment Availability Discovery and Search" %} -->
+
+<p>This transaction use the standard <a href="http://hl7.org/fhir/STU3/http.html">FHIR RESTful API</a> to created, update, and delete Questionnaires from the Assessment bank:</p>
+
+<h4 id="apis" class="no_toc">APIs</h4>
+
+<p>The following Argonaut Questionnaire artifacts are used in this transaction:</p>
+
+<ul>
+  <li><strong><a href="StructureDefinition-q.html" title="Argonaut Questionnaire Profile">Argonaut Questionnaire Profile</a></strong>.</li>
+</ul>
+
+<h4 id="usage" class="no_toc">Usage</h4>
+
+<p>To create a Questionnaire:</p>
+
+<p><code class="highlighter-rouge">POST [base]/Questionnaire/...</code></p>
+
+<p>To update a Questionnaire:</p>
+
+<p><code class="highlighter-rouge">PUT [base]/Questionnaire/[id]</code></p>
+
+<p>to delete a Questionnaire:</p>
+
+<p><code class="highlighter-rouge">DELETE [base]/Questionnaire/[id]</code></p>
 
 <p>
-  <button data-target="#foo" data-toggle="collapse" aria-controls="collapseExample" aria-expanded="false" type="button" class="btn btn-primary">
+  <button data-target="#example-step1" data-toggle="collapse" aria-controls="collapseExample" aria-expanded="false" type="button" class="btn btn-primary">
     Example
   </button>
 </p>
 
-<div id="foo" class="collapse">
+<div id="example-step1" class="collapse">
   <div class="card card-body">
-      <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
-
-<h4 id="foo">foo</h4>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>
-foojkljk;
-a
-
-dfjkl
-
-
+      <div class="highlighter-rouge"><pre class="highlight"><code>example
+...
 </code></pre>
 </div>
-
-<h1 id="foo-1">foo</h1>
-
-<h2 id="information">information</h2>
 
   </div>
 </div>
 <p><br/></p>
+
+<h3 id="provider-ehrs-retrieve-standard-assessments-from-the-assessment-bank" class="no_toc">Provider EHRs Retrieve Standard Assessments from the Assessment Bank</h3>
+
+<p>When it is time to perform an assessment of the program participants(subjects), the Provider EHR fetches the appropriate Questionnaire(s) from the Assessment-Bank.</p>
+
+  <!-- >{% include img.html img="diagrams/Slide30.png" caption="Appointment Availability Discovery and Search" %} -->
+
+<p>The standard <a href="http://hl7.org/fhir/STU3/search.html">FHIR RESTful search API</a> is used with the following <em>mandatory</em> search parameters:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">_id</code></li>
+  <li><code class="highlighter-rouge">url</code></li>
+  <li><code class="highlighter-rouge">status</code></li>
+  <li><code class="highlighter-rouge">title</code></li>
+</ul>
+
+<p>and the following <em>optional</em> search parameters</p>
+
+<ul>
+  <li><code class="highlighter-rouge">version</code></li>
+</ul>
+
+<p>(others?… discuss)</p>
+
+<p>(multiple version of each assessment may be available. <a href="index.html#outstanding-issuesfuture-scope">see issues</a>)</p>
+
+<h4 id="apis-1" class="no_toc">APIs</h4>
+
+<p>The following Argonaut Questionnaire artifacts are used in this transaction:</p>
+
+<ul>
+  <li><strong><a href="StructureDefinition-q.html" title="Argonaut Questionnaire Profile">Argonaut Questionnaire Profile</a></strong>.</li>
+</ul>
+
+<p>Issue:  when retrieval of a Questionnaire that has a choice of concept which reside in a Valueset  ( see Q.options ) should we support that the default action is to <em>include</em> the valueset in the bundle since then the EHR provider is not depending on a terminology server to expand the the choices when rendering.</p>
+
+<p>Other options:<br/>
+1. prohibit use of external valuesets  ( always enumerate inline )
+1. contain the valuesets within the Questionnaire
+1. make includes optional</p>
+
+<h4 id="usage-1" class="no_toc">Usage</h4>
+
+<p>Fetching a Questionnaire based on its id:</p>
+
+<p><code class="highlighter-rouge">GET [base]/Questionnaire/[id]</code></p>
+
+<p>Fetching a Questionnaire based on its uri (note the QuestionnaireResponse uses teh uri to reference the assessment upon which it is based):</p>
+
+<p><code class="highlighter-rouge">GET [base]/Questionnaire?url=[uri]</code></p>
+
+<p>Searching for a Questionnaire based on its title (the supplied parameter can  equals or starts with the title ):</p>
+
+<p><code class="highlighter-rouge">GET [base]/Questionnaire?title=[title]</code></p>
+
+<p>Searching for all the active Questionnaires:</p>
+
+<p><code class="highlighter-rouge">GET [base]/Questionnaire?status=active</code></p>
+
+<p>Searching for a Questionnaire based on its title and version:</p>
+
+<p><code class="highlighter-rouge">GET [base]/Questionnaire?title=[title]$version=[version]</code>`</p>
+
+<p>
+  <button data-target="#example-step2" data-toggle="collapse" aria-controls="collapseExample" aria-expanded="false" type="button" class="btn btn-primary">
+    Example
+  </button>
+</p>
+
+<div id="example-step2" class="collapse">
+  <div class="card card-body">
+      <div class="highlighter-rouge"><pre class="highlight"><code>example
+...
+</code></pre>
+</div>
+
+  </div>
+</div>
+<p><br/></p>
+
+<h3 id="the-provider-ehr-renders-and-display-the-standard-assessments-to-the-end-user" class="no_toc">The Provider EHR Renders and Display the standard assessments to the end user</h3>
+
+<p>The assessment is displayed as an online form to be completed by the subject or the provider administrator.  (Printable form in scope?<a href="index.html#outstanding-issuesfuture-scope">see issues</a>) How the form is rendered and displayed are out of scope for this guide.</p>
+
+  <!-- >{% include img.html img="diagrams/Slide30.png" caption="Appointment Availability Discovery and Search" %} -->
+
+<h3 id="the-end-user-completes-the-assessment" class="no_toc">The end user completes the assessment</h3>
+
+<p>The responses to the assessment are captured by the Provider EHR. In addition to the recording the response, they are associated with the Assessment and the individual Question on the form.  QuestionnaireResponse resources can be validated against their corresponding Questionnaire to verify that required groups and questions are answered and that answers fit constraints in terms of cardinality, data type, etc.  The Provider ERH may calculate a  scored based on the associated scores associated with each item.  How the score is calculated may be described in the Questionnaire, although the actual logic is left to the implementation.  The QuestionnaireResponse may be used to persist the response data. How the QuestionnaireResponse gets populated is beyond the scope of this IG.</p>
+
+  <!-- >{% include img.html img="diagrams/Slide30.png" caption="Appointment Availability Discovery and Search" %} -->
+
+<p>Discuss how to deal with incomplete or dupicate sets of answers by the same subject <a href="index.html#outstanding-issuesfuture-scope">see issues</a>.</p>
+
+<p>The standard <a href="http://hl7.org/fhir/STU3/search.html">FHIR RESTful search API</a> is used with the following <em>mandatory</em> search parameters:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">_id</code></li>
+  <li><code class="highlighter-rouge">questionnaire</code></li>
+  <li><code class="highlighter-rouge">patient</code></li>
+  <li><code class="highlighter-rouge">status</code></li>
+</ul>
+
+<p>and the following <em>optional</em> search parameters</p>
+
+<ul>
+  <li><code class="highlighter-rouge">author</code></li>
+  <li><code class="highlighter-rouge">source</code></li>
+</ul>
+
+<p>(others?… discuss)</p>
+
+<h4 id="apis-2" class="no_toc">APIs</h4>
+
+<p>The following Argonaut Questionnaire artifacts are used in this transaction:</p>
+
+<ul>
+  <li><strong><a href="StructureDefinition-qr.html" title="Argonaut QuestionnaireResponse Profile">Argonaut QuestionnaireResponse Profile</a></strong>.</li>
+</ul>
+
+<h4 id="usage-2" class="no_toc">Usage</h4>
+
+<p>todo</p>
+
+<p>
+  <button data-target="#example-step6" data-toggle="collapse" aria-controls="collapseExample" aria-expanded="false" type="button" class="btn btn-primary">
+    Example
+  </button>
+</p>
+
+<div id="example-step6" class="collapse">
+  <div class="card card-body">
+      <div class="highlighter-rouge"><pre class="highlight"><code>example
+...
+</code></pre>
+</div>
+
+  </div>
+</div>
+<p><br/></p>
+
+<h3 id="the-assessment-responses-are-analyzed-and-shared-across-organizations" class="no_toc">The Assessment Responses are analyzed and shared across organizations</h3>
+
+<p>The assessment responses are shared with the program administrators using the QuestionnaireResponse resource. By capturing the data in standard structured way, it can be readily processed.  The assessment may be reference to a Questionnaire resource that defines the questions as well as the constraints on the allowed answers.</p>
+
+  <!-- >{% include img.html img="diagrams/Slide30.png" caption="Appointment Availability Discovery and Search" %} -->
+
+<p>Discuss - is this a push?    in scope?</p>
+
+<h4 id="apis-3" class="no_toc">APIs</h4>
+
+<p>The following Argonaut Questionnaire artifacts are used in this transaction:</p>
+
+<ul>
+  <li><strong><a name="c49ec9b4-b0e9-45d5-b5d5-03e4929339f3">​</a><a href="optionally">Argonaut Questionnaire Profile</a></strong>.</li>
+  <li><strong><a href="StructureDefinition-qr.html" title="Argonaut QuestionnaireResponse Profile">Argonaut QuestionnaireResponse Profile</a></strong>.</li>
+</ul>
+
+<h4 id="usage-3">Usage</h4>
+
+<p class="no_toc">…todo…</p>
+
+<p>
+  <button data-target="#example-step6" data-toggle="collapse" aria-controls="collapseExample" aria-expanded="false" type="button" class="btn btn-primary">
+    Example
+  </button>
+</p>
+
+<div id="example-step6" class="collapse">
+  <div class="card card-body">
+      <div class="highlighter-rouge"><pre class="highlight"><code>example
+...
+</code></pre>
+</div>
+
+  </div>
+</div>
+<p><br/></p>
+
+<h3 id="step" class="no_toc">Step</h3>
+
+<p>[description]</p>
+
+  <!-- >{% include img.html img="diagrams/Slide30.png" caption="Appointment Availability Discovery and Search" %} -->
+
+<p>[optional more description]</p>
+
+<h4 id="apis-4" class="no_toc">APIs</h4>
+
+<p>The following Argonaut Questionnaire artifacts are used in this transaction:</p>
+
+<ul>
+  <li><strong><a href="StructureDefinition-q.html" title="Argonaut Questionnaire Profile">Argonaut Questionnaire Profile</a></strong>.</li>
+  <li><strong><a href="StructureDefinition-qr.html" title="Argonaut QuestionnaireResponse Profile">Argonaut QuestionnaireResponse Profile</a></strong>.</li>
+  <li><strong>[Other]</strong>.</li>
+</ul>
+
+<h4 id="usage-4">Usage</h4>
+
+<p class="no_toc">…todo…</p>
+
+<p>
+  <button data-target="#example-step7" data-toggle="collapse" aria-controls="collapseExample" aria-expanded="false" type="button" class="btn btn-primary">
+    Example
+  </button>
+</p>
+
+<div id="example-step7" class="collapse">
+  <div class="card card-body">
+      <div class="highlighter-rouge"><pre class="highlight"><code>example
+...
+</code></pre>
+</div>
+
+  </div>
+</div>
+<p><br/></p>
+
+<hr/>
 
 
 
@@ -318,6 +567,8 @@ dfjkl
 
   <!-- back to top arrow -->
 
+<a data-toggle="tooltip" role="button" data-placement="left" id="back-to-top" href="#" title="Click to return on the top page" class="btn btn-info btn-lg back-to-top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+
 
   <!-- end back to top arrow -->
 
@@ -325,7 +576,7 @@ dfjkl
   <div class="container">    <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Mon, May 14, 2018 23:56-0700. | <a rel="license" no-external="true" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
+            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, May 16, 2018 08:40-0700. | <a rel="license" no-external="true" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
         
         </p>
    </div>    <!-- /inner-wrapper -->
@@ -350,6 +601,8 @@ dfjkl
 <script src="./assets/js/anchor.min.js"> </script>
 <script src="./assets/js/fhir.js"> </script>
 
+
+<script src="./assets/js/topofpage.js"> </script>
 
 
 

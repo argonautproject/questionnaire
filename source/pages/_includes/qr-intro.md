@@ -17,15 +17,31 @@ Can be transformed to other FHIR resources (out of scope)
 
 The Argonaut Questionnaire resource supports:
 
-#### Mandatory Data Elements and Terminology
+### Mandatory Data Elements and Terminology
 
-The following data-elements are mandatory (i.e data MUST be present). blah blah blah
+The following data-elements are mandatory:
 
-**must have:**
+**Each Questionnaire must have:**
 
-1. blah
-1. blah
-1. blah
+1. A status (Mandatory in base)
+1. A link to the question being answered (Mandatory in base)
+1. A reference to the form being answered  (Mandatory in SDC)
+1. A Patient (Mandatory in SDC)
+1. A datetime (Mandatory in SDC)
+
+**The system [Must Support] if available:**
+
+1. QuestionnaireResponse.identifier
+1. QuestionnaireResponse.author
+1. QuestionnaireResponse.source
+1. QuestionnaireResponse.item
+1. QuestionnaireResponse.item.definition
+1. QuestionnaireResponse.item.text
+1. QuestionnaireResponse.item.answer
+1. QuestionnaireResponse.item.answer.value[x]
+1. QuestionnaireResponse.item.answer.item
+1. QuestionnaireResponse.item.item
+
 
 **Additional Profile specific implementation guidance:**
 

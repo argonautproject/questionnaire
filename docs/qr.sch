@@ -10,6 +10,14 @@
     single schematron that validates contained resources (if you have any) 
   -->
   <sch:pattern>
+    <sch:title>f:QuestionnaireResponse</sch:title>
+    <sch:rule context="f:QuestionnaireResponse">
+      <sch:assert test="count(f:questionnaire) &gt;= 1">questionnaire: minimum cardinality of 'questionnaire' is 1</sch:assert>
+      <sch:assert test="count(f:subject) &gt;= 1">subject: minimum cardinality of 'subject' is 1</sch:assert>
+      <sch:assert test="count(f:authored) &gt;= 1">authored: minimum cardinality of 'authored' is 1</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
     <sch:title>QuestionnaireResponse</sch:title>
     <sch:rule context="f:QuestionnaireResponse">
       <sch:assert test="not(parent::f:contained and f:contained)">If the resource is contained in another resource, it SHALL NOT contain nested Resources (inherited)</sch:assert>
