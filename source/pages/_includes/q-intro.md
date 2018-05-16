@@ -75,10 +75,11 @@ None
 
 ### Examples
 
-{% include list-simple-questionnaires.xhtml %}
-
-- [PHQ-9](Questionnaire-questionnaire-example-phq-9.html)
+<!-- {% raw %} {% include list-simple-questionnaires.xhtml %}{% endraw %} -->
+- [PHQ-9](Questionnaire-questionnaire-example-phq-9xml.html)
 - [AUDIT](Questionnaire-questionnaire-example-audit.html)
 - [DAST](Questionnaire-questionnaire-example-dast.html)
+- [Housing](Questionnaire-questionnaire-example-housing.html)
+- [ASQ3](Questionnaire-questionnaire-example-asq3.html)
 
 {%include link-list.md %}

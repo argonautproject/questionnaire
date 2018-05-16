@@ -19,6 +19,30 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Questionnaire-questionnaire-example-phq-9xml.html"
+            }
+          ],
+          "example": true,
+          "sourceReference": {
+            "reference": "Questionnaire/questionnaire-example-phq-9xml"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "QuestionnaireResponse-phq9-responses.html"
+            }
+          ],
+          "example": true,
+          "sourceReference": {
+            "reference": "QuestionnaireResponse/phq9-responses"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "Questionnaire-questionnaire-example-phq9.html"
             }
           ],

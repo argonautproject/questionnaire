@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--   Response to PHQ-9    -->
+<QuestionnaireResponse xmlns="http://hl7.org/fhir">
+  <id value="phq9-responses"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: phq9-responses</p><p><b>identifier</b>: 1234</p><p><b>questionnaire</b>: <a href="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/phq9">http://fhir.org/guides/argonaut-questionnaire/Questionnaire/phq9</a></p><p><b>status</b>: completed</p><p><b>subject</b>: Subject</p><p><b>authored</b>: May 16, 2018 1:55:57 PM</p><p><b>source</b>: Subject</p><blockquote><p><b>item</b></p><p><b>linkId</b>: LittleInterest</p><p><b>text</b>: Overs the last2 weeks ...</p><h3>Answers</h3><table class="grid"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Not at all (Details: LOINC code  LA6568-5 = ' LA6568-5', stated as 'Not at all')</td></tr></table></blockquote></div>
+  </text>
+  <identifier>
+    <system value="http:/acme.org/qrid"/>
+    <value value="1234"/>
+  </identifier>
+<!-- put the canonical reference to questionnaire here so is globally discoverable  -->
+  <questionnaire>
+    <reference value="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/phq9"/>
+  </questionnaire>
+  <status value="completed"/>
+<!--  who this assessment is all about == subject -->
+  <subject>
+    <display value="Subject"/>
+  </subject>
+  <authored value="2018-05-16T13:55:57Z"/>
+<!--  no provider administrator - taken by subject  -->
+<!-- 	
+	<author>
+				<display value="Provider Administrator"/>
+	</author>
+	
+ -->
+<!--  assessment filled out directly by subject  -->
+  <source>
+    <display value="Subject"/>
+  </source>
+<!--  The responses ? does this need to mimic the q structure??? or can if be a flat list???  -->
+  <item>
+  <!--  link to the question  -->
+    <linkId value="LittleInterest"/>
+    <text value="Overs the last2 weeks ..."/>
+  <!--  actuall answer  here is a LOINC code  -->
+    <answer>
+      <valueCoding>
+        <system value="http://loinc.org"/>
+        <code value=" LA6568-5"/>
+        <display value="Not at all"/>
+      </valueCoding>
+    </answer>
+  </item>
+</QuestionnaireResponse>

@@ -47,4 +47,6 @@ The following data-elements are mandatory:
 
 #### Examples
 
-- list examples here
+
+<!-- {% raw %} {% include list-simple-questionnaires.xhtml %}{% endraw %} -->
+- [PHQ-9 Response](QuestionnaireResponse-phq9-responses.html)
