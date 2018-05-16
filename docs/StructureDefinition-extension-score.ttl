@@ -31,7 +31,7 @@
   fhir:StructureDefinition.abstract [ fhir:value "false"^^xsd:boolean];
   fhir:StructureDefinition.contextType [ fhir:value "resource"];
   fhir:StructureDefinition.context [
-     fhir:value "Questionnaire.item.option.value[x]";
+     fhir:value "Questionnaire.item.option";
      fhir:index 0
   ], [
      fhir:value "Questionnaire.item.type";

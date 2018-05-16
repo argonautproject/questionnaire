@@ -129,6 +129,10 @@
 <li>
   <a href="terminology.html">Terminology</a>
 </li>
+&lt;/li&gt;
+<li>
+  <a href="searchparameters.html">Search Parameters</a>
+</li>
 <li class="dropdown">
   <a data-toggle="dropdown" href="#" class="dropdown-toggle">Capability Statements<b class="caret">
   </b>
@@ -332,7 +336,7 @@ Can be transformed to other FHIR resources (out of scope)</p>
   <li>A datetime (Mandatory in SDC)</li>
 </ol>
 
-<p><strong>The system [Must Support] if available:</strong></p>
+<p><strong>The system <a href="http://build.fhir.org/ig/HL7/US-Core/guidance.html#must-support">Must Support</a> if available:</strong></p>
 
 <ol>
   <li>QuestionnaireResponse.identifier</li>
@@ -355,6 +359,7 @@ Can be transformed to other FHIR resources (out of scope)</p>
 <ul>
   <li><a href="QuestionnaireResponse-phq9-responses.html">PHQ-9 Response</a></li>
 </ul>
+
 
 
 
@@ -403,9 +408,8 @@ This profile builds on <a href="http://hl7.org/fhir/STU3/questionnaireresponse.h
   <li><a href="#tabs-summ">Text Summary</a></li>
   <li><a href="#tabs-diff">Differential Table</a></li>
   <li><a href="#tabs-snap">Snapshot Table</a></li>
-
-  <!-- <li><a href="#tabs-xml">XML Template</a></li>
-  <li><a href="#tabs-json">JSON Template</a></li> -->
+    <!-- <li><a href="#tabs-xml">XML Template</a></li> -->
+  <li><a href="#tabs-json">JSON Template</a></li>
   <li><a href="#tabs-all">All</a></li>
 
  </ul>
@@ -501,7 +505,7 @@ Summary
    </div>
   </div>
  </div>
-
+  <!-- =======XML and JSON ======== -->
 
    <!-- <div id="tabs-xml">
   <div id="xml">
@@ -509,16 +513,63 @@ Summary
 {% include StructureDefinition-qr-pseudo-xml.xhtml %}
    </div>
   </div>
- </div>
+ </div> -->
 
  <div id="tabs-json">
   <div id="json">
    <div id="json-inner">
-      {% include StructureDefinition-qr-pseudo-json.xhtml %}
-    </pre>
+     <pre class="spec"><a name="8392e113-e81f-446f-b57a-3b94eabc7d3f">​</a>
+       // <span style="color: navy; opacity: 0.8"></span>
+ {
+   "resourceType" : "QuestionnaireResponse",
+    "<a href="StructureDefinition-qr.html#QuestionnaireResponse.id" title="The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes" class="dict"><span style="text-decoration: underline">id</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#id">id</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Logical id of this artifact</span>
+    "<a href="StructureDefinition-qr.html#QuestionnaireResponse.meta" title="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource" class="dict"><span style="text-decoration: underline">meta</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#Meta">Meta</a></span>}, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Metadata about the resource</span>
+    "<a href="StructureDefinition-qr.html#QuestionnaireResponse.implicitRules" title="A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content (this element modifies the meaning of other elements)" class="dict"><span style="text-decoration: underline">implicitRules</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#uri">uri</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">A set of rules under which this content was created</span>
+    "<a href="StructureDefinition-qr.html#QuestionnaireResponse.language" title="The base language in which the resource is written" class="dict"><span style="text-decoration: underline">language</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#code">code</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy" href="http://hl7.org/fhir/ValueSet/languages.html">Language of the resource content</a></span>
+    "<a href="StructureDefinition-qr.html#QuestionnaireResponse.text" title="A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety" class="dict"><span style="text-decoration: underline">text</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative">Narrative</a></span>}, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Text summary of the resource, for human interpretation</span>
+    "<a href="StructureDefinition-qr.html#QuestionnaireResponse.contained" title="These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope" class="dict"><span style="text-decoration: underline">contained</span></a>" : [{<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/resource.html#Resource">Resource</a></span>}], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Contained, inline Resources</span>
+    "extension": [
+    ],
+    "<a href="StructureDefinition-qr.html#QuestionnaireResponse.identifier" title="A business identifier assigned to a particular completed (or partially completed) questionnaire (this element must be supported)" class="dict"><span style="text-decoration: underline">identifier</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier">Identifier</a></span>}, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Unique id for this set of answers</span>
+    "<a href="StructureDefinition-qr.html#QuestionnaireResponse.basedOn" title="The order, proposal or plan that is fulfilled in whole or in part by this QuestionnaireResponse.  For example, a ProcedureRequest seeking an intake assessment or a decision support recommendation to assess for post-partum depression" class="dict"><span style="text-decoration: underline">basedOn</span></a>" : [{<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#Reference">Reference</a></span>(<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/referralrequest.html">ReferralRequest</a></span>)}], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Request fulfilled by this QuestionnaireResponse</span>
+    "<a href="StructureDefinition-qr.html#QuestionnaireResponse.parent" title="A procedure or observation that this questionnaire was performed as part of the execution of.  For example, the surgery a checklist was executed as part of" class="dict"><span style="text-decoration: underline">parent</span></a>" : [{<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#Reference">Reference</a></span>(<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/observation.html">Observation</a></span>)}], <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Part of this action</span>
+    "<a href="StructureDefinition-qr.html#QuestionnaireResponse.questionnaire" title="The Questionnaire that defines and organizes the questions for which answers are being provided (this element must be supported)" class="dict"><span style="text-decoration: underline">questionnaire</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#Reference">Reference</a></span>([CanonicalType[http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q]])}, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Form being answered</span>
+    "<a href="StructureDefinition-qr.html#QuestionnaireResponse.status" title="The position of the questionnaire response within its overall lifecycle (this element modifies the meaning of other elements, and must be supported)" class="dict"><span style="text-decoration: underline">status</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#code">code</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8"><a style="color: navy" href="http://hl7.org/fhir/ValueSet/questionnaire-answers-status.html">in-progress | completed | amended | entered-in-error | stopped</a></span>
+    "<a href="StructureDefinition-qr.html#QuestionnaireResponse.subject" title="The subject of the questionnaire response.  This could be a patient, organization, practitioner, device, etc.  This is who/what the answers apply to, but is not necessarily the source of information (this element must be supported)" class="dict"><span style="text-decoration: underline">subject</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#Reference">Reference</a></span>([CanonicalType[http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient]])}, <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">The subject of the questions</span>
+    "<a href="StructureDefinition-qr.html#QuestionnaireResponse.context" title="The encounter or episode of care with primary association to the questionnaire response" class="dict"><span style="text-decoration: underline">context</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#Reference">Reference</a></span>(<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/encounter.html">Encounter</a></span>)}, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Encounter or Episode during which questionnaire was completed</span>
+    "<a href="StructureDefinition-qr.html#QuestionnaireResponse.authored" title="The date and/or time that this set of answers were last changed (this element must be supported)" class="dict"><span style="text-decoration: underline">authored</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">dateTime</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Date the answers were gathered</span>
+    "<a href="StructureDefinition-qr.html#QuestionnaireResponse.author" title="Person who received the answers to the questions in the QuestionnaireResponse and recorded them in the system (this element must be supported)" class="dict"><span style="text-decoration: underline">author</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#Reference">Reference</a></span>([CanonicalType[http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner], CanonicalType[http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient], CanonicalType[http://hl7.org/fhir/StructureDefinition/Device], CanonicalType[http://hl7.org/fhir/StructureDefinition/RelatedPerson]])}, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Person who received and recorded the answers</span>
+    "<a href="StructureDefinition-qr.html#QuestionnaireResponse.source" title="The person who answered the questions about the subject (this element must be supported)" class="dict"><span style="text-decoration: underline">source</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#Reference">Reference</a></span>([CanonicalType[http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner], CanonicalType[http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient], CanonicalType[http://hl7.org/fhir/StructureDefinition/RelatedPerson]])}, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">The person who answered the questions</span>
+    "<a href="StructureDefinition-qr.html#QuestionnaireResponse.item" title="A group or question item from the original questionnaire for which answers are provided (this element must be supported)" class="dict"><span style="text-decoration: underline">item</span></a>" : [{ <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children; qrs-1: Nested item can't be beneath both item and answer"><b>C?</b></span> <span style="color: navy; opacity: 0.8">Groups and questions</span>
+      "extension": [
+      ],
+      "<a href="StructureDefinition-qr.html#QuestionnaireResponse.item.linkId" title="The item from the Questionnaire that corresponds to this item in the QuestionnaireResponse resource (this element must be supported)" class="dict"><span style="text-decoration: underline">linkId</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Pointer to specific item from Questionnaire</span>
+      "<a href="StructureDefinition-qr.html#QuestionnaireResponse.item.definition" title="A reference to an [ElementDefinition](elementdefinition.html) that provides the details for the item" class="dict"><span style="text-decoration: underline">definition</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#uri">uri</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">ElementDefinition - details for the item</span>
+      "<a href="StructureDefinition-qr.html#QuestionnaireResponse.item.text" title="Text that is displayed above the contents of the group or as the text of the question being answered (this element must be supported)" class="dict"><span style="text-decoration: underline">text</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Name for group or question text</span>
+      "<a href="StructureDefinition-qr.html#QuestionnaireResponse.item.subject" title="More specific subject this section's answers are about, details the subject given in QuestionnaireResponse" class="dict"><span style="text-decoration: underline">subject</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#Reference">Reference</a></span>(<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/resource.html">Resource</a></span>)}, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">The subject this group's answers are about</span>
+      "<a href="StructureDefinition-qr.html#QuestionnaireResponse.item.answer" title="The respondent's answer(s) to the question (this element must be supported)" class="dict"><span style="text-decoration: underline">answer</span></a>" : [{ <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">The response(s) to the question</span>
+        "extension": [
+        ],
+<span style="color: Gray">// value[x]: <span style="color: navy; opacity: 0.8">Single-valued answer to the question</span>. One of these 9:</span>
+        "<a href="StructureDefinition-qr.html#QuestionnaireResponse.item.answer.valueDecimal" title="The answer (or one of the answers) provided by the respondent to the question (this element must be supported)" class="dict"><span style="text-decoration: underline">valueDecimal</span></a>" : &lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">decimal</a></span>&gt;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy" href="http://hl7.org/fhir/ValueSet/questionnaire-answers.html">Single-valued answer to the question</a></span>
+        "<a href="StructureDefinition-qr.html#QuestionnaireResponse.item.answer.valueInteger" title="The answer (or one of the answers) provided by the respondent to the question (this element must be supported)" class="dict"><span style="text-decoration: underline">valueInteger</span></a>" : &lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#integer">integer</a></span>&gt;, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy" href="http://hl7.org/fhir/ValueSet/questionnaire-answers.html">Single-valued answer to the question</a></span>
+        "<a href="StructureDefinition-qr.html#QuestionnaireResponse.item.answer.valueDate" title="The answer (or one of the answers) provided by the respondent to the question (this element must be supported)" class="dict"><span style="text-decoration: underline">valueDate</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#date">date</a></span>&gt;" <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy" href="http://hl7.org/fhir/ValueSet/questionnaire-answers.html">Single-valued answer to the question</a></span>
+        "<a href="StructureDefinition-qr.html#QuestionnaireResponse.item.answer.valueDateTime" title="The answer (or one of the answers) provided by the respondent to the question (this element must be supported)" class="dict"><span style="text-decoration: underline">valueDateTime</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">dateTime</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy" href="http://hl7.org/fhir/ValueSet/questionnaire-answers.html">Single-valued answer to the question</a></span>
+        "<a href="StructureDefinition-qr.html#QuestionnaireResponse.item.answer.valueTime" title="The answer (or one of the answers) provided by the respondent to the question (this element must be supported)" class="dict"><span style="text-decoration: underline">valueTime</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#time">time</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy" href="http://hl7.org/fhir/ValueSet/questionnaire-answers.html">Single-valued answer to the question</a></span>
+        "<a href="StructureDefinition-qr.html#QuestionnaireResponse.item.answer.valueString" title="The answer (or one of the answers) provided by the respondent to the question (this element must be supported)" class="dict"><span style="text-decoration: underline">valueString</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#string">string</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy" href="http://hl7.org/fhir/ValueSet/questionnaire-answers.html">Single-valued answer to the question</a></span>
+        "<a href="StructureDefinition-qr.html#QuestionnaireResponse.item.answer.valueUri" title="The answer (or one of the answers) provided by the respondent to the question (this element must be supported)" class="dict"><span style="text-decoration: underline">valueUri</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#uri">uri</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy" href="http://hl7.org/fhir/ValueSet/questionnaire-answers.html">Single-valued answer to the question</a></span>
+        "<a href="StructureDefinition-qr.html#QuestionnaireResponse.item.answer.valueCoding" title="The answer (or one of the answers) provided by the respondent to the question (this element must be supported)" class="dict"><span style="text-decoration: underline">valueCoding</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#Coding">Coding</a></span>}, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy" href="http://hl7.org/fhir/ValueSet/questionnaire-answers.html">Single-valued answer to the question</a></span>
+        "<a href="StructureDefinition-qr.html#QuestionnaireResponse.item.answer.valueQuantity" title="The answer (or one of the answers) provided by the respondent to the question (this element must be supported)" class="dict"><span style="text-decoration: underline">valueQuantity</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/STU3/datatypes.html#Quantity">Quantity</a></span>}, <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8"><a style="color: navy" href="http://hl7.org/fhir/ValueSet/questionnaire-answers.html">Single-valued answer to the question</a></span>
+<span style="color: Gray">// value[x]: <span style="color: navy; opacity: 0.8">Nested groups and questions</span>. One of these 0:</span>
+      }],
+<span style="color: Gray">// value[x]: <span style="color: navy; opacity: 0.8">Nested questionnaire response items</span>. One of these 0:</span>
+    }],
+  }
+
+     </pre>
    </div>
   </div>
- </div> -->
+ </div>
 
 
 
@@ -634,7 +685,7 @@ Summary
     <div id="all-json">
      <p><b>JSON Template</b></p>
      <div id="all-json-inner">
-        <pre class="spec"><a name="c5c9359c-a58e-4603-833f-73b811397488">​</a>
+        <pre class="spec"><a name="4a4a7b1a-776a-4519-b6e9-5aaffd3a035b">​</a>
           // <span style="color: navy; opacity: 0.8"></span>
  {
    "resourceType" : "QuestionnaireResponse",
@@ -776,7 +827,7 @@ $( '#tabs' ).tabs({
   <div class="container">    <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, May 16, 2018 10:57-0700. | <a rel="license" no-external="true" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
+            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, May 16, 2018 16:33-0700. | <a rel="license" no-external="true" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
         
         </p>
    </div>    <!-- /inner-wrapper -->

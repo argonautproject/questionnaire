@@ -113,11 +113,38 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-extension-timelimit.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/extension-timelimit"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="StructureDefinition-extension-score.html"/>
       </extension>
       <example value="false"/>
       <sourceReference>
         <reference value="StructureDefinition/extension-score"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="SearchParameter-Questionnaire-context-value.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="SearchParameter/Questionnaire-context-value"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="SearchParameter-Questionnaire-context-type.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="SearchParameter/Questionnaire-context-type"/>
       </sourceReference>
     </resource>
     <resource>

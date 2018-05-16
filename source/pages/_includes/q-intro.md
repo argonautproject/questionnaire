@@ -25,6 +25,8 @@ The following data-elements are mandatory:
 
 **Each Questionnaire must have:**
 
+
+
 1. An absolute URI that is used to identify this assessment form when it is referenced by a response (required by SDC )
 1. A human friendly title
 1. The form's status (base specification requirement)
@@ -33,8 +35,8 @@ The following data-elements are mandatory:
 
 **The system [Must Support] if available:**
 
-1. [Argonaut Questionnaire Score] *Extension* for use on all answer choices (not just codings).
-
+1. [Argonaut Questionnaire Score] *Extension* for use on all answer types and choices (not just codings).
+1. [Argonaut Questionnaire Time Limit] *Extension* for indicating the duration allowed for all or parts of the assessment.
 1. A version of the assessment
 1. A description of the assessment
 1. A standard concept code (e.g., LOINC) for the question or questions

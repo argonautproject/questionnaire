@@ -31,3 +31,5 @@
 [LOINC]: http://loinc.org
 [FHIR RESTful search API]: {{site.data.fhir.path}}/search.html
 [Questionnaire examples]: StructureDefinition-q.html#examples
+[Argonaut Questionnaire Time Limit]: StructureDefinition-extension-score.html
+[Custom search parameters]: searchparameters.html

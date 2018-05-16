@@ -25,7 +25,7 @@
   <kind value="complex-type"/>
   <abstract value="false"/>
   <contextType value="resource"/>
-  <context value="Questionnaire.item.option.value[x]"/>
+  <context value="Questionnaire.item.option"/>
   <context value="Questionnaire.item.type"/>
   <type value="Extension"/>
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>

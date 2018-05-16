@@ -151,12 +151,48 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-extension-timelimit.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition/extension-timelimit"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "StructureDefinition-extension-score.html"
             }
           ],
           "example": false,
           "sourceReference": {
             "reference": "StructureDefinition/extension-score"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "SearchParameter-Questionnaire-context-value.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "SearchParameter/Questionnaire-context-value"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "SearchParameter-Questionnaire-context-type.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "SearchParameter/Questionnaire-context-type"
           }
         },
         {

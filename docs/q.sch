@@ -12,6 +12,7 @@
   <sch:pattern>
     <sch:title>f:Questionnaire</sch:title>
     <sch:rule context="f:Questionnaire">
+      <sch:assert test="count(f:extension[@url = 'http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timelimit']) &lt;= 1">extension with URL = 'http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timelimit': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:url) &gt;= 1">url: minimum cardinality of 'url' is 1</sch:assert>
       <sch:assert test="count(f:title) &gt;= 1">title: minimum cardinality of 'title' is 1</sch:assert>
     </sch:rule>
@@ -24,6 +25,13 @@
       <sch:assert test="not(exists(f:contained/*/f:meta/f:versionId)) and not(exists(f:contained/*/f:meta/f:lastUpdated))">If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated (inherited)</sch:assert>
       <sch:assert test="not(exists(for $id in f:contained/*/@id return $id[not(ancestor::f:contained/parent::*/descendant::f:reference/@value=concat('#', $id))]))">If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource (inherited)</sch:assert>
       <sch:assert test="count(descendant::f:linkId/@value)=count(distinct-values(descendant::f:linkId/@value))">The link ids for groups and questions must be unique within the questionnaire (inherited)</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:title>f:Questionnaire/f:item</sch:title>
+    <sch:rule context="f:Questionnaire/f:item">
+      <sch:assert test="count(f:extension[@url = 'http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timelimit']) &lt;= 1">extension with URL = 'http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timelimit': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score']) &lt;= 1">extension with URL = 'http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score': maximum cardinality of 'extension' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -41,10 +49,24 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
+    <sch:title>f:Questionnaire/f:item/f:type</sch:title>
+    <sch:rule context="f:Questionnaire/f:item/f:type">
+      <sch:assert test="count(f:id) &lt;= 1">id: maximum cardinality of 'id' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score']) &lt;= 1">extension with URL = 'http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:value) &lt;= 1">value: maximum cardinality of 'value' is 1</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
     <sch:title>Questionnaire.item.enableWhen</sch:title>
     <sch:rule context="f:Questionnaire/f:item/f:enableWhen">
       <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
       <sch:assert test="count(f:*[starts-with(local-name(.), 'answer')]|self::f:hasAnswer) = 1">enableWhen must contain either a 'answer' or a 'hasAnswer' element (inherited)</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:title>f:Questionnaire/f:item/f:option</sch:title>
+    <sch:rule context="f:Questionnaire/f:item/f:option">
+      <sch:assert test="count(f:extension[@url = 'http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score']) &lt;= 1">extension with URL = 'http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score': maximum cardinality of 'extension' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

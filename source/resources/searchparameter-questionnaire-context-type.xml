@@ -1,0 +1,18 @@
+<SearchParameter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd%20-STU3/fhir-all.xsd" xmlns="http://hl7.org/fhir">
+	<id value="Questionnaire-context-type"/>
+	<url value="http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type"/>
+	<name value="context-type"/>
+	<status value="draft"/>
+	<experimental value="false"/>
+	<date value="2018-05-16T15:49:01+00:00"/>
+	<publisher value="Argonaut Project"/>
+
+
+	<code value="context-type"/>
+	<base value="Questionnaire"/>
+	<type value="token"/>
+	<description value="A type of use context assigned to the questionnaire. When searching for context should pair with [context-value](http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-value) parameter."/>
+	<expression value="Questionnaire.useContext.code"/>
+	<xpath value="f:Questionnaire/f:useContext/f:code"/>
+	<xpathUsage value="normal"/>
+</SearchParameter>

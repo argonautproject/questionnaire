@@ -25,7 +25,7 @@
   "abstract": false,
   "contextType": "resource",
   "context": [
-    "Questionnaire.item.option.value[x]",
+    "Questionnaire.item.option",
     "Questionnaire.item.type"
   ],
   "type": "Extension",

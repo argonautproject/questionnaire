@@ -129,6 +129,10 @@
 <li>
   <a href="terminology.html">Terminology</a>
 </li>
+&lt;/li&gt;
+<li>
+  <a href="searchparameters.html">Search Parameters</a>
+</li>
 <li class="dropdown">
   <a data-toggle="dropdown" href="#" class="dropdown-toggle">Capability Statements<b class="caret">
   </b>
@@ -342,6 +346,8 @@ Each assessment tool (i.e., set of questions and answer choices) is created once
 
 <ul>
   <li><code class="highlighter-rouge">version</code></li>
+  <li><code class="highlighter-rouge">context-type</code> (<a href="searchparameters.html">Custom search parameters</a>)</li>
+  <li><code class="highlighter-rouge">context-value</code>(<a href="searchparameters.html">Custom search parameters</a>)</li>
 </ul>
 
 <p>(others?… discuss)</p>
@@ -365,25 +371,39 @@ Each assessment tool (i.e., set of questions and answer choices) is created once
 
 <h4 id="usage-1" class="no_toc">Usage</h4>
 
-<p>Fetching a Questionnaire based on its id:</p>
+<p>Fetching a <em>single</em> Questionnaire:</p>
+
+<ul>
+  <li>based on its id:</li>
+</ul>
 
 <p><code class="highlighter-rouge">GET [base]/Questionnaire/[id]</code></p>
 
-<p>Fetching a Questionnaire based on its uri (note the QuestionnaireResponse uses teh uri to reference the assessment upon which it is based):</p>
+<ul>
+  <li>based on its uri (note the QuestionnaireResponse uses the uri to reference the assessment upon which it is based):</li>
+</ul>
 
 <p><code class="highlighter-rouge">GET [base]/Questionnaire?url=[uri]</code></p>
 
-<p>Searching for a Questionnaire based on its title (the supplied parameter can  equals or starts with the title ):</p>
+<ul>
+  <li>based on its title (the supplied parameter can  equals or starts with the title ):</li>
+</ul>
 
 <p><code class="highlighter-rouge">GET [base]/Questionnaire?title=[title]</code></p>
 
-<p>Searching for all the active Questionnaires:</p>
+<ul>
+  <li>based on its title and version:</li>
+</ul>
+
+<p><code class="highlighter-rouge">GET [base]/Questionnaire?title=[title]$version=[version]</code>`</p>
+
+<p>Searching for <em>all</em> the active Questionnaires:</p>
 
 <p><code class="highlighter-rouge">GET [base]/Questionnaire?status=active</code></p>
 
-<p>Searching for a Questionnaire based on its title and version:</p>
+<p>Searching for a <em>collection</em> of Questionnaires based on context-type and context-value(think category):</p>
 
-<p><code class="highlighter-rouge">GET [base]/Questionnaire?title=[title]$version=[version]</code>`</p>
+<p><code class="highlighter-rouge">GET [base]/Questionnaire?context-code=[code]&amp;context-value=[value]</code></p>
 
 <p>
   <button data-target="#example-step2" data-toggle="collapse" aria-controls="collapseExample" aria-expanded="false" type="button" class="btn btn-primary">
@@ -476,7 +496,7 @@ Each assessment tool (i.e., set of questions and answer choices) is created once
 <p>The following Argonaut Questionnaire artifacts are used in this transaction:</p>
 
 <ul>
-  <li><strong><a name="2f476ab1-07fa-4793-a6ba-c62c9e9a0523">​</a><a href="optionally">Argonaut Questionnaire Profile</a></strong>.</li>
+  <li><strong><a name="9d7de7da-c60d-4648-bb05-f5464b40ff62">​</a><a href="optionally">Argonaut Questionnaire Profile</a></strong>.</li>
   <li><strong><a href="StructureDefinition-qr.html" title="Argonaut QuestionnaireResponse Profile">Argonaut QuestionnaireResponse Profile</a></strong>.</li>
 </ul>
 
@@ -576,7 +596,7 @@ Each assessment tool (i.e., set of questions and answer choices) is created once
   <div class="container">    <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, May 16, 2018 10:57-0700. | <a rel="license" no-external="true" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
+            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, May 16, 2018 16:33-0700. | <a rel="license" no-external="true" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
         
         </p>
    </div>    <!-- /inner-wrapper -->

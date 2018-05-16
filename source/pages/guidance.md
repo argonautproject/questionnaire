@@ -92,6 +92,8 @@ The standard [FHIR RESTful search API] is used with the following *mandatory* se
 and the following *optional* search parameters
 
 - `version`
+- `context-type` ([Custom search parameters])
+- `context-value`([Custom search parameters])
 
 (others?... discuss)
 
@@ -114,25 +116,31 @@ Other options:
 #### Usage
 {:.no_toc}
 
-Fetching a Questionnaire based on its id:
+Fetching a *single* Questionnaire:
+
+- based on its id:
 
 `GET [base]/Questionnaire/[id]`
 
-Fetching a Questionnaire based on its uri (note the QuestionnaireResponse uses teh uri to reference the assessment upon which it is based):
+- based on its uri (note the QuestionnaireResponse uses the uri to reference the assessment upon which it is based):
 
 `GET [base]/Questionnaire?url=[uri]`
 
-Searching for a Questionnaire based on its title (the supplied parameter can  equals or starts with the title ):
+- based on its title (the supplied parameter can  equals or starts with the title ):
 
 `GET [base]/Questionnaire?title=[title]`
 
-Searching for all the active Questionnaires:
+-  based on its title and version:
+
+`GET [base]/Questionnaire?title=[title]$version=[version]``
+
+Searching for *all* the active Questionnaires:
 
 `GET [base]/Questionnaire?status=active`
 
-Searching for a Questionnaire based on its title and version:
+Searching for a *collection* of Questionnaires based on context-type and context-value(think category):
 
-`GET [base]/Questionnaire?title=[title]$version=[version]``
+`GET [base]/Questionnaire?context-code=[code]&context-value=[value]`
 
 {% include examplebutton.html example="example-step2" %}
 
