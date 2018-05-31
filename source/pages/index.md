@@ -75,8 +75,8 @@ there is clearly a need for a common form standard with a focus on simple assess
 1. **[Argonaut Questionnaire Profile]**
 1. **[Argonaut QuestionnaireResponse Profile]**
 1. **"[Assessment-Bank]"**[^1]: A form repository for the collection of the assessments. It is accessible to both the providers and form editors as a FHIR Questionnaire endpoint.
-1. (Optionally) **"[Answer-Bank]"**[^2]: A repository for the collection of the completed assessments ('answers'). It is accessible to both the providers and form editors as a FHIR QuestionnaireResponse endpoint.  ...TODO: discus...
-1. **[Provider EHR]**[^3]: The System that is capable of retrieving, rendering and displaying the assessment to a subject or a provider to fill out.  This may be the same system as in the Answers section below.
+1. (Optionally) **"[Answer-Bank]"**[^2]: A repository for the collection of the completed assessments ('answers'). It is accessible to the providers  as a FHIR QuestionnaireResponse endpoint.  For this guide it is assumed this will be the **[Provider EHR]**.
+1. **[Provider EHR]**[^3]: The System that is capable of retrieving, rendering and displaying the assessment to a subject or a provider to fill out.
 1. **Form Author/Editor**: A system or person authorized to create update and deprecate assessments forms.
 1. **Practitioner**: A healthcare provider authorized to administer the assessment to a subject.
 1. **Provider administrator**: A practitioner or staff member authorized to fill out an assessment on behalf of a subject or with input from a subject.
@@ -97,16 +97,18 @@ there is clearly a need for a common form standard with a focus on simple assess
 - If the patient Subject/Patient Administrator logs in via a third-party application or logged into an EHR’s patient portal, the subject ID is returned or known
   - User level login and trust exists between the EHR and a third party application.
       - A client application has been authorized by the health system and uses [SMART on FHIR] authorization for apps that connect to EHR data.
-- System level trust exists between a scheduling server and am external provider system for high volume data exchange - for example, retrieving completed assessments for all patients.
+<!--
+- System level trust exists between systems for high volume data exchange - for example, retrieving completed assessments for all patients.
     - Supports the [use case 5] defined for Phase 1 of the Argonaut Project.
     - One solution is to use access FHIR resources by requesting access tokens from OAuth 2.0 compliant authorization servers using [SMART Backend Services].
+-->
 - [US Core General Guidance] and conventions apply to this guide.
 
 ## Workflow Overview
 
 **See [Scenario 1] for a detailed description of workflow and API guidance.**
 
-In the basic workflow outlined below., an EHR system retrieves a standardized assessment represented by the Questionaire resource from an assessment bank.  The Questionnaire is rendered/displayed to the end user - either the subject or provider administrator.  The end user enters responses to the assessment questions and these responses are captured and represented using the QuestionnaireResponse resource.  The response may be processed (scored, aggregated, etc) and shared or stored by other systems.
+In the basic workflow outlined below., an EHR system retrieves a standardized assessment represented by the Questionnaire resource from an assessment bank.  The Questionnaire is rendered/displayed to the end user - either the subject or provider administrator.  The end user enters responses to the assessment questions and these responses are captured.   The response may be processed (scored, aggregated, etc) and retrieved using the QuestionnaireResponse resource.
 
 {% include img.html img="workflow.png" caption="Basic Argonaut Questionnaire Workflow" %}
 
@@ -115,8 +117,9 @@ In the basic workflow outlined below., an EHR system retrieves a standardized as
 |---|---|
 |1|An EHR system retrieves a standardized assessment represented by the Questionnaire resource from an assessment bank.|
 |2|The Questionnaire is rendered/displayed to the end user - either the subject or provider administrator.|
-|3|The end user enters responses to the assessment questions and these responses are captured and represented using the QuestionnaireResponse resource.|
- |4|The response may be processed (scored, aggregated, etc) and shared or stored by other systems.|
+|3|The end user enters responses to the assessment questions and these responses are captured by the system|
+|4|The answers are requested and retrieved as QuestionnaireResponse resource(s)|
+
 
 ## Security
 
@@ -124,9 +127,12 @@ For general security consideration refer to the [Security section] in the US Cor
 
 ## Outstanding issues/Future scope
 
+- Processing (scoring, aggregating, etc) the responses.
+- Sharing or storing (i.e. a shared 'Answer Bank') and processing answers (QuestionnaireResponse) across systems.
 - Management of versioning of assessments
 - Intellectual Property and Copyright issues
-- Saving/retrieving half completed forms ?
+- Updating completed forms
+- Updating/retrieving half-completed forms
 - Supporting retrieval of standard concepts from external repository like VSAC?  ( example: nursing forms)
 - preference to contain or include return bundle
 - Defining a single way to do X?  e.g choice questions.  (there is more than one way!)

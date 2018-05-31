@@ -1,11 +1,86 @@
 {
   "resourceType": "Questionnaire",
   "id": "questionnaire-example-phq9",
+  "url": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9",
   "meta": {
     "profile": [
       "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"
     ]
   },
+  "contained": [
+    {
+      "resourceType": "ValueSet",
+      "id": "PHQ-9",
+      "url": "http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-9",
+      "version": "0.0.0",
+      "name": "PHQ-9",
+      "title": "PHQ / Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day",
+      "status": "active",
+      "date": "2018-04-05T12:40:10-07:00",
+      "description": "PHQ / Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day   http://loinc.org/vs/LL358-3",
+      "jurisdiction": [
+        {
+          "coding": [
+            {
+              "system": "urn:iso:std:iso:3166",
+              "code": "US",
+              "display": "United States of America"
+            }
+          ]
+        }
+      ],
+      "copyright": "This content LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use",
+      "compose": {
+        "include": [
+          {
+            "system": "http://loinc.org",
+            "concept": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
+                    "valueDecimal": 0
+                  }
+                ],
+                "code": "LA6568-5",
+                "display": "Not at all"
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
+                    "valueDecimal": 1
+                  }
+                ],
+                "code": "LA6569-3",
+                "display": "Several days"
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
+                    "valueDecimal": 2
+                  }
+                ],
+                "code": "LA6570-1",
+                "display": "More than half the days"
+              },
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
+                    "valueDecimal": 3
+                  }
+                ],
+                "code": "LA6571-9",
+                "display": "Nearly every day"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
   "identifier": [
     {
       "system": "http://acme.org/q-identifiers",
@@ -49,7 +124,7 @@
       "type": "choice",
       "required": true,
       "options": {
-        "reference": "ValueSet/PHQ-9",
+        "reference": "#PHQ-9",
         "display": "Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"
       }
     },
@@ -65,7 +140,7 @@
       "type": "choice",
       "required": true,
       "options": {
-        "reference": "ValueSet/PHQ-9",
+        "reference": "#PHQ-9",
         "display": "Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"
       }
     },
@@ -81,7 +156,7 @@
       "type": "choice",
       "required": true,
       "options": {
-        "reference": "ValueSet/PHQ-9",
+        "reference": "#PHQ-9",
         "display": "Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"
       }
     },
@@ -97,7 +172,7 @@
       "type": "choice",
       "required": true,
       "options": {
-        "reference": "ValueSet/PHQ-9",
+        "reference": "#PHQ-9",
         "display": "Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"
       }
     },
@@ -113,7 +188,7 @@
       "type": "choice",
       "required": true,
       "options": {
-        "reference": "ValueSet/PHQ-9",
+        "reference": "#PHQ-9",
         "display": "Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"
       }
     },
@@ -129,7 +204,7 @@
       "type": "choice",
       "required": true,
       "options": {
-        "reference": "ValueSet/PHQ-9",
+        "reference": "#PHQ-9",
         "display": "Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"
       }
     },
@@ -145,7 +220,7 @@
       "type": "choice",
       "required": true,
       "options": {
-        "reference": "ValueSet/PHQ-9",
+        "reference": "#PHQ-9",
         "display": "Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"
       }
     },
@@ -161,7 +236,7 @@
       "type": "choice",
       "required": true,
       "options": {
-        "reference": "ValueSet/PHQ-9",
+        "reference": "#PHQ-9",
         "display": "Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"
       }
     },
@@ -195,7 +270,7 @@
       "type": "choice",
       "required": true,
       "options": {
-        "reference": "ValueSet/PHQ-9",
+        "reference": "#PHQ-9",
         "display": "Not difficult at all/Somewhat difficult/Very difficult/Extremely difficult-Perceived difficulty (PHQ-9)"
       }
     }

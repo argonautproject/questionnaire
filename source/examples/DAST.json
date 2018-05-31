@@ -18,6 +18,7 @@
    ],
    "copyright": "copyright information here\u2026todo\u2026.",
    "date": "2018-04-21T01:22:33Z",
+   "url": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast",
    "id": "questionnaire-example-dast",
    "identifier": [
        {
@@ -37,8 +38,8 @@
                {
                    "extension": [
                        {
-                           "url": "http://acme.org/StructureDefinition/my-extension",
-                           "valueUnsignedInt": 1
+                           "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                           "valueDecimal": 1
                        }
                    ],
                    "valueString": "Yes"
@@ -46,8 +47,8 @@
                {
                    "extension": [
                        {
-                           "url": "http://acme.org/StructureDefinition/my-extension",
-                           "valueUnsignedInt": 0
+                           "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                           "valueDecimal": 0
                        }
                    ],
                    "valueString": "No"
@@ -64,8 +65,8 @@
                {
                    "extension": [
                        {
-                           "url": "http://acme.org/StructureDefinition/my-extension",
-                           "valueUnsignedInt": 1
+                           "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                           "valueDecimal": 1
                        }
                    ],
                    "valueString": "Yes"
@@ -73,8 +74,8 @@
                {
                    "extension": [
                        {
-                           "url": "http://acme.org/StructureDefinition/my-extension",
-                           "valueUnsignedInt": 0
+                           "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                           "valueDecimal": 0
                        }
                    ],
                    "valueString": "No"
@@ -91,8 +92,8 @@
                {
                    "extension": [
                        {
-                           "url": "http://acme.org/StructureDefinition/my-extension",
-                           "valueUnsignedInt": 0
+                           "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                           "valueDecimal": 0
                        }
                    ],
                    "valueString": "Yes"
@@ -100,8 +101,8 @@
                {
                    "extension": [
                        {
-                           "url": "http://acme.org/StructureDefinition/my-extension",
-                           "valueUnsignedInt": 1
+                           "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                           "valueDecimal": 1
                        }
                    ],
                    "valueString": "No"
@@ -118,8 +119,8 @@
                {
                    "extension": [
                        {
-                           "url": "http://acme.org/StructureDefinition/my-extension",
-                           "valueUnsignedInt": 1
+                           "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                           "valueDecimal": 1
                        }
                    ],
                    "valueString": "Yes"
@@ -127,8 +128,8 @@
                {
                    "extension": [
                        {
-                           "url": "http://acme.org/StructureDefinition/my-extension",
-                           "valueUnsignedInt": 0
+                           "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                           "valueDecimal": 0
                        }
                    ],
                    "valueString": "No"
@@ -145,8 +146,8 @@
                {
                    "extension": [
                        {
-                           "url": "http://acme.org/StructureDefinition/my-extension",
-                           "valueUnsignedInt": 1
+                           "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                           "valueDecimal": 1
                        }
                    ],
                    "valueString": "Yes"
@@ -154,8 +155,8 @@
                {
                    "extension": [
                        {
-                           "url": "http://acme.org/StructureDefinition/my-extension",
-                           "valueUnsignedInt": 0
+                           "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                           "valueDecimal": 0
                        }
                    ],
                    "valueString": "No"
@@ -172,8 +173,8 @@
                {
                    "extension": [
                        {
-                           "url": "http://acme.org/StructureDefinition/my-extension",
-                           "valueUnsignedInt": 1
+                           "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                           "valueDecimal": 1
                        }
                    ],
                    "valueString": "Yes"
@@ -181,8 +182,8 @@
                {
                    "extension": [
                        {
-                           "url": "http://acme.org/StructureDefinition/my-extension",
-                           "valueUnsignedInt": 0
+                           "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                           "valueDecimal": 0
                        }
                    ],
                    "valueString": "No"
@@ -199,8 +200,8 @@
                {
                    "extension": [
                        {
-                           "url": "http://acme.org/StructureDefinition/my-extension",
-                           "valueUnsignedInt": 1
+                           "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                           "valueDecimal": 1
                        }
                    ],
                    "valueString": "Yes"
@@ -208,8 +209,8 @@
                {
                    "extension": [
                        {
-                           "url": "http://acme.org/StructureDefinition/my-extension",
-                           "valueUnsignedInt": 0
+                           "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                           "valueDecimal": 0
                        }
                    ],
                    "valueString": "No"
@@ -226,8 +227,8 @@
                {
                    "extension": [
                        {
-                           "url": "http://acme.org/StructureDefinition/my-extension",
-                           "valueUnsignedInt": 1
+                           "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                           "valueDecimal": 1
                        }
                    ],
                    "valueString": "Yes"
@@ -235,8 +236,8 @@
                {
                    "extension": [
                        {
-                           "url": "http://acme.org/StructureDefinition/my-extension",
-                           "valueUnsignedInt": 0
+                           "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                           "valueDecimal": 0
                        }
                    ],
                    "valueString": "No"
@@ -253,8 +254,8 @@
                {
                    "extension": [
                        {
-                           "url": "http://acme.org/StructureDefinition/my-extension",
-                           "valueUnsignedInt": 1
+                           "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                           "valueDecimal": 1
                        }
                    ],
                    "valueString": "Yes"
@@ -262,8 +263,8 @@
                {
                    "extension": [
                        {
-                           "url": "http://acme.org/StructureDefinition/my-extension",
-                           "valueUnsignedInt": 0
+                           "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                           "valueDecimal": 0
                        }
                    ],
                    "valueString": "No"
@@ -280,8 +281,8 @@
                {
                    "extension": [
                        {
-                           "url": "http://acme.org/StructureDefinition/my-extension",
-                           "valueUnsignedInt": 1
+                           "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                           "valueDecimal": 1
                        }
                    ],
                    "valueString": "Yes"
@@ -289,8 +290,8 @@
                {
                    "extension": [
                        {
-                           "url": "http://acme.org/StructureDefinition/my-extension",
-                           "valueUnsignedInt": 0
+                           "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                           "valueDecimal": 0
                        }
                    ],
                    "valueString": "No"

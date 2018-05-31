@@ -32,7 +32,6 @@
 <li>
   <a href="terminology.html">Terminology</a>
 </li>
-</li>
 <li>
   <a href="searchparameters.html">Search Parameters</a>
 </li>

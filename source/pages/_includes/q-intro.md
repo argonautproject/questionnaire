@@ -46,10 +46,10 @@ The following data-elements are mandatory:
 1. A required flag
 1. A repeat flag
 1. Choice list:
-   1. as a valueset of standard concepts
+   1. as a [contained] valueset of standard concepts
    1. or as an enumerated list
 1. Nesting or grouping of questions
-
+1. the questionnaire's context for categorizing and grouping for searches
 
 **What about these?**
 
@@ -73,12 +73,12 @@ Extensions:
 
 **Additional Profile specific implementation guidance:**
 
-None
+All ValueSets referenced by the `.options` element are [contained] resources in the Questionnaire.  This ensures that the Questionnaire will not adopt a new version of the referenced value set without revising the Questionnaire to point to that new version - putting the author of the Questionnaire in control of any changes.
 
 ### Examples
 
 <!-- {% raw %} {% include list-simple-questionnaires.xhtml %}{% endraw %} -->
-- [PHQ-9](Questionnaire-questionnaire-example-phq-9xml.html)
+- [PHQ-9](Questionnaire-questionnaire-example-phq9.html)
 - [AUDIT](Questionnaire-questionnaire-example-audit.html)
 - [DAST](Questionnaire-questionnaire-example-dast.html)
 - [Housing](Questionnaire-questionnaire-example-housing.html)

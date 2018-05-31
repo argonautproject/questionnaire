@@ -1,0 +1,113 @@
+{
+   "id": "questionnaireresponse-example-dast",
+   "author": {
+       "display": "subject"
+   },
+   "authored": "2018-05-29",
+   "identifier": {
+       "value": "DAST-example"
+   },
+   "item": [
+       {
+           "answer": [
+               {
+                   "valueString": "Yes"
+               }
+           ],
+           "linkId": "d2",
+           "text": "Have you used drugs other than those required for medical reasons?"
+       },
+       {
+           "answer": [
+               {
+                   "valueString": "Yes"
+               }
+           ],
+           "linkId": "d3",
+           "text": "Do you abuse more than one drug at a time?"
+       },
+       {
+           "answer": [
+               {
+                   "valueString": "Yes"
+               }
+           ],
+           "linkId": "d4",
+           "text": "Are you unable to stop abusing drugs when you want to?"
+       },
+       {
+           "answer": [
+               {
+                   "valueString": "Yes"
+               }
+           ],
+           "linkId": "d5",
+           "text": "Have you ever had blackouts or flashbacks as a result of drug use?"
+       },
+       {
+           "answer": [
+               {
+                   "valueString": "Yes"
+               }
+           ],
+           "linkId": "d6",
+           "text": "Do you ever feel bad or guilty about your drug use?"
+       },
+       {
+           "answer": [
+               {
+                   "valueString": "Yes"
+               }
+           ],
+           "linkId": "d7",
+           "text": "Does your spouse (or parents) ever complain about your involvement with drugs?"
+       },
+       {
+           "answer": [
+               {
+                   "valueString": "Yes"
+               }
+           ],
+           "linkId": "d8",
+           "text": "Have you neglected your family because of your use of drugs?"
+       },
+       {
+           "answer": [
+               {
+                   "valueString": "Yes"
+               }
+           ],
+           "linkId": "d9",
+           "text": "Have you engaged in illegal activities in order to obtain drugs?"
+       },
+       {
+           "answer": [
+               {
+                   "valueString": "Yes"
+               }
+           ],
+           "linkId": "d10",
+           "text": "Have you ever experienced withdrawal symptoms (felt sick) when you stopped taking drugs?"
+       },
+       {
+           "answer": [
+               {
+                   "valueString": "Yes"
+               }
+           ],
+           "linkId": "d11",
+           "text": "Have you had medical problems as a result of your drug use (e.g. memory loss, hepatitis, convulsions, bleeding)?"
+       }
+   ],
+   "questionnaire": {
+       "reference": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast"
+   },
+   "source": {
+       "display": "subject"
+   },
+   "status": "completed",
+   "subject": {
+       "display": "subject"
+   },
+   "resourceType": "QuestionnaireResponse"
+}

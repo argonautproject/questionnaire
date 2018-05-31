@@ -19,6 +19,8 @@
    "copyright": "Ages &amp; Stages Questionnaires\u00ae, Third Edition (ASQ-3\u2122), Squires &amp; Bricker \u00a9 2009 Paul H. Brookes Publishing Co. All rights reserved.",
    "date": "2018-04-21T01:22:33Z",
    "id": "questionnaire-example-asq3",
+   "url": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-asq3",
+
    "identifier": [
        {
            "system": "http://acme.org/q-identifiers",
@@ -39,8 +41,8 @@
                        {
                            "extension": [
                                {
-                                   "url": "http://acme.org/StructureDefinition/my-extension",
-                                   "valueUnsignedInt": 10
+                                   "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                                   "valueDecimal": 10
                                }
                            ],
                            "valueCoding": {
@@ -52,8 +54,8 @@
                        {
                            "extension": [
                                {
-                                   "url": "http://acme.org/StructureDefinition/my-extension",
-                                   "valueUnsignedInt": 5
+                                   "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                                   "valueDecimal": 5
                                }
                            ],
                            "valueCoding": {
@@ -65,8 +67,8 @@
                        {
                            "extension": [
                                {
-                                   "url": "http://acme.org/StructureDefinition/my-extension",
-                                   "valueUnsignedInt": 0
+                                   "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                                   "valueDecimal": 0
                                }
                            ],
                            "valueCoding": {
@@ -88,8 +90,8 @@
                        {
                            "extension": [
                                {
-                                   "url": "http://acme.org/StructureDefinition/my-extension",
-                                   "valueUnsignedInt": 10
+                                   "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                                   "valueDecimal": 10
                                }
                            ],
                            "valueCoding": {
@@ -101,8 +103,8 @@
                        {
                            "extension": [
                                {
-                                   "url": "http://acme.org/StructureDefinition/my-extension",
-                                   "valueUnsignedInt": 5
+                                   "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                                   "valueDecimal": 5
                                }
                            ],
                            "valueCoding": {
@@ -114,8 +116,8 @@
                        {
                            "extension": [
                                {
-                                   "url": "http://acme.org/StructureDefinition/my-extension",
-                                   "valueUnsignedInt": 0
+                                   "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                                   "valueDecimal": 0
                                }
                            ],
                            "valueCoding": {
@@ -137,8 +139,8 @@
                        {
                            "extension": [
                                {
-                                   "url": "http://acme.org/StructureDefinition/my-extension",
-                                   "valueUnsignedInt": 10
+                                   "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                                   "valueDecimal": 10
                                }
                            ],
                            "valueCoding": {
@@ -150,8 +152,8 @@
                        {
                            "extension": [
                                {
-                                   "url": "http://acme.org/StructureDefinition/my-extension",
-                                   "valueUnsignedInt": 5
+                                   "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                                   "valueDecimal": 5
                                }
                            ],
                            "valueCoding": {
@@ -163,8 +165,8 @@
                        {
                            "extension": [
                                {
-                                   "url": "http://acme.org/StructureDefinition/my-extension",
-                                   "valueUnsignedInt": 0
+                                   "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                                   "valueDecimal": 0
                                }
                            ],
                            "valueCoding": {
@@ -194,8 +196,8 @@
                        {
                            "extension": [
                                {
-                                   "url": "http://acme.org/StructureDefinition/my-extension",
-                                   "valueUnsignedInt": 10
+                                   "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                                   "valueDecimal": 10
                                }
                            ],
                            "valueCoding": {
@@ -207,8 +209,8 @@
                        {
                            "extension": [
                                {
-                                   "url": "http://acme.org/StructureDefinition/my-extension",
-                                   "valueUnsignedInt": 5
+                                   "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                                   "valueDecimal": 5
                                }
                            ],
                            "valueCoding": {
@@ -220,8 +222,8 @@
                        {
                            "extension": [
                                {
-                                   "url": "http://acme.org/StructureDefinition/my-extension",
-                                   "valueUnsignedInt": 0
+                                   "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                                   "valueDecimal": 0
                                }
                            ],
                            "valueCoding": {
@@ -243,8 +245,8 @@
                        {
                            "extension": [
                                {
-                                   "url": "http://acme.org/StructureDefinition/my-extension",
-                                   "valueUnsignedInt": 10
+                                   "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                                   "valueDecimal": 10
                                }
                            ],
                            "valueCoding": {
@@ -256,8 +258,8 @@
                        {
                            "extension": [
                                {
-                                   "url": "http://acme.org/StructureDefinition/my-extension",
-                                   "valueUnsignedInt": 5
+                                   "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                                   "valueDecimal": 5
                                }
                            ],
                            "valueCoding": {
@@ -269,8 +271,8 @@
                        {
                            "extension": [
                                {
-                                   "url": "http://acme.org/StructureDefinition/my-extension",
-                                   "valueUnsignedInt": 0
+                                   "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                                   "valueDecimal": 0
                                }
                            ],
                            "valueCoding": {
@@ -292,8 +294,8 @@
                        {
                            "extension": [
                                {
-                                   "url": "http://acme.org/StructureDefinition/my-extension",
-                                   "valueUnsignedInt": 10
+                                   "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                                   "valueDecimal": 10
                                }
                            ],
                            "valueCoding": {
@@ -305,8 +307,8 @@
                        {
                            "extension": [
                                {
-                                   "url": "http://acme.org/StructureDefinition/my-extension",
-                                   "valueUnsignedInt": 5
+                                   "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                                   "valueDecimal": 5
                                }
                            ],
                            "valueCoding": {
@@ -318,8 +320,8 @@
                        {
                            "extension": [
                                {
-                                   "url": "http://acme.org/StructureDefinition/my-extension",
-                                   "valueUnsignedInt": 0
+                                   "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                                   "valueDecimal": 0
                                }
                            ],
                            "valueCoding": {

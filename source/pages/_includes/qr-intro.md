@@ -49,7 +49,11 @@ The following data-elements are mandatory:
 
 
 <!-- {% raw %} {% include list-simple-questionnaires.xhtml %}{% endraw %} -->
-- [PHQ-9 Response](QuestionnaireResponse-phq9-responses.html)
+- [PHQ-9 Response](QuestionnaireResponse-questionnaireresponse-example-phq9.html)
+- [AUDIT Response](QuestionnaireResponse-questionnaireresponse-example-audit.html)
+- [DAST Response](QuestionnaireResponse-questionnaireresponse-example-dast.html)
+- [Housing Response](QuestionnaireResponse-questionnaireresponse-example-housing.html)
+- [ASQ3 Response](QuestionnaireResponse-questionnaireresponse-example-asq3.html)
 
 
 {%include link-list.md %}
