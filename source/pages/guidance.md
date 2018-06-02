@@ -122,7 +122,7 @@ Fetching a *single* Questionnaire:
 
     `GET [base]/Questionnaire/[id]`
 
-- based on its uri (note the QuestionnaireResponse uses the uri to reference the assessment upon which it is based):
+- based on its url (note the QuestionnaireResponse uses the url to reference the assessment upon which it is based):
 
     `GET [base]/Questionnaire?url=[uri]`
 
@@ -132,7 +132,7 @@ Fetching a *single* Questionnaire:
 
 -  based on its title and version:
 
-    `GET [base]/Questionnaire?title=[title]$version=[version]``
+    `GET [base]/Questionnaire?title=[title]&version=[version]``
 
 Searching for *all* the active Questionnaires:
 
@@ -155,18 +155,18 @@ Searching for a *collection* of Questionnaires based on context-type and context
 ###  The End User Completes The Assessment
 {:.no_toc}
 
-The responses to the assessment are captured by the Provider EHR. In addition to the recording the response, they are associated with the Assessment and the individual Question on the form.  The Provider ERH may calculate a scored based on the associated scores associated with each item.  How the score is calculated may be described in the Questionnaire, although the actual logic is left to the implementation.  The QuestionnaireResponse may be used to persist the response data.  How the QuestionnaireResponse gets populated is beyond the scope of this IG.  
+The responses to the assessment are captured by the Provider EHR. In addition to the recording the response, they are associated with the Assessment and the individual Question on the form.  The Provider EHR may calculate a scored based on the associated scores associated with each item.  How the score is calculated may be described in the Questionnaire, although the actual logic is left to the implementation.  The QuestionnaireResponse may be used to persist the response data.  How the QuestionnaireResponse gets populated is beyond the scope of this IG.  
 
 ###  The Practitioner Or Provider Administrator Retrieves The Assessment Responses
 {:.no_toc}
 
-The responses to the assessment are retrieved by the practitioner or provider administrator for review and possibly manual processing such as scoring.  The QuestionnaireResponse is used to represent the response data in response to the query. In addition to the recording the responses, the responses are associated with the Assessment and the individual Question on the form.  The QuestionnaireResponse resource can be validated against the corresponding Questionnaire to verify that required groups and questions are answered and that answers fit constraints in terms of cardinality, data type, etc.
+The responses to the assessment are retrieved by the practitioner or provider administrator for review and possibly manual processing such as scoring.  The Form associated with the responses may be retrieved at the same time as well.  The QuestionnaireResponse is used to represent the response data in response to the query. In addition to the recording the responses, the responses are associated with the Assessment and the individual Question on the form.  The QuestionnaireResponse resource can be validated against the corresponding Questionnaire to verify that required groups and questions are answered and that answers fit constraints in terms of cardinality, data type, etc.
 
 
 <!-- {% raw %}>{% include img.html img="diagrams/Slide30.png" caption="Appointment Availability Discovery and Search" %}{% endraw %} -->
 
-
-<!-- TODO --> Discuss how to deal with incomplete or dupicate sets of answers by the same subject [see issues].
+<!-- TODO -->
+*Discuss how to deal with incomplete or dupicate sets of answers by the same subject [see issues].*
 
 The standard [FHIR RESTful search API] is used with the following *mandatory* search parameters:
 
@@ -176,18 +176,24 @@ The standard [FHIR RESTful search API] is used with the following *mandatory* se
 - `context`
 - `status`
 
-and the following *optional* search parameters
+and the following *optional* search parameters:
 
 - `author`
 - `source`
 
-(others?... discuss)
+*DISCUSS whether to add the following on call*
+
+For the convenience of the client, the server may support including the Questionnaire using the following *optional* search parameter:
+
+- `\_include`  Note that this path references a resource on the Assessment Bank server which is typically another server.
+
 
 #### APIs
 {:.no_toc}
 
 The following Argonaut Questionnaire artifacts are used in this transaction:
 
+- **[Argonaut Questionnaire Profile]**.
 - **[Argonaut QuestionnaireResponse Profile]**.
 
 #### Usage
@@ -199,6 +205,11 @@ Fetching a *single* QuestionnaireResponse:
 - based on its id:
 
     `GET [base]/QuestionnaireResponse/[id]`
+
+- based on its id and include the Questionnaire:
+
+    `GET [base]/QuestionnaireResponse?_id=[id]&_include=QuestionnaireResponse:questionnaire`
+
 
 Searching for *all* the completed QuestionnaireResponses
 

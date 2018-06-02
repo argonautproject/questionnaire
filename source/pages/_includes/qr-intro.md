@@ -15,13 +15,13 @@ The Argonaut QuestionnaireResponse resource supports:
 Can be transformed to other FHIR resources (out of scope)
 
 
-The Argonaut Questionnaire resource supports:
+The Argonaut QuestionnaireResponse resource supports:
 
 ### Mandatory Data Elements and Terminology
 
 The following data-elements are mandatory:
 
-**Each Questionnaire must have:**
+**Each QuestionnaireResponse must have:**
 
 1. A status (Mandatory in base)
 1. A link to the question being answered (Mandatory in base)
@@ -32,6 +32,7 @@ The following data-elements are mandatory:
 **The system [Must Support] if available:**
 
 1. QuestionnaireResponse.identifier
+1. QuestionnaireResponse.context
 1. QuestionnaireResponse.author
 1. QuestionnaireResponse.source
 1. QuestionnaireResponse.item
@@ -48,7 +49,7 @@ The following data-elements are mandatory:
 #### Examples
 
 
-<!-- {% raw %} {% include list-simple-questionnaires.xhtml %}{% endraw %} -->
+<!-- {% raw %} {% include list-simple-QuestionnaireResponses.xhtml %}{% endraw %} -->
 - [PHQ-9 Response](QuestionnaireResponse-questionnaireresponse-example-phq9.html)
 - [AUDIT Response](QuestionnaireResponse-questionnaireresponse-example-audit.html)
 - [DAST Response](QuestionnaireResponse-questionnaireresponse-example-dast.html)

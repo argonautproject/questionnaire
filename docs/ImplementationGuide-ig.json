@@ -19,24 +19,12 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "valueUri": "Questionnaire-questionnaire-example-phq-9xml.html"
+              "valueUri": "QuestionnaireResponse-questionnaireresponse-example-phq9.html"
             }
           ],
           "example": true,
           "sourceReference": {
-            "reference": "Questionnaire/questionnaire-example-phq-9xml"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "valueUri": "QuestionnaireResponse-phq9-responses.html"
-            }
-          ],
-          "example": true,
-          "sourceReference": {
-            "reference": "QuestionnaireResponse/phq9-responses"
+            "reference": "QuestionnaireResponse/questionnaireresponse-example-phq9"
           }
         },
         {
@@ -55,12 +43,36 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "QuestionnaireResponse-questionnaireresponse-example-housing.html"
+            }
+          ],
+          "example": true,
+          "sourceReference": {
+            "reference": "QuestionnaireResponse/questionnaireresponse-example-housing"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "Questionnaire-questionnaire-example-housing.html"
             }
           ],
           "example": true,
           "sourceReference": {
             "reference": "Questionnaire/questionnaire-example-housing"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "QuestionnaireResponse-questionnaireresponse-example-dast.html"
+            }
+          ],
+          "example": true,
+          "sourceReference": {
+            "reference": "QuestionnaireResponse/questionnaireresponse-example-dast"
           }
         },
         {
@@ -79,6 +91,18 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "QuestionnaireResponse-questionnaireresponse-example-audit.html"
+            }
+          ],
+          "example": true,
+          "sourceReference": {
+            "reference": "QuestionnaireResponse/questionnaireresponse-example-audit"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "Questionnaire-questionnaire-example-audit.html"
             }
           ],
@@ -91,48 +115,24 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "QuestionnaireResponse-questionnaireresponse-example-asq3.html"
+            }
+          ],
+          "example": true,
+          "sourceReference": {
+            "reference": "QuestionnaireResponse/questionnaireresponse-example-asq3"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "Questionnaire-questionnaire-example-asq3.html"
             }
           ],
           "example": true,
           "sourceReference": {
             "reference": "Questionnaire/questionnaire-example-asq3"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "valueUri": "ValueSet-SAMHSA-dad.html"
-            }
-          ],
-          "example": false,
-          "sourceReference": {
-            "reference": "ValueSet/SAMHSA-dad"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "valueUri": "ValueSet-SAMHSA-6.html"
-            }
-          ],
-          "example": false,
-          "sourceReference": {
-            "reference": "ValueSet/SAMHSA-6"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "valueUri": "ValueSet-PHQ-9.html"
-            }
-          ],
-          "example": false,
-          "sourceReference": {
-            "reference": "ValueSet/PHQ-9"
           }
         },
         {
@@ -205,6 +205,18 @@
           "example": false,
           "sourceReference": {
             "reference": "StructureDefinition/qr"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-qcvs.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition/qcvs"
           }
         },
         {
@@ -295,6 +307,24 @@
           "name": "Argonaut_Q_Profile",
           "sourceReference": {
             "reference": "StructureDefinition/q"
+          }
+        }
+      ]
+    },
+    {
+      "id": "QCVS-profile-spreadsheet.xml",
+      "name": "Argonaut_QCVS_Profile",
+      "resource": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-qcvs.html"
+            }
+          ],
+          "name": "Argonaut_QCVS_Profile",
+          "sourceReference": {
+            "reference": "StructureDefinition/qcvs"
           }
         }
       ]

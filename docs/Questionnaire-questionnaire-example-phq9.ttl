@@ -17,8 +17,74 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: questionnaire-example-phq9</p><p><b>meta</b>: </p><p><b>identifier</b>: business-identifier</p><p><b>title</b>: Patient Health Questionnaire (PHQ-9)</p><p><b>status</b>: draft</p><p><b>code</b>: PHQ-9 quick depression assessment panel:-:Pt:^Patient:-:Report.PHQ-9 (Details: LOINC code 44249-1 = '44249-1', stated as 'PHQ-9 quick depression assessment panel:-:Pt:^Patient:-:Report.PHQ-9')</p><p><b>subjectType</b>: Patient</p><blockquote><p><b>item</b></p><p><b>linkId</b>: panel</p><p><b>code</b>: PHQ-9 quick depression assessment panel:-:Pt:^Patient:-:Report.PHQ-9 (Details: LOINC code 44249-1 = '44249-1', stated as 'PHQ-9 quick depression assessment panel:-:Pt:^Patient:-:Report.PHQ-9')</p><p><b>text</b>: Over the last 2 weeks, how often have you been bothered by any of the following problems?</p><p><b>type</b>: choice</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: LittleInterest</p><p><b>code</b>: 44250-9 (Details: LOINC code 44250-9 = '44250-9', stated as 'null')</p><p><b>text</b>: Little interest or pleasure in doing things</p><p><b>type</b>: choice</p><p><b>required</b>: true</p><p><b>options</b>: <a href=\"ValueSet-PHQ-9.html\">Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day. Generated Summary: id: PHQ-9; url: http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-9; version: 1.0.0; name: PHQ-9; title: PHQ / Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day; status: active; date: Apr 5, 2018 7:40:10 PM; description: PHQ / Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day   http://loinc.org/vs/LL358-3; <span title=\"Codes: {urn:iso:std:iso:3166 US}\">United States of America</span>; copyright: This content LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use</a></p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: FeelingDown</p><p><b>code</b>: 44255-8 (Details: LOINC code 44255-8 = '44255-8', stated as 'null')</p><p><b>text</b>: Feeling down, depressed, or hopeless</p><p><b>type</b>: choice</p><p><b>required</b>: true</p><p><b>options</b>: <a href=\"ValueSet-PHQ-9.html\">Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day. Generated Summary: id: PHQ-9; url: http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-9; version: 1.0.0; name: PHQ-9; title: PHQ / Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day; status: active; date: Apr 5, 2018 7:40:10 PM; description: PHQ / Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day   http://loinc.org/vs/LL358-3; <span title=\"Codes: {urn:iso:std:iso:3166 US}\">United States of America</span>; copyright: This content LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use</a></p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: TroubleSleeping</p><p><b>code</b>: 44259-0 (Details: LOINC code 44259-0 = '44259-0', stated as 'null')</p><p><b>text</b>: Trouble falling or staying asleep</p><p><b>type</b>: choice</p><p><b>required</b>: true</p><p><b>options</b>: <a href=\"ValueSet-PHQ-9.html\">Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day. Generated Summary: id: PHQ-9; url: http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-9; version: 1.0.0; name: PHQ-9; title: PHQ / Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day; status: active; date: Apr 5, 2018 7:40:10 PM; description: PHQ / Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day   http://loinc.org/vs/LL358-3; <span title=\"Codes: {urn:iso:std:iso:3166 US}\">United States of America</span>; copyright: This content LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use</a></p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: FeelingTired</p><p><b>code</b>: 44254-1 (Details: LOINC code 44254-1 = '44254-1', stated as 'null')</p><p><b>text</b>: Feeling tired or having little energy</p><p><b>type</b>: choice</p><p><b>required</b>: true</p><p><b>options</b>: <a href=\"ValueSet-PHQ-9.html\">Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day. Generated Summary: id: PHQ-9; url: http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-9; version: 1.0.0; name: PHQ-9; title: PHQ / Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day; status: active; date: Apr 5, 2018 7:40:10 PM; description: PHQ / Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day   http://loinc.org/vs/LL358-3; <span title=\"Codes: {urn:iso:std:iso:3166 US}\">United States of America</span>; copyright: This content LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use</a></p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: BadAppetite</p><p><b>code</b>: 44251-7 (Details: LOINC code 44251-7 = '44251-7', stated as 'null')</p><p><b>text</b>: Poor appetite or overeating</p><p><b>type</b>: choice</p><p><b>required</b>: true</p><p><b>options</b>: <a href=\"ValueSet-PHQ-9.html\">Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day. Generated Summary: id: PHQ-9; url: http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-9; version: 1.0.0; name: PHQ-9; title: PHQ / Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day; status: active; date: Apr 5, 2018 7:40:10 PM; description: PHQ / Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day   http://loinc.org/vs/LL358-3; <span title=\"Codes: {urn:iso:std:iso:3166 US}\">United States of America</span>; copyright: This content LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use</a></p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: FeelingBadAboutSelf</p><p><b>code</b>: 44258-2 (Details: LOINC code 44258-2 = '44258-2', stated as 'null')</p><p><b>text</b>: Feeling bad about yourself - or that you are a failure or have let yourself or your family down</p><p><b>type</b>: choice</p><p><b>required</b>: true</p><p><b>options</b>: <a href=\"ValueSet-PHQ-9.html\">Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day. Generated Summary: id: PHQ-9; url: http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-9; version: 1.0.0; name: PHQ-9; title: PHQ / Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day; status: active; date: Apr 5, 2018 7:40:10 PM; description: PHQ / Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day   http://loinc.org/vs/LL358-3; <span title=\"Codes: {urn:iso:std:iso:3166 US}\">United States of America</span>; copyright: This content LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use</a></p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: TroubleConcentrating</p><p><b>code</b>: 44252-5 (Details: LOINC code 44252-5 = '44252-5', stated as 'null')</p><p><b>text</b>: Trouble concentrating on things, such as reading the newspaper or watching television</p><p><b>type</b>: choice</p><p><b>required</b>: true</p><p><b>options</b>: <a href=\"ValueSet-PHQ-9.html\">Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day. Generated Summary: id: PHQ-9; url: http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-9; version: 1.0.0; name: PHQ-9; title: PHQ / Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day; status: active; date: Apr 5, 2018 7:40:10 PM; description: PHQ / Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day   http://loinc.org/vs/LL358-3; <span title=\"Codes: {urn:iso:std:iso:3166 US}\">United States of America</span>; copyright: This content LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use</a></p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: MovingSpeaking</p><p><b>code</b>: 44253-3 (Details: LOINC code 44253-3 = '44253-3', stated as 'null')</p><p><b>text</b>: Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual</p><p><b>type</b>: choice</p><p><b>required</b>: true</p><p><b>options</b>: <a href=\"ValueSet-PHQ-9.html\">Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day. Generated Summary: id: PHQ-9; url: http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-9; version: 1.0.0; name: PHQ-9; title: PHQ / Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day; status: active; date: Apr 5, 2018 7:40:10 PM; description: PHQ / Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day   http://loinc.org/vs/LL358-3; <span title=\"Codes: {urn:iso:std:iso:3166 US}\">United States of America</span>; copyright: This content LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use</a></p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: TotalScore</p><p><b>code</b>: 44261-6 (Details: LOINC code 44261-6 = '44261-6', stated as 'null')</p><p><b>text</b>: Total score</p><p><b>type</b>: integer</p><p><b>required</b>: true</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: Difficulty</p><p><b>code</b>: 44256-6 (Details: LOINC code 44256-6 = '44256-6', stated as 'null')</p><p><b>text</b>: If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people</p><p><b>type</b>: choice</p><p><b>required</b>: true</p><p><b>options</b>: <a href=\"ValueSet-PHQ-9.html\">Not difficult at all/Somewhat difficult/Very difficult/Extremely difficult-Perceived difficulty (PHQ-9). Generated Summary: id: PHQ-9; url: http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-9; version: 1.0.0; name: PHQ-9; title: PHQ / Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day; status: active; date: Apr 5, 2018 7:40:10 PM; description: PHQ / Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day   http://loinc.org/vs/LL358-3; <span title=\"Codes: {urn:iso:std:iso:3166 US}\">United States of America</span>; copyright: This content LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use</a></p></blockquote></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: questionnaire-example-phq9</p><p><b>meta</b>: </p><p><b>contained</b>: </p><p><b>url</b>: <a href=\"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9\">http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9</a></p><p><b>identifier</b>: business-identifier</p><p><b>title</b>: Patient Health Questionnaire (PHQ-9)</p><p><b>status</b>: draft</p><p><b>code</b>: PHQ-9 quick depression assessment panel:-:Pt:^Patient:-:Report.PHQ-9 (Details: LOINC code 44249-1 = '44249-1', stated as 'PHQ-9 quick depression assessment panel:-:Pt:^Patient:-:Report.PHQ-9')</p><p><b>subjectType</b>: Patient</p><blockquote><p><b>item</b></p><p><b>linkId</b>: panel</p><p><b>code</b>: PHQ-9 quick depression assessment panel:-:Pt:^Patient:-:Report.PHQ-9 (Details: LOINC code 44249-1 = '44249-1', stated as 'PHQ-9 quick depression assessment panel:-:Pt:^Patient:-:Report.PHQ-9')</p><p><b>text</b>: Over the last 2 weeks, how often have you been bothered by any of the following problems?</p><p><b>type</b>: choice</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: LittleInterest</p><p><b>code</b>: 44250-9 (Details: LOINC code 44250-9 = '44250-9', stated as 'null')</p><p><b>text</b>: Little interest or pleasure in doing things</p><p><b>type</b>: choice</p><p><b>required</b>: true</p><p><b>options</b>: Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day. Generated Summary: unknown resource contained</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: FeelingDown</p><p><b>code</b>: 44255-8 (Details: LOINC code 44255-8 = '44255-8', stated as 'null')</p><p><b>text</b>: Feeling down, depressed, or hopeless</p><p><b>type</b>: choice</p><p><b>required</b>: true</p><p><b>options</b>: Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day. Generated Summary: unknown resource contained</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: TroubleSleeping</p><p><b>code</b>: 44259-0 (Details: LOINC code 44259-0 = '44259-0', stated as 'null')</p><p><b>text</b>: Trouble falling or staying asleep</p><p><b>type</b>: choice</p><p><b>required</b>: true</p><p><b>options</b>: Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day. Generated Summary: unknown resource contained</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: FeelingTired</p><p><b>code</b>: 44254-1 (Details: LOINC code 44254-1 = '44254-1', stated as 'null')</p><p><b>text</b>: Feeling tired or having little energy</p><p><b>type</b>: choice</p><p><b>required</b>: true</p><p><b>options</b>: Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day. Generated Summary: unknown resource contained</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: BadAppetite</p><p><b>code</b>: 44251-7 (Details: LOINC code 44251-7 = '44251-7', stated as 'null')</p><p><b>text</b>: Poor appetite or overeating</p><p><b>type</b>: choice</p><p><b>required</b>: true</p><p><b>options</b>: Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day. Generated Summary: unknown resource contained</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: FeelingBadAboutSelf</p><p><b>code</b>: 44258-2 (Details: LOINC code 44258-2 = '44258-2', stated as 'null')</p><p><b>text</b>: Feeling bad about yourself - or that you are a failure or have let yourself or your family down</p><p><b>type</b>: choice</p><p><b>required</b>: true</p><p><b>options</b>: Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day. Generated Summary: unknown resource contained</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: TroubleConcentrating</p><p><b>code</b>: 44252-5 (Details: LOINC code 44252-5 = '44252-5', stated as 'null')</p><p><b>text</b>: Trouble concentrating on things, such as reading the newspaper or watching television</p><p><b>type</b>: choice</p><p><b>required</b>: true</p><p><b>options</b>: Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day. Generated Summary: unknown resource contained</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: MovingSpeaking</p><p><b>code</b>: 44253-3 (Details: LOINC code 44253-3 = '44253-3', stated as 'null')</p><p><b>text</b>: Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual</p><p><b>type</b>: choice</p><p><b>required</b>: true</p><p><b>options</b>: Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day. Generated Summary: unknown resource contained</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: TotalScore</p><p><b>code</b>: 44261-6 (Details: LOINC code 44261-6 = '44261-6', stated as 'null')</p><p><b>text</b>: Total score</p><p><b>type</b>: integer</p><p><b>required</b>: true</p></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: Difficulty</p><p><b>code</b>: 44256-6 (Details: LOINC code 44256-6 = '44256-6', stated as 'null')</p><p><b>text</b>: If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people</p><p><b>type</b>: choice</p><p><b>required</b>: true</p><p><b>options</b>: Not difficult at all/Somewhat difficult/Very difficult/Extremely difficult-Perceived difficulty (PHQ-9). Generated Summary: unknown resource contained</p></blockquote></div>"
   ];
+  fhir:DomainResource.contained [
+     a fhir:ValueSet;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "PHQ-9" ];
+     fhir:ValueSet.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-9" ];
+     fhir:ValueSet.version [ fhir:value "0.0.0" ];
+     fhir:ValueSet.name [ fhir:value "PHQ-9" ];
+     fhir:ValueSet.title [ fhir:value "PHQ / Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day" ];
+     fhir:ValueSet.status [ fhir:value "active" ];
+     fhir:ValueSet.date [ fhir:value "2018-04-05T12:40:10-07:00"^^xsd:dateTime ];
+     fhir:ValueSet.description [ fhir:value "PHQ / Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day   http://loinc.org/vs/LL358-3" ];
+     fhir:ValueSet.jurisdiction [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+         fhir:Coding.code [ fhir:value "US" ];
+         fhir:Coding.display [ fhir:value "United States of America" ]
+       ]
+     ];
+     fhir:ValueSet.copyright [ fhir:value "This content LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use" ];
+     fhir:ValueSet.compose [
+       fhir:ValueSet.compose.include [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.system [ fhir:value "http://loinc.org" ];
+         fhir:ValueSet.compose.include.concept [
+           fhir:index 0;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+             fhir:Extension.valueDecimal [ fhir:value "0"^^xsd:decimal ]
+           ];
+           fhir:ValueSet.compose.include.concept.code [ fhir:value "LA6568-5" ];
+           fhir:ValueSet.compose.include.concept.display [ fhir:value "Not at all" ]
+         ], [
+           fhir:index 1;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+             fhir:Extension.valueDecimal [ fhir:value "1"^^xsd:decimal ]
+           ];
+           fhir:ValueSet.compose.include.concept.code [ fhir:value "LA6569-3" ];
+           fhir:ValueSet.compose.include.concept.display [ fhir:value "Several days" ]
+         ], [
+           fhir:index 2;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+             fhir:Extension.valueDecimal [ fhir:value "2"^^xsd:decimal ]
+           ];
+           fhir:ValueSet.compose.include.concept.code [ fhir:value "LA6570-1" ];
+           fhir:ValueSet.compose.include.concept.display [ fhir:value "More than half the days" ]
+         ], [
+           fhir:index 3;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+             fhir:Extension.valueDecimal [ fhir:value "3"^^xsd:decimal ]
+           ];
+           fhir:ValueSet.compose.include.concept.code [ fhir:value "LA6571-9" ];
+           fhir:ValueSet.compose.include.concept.display [ fhir:value "Nearly every day" ]
+         ]
+       ]
+     ]
+  ];
+  fhir:Questionnaire.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9"];
   fhir:Questionnaire.identifier [
      fhir:index 0;
      fhir:Identifier.system [ fhir:value "http://acme.org/q-identifiers" ];
@@ -62,8 +128,7 @@
      fhir:Questionnaire.item.type [ fhir:value "choice" ];
      fhir:Questionnaire.item.required [ fhir:value "true"^^xsd:boolean ];
      fhir:Questionnaire.item.options [
-       fhir:link <http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-9>;
-       fhir:Reference.reference [ fhir:value "ValueSet/PHQ-9" ];
+       fhir:Reference.reference [ fhir:value "#PHQ-9" ];
        fhir:Reference.display [ fhir:value "Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day" ]
      ]
   ], [
@@ -79,8 +144,7 @@
      fhir:Questionnaire.item.type [ fhir:value "choice" ];
      fhir:Questionnaire.item.required [ fhir:value "true"^^xsd:boolean ];
      fhir:Questionnaire.item.options [
-       fhir:link <http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-9>;
-       fhir:Reference.reference [ fhir:value "ValueSet/PHQ-9" ];
+       fhir:Reference.reference [ fhir:value "#PHQ-9" ];
        fhir:Reference.display [ fhir:value "Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day" ]
      ]
   ], [
@@ -96,8 +160,7 @@
      fhir:Questionnaire.item.type [ fhir:value "choice" ];
      fhir:Questionnaire.item.required [ fhir:value "true"^^xsd:boolean ];
      fhir:Questionnaire.item.options [
-       fhir:link <http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-9>;
-       fhir:Reference.reference [ fhir:value "ValueSet/PHQ-9" ];
+       fhir:Reference.reference [ fhir:value "#PHQ-9" ];
        fhir:Reference.display [ fhir:value "Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day" ]
      ]
   ], [
@@ -113,8 +176,7 @@
      fhir:Questionnaire.item.type [ fhir:value "choice" ];
      fhir:Questionnaire.item.required [ fhir:value "true"^^xsd:boolean ];
      fhir:Questionnaire.item.options [
-       fhir:link <http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-9>;
-       fhir:Reference.reference [ fhir:value "ValueSet/PHQ-9" ];
+       fhir:Reference.reference [ fhir:value "#PHQ-9" ];
        fhir:Reference.display [ fhir:value "Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day" ]
      ]
   ], [
@@ -130,8 +192,7 @@
      fhir:Questionnaire.item.type [ fhir:value "choice" ];
      fhir:Questionnaire.item.required [ fhir:value "true"^^xsd:boolean ];
      fhir:Questionnaire.item.options [
-       fhir:link <http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-9>;
-       fhir:Reference.reference [ fhir:value "ValueSet/PHQ-9" ];
+       fhir:Reference.reference [ fhir:value "#PHQ-9" ];
        fhir:Reference.display [ fhir:value "Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day" ]
      ]
   ], [
@@ -147,8 +208,7 @@
      fhir:Questionnaire.item.type [ fhir:value "choice" ];
      fhir:Questionnaire.item.required [ fhir:value "true"^^xsd:boolean ];
      fhir:Questionnaire.item.options [
-       fhir:link <http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-9>;
-       fhir:Reference.reference [ fhir:value "ValueSet/PHQ-9" ];
+       fhir:Reference.reference [ fhir:value "#PHQ-9" ];
        fhir:Reference.display [ fhir:value "Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day" ]
      ]
   ], [
@@ -164,8 +224,7 @@
      fhir:Questionnaire.item.type [ fhir:value "choice" ];
      fhir:Questionnaire.item.required [ fhir:value "true"^^xsd:boolean ];
      fhir:Questionnaire.item.options [
-       fhir:link <http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-9>;
-       fhir:Reference.reference [ fhir:value "ValueSet/PHQ-9" ];
+       fhir:Reference.reference [ fhir:value "#PHQ-9" ];
        fhir:Reference.display [ fhir:value "Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day" ]
      ]
   ], [
@@ -181,8 +240,7 @@
      fhir:Questionnaire.item.type [ fhir:value "choice" ];
      fhir:Questionnaire.item.required [ fhir:value "true"^^xsd:boolean ];
      fhir:Questionnaire.item.options [
-       fhir:link <http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-9>;
-       fhir:Reference.reference [ fhir:value "ValueSet/PHQ-9" ];
+       fhir:Reference.reference [ fhir:value "#PHQ-9" ];
        fhir:Reference.display [ fhir:value "Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day" ]
      ]
   ], [
@@ -215,8 +273,7 @@
      fhir:Questionnaire.item.type [ fhir:value "choice" ];
      fhir:Questionnaire.item.required [ fhir:value "true"^^xsd:boolean ];
      fhir:Questionnaire.item.options [
-       fhir:link <http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-9>;
-       fhir:Reference.reference [ fhir:value "ValueSet/PHQ-9" ];
+       fhir:Reference.reference [ fhir:value "#PHQ-9" ];
        fhir:Reference.display [ fhir:value "Not difficult at all/Somewhat difficult/Very difficult/Extremely difficult-Perceived difficulty (PHQ-9)" ]
      ]
   ] .

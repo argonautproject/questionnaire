@@ -17,8 +17,8 @@ htmlxhtmldisplay","",0,1,"","","","Narrative {[]} {[]}
 ","Text summary of the resource, for human interpretation","A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it ""clinically safe"" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.","Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a ""text blob"" or where text is additionally entered raw or narrated and encoded in formation is added later.","","","","","","","","",,,,,"",,,,"DomainResource.text",0,1,"dom-1
 ","","Act.text?"
 "Questionnaire.contained","","inline resources
-anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
-","Contained, inline Resources","These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.","This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.","","","","","","","","",,,,,"",,,,"DomainResource.contained",0,*,"","","N/A"
+anonymous resourcescontained resources","",0,*,"Y","","","ValueSet {[CanonicalType[http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs]]} {[]}
+","Contained, inline Resources","These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.","This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.","The contained Valuesets are referenced when using the `.options` element.","","","","","","","",,,,,"",,,,"DomainResource.contained",0,*,"","","N/A"
 "Questionnaire.extension","","","",0,*,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","DomainResource.extension",0,*,"",""
@@ -80,8 +80,6 @@ que-9:Read-only can't be specified for ""display"" items {type!='display' or rea
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","Element.extension",0,*,"",""
 "Questionnaire.item.extension","tl2","","",0,1,"Y","","","Extension {[CanonicalType[http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timelimit]]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"",""
-"Questionnaire.item.extension","s1","","",0,1,"Y","","","Extension {[CanonicalType[http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score]]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"",""
 "Questionnaire.item.modifierExtension","","extensions
 user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
@@ -160,8 +158,9 @@ The dataType of this element must be the same as the data type of the question b
 ","No more than this many characters","The maximum number of characters that are permitted in the answer to be considered a ""valid"" QuestionnaireResponse.","For base64binary, reflects the number of characters representing the encoded data, not the number of bytes of the binary data. The value may come from the ElementDefinition referred to by .definition.","","","","","","","","",,,,,"",,,,"Questionnaire.item.maxLength",0,1,"que-10
 ","","N/A - MIF rather than RIM level","N/A"
 "Questionnaire.item.options","","","",0,1,"Y","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/ValueSet]]}
-","Valueset containing permitted answers","A reference to a value set containing a list of codes representing permitted answers for a ""choice"" or ""open-choice"" question.","LOINC defines many useful value sets for questionnaire responses. See [LOINC Answer Lists](loinc.html#alist). The value may come from the ElementDefinition referred to by .definition.","","","","","","","","",,,,,"",,,,"Questionnaire.item.options",0,1,"que-4
-que-5","","Questionnaire.item.options","Questionnaire.group.question.options","N/A - MIF rather than RIM level"
+","Valueset containing permitted answers","A reference to a value set containing a list of codes representing permitted answers for a ""choice"" or ""open-choice"" question.","When used, references the contained ValueSets.","","","","","","","","",,,,,"",,,,"Questionnaire.item.options",0,1,"que-4
+que-5","q-1:SHALL be a reference to a contained valueset. {reference.startsWith('#')}
+","Questionnaire.item.options","Questionnaire.group.question.options","N/A - MIF rather than RIM level"
 "Questionnaire.item.option","","","",0,*,"Y","","","BackboneElement {[]} {[]}
 ","Permitted answer","One of the permitted answers for a ""choice"" or ""open-choice"" question.","This element can be used when the value set machinery of options is deemed too cumbersome or when there's a need to capture options that are not codes.","","","","","","","","",,,,,"",,,,"Questionnaire.item.option",0,*,"que-4
 que-5","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}

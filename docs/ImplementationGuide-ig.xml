@@ -14,20 +14,11 @@
     <name value="base"/>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="Questionnaire-questionnaire-example-phq-9xml.html"/>
+        <valueUri value="QuestionnaireResponse-questionnaireresponse-example-phq9.html"/>
       </extension>
       <example value="true"/>
       <sourceReference>
-        <reference value="Questionnaire/questionnaire-example-phq-9xml"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="QuestionnaireResponse-phq9-responses.html"/>
-      </extension>
-      <example value="true"/>
-      <sourceReference>
-        <reference value="QuestionnaireResponse/phq9-responses"/>
+        <reference value="QuestionnaireResponse/questionnaireresponse-example-phq9"/>
       </sourceReference>
     </resource>
     <resource>
@@ -41,11 +32,29 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="QuestionnaireResponse-questionnaireresponse-example-housing.html"/>
+      </extension>
+      <example value="true"/>
+      <sourceReference>
+        <reference value="QuestionnaireResponse/questionnaireresponse-example-housing"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="Questionnaire-questionnaire-example-housing.html"/>
       </extension>
       <example value="true"/>
       <sourceReference>
         <reference value="Questionnaire/questionnaire-example-housing"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="QuestionnaireResponse-questionnaireresponse-example-dast.html"/>
+      </extension>
+      <example value="true"/>
+      <sourceReference>
+        <reference value="QuestionnaireResponse/questionnaireresponse-example-dast"/>
       </sourceReference>
     </resource>
     <resource>
@@ -59,6 +68,15 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="QuestionnaireResponse-questionnaireresponse-example-audit.html"/>
+      </extension>
+      <example value="true"/>
+      <sourceReference>
+        <reference value="QuestionnaireResponse/questionnaireresponse-example-audit"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="Questionnaire-questionnaire-example-audit.html"/>
       </extension>
       <example value="true"/>
@@ -68,38 +86,20 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="QuestionnaireResponse-questionnaireresponse-example-asq3.html"/>
+      </extension>
+      <example value="true"/>
+      <sourceReference>
+        <reference value="QuestionnaireResponse/questionnaireresponse-example-asq3"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="Questionnaire-questionnaire-example-asq3.html"/>
       </extension>
       <example value="true"/>
       <sourceReference>
         <reference value="Questionnaire/questionnaire-example-asq3"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="ValueSet-SAMHSA-dad.html"/>
-      </extension>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="ValueSet/SAMHSA-dad"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="ValueSet-SAMHSA-6.html"/>
-      </extension>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="ValueSet/SAMHSA-6"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="ValueSet-PHQ-9.html"/>
-      </extension>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="ValueSet/PHQ-9"/>
       </sourceReference>
     </resource>
     <resource>
@@ -154,6 +154,15 @@
       <example value="false"/>
       <sourceReference>
         <reference value="StructureDefinition/qr"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-qcvs.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/qcvs"/>
       </sourceReference>
     </resource>
     <resource>
@@ -220,6 +229,18 @@
       <name value="Argonaut_Q_Profile"/>
       <sourceReference>
         <reference value="StructureDefinition/q"/>
+      </sourceReference>
+    </resource>
+  </package>
+  <package id="QCVS-profile-spreadsheet.xml">
+    <name value="Argonaut_QCVS_Profile"/>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-qcvs.html"/>
+      </extension>
+      <name value="Argonaut_QCVS_Profile"/>
+      <sourceReference>
+        <reference value="StructureDefinition/qcvs"/>
       </sourceReference>
     </resource>
   </package>

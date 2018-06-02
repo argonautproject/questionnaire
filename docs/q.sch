@@ -31,7 +31,6 @@
     <sch:title>f:Questionnaire/f:item</sch:title>
     <sch:rule context="f:Questionnaire/f:item">
       <sch:assert test="count(f:extension[@url = 'http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timelimit']) &lt;= 1">extension with URL = 'http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timelimit': maximum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = 'http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score']) &lt;= 1">extension with URL = 'http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score': maximum cardinality of 'extension' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -61,6 +60,12 @@
     <sch:rule context="f:Questionnaire/f:item/f:enableWhen">
       <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
       <sch:assert test="count(f:*[starts-with(local-name(.), 'answer')]|self::f:hasAnswer) = 1">enableWhen must contain either a 'answer' or a 'hasAnswer' element (inherited)</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:title>Questionnaire.item.options</sch:title>
+    <sch:rule context="f:Questionnaire/f:item/f:options">
+      <sch:assert test="f:reference[starts-with(@value, '#')]">SHALL be a reference to a contained valueset.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

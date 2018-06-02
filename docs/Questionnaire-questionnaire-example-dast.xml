@@ -688,6 +688,7 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
 6Zt+6qP+6qt+67P+67t+GOzD/uzLfuZLOO3jfu2z/u3rfu/n/ucHBAA7
 " alt="Drug Abuse Screening Test (DAST-10)"/><p>copyright information here…todo….</p></div>
   </text>
+  <url value="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast"/>
   <identifier>
     <system value="http://acme.org/q-identifiers"/>
     <value value="business-identifier3"/>
@@ -728,14 +729,14 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
     <type value="choice"/>
     <required value="true"/>
     <option>
-      <extension url="http://acme.org/StructureDefinition/my-extension">
-        <valueUnsignedInt value="1"/>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <valueDecimal value="1"/>
       </extension>
       <valueString value="Yes"/>
     </option>
     <option>
-      <extension url="http://acme.org/StructureDefinition/my-extension">
-        <valueUnsignedInt value="0"/>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <valueDecimal value="0"/>
       </extension>
       <valueString value="No"/>
     </option>
@@ -747,14 +748,14 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
     <type value="choice"/>
     <required value="true"/>
     <option>
-      <extension url="http://acme.org/StructureDefinition/my-extension">
-        <valueUnsignedInt value="1"/>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <valueDecimal value="1"/>
       </extension>
       <valueString value="Yes"/>
     </option>
     <option>
-      <extension url="http://acme.org/StructureDefinition/my-extension">
-        <valueUnsignedInt value="0"/>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <valueDecimal value="0"/>
       </extension>
       <valueString value="No"/>
     </option>
@@ -766,14 +767,14 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
     <type value="choice"/>
     <required value="true"/>
     <option>
-      <extension url="http://acme.org/StructureDefinition/my-extension">
-        <valueUnsignedInt value="0"/>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <valueDecimal value="0"/>
       </extension>
       <valueString value="Yes"/>
     </option>
     <option>
-      <extension url="http://acme.org/StructureDefinition/my-extension">
-        <valueUnsignedInt value="1"/>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <valueDecimal value="1"/>
       </extension>
       <valueString value="No"/>
     </option>
@@ -785,14 +786,14 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
     <type value="choice"/>
     <required value="true"/>
     <option>
-      <extension url="http://acme.org/StructureDefinition/my-extension">
-        <valueUnsignedInt value="1"/>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <valueDecimal value="1"/>
       </extension>
       <valueString value="Yes"/>
     </option>
     <option>
-      <extension url="http://acme.org/StructureDefinition/my-extension">
-        <valueUnsignedInt value="0"/>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <valueDecimal value="0"/>
       </extension>
       <valueString value="No"/>
     </option>
@@ -804,14 +805,14 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
     <type value="choice"/>
     <required value="true"/>
     <option>
-      <extension url="http://acme.org/StructureDefinition/my-extension">
-        <valueUnsignedInt value="1"/>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <valueDecimal value="1"/>
       </extension>
       <valueString value="Yes"/>
     </option>
     <option>
-      <extension url="http://acme.org/StructureDefinition/my-extension">
-        <valueUnsignedInt value="0"/>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <valueDecimal value="0"/>
       </extension>
       <valueString value="No"/>
     </option>
@@ -823,14 +824,14 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
     <type value="choice"/>
     <required value="true"/>
     <option>
-      <extension url="http://acme.org/StructureDefinition/my-extension">
-        <valueUnsignedInt value="1"/>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <valueDecimal value="1"/>
       </extension>
       <valueString value="Yes"/>
     </option>
     <option>
-      <extension url="http://acme.org/StructureDefinition/my-extension">
-        <valueUnsignedInt value="0"/>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <valueDecimal value="0"/>
       </extension>
       <valueString value="No"/>
     </option>
@@ -842,14 +843,14 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
     <type value="choice"/>
     <required value="true"/>
     <option>
-      <extension url="http://acme.org/StructureDefinition/my-extension">
-        <valueUnsignedInt value="1"/>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <valueDecimal value="1"/>
       </extension>
       <valueString value="Yes"/>
     </option>
     <option>
-      <extension url="http://acme.org/StructureDefinition/my-extension">
-        <valueUnsignedInt value="0"/>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <valueDecimal value="0"/>
       </extension>
       <valueString value="No"/>
     </option>
@@ -861,14 +862,14 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
     <type value="choice"/>
     <required value="true"/>
     <option>
-      <extension url="http://acme.org/StructureDefinition/my-extension">
-        <valueUnsignedInt value="1"/>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <valueDecimal value="1"/>
       </extension>
       <valueString value="Yes"/>
     </option>
     <option>
-      <extension url="http://acme.org/StructureDefinition/my-extension">
-        <valueUnsignedInt value="0"/>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <valueDecimal value="0"/>
       </extension>
       <valueString value="No"/>
     </option>
@@ -880,14 +881,14 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
     <type value="choice"/>
     <required value="true"/>
     <option>
-      <extension url="http://acme.org/StructureDefinition/my-extension">
-        <valueUnsignedInt value="1"/>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <valueDecimal value="1"/>
       </extension>
       <valueString value="Yes"/>
     </option>
     <option>
-      <extension url="http://acme.org/StructureDefinition/my-extension">
-        <valueUnsignedInt value="0"/>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <valueDecimal value="0"/>
       </extension>
       <valueString value="No"/>
     </option>
@@ -899,14 +900,14 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
     <type value="choice"/>
     <required value="true"/>
     <option>
-      <extension url="http://acme.org/StructureDefinition/my-extension">
-        <valueUnsignedInt value="1"/>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <valueDecimal value="1"/>
       </extension>
       <valueString value="Yes"/>
     </option>
     <option>
-      <extension url="http://acme.org/StructureDefinition/my-extension">
-        <valueUnsignedInt value="0"/>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <valueDecimal value="0"/>
       </extension>
       <valueString value="No"/>
     </option>

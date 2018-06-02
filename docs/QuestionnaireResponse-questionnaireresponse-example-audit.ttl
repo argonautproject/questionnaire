@@ -1,0 +1,151 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut-questionnaire/QuestionnaireResponse/questionnaireresponse-example-audit> a fhir:QuestionnaireResponse;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "questionnaireresponse-example-audit"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: questionnaireresponse-example-audit</p><p><b>identifier</b>: AUDIT-example</p><p><b>questionnaire</b>: <a href=\"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit\">http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit</a></p><p><b>status</b>: completed</p><p><b>subject</b>: subject</p><p><b>authored</b>: May 29, 2018</p><p><b>author</b>: subject</p><p><b>source</b>: subject</p><blockquote><p><b>item</b></p><p><b>linkId</b>: a1</p><p><b>text</b>: How often do you have a drink containing alcohol?</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Never (Details: [not stated] code LA6270-8 = 'LA6270-8', stated as 'Never')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: a2</p><p><b>text</b>: How many drinks containing alcohol do you have on a typical day when you are drinking?</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>1 or 2 (Details: [not stated] code LA1594-5 = 'LA1594-5', stated as '1 or 2')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: a3</p><p><b>text</b>: How often do you have six or more drinks on one occasion?</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Never (Details: [not stated] code LA6270-8 = 'LA6270-8', stated as 'Never')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: a4</p><p><b>text</b>: How often during the last year have you found that you were not able to stop drinking once you had started?</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Never (Details: [not stated] code LA6270-8 = 'LA6270-8', stated as 'Never')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: a5</p><p><b>text</b>: How often during the last year have you failed to do what was normally expected of you because of drinking?</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Never (Details: [not stated] code LA6270-8 = 'LA6270-8', stated as 'Never')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: a6</p><p><b>text</b>: How often during the last year have you needed a first drink in the morning to get yourself going after a heavy drinking session?</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Never (Details: [not stated] code LA6270-8 = 'LA6270-8', stated as 'Never')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: a7</p><p><b>text</b>: How often during the last year have you had a feeling of guilt or remorse after drinking?</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Never (Details: [not stated] code LA6270-8 = 'LA6270-8', stated as 'Never')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: a8</p><p><b>text</b>: How often during the last year have you been unable to remem­ber what happened the night before because of your drinking?</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Never (Details: [not stated] code LA6270-8 = 'LA6270-8', stated as 'Never')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: a9</p><p><b>text</b>: Have you or someone else been injured because of your drinking?</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>No (Details: [not stated] code 373067005 = '373067005', stated as 'No')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: a10</p><p><b>text</b>: Has a relative, friend, doctor, or other health care worker been concerned about your drinking or suggested you cut down?</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>No (Details: [not stated] code 373067005 = '373067005', stated as 'No')</td></tr></table></blockquote></div>"
+  ];
+  fhir:QuestionnaireResponse.identifier [
+     fhir:Identifier.value [ fhir:value "AUDIT-example" ]
+  ];
+  fhir:QuestionnaireResponse.questionnaire [
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit>;
+     fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit" ]
+  ];
+  fhir:QuestionnaireResponse.status [ fhir:value "completed"];
+  fhir:QuestionnaireResponse.subject [
+     fhir:Reference.display [ fhir:value "subject" ]
+  ];
+  fhir:QuestionnaireResponse.authored [ fhir:value "2018-05-29"^^xsd:date];
+  fhir:QuestionnaireResponse.author [
+     fhir:Reference.display [ fhir:value "subject" ]
+  ];
+  fhir:QuestionnaireResponse.source [
+     fhir:Reference.display [ fhir:value "subject" ]
+  ];
+  fhir:QuestionnaireResponse.item [
+     fhir:index 0;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "a1" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "How often do you have a drink containing alcohol?" ];
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.answer.valueCoding [
+         fhir:Coding.code [ fhir:value "LA6270-8" ];
+         fhir:Coding.display [ fhir:value "Never" ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "a2" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "How many drinks containing alcohol do you have on a typical day when you are drinking?" ];
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.answer.valueCoding [
+         fhir:Coding.code [ fhir:value "LA1594-5" ];
+         fhir:Coding.display [ fhir:value "1 or 2" ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "a3" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "How often do you have six or more drinks on one occasion?" ];
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.answer.valueCoding [
+         fhir:Coding.code [ fhir:value "LA6270-8" ];
+         fhir:Coding.display [ fhir:value "Never" ]
+       ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "a4" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "How often during the last year have you found that you were not able to stop drinking once you had started?" ];
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.answer.valueCoding [
+         fhir:Coding.code [ fhir:value "LA6270-8" ];
+         fhir:Coding.display [ fhir:value "Never" ]
+       ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "a5" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "How often during the last year have you failed to do what was normally expected of you because of drinking?" ];
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.answer.valueCoding [
+         fhir:Coding.code [ fhir:value "LA6270-8" ];
+         fhir:Coding.display [ fhir:value "Never" ]
+       ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "a6" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "How often during the last year have you needed a first drink in the morning to get yourself going after a heavy drinking session?" ];
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.answer.valueCoding [
+         fhir:Coding.code [ fhir:value "LA6270-8" ];
+         fhir:Coding.display [ fhir:value "Never" ]
+       ]
+     ]
+  ], [
+     fhir:index 6;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "a7" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "How often during the last year have you had a feeling of guilt or remorse after drinking?" ];
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.answer.valueCoding [
+         fhir:Coding.code [ fhir:value "LA6270-8" ];
+         fhir:Coding.display [ fhir:value "Never" ]
+       ]
+     ]
+  ], [
+     fhir:index 7;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "a8" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "How often during the last year have you been unable to remem­ber what happened the night before because of your drinking?" ];
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.answer.valueCoding [
+         fhir:Coding.code [ fhir:value "LA6270-8" ];
+         fhir:Coding.display [ fhir:value "Never" ]
+       ]
+     ]
+  ], [
+     fhir:index 8;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "a9" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "Have you or someone else been injured because of your drinking?" ];
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.answer.valueCoding [
+         fhir:Coding.code [ fhir:value "373067005" ];
+         fhir:Coding.display [ fhir:value "No" ]
+       ]
+     ]
+  ], [
+     fhir:index 9;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "a10" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "Has a relative, friend, doctor, or other health care worker been concerned about your drinking or suggested you cut down?" ];
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.answer.valueCoding [
+         fhir:Coding.code [ fhir:value "373067005" ];
+         fhir:Coding.display [ fhir:value "No" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut-questionnaire/QuestionnaireResponse/questionnaireresponse-example-audit.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

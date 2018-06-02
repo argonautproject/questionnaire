@@ -1058,6 +1058,7 @@ B7cxgncmobd5r/f04rOVqTd7x/fzUvKMwbd83zd+57d+7zd/97d//zeAB7iADziBF7iBHziCJ7iC
 LziDN7iDPziER7iEV2hAAAA7
 "alt="Ages and Stages Questionnaire (ASQ-3) Sample 16 Month Questionnaire"/><p>Ages &amp; Stages Questionnaires®, Third Edition (ASQ-3™), Squires &amp; Bricker © 2009 Paul H. Brookes Publishing Co. All rights reserved.</p></div>
   </text>
+  <url value="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-asq3"/>
   <identifier>
     <system value="http://acme.org/q-identifiers"/>
     <value value="business-identifier5"/>
@@ -1104,8 +1105,8 @@ LziDN7iDPziER7iEV2hAAAA7
       <required value="true"/>
       <repeats value="false"/>
       <option>
-        <extension url="http://acme.org/StructureDefinition/my-extension">
-          <valueUnsignedInt value="10"/>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+          <valueDecimal value="10"/>
         </extension>
         <valueCoding>
           <system value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/example-answerlist2"/>
@@ -1114,8 +1115,8 @@ LziDN7iDPziER7iEV2hAAAA7
         </valueCoding>
       </option>
       <option>
-        <extension url="http://acme.org/StructureDefinition/my-extension">
-          <valueUnsignedInt value="5"/>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+          <valueDecimal value="5"/>
         </extension>
         <valueCoding>
           <system value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/example-answerlist2"/>
@@ -1124,8 +1125,8 @@ LziDN7iDPziER7iEV2hAAAA7
         </valueCoding>
       </option>
       <option>
-        <extension url="http://acme.org/StructureDefinition/my-extension">
-          <valueUnsignedInt value="0"/>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+          <valueDecimal value="0"/>
         </extension>
         <valueCoding>
           <system value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/example-answerlist2"/>
@@ -1142,8 +1143,8 @@ LziDN7iDPziER7iEV2hAAAA7
       <required value="true"/>
       <repeats value="false"/>
       <option>
-        <extension url="http://acme.org/StructureDefinition/my-extension">
-          <valueUnsignedInt value="10"/>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+          <valueDecimal value="10"/>
         </extension>
         <valueCoding>
           <system value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/example-answerlist2"/>
@@ -1152,8 +1153,8 @@ LziDN7iDPziER7iEV2hAAAA7
         </valueCoding>
       </option>
       <option>
-        <extension url="http://acme.org/StructureDefinition/my-extension">
-          <valueUnsignedInt value="5"/>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+          <valueDecimal value="5"/>
         </extension>
         <valueCoding>
           <system value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/example-answerlist2"/>
@@ -1162,8 +1163,8 @@ LziDN7iDPziER7iEV2hAAAA7
         </valueCoding>
       </option>
       <option>
-        <extension url="http://acme.org/StructureDefinition/my-extension">
-          <valueUnsignedInt value="0"/>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+          <valueDecimal value="0"/>
         </extension>
         <valueCoding>
           <system value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/example-answerlist2"/>
@@ -1180,8 +1181,8 @@ LziDN7iDPziER7iEV2hAAAA7
       <required value="true"/>
       <repeats value="false"/>
       <option>
-        <extension url="http://acme.org/StructureDefinition/my-extension">
-          <valueUnsignedInt value="10"/>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+          <valueDecimal value="10"/>
         </extension>
         <valueCoding>
           <system value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/example-answerlist2"/>
@@ -1190,8 +1191,8 @@ LziDN7iDPziER7iEV2hAAAA7
         </valueCoding>
       </option>
       <option>
-        <extension url="http://acme.org/StructureDefinition/my-extension">
-          <valueUnsignedInt value="5"/>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+          <valueDecimal value="5"/>
         </extension>
         <valueCoding>
           <system value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/example-answerlist2"/>
@@ -1200,8 +1201,8 @@ LziDN7iDPziER7iEV2hAAAA7
         </valueCoding>
       </option>
       <option>
-        <extension url="http://acme.org/StructureDefinition/my-extension">
-          <valueUnsignedInt value="0"/>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+          <valueDecimal value="0"/>
         </extension>
         <valueCoding>
           <system value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/example-answerlist2"/>
@@ -1224,8 +1225,8 @@ LziDN7iDPziER7iEV2hAAAA7
       <required value="true"/>
       <repeats value="false"/>
       <option>
-        <extension url="http://acme.org/StructureDefinition/my-extension">
-          <valueUnsignedInt value="10"/>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+          <valueDecimal value="10"/>
         </extension>
         <valueCoding>
           <system value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/example-answerlist2"/>
@@ -1234,8 +1235,8 @@ LziDN7iDPziER7iEV2hAAAA7
         </valueCoding>
       </option>
       <option>
-        <extension url="http://acme.org/StructureDefinition/my-extension">
-          <valueUnsignedInt value="5"/>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+          <valueDecimal value="5"/>
         </extension>
         <valueCoding>
           <system value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/example-answerlist2"/>
@@ -1244,8 +1245,8 @@ LziDN7iDPziER7iEV2hAAAA7
         </valueCoding>
       </option>
       <option>
-        <extension url="http://acme.org/StructureDefinition/my-extension">
-          <valueUnsignedInt value="0"/>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+          <valueDecimal value="0"/>
         </extension>
         <valueCoding>
           <system value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/example-answerlist2"/>
@@ -1262,8 +1263,8 @@ LziDN7iDPziER7iEV2hAAAA7
       <required value="true"/>
       <repeats value="false"/>
       <option>
-        <extension url="http://acme.org/StructureDefinition/my-extension">
-          <valueUnsignedInt value="10"/>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+          <valueDecimal value="10"/>
         </extension>
         <valueCoding>
           <system value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/example-answerlist2"/>
@@ -1272,8 +1273,8 @@ LziDN7iDPziER7iEV2hAAAA7
         </valueCoding>
       </option>
       <option>
-        <extension url="http://acme.org/StructureDefinition/my-extension">
-          <valueUnsignedInt value="5"/>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+          <valueDecimal value="5"/>
         </extension>
         <valueCoding>
           <system value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/example-answerlist2"/>
@@ -1282,8 +1283,8 @@ LziDN7iDPziER7iEV2hAAAA7
         </valueCoding>
       </option>
       <option>
-        <extension url="http://acme.org/StructureDefinition/my-extension">
-          <valueUnsignedInt value="0"/>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+          <valueDecimal value="0"/>
         </extension>
         <valueCoding>
           <system value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/example-answerlist2"/>
@@ -1300,8 +1301,8 @@ LziDN7iDPziER7iEV2hAAAA7
       <required value="true"/>
       <repeats value="false"/>
       <option>
-        <extension url="http://acme.org/StructureDefinition/my-extension">
-          <valueUnsignedInt value="10"/>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+          <valueDecimal value="10"/>
         </extension>
         <valueCoding>
           <system value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/example-answerlist2"/>
@@ -1310,8 +1311,8 @@ LziDN7iDPziER7iEV2hAAAA7
         </valueCoding>
       </option>
       <option>
-        <extension url="http://acme.org/StructureDefinition/my-extension">
-          <valueUnsignedInt value="5"/>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+          <valueDecimal value="5"/>
         </extension>
         <valueCoding>
           <system value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/example-answerlist2"/>
@@ -1320,8 +1321,8 @@ LziDN7iDPziER7iEV2hAAAA7
         </valueCoding>
       </option>
       <option>
-        <extension url="http://acme.org/StructureDefinition/my-extension">
-          <valueUnsignedInt value="0"/>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+          <valueDecimal value="0"/>
         </extension>
         <valueCoding>
           <system value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/example-answerlist2"/>

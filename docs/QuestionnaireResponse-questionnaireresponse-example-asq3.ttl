@@ -1,0 +1,107 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut-questionnaire/QuestionnaireResponse/questionnaireresponse-example-asq3> a fhir:QuestionnaireResponse;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "questionnaireresponse-example-asq3"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: questionnaireresponse-example-asq3</p><p><b>identifier</b>: ASQ3-example</p><p><b>questionnaire</b>: <a href=\"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-asq3\">http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-asq3</a></p><p><b>status</b>: completed</p><p><b>subject</b>: subject</p><p><b>authored</b>: May 29, 2018</p><p><b>author</b>: subject</p><p><b>source</b>: subject</p><blockquote><p><b>item</b></p><p><b>linkId</b>: g1.4</p><p><b>text</b>: Does your child move around by walking, rather than crawling on her hands and knees</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>YES (Details: [not stated] code yes = 'yes', stated as 'YES')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: g1.5</p><p><b>text</b>: Does your child walk well and seldom fall?</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>YES (Details: [not stated] code yes = 'yes', stated as 'YES')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: g1.6</p><p><b>text</b>: Does your child climb on an object such as a chair to reach something he wants ( for example, to get a toy on the counter or to help you in the kitchen)?</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>YES (Details: [not stated] code yes = 'yes', stated as 'YES')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: g2.4</p><p><b>text</b>: Does your child help turn pages of a book? (You may lift a page for her to grasp.)</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>YES (Details: [not stated] code yes = 'yes', stated as 'YES')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: g2.5</p><p><b>text</b>: Does your child throw a small ball with a forward arm motion? (if he simply drops the ball, mark not yet for this item)</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>YES (Details: [not stated] code yes = 'yes', stated as 'YES')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: g2.6</p><p><b>text</b>: Does your child stack a small block or toy on top of another one? (You could also use spools of thread, small boxes, or toys that are about 1 inch in size.)</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>YES (Details: [not stated] code yes = 'yes', stated as 'YES')</td></tr></table></blockquote></div>"
+  ];
+  fhir:QuestionnaireResponse.identifier [
+     fhir:Identifier.value [ fhir:value "ASQ3-example" ]
+  ];
+  fhir:QuestionnaireResponse.questionnaire [
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-asq3>;
+     fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-asq3" ]
+  ];
+  fhir:QuestionnaireResponse.status [ fhir:value "completed"];
+  fhir:QuestionnaireResponse.subject [
+     fhir:Reference.display [ fhir:value "subject" ]
+  ];
+  fhir:QuestionnaireResponse.authored [ fhir:value "2018-05-29"^^xsd:date];
+  fhir:QuestionnaireResponse.author [
+     fhir:Reference.display [ fhir:value "subject" ]
+  ];
+  fhir:QuestionnaireResponse.source [
+     fhir:Reference.display [ fhir:value "subject" ]
+  ];
+  fhir:QuestionnaireResponse.item [
+     fhir:index 0;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1.4" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "Does your child move around by walking, rather than crawling on her hands and knees" ];
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.answer.valueCoding [
+         fhir:Coding.code [ fhir:value "yes" ];
+         fhir:Coding.display [ fhir:value "YES" ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1.5" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "Does your child walk well and seldom fall?" ];
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.answer.valueCoding [
+         fhir:Coding.code [ fhir:value "yes" ];
+         fhir:Coding.display [ fhir:value "YES" ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1.6" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "Does your child climb on an object such as a chair to reach something he wants ( for example, to get a toy on the counter or to help you in the kitchen)?" ];
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.answer.valueCoding [
+         fhir:Coding.code [ fhir:value "yes" ];
+         fhir:Coding.display [ fhir:value "YES" ]
+       ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "g2.4" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "Does your child help turn pages of a book? (You may lift a page for her to grasp.)" ];
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.answer.valueCoding [
+         fhir:Coding.code [ fhir:value "yes" ];
+         fhir:Coding.display [ fhir:value "YES" ]
+       ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "g2.5" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "Does your child throw a small ball with a forward arm motion? (if he simply drops the ball, mark not yet for this item)" ];
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.answer.valueCoding [
+         fhir:Coding.code [ fhir:value "yes" ];
+         fhir:Coding.display [ fhir:value "YES" ]
+       ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "g2.6" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "Does your child stack a small block or toy on top of another one? (You could also use spools of thread, small boxes, or toys that are about 1 inch in size.)" ];
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.answer.valueCoding [
+         fhir:Coding.code [ fhir:value "yes" ];
+         fhir:Coding.display [ fhir:value "YES" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut-questionnaire/QuestionnaireResponse/questionnaireresponse-example-asq3.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -665,6 +665,7 @@ u/ALw3AMy/AM03AN2/AN43AO67DnBgQAOw==
 "alt="Housing Questions"/><p>Billioux, Alexander, MD, Dphil; Verlander, Katherine, MPH; Anthony, Susan, DrPH; Alley, Dawn, PhD; National Academy of Sciences, “Standardized Screening for Health-Related Social Needs in Clinical Settings - The Accountable Health Communities Screening Tool,“ https://nam.edu/wp-content/uploads/2017/05/Standardized-Screening-for-Health-Related-Social-Needs-in-Clinical-Settings.pdf  
 </p></div>
   </text>
+  <url value="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-housing"/>
   <identifier>
     <system value="http://acme.org/q-identifiers"/>
     <value value="business-identifier4"/>

@@ -136,7 +136,6 @@
 <li>
   <a href="terminology.html">Terminology</a>
 </li>
-&lt;/li&gt;
 <li>
   <a href="searchparameters.html">Search Parameters</a>
 </li>
@@ -997,6 +996,8 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
 6Zt+6qP+6qt+67P+67t+GOzD/uzLfuZLOO3jfu2z/u3rfu/n/ucHBAA7
 &quot; alt=&quot;Drug Abuse Screening Test (DAST-10)&quot;/&gt;&lt;p&gt;copyright information here…todo….&lt;/p&gt;&lt;/div&gt;
   &lt;/text&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.url">url</a>
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.identifier">identifier</a>&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://acme.org/q-identifiers&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;business-identifier3&quot;/&gt;
@@ -1039,14 +1040,16 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;choice&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://acme.org/StructureDefinition/my-extension&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUnsignedInt</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">value</a>=&quot;1&quot;/&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Yes&quot;/&gt;
     &lt;/option&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://acme.org/StructureDefinition/my-extension&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUnsignedInt</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">value</a>=&quot;0&quot;/&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;No&quot;/&gt;
     &lt;/option&gt;
@@ -1058,14 +1061,16 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;choice&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://acme.org/StructureDefinition/my-extension&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUnsignedInt</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">value</a>=&quot;1&quot;/&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Yes&quot;/&gt;
     &lt;/option&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://acme.org/StructureDefinition/my-extension&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUnsignedInt</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">value</a>=&quot;0&quot;/&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;No&quot;/&gt;
     &lt;/option&gt;
@@ -1077,14 +1082,16 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;choice&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://acme.org/StructureDefinition/my-extension&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUnsignedInt</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">value</a>=&quot;0&quot;/&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Yes&quot;/&gt;
     &lt;/option&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://acme.org/StructureDefinition/my-extension&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUnsignedInt</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">value</a>=&quot;1&quot;/&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;No&quot;/&gt;
     &lt;/option&gt;
@@ -1097,14 +1104,16 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;choice&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://acme.org/StructureDefinition/my-extension&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUnsignedInt</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">value</a>=&quot;1&quot;/&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Yes&quot;/&gt;
     &lt;/option&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://acme.org/StructureDefinition/my-extension&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUnsignedInt</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">value</a>=&quot;0&quot;/&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;No&quot;/&gt;
     &lt;/option&gt;
@@ -1116,14 +1125,16 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;choice&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://acme.org/StructureDefinition/my-extension&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUnsignedInt</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">value</a>=&quot;1&quot;/&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Yes&quot;/&gt;
     &lt;/option&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://acme.org/StructureDefinition/my-extension&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUnsignedInt</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">value</a>=&quot;0&quot;/&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;No&quot;/&gt;
     &lt;/option&gt;
@@ -1136,14 +1147,16 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;choice&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://acme.org/StructureDefinition/my-extension&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUnsignedInt</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">value</a>=&quot;1&quot;/&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Yes&quot;/&gt;
     &lt;/option&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://acme.org/StructureDefinition/my-extension&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUnsignedInt</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">value</a>=&quot;0&quot;/&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;No&quot;/&gt;
     &lt;/option&gt;
@@ -1155,14 +1168,16 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;choice&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://acme.org/StructureDefinition/my-extension&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUnsignedInt</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">value</a>=&quot;1&quot;/&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Yes&quot;/&gt;
     &lt;/option&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://acme.org/StructureDefinition/my-extension&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUnsignedInt</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">value</a>=&quot;0&quot;/&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;No&quot;/&gt;
     &lt;/option&gt;
@@ -1175,14 +1190,16 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;choice&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://acme.org/StructureDefinition/my-extension&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUnsignedInt</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">value</a>=&quot;1&quot;/&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Yes&quot;/&gt;
     &lt;/option&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://acme.org/StructureDefinition/my-extension&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUnsignedInt</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">value</a>=&quot;0&quot;/&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;No&quot;/&gt;
     &lt;/option&gt;
@@ -1196,14 +1213,16 @@ taking drugs?&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;choice&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://acme.org/StructureDefinition/my-extension&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUnsignedInt</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">value</a>=&quot;1&quot;/&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Yes&quot;/&gt;
     &lt;/option&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://acme.org/StructureDefinition/my-extension&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUnsignedInt</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">value</a>=&quot;0&quot;/&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;No&quot;/&gt;
     &lt;/option&gt;
@@ -1216,14 +1235,16 @@ taking drugs?&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;choice&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://acme.org/StructureDefinition/my-extension&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUnsignedInt</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">value</a>=&quot;1&quot;/&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Yes&quot;/&gt;
     &lt;/option&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://acme.org/StructureDefinition/my-extension&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueUnsignedInt</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">value</a>=&quot;0&quot;/&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;No&quot;/&gt;
     &lt;/option&gt;
@@ -1278,7 +1299,7 @@ Formats: <a href="Questionnaire-questionnaire-example-dast.html">Narrative</a>, 
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, May 16, 2018 16:33-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Jun 1, 2018 19:12-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>
         </p>
    </div>  <!-- /inner-wrapper -->
