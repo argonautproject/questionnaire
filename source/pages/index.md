@@ -18,7 +18,7 @@ topofpage: true
 
 ##  Introduction
 
-The goal of the Argonaut Questionaire Project is to develop guidance to support interchange of simple forms based on [FHIR Version 3.0.1] and specifically the [Questionnaire] and [QuestionnaireResponse] resources.  This implementation guide provides implementers with FHIR RESTful APIs and guidance to create, use and share between organizations standard assessment forms and the assessment responses.
+The goal of the Argonaut Questionnaire Project is to develop guidance to support interchange of simple forms based on [FHIR Version 3.0.1] and specifically the [Questionnaire] and [QuestionnaireResponse] resources.  This implementation guide provides implementers with FHIR RESTful APIs and guidance to create, use and share between organizations standard assessment forms and the assessment responses.
 The requirements were developed and defined by the Argonaut Questionnaire project team and tested through pilot implementations, Argonaut virtual connectathons and HL7 sponsored Connectathons.
 
 This implementation Guide is organized as follows:

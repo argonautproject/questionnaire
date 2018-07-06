@@ -26,10 +26,11 @@ broken-links,warning
 gen-examples,FALSE
 do-transforms,FALSE
 canonicalBase,http://fhir.org/guides/argonaut-questionnaire
-dependencyList.location,http://build.fhir.org/ig/HL7/US-Core
 dependencyList.name,uscore
+dependencyList.location,http://hl7.org/fhir/us/core
 dependencyList.source,dependencies/uscore-vp
-dependencyList.version,dev
+dependencyList.version,1.1.0
 special-urls,
 tool,jekyll
 logging,progress
+npm-name,argonaut.questionnaire

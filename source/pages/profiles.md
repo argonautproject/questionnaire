@@ -16,11 +16,9 @@ The following Profiles have been defined for this implementation guide.
 These extensions have been defined for this implementation guide.
 
 
-
 {% include list-extensions.xhtml %}
 
 
-{%include link-list.md %}
-
+{% include link-list.md %}
 
 <br />

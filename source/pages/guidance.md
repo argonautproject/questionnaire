@@ -226,6 +226,7 @@ Searching for *all* QuestionnaireResponses with any status
 - based on who administered it:
 
     `GET [base]/QuestionnaireResponse/?source=Practitioner/[practitioner]`
+
     `GET [base]/QuestionnaireResponse/?author=Practitioner/[practitioner]`
 
 {% include examplebutton.html example="example-step6" %}

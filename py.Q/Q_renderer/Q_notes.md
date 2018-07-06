@@ -4,7 +4,7 @@ running in python aws 3.4 venv
 
 default url is: `http://127.0.0.1:5000/`
 
-aws deply is http://gettingstarte-cjfwz-env.us-west-2.elasticbeanstalk.com/
+aws deploy is http://gettingstarte-cjfwz-env.us-west-2.elasticbeanstalk.com/
 
 aws dashboard is https://us-west-2.console.aws.amazon.com/elasticbeanstalk/home?region=us-west-2#/application/overview?applicationName=Argo-Q-Test-Renderer
 
@@ -23,3 +23,5 @@ to do:
 deploy
 
 add ids (must be lower case an start with letter.) -done , prefixes, bootstrap for pretty,  add value sets in python and load to choice - easiest for rendering....
+
+add more types and more examples fix errors in the example.

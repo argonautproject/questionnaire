@@ -1,0 +1,166 @@
+{
+    "author": {
+        "reference": "Practitioner/prov-admin1"
+    },
+    "authored": "2018-07-05T15:57:30.387677",
+    "context": {
+        "reference": "Encounter/encounter1"
+    },
+    "id": "questionnaireresponse-example-dast",
+    "identifier": {
+        "value": "test"
+    },
+    "item": [
+        {
+            "item": [
+                {
+                    "answer": [
+                        {
+                            "valueCoding": {
+                                "code": "http://loinc.org",
+                                "display": "No",
+                                "system": "LA 32-8 "
+                            }
+                        }
+                    ],
+                    "linkId": "g1.q9",
+                    "text": "Have you ever experienced withdrawal symptoms (felt sick) when you stopped taking drugs?"
+                },
+                {
+                    "answer": [
+                        {
+                            "valueCoding": {
+                                "code": "http://loinc.org",
+                                "display": "No",
+                                "system": "LA 32-8 "
+                            }
+                        }
+                    ],
+                    "linkId": "g1.q7",
+                    "text": "Have you neglected your family because of your use of drugs?"
+                },
+                {
+                    "answer": [
+                        {
+                            "valueCoding": {
+                                "code": "http://loinc.org",
+                                "display": "No",
+                                "system": "LA 32-8 "
+                            }
+                        }
+                    ],
+                    "linkId": "g1.q10",
+                    "text": "Have you had medical problems as a result of your drug use (e.g. memory loss, hepatitis, convulsions, bleeding)?"
+                },
+                {
+                    "answer": [
+                        {
+                            "valueCoding": {
+                                "code": "http://loinc.org",
+                                "display": "No",
+                                "system": "LA 32-8 "
+                            }
+                        }
+                    ],
+                    "linkId": "g1.q5",
+                    "text": "Do you ever feel bad or guilty about your drug use?"
+                },
+                {
+                    "answer": [
+                        {
+                            "valueCoding": {
+                                "code": "http://loinc.org",
+                                "display": "Yes",
+                                "system": "LA33-6 "
+                            }
+                        }
+                    ],
+                    "linkId": "g1.q2",
+                    "text": "Do you abuse more than one drug at a time?"
+                },
+                {
+                    "answer": [
+                        {
+                            "valueCoding": {
+                                "code": "http://loinc.org",
+                                "display": "No",
+                                "system": "LA 32-8 "
+                            }
+                        }
+                    ],
+                    "linkId": "g1.q4",
+                    "text": "Have you ever had blackouts or flashbacks as a result of drug use?"
+                },
+                {
+                    "answer": [
+                        {
+                            "valueCoding": {
+                                "code": "http://loinc.org",
+                                "display": "Yes",
+                                "system": "LA33-6 "
+                            }
+                        }
+                    ],
+                    "linkId": "g1.q3",
+                    "text": "Are you unable to stop abusing drugs when you want to?"
+                },
+                {
+                    "answer": [
+                        {
+                            "valueCoding": {
+                                "code": "http://loinc.org",
+                                "display": "Yes",
+                                "system": "LA33-6 "
+                            }
+                        }
+                    ],
+                    "linkId": "g1.q1",
+                    "text": "Have you used drugs other than those required for medical reasons?"
+                },
+                {
+                    "answer": [
+                        {
+                            "valueCoding": {
+                                "code": "http://loinc.org",
+                                "display": "No",
+                                "system": "LA 32-8 "
+                            }
+                        }
+                    ],
+                    "linkId": "g1.q8",
+                    "text": "Have you engaged in illegal activities in order to obtain drugs?"
+                },
+                {
+                    "answer": [
+                        {
+                            "valueCoding": {
+                                "code": "http://loinc.org",
+                                "display": "Yes",
+                                "system": "LA33-6 "
+                            }
+                        }
+                    ],
+                    "linkId": "g1.q6",
+                    "text": "Does your spouse (or parents) ever complain about your involvement with drugs?"
+                }
+            ],
+            "linkId": "g1"
+        }
+    ],
+    "meta": {
+        "profile": [
+            "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr"
+        ]
+    },
+    "questionnaire": {
+        "reference": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast"
+    },
+    "resourceType": "QuestionnaireResponse",
+    "source": {
+        "reference": "Patient/subject1"
+    },
+    "status": "completed",
+    "subject": {
+        "reference": "Patient/subject1"
+    }
+}

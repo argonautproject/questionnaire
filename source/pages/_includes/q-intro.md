@@ -78,6 +78,7 @@ All ValueSets referenced by the `.options` element are [contained] resources in 
 ### Examples
 
 <!-- {% raw %} {% include list-simple-questionnaires.xhtml %}{% endraw %} -->
+- [Sampler](Questionnaire-questionnaire-example-sampler.html)
 - [PHQ-9](Questionnaire-questionnaire-example-phq9.html)
 - [AUDIT](Questionnaire-questionnaire-example-audit.html)
 - [DAST](Questionnaire-questionnaire-example-dast.html)
