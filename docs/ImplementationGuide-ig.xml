@@ -6,12 +6,23 @@
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Argonaut Questionnaire</h2><p>The official URL for this implementation guide is: </p><pre>http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig</pre></div>
   </text>
   <url value="http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig"/>
+  <version value="0.0.0"/>
   <name value="Argonaut Questionnaire"/>
   <status value="draft"/>
   <experimental value="true"/>
   <publisher value="Argonaut Project"/>
+  <fhirVersion value="3.0.1"/>
   <package id="p1">
     <name value="base"/>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Questionnaire-questionnaire-example-sampler.html"/>
+      </extension>
+      <example value="true"/>
+      <sourceReference>
+        <reference value="Questionnaire/questionnaire-example-sampler"/>
+      </sourceReference>
+    </resource>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="QuestionnaireResponse-questionnaireresponse-example-phq9.html"/>

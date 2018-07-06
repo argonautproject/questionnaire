@@ -315,12 +315,17 @@
  a fhir:QuestionnaireResponse;
   <a href="http://hl7.org/fhir/STU3/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
   <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;questionnaireresponse-example-housing&quot;];
+  <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr&quot;;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0     ]
+  ];
   <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.text">fhir:DomainResource.text</a> [
      <a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
-     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: questionnaireresponse-example-housing&lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: housing-example&lt;/p&gt;&lt;p&gt;&lt;b&gt;questionnaire&lt;/b&gt;: &lt;a href=\&quot;http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-housing\&quot;&gt;http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-housing&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: completed&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: subject&lt;/p&gt;&lt;p&gt;&lt;b&gt;authored&lt;/b&gt;: May 21, 2018&lt;/p&gt;&lt;p&gt;&lt;b&gt;author&lt;/b&gt;: subject&lt;/p&gt;&lt;p&gt;&lt;b&gt;source&lt;/b&gt;: subject&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;item&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;linkId&lt;/b&gt;: 2&lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: What is your housing situation today?&lt;/p&gt;&lt;h3&gt;Answers&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;I do not have housing (I am staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, abandoned building, bus or train station, or in a park)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;item&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;linkId&lt;/b&gt;: 3&lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: Think about the place you live. Do you have problems with any of the following? (check all that apply)&lt;/p&gt;&lt;h3&gt;Answers&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Bug infestation&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;/div&gt;&quot;
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n    &lt;h3&gt;Response Summary&lt;/h3&gt;\n    &lt;strong&gt;Questionnaire URL:&lt;/strong&gt; http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-housing&lt;br /&gt;\n    &lt;strong&gt;Date Completed:&lt;/strong&gt; 2018-07-05T19:02:25.752525&lt;br /&gt;\n    &lt;hr /&gt; &lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkId = g1.2) Think about the place you live. Do you have problems with any of the following? (check all that apply)&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; Bug infestation( code = )&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; Inadequate heat( code = )&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; Water leaks( code = )&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkId = g1.1) What is your housing situation today?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; I have housing( code = )&lt;br /&gt; &lt;br /&gt;&lt;br /&gt;\n    &lt;/div&gt;&quot;
   ];
   <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.identifier">fhir:QuestionnaireResponse.identifier</a> [
-     <a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">fhir:Identifier.value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;housing-example&quot; ]
+     <a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">fhir:Identifier.value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;test&quot; ]
   ];
   <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.questionnaire">fhir:QuestionnaireResponse.questionnaire</a> [
      <a href="http://hl7.org/fhir/STU3/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-housing&gt;;
@@ -328,29 +333,38 @@
   ];
   <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.status">fhir:QuestionnaireResponse.status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;completed&quot;];
   <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.subject">fhir:QuestionnaireResponse.subject</a> [
-     <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;subject&quot; ]
+     <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Patient/subject1&quot; ]
   ];
-  <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.authored">fhir:QuestionnaireResponse.authored</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:value</a> &quot;2018-05-21&quot;^^xsd:date];
+  <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.context">fhir:QuestionnaireResponse.context</a> [
+     <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Encounter/encounter1&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.authored">fhir:QuestionnaireResponse.authored</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:value</a> &quot;2018-07-05T19:02:25.752525&quot;^^xsd:dateTime];
   <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.author">fhir:QuestionnaireResponse.author</a> [
-     <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;subject&quot; ]
+     <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Practitioner/prov-admin1&quot; ]
   ];
   <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.source">fhir:QuestionnaireResponse.source</a> [
-     <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;subject&quot; ]
+     <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Patient/subject1&quot; ]
   ];
   <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item">fhir:QuestionnaireResponse.item</a> [
      <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">fhir:QuestionnaireResponse.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;2&quot; ];
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">fhir:QuestionnaireResponse.item.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;What is your housing situation today?&quot; ];
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">fhir:QuestionnaireResponse.item.answer</a> [
+     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">fhir:QuestionnaireResponse.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;g1&quot; ];
+     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.item">fhir:QuestionnaireResponse.item.item</a> [
        <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
-       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">fhir:QuestionnaireResponse.item.answer.valueString</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;I do not have housing (I am staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, abandoned building, bus or train station, or in a park)&quot; ]     ]
-  ], [
-     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">fhir:QuestionnaireResponse.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;3&quot; ];
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">fhir:QuestionnaireResponse.item.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Think about the place you live. Do you have problems with any of the following? (check all that apply)&quot; ];
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">fhir:QuestionnaireResponse.item.answer</a> [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
-       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">fhir:QuestionnaireResponse.item.answer.valueString</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Bug infestation&quot; ]     ]
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">fhir:QuestionnaireResponse.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;g1.2&quot; ];
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">fhir:QuestionnaireResponse.item.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Think about the place you live. Do you have problems with any of the following? (check all that apply)&quot; ];
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">fhir:QuestionnaireResponse.item.answer</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">fhir:QuestionnaireResponse.item.answer.valueString</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Bug infestation&quot; ]       ], [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">fhir:QuestionnaireResponse.item.answer.valueString</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Inadequate heat&quot; ]       ], [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
+         <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">fhir:QuestionnaireResponse.item.answer.valueString</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Water leaks&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">fhir:QuestionnaireResponse.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;g1.1&quot; ];
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">fhir:QuestionnaireResponse.item.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;What is your housing situation today?&quot; ];
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">fhir:QuestionnaireResponse.item.answer</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">fhir:QuestionnaireResponse.item.answer.valueString</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;I have housing&quot; ]       ]     ]
   ].
 
 # - ontology header ------------------------------------------------------------
@@ -409,7 +423,7 @@ Formats: <a href="QuestionnaireResponse-questionnaireresponse-example-housing.ht
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Jun 1, 2018 19:12-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Jul 5, 2018 19:06-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>
         </p>
    </div>  <!-- /inner-wrapper -->

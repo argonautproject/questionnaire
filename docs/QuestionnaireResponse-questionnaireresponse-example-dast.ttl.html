@@ -306,6 +306,7 @@
 
 <pre class="rdf">
 @prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix loinc: &lt;http://loinc.org/rdf#&gt; .
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
@@ -315,12 +316,17 @@
  a fhir:QuestionnaireResponse;
   <a href="http://hl7.org/fhir/STU3/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
   <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;questionnaireresponse-example-dast&quot;];
+  <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr&quot;;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0     ]
+  ];
   <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.text">fhir:DomainResource.text</a> [
      <a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
-     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: questionnaireresponse-example-dast&lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: DAST-example&lt;/p&gt;&lt;p&gt;&lt;b&gt;questionnaire&lt;/b&gt;: &lt;a href=\&quot;http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast\&quot;&gt;http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: completed&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: subject&lt;/p&gt;&lt;p&gt;&lt;b&gt;authored&lt;/b&gt;: May 29, 2018&lt;/p&gt;&lt;p&gt;&lt;b&gt;author&lt;/b&gt;: subject&lt;/p&gt;&lt;p&gt;&lt;b&gt;source&lt;/b&gt;: subject&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;item&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;linkId&lt;/b&gt;: d2&lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: Have you used drugs other than those required for medical reasons?&lt;/p&gt;&lt;h3&gt;Answers&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Yes&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;item&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;linkId&lt;/b&gt;: d3&lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: Do you abuse more than one drug at a time?&lt;/p&gt;&lt;h3&gt;Answers&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Yes&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;item&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;linkId&lt;/b&gt;: d4&lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: Are you unable to stop abusing drugs when you want to?&lt;/p&gt;&lt;h3&gt;Answers&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Yes&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;item&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;linkId&lt;/b&gt;: d5&lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: Have you ever had blackouts or flashbacks as a result of drug use?&lt;/p&gt;&lt;h3&gt;Answers&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Yes&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;item&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;linkId&lt;/b&gt;: d6&lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: Do you ever feel bad or guilty about your drug use?&lt;/p&gt;&lt;h3&gt;Answers&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Yes&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;item&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;linkId&lt;/b&gt;: d7&lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: Does your spouse (or parents) ever complain about your involvement with drugs?&lt;/p&gt;&lt;h3&gt;Answers&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Yes&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;item&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;linkId&lt;/b&gt;: d8&lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: Have you neglected your family because of your use of drugs?&lt;/p&gt;&lt;h3&gt;Answers&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Yes&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;item&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;linkId&lt;/b&gt;: d9&lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: Have you engaged in illegal activities in order to obtain drugs?&lt;/p&gt;&lt;h3&gt;Answers&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Yes&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;item&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;linkId&lt;/b&gt;: d10&lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: Have you ever experienced withdrawal symptoms (felt sick) when you stopped taking drugs?&lt;/p&gt;&lt;h3&gt;Answers&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Yes&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;item&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;linkId&lt;/b&gt;: d11&lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: Have you had medical problems as a result of your drug use (e.g. memory loss, hepatitis, convulsions, bleeding)?&lt;/p&gt;&lt;h3&gt;Answers&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Yes&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;/div&gt;&quot;
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n    &lt;h3&gt;Response Summary&lt;/h3&gt;\n    &lt;strong&gt;Questionnaire URL:&lt;/strong&gt; http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast&lt;br /&gt;\n    &lt;strong&gt;Date Completed:&lt;/strong&gt; 2018-07-05T18:19:36.571848&lt;br /&gt;\n    &lt;hr /&gt; &lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkId = g1.q1) Have you used drugs other than those required for medical reasons?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; Yes ( code = LA33-6 )&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkId = g1.q7) Have you neglected your family because of your use of drugs?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; No ( code = LA 32-8 )&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkId = g1.q2) Do you abuse more than one drug at a time?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; Yes ( code = LA33-6 )&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkId = g1.q6) Does your spouse (or parents) ever complain about your involvement with drugs?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; Yes ( code = LA33-6 )&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkId = g1.q8) Have you engaged in illegal activities in order to obtain drugs?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; No ( code = LA 32-8 )&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkId = g1.q4) Have you ever had blackouts or flashbacks as a result of drug use?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; No ( code = LA 32-8 )&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkId = g1.q10) Have you had medical problems as a result of your drug use (e.g. memory loss, hepatitis, convulsions, bleeding)?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; No ( code = LA 32-8 )&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkId = g1.q3) Are you unable to stop abusing drugs when you want to?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; Yes ( code = LA33-6 )&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkId = g1.q9) Have you ever experienced withdrawal symptoms (felt sick) when you stopped taking drugs?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; No ( code = LA 32-8 )&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkId = g1.q5) Do you ever feel bad or guilty about your drug use?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; No ( code = LA 32-8 )&lt;br /&gt;\n    &lt;/div&gt;&quot;
   ];
   <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.identifier">fhir:QuestionnaireResponse.identifier</a> [
-     <a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">fhir:Identifier.value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;DAST-example&quot; ]
+     <a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">fhir:Identifier.value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;test&quot; ]
   ];
   <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.questionnaire">fhir:QuestionnaireResponse.questionnaire</a> [
      <a href="http://hl7.org/fhir/STU3/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast&gt;;
@@ -328,85 +334,122 @@
   ];
   <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.status">fhir:QuestionnaireResponse.status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;completed&quot;];
   <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.subject">fhir:QuestionnaireResponse.subject</a> [
-     <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;subject&quot; ]
+     <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Patient/subject1&quot; ]
   ];
-  <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.authored">fhir:QuestionnaireResponse.authored</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:value</a> &quot;2018-05-29&quot;^^xsd:date];
+  <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.context">fhir:QuestionnaireResponse.context</a> [
+     <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Encounter/encounter1&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.authored">fhir:QuestionnaireResponse.authored</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:value</a> &quot;2018-07-05T18:19:36.571848&quot;^^xsd:dateTime];
   <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.author">fhir:QuestionnaireResponse.author</a> [
-     <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;subject&quot; ]
+     <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Practitioner/prov-admin1&quot; ]
   ];
   <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.source">fhir:QuestionnaireResponse.source</a> [
-     <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;subject&quot; ]
+     <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Patient/subject1&quot; ]
   ];
   <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item">fhir:QuestionnaireResponse.item</a> [
      <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">fhir:QuestionnaireResponse.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;d2&quot; ];
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">fhir:QuestionnaireResponse.item.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Have you used drugs other than those required for medical reasons?&quot; ];
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">fhir:QuestionnaireResponse.item.answer</a> [
+     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">fhir:QuestionnaireResponse.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;g1&quot; ];
+     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.item">fhir:QuestionnaireResponse.item.item</a> [
        <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
-       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">fhir:QuestionnaireResponse.item.answer.valueString</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Yes&quot; ]     ]
-  ], [
-     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">fhir:QuestionnaireResponse.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;d3&quot; ];
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">fhir:QuestionnaireResponse.item.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Do you abuse more than one drug at a time?&quot; ];
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">fhir:QuestionnaireResponse.item.answer</a> [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
-       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">fhir:QuestionnaireResponse.item.answer.valueString</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Yes&quot; ]     ]
-  ], [
-     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">fhir:QuestionnaireResponse.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;d4&quot; ];
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">fhir:QuestionnaireResponse.item.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Are you unable to stop abusing drugs when you want to?&quot; ];
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">fhir:QuestionnaireResponse.item.answer</a> [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
-       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">fhir:QuestionnaireResponse.item.answer.valueString</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Yes&quot; ]     ]
-  ], [
-     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 3;
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">fhir:QuestionnaireResponse.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;d5&quot; ];
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">fhir:QuestionnaireResponse.item.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Have you ever had blackouts or flashbacks as a result of drug use?&quot; ];
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">fhir:QuestionnaireResponse.item.answer</a> [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
-       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">fhir:QuestionnaireResponse.item.answer.valueString</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Yes&quot; ]     ]
-  ], [
-     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 4;
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">fhir:QuestionnaireResponse.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;d6&quot; ];
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">fhir:QuestionnaireResponse.item.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Do you ever feel bad or guilty about your drug use?&quot; ];
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">fhir:QuestionnaireResponse.item.answer</a> [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
-       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">fhir:QuestionnaireResponse.item.answer.valueString</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Yes&quot; ]     ]
-  ], [
-     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 5;
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">fhir:QuestionnaireResponse.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;d7&quot; ];
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">fhir:QuestionnaireResponse.item.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Does your spouse (or parents) ever complain about your involvement with drugs?&quot; ];
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">fhir:QuestionnaireResponse.item.answer</a> [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
-       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">fhir:QuestionnaireResponse.item.answer.valueString</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Yes&quot; ]     ]
-  ], [
-     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 6;
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">fhir:QuestionnaireResponse.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;d8&quot; ];
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">fhir:QuestionnaireResponse.item.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Have you neglected your family because of your use of drugs?&quot; ];
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">fhir:QuestionnaireResponse.item.answer</a> [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
-       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">fhir:QuestionnaireResponse.item.answer.valueString</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Yes&quot; ]     ]
-  ], [
-     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 7;
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">fhir:QuestionnaireResponse.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;d9&quot; ];
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">fhir:QuestionnaireResponse.item.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Have you engaged in illegal activities in order to obtain drugs?&quot; ];
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">fhir:QuestionnaireResponse.item.answer</a> [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
-       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">fhir:QuestionnaireResponse.item.answer.valueString</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Yes&quot; ]     ]
-  ], [
-     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 8;
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">fhir:QuestionnaireResponse.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;d10&quot; ];
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">fhir:QuestionnaireResponse.item.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Have you ever experienced withdrawal symptoms (felt sick) when you stopped taking drugs?&quot; ];
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">fhir:QuestionnaireResponse.item.answer</a> [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
-       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">fhir:QuestionnaireResponse.item.answer.valueString</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Yes&quot; ]     ]
-  ], [
-     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 9;
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">fhir:QuestionnaireResponse.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;d11&quot; ];
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">fhir:QuestionnaireResponse.item.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Have you had medical problems as a result of your drug use (e.g. memory loss, hepatitis, convulsions, bleeding)?&quot; ];
-     <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">fhir:QuestionnaireResponse.item.answer</a> [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
-       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">fhir:QuestionnaireResponse.item.answer.valueString</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Yes&quot; ]     ]
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">fhir:QuestionnaireResponse.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;g1.q1&quot; ];
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">fhir:QuestionnaireResponse.item.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Have you used drugs other than those required for medical reasons?&quot; ];
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">fhir:QuestionnaireResponse.item.answer</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">fhir:QuestionnaireResponse.item.answer.valueCoding</a> [
+           a loinc:LA33-6 ;
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;LA33-6 &quot; ];
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Yes&quot; ]         ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">fhir:QuestionnaireResponse.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;g1.q7&quot; ];
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">fhir:QuestionnaireResponse.item.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Have you neglected your family because of your use of drugs?&quot; ];
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">fhir:QuestionnaireResponse.item.answer</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">fhir:QuestionnaireResponse.item.answer.valueCoding</a> [
+           a loinc:LA 32-8 ;
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;LA 32-8 &quot; ];
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;No&quot; ]         ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">fhir:QuestionnaireResponse.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;g1.q2&quot; ];
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">fhir:QuestionnaireResponse.item.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Do you abuse more than one drug at a time?&quot; ];
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">fhir:QuestionnaireResponse.item.answer</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">fhir:QuestionnaireResponse.item.answer.valueCoding</a> [
+           a loinc:LA33-6 ;
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;LA33-6 &quot; ];
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Yes&quot; ]         ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 3;
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">fhir:QuestionnaireResponse.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;g1.q6&quot; ];
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">fhir:QuestionnaireResponse.item.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Does your spouse (or parents) ever complain about your involvement with drugs?&quot; ];
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">fhir:QuestionnaireResponse.item.answer</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">fhir:QuestionnaireResponse.item.answer.valueCoding</a> [
+           a loinc:LA33-6 ;
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;LA33-6 &quot; ];
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Yes&quot; ]         ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 4;
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">fhir:QuestionnaireResponse.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;g1.q8&quot; ];
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">fhir:QuestionnaireResponse.item.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Have you engaged in illegal activities in order to obtain drugs?&quot; ];
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">fhir:QuestionnaireResponse.item.answer</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">fhir:QuestionnaireResponse.item.answer.valueCoding</a> [
+           a loinc:LA 32-8 ;
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;LA 32-8 &quot; ];
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;No&quot; ]         ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 5;
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">fhir:QuestionnaireResponse.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;g1.q4&quot; ];
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">fhir:QuestionnaireResponse.item.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Have you ever had blackouts or flashbacks as a result of drug use?&quot; ];
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">fhir:QuestionnaireResponse.item.answer</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">fhir:QuestionnaireResponse.item.answer.valueCoding</a> [
+           a loinc:LA 32-8 ;
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;LA 32-8 &quot; ];
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;No&quot; ]         ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 6;
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">fhir:QuestionnaireResponse.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;g1.q10&quot; ];
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">fhir:QuestionnaireResponse.item.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Have you had medical problems as a result of your drug use (e.g. memory loss, hepatitis, convulsions, bleeding)?&quot; ];
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">fhir:QuestionnaireResponse.item.answer</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">fhir:QuestionnaireResponse.item.answer.valueCoding</a> [
+           a loinc:LA 32-8 ;
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;LA 32-8 &quot; ];
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;No&quot; ]         ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 7;
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">fhir:QuestionnaireResponse.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;g1.q3&quot; ];
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">fhir:QuestionnaireResponse.item.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Are you unable to stop abusing drugs when you want to?&quot; ];
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">fhir:QuestionnaireResponse.item.answer</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">fhir:QuestionnaireResponse.item.answer.valueCoding</a> [
+           a loinc:LA33-6 ;
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;LA33-6 &quot; ];
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Yes&quot; ]         ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 8;
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">fhir:QuestionnaireResponse.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;g1.q9&quot; ];
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">fhir:QuestionnaireResponse.item.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Have you ever experienced withdrawal symptoms (felt sick) when you stopped taking drugs?&quot; ];
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">fhir:QuestionnaireResponse.item.answer</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">fhir:QuestionnaireResponse.item.answer.valueCoding</a> [
+           a loinc:LA 32-8 ;
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;LA 32-8 &quot; ];
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;No&quot; ]         ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 9;
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">fhir:QuestionnaireResponse.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;g1.q5&quot; ];
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">fhir:QuestionnaireResponse.item.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Do you ever feel bad or guilty about your drug use?&quot; ];
+       <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">fhir:QuestionnaireResponse.item.answer</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">fhir:QuestionnaireResponse.item.answer.valueCoding</a> [
+           a loinc:LA 32-8 ;
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;LA 32-8 &quot; ];
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">fhir:Coding.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;No&quot; ]         ]       ]     ]
   ].
 
 # - ontology header ------------------------------------------------------------
@@ -465,7 +508,7 @@ Formats: <a href="QuestionnaireResponse-questionnaireresponse-example-dast.html"
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Jun 1, 2018 19:12-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Jul 5, 2018 19:06-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>
         </p>
    </div>  <!-- /inner-wrapper -->

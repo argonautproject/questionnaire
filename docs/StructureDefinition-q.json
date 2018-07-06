@@ -230,10 +230,7 @@
             }
           ],
           "strength": "extensible",
-          "description": "A human language.",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/languages"
-          }
+          "description": "A human language."
         }
       },
       {
@@ -593,10 +590,7 @@
             }
           ],
           "strength": "required",
-          "description": "The lifecycle status of a Value Set or Concept Map.",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/publication-status"
-          }
+          "description": "The lifecycle status of a Value Set or Concept Map."
         },
         "mapping": [
           {
@@ -929,10 +923,7 @@
             }
           ],
           "strength": "extensible",
-          "description": "Countries and regions within which this artifact is targeted for use",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/jurisdiction"
-          }
+          "description": "Countries and regions within which this artifact is targeted for use"
         },
         "mapping": [
           {
@@ -1027,10 +1018,7 @@
             }
           ],
           "strength": "example",
-          "description": "Codes for questionnaires, groups and individual questions",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/questionnaire-questions"
-          }
+          "description": "Codes for questionnaires, groups and individual questions"
         },
         "mapping": [
           {
@@ -1070,10 +1058,7 @@
             }
           ],
           "strength": "required",
-          "description": "One of the resource types defined as part of FHIR.",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/resource-types"
-          }
+          "description": "One of the resource types defined as part of FHIR."
         },
         "mapping": [
           {
@@ -1396,10 +1381,7 @@
             }
           ],
           "strength": "example",
-          "description": "Codes for questionnaires, groups and individual questions",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/questionnaire-questions"
-          }
+          "description": "Codes for questionnaires, groups and individual questions"
         },
         "mapping": [
           {
@@ -1516,10 +1498,7 @@
             }
           ],
           "strength": "required",
-          "description": "Distinguishes groups from questions and display text and indicates data type for questions",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/item-type"
-          }
+          "description": "Distinguishes groups from questions and display text and indicates data type for questions"
         },
         "mapping": [
           {
@@ -1883,10 +1862,7 @@
             }
           ],
           "strength": "example",
-          "description": "Allowed values to answer questions.",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/questionnaire-answers"
-          }
+          "description": "Allowed values to answer questions."
         },
         "mapping": [
           {
@@ -2278,10 +2254,7 @@
             }
           ],
           "strength": "example",
-          "description": "Allowed values to answer questions.",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/questionnaire-answers"
-          }
+          "description": "Allowed values to answer questions."
         },
         "mapping": [
           {
@@ -2362,10 +2335,7 @@
             }
           ],
           "strength": "example",
-          "description": "Allowed values to answer questions.",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/questionnaire-answers"
-          }
+          "description": "Allowed values to answer questions."
         },
         "mapping": [
           {

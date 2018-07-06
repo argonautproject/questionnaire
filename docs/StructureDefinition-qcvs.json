@@ -207,10 +207,7 @@
             }
           ],
           "strength": "extensible",
-          "description": "A human language.",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/languages"
-          }
+          "description": "A human language."
         }
       },
       {
@@ -502,10 +499,7 @@
             }
           ],
           "strength": "required",
-          "description": "The lifecycle status of a Value Set or Concept Map.",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/publication-status"
-          }
+          "description": "The lifecycle status of a Value Set or Concept Map."
         },
         "mapping": [
           {
@@ -703,10 +697,7 @@
             }
           ],
           "strength": "extensible",
-          "description": "Countries and regions within which this artifact is targeted for use",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/jurisdiction"
-          }
+          "description": "Countries and regions within which this artifact is targeted for use"
         }
       },
       {
@@ -1525,10 +1516,7 @@
             }
           ],
           "strength": "extensible",
-          "description": "A human language.",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/languages"
-          }
+          "description": "A human language."
         }
       },
       {
@@ -1557,10 +1545,7 @@
             }
           ],
           "strength": "extensible",
-          "description": "Details of how a designation would be used.",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/designation-use"
-          }
+          "description": "Details of how a designation would be used."
         }
       },
       {
@@ -1760,10 +1745,7 @@
             }
           ],
           "strength": "required",
-          "description": "The kind of operation to perform as a part of a property based filter.",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/filter-operator"
-          }
+          "description": "The kind of operation to perform as a part of a property based filter."
         },
         "mapping": [
           {

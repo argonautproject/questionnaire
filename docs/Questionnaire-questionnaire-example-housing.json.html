@@ -971,7 +971,7 @@ BUTQgLC619u03rAmyDb0Do6ork7AX2x6bvPikY/GrZ5QHAO2h6XSqdHGxxLG0KLuRJ+eVbvBlQZK
 BO2OhPYqakq9oAyVA+bQ24NuqibNKT3RBQeFJRNyr/Pib/7q7/7yb//67/9cAnAAC/AAE3ABG/AB
 I3ACK/ACM3ADO/ADQ3AES/AEU3AFW/AFY3AGa/AGc3AHe/AHg3AIi/AIk3AJm/AJo3AKq/AKs3AL
 u/ALw3AMy/AM03AN2/AN43AO67DnBgQAOw==
-&quot;alt=&quot;Housing Questions&quot;/&gt;&lt;p&gt;Billioux, Alexander, MD, Dphil; Verlander, Katherine, MPH; Anthony, Susan, DrPH; Alley, Dawn, PhD; National Academy of Sciences, “Standardized Screening for Health-Related Social Needs in Clinical Settings - The Accountable Health Communities Screening Tool,“ https://nam.edu/wp-content/uploads/2017/05/Standardized-Screening-for-Health-Related-Social-Needs-in-Clinical-Settings.pdf  
+&quot; alt=&quot;Housing Questions&quot;/&gt;&lt;p&gt;Billioux, Alexander, MD, Dphil; Verlander, Katherine, MPH; Anthony, Susan, DrPH; Alley, Dawn, PhD; National Academy of Sciences, “Standardized Screening for Health-Related Social Needs in Clinical Settings - The Accountable Health Communities Screening Tool,“ https://nam.edu/wp-content/uploads/2017/05/Standardized-Screening-for-Health-Related-Social-Needs-in-Clinical-Settings.pdf  
 &lt;/p&gt;&lt;/div&gt;"
   },
   "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-housing",
@@ -981,9 +981,10 @@ u/ALw3AMy/AM03AN2/AN43AO67DnBgQAOw==
       "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "business-identifier4"
     }
   ],
+  "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.version">version</a>" : "0.0.0",
   "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.title">title</a>" : "Housing Questions",
   "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.status">status</a>" : "draft",
-  "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.date">date</a>" : "2018-04-24",
+  "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.date">date</a>" : "2018-06-28T00:00:00-07:00",
   "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.publisher">publisher</a>" : "ArgonautProject",
   "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.jurisdiction">jurisdiction</a>" : [
     {
@@ -1020,62 +1021,80 @@ u/ALw3AMy/AM03AN2/AN43AO67DnBgQAOw==
   ],
   "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item">item</a>" : [
     {
-      "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "h1",
-      "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a>" : "Accountable Health Communities Core Health-Related Social Needs Screening Questions 
+      "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">extension</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueBoolean</a>" : true
+        }
+      ],
+      "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "g1",
+      "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a>" : "group",
+      "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.item">item</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "g1.d",
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a>" : "Accountable Health Communities Core Health-Related Social Needs Screening Questions 
 Underlined answer options indicate positive responses for the associated health-related social need. 
 A value greater than 10 when the numerical values for answers to questions 7-10 are summed indicates a positive screen for interpersonal safety.",
-      "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a>" : "display"
-    },
-    {
-      "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "h2",
-      "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.prefix">prefix</a>" : "1",
-      "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a>" : "What is your housing situation today?",
-      "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a>" : "choice",
-      "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a>" : true,
-      "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">repeats</a>" : false,
-      "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>" : [
-        {
-          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a>" : "I do not have housing (I am staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, abandoned building, bus or train station, or in a park)"
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a>" : "display"
         },
         {
-          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a>" : "I have housing today, but I am worried about losing housing in the future"
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "g1.1",
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.prefix">prefix</a>" : "1",
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a>" : "What is your housing situation today?",
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a>" : "choice",
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a>" : true,
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">repeats</a>" : false,
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a>" : "I do not have housing (I am staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, abandoned building, bus or train station, or in a park)"
+            },
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a>" : "I have housing today, but I am worried about losing housing in the future"
+            },
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a>" : "I have housing"
+            }
+          ]
         },
         {
-          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a>" : "I have housing"
-        }
-      ]
-    },
-    {
-      "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "h3",
-      "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.prefix">prefix</a>" : "2",
-      "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a>" : "Think about the place you live. Do you have problems with any of the following? (check all that apply)",
-      "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a>" : "choice",
-      "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a>" : true,
-      "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">repeats</a>" : true,
-      "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>" : [
-        {
-          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a>" : "Bug infestation"
-        },
-        {
-          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a>" : "Mold"
-        },
-        {
-          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a>" : "Lead paint or pipes"
-        },
-        {
-          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a>" : "Inadequate heat"
-        },
-        {
-          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a>" : "Oven or stove not working"
-        },
-        {
-          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a>" : "No or not working smoke detectors"
-        },
-        {
-          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a>" : "Water leaks"
-        },
-        {
-          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a>" : "None of the above"
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "g1.2",
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.prefix">prefix</a>" : "2",
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a>" : "Think about the place you live. Do you have problems with any of the following? (check all that apply)",
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a>" : "choice",
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a>" : true,
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">repeats</a>" : true,
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a>" : "Bug infestation"
+            },
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a>" : "Mold"
+            },
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a>" : "Lead paint or pipes"
+            },
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a>" : "Inadequate heat"
+            },
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a>" : "Oven or stove not working"
+            },
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a>" : "No or not working smoke detectors"
+            },
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a>" : "Water leaks"
+            },
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueBoolean</a>" : true
+                }
+              ],
+              "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a>" : "None of the above"
+            }
+          ]
         }
       ]
     }
@@ -1130,7 +1149,7 @@ Formats: <a href="Questionnaire-questionnaire-example-housing.html">Narrative</a
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Jun 1, 2018 19:12-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Jul 5, 2018 19:06-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>
         </p>
    </div>  <!-- /inner-wrapper -->

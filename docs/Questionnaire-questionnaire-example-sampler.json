@@ -1,0 +1,383 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "questionnaire-example-sampler",
+  "meta": {
+    "profile": [
+      "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"
+    ]
+  },
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Argonaut Questionnaire Sampler</h3><img src=\"data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAJsAAABBCAYAAADGxNbFAAAABGdBTUEAALGPC/xhBQAAACBjSFJN\nAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAABJ0AAASdAHeZh94\nAAABymlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpu\nczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS40LjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9\nImh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRm\nOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp4bXA9Imh0dHA6Ly9u\ncy5hZG9iZS5jb20veGFwLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5h\nZG9iZS5jb20vdGlmZi8xLjAvIj4KICAgICAgICAgPHhtcDpDcmVhdG9yVG9vbD5QYWludC5ORVQg\ndjMuMDg8L3htcDpDcmVhdG9yVG9vbD4KICAgICAgICAgPHRpZmY6T3JpZW50YXRpb24+MTwvdGlm\nZjpPcmllbnRhdGlvbj4KICAgICAgPC9yZGY6RGVzY3JpcHRpb24+CiAgIDwvcmRmOlJERj4KPC94\nOnhtcG1ldGE+CnT3qYAAADI5SURBVHgB7X0JeFTV2f97l9kn+waBQAJhCQFZgqCAGBSLVZG2Ai51\nl4rW/lvp5/ZZLdFa/bRfF2urlWqx1lIFtVVbF1SIKItABJF9SyAJIftkJrPPvff/e8/MjZNAkPaj\nT+UxByf33rO+5z3vfs69Ep2CZBBJ3I33N3/MCi//2xi+NyoqZL72pT4M/FswYBiG5LnljvOOfu1r\nrn/LAH2dntYYOGXSx7j5ZoskSYZ26PBFjtETf8ZYgXRTT2vs9AF/SjFwyoitKgGWOnyolzq8txpv\nr8uUKipifer0lK7Xad3ZKSM2KisTiLCMKQmldvqp+cKLS0XGjh3CnjutsdQH/CnBwKkjNhOcSNSg\ncJikkSPvFlkrVuhmUd/1q42BU0dsVXFFGtm6XdGONpPqsFzcvvC26RBrhjFvnvLVRnPf7BkDp47Y\n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\n2gAAAABJRU5ErkJggg==\n\" alt=\"Argonaut Questionnaire Sampler\"/><p>You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.</p></div>"
+  },
+  "url": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-sampler",
+  "identifier": [
+    {
+      "system": "http://acme.org/q-identifiers",
+      "value": "questionnaire-example-sampler"
+    }
+  ],
+  "version": "0.0.0",
+  "title": "Argonaut Questionnaire Sampler",
+  "status": "draft",
+  "date": "2018-07-05T00:00:00-07:00",
+  "publisher": "ArgonautProject",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US",
+          "display": "UnitedStatesofAmerica"
+        }
+      ]
+    }
+  ],
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://argonautwiki.hl7.org"
+        }
+      ]
+    }
+  ],
+  "copyright": "You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.",
+  "code": [
+    {
+      "system": "http://acme.org",
+      "code": "foo",
+      "display": "Argonaut Questionnaire Sampler"
+    }
+  ],
+  "subjectType": [
+    "Patient"
+  ],
+  "item": [
+    {
+      "linkId": "g1",
+      "text": "Header Text",
+      "type": "group",
+      "required": true,
+      "item": [
+        {
+          "linkId": "g1.d",
+          "text": "The Argonaut Questionnaire Sampler is designed to show all the question types that can be used in the Argonaut Questionnaire Project:\n\n1 boolean\n2 decimal\n3 integer\n4 dateDate\n5 dateTime\n6 timeTime\n7 string\n8 textText\n9 urlUrl\n10 choice\n11 open-choice\n12 quantity\n",
+          "type": "display",
+          "required": true
+        }
+      ]
+    },
+    {
+      "linkId": "g2",
+      "prefix": "1. ",
+      "text": "boolean",
+      "type": "group",
+      "required": true,
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+              "valueDecimal": 17
+            }
+          ],
+          "linkId": "g2.q1",
+          "text": "Check the box if the following statement is true.  The average air speed velocity of a laden European swallow is greater than a laden African swallow.",
+          "type": "boolean",
+          "required": true,
+          "repeats": false
+        }
+      ]
+    },
+    {
+      "linkId": "g3",
+      "prefix": "2. ",
+      "text": "decimal",
+      "type": "group",
+      "required": true,
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+              "valueDecimal": 7
+            }
+          ],
+          "linkId": "g3.q1",
+          "text": "What is the average air speed velocity of a laden swallow in m/sec?",
+          "type": "decimal",
+          "required": true,
+          "repeats": false
+        }
+      ]
+    },
+    {
+      "linkId": "g4",
+      "prefix": "3. ",
+      "text": "integer",
+      "type": "group",
+      "required": true,
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+              "valueDecimal": 3
+            }
+          ],
+          "linkId": "g4.q1",
+          "text": "What is the average air speed velocity of a laden swallow in m/sec?",
+          "type": "integer",
+          "required": true,
+          "repeats": false
+        }
+      ]
+    },
+    {
+      "linkId": "g5",
+      "prefix": "4. ",
+      "text": "date",
+      "type": "group",
+      "required": true,
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+              "valueDecimal": 27
+            }
+          ],
+          "linkId": "g5.q1",
+          "text": "If a laden swallow left Camelot on 7/5/2018 what day would it reach the Castle Anthrax?",
+          "type": "date",
+          "required": true,
+          "repeats": false
+        }
+      ]
+    },
+    {
+      "linkId": "g6",
+      "prefix": "5. ",
+      "text": "dateTime",
+      "type": "group",
+      "required": true,
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+              "valueDecimal": 3
+            }
+          ],
+          "linkId": "g6.q1",
+          "text": "If a laden swallow left Camelot on 7/5/2018 and noon when would it reach Castle Anthrax?",
+          "type": "date",
+          "required": true,
+          "repeats": false
+        }
+      ]
+    },
+    {
+      "linkId": "g7",
+      "prefix": "6. ",
+      "text": "time",
+      "type": "group",
+      "required": true,
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+              "valueDecimal": 8
+            }
+          ],
+          "linkId": "g7.q1",
+          "text": "If a laden swallow left Camelot at noon what time would it reach Castle Anthrax?",
+          "type": "time",
+          "required": true,
+          "repeats": false
+        }
+      ]
+    },
+    {
+      "linkId": "g8",
+      "prefix": "7. ",
+      "text": "string",
+      "type": "group",
+      "required": true,
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+              "valueDecimal": 1
+            }
+          ],
+          "linkId": "g8.q1",
+          "text": "Describe how to estimate the average air speed velocity of a laden swallow in 20 words or less.",
+          "type": "string",
+          "required": true,
+          "repeats": false
+        }
+      ]
+    },
+    {
+      "linkId": "g9",
+      "prefix": "8. ",
+      "text": "text",
+      "type": "group",
+      "required": true,
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+              "valueDecimal": 0
+            }
+          ],
+          "linkId": "g9.q1",
+          "text": "Describe in detal how to estimate the average air speed velocity of a laden swallow. Please cite your sources and give examples.",
+          "type": "text",
+          "required": true,
+          "repeats": false
+        }
+      ]
+    },
+    {
+      "linkId": "g10",
+      "prefix": "9. ",
+      "text": "url",
+      "type": "group",
+      "required": true,
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+              "valueDecimal": 11
+            }
+          ],
+          "linkId": "g10.q1",
+          "text": "Provide a link to a video clip where the average air speed velocity of a laden swallow question is discussed.",
+          "type": "url",
+          "required": true,
+          "repeats": false
+        }
+      ]
+    },
+    {
+      "linkId": "g11",
+      "prefix": "10. ",
+      "text": "choice",
+      "type": "group",
+      "required": true,
+      "item": [
+        {
+          "linkId": "g11.q1",
+          "text": "What is the average air speed velocity of a laden swallow in m/sec?",
+          "type": "choice",
+          "required": true,
+          "repeats": false,
+          "option": [
+            {
+              "extension": [
+                {
+                  "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                  "valueDecimal": 0
+                }
+              ],
+              "valueString": "10"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                  "valueDecimal": 43
+                }
+              ],
+              "valueString": "11"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                  "valueDecimal": 0
+                }
+              ],
+              "valueString": "12"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "g12",
+      "prefix": "11. ",
+      "text": "open-choice",
+      "type": "group",
+      "required": true,
+      "item": [
+        {
+          "linkId": "g12.q1",
+          "text": "What is the average air speed velocity of a laden swallow in m/sec?",
+          "type": "open-choice",
+          "required": true,
+          "repeats": false,
+          "option": [
+            {
+              "extension": [
+                {
+                  "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                  "valueDecimal": 0
+                }
+              ],
+              "valueString": "10"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                  "valueDecimal": 43
+                }
+              ],
+              "valueString": "11"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                  "valueDecimal": 0
+                }
+              ],
+              "valueString": "12"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "g13",
+      "prefix": "12. ",
+      "text": "quantity",
+      "type": "group",
+      "required": true,
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+              "valueDecimal": 3
+            }
+          ],
+          "linkId": "g13.q1",
+          "text": "What is the average air speed velocity of a laden swallow - please provide the units?",
+          "type": "quantity",
+          "required": true,
+          "repeats": false
+        }
+      ]
+    }
+  ]
+}

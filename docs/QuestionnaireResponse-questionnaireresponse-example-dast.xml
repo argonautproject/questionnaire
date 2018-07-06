@@ -2,94 +2,148 @@
 
 <QuestionnaireResponse xmlns="http://hl7.org/fhir">
   <id value="questionnaireresponse-example-dast"/>
+  <meta>
+    <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr"/>
+  </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: questionnaireresponse-example-dast</p><p><b>identifier</b>: DAST-example</p><p><b>questionnaire</b>: <a href="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast">http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast</a></p><p><b>status</b>: completed</p><p><b>subject</b>: subject</p><p><b>authored</b>: May 29, 2018</p><p><b>author</b>: subject</p><p><b>source</b>: subject</p><blockquote><p><b>item</b></p><p><b>linkId</b>: d2</p><p><b>text</b>: Have you used drugs other than those required for medical reasons?</p><h3>Answers</h3><table class="grid"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Yes</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: d3</p><p><b>text</b>: Do you abuse more than one drug at a time?</p><h3>Answers</h3><table class="grid"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Yes</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: d4</p><p><b>text</b>: Are you unable to stop abusing drugs when you want to?</p><h3>Answers</h3><table class="grid"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Yes</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: d5</p><p><b>text</b>: Have you ever had blackouts or flashbacks as a result of drug use?</p><h3>Answers</h3><table class="grid"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Yes</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: d6</p><p><b>text</b>: Do you ever feel bad or guilty about your drug use?</p><h3>Answers</h3><table class="grid"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Yes</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: d7</p><p><b>text</b>: Does your spouse (or parents) ever complain about your involvement with drugs?</p><h3>Answers</h3><table class="grid"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Yes</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: d8</p><p><b>text</b>: Have you neglected your family because of your use of drugs?</p><h3>Answers</h3><table class="grid"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Yes</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: d9</p><p><b>text</b>: Have you engaged in illegal activities in order to obtain drugs?</p><h3>Answers</h3><table class="grid"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Yes</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: d10</p><p><b>text</b>: Have you ever experienced withdrawal symptoms (felt sick) when you stopped taking drugs?</p><h3>Answers</h3><table class="grid"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Yes</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: d11</p><p><b>text</b>: Have you had medical problems as a result of your drug use (e.g. memory loss, hepatitis, convulsions, bleeding)?</p><h3>Answers</h3><table class="grid"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Yes</td></tr></table></blockquote></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+    <h3>Response Summary</h3>
+    <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast<br />
+    <strong>Date Completed:</strong> 2018-07-05T18:19:36.571848<br />
+    <hr /> <br /> <strong>Question:</strong> (linkId = g1.q1) Have you used drugs other than those required for medical reasons?<br /><strong>Response:</strong> Yes ( code = LA33-6 )<br /><br /> <strong>Question:</strong> (linkId = g1.q7) Have you neglected your family because of your use of drugs?<br /><strong>Response:</strong> No ( code = LA 32-8 )<br /><br /> <strong>Question:</strong> (linkId = g1.q2) Do you abuse more than one drug at a time?<br /><strong>Response:</strong> Yes ( code = LA33-6 )<br /><br /> <strong>Question:</strong> (linkId = g1.q6) Does your spouse (or parents) ever complain about your involvement with drugs?<br /><strong>Response:</strong> Yes ( code = LA33-6 )<br /><br /> <strong>Question:</strong> (linkId = g1.q8) Have you engaged in illegal activities in order to obtain drugs?<br /><strong>Response:</strong> No ( code = LA 32-8 )<br /><br /> <strong>Question:</strong> (linkId = g1.q4) Have you ever had blackouts or flashbacks as a result of drug use?<br /><strong>Response:</strong> No ( code = LA 32-8 )<br /><br /> <strong>Question:</strong> (linkId = g1.q10) Have you had medical problems as a result of your drug use (e.g. memory loss, hepatitis, convulsions, bleeding)?<br /><strong>Response:</strong> No ( code = LA 32-8 )<br /><br /> <strong>Question:</strong> (linkId = g1.q3) Are you unable to stop abusing drugs when you want to?<br /><strong>Response:</strong> Yes ( code = LA33-6 )<br /><br /> <strong>Question:</strong> (linkId = g1.q9) Have you ever experienced withdrawal symptoms (felt sick) when you stopped taking drugs?<br /><strong>Response:</strong> No ( code = LA 32-8 )<br /><br /> <strong>Question:</strong> (linkId = g1.q5) Do you ever feel bad or guilty about your drug use?<br /><strong>Response:</strong> No ( code = LA 32-8 )<br />
+    </div>
   </text>
   <identifier>
-    <value value="DAST-example"/>
+    <value value="test"/>
   </identifier>
   <questionnaire>
     <reference value="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast"/>
   </questionnaire>
   <status value="completed"/>
   <subject>
-    <display value="subject"/>
+    <reference value="Patient/subject1"/>
   </subject>
-  <authored value="2018-05-29"/>
+  <context>
+    <reference value="Encounter/encounter1"/>
+  </context>
+  <authored value="2018-07-05T18:19:36.571848"/>
   <author>
-    <display value="subject"/>
+    <reference value="Practitioner/prov-admin1"/>
   </author>
   <source>
-    <display value="subject"/>
+    <reference value="Patient/subject1"/>
   </source>
   <item>
-    <linkId value="d2"/>
-    <text value="Have you used drugs other than those required for medical reasons?"/>
-    <answer>
-      <valueString value="Yes"/>
-    </answer>
-  </item>
-  <item>
-    <linkId value="d3"/>
-    <text value="Do you abuse more than one drug at a time?"/>
-    <answer>
-      <valueString value="Yes"/>
-    </answer>
-  </item>
-  <item>
-    <linkId value="d4"/>
-    <text value="Are you unable to stop abusing drugs when you want to?"/>
-    <answer>
-      <valueString value="Yes"/>
-    </answer>
-  </item>
-  <item>
-    <linkId value="d5"/>
-    <text value="Have you ever had blackouts or flashbacks as a result of drug use?"/>
-    <answer>
-      <valueString value="Yes"/>
-    </answer>
-  </item>
-  <item>
-    <linkId value="d6"/>
-    <text value="Do you ever feel bad or guilty about your drug use?"/>
-    <answer>
-      <valueString value="Yes"/>
-    </answer>
-  </item>
-  <item>
-    <linkId value="d7"/>
-    <text value="Does your spouse (or parents) ever complain about your involvement with drugs?"/>
-    <answer>
-      <valueString value="Yes"/>
-    </answer>
-  </item>
-  <item>
-    <linkId value="d8"/>
-    <text value="Have you neglected your family because of your use of drugs?"/>
-    <answer>
-      <valueString value="Yes"/>
-    </answer>
-  </item>
-  <item>
-    <linkId value="d9"/>
-    <text value="Have you engaged in illegal activities in order to obtain drugs?"/>
-    <answer>
-      <valueString value="Yes"/>
-    </answer>
-  </item>
-  <item>
-    <linkId value="d10"/>
-    <text value="Have you ever experienced withdrawal symptoms (felt sick) when you stopped taking drugs?"/>
-    <answer>
-      <valueString value="Yes"/>
-    </answer>
-  </item>
-  <item>
-    <linkId value="d11"/>
-    <text value="Have you had medical problems as a result of your drug use (e.g. memory loss, hepatitis, convulsions, bleeding)?"/>
-    <answer>
-      <valueString value="Yes"/>
-    </answer>
+    <linkId value="g1"/>
+    <item>
+      <linkId value="g1.q1"/>
+      <text value="Have you used drugs other than those required for medical reasons?"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA33-6 "/>
+          <display value="Yes"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="g1.q7"/>
+      <text value="Have you neglected your family because of your use of drugs?"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA 32-8 "/>
+          <display value="No"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="g1.q2"/>
+      <text value="Do you abuse more than one drug at a time?"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA33-6 "/>
+          <display value="Yes"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="g1.q6"/>
+      <text value="Does your spouse (or parents) ever complain about your involvement with drugs?"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA33-6 "/>
+          <display value="Yes"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="g1.q8"/>
+      <text value="Have you engaged in illegal activities in order to obtain drugs?"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA 32-8 "/>
+          <display value="No"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="g1.q4"/>
+      <text value="Have you ever had blackouts or flashbacks as a result of drug use?"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA 32-8 "/>
+          <display value="No"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="g1.q10"/>
+      <text value="Have you had medical problems as a result of your drug use (e.g. memory loss, hepatitis, convulsions, bleeding)?"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA 32-8 "/>
+          <display value="No"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="g1.q3"/>
+      <text value="Are you unable to stop abusing drugs when you want to?"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA33-6 "/>
+          <display value="Yes"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="g1.q9"/>
+      <text value="Have you ever experienced withdrawal symptoms (felt sick) when you stopped taking drugs?"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA 32-8 "/>
+          <display value="No"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="g1.q5"/>
+      <text value="Do you ever feel bad or guilty about your drug use?"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA 32-8 "/>
+          <display value="No"/>
+        </valueCoding>
+      </answer>
+    </item>
   </item>
 </QuestionnaireResponse>

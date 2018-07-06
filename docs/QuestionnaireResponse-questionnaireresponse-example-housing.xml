@@ -2,38 +2,58 @@
 
 <QuestionnaireResponse xmlns="http://hl7.org/fhir">
   <id value="questionnaireresponse-example-housing"/>
+  <meta>
+    <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr"/>
+  </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: questionnaireresponse-example-housing</p><p><b>identifier</b>: housing-example</p><p><b>questionnaire</b>: <a href="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-housing">http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-housing</a></p><p><b>status</b>: completed</p><p><b>subject</b>: subject</p><p><b>authored</b>: May 21, 2018</p><p><b>author</b>: subject</p><p><b>source</b>: subject</p><blockquote><p><b>item</b></p><p><b>linkId</b>: 2</p><p><b>text</b>: What is your housing situation today?</p><h3>Answers</h3><table class="grid"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>I do not have housing (I am staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, abandoned building, bus or train station, or in a park)</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: 3</p><p><b>text</b>: Think about the place you live. Do you have problems with any of the following? (check all that apply)</p><h3>Answers</h3><table class="grid"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Bug infestation</td></tr></table></blockquote></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+    <h3>Response Summary</h3>
+    <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-housing<br />
+    <strong>Date Completed:</strong> 2018-07-05T19:02:25.752525<br />
+    <hr /> <br /> <strong>Question:</strong> (linkId = g1.2) Think about the place you live. Do you have problems with any of the following? (check all that apply)<br /><strong>Response:</strong> Bug infestation( code = )<br /><strong>Response:</strong> Inadequate heat( code = )<br /><strong>Response:</strong> Water leaks( code = )<br /><br /> <strong>Question:</strong> (linkId = g1.1) What is your housing situation today?<br /><strong>Response:</strong> I have housing( code = )<br /> <br /><br />
+    </div>
   </text>
   <identifier>
-    <value value="housing-example"/>
+    <value value="test"/>
   </identifier>
   <questionnaire>
     <reference value="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-housing"/>
   </questionnaire>
   <status value="completed"/>
   <subject>
-    <display value="subject"/>
+    <reference value="Patient/subject1"/>
   </subject>
-  <authored value="2018-05-21"/>
+  <context>
+    <reference value="Encounter/encounter1"/>
+  </context>
+  <authored value="2018-07-05T19:02:25.752525"/>
   <author>
-    <display value="subject"/>
+    <reference value="Practitioner/prov-admin1"/>
   </author>
   <source>
-    <display value="subject"/>
+    <reference value="Patient/subject1"/>
   </source>
   <item>
-    <linkId value="2"/>
-    <text value="What is your housing situation today?"/>
-    <answer>
-      <valueString value="I do not have housing (I am staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, abandoned building, bus or train station, or in a park)"/>
-    </answer>
-  </item>
-  <item>
-    <linkId value="3"/>
-    <text value="Think about the place you live. Do you have problems with any of the following? (check all that apply)"/>
-    <answer>
-      <valueString value="Bug infestation"/>
-    </answer>
+    <linkId value="g1"/>
+    <item>
+      <linkId value="g1.2"/>
+      <text value="Think about the place you live. Do you have problems with any of the following? (check all that apply)"/>
+      <answer>
+        <valueString value="Bug infestation"/>
+      </answer>
+      <answer>
+        <valueString value="Inadequate heat"/>
+      </answer>
+      <answer>
+        <valueString value="Water leaks"/>
+      </answer>
+    </item>
+    <item>
+      <linkId value="g1.1"/>
+      <text value="What is your housing situation today?"/>
+      <answer>
+        <valueString value="I have housing"/>
+      </answer>
+    </item>
   </item>
 </QuestionnaireResponse>

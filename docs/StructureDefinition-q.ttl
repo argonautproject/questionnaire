@@ -235,11 +235,7 @@
            fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
          ];
          fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "A human language." ];
-         fhir:ElementDefinition.binding.valueSetReference [
-           fhir:link <http://hl7.org/fhir/ValueSet/languages>;
-           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/languages" ]
-         ]
+         fhir:ElementDefinition.binding.description [ fhir:value "A human language." ]
        ]
      ], [
        fhir:index 5;
@@ -594,11 +590,7 @@
            fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
          ];
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "The lifecycle status of a Value Set or Concept Map." ];
-         fhir:ElementDefinition.binding.valueSetReference [
-           fhir:link <http://hl7.org/fhir/ValueSet/publication-status>;
-           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/publication-status" ]
-         ]
+         fhir:ElementDefinition.binding.description [ fhir:value "The lifecycle status of a Value Set or Concept Map." ]
        ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
@@ -911,11 +903,7 @@
            fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
          ];
          fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Countries and regions within which this artifact is targeted for use" ];
-         fhir:ElementDefinition.binding.valueSetReference [
-           fhir:link <http://hl7.org/fhir/ValueSet/jurisdiction>;
-           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/jurisdiction" ]
-         ]
+         fhir:ElementDefinition.binding.description [ fhir:value "Countries and regions within which this artifact is targeted for use" ]
        ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
@@ -1006,11 +994,7 @@
            fhir:Extension.valueString [ fhir:value "QuestionnaireConcept" ]
          ];
          fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Codes for questionnaires, groups and individual questions" ];
-         fhir:ElementDefinition.binding.valueSetReference [
-           fhir:link <http://hl7.org/fhir/ValueSet/questionnaire-questions>;
-           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/questionnaire-questions" ]
-         ]
+         fhir:ElementDefinition.binding.description [ fhir:value "Codes for questionnaires, groups and individual questions" ]
        ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
@@ -1047,11 +1031,7 @@
            fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
          ];
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "One of the resource types defined as part of FHIR." ];
-         fhir:ElementDefinition.binding.valueSetReference [
-           fhir:link <http://hl7.org/fhir/ValueSet/resource-types>;
-           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/resource-types" ]
-         ]
+         fhir:ElementDefinition.binding.description [ fhir:value "One of the resource types defined as part of FHIR." ]
        ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
@@ -1365,11 +1345,7 @@
            fhir:Extension.valueString [ fhir:value "QuestionnaireConcept" ]
          ];
          fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Codes for questionnaires, groups and individual questions" ];
-         fhir:ElementDefinition.binding.valueSetReference [
-           fhir:link <http://hl7.org/fhir/ValueSet/questionnaire-questions>;
-           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/questionnaire-questions" ]
-         ]
+         fhir:ElementDefinition.binding.description [ fhir:value "Codes for questionnaires, groups and individual questions" ]
        ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
@@ -1480,11 +1456,7 @@
            fhir:Extension.valueString [ fhir:value "QuestionnaireItemType" ]
          ];
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Distinguishes groups from questions and display text and indicates data type for questions" ];
-         fhir:ElementDefinition.binding.valueSetReference [
-           fhir:link <http://hl7.org/fhir/ValueSet/item-type>;
-           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/item-type" ]
-         ]
+         fhir:ElementDefinition.binding.description [ fhir:value "Distinguishes groups from questions and display text and indicates data type for questions" ]
        ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
@@ -1839,11 +1811,7 @@
            fhir:Extension.valueString [ fhir:value "QuestionnaireQuestionOption2" ]
          ];
          fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Allowed values to answer questions." ];
-         fhir:ElementDefinition.binding.valueSetReference [
-           fhir:link <http://hl7.org/fhir/ValueSet/questionnaire-answers>;
-           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/questionnaire-answers" ]
-         ]
+         fhir:ElementDefinition.binding.description [ fhir:value "Allowed values to answer questions." ]
        ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
@@ -2227,11 +2195,7 @@
            fhir:Extension.valueString [ fhir:value "QuestionnaireQuestionOption" ]
          ];
          fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Allowed values to answer questions." ];
-         fhir:ElementDefinition.binding.valueSetReference [
-           fhir:link <http://hl7.org/fhir/ValueSet/questionnaire-answers>;
-           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/questionnaire-answers" ]
-         ]
+         fhir:ElementDefinition.binding.description [ fhir:value "Allowed values to answer questions." ]
        ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
@@ -2310,11 +2274,7 @@
            fhir:Extension.valueString [ fhir:value "QuestionnaireQuestionOption2" ]
          ];
          fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Allowed values to answer questions." ];
-         fhir:ElementDefinition.binding.valueSetReference [
-           fhir:link <http://hl7.org/fhir/ValueSet/questionnaire-answers>;
-           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/questionnaire-answers" ]
-         ]
+         fhir:ElementDefinition.binding.description [ fhir:value "Allowed values to answer questions." ]
        ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
@@ -2722,20 +2682,6 @@
   ] .
 
 <http://hl7.org/fhir/ValueSet/all-languages> a fhir:ValueSet .
-
-<http://hl7.org/fhir/ValueSet/languages> a fhir:ValueSet .
-
-<http://hl7.org/fhir/ValueSet/publication-status> a fhir:ValueSet .
-
-<http://hl7.org/fhir/ValueSet/jurisdiction> a fhir:ValueSet .
-
-<http://hl7.org/fhir/ValueSet/questionnaire-questions> a fhir:ValueSet .
-
-<http://hl7.org/fhir/ValueSet/resource-types> a fhir:ValueSet .
-
-<http://hl7.org/fhir/ValueSet/item-type> a fhir:ValueSet .
-
-<http://hl7.org/fhir/ValueSet/questionnaire-answers> a fhir:ValueSet .
 
 # - ontology header ------------------------------------------------------------
 

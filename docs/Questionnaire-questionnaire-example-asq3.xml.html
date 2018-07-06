@@ -1364,7 +1364,7 @@ tD579GI7dkpntjbfM2ZzNlNvtR6vs2jn9GmfdCY7hDUvtFxncmgvtmvvtGU/BBwsAHlGgG4nwAKY
 822vCR1bNWwftF4jtkXgNWjTsUy/NmtqyzZDr3ZSQ7MWg7RSI/dV93NdX/dh0zYbe7Zls7Us8/Zv
 B7cxgncmobd5r/f04rOVqTd7x/fzUvKMwbd83zd+57d+7zd/97d//zeAB7iADziBF7iBHziCJ7iC
 LziDN7iDPziER7iEV2hAAAA7
-&quot;alt=&quot;Ages and Stages Questionnaire (ASQ-3) Sample 16 Month Questionnaire&quot;/&gt;&lt;p&gt;Ages &amp;amp; Stages Questionnaires®, Third Edition (ASQ-3™), Squires &amp;amp; Bricker © 2009 Paul H. Brookes Publishing Co. All rights reserved.&lt;/p&gt;&lt;/div&gt;
+&quot; alt=&quot;Ages and Stages Questionnaire (ASQ-3) Sample 16 Month Questionnaire&quot;/&gt;&lt;p&gt;Ages &amp;amp; Stages Questionnaires®, Third Edition (ASQ-3™), Squires &amp;amp; Bricker © 2009 Paul H. Brookes Publishing Co. All rights reserved.&lt;/p&gt;&lt;/div&gt;
   &lt;/text&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.url">url</a>
        <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-asq3&quot;/&gt;
@@ -1372,10 +1372,11 @@ LziDN7iDPziER7iEV2hAAAA7
     &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://acme.org/q-identifiers&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;business-identifier5&quot;/&gt;
   &lt;/identifier&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.version">version</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;0.0.0&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.title">title</a>
          <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Ages and Stages Questionnaire (ASQ-3) Sample 16 Month Questionnaire&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.date">date</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2018-04-21T01:22:33Z&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.date">date</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2018-06-28T00:00:00-07:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.publisher">publisher</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;ArgonautProject&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.jurisdiction">jurisdiction</a>&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
@@ -1400,24 +1401,31 @@ LziDN7iDPziER7iEV2hAAAA7
   &lt;/code&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.subjectType">subjectType</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;Patient&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item">item</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Instructions&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a>
-          <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;On the following pages are questions about activities babies may do. Your baby may have already done some of the activities described here, and there may be some your baby has not begun doing yet. For each item, please fill in the circle that indicates whether your baby is doing the activity regularly, sometimes, or not yet.  Important Points to Remember: Try each activity with your baby before marking a response. Make completing this questionnaire a game that is fun for you and your child. Make sure your child is rested and fed. Please return this questionnaire by _______________.&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;display&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">extension</a>
+               <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-hidden&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueBoolean</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+    &lt;/extension&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;G0&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;group&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.item">item</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;G0.d&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a>
+            <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;On the following pages are questions about activities babies may do. Your baby may have already done some of the activities described here, and there may be some your baby has not begun doing yet. For each item, please fill in the circle that indi-cates whether your baby is doing the activity regularly, sometimes, or not yet.  Important Points to Remember: Try each activity with your baby before marking a response. Make completing this questionnaire a game that is fun for you and your child. Make sure your child is rested and fed. Please return this questionnaire by _______________.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;display&quot;/&gt;
+    &lt;/item&gt;
   &lt;/item&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item">item</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;g1&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;G1&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;GROSS MOTOR&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;group&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.item">item</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;g1.4&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;G1.4&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.prefix">prefix</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;4&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a>
             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Does your child move around by walking, rather than crawling on her hands and knees&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;choice&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">repeats</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>
                    <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score&quot;&gt;
@@ -1456,12 +1464,11 @@ LziDN7iDPziER7iEV2hAAAA7
       &lt;/option&gt;
     &lt;/item&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.item">item</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;g1.5&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;G1.5&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.prefix">prefix</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;5&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Does your child walk well and seldom fall?&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;choice&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">repeats</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>
                    <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score&quot;&gt;
@@ -1500,13 +1507,12 @@ LziDN7iDPziER7iEV2hAAAA7
       &lt;/option&gt;
     &lt;/item&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.item">item</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;g1.6&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;G1.6&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.prefix">prefix</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;6&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a>
             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Does your child climb on an object such as a chair to reach something he wants ( for example, to get a toy on the counter or to &amp;quot;help&amp;quot; you in the kitchen)?&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;choice&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">repeats</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>
                    <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score&quot;&gt;
@@ -1546,18 +1552,17 @@ LziDN7iDPziER7iEV2hAAAA7
     &lt;/item&gt;
   &lt;/item&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item">item</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;g2&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;G2&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;FINE MOTOR&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;group&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.item">item</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;g2.4&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;G2.4&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.prefix">prefix</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;4&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a>
             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Does your child help turn pages of a book? (You may lift a page for her to grasp.)&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;choice&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">repeats</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>
                    <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score&quot;&gt;
@@ -1596,13 +1601,12 @@ LziDN7iDPziER7iEV2hAAAA7
       &lt;/option&gt;
     &lt;/item&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.item">item</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;g2.5&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;G2.5&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.prefix">prefix</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;5&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a>
             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Does your child throw a small ball with a forward arm motion? (if he simply drops the ball, mark &amp;quot;not yet&amp;quot; for this item)&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;choice&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">repeats</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>
                    <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score&quot;&gt;
@@ -1641,13 +1645,12 @@ LziDN7iDPziER7iEV2hAAAA7
       &lt;/option&gt;
     &lt;/item&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.item">item</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;g2.6&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;G2.6&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.prefix">prefix</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;6&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a>
             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Does your child stack a small block or toy on top of another one? (You could also use spools of thread, small boxes, or toys that are about 1 inch in size.)&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;choice&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">repeats</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>
                    <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score&quot;&gt;
@@ -1736,7 +1739,7 @@ Formats: <a href="Questionnaire-questionnaire-example-asq3.html">Narrative</a>, 
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Jun 1, 2018 19:12-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Jul 5, 2018 19:06-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>
         </p>
    </div>  <!-- /inner-wrapper -->

@@ -185,9 +185,6 @@
         </extension>
         <strength value="extensible"/>
         <description value="A human language."/>
-        <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/languages"/>
-        </valueSetReference>
       </binding>
     </element>
     <element id="ValueSet.text">
@@ -422,9 +419,6 @@
         </extension>
         <strength value="required"/>
         <description value="The lifecycle status of a Value Set or Concept Map."/>
-        <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/publication-status"/>
-        </valueSetReference>
       </binding>
       <mapping>
         <identity value="w5"/>
@@ -584,9 +578,6 @@
         </extension>
         <strength value="extensible"/>
         <description value="Countries and regions within which this artifact is targeted for use"/>
-        <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/jurisdiction"/>
-        </valueSetReference>
       </binding>
     </element>
     <element id="ValueSet.immutable">
@@ -1230,9 +1221,6 @@
         </extension>
         <strength value="extensible"/>
         <description value="A human language."/>
-        <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/languages"/>
-        </valueSetReference>
       </binding>
     </element>
     <element id="ValueSet.compose.include.concept.designation.use">
@@ -1256,9 +1244,6 @@
         </extension>
         <strength value="extensible"/>
         <description value="Details of how a designation would be used."/>
-        <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/designation-use"/>
-        </valueSetReference>
       </binding>
     </element>
     <element id="ValueSet.compose.include.concept.designation.value">
@@ -1415,9 +1400,6 @@
         </extension>
         <strength value="required"/>
         <description value="The kind of operation to perform as a part of a property based filter."/>
-        <valueSetReference>
-          <reference value="http://hl7.org/fhir/ValueSet/filter-operator"/>
-        </valueSetReference>
       </binding>
       <mapping>
         <identity value="rim"/>

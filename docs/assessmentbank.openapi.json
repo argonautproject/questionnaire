@@ -1,0 +1,110 @@
+﻿{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Argonaut questionnaire Assessment Bank CapabilityStatement",
+    "description": "The Argonaut questionnaire Assessment-Bank CapabilityStatement provides a for a complete list of supported RESTful interactions for the Argonaut questionnaire Implementation Guide",
+    "license": {
+      "name": "CC0-1.0"
+    },
+    "version": "0.0.0",
+    "contact": {
+      "name": "Argonaut Project"
+    }
+  },
+  "externalDocs": {
+    "url": "http://fhir.org/guides/argonaut-questionnaire/CapabilityStatement/assessmentbank",
+    "description": "FHIR CapabilityStatement"
+  },
+  "paths": {
+    "/Questionnaire": {
+      "summary": "manage the collection of resources of type Questionnaire",
+      "description": "Access to services to manage the collection of all resources of type Questionnaire",
+      "get": {
+        "summary": "Search all resources based on a set of criteria",
+        "operationId": "searchQuestionnaire",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "http://build.fhir.org/fhir.json.schema/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "http://build.fhir.org/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag"
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "http://build.fhir.org/fhir.json.schema/definitions/Bundle"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "http://build.fhir.org/Bundle.xsd"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Questionnaire/{rid}": {
+      "summary": "Read/Write/etc resource instance of type Questionnaire",
+      "description": "Access to services to manage the state of a single resource of type Questionnaire",
+      "get": {
+        "summary": "Read the current state of the resource",
+        "operationId": "readQuestionnaire",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "http://build.fhir.org/fhir.json.schema/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "http://build.fhir.org/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag"
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "http://build.fhir.org/fhir.json.schema/definitions/Questionnaire"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "http://build.fhir.org/Questionnaire.xsd"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

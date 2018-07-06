@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- Q content -->
+
+<form action='{{url_for('a_bank') }}' method='POST'>
+<input type="submit" value="Post Answers to Answer Bank">
+</form>
+
+
+<h3>Response Summary</h3>
+<ul>
+<!-- iterate through the root = groups ...TODO...deeper nested QR -->
+
+{% for g in qr.item %}
+
+  {% for i in g.item %}
+
+    <li>
+    <strong>Question:</strong> {{i.text}} <br />
+
+    {% for j in i.answer %}
+      {% if j.valueCoding %}
+        <strong>Response: </strong>{{j.valueCoding.display}}<br /><br />
+      {% elif j.valueString %}
+        <strong>Response: </strong>{{j.valueString}}<br /><br />
+      {% endif %}
+    {% endfor %}
+    </li>
+
+  {% endfor %}
+{% endfor %}
+</ul>
+<hr />
+<h4>Score = {{score}}</h4>
+<hr />
+<h3>Resulting QuestionnaireResponse</h3>
+<pre>
+{{qr_string}}
+</pre>
+
+{% endblock %}
+<!-- End Q content ---->

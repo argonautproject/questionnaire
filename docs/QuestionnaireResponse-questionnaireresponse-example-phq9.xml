@@ -2,114 +2,140 @@
 
 <QuestionnaireResponse xmlns="http://hl7.org/fhir">
   <id value="questionnaireresponse-example-phq9"/>
+  <meta>
+    <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr"/>
+  </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: questionnaireresponse-example-phq9</p><p><b>identifier</b>: phq9-example</p><p><b>questionnaire</b>: <a href="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9">http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9</a></p><p><b>status</b>: completed</p><p><b>subject</b>: subject</p><p><b>authored</b>: May 29, 2018</p><p><b>author</b>: subject</p><p><b>source</b>: subject</p><blockquote><p><b>item</b></p><p><b>linkId</b>: LittleInterest</p><p><b>text</b>: Little interest or pleasure in doing things</p><h3>Answers</h3><table class="grid"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Not at all (Details: [not stated] code LA6568-5 = 'LA6568-5', stated as 'Not at all')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: FeelingDown</p><p><b>text</b>: Feeling down, depressed, or hopeless</p><h3>Answers</h3><table class="grid"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Not at all (Details: [not stated] code LA6568-5 = 'LA6568-5', stated as 'Not at all')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: TroubleSleeping</p><p><b>text</b>: Trouble falling or staying asleep</p><h3>Answers</h3><table class="grid"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Not at all (Details: [not stated] code LA6568-5 = 'LA6568-5', stated as 'Not at all')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: FeelingTired</p><p><b>text</b>: Feeling tired or having little energy</p><h3>Answers</h3><table class="grid"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Not at all (Details: [not stated] code LA6568-5 = 'LA6568-5', stated as 'Not at all')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: BadAppetite</p><p><b>text</b>: Poor appetite or overeating</p><h3>Answers</h3><table class="grid"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Not at all (Details: [not stated] code LA6568-5 = 'LA6568-5', stated as 'Not at all')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: FeelingBadAboutSelf</p><p><b>text</b>: Feeling bad about yourself - or that you are a failure or have let yourself or your family down</p><h3>Answers</h3><table class="grid"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Not at all (Details: [not stated] code LA6568-5 = 'LA6568-5', stated as 'Not at all')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: TroubleConcentrating</p><p><b>text</b>: Trouble concentrating on things, such as reading the newspaper or watching television</p><h3>Answers</h3><table class="grid"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Not at all (Details: [not stated] code LA6568-5 = 'LA6568-5', stated as 'Not at all')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: MovingSpeaking</p><p><b>text</b>: Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usualTotal score</p><h3>Answers</h3><table class="grid"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Not at all (Details: [not stated] code LA6568-5 = 'LA6568-5', stated as 'Not at all')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: Difficulty</p><p><b>text</b>: If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people</p><h3>Answers</h3><table class="grid"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Not at all (Details: [not stated] code LA6568-5 = 'LA6568-5', stated as 'Not at all')</td></tr></table></blockquote></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+    <h3>Response Summary</h3>
+    <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9<br />
+    <strong>Date Completed:</strong> 2018-07-05T19:04:33.435516<br />
+    <hr /> <br /> <strong>Question:</strong> (linkId = g1.q8) Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual,<br /><strong>Response:</strong> Not at all( code = LA6568-5)<br /><br /> <strong>Question:</strong> (linkId = g1.q6) Feeling bad about yourself - or that you are a failure or have let yourself or your family down,<br /><strong>Response:</strong> Several days( code = LA6569-3)<br /><br /> <strong>Question:</strong> (linkId = g2.q1) If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people,<br /><strong>Response:</strong> Very difficult( code = LA6575-0)<br /><br /> <strong>Question:</strong> (linkId = g1.q9) Thoughts that you would be better off dead, or of hurting yourself<br /><strong>Response:</strong> Not at all( code = LA6568-5)<br /><br /> <strong>Question:</strong> (linkId = g1.q1) Little interest or pleasure in doing things,<br /><strong>Response:</strong> Nearly every day( code = LA6571-9)<br /><br /> <strong>Question:</strong> (linkId = g1.q7) Trouble concentrating on things, such as reading the newspaper or watching television,<br /><strong>Response:</strong> More than half the days( code = LA6570-1)<br /><br /> <strong>Question:</strong> (linkId = g1.q4) Feeling tired or having little energy,<br /><strong>Response:</strong> Nearly every day( code = LA6571-9)<br /><br /> <strong>Question:</strong> (linkId = g1.q2) Feeling down, depressed, or hopeless,<br /><strong>Response:</strong> More than half the days( code = LA6570-1)<br /><br /> <strong>Question:</strong> (linkId = g1.q5) Poor appetite or overeating,<br /><strong>Response:</strong> Not at all( code = LA6568-5)<br /> <br /><br />
+    </div>
   </text>
   <identifier>
-    <value value="phq9-example"/>
+    <value value="test"/>
   </identifier>
   <questionnaire>
     <reference value="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9"/>
   </questionnaire>
   <status value="completed"/>
   <subject>
-    <display value="subject"/>
+    <reference value="Patient/subject1"/>
   </subject>
-  <authored value="2018-05-29"/>
+  <context>
+    <reference value="Encounter/encounter1"/>
+  </context>
+  <authored value="2018-07-05T19:04:33.435516"/>
   <author>
-    <display value="subject"/>
+    <reference value="Practitioner/prov-admin1"/>
   </author>
   <source>
-    <display value="subject"/>
+    <reference value="Patient/subject1"/>
   </source>
   <item>
-    <linkId value="LittleInterest"/>
-    <text value="Little interest or pleasure in doing things"/>
-    <answer>
-      <valueCoding>
-        <code value="LA6568-5"/>
-        <display value="Not at all"/>
-      </valueCoding>
-    </answer>
+    <linkId value="g1"/>
+    <item>
+      <linkId value="g1.q8"/>
+      <text value="Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual,"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA6568-5"/>
+          <display value="Not at all"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="g1.q6"/>
+      <text value="Feeling bad about yourself - or that you are a failure or have let yourself or your family down,"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA6569-3"/>
+          <display value="Several days"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="g1.q9"/>
+      <text value="Thoughts that you would be better off dead, or of hurting yourself"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA6568-5"/>
+          <display value="Not at all"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="g1.q1"/>
+      <text value="Little interest or pleasure in doing things,"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA6571-9"/>
+          <display value="Nearly every day"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="g1.q7"/>
+      <text value="Trouble concentrating on things, such as reading the newspaper or watching television,"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA6570-1"/>
+          <display value="More than half the days"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="g1.q4"/>
+      <text value="Feeling tired or having little energy,"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA6571-9"/>
+          <display value="Nearly every day"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="g1.q2"/>
+      <text value="Feeling down, depressed, or hopeless,"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA6570-1"/>
+          <display value="More than half the days"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="g1.q5"/>
+      <text value="Poor appetite or overeating,"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA6568-5"/>
+          <display value="Not at all"/>
+        </valueCoding>
+      </answer>
+    </item>
   </item>
   <item>
-    <linkId value="FeelingDown"/>
-    <text value="Feeling down, depressed, or hopeless"/>
-    <answer>
-      <valueCoding>
-        <code value="LA6568-5"/>
-        <display value="Not at all"/>
-      </valueCoding>
-    </answer>
-  </item>
-  <item>
-    <linkId value="TroubleSleeping"/>
-    <text value="Trouble falling or staying asleep"/>
-    <answer>
-      <valueCoding>
-        <code value="LA6568-5"/>
-        <display value="Not at all"/>
-      </valueCoding>
-    </answer>
-  </item>
-  <item>
-    <linkId value="FeelingTired"/>
-    <text value="Feeling tired or having little energy"/>
-    <answer>
-      <valueCoding>
-        <code value="LA6568-5"/>
-        <display value="Not at all"/>
-      </valueCoding>
-    </answer>
-  </item>
-  <item>
-    <linkId value="BadAppetite"/>
-    <text value="Poor appetite or overeating"/>
-    <answer>
-      <valueCoding>
-        <code value="LA6568-5"/>
-        <display value="Not at all"/>
-      </valueCoding>
-    </answer>
-  </item>
-  <item>
-    <linkId value="FeelingBadAboutSelf"/>
-    <text value="Feeling bad about yourself - or that you are a failure or have let yourself or your family down"/>
-    <answer>
-      <valueCoding>
-        <code value="LA6568-5"/>
-        <display value="Not at all"/>
-      </valueCoding>
-    </answer>
-  </item>
-  <item>
-    <linkId value="TroubleConcentrating"/>
-    <text value="Trouble concentrating on things, such as reading the newspaper or watching television"/>
-    <answer>
-      <valueCoding>
-        <code value="LA6568-5"/>
-        <display value="Not at all"/>
-      </valueCoding>
-    </answer>
-  </item>
-  <item>
-    <linkId value="MovingSpeaking"/>
-    <text value="Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usualTotal score"/>
-    <answer>
-      <valueCoding>
-        <code value="LA6568-5"/>
-        <display value="Not at all"/>
-      </valueCoding>
-    </answer>
-  </item>
-  <item>
-    <linkId value="Difficulty"/>
-    <text value="If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people"/>
-    <answer>
-      <valueCoding>
-        <code value="LA6568-5"/>
-        <display value="Not at all"/>
-      </valueCoding>
-    </answer>
+    <linkId value="g2"/>
+    <item>
+      <linkId value="g2.q1"/>
+      <text value="If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people,"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA6575-0"/>
+          <display value="Very difficult"/>
+        </valueCoding>
+      </answer>
+    </item>
   </item>
 </QuestionnaireResponse>

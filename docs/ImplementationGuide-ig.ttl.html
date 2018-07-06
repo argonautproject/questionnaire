@@ -320,10 +320,12 @@
      fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;Argonaut Questionnaire&lt;/h2&gt;&lt;p&gt;The official URL for this implementation guide is: &lt;/p&gt;&lt;pre&gt;http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig&lt;/pre&gt;&lt;/div&gt;&quot;
   ];
   <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.url">fhir:ImplementationGuide.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig&quot;];
+  <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.version">fhir:ImplementationGuide.version</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;0.0.0&quot;];
   <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.name">fhir:ImplementationGuide.name</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Argonaut Questionnaire&quot;];
   <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.status">fhir:ImplementationGuide.status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;draft&quot;];
   <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.experimental">fhir:ImplementationGuide.experimental</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean];
   <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.publisher">fhir:ImplementationGuide.publisher</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Argonaut Project&quot;];
+  <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.fhirVersion">fhir:ImplementationGuide.fhirVersion</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;3.0.1&quot;];
   <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package">fhir:ImplementationGuide.package</a> [
      <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
      <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.id">fhir:Element.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;p1&quot; ];
@@ -333,11 +335,19 @@
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;Questionnaire-questionnaire-example-sampler.html&quot; ]       ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Questionnaire/questionnaire-example-sampler&quot; ]       ]     ], [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
+       <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueUri</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;QuestionnaireResponse-questionnaireresponse-example-phq9.html&quot; ]       ];
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;QuestionnaireResponse/questionnaireresponse-example-phq9&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
@@ -345,7 +355,7 @@
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Questionnaire/questionnaire-example-phq9&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 3;
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
@@ -353,7 +363,7 @@
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;QuestionnaireResponse/questionnaireresponse-example-housing&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 3;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 4;
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
@@ -361,7 +371,7 @@
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Questionnaire/questionnaire-example-housing&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 4;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 5;
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
@@ -369,7 +379,7 @@
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;QuestionnaireResponse/questionnaireresponse-example-dast&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 5;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 6;
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
@@ -377,7 +387,7 @@
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Questionnaire/questionnaire-example-dast&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 6;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 7;
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
@@ -385,7 +395,7 @@
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;QuestionnaireResponse/questionnaireresponse-example-audit&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 7;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 8;
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
@@ -393,7 +403,7 @@
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Questionnaire/questionnaire-example-audit&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 8;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 9;
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
@@ -401,7 +411,7 @@
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;QuestionnaireResponse/questionnaireresponse-example-asq3&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 9;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 10;
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
@@ -409,7 +419,7 @@
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Questionnaire/questionnaire-example-asq3&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 10;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 11;
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
@@ -417,7 +427,7 @@
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;ValueSet/example-answerlist1&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 11;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 12;
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
@@ -425,7 +435,7 @@
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/extension-timelimit&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 12;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 13;
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
@@ -433,7 +443,7 @@
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/extension-score&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 13;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 14;
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
@@ -441,7 +451,7 @@
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;SearchParameter/Questionnaire-context-value&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 14;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 15;
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
@@ -449,7 +459,7 @@
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;SearchParameter/Questionnaire-context-type&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 15;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 16;
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
@@ -457,7 +467,7 @@
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/qr&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 16;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 17;
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
@@ -465,7 +475,7 @@
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/qcvs&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 17;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 18;
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
@@ -473,7 +483,7 @@
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;StructureDefinition/q&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 18;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 19;
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
@@ -481,7 +491,7 @@
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;CodeSystem/answer-codes&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 19;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 20;
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
@@ -489,7 +499,7 @@
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;CapabilityStatement/server&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 20;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 21;
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
@@ -497,7 +507,7 @@
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;CapabilityStatement/client&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 21;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 22;
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
@@ -505,7 +515,7 @@
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.example">fhir:ImplementationGuide.package.resource.example</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.source[x]">fhir:ImplementationGuide.package.resource.sourceReference</a> [
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;CapabilityStatement/assessmentbank&quot; ]       ]     ], [
-       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 22;
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 23;
        <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.package.resource.extension">fhir:Element.extension</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/implementationguide-page&quot; ];
@@ -620,7 +630,7 @@ Formats: <a href="ImplementationGuide-ig.html">Narrative</a>, <a href="Implement
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Jun 1, 2018 19:12-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Jul 5, 2018 19:06-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>
         </p>
    </div>  <!-- /inner-wrapper -->

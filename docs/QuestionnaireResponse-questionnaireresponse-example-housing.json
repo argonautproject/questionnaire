@@ -1,43 +1,62 @@
 {
   "resourceType": "QuestionnaireResponse",
   "id": "questionnaireresponse-example-housing",
+  "meta": {
+    "profile": [
+      "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr"
+    ]
+  },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: questionnaireresponse-example-housing</p><p><b>identifier</b>: housing-example</p><p><b>questionnaire</b>: <a href=\"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-housing\">http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-housing</a></p><p><b>status</b>: completed</p><p><b>subject</b>: subject</p><p><b>authored</b>: May 21, 2018</p><p><b>author</b>: subject</p><p><b>source</b>: subject</p><blockquote><p><b>item</b></p><p><b>linkId</b>: 2</p><p><b>text</b>: What is your housing situation today?</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>I do not have housing (I am staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, abandoned building, bus or train station, or in a park)</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: 3</p><p><b>text</b>: Think about the place you live. Do you have problems with any of the following? (check all that apply)</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Bug infestation</td></tr></table></blockquote></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h3>Response Summary</h3>\n    <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-housing<br />\n    <strong>Date Completed:</strong> 2018-07-05T19:02:25.752525<br />\n    <hr /> <br /> <strong>Question:</strong> (linkId = g1.2) Think about the place you live. Do you have problems with any of the following? (check all that apply)<br /><strong>Response:</strong> Bug infestation( code = )<br /><strong>Response:</strong> Inadequate heat( code = )<br /><strong>Response:</strong> Water leaks( code = )<br /><br /> <strong>Question:</strong> (linkId = g1.1) What is your housing situation today?<br /><strong>Response:</strong> I have housing( code = )<br /> <br /><br />\n    </div>"
   },
   "identifier": {
-    "value": "housing-example"
+    "value": "test"
   },
   "questionnaire": {
     "reference": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-housing"
   },
   "status": "completed",
   "subject": {
-    "display": "subject"
+    "reference": "Patient/subject1"
   },
-  "authored": "2018-05-21",
+  "context": {
+    "reference": "Encounter/encounter1"
+  },
+  "authored": "2018-07-05T19:02:25.752525",
   "author": {
-    "display": "subject"
+    "reference": "Practitioner/prov-admin1"
   },
   "source": {
-    "display": "subject"
+    "reference": "Patient/subject1"
   },
   "item": [
     {
-      "linkId": "2",
-      "text": "What is your housing situation today?",
-      "answer": [
+      "linkId": "g1",
+      "item": [
         {
-          "valueString": "I do not have housing (I am staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, abandoned building, bus or train station, or in a park)"
-        }
-      ]
-    },
-    {
-      "linkId": "3",
-      "text": "Think about the place you live. Do you have problems with any of the following? (check all that apply)",
-      "answer": [
+          "linkId": "g1.2",
+          "text": "Think about the place you live. Do you have problems with any of the following? (check all that apply)",
+          "answer": [
+            {
+              "valueString": "Bug infestation"
+            },
+            {
+              "valueString": "Inadequate heat"
+            },
+            {
+              "valueString": "Water leaks"
+            }
+          ]
+        },
         {
-          "valueString": "Bug infestation"
+          "linkId": "g1.1",
+          "text": "What is your housing situation today?",
+          "answer": [
+            {
+              "valueString": "I have housing"
+            }
+          ]
         }
       ]
     }

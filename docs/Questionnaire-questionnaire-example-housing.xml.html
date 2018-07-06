@@ -970,7 +970,7 @@ BUTQgLC619u03rAmyDb0Do6ork7AX2x6bvPikY/GrZ5QHAO2h6XSqdHGxxLG0KLuRJ+eVbvBlQZK
 BO2OhPYqakq9oAyVA+bQ24NuqibNKT3RBQeFJRNyr/Pib/7q7/7yb//67/9cAnAAC/AAE3ABG/AB
 I3ACK/ACM3ADO/ADQ3AES/AEU3AFW/AFY3AGa/AGc3AHe/AHg3AIi/AIk3AJm/AJo3AKq/AKs3AL
 u/ALw3AMy/AM03AN2/AN43AO67DnBgQAOw==
-&quot;alt=&quot;Housing Questions&quot;/&gt;&lt;p&gt;Billioux, Alexander, MD, Dphil; Verlander, Katherine, MPH; Anthony, Susan, DrPH; Alley, Dawn, PhD; National Academy of Sciences, “Standardized Screening for Health-Related Social Needs in Clinical Settings - The Accountable Health Communities Screening Tool,“ https://nam.edu/wp-content/uploads/2017/05/Standardized-Screening-for-Health-Related-Social-Needs-in-Clinical-Settings.pdf  
+&quot; alt=&quot;Housing Questions&quot;/&gt;&lt;p&gt;Billioux, Alexander, MD, Dphil; Verlander, Katherine, MPH; Anthony, Susan, DrPH; Alley, Dawn, PhD; National Academy of Sciences, “Standardized Screening for Health-Related Social Needs in Clinical Settings - The Accountable Health Communities Screening Tool,“ https://nam.edu/wp-content/uploads/2017/05/Standardized-Screening-for-Health-Related-Social-Needs-in-Clinical-Settings.pdf  
 &lt;/p&gt;&lt;/div&gt;
   &lt;/text&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.url">url</a>
@@ -979,9 +979,10 @@ u/ALw3AMy/AM03AN2/AN43AO67DnBgQAOw==
     &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://acme.org/q-identifiers&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;business-identifier4&quot;/&gt;
   &lt;/identifier&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.version">version</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;0.0.0&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.title">title</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Housing Questions&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.date">date</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2018-04-24&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.date">date</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2018-06-28T00:00:00-07:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.publisher">publisher</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;ArgonautProject&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.jurisdiction">jurisdiction</a>&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
@@ -1006,64 +1007,76 @@ u/ALw3AMy/AM03AN2/AN43AO67DnBgQAOw==
   &lt;/code&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.subjectType">subjectType</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;Patient&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item">item</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;h1&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a>
-          <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Accountable Health Communities Core Health-Related Social Needs Screening Questions 
+    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">extension</a>
+               <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-hidden&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueBoolean</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+    &lt;/extension&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;g1&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;group&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.item">item</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;g1.d&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a>
+            <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Accountable Health Communities Core Health-Related Social Needs Screening Questions 
 Underlined answer options indicate positive responses for the associated health-related social need. 
 A value greater than 10 when the numerical values for answers to questions 7-10 are summed indicates a positive screen for interpersonal safety.&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;display&quot;/&gt;
-  &lt;/item&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item">item</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;h2&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.prefix">prefix</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;What is your housing situation today?&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;choice&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">repeats</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a>
-                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;I do not have housing (I am staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, abandoned building, bus or train station, or in a park)&quot;/&gt;
-    &lt;/option&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a>
-                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;I have housing today, but I am worried about losing housing in the future&quot;/&gt;
-    &lt;/option&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;I have housing&quot;/&gt;
-    &lt;/option&gt;
-  &lt;/item&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item">item</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;h3&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.prefix">prefix</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;2&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a>
-          <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Think about the place you live. Do you have problems with any of the following? (check all that apply)&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;choice&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">repeats</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Bug infestation&quot;/&gt;
-    &lt;/option&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Mold&quot;/&gt;
-    &lt;/option&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Lead paint or pipes&quot;/&gt;
-    &lt;/option&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Inadequate heat&quot;/&gt;
-    &lt;/option&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Oven or stove not working&quot;/&gt;
-    &lt;/option&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;No or not working smoke detectors&quot;/&gt;
-    &lt;/option&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Water leaks&quot;/&gt;
-    &lt;/option&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;None of the above&quot;/&gt;
-    &lt;/option&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;display&quot;/&gt;
+    &lt;/item&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.item">item</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;g1.1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.prefix">prefix</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;What is your housing situation today?&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;choice&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">repeats</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a>
+                     <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;I do not have housing (I am staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, abandoned building, bus or train station, or in a park)&quot;/&gt;
+      &lt;/option&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a>
+                     <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;I have housing today, but I am worried about losing housing in the future&quot;/&gt;
+      &lt;/option&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;I have housing&quot;/&gt;
+      &lt;/option&gt;
+    &lt;/item&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.item">item</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;g1.2&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.prefix">prefix</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;2&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a>
+            <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Think about the place you live. Do you have problems with any of the following? (check all that apply)&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;choice&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">repeats</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Bug infestation&quot;/&gt;
+      &lt;/option&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Mold&quot;/&gt;
+      &lt;/option&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Lead paint or pipes&quot;/&gt;
+      &lt;/option&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Inadequate heat&quot;/&gt;
+      &lt;/option&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Oven or stove not working&quot;/&gt;
+      &lt;/option&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;No or not working smoke detectors&quot;/&gt;
+      &lt;/option&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Water leaks&quot;/&gt;
+      &lt;/option&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueBoolean</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueString</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;None of the above&quot;/&gt;
+      &lt;/option&gt;
+    &lt;/item&gt;
   &lt;/item&gt;
 &lt;/Questionnaire&gt;</pre>
 
@@ -1115,7 +1128,7 @@ Formats: <a href="Questionnaire-questionnaire-example-housing.html">Narrative</a
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Jun 1, 2018 19:12-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Jul 5, 2018 19:06-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>
         </p>
    </div>  <!-- /inner-wrapper -->

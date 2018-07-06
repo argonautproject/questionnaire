@@ -662,7 +662,7 @@ BUTQgLC619u03rAmyDb0Do6ork7AX2x6bvPikY/GrZ5QHAO2h6XSqdHGxxLG0KLuRJ+eVbvBlQZK
 BO2OhPYqakq9oAyVA+bQ24NuqibNKT3RBQeFJRNyr/Pib/7q7/7yb//67/9cAnAAC/AAE3ABG/AB
 I3ACK/ACM3ADO/ADQ3AES/AEU3AFW/AFY3AGa/AGc3AHe/AHg3AIi/AIk3AJm/AJo3AKq/AKs3AL
 u/ALw3AMy/AM03AN2/AN43AO67DnBgQAOw==
-"alt="Housing Questions"/><p>Billioux, Alexander, MD, Dphil; Verlander, Katherine, MPH; Anthony, Susan, DrPH; Alley, Dawn, PhD; National Academy of Sciences, “Standardized Screening for Health-Related Social Needs in Clinical Settings - The Accountable Health Communities Screening Tool,“ https://nam.edu/wp-content/uploads/2017/05/Standardized-Screening-for-Health-Related-Social-Needs-in-Clinical-Settings.pdf  
+" alt="Housing Questions"/><p>Billioux, Alexander, MD, Dphil; Verlander, Katherine, MPH; Anthony, Susan, DrPH; Alley, Dawn, PhD; National Academy of Sciences, “Standardized Screening for Health-Related Social Needs in Clinical Settings - The Accountable Health Communities Screening Tool,“ https://nam.edu/wp-content/uploads/2017/05/Standardized-Screening-for-Health-Related-Social-Needs-in-Clinical-Settings.pdf  
 </p></div>
   </text>
   <url value="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-housing"/>
@@ -670,9 +670,10 @@ u/ALw3AMy/AM03AN2/AN43AO67DnBgQAOw==
     <system value="http://acme.org/q-identifiers"/>
     <value value="business-identifier4"/>
   </identifier>
+  <version value="0.0.0"/>
   <title value="Housing Questions"/>
   <status value="draft"/>
-  <date value="2018-04-24"/>
+  <date value="2018-06-28T00:00:00-07:00"/>
   <publisher value="ArgonautProject"/>
   <jurisdiction>
     <coding>
@@ -695,57 +696,67 @@ u/ALw3AMy/AM03AN2/AN43AO67DnBgQAOw==
   </code>
   <subjectType value="Patient"/>
   <item>
-    <linkId value="h1"/>
-    <text value="Accountable Health Communities Core Health-Related Social Needs Screening Questions &#xA;Underlined answer options indicate positive responses for the associated health-related social need. &#xA;A value greater than 10 when the numerical values for answers to questions 7-10 are summed indicates a positive screen for interpersonal safety."/>
-    <type value="display"/>
-  </item>
-  <item>
-    <linkId value="h2"/>
-    <prefix value="1"/>
-    <text value="What is your housing situation today?"/>
-    <type value="choice"/>
-    <required value="true"/>
-    <repeats value="false"/>
-    <option>
-      <valueString value="I do not have housing (I am staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, abandoned building, bus or train station, or in a park)"/>
-    </option>
-    <option>
-      <valueString value="I have housing today, but I am worried about losing housing in the future"/>
-    </option>
-    <option>
-      <valueString value="I have housing"/>
-    </option>
-  </item>
-  <item>
-    <linkId value="h3"/>
-    <prefix value="2"/>
-    <text value="Think about the place you live. Do you have problems with any of the following? (check all that apply)"/>
-    <type value="choice"/>
-    <required value="true"/>
-    <repeats value="true"/>
-    <option>
-      <valueString value="Bug infestation"/>
-    </option>
-    <option>
-      <valueString value="Mold"/>
-    </option>
-    <option>
-      <valueString value="Lead paint or pipes"/>
-    </option>
-    <option>
-      <valueString value="Inadequate heat"/>
-    </option>
-    <option>
-      <valueString value="Oven or stove not working"/>
-    </option>
-    <option>
-      <valueString value="No or not working smoke detectors"/>
-    </option>
-    <option>
-      <valueString value="Water leaks"/>
-    </option>
-    <option>
-      <valueString value="None of the above"/>
-    </option>
+    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+      <valueBoolean value="true"/>
+    </extension>
+    <linkId value="g1"/>
+    <type value="group"/>
+    <item>
+      <linkId value="g1.d"/>
+      <text value="Accountable Health Communities Core Health-Related Social Needs Screening Questions &#xA;Underlined answer options indicate positive responses for the associated health-related social need. &#xA;A value greater than 10 when the numerical values for answers to questions 7-10 are summed indicates a positive screen for interpersonal safety."/>
+      <type value="display"/>
+    </item>
+    <item>
+      <linkId value="g1.1"/>
+      <prefix value="1"/>
+      <text value="What is your housing situation today?"/>
+      <type value="choice"/>
+      <required value="true"/>
+      <repeats value="false"/>
+      <option>
+        <valueString value="I do not have housing (I am staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, abandoned building, bus or train station, or in a park)"/>
+      </option>
+      <option>
+        <valueString value="I have housing today, but I am worried about losing housing in the future"/>
+      </option>
+      <option>
+        <valueString value="I have housing"/>
+      </option>
+    </item>
+    <item>
+      <linkId value="g1.2"/>
+      <prefix value="2"/>
+      <text value="Think about the place you live. Do you have problems with any of the following? (check all that apply)"/>
+      <type value="choice"/>
+      <required value="true"/>
+      <repeats value="true"/>
+      <option>
+        <valueString value="Bug infestation"/>
+      </option>
+      <option>
+        <valueString value="Mold"/>
+      </option>
+      <option>
+        <valueString value="Lead paint or pipes"/>
+      </option>
+      <option>
+        <valueString value="Inadequate heat"/>
+      </option>
+      <option>
+        <valueString value="Oven or stove not working"/>
+      </option>
+      <option>
+        <valueString value="No or not working smoke detectors"/>
+      </option>
+      <option>
+        <valueString value="Water leaks"/>
+      </option>
+      <option>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+          <valueBoolean value="true"/>
+        </extension>
+        <valueString value="None of the above"/>
+      </option>
+    </item>
   </item>
 </Questionnaire>

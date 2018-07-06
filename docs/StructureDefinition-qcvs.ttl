@@ -207,11 +207,7 @@
            fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
          ];
          fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "A human language." ];
-         fhir:ElementDefinition.binding.valueSetReference [
-           fhir:link <http://hl7.org/fhir/ValueSet/languages>;
-           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/languages" ]
-         ]
+         fhir:ElementDefinition.binding.description [ fhir:value "A human language." ]
        ]
      ], [
        fhir:index 5;
@@ -504,11 +500,7 @@
            fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
          ];
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "The lifecycle status of a Value Set or Concept Map." ];
-         fhir:ElementDefinition.binding.valueSetReference [
-           fhir:link <http://hl7.org/fhir/ValueSet/publication-status>;
-           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/publication-status" ]
-         ]
+         fhir:ElementDefinition.binding.description [ fhir:value "The lifecycle status of a Value Set or Concept Map." ]
        ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
@@ -697,11 +689,7 @@
            fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
          ];
          fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Countries and regions within which this artifact is targeted for use" ];
-         fhir:ElementDefinition.binding.valueSetReference [
-           fhir:link <http://hl7.org/fhir/ValueSet/jurisdiction>;
-           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/jurisdiction" ]
-         ]
+         fhir:ElementDefinition.binding.description [ fhir:value "Countries and regions within which this artifact is targeted for use" ]
        ]
      ], [
        fhir:index 22;
@@ -1511,11 +1499,7 @@
            fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
          ];
          fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "A human language." ];
-         fhir:ElementDefinition.binding.valueSetReference [
-           fhir:link <http://hl7.org/fhir/ValueSet/languages>;
-           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/languages" ]
-         ]
+         fhir:ElementDefinition.binding.description [ fhir:value "A human language." ]
        ]
      ], [
        fhir:index 49;
@@ -1542,11 +1526,7 @@
            fhir:Extension.valueString [ fhir:value "ConceptDesignationUse" ]
          ];
          fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Details of how a designation would be used." ];
-         fhir:ElementDefinition.binding.valueSetReference [
-           fhir:link <http://hl7.org/fhir/ValueSet/designation-use>;
-           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/designation-use" ]
-         ]
+         fhir:ElementDefinition.binding.description [ fhir:value "Details of how a designation would be used." ]
        ]
      ], [
        fhir:index 50;
@@ -1742,11 +1722,7 @@
            fhir:Extension.valueString [ fhir:value "FilterOperator" ]
          ];
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "The kind of operation to perform as a part of a property based filter." ];
-         fhir:ElementDefinition.binding.valueSetReference [
-           fhir:link <http://hl7.org/fhir/ValueSet/filter-operator>;
-           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/filter-operator" ]
-         ]
+         fhir:ElementDefinition.binding.description [ fhir:value "The kind of operation to perform as a part of a property based filter." ]
        ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
@@ -2495,16 +2471,6 @@
   ] .
 
 <http://hl7.org/fhir/ValueSet/all-languages> a fhir:ValueSet .
-
-<http://hl7.org/fhir/ValueSet/languages> a fhir:ValueSet .
-
-<http://hl7.org/fhir/ValueSet/publication-status> a fhir:ValueSet .
-
-<http://hl7.org/fhir/ValueSet/jurisdiction> a fhir:ValueSet .
-
-<http://hl7.org/fhir/ValueSet/designation-use> a fhir:ValueSet .
-
-<http://hl7.org/fhir/ValueSet/filter-operator> a fhir:ValueSet .
 
 # - ontology header ------------------------------------------------------------
 

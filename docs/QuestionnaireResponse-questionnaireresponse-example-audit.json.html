@@ -308,145 +308,173 @@
 {
   "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse">resourceType</a>" : "QuestionnaireResponse",
   "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.id">id</a>" : "questionnaireresponse-example-audit",
+  "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr"
+    ]
+  },
   "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.text">text</a>" : {
     "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: questionnaireresponse-example-audit&lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: AUDIT-example&lt;/p&gt;&lt;p&gt;&lt;b&gt;questionnaire&lt;/b&gt;: &lt;a href=&quot;http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit&quot;&gt;http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: completed&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: subject&lt;/p&gt;&lt;p&gt;&lt;b&gt;authored&lt;/b&gt;: May 29, 2018&lt;/p&gt;&lt;p&gt;&lt;b&gt;author&lt;/b&gt;: subject&lt;/p&gt;&lt;p&gt;&lt;b&gt;source&lt;/b&gt;: subject&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;item&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;linkId&lt;/b&gt;: a1&lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: How often do you have a drink containing alcohol?&lt;/p&gt;&lt;h3&gt;Answers&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Never (Details: [not stated] code LA6270-8 = 'LA6270-8', stated as 'Never')&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;item&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;linkId&lt;/b&gt;: a2&lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: How many drinks containing alcohol do you have on a typical day when you are drinking?&lt;/p&gt;&lt;h3&gt;Answers&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;1 or 2 (Details: [not stated] code LA1594-5 = 'LA1594-5', stated as '1 or 2')&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;item&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;linkId&lt;/b&gt;: a3&lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: How often do you have six or more drinks on one occasion?&lt;/p&gt;&lt;h3&gt;Answers&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Never (Details: [not stated] code LA6270-8 = 'LA6270-8', stated as 'Never')&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;item&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;linkId&lt;/b&gt;: a4&lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: How often during the last year have you found that you were not able to stop drinking once you had started?&lt;/p&gt;&lt;h3&gt;Answers&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Never (Details: [not stated] code LA6270-8 = 'LA6270-8', stated as 'Never')&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;item&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;linkId&lt;/b&gt;: a5&lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: How often during the last year have you failed to do what was normally expected of you because of drinking?&lt;/p&gt;&lt;h3&gt;Answers&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Never (Details: [not stated] code LA6270-8 = 'LA6270-8', stated as 'Never')&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;item&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;linkId&lt;/b&gt;: a6&lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: How often during the last year have you needed a first drink in the morning to get yourself going after a heavy drinking session?&lt;/p&gt;&lt;h3&gt;Answers&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Never (Details: [not stated] code LA6270-8 = 'LA6270-8', stated as 'Never')&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;item&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;linkId&lt;/b&gt;: a7&lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: How often during the last year have you had a feeling of guilt or remorse after drinking?&lt;/p&gt;&lt;h3&gt;Answers&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Never (Details: [not stated] code LA6270-8 = 'LA6270-8', stated as 'Never')&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;item&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;linkId&lt;/b&gt;: a8&lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: How often during the last year have you been unable to remem­ber what happened the night before because of your drinking?&lt;/p&gt;&lt;h3&gt;Answers&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Never (Details: [not stated] code LA6270-8 = 'LA6270-8', stated as 'Never')&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;item&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;linkId&lt;/b&gt;: a9&lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: Have you or someone else been injured because of your drinking?&lt;/p&gt;&lt;h3&gt;Answers&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;No (Details: [not stated] code 373067005 = '373067005', stated as 'No')&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;item&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;linkId&lt;/b&gt;: a10&lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: Has a relative, friend, doctor, or other health care worker been concerned about your drinking or suggested you cut down?&lt;/p&gt;&lt;h3&gt;Answers&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;No (Details: [not stated] code 373067005 = '373067005', stated as 'No')&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;/div&gt;"
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+    &lt;h3&gt;Response Summary&lt;/h3&gt;
+    &lt;strong&gt;Questionnaire URL:&lt;/strong&gt; http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit&lt;br /&gt;
+    &lt;strong&gt;Date Completed:&lt;/strong&gt; 2018-07-05T18:57:53.541990&lt;br /&gt;
+    &lt;hr /&gt; &lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkId = g1.q9) Have you or someone else been injured as a result of your drinking?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; No( code = 373067005)&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkId = g1.q4) During the past year, how often have you found that you were not able to stop drinking once you had started?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; Never( code = LA6270-8)&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkId = g1.q5) During the past year, how often have you failed to do what was normally expected of you because of drinking?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; Never( code = LA6270-8)&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkId = g1.q7) During the past year, how often have you had a feeling of guilt or remorse after drinking?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; Never( code = LA6270-8)&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkId = g1.q10) Has a relative or friend, doctor or other health worker been concerned about your drinking or suggested you cut down?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; No( code = 373067005)&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkId = g1.q3) How often do you have six or more drinks on one occasion?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; Never( code = LA6270-8)&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkId = g1.q6) During the past year, how often have you needed a drink in the morning to get yourself going after a heavy drinking session?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; Never( code = LA6270-8)&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkId = g1.q2) How many standard drinks containing alcohol do you have on a typical day when drinking&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; 1 or 2( code = LA15694-5)&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkId = g1.q1) How often do you have a drink containing alcohol?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; Never( code = LA6270-8)&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkId = g1.q8) During the past year, have you been unable to remember what happened the night before because you had been drinking?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; Never( code = LA6270-8)&lt;br /&gt; &lt;br /&gt;&lt;br /&gt;
+    &lt;/div&gt;"
   },
   "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.identifier">identifier</a>" : {
-    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "AUDIT-example"
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "test"
   },
   "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.questionnaire">questionnaire</a>" : {
     "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit"
   },
   "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.status">status</a>" : "completed",
   "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>" : {
-    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">display</a>" : "subject"
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "Patient/subject1"
   },
-  "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.authored">authored</a>" : "2018-05-29",
+  "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.context">context</a>" : {
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "Encounter/encounter1"
+  },
+  "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.authored">authored</a>" : "2018-07-05T18:57:53.541990",
   "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.author">author</a>" : {
-    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">display</a>" : "subject"
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "Practitioner/prov-admin1"
   },
   "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.source">source</a>" : {
-    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">display</a>" : "subject"
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "Patient/subject1"
   },
   "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item">item</a>" : [
     {
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "a1",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "How often do you have a drink containing alcohol?",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g1",
+      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.item">item</a>" : [
         {
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA6270-8",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Never"
-          }
-        }
-      ]
-    },
-    {
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "a2",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "How many drinks containing alcohol do you have on a typical day when you are drinking?",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g1.q9",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "Have you or someone else been injured as a result of your drinking?",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "373067005",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "No"
+              }
+            }
+          ]
+        },
         {
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA1594-5",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "1 or 2"
-          }
-        }
-      ]
-    },
-    {
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "a3",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "How often do you have six or more drinks on one occasion?",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g1.q4",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "During the past year, how often have you found that you were not able to stop drinking once you had started?",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA6270-8",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Never"
+              }
+            }
+          ]
+        },
         {
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA6270-8",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Never"
-          }
-        }
-      ]
-    },
-    {
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "a4",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "How often during the last year have you found that you were not able to stop drinking once you had started?",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g1.q5",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "During the past year, how often have you failed to do what was normally expected of you because of drinking?",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA6270-8",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Never"
+              }
+            }
+          ]
+        },
         {
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA6270-8",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Never"
-          }
-        }
-      ]
-    },
-    {
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "a5",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "How often during the last year have you failed to do what was normally expected of you because of drinking?",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g1.q7",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "During the past year, how often have you had a feeling of guilt or remorse after drinking?",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA6270-8",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Never"
+              }
+            }
+          ]
+        },
         {
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA6270-8",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Never"
-          }
-        }
-      ]
-    },
-    {
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "a6",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "How often during the last year have you needed a first drink in the morning to get yourself going after a heavy drinking session?",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g1.q10",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "Has a relative or friend, doctor or other health worker been concerned about your drinking or suggested you cut down?",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "373067005",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "No"
+              }
+            }
+          ]
+        },
         {
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA6270-8",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Never"
-          }
-        }
-      ]
-    },
-    {
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "a7",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "How often during the last year have you had a feeling of guilt or remorse after drinking?",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g1.q3",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "How often do you have six or more drinks on one occasion?",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA6270-8",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Never"
+              }
+            }
+          ]
+        },
         {
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA6270-8",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Never"
-          }
-        }
-      ]
-    },
-    {
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "a8",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "How often during the last year have you been unable to remem­ber what happened the night before because of your drinking?",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g1.q6",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "During the past year, how often have you needed a drink in the morning to get yourself going after a heavy drinking session?",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA6270-8",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Never"
+              }
+            }
+          ]
+        },
         {
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA6270-8",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Never"
-          }
-        }
-      ]
-    },
-    {
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "a9",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "Have you or someone else been injured because of your drinking?",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g1.q2",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "How many standard drinks containing alcohol do you have on a typical day when drinking",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA15694-5",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "1 or 2"
+              }
+            }
+          ]
+        },
         {
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "373067005",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "No"
-          }
-        }
-      ]
-    },
-    {
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "a10",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "Has a relative, friend, doctor, or other health care worker been concerned about your drinking or suggested you cut down?",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g1.q1",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "How often do you have a drink containing alcohol?",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA6270-8",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Never"
+              }
+            }
+          ]
+        },
         {
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "373067005",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "No"
-          }
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g1.q8",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "During the past year, have you been unable to remember what happened the night before because you had been drinking?",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA6270-8",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Never"
+              }
+            }
+          ]
         }
       ]
     }
@@ -501,7 +529,7 @@ Formats: <a href="QuestionnaireResponse-questionnaireresponse-example-audit.html
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Jun 1, 2018 19:12-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Jul 5, 2018 19:06-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>
         </p>
    </div>  <!-- /inner-wrapper -->

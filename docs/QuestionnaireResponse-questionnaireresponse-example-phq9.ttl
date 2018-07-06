@@ -1,4 +1,5 @@
 @prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -8,12 +9,18 @@
 <http://fhir.org/guides/argonaut-questionnaire/QuestionnaireResponse/questionnaireresponse-example-phq9> a fhir:QuestionnaireResponse;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "questionnaireresponse-example-phq9"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr";
+       fhir:index 0
+     ]
+  ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: questionnaireresponse-example-phq9</p><p><b>identifier</b>: phq9-example</p><p><b>questionnaire</b>: <a href=\"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9\">http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9</a></p><p><b>status</b>: completed</p><p><b>subject</b>: subject</p><p><b>authored</b>: May 29, 2018</p><p><b>author</b>: subject</p><p><b>source</b>: subject</p><blockquote><p><b>item</b></p><p><b>linkId</b>: LittleInterest</p><p><b>text</b>: Little interest or pleasure in doing things</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Not at all (Details: [not stated] code LA6568-5 = 'LA6568-5', stated as 'Not at all')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: FeelingDown</p><p><b>text</b>: Feeling down, depressed, or hopeless</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Not at all (Details: [not stated] code LA6568-5 = 'LA6568-5', stated as 'Not at all')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: TroubleSleeping</p><p><b>text</b>: Trouble falling or staying asleep</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Not at all (Details: [not stated] code LA6568-5 = 'LA6568-5', stated as 'Not at all')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: FeelingTired</p><p><b>text</b>: Feeling tired or having little energy</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Not at all (Details: [not stated] code LA6568-5 = 'LA6568-5', stated as 'Not at all')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: BadAppetite</p><p><b>text</b>: Poor appetite or overeating</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Not at all (Details: [not stated] code LA6568-5 = 'LA6568-5', stated as 'Not at all')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: FeelingBadAboutSelf</p><p><b>text</b>: Feeling bad about yourself - or that you are a failure or have let yourself or your family down</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Not at all (Details: [not stated] code LA6568-5 = 'LA6568-5', stated as 'Not at all')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: TroubleConcentrating</p><p><b>text</b>: Trouble concentrating on things, such as reading the newspaper or watching television</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Not at all (Details: [not stated] code LA6568-5 = 'LA6568-5', stated as 'Not at all')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: MovingSpeaking</p><p><b>text</b>: Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usualTotal score</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Not at all (Details: [not stated] code LA6568-5 = 'LA6568-5', stated as 'Not at all')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: Difficulty</p><p><b>text</b>: If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Not at all (Details: [not stated] code LA6568-5 = 'LA6568-5', stated as 'Not at all')</td></tr></table></blockquote></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h3>Response Summary</h3>\n    <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9<br />\n    <strong>Date Completed:</strong> 2018-07-05T19:04:33.435516<br />\n    <hr /> <br /> <strong>Question:</strong> (linkId = g1.q8) Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual,<br /><strong>Response:</strong> Not at all( code = LA6568-5)<br /><br /> <strong>Question:</strong> (linkId = g1.q6) Feeling bad about yourself - or that you are a failure or have let yourself or your family down,<br /><strong>Response:</strong> Several days( code = LA6569-3)<br /><br /> <strong>Question:</strong> (linkId = g2.q1) If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people,<br /><strong>Response:</strong> Very difficult( code = LA6575-0)<br /><br /> <strong>Question:</strong> (linkId = g1.q9) Thoughts that you would be better off dead, or of hurting yourself<br /><strong>Response:</strong> Not at all( code = LA6568-5)<br /><br /> <strong>Question:</strong> (linkId = g1.q1) Little interest or pleasure in doing things,<br /><strong>Response:</strong> Nearly every day( code = LA6571-9)<br /><br /> <strong>Question:</strong> (linkId = g1.q7) Trouble concentrating on things, such as reading the newspaper or watching television,<br /><strong>Response:</strong> More than half the days( code = LA6570-1)<br /><br /> <strong>Question:</strong> (linkId = g1.q4) Feeling tired or having little energy,<br /><strong>Response:</strong> Nearly every day( code = LA6571-9)<br /><br /> <strong>Question:</strong> (linkId = g1.q2) Feeling down, depressed, or hopeless,<br /><strong>Response:</strong> More than half the days( code = LA6570-1)<br /><br /> <strong>Question:</strong> (linkId = g1.q5) Poor appetite or overeating,<br /><strong>Response:</strong> Not at all( code = LA6568-5)<br /> <br /><br />\n    </div>"
   ];
   fhir:QuestionnaireResponse.identifier [
-     fhir:Identifier.value [ fhir:value "phq9-example" ]
+     fhir:Identifier.value [ fhir:value "test" ]
   ];
   fhir:QuestionnaireResponse.questionnaire [
      fhir:link <http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9>;
@@ -21,112 +28,145 @@
   ];
   fhir:QuestionnaireResponse.status [ fhir:value "completed"];
   fhir:QuestionnaireResponse.subject [
-     fhir:Reference.display [ fhir:value "subject" ]
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/Patient/subject1>;
+     fhir:Reference.reference [ fhir:value "Patient/subject1" ]
   ];
-  fhir:QuestionnaireResponse.authored [ fhir:value "2018-05-29"^^xsd:date];
+  fhir:QuestionnaireResponse.context [
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/Encounter/encounter1>;
+     fhir:Reference.reference [ fhir:value "Encounter/encounter1" ]
+  ];
+  fhir:QuestionnaireResponse.authored [ fhir:value "2018-07-05T19:04:33.435516"^^xsd:dateTime];
   fhir:QuestionnaireResponse.author [
-     fhir:Reference.display [ fhir:value "subject" ]
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/Practitioner/prov-admin1>;
+     fhir:Reference.reference [ fhir:value "Practitioner/prov-admin1" ]
   ];
   fhir:QuestionnaireResponse.source [
-     fhir:Reference.display [ fhir:value "subject" ]
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/Patient/subject1>;
+     fhir:Reference.reference [ fhir:value "Patient/subject1" ]
   ];
   fhir:QuestionnaireResponse.item [
      fhir:index 0;
-     fhir:QuestionnaireResponse.item.linkId [ fhir:value "LittleInterest" ];
-     fhir:QuestionnaireResponse.item.text [ fhir:value "Little interest or pleasure in doing things" ];
-     fhir:QuestionnaireResponse.item.answer [
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1" ];
+     fhir:QuestionnaireResponse.item.item [
        fhir:index 0;
-       fhir:QuestionnaireResponse.item.answer.valueCoding [
-         fhir:Coding.code [ fhir:value "LA6568-5" ];
-         fhir:Coding.display [ fhir:value "Not at all" ]
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1.q8" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual," ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueCoding [
+           a loinc:LA6568-5;
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA6568-5" ];
+           fhir:Coding.display [ fhir:value "Not at all" ]
+         ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1.q6" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Feeling bad about yourself - or that you are a failure or have let yourself or your family down," ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueCoding [
+           a loinc:LA6569-3;
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA6569-3" ];
+           fhir:Coding.display [ fhir:value "Several days" ]
+         ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1.q9" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Thoughts that you would be better off dead, or of hurting yourself" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueCoding [
+           a loinc:LA6568-5;
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA6568-5" ];
+           fhir:Coding.display [ fhir:value "Not at all" ]
+         ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1.q1" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Little interest or pleasure in doing things," ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueCoding [
+           a loinc:LA6571-9;
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA6571-9" ];
+           fhir:Coding.display [ fhir:value "Nearly every day" ]
+         ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1.q7" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Trouble concentrating on things, such as reading the newspaper or watching television," ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueCoding [
+           a loinc:LA6570-1;
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA6570-1" ];
+           fhir:Coding.display [ fhir:value "More than half the days" ]
+         ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1.q4" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Feeling tired or having little energy," ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueCoding [
+           a loinc:LA6571-9;
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA6571-9" ];
+           fhir:Coding.display [ fhir:value "Nearly every day" ]
+         ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1.q2" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Feeling down, depressed, or hopeless," ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueCoding [
+           a loinc:LA6570-1;
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA6570-1" ];
+           fhir:Coding.display [ fhir:value "More than half the days" ]
+         ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1.q5" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Poor appetite or overeating," ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueCoding [
+           a loinc:LA6568-5;
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA6568-5" ];
+           fhir:Coding.display [ fhir:value "Not at all" ]
+         ]
        ]
      ]
   ], [
      fhir:index 1;
-     fhir:QuestionnaireResponse.item.linkId [ fhir:value "FeelingDown" ];
-     fhir:QuestionnaireResponse.item.text [ fhir:value "Feeling down, depressed, or hopeless" ];
-     fhir:QuestionnaireResponse.item.answer [
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "g2" ];
+     fhir:QuestionnaireResponse.item.item [
        fhir:index 0;
-       fhir:QuestionnaireResponse.item.answer.valueCoding [
-         fhir:Coding.code [ fhir:value "LA6568-5" ];
-         fhir:Coding.display [ fhir:value "Not at all" ]
-       ]
-     ]
-  ], [
-     fhir:index 2;
-     fhir:QuestionnaireResponse.item.linkId [ fhir:value "TroubleSleeping" ];
-     fhir:QuestionnaireResponse.item.text [ fhir:value "Trouble falling or staying asleep" ];
-     fhir:QuestionnaireResponse.item.answer [
-       fhir:index 0;
-       fhir:QuestionnaireResponse.item.answer.valueCoding [
-         fhir:Coding.code [ fhir:value "LA6568-5" ];
-         fhir:Coding.display [ fhir:value "Not at all" ]
-       ]
-     ]
-  ], [
-     fhir:index 3;
-     fhir:QuestionnaireResponse.item.linkId [ fhir:value "FeelingTired" ];
-     fhir:QuestionnaireResponse.item.text [ fhir:value "Feeling tired or having little energy" ];
-     fhir:QuestionnaireResponse.item.answer [
-       fhir:index 0;
-       fhir:QuestionnaireResponse.item.answer.valueCoding [
-         fhir:Coding.code [ fhir:value "LA6568-5" ];
-         fhir:Coding.display [ fhir:value "Not at all" ]
-       ]
-     ]
-  ], [
-     fhir:index 4;
-     fhir:QuestionnaireResponse.item.linkId [ fhir:value "BadAppetite" ];
-     fhir:QuestionnaireResponse.item.text [ fhir:value "Poor appetite or overeating" ];
-     fhir:QuestionnaireResponse.item.answer [
-       fhir:index 0;
-       fhir:QuestionnaireResponse.item.answer.valueCoding [
-         fhir:Coding.code [ fhir:value "LA6568-5" ];
-         fhir:Coding.display [ fhir:value "Not at all" ]
-       ]
-     ]
-  ], [
-     fhir:index 5;
-     fhir:QuestionnaireResponse.item.linkId [ fhir:value "FeelingBadAboutSelf" ];
-     fhir:QuestionnaireResponse.item.text [ fhir:value "Feeling bad about yourself - or that you are a failure or have let yourself or your family down" ];
-     fhir:QuestionnaireResponse.item.answer [
-       fhir:index 0;
-       fhir:QuestionnaireResponse.item.answer.valueCoding [
-         fhir:Coding.code [ fhir:value "LA6568-5" ];
-         fhir:Coding.display [ fhir:value "Not at all" ]
-       ]
-     ]
-  ], [
-     fhir:index 6;
-     fhir:QuestionnaireResponse.item.linkId [ fhir:value "TroubleConcentrating" ];
-     fhir:QuestionnaireResponse.item.text [ fhir:value "Trouble concentrating on things, such as reading the newspaper or watching television" ];
-     fhir:QuestionnaireResponse.item.answer [
-       fhir:index 0;
-       fhir:QuestionnaireResponse.item.answer.valueCoding [
-         fhir:Coding.code [ fhir:value "LA6568-5" ];
-         fhir:Coding.display [ fhir:value "Not at all" ]
-       ]
-     ]
-  ], [
-     fhir:index 7;
-     fhir:QuestionnaireResponse.item.linkId [ fhir:value "MovingSpeaking" ];
-     fhir:QuestionnaireResponse.item.text [ fhir:value "Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usualTotal score" ];
-     fhir:QuestionnaireResponse.item.answer [
-       fhir:index 0;
-       fhir:QuestionnaireResponse.item.answer.valueCoding [
-         fhir:Coding.code [ fhir:value "LA6568-5" ];
-         fhir:Coding.display [ fhir:value "Not at all" ]
-       ]
-     ]
-  ], [
-     fhir:index 8;
-     fhir:QuestionnaireResponse.item.linkId [ fhir:value "Difficulty" ];
-     fhir:QuestionnaireResponse.item.text [ fhir:value "If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people" ];
-     fhir:QuestionnaireResponse.item.answer [
-       fhir:index 0;
-       fhir:QuestionnaireResponse.item.answer.valueCoding [
-         fhir:Coding.code [ fhir:value "LA6568-5" ];
-         fhir:Coding.display [ fhir:value "Not at all" ]
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "g2.q1" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people," ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueCoding [
+           a loinc:LA6575-0;
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA6575-0" ];
+           fhir:Coding.display [ fhir:value "Very difficult" ]
+         ]
        ]
      ]
   ] .

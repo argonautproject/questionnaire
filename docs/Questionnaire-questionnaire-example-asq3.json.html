@@ -1365,7 +1365,7 @@ tD579GI7dkpntjbfM2ZzNlNvtR6vs2jn9GmfdCY7hDUvtFxncmgvtmvvtGU/BBwsAHlGgG4nwAKY
 822vCR1bNWwftF4jtkXgNWjTsUy/NmtqyzZDr3ZSQ7MWg7RSI/dV93NdX/dh0zYbe7Zls7Us8/Zv
 B7cxgncmobd5r/f04rOVqTd7x/fzUvKMwbd83zd+57d+7zd/97d//zeAB7iADziBF7iBHziCJ7iC
 LziDN7iDPziER7iEV2hAAAA7
-&quot;alt=&quot;Ages and Stages Questionnaire (ASQ-3) Sample 16 Month Questionnaire&quot;/&gt;&lt;p&gt;Ages &amp;amp; Stages Questionnaires®, Third Edition (ASQ-3™), Squires &amp;amp; Bricker © 2009 Paul H. Brookes Publishing Co. All rights reserved.&lt;/p&gt;&lt;/div&gt;"
+&quot; alt=&quot;Ages and Stages Questionnaire (ASQ-3) Sample 16 Month Questionnaire&quot;/&gt;&lt;p&gt;Ages &amp;amp; Stages Questionnaires®, Third Edition (ASQ-3™), Squires &amp;amp; Bricker © 2009 Paul H. Brookes Publishing Co. All rights reserved.&lt;/p&gt;&lt;/div&gt;"
   },
   "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-asq3",
   "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.identifier">identifier</a>" : [
@@ -1374,9 +1374,10 @@ LziDN7iDPziER7iEV2hAAAA7
       "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "business-identifier5"
     }
   ],
+  "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.version">version</a>" : "0.0.0",
   "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.title">title</a>" : "Ages and Stages Questionnaire (ASQ-3) Sample 16 Month Questionnaire",
   "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.status">status</a>" : "draft",
-  "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.date">date</a>" : "2018-04-21T01:22:33Z",
+  "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.date">date</a>" : "2018-06-28T00:00:00-07:00",
   "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.publisher">publisher</a>" : "ArgonautProject",
   "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.jurisdiction">jurisdiction</a>" : [
     {
@@ -1412,23 +1413,34 @@ LziDN7iDPziER7iEV2hAAAA7
   ],
   "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item">item</a>" : [
     {
-      "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "Instructions",
-      "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a>" : "On the following pages are questions about activities babies may do. Your baby may have already done some of the activities described here, and there may be some your baby has not begun doing yet. For each item, please fill in the circle that indicates whether your baby is doing the activity regularly, sometimes, or not yet.  Important Points to Remember: Try each activity with your baby before marking a response. Make completing this questionnaire a game that is fun for you and your child. Make sure your child is rested and fed. Please return this questionnaire by _______________.",
-      "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a>" : "display"
+      "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">extension</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueBoolean</a>" : true
+        }
+      ],
+      "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "G0",
+      "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a>" : "group",
+      "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.item">item</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "G0.d",
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a>" : "On the following pages are questions about activities babies may do. Your baby may have already done some of the activities described here, and there may be some your baby has not begun doing yet. For each item, please fill in the circle that indi-cates whether your baby is doing the activity regularly, sometimes, or not yet.  Important Points to Remember: Try each activity with your baby before marking a response. Make completing this questionnaire a game that is fun for you and your child. Make sure your child is rested and fed. Please return this questionnaire by _______________.",
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a>" : "display"
+        }
+      ]
     },
     {
-      "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "g1",
+      "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "G1",
       "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a>" : "GROSS MOTOR",
       "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a>" : "group",
       "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a>" : true,
       "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.item">item</a>" : [
         {
-          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "g1.4",
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "G1.4",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.prefix">prefix</a>" : "4",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a>" : "Does your child move around by walking, rather than crawling on her hands and knees",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a>" : "choice",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">repeats</a>" : false,
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>" : [
             {
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>" : [
@@ -1472,12 +1484,11 @@ LziDN7iDPziER7iEV2hAAAA7
           ]
         },
         {
-          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "g1.5",
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "G1.5",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.prefix">prefix</a>" : "5",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a>" : "Does your child walk well and seldom fall?",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a>" : "choice",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">repeats</a>" : false,
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>" : [
             {
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>" : [
@@ -1521,12 +1532,11 @@ LziDN7iDPziER7iEV2hAAAA7
           ]
         },
         {
-          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "g1.6",
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "G1.6",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.prefix">prefix</a>" : "6",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a>" : "Does your child climb on an object such as a chair to reach something he wants ( for example, to get a toy on the counter or to &quot;help&quot; you in the kitchen)?",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a>" : "choice",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">repeats</a>" : false,
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>" : [
             {
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>" : [
@@ -1572,18 +1582,17 @@ LziDN7iDPziER7iEV2hAAAA7
       ]
     },
     {
-      "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "g2",
+      "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "G2",
       "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a>" : "FINE MOTOR",
       "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a>" : "group",
       "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a>" : true,
       "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.item">item</a>" : [
         {
-          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "g2.4",
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "G2.4",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.prefix">prefix</a>" : "4",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a>" : "Does your child help turn pages of a book? (You may lift a page for her to grasp.)",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a>" : "choice",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">repeats</a>" : false,
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>" : [
             {
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>" : [
@@ -1627,12 +1636,11 @@ LziDN7iDPziER7iEV2hAAAA7
           ]
         },
         {
-          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "g2.5",
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "G2.5",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.prefix">prefix</a>" : "5",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a>" : "Does your child throw a small ball with a forward arm motion? (if he simply drops the ball, mark &quot;not yet&quot; for this item)",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a>" : "choice",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">repeats</a>" : false,
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>" : [
             {
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>" : [
@@ -1676,12 +1684,11 @@ LziDN7iDPziER7iEV2hAAAA7
           ]
         },
         {
-          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "g2.6",
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "G2.6",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.prefix">prefix</a>" : "6",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a>" : "Does your child stack a small block or toy on top of another one? (You could also use spools of thread, small boxes, or toys that are about 1 inch in size.)",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a>" : "choice",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a>" : true,
-          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">repeats</a>" : false,
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option">option</a>" : [
             {
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>" : [
@@ -1777,7 +1784,7 @@ Formats: <a href="Questionnaire-questionnaire-example-asq3.html">Narrative</a>, 
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Jun 1, 2018 19:12-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Jul 5, 2018 19:06-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>
         </p>
    </div>  <!-- /inner-wrapper -->

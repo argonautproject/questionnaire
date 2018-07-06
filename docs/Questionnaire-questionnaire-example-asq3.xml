@@ -1056,16 +1056,17 @@ tD579GI7dkpntjbfM2ZzNlNvtR6vs2jn9GmfdCY7hDUvtFxncmgvtmvvtGU/BBwsAHlGgG4nwAKY
 822vCR1bNWwftF4jtkXgNWjTsUy/NmtqyzZDr3ZSQ7MWg7RSI/dV93NdX/dh0zYbe7Zls7Us8/Zv
 B7cxgncmobd5r/f04rOVqTd7x/fzUvKMwbd83zd+57d+7zd/97d//zeAB7iADziBF7iBHziCJ7iC
 LziDN7iDPziER7iEV2hAAAA7
-"alt="Ages and Stages Questionnaire (ASQ-3) Sample 16 Month Questionnaire"/><p>Ages &amp; Stages Questionnaires®, Third Edition (ASQ-3™), Squires &amp; Bricker © 2009 Paul H. Brookes Publishing Co. All rights reserved.</p></div>
+" alt="Ages and Stages Questionnaire (ASQ-3) Sample 16 Month Questionnaire"/><p>Ages &amp; Stages Questionnaires®, Third Edition (ASQ-3™), Squires &amp; Bricker © 2009 Paul H. Brookes Publishing Co. All rights reserved.</p></div>
   </text>
   <url value="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-asq3"/>
   <identifier>
     <system value="http://acme.org/q-identifiers"/>
     <value value="business-identifier5"/>
   </identifier>
+  <version value="0.0.0"/>
   <title value="Ages and Stages Questionnaire (ASQ-3) Sample 16 Month Questionnaire"/>
   <status value="draft"/>
-  <date value="2018-04-21T01:22:33Z"/>
+  <date value="2018-06-28T00:00:00-07:00"/>
   <publisher value="ArgonautProject"/>
   <jurisdiction>
     <coding>
@@ -1088,22 +1089,28 @@ LziDN7iDPziER7iEV2hAAAA7
   </code>
   <subjectType value="Patient"/>
   <item>
-    <linkId value="Instructions"/>
-    <text value="On the following pages are questions about activities babies may do. Your baby may have already done some of the activities described here, and there may be some your baby has not begun doing yet. For each item, please fill in the circle that indicates whether your baby is doing the activity regularly, sometimes, or not yet.  Important Points to Remember: Try each activity with your baby before marking a response. Make completing this questionnaire a game that is fun for you and your child. Make sure your child is rested and fed. Please return this questionnaire by _______________."/>
-    <type value="display"/>
+    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+      <valueBoolean value="true"/>
+    </extension>
+    <linkId value="G0"/>
+    <type value="group"/>
+    <item>
+      <linkId value="G0.d"/>
+      <text value="On the following pages are questions about activities babies may do. Your baby may have already done some of the activities described here, and there may be some your baby has not begun doing yet. For each item, please fill in the circle that indi-cates whether your baby is doing the activity regularly, sometimes, or not yet.  Important Points to Remember: Try each activity with your baby before marking a response. Make completing this questionnaire a game that is fun for you and your child. Make sure your child is rested and fed. Please return this questionnaire by _______________."/>
+      <type value="display"/>
+    </item>
   </item>
   <item>
-    <linkId value="g1"/>
+    <linkId value="G1"/>
     <text value="GROSS MOTOR"/>
     <type value="group"/>
     <required value="true"/>
     <item>
-      <linkId value="g1.4"/>
+      <linkId value="G1.4"/>
       <prefix value="4"/>
       <text value="Does your child move around by walking, rather than crawling on her hands and knees"/>
       <type value="choice"/>
       <required value="true"/>
-      <repeats value="false"/>
       <option>
         <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
           <valueDecimal value="10"/>
@@ -1136,12 +1143,11 @@ LziDN7iDPziER7iEV2hAAAA7
       </option>
     </item>
     <item>
-      <linkId value="g1.5"/>
+      <linkId value="G1.5"/>
       <prefix value="5"/>
       <text value="Does your child walk well and seldom fall?"/>
       <type value="choice"/>
       <required value="true"/>
-      <repeats value="false"/>
       <option>
         <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
           <valueDecimal value="10"/>
@@ -1174,12 +1180,11 @@ LziDN7iDPziER7iEV2hAAAA7
       </option>
     </item>
     <item>
-      <linkId value="g1.6"/>
+      <linkId value="G1.6"/>
       <prefix value="6"/>
       <text value="Does your child climb on an object such as a chair to reach something he wants ( for example, to get a toy on the counter or to &quot;help&quot; you in the kitchen)?"/>
       <type value="choice"/>
       <required value="true"/>
-      <repeats value="false"/>
       <option>
         <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
           <valueDecimal value="10"/>
@@ -1213,17 +1218,16 @@ LziDN7iDPziER7iEV2hAAAA7
     </item>
   </item>
   <item>
-    <linkId value="g2"/>
+    <linkId value="G2"/>
     <text value="FINE MOTOR"/>
     <type value="group"/>
     <required value="true"/>
     <item>
-      <linkId value="g2.4"/>
+      <linkId value="G2.4"/>
       <prefix value="4"/>
       <text value="Does your child help turn pages of a book? (You may lift a page for her to grasp.)"/>
       <type value="choice"/>
       <required value="true"/>
-      <repeats value="false"/>
       <option>
         <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
           <valueDecimal value="10"/>
@@ -1256,12 +1260,11 @@ LziDN7iDPziER7iEV2hAAAA7
       </option>
     </item>
     <item>
-      <linkId value="g2.5"/>
+      <linkId value="G2.5"/>
       <prefix value="5"/>
       <text value="Does your child throw a small ball with a forward arm motion? (if he simply drops the ball, mark &quot;not yet&quot; for this item)"/>
       <type value="choice"/>
       <required value="true"/>
-      <repeats value="false"/>
       <option>
         <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
           <valueDecimal value="10"/>
@@ -1294,12 +1297,11 @@ LziDN7iDPziER7iEV2hAAAA7
       </option>
     </item>
     <item>
-      <linkId value="g2.6"/>
+      <linkId value="G2.6"/>
       <prefix value="6"/>
       <text value="Does your child stack a small block or toy on top of another one? (You could also use spools of thread, small boxes, or toys that are about 1 inch in size.)"/>
       <type value="choice"/>
       <required value="true"/>
-      <repeats value="false"/>
       <option>
         <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
           <valueDecimal value="10"/>

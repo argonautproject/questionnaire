@@ -1,4 +1,5 @@
 @prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -8,12 +9,18 @@
 <http://fhir.org/guides/argonaut-questionnaire/QuestionnaireResponse/questionnaireresponse-example-dast> a fhir:QuestionnaireResponse;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "questionnaireresponse-example-dast"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr";
+       fhir:index 0
+     ]
+  ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: questionnaireresponse-example-dast</p><p><b>identifier</b>: DAST-example</p><p><b>questionnaire</b>: <a href=\"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast\">http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast</a></p><p><b>status</b>: completed</p><p><b>subject</b>: subject</p><p><b>authored</b>: May 29, 2018</p><p><b>author</b>: subject</p><p><b>source</b>: subject</p><blockquote><p><b>item</b></p><p><b>linkId</b>: d2</p><p><b>text</b>: Have you used drugs other than those required for medical reasons?</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Yes</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: d3</p><p><b>text</b>: Do you abuse more than one drug at a time?</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Yes</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: d4</p><p><b>text</b>: Are you unable to stop abusing drugs when you want to?</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Yes</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: d5</p><p><b>text</b>: Have you ever had blackouts or flashbacks as a result of drug use?</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Yes</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: d6</p><p><b>text</b>: Do you ever feel bad or guilty about your drug use?</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Yes</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: d7</p><p><b>text</b>: Does your spouse (or parents) ever complain about your involvement with drugs?</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Yes</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: d8</p><p><b>text</b>: Have you neglected your family because of your use of drugs?</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Yes</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: d9</p><p><b>text</b>: Have you engaged in illegal activities in order to obtain drugs?</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Yes</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: d10</p><p><b>text</b>: Have you ever experienced withdrawal symptoms (felt sick) when you stopped taking drugs?</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Yes</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: d11</p><p><b>text</b>: Have you had medical problems as a result of your drug use (e.g. memory loss, hepatitis, convulsions, bleeding)?</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Yes</td></tr></table></blockquote></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h3>Response Summary</h3>\n    <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast<br />\n    <strong>Date Completed:</strong> 2018-07-05T18:19:36.571848<br />\n    <hr /> <br /> <strong>Question:</strong> (linkId = g1.q1) Have you used drugs other than those required for medical reasons?<br /><strong>Response:</strong> Yes ( code = LA33-6 )<br /><br /> <strong>Question:</strong> (linkId = g1.q7) Have you neglected your family because of your use of drugs?<br /><strong>Response:</strong> No ( code = LA 32-8 )<br /><br /> <strong>Question:</strong> (linkId = g1.q2) Do you abuse more than one drug at a time?<br /><strong>Response:</strong> Yes ( code = LA33-6 )<br /><br /> <strong>Question:</strong> (linkId = g1.q6) Does your spouse (or parents) ever complain about your involvement with drugs?<br /><strong>Response:</strong> Yes ( code = LA33-6 )<br /><br /> <strong>Question:</strong> (linkId = g1.q8) Have you engaged in illegal activities in order to obtain drugs?<br /><strong>Response:</strong> No ( code = LA 32-8 )<br /><br /> <strong>Question:</strong> (linkId = g1.q4) Have you ever had blackouts or flashbacks as a result of drug use?<br /><strong>Response:</strong> No ( code = LA 32-8 )<br /><br /> <strong>Question:</strong> (linkId = g1.q10) Have you had medical problems as a result of your drug use (e.g. memory loss, hepatitis, convulsions, bleeding)?<br /><strong>Response:</strong> No ( code = LA 32-8 )<br /><br /> <strong>Question:</strong> (linkId = g1.q3) Are you unable to stop abusing drugs when you want to?<br /><strong>Response:</strong> Yes ( code = LA33-6 )<br /><br /> <strong>Question:</strong> (linkId = g1.q9) Have you ever experienced withdrawal symptoms (felt sick) when you stopped taking drugs?<br /><strong>Response:</strong> No ( code = LA 32-8 )<br /><br /> <strong>Question:</strong> (linkId = g1.q5) Do you ever feel bad or guilty about your drug use?<br /><strong>Response:</strong> No ( code = LA 32-8 )<br />\n    </div>"
   ];
   fhir:QuestionnaireResponse.identifier [
-     fhir:Identifier.value [ fhir:value "DAST-example" ]
+     fhir:Identifier.value [ fhir:value "test" ]
   ];
   fhir:QuestionnaireResponse.questionnaire [
      fhir:link <http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast>;
@@ -21,94 +28,155 @@
   ];
   fhir:QuestionnaireResponse.status [ fhir:value "completed"];
   fhir:QuestionnaireResponse.subject [
-     fhir:Reference.display [ fhir:value "subject" ]
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/Patient/subject1>;
+     fhir:Reference.reference [ fhir:value "Patient/subject1" ]
   ];
-  fhir:QuestionnaireResponse.authored [ fhir:value "2018-05-29"^^xsd:date];
+  fhir:QuestionnaireResponse.context [
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/Encounter/encounter1>;
+     fhir:Reference.reference [ fhir:value "Encounter/encounter1" ]
+  ];
+  fhir:QuestionnaireResponse.authored [ fhir:value "2018-07-05T18:19:36.571848"^^xsd:dateTime];
   fhir:QuestionnaireResponse.author [
-     fhir:Reference.display [ fhir:value "subject" ]
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/Practitioner/prov-admin1>;
+     fhir:Reference.reference [ fhir:value "Practitioner/prov-admin1" ]
   ];
   fhir:QuestionnaireResponse.source [
-     fhir:Reference.display [ fhir:value "subject" ]
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/Patient/subject1>;
+     fhir:Reference.reference [ fhir:value "Patient/subject1" ]
   ];
   fhir:QuestionnaireResponse.item [
      fhir:index 0;
-     fhir:QuestionnaireResponse.item.linkId [ fhir:value "d2" ];
-     fhir:QuestionnaireResponse.item.text [ fhir:value "Have you used drugs other than those required for medical reasons?" ];
-     fhir:QuestionnaireResponse.item.answer [
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1" ];
+     fhir:QuestionnaireResponse.item.item [
        fhir:index 0;
-       fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Yes" ]
-     ]
-  ], [
-     fhir:index 1;
-     fhir:QuestionnaireResponse.item.linkId [ fhir:value "d3" ];
-     fhir:QuestionnaireResponse.item.text [ fhir:value "Do you abuse more than one drug at a time?" ];
-     fhir:QuestionnaireResponse.item.answer [
-       fhir:index 0;
-       fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Yes" ]
-     ]
-  ], [
-     fhir:index 2;
-     fhir:QuestionnaireResponse.item.linkId [ fhir:value "d4" ];
-     fhir:QuestionnaireResponse.item.text [ fhir:value "Are you unable to stop abusing drugs when you want to?" ];
-     fhir:QuestionnaireResponse.item.answer [
-       fhir:index 0;
-       fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Yes" ]
-     ]
-  ], [
-     fhir:index 3;
-     fhir:QuestionnaireResponse.item.linkId [ fhir:value "d5" ];
-     fhir:QuestionnaireResponse.item.text [ fhir:value "Have you ever had blackouts or flashbacks as a result of drug use?" ];
-     fhir:QuestionnaireResponse.item.answer [
-       fhir:index 0;
-       fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Yes" ]
-     ]
-  ], [
-     fhir:index 4;
-     fhir:QuestionnaireResponse.item.linkId [ fhir:value "d6" ];
-     fhir:QuestionnaireResponse.item.text [ fhir:value "Do you ever feel bad or guilty about your drug use?" ];
-     fhir:QuestionnaireResponse.item.answer [
-       fhir:index 0;
-       fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Yes" ]
-     ]
-  ], [
-     fhir:index 5;
-     fhir:QuestionnaireResponse.item.linkId [ fhir:value "d7" ];
-     fhir:QuestionnaireResponse.item.text [ fhir:value "Does your spouse (or parents) ever complain about your involvement with drugs?" ];
-     fhir:QuestionnaireResponse.item.answer [
-       fhir:index 0;
-       fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Yes" ]
-     ]
-  ], [
-     fhir:index 6;
-     fhir:QuestionnaireResponse.item.linkId [ fhir:value "d8" ];
-     fhir:QuestionnaireResponse.item.text [ fhir:value "Have you neglected your family because of your use of drugs?" ];
-     fhir:QuestionnaireResponse.item.answer [
-       fhir:index 0;
-       fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Yes" ]
-     ]
-  ], [
-     fhir:index 7;
-     fhir:QuestionnaireResponse.item.linkId [ fhir:value "d9" ];
-     fhir:QuestionnaireResponse.item.text [ fhir:value "Have you engaged in illegal activities in order to obtain drugs?" ];
-     fhir:QuestionnaireResponse.item.answer [
-       fhir:index 0;
-       fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Yes" ]
-     ]
-  ], [
-     fhir:index 8;
-     fhir:QuestionnaireResponse.item.linkId [ fhir:value "d10" ];
-     fhir:QuestionnaireResponse.item.text [ fhir:value "Have you ever experienced withdrawal symptoms (felt sick) when you stopped taking drugs?" ];
-     fhir:QuestionnaireResponse.item.answer [
-       fhir:index 0;
-       fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Yes" ]
-     ]
-  ], [
-     fhir:index 9;
-     fhir:QuestionnaireResponse.item.linkId [ fhir:value "d11" ];
-     fhir:QuestionnaireResponse.item.text [ fhir:value "Have you had medical problems as a result of your drug use (e.g. memory loss, hepatitis, convulsions, bleeding)?" ];
-     fhir:QuestionnaireResponse.item.answer [
-       fhir:index 0;
-       fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Yes" ]
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1.q1" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Have you used drugs other than those required for medical reasons?" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueCoding [
+           a loinc:LA33-6 ;
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA33-6 " ];
+           fhir:Coding.display [ fhir:value "Yes" ]
+         ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1.q7" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Have you neglected your family because of your use of drugs?" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueCoding [
+           a loinc:LA 32-8 ;
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA 32-8 " ];
+           fhir:Coding.display [ fhir:value "No" ]
+         ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1.q2" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Do you abuse more than one drug at a time?" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueCoding [
+           a loinc:LA33-6 ;
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA33-6 " ];
+           fhir:Coding.display [ fhir:value "Yes" ]
+         ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1.q6" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Does your spouse (or parents) ever complain about your involvement with drugs?" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueCoding [
+           a loinc:LA33-6 ;
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA33-6 " ];
+           fhir:Coding.display [ fhir:value "Yes" ]
+         ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1.q8" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Have you engaged in illegal activities in order to obtain drugs?" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueCoding [
+           a loinc:LA 32-8 ;
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA 32-8 " ];
+           fhir:Coding.display [ fhir:value "No" ]
+         ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1.q4" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Have you ever had blackouts or flashbacks as a result of drug use?" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueCoding [
+           a loinc:LA 32-8 ;
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA 32-8 " ];
+           fhir:Coding.display [ fhir:value "No" ]
+         ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1.q10" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Have you had medical problems as a result of your drug use (e.g. memory loss, hepatitis, convulsions, bleeding)?" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueCoding [
+           a loinc:LA 32-8 ;
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA 32-8 " ];
+           fhir:Coding.display [ fhir:value "No" ]
+         ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1.q3" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Are you unable to stop abusing drugs when you want to?" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueCoding [
+           a loinc:LA33-6 ;
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA33-6 " ];
+           fhir:Coding.display [ fhir:value "Yes" ]
+         ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1.q9" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Have you ever experienced withdrawal symptoms (felt sick) when you stopped taking drugs?" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueCoding [
+           a loinc:LA 32-8 ;
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA 32-8 " ];
+           fhir:Coding.display [ fhir:value "No" ]
+         ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1.q5" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Do you ever feel bad or guilty about your drug use?" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueCoding [
+           a loinc:LA 32-8 ;
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA 32-8 " ];
+           fhir:Coding.display [ fhir:value "No" ]
+         ]
+       ]
      ]
   ] .
 

@@ -1,97 +1,121 @@
 {
   "resourceType": "QuestionnaireResponse",
   "id": "questionnaireresponse-example-asq3",
+  "meta": {
+    "profile": [
+      "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr"
+    ]
+  },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: questionnaireresponse-example-asq3</p><p><b>identifier</b>: ASQ3-example</p><p><b>questionnaire</b>: <a href=\"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-asq3\">http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-asq3</a></p><p><b>status</b>: completed</p><p><b>subject</b>: subject</p><p><b>authored</b>: May 29, 2018</p><p><b>author</b>: subject</p><p><b>source</b>: subject</p><blockquote><p><b>item</b></p><p><b>linkId</b>: g1.4</p><p><b>text</b>: Does your child move around by walking, rather than crawling on her hands and knees</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>YES (Details: [not stated] code yes = 'yes', stated as 'YES')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: g1.5</p><p><b>text</b>: Does your child walk well and seldom fall?</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>YES (Details: [not stated] code yes = 'yes', stated as 'YES')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: g1.6</p><p><b>text</b>: Does your child climb on an object such as a chair to reach something he wants ( for example, to get a toy on the counter or to help you in the kitchen)?</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>YES (Details: [not stated] code yes = 'yes', stated as 'YES')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: g2.4</p><p><b>text</b>: Does your child help turn pages of a book? (You may lift a page for her to grasp.)</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>YES (Details: [not stated] code yes = 'yes', stated as 'YES')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: g2.5</p><p><b>text</b>: Does your child throw a small ball with a forward arm motion? (if he simply drops the ball, mark not yet for this item)</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>YES (Details: [not stated] code yes = 'yes', stated as 'YES')</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: g2.6</p><p><b>text</b>: Does your child stack a small block or toy on top of another one? (You could also use spools of thread, small boxes, or toys that are about 1 inch in size.)</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>YES (Details: [not stated] code yes = 'yes', stated as 'YES')</td></tr></table></blockquote></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h3>Response Summary</h3>\n    <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-asq3<br />\n    <strong>Date Completed:</strong> 2018-07-05T19:00:16.185745<br />\n    <hr /> <br /> <strong>Question:</strong> (linkId = G1.4) Does your child move around by walking, rather than crawling on her hands and knees<br /><strong>Response:</strong> YES( code = yes)<br /><br /> <strong>Question:</strong> (linkId = G1.5) Does your child walk well and seldom fall?<br /><strong>Response:</strong> YES( code = yes)<br /><br /> <strong>Question:</strong> (linkId = G2.5) Does your child throw a small ball with a forward arm motion? (if he simply drops the ball, mark \"not yet\" for this item)<br /><strong>Response:</strong> SOMETIMES( code = sometimes)<br /><br /> <strong>Question:</strong> (linkId = G1.6) Does your child climb on an object such as a chair to reach something he wants ( for example, to get a toy on the counter or to \"help\" you in the kitchen)?<br /><strong>Response:</strong> SOMETIMES( code = sometimes)<br /><br /> <strong>Question:</strong> (linkId = G2.6) Does your child stack a small block or toy on top of another one? (You could also use spools of thread, small boxes, or toys that are about 1 inch in size.)<br /><strong>Response:</strong> YES( code = yes)<br /><br /> <strong>Question:</strong> (linkId = G2.4) Does your child help turn pages of a book? (You may lift a page for her to grasp.)<br /><strong>Response:</strong> SOMETIMES( code = sometimes)<br /> <br /><br />\n    </div>"
   },
   "identifier": {
-    "value": "ASQ3-example"
+    "value": "test"
   },
   "questionnaire": {
     "reference": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-asq3"
   },
   "status": "completed",
   "subject": {
-    "display": "subject"
+    "reference": "Patient/subject1"
   },
-  "authored": "2018-05-29",
+  "context": {
+    "reference": "Encounter/encounter1"
+  },
+  "authored": "2018-07-05T19:00:16.185745",
   "author": {
-    "display": "subject"
+    "reference": "Practitioner/prov-admin1"
   },
   "source": {
-    "display": "subject"
+    "reference": "Patient/subject1"
   },
   "item": [
     {
-      "linkId": "g1.4",
-      "text": "Does your child move around by walking, rather than crawling on her hands and knees",
-      "answer": [
+      "linkId": "G1",
+      "item": [
         {
-          "valueCoding": {
-            "code": "yes",
-            "display": "YES"
-          }
+          "linkId": "G1.4",
+          "text": "Does your child move around by walking, rather than crawling on her hands and knees",
+          "answer": [
+            {
+              "valueCoding": {
+                "system": "http://fhir.org/guides/argonaut-questionnaire/ValueSet/example-answerlist2",
+                "code": "yes",
+                "display": "YES"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "G1.5",
+          "text": "Does your child walk well and seldom fall?",
+          "answer": [
+            {
+              "valueCoding": {
+                "system": "http://fhir.org/guides/argonaut-questionnaire/ValueSet/example-answerlist2",
+                "code": "yes",
+                "display": "YES"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "G1.6",
+          "text": "Does your child climb on an object such as a chair to reach something he wants ( for example, to get a toy on the counter or to \"help\" you in the kitchen)?",
+          "answer": [
+            {
+              "valueCoding": {
+                "system": "http://fhir.org/guides/argonaut-questionnaire/ValueSet/example-answerlist2",
+                "code": "sometimes",
+                "display": "SOMETIMES"
+              }
+            }
+          ]
         }
       ]
     },
     {
-      "linkId": "g1.5",
-      "text": "Does your child walk well and seldom fall?",
-      "answer": [
+      "linkId": "G2",
+      "item": [
         {
-          "valueCoding": {
-            "code": "yes",
-            "display": "YES"
-          }
-        }
-      ]
-    },
-    {
-      "linkId": "g1.6",
-      "text": "Does your child climb on an object such as a chair to reach something he wants ( for example, to get a toy on the counter or to help you in the kitchen)?",
-      "answer": [
+          "linkId": "G2.5",
+          "text": "Does your child throw a small ball with a forward arm motion? (if he simply drops the ball, mark \"not yet\" for this item)",
+          "answer": [
+            {
+              "valueCoding": {
+                "system": "http://fhir.org/guides/argonaut-questionnaire/ValueSet/example-answerlist2",
+                "code": "sometimes",
+                "display": "SOMETIMES"
+              }
+            }
+          ]
+        },
         {
-          "valueCoding": {
-            "code": "yes",
-            "display": "YES"
-          }
-        }
-      ]
-    },
-    {
-      "linkId": "g2.4",
-      "text": "Does your child help turn pages of a book? (You may lift a page for her to grasp.)",
-      "answer": [
+          "linkId": "G2.6",
+          "text": "Does your child stack a small block or toy on top of another one? (You could also use spools of thread, small boxes, or toys that are about 1 inch in size.)",
+          "answer": [
+            {
+              "valueCoding": {
+                "system": "http://fhir.org/guides/argonaut-questionnaire/ValueSet/example-answerlist2",
+                "code": "yes",
+                "display": "YES"
+              }
+            }
+          ]
+        },
         {
-          "valueCoding": {
-            "code": "yes",
-            "display": "YES"
-          }
-        }
-      ]
-    },
-    {
-      "linkId": "g2.5",
-      "text": "Does your child throw a small ball with a forward arm motion? (if he simply drops the ball, mark not yet for this item)",
-      "answer": [
-        {
-          "valueCoding": {
-            "code": "yes",
-            "display": "YES"
-          }
-        }
-      ]
-    },
-    {
-      "linkId": "g2.6",
-      "text": "Does your child stack a small block or toy on top of another one? (You could also use spools of thread, small boxes, or toys that are about 1 inch in size.)",
-      "answer": [
-        {
-          "valueCoding": {
-            "code": "yes",
-            "display": "YES"
-          }
+          "linkId": "G2.4",
+          "text": "Does your child help turn pages of a book? (You may lift a page for her to grasp.)",
+          "answer": [
+            {
+              "valueCoding": {
+                "system": "http://fhir.org/guides/argonaut-questionnaire/ValueSet/example-answerlist2",
+                "code": "sometimes",
+                "display": "SOMETIMES"
+              }
+            }
+          ]
         }
       ]
     }

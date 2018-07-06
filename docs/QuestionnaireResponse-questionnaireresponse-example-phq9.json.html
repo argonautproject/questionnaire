@@ -308,133 +308,165 @@
 {
   "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse">resourceType</a>" : "QuestionnaireResponse",
   "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.id">id</a>" : "questionnaireresponse-example-phq9",
+  "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr"
+    ]
+  },
   "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.text">text</a>" : {
     "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: questionnaireresponse-example-phq9&lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: phq9-example&lt;/p&gt;&lt;p&gt;&lt;b&gt;questionnaire&lt;/b&gt;: &lt;a href=&quot;http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9&quot;&gt;http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: completed&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: subject&lt;/p&gt;&lt;p&gt;&lt;b&gt;authored&lt;/b&gt;: May 29, 2018&lt;/p&gt;&lt;p&gt;&lt;b&gt;author&lt;/b&gt;: subject&lt;/p&gt;&lt;p&gt;&lt;b&gt;source&lt;/b&gt;: subject&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;item&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;linkId&lt;/b&gt;: LittleInterest&lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: Little interest or pleasure in doing things&lt;/p&gt;&lt;h3&gt;Answers&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Not at all (Details: [not stated] code LA6568-5 = 'LA6568-5', stated as 'Not at all')&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;item&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;linkId&lt;/b&gt;: FeelingDown&lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: Feeling down, depressed, or hopeless&lt;/p&gt;&lt;h3&gt;Answers&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Not at all (Details: [not stated] code LA6568-5 = 'LA6568-5', stated as 'Not at all')&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;item&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;linkId&lt;/b&gt;: TroubleSleeping&lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: Trouble falling or staying asleep&lt;/p&gt;&lt;h3&gt;Answers&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Not at all (Details: [not stated] code LA6568-5 = 'LA6568-5', stated as 'Not at all')&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;item&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;linkId&lt;/b&gt;: FeelingTired&lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: Feeling tired or having little energy&lt;/p&gt;&lt;h3&gt;Answers&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Not at all (Details: [not stated] code LA6568-5 = 'LA6568-5', stated as 'Not at all')&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;item&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;linkId&lt;/b&gt;: BadAppetite&lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: Poor appetite or overeating&lt;/p&gt;&lt;h3&gt;Answers&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Not at all (Details: [not stated] code LA6568-5 = 'LA6568-5', stated as 'Not at all')&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;item&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;linkId&lt;/b&gt;: FeelingBadAboutSelf&lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: Feeling bad about yourself - or that you are a failure or have let yourself or your family down&lt;/p&gt;&lt;h3&gt;Answers&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Not at all (Details: [not stated] code LA6568-5 = 'LA6568-5', stated as 'Not at all')&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;item&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;linkId&lt;/b&gt;: TroubleConcentrating&lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: Trouble concentrating on things, such as reading the newspaper or watching television&lt;/p&gt;&lt;h3&gt;Answers&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Not at all (Details: [not stated] code LA6568-5 = 'LA6568-5', stated as 'Not at all')&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;item&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;linkId&lt;/b&gt;: MovingSpeaking&lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usualTotal score&lt;/p&gt;&lt;h3&gt;Answers&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Not at all (Details: [not stated] code LA6568-5 = 'LA6568-5', stated as 'Not at all')&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;item&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;linkId&lt;/b&gt;: Difficulty&lt;/p&gt;&lt;p&gt;&lt;b&gt;text&lt;/b&gt;: If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people&lt;/p&gt;&lt;h3&gt;Answers&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Not at all (Details: [not stated] code LA6568-5 = 'LA6568-5', stated as 'Not at all')&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;/div&gt;"
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+    &lt;h3&gt;Response Summary&lt;/h3&gt;
+    &lt;strong&gt;Questionnaire URL:&lt;/strong&gt; http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9&lt;br /&gt;
+    &lt;strong&gt;Date Completed:&lt;/strong&gt; 2018-07-05T19:04:33.435516&lt;br /&gt;
+    &lt;hr /&gt; &lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkId = g1.q8) Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual,&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; Not at all( code = LA6568-5)&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkId = g1.q6) Feeling bad about yourself - or that you are a failure or have let yourself or your family down,&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; Several days( code = LA6569-3)&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkId = g2.q1) If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people,&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; Very difficult( code = LA6575-0)&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkId = g1.q9) Thoughts that you would be better off dead, or of hurting yourself&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; Not at all( code = LA6568-5)&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkId = g1.q1) Little interest or pleasure in doing things,&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; Nearly every day( code = LA6571-9)&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkId = g1.q7) Trouble concentrating on things, such as reading the newspaper or watching television,&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; More than half the days( code = LA6570-1)&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkId = g1.q4) Feeling tired or having little energy,&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; Nearly every day( code = LA6571-9)&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkId = g1.q2) Feeling down, depressed, or hopeless,&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; More than half the days( code = LA6570-1)&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkId = g1.q5) Poor appetite or overeating,&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; Not at all( code = LA6568-5)&lt;br /&gt; &lt;br /&gt;&lt;br /&gt;
+    &lt;/div&gt;"
   },
   "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.identifier">identifier</a>" : {
-    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "phq9-example"
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "test"
   },
   "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.questionnaire">questionnaire</a>" : {
     "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9"
   },
   "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.status">status</a>" : "completed",
   "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.subject">subject</a>" : {
-    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">display</a>" : "subject"
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "Patient/subject1"
   },
-  "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.authored">authored</a>" : "2018-05-29",
+  "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.context">context</a>" : {
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "Encounter/encounter1"
+  },
+  "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.authored">authored</a>" : "2018-07-05T19:04:33.435516",
   "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.author">author</a>" : {
-    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">display</a>" : "subject"
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "Practitioner/prov-admin1"
   },
   "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.source">source</a>" : {
-    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">display</a>" : "subject"
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "Patient/subject1"
   },
   "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item">item</a>" : [
     {
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "LittleInterest",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "Little interest or pleasure in doing things",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g1",
+      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.item">item</a>" : [
         {
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA6568-5",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Not at all"
-          }
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g1.q8",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual,",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA6568-5",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Not at all"
+              }
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g1.q6",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "Feeling bad about yourself - or that you are a failure or have let yourself or your family down,",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA6569-3",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Several days"
+              }
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g1.q9",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "Thoughts that you would be better off dead, or of hurting yourself",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA6568-5",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Not at all"
+              }
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g1.q1",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "Little interest or pleasure in doing things,",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA6571-9",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Nearly every day"
+              }
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g1.q7",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "Trouble concentrating on things, such as reading the newspaper or watching television,",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA6570-1",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "More than half the days"
+              }
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g1.q4",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "Feeling tired or having little energy,",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA6571-9",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Nearly every day"
+              }
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g1.q2",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "Feeling down, depressed, or hopeless,",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA6570-1",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "More than half the days"
+              }
+            }
+          ]
+        },
+        {
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g1.q5",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "Poor appetite or overeating,",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA6568-5",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Not at all"
+              }
+            }
+          ]
         }
       ]
     },
     {
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "FeelingDown",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "Feeling down, depressed, or hopeless",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g2",
+      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.item">item</a>" : [
         {
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA6568-5",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Not at all"
-          }
-        }
-      ]
-    },
-    {
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "TroubleSleeping",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "Trouble falling or staying asleep",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
-        {
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA6568-5",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Not at all"
-          }
-        }
-      ]
-    },
-    {
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "FeelingTired",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "Feeling tired or having little energy",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
-        {
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA6568-5",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Not at all"
-          }
-        }
-      ]
-    },
-    {
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "BadAppetite",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "Poor appetite or overeating",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
-        {
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA6568-5",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Not at all"
-          }
-        }
-      ]
-    },
-    {
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "FeelingBadAboutSelf",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "Feeling bad about yourself - or that you are a failure or have let yourself or your family down",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
-        {
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA6568-5",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Not at all"
-          }
-        }
-      ]
-    },
-    {
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "TroubleConcentrating",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "Trouble concentrating on things, such as reading the newspaper or watching television",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
-        {
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA6568-5",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Not at all"
-          }
-        }
-      ]
-    },
-    {
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "MovingSpeaking",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usualTotal score",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
-        {
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA6568-5",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Not at all"
-          }
-        }
-      ]
-    },
-    {
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "Difficulty",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
-        {
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA6568-5",
-            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Not at all"
-          }
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g2.q1",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people,",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueCoding</a>" : {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA6575-0",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Very difficult"
+              }
+            }
+          ]
         }
       ]
     }
@@ -489,7 +521,7 @@ Formats: <a href="QuestionnaireResponse-questionnaireresponse-example-phq9.html"
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Jun 1, 2018 19:12-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Jul 5, 2018 19:06-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>
         </p>
    </div>  <!-- /inner-wrapper -->

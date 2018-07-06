@@ -8,12 +8,18 @@
 <http://fhir.org/guides/argonaut-questionnaire/QuestionnaireResponse/questionnaireresponse-example-housing> a fhir:QuestionnaireResponse;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "questionnaireresponse-example-housing"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr";
+       fhir:index 0
+     ]
+  ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: questionnaireresponse-example-housing</p><p><b>identifier</b>: housing-example</p><p><b>questionnaire</b>: <a href=\"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-housing\">http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-housing</a></p><p><b>status</b>: completed</p><p><b>subject</b>: subject</p><p><b>authored</b>: May 21, 2018</p><p><b>author</b>: subject</p><p><b>source</b>: subject</p><blockquote><p><b>item</b></p><p><b>linkId</b>: 2</p><p><b>text</b>: What is your housing situation today?</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>I do not have housing (I am staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, abandoned building, bus or train station, or in a park)</td></tr></table></blockquote><blockquote><p><b>item</b></p><p><b>linkId</b>: 3</p><p><b>text</b>: Think about the place you live. Do you have problems with any of the following? (check all that apply)</p><h3>Answers</h3><table class=\"grid\"><tr><td>-</td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Bug infestation</td></tr></table></blockquote></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h3>Response Summary</h3>\n    <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-housing<br />\n    <strong>Date Completed:</strong> 2018-07-05T19:02:25.752525<br />\n    <hr /> <br /> <strong>Question:</strong> (linkId = g1.2) Think about the place you live. Do you have problems with any of the following? (check all that apply)<br /><strong>Response:</strong> Bug infestation( code = )<br /><strong>Response:</strong> Inadequate heat( code = )<br /><strong>Response:</strong> Water leaks( code = )<br /><br /> <strong>Question:</strong> (linkId = g1.1) What is your housing situation today?<br /><strong>Response:</strong> I have housing( code = )<br /> <br /><br />\n    </div>"
   ];
   fhir:QuestionnaireResponse.identifier [
-     fhir:Identifier.value [ fhir:value "housing-example" ]
+     fhir:Identifier.value [ fhir:value "test" ]
   ];
   fhir:QuestionnaireResponse.questionnaire [
      fhir:link <http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-housing>;
@@ -21,30 +27,47 @@
   ];
   fhir:QuestionnaireResponse.status [ fhir:value "completed"];
   fhir:QuestionnaireResponse.subject [
-     fhir:Reference.display [ fhir:value "subject" ]
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/Patient/subject1>;
+     fhir:Reference.reference [ fhir:value "Patient/subject1" ]
   ];
-  fhir:QuestionnaireResponse.authored [ fhir:value "2018-05-21"^^xsd:date];
+  fhir:QuestionnaireResponse.context [
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/Encounter/encounter1>;
+     fhir:Reference.reference [ fhir:value "Encounter/encounter1" ]
+  ];
+  fhir:QuestionnaireResponse.authored [ fhir:value "2018-07-05T19:02:25.752525"^^xsd:dateTime];
   fhir:QuestionnaireResponse.author [
-     fhir:Reference.display [ fhir:value "subject" ]
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/Practitioner/prov-admin1>;
+     fhir:Reference.reference [ fhir:value "Practitioner/prov-admin1" ]
   ];
   fhir:QuestionnaireResponse.source [
-     fhir:Reference.display [ fhir:value "subject" ]
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/Patient/subject1>;
+     fhir:Reference.reference [ fhir:value "Patient/subject1" ]
   ];
   fhir:QuestionnaireResponse.item [
      fhir:index 0;
-     fhir:QuestionnaireResponse.item.linkId [ fhir:value "2" ];
-     fhir:QuestionnaireResponse.item.text [ fhir:value "What is your housing situation today?" ];
-     fhir:QuestionnaireResponse.item.answer [
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1" ];
+     fhir:QuestionnaireResponse.item.item [
        fhir:index 0;
-       fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "I do not have housing (I am staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, abandoned building, bus or train station, or in a park)" ]
-     ]
-  ], [
-     fhir:index 1;
-     fhir:QuestionnaireResponse.item.linkId [ fhir:value "3" ];
-     fhir:QuestionnaireResponse.item.text [ fhir:value "Think about the place you live. Do you have problems with any of the following? (check all that apply)" ];
-     fhir:QuestionnaireResponse.item.answer [
-       fhir:index 0;
-       fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Bug infestation" ]
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1.2" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Think about the place you live. Do you have problems with any of the following? (check all that apply)" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Bug infestation" ]
+       ], [
+         fhir:index 1;
+         fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Inadequate heat" ]
+       ], [
+         fhir:index 2;
+         fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Water leaks" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1.1" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "What is your housing situation today?" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "I have housing" ]
+       ]
      ]
   ] .
 

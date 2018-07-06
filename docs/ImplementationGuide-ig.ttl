@@ -13,16 +13,30 @@
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Argonaut Questionnaire</h2><p>The official URL for this implementation guide is: </p><pre>http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig</pre></div>"
   ];
   fhir:ImplementationGuide.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig"];
+  fhir:ImplementationGuide.version [ fhir:value "0.0.0"];
   fhir:ImplementationGuide.name [ fhir:value "Argonaut Questionnaire"];
   fhir:ImplementationGuide.status [ fhir:value "draft"];
   fhir:ImplementationGuide.experimental [ fhir:value "true"^^xsd:boolean];
   fhir:ImplementationGuide.publisher [ fhir:value "Argonaut Project"];
+  fhir:ImplementationGuide.fhirVersion [ fhir:value "3.0.1"];
   fhir:ImplementationGuide.package [
      fhir:index 0;
      fhir:Element.id [ fhir:value "p1" ];
      fhir:ImplementationGuide.package.name [ fhir:value "base" ];
      fhir:ImplementationGuide.package.resource [
        fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Questionnaire-questionnaire-example-sampler.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-sampler>;
+         fhir:Reference.reference [ fhir:value "Questionnaire/questionnaire-example-sampler" ]
+       ]
+     ], [
+       fhir:index 1;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -34,7 +48,7 @@
          fhir:Reference.reference [ fhir:value "QuestionnaireResponse/questionnaireresponse-example-phq9" ]
        ]
      ], [
-       fhir:index 1;
+       fhir:index 2;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -46,7 +60,7 @@
          fhir:Reference.reference [ fhir:value "Questionnaire/questionnaire-example-phq9" ]
        ]
      ], [
-       fhir:index 2;
+       fhir:index 3;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -58,7 +72,7 @@
          fhir:Reference.reference [ fhir:value "QuestionnaireResponse/questionnaireresponse-example-housing" ]
        ]
      ], [
-       fhir:index 3;
+       fhir:index 4;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -70,7 +84,7 @@
          fhir:Reference.reference [ fhir:value "Questionnaire/questionnaire-example-housing" ]
        ]
      ], [
-       fhir:index 4;
+       fhir:index 5;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -82,7 +96,7 @@
          fhir:Reference.reference [ fhir:value "QuestionnaireResponse/questionnaireresponse-example-dast" ]
        ]
      ], [
-       fhir:index 5;
+       fhir:index 6;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -94,7 +108,7 @@
          fhir:Reference.reference [ fhir:value "Questionnaire/questionnaire-example-dast" ]
        ]
      ], [
-       fhir:index 6;
+       fhir:index 7;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -106,7 +120,7 @@
          fhir:Reference.reference [ fhir:value "QuestionnaireResponse/questionnaireresponse-example-audit" ]
        ]
      ], [
-       fhir:index 7;
+       fhir:index 8;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -118,7 +132,7 @@
          fhir:Reference.reference [ fhir:value "Questionnaire/questionnaire-example-audit" ]
        ]
      ], [
-       fhir:index 8;
+       fhir:index 9;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -130,7 +144,7 @@
          fhir:Reference.reference [ fhir:value "QuestionnaireResponse/questionnaireresponse-example-asq3" ]
        ]
      ], [
-       fhir:index 9;
+       fhir:index 10;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -142,7 +156,7 @@
          fhir:Reference.reference [ fhir:value "Questionnaire/questionnaire-example-asq3" ]
        ]
      ], [
-       fhir:index 10;
+       fhir:index 11;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -154,7 +168,7 @@
          fhir:Reference.reference [ fhir:value "ValueSet/example-answerlist1" ]
        ]
      ], [
-       fhir:index 11;
+       fhir:index 12;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -166,7 +180,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/extension-timelimit" ]
        ]
      ], [
-       fhir:index 12;
+       fhir:index 13;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -178,7 +192,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/extension-score" ]
        ]
      ], [
-       fhir:index 13;
+       fhir:index 14;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -190,7 +204,7 @@
          fhir:Reference.reference [ fhir:value "SearchParameter/Questionnaire-context-value" ]
        ]
      ], [
-       fhir:index 14;
+       fhir:index 15;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -202,7 +216,7 @@
          fhir:Reference.reference [ fhir:value "SearchParameter/Questionnaire-context-type" ]
        ]
      ], [
-       fhir:index 15;
+       fhir:index 16;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -214,7 +228,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/qr" ]
        ]
      ], [
-       fhir:index 16;
+       fhir:index 17;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -226,7 +240,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/qcvs" ]
        ]
      ], [
-       fhir:index 17;
+       fhir:index 18;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -238,7 +252,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/q" ]
        ]
      ], [
-       fhir:index 18;
+       fhir:index 19;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -250,7 +264,7 @@
          fhir:Reference.reference [ fhir:value "CodeSystem/answer-codes" ]
        ]
      ], [
-       fhir:index 19;
+       fhir:index 20;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -262,7 +276,7 @@
          fhir:Reference.reference [ fhir:value "CapabilityStatement/server" ]
        ]
      ], [
-       fhir:index 20;
+       fhir:index 21;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -274,7 +288,7 @@
          fhir:Reference.reference [ fhir:value "CapabilityStatement/client" ]
        ]
      ], [
-       fhir:index 21;
+       fhir:index 22;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -286,7 +300,7 @@
          fhir:Reference.reference [ fhir:value "CapabilityStatement/assessmentbank" ]
        ]
      ], [
-       fhir:index 22;
+       fhir:index 23;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
