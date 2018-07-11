@@ -31,6 +31,8 @@
     <sch:title>f:Questionnaire/f:item</sch:title>
     <sch:rule context="f:Questionnaire/f:item">
       <sch:assert test="count(f:extension[@url = 'http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timelimit']) &lt;= 1">extension with URL = 'http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timelimit': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://hl7.org/fhir/StructureDefinition/questionnaire-hidden']) &lt;= 1">extension with URL = 'http://hl7.org/fhir/StructureDefinition/questionnaire-hidden': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score']) &lt;= 1">extension with URL = 'http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score': maximum cardinality of 'extension' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -48,11 +50,10 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:title>f:Questionnaire/f:item/f:type</sch:title>
-    <sch:rule context="f:Questionnaire/f:item/f:type">
-      <sch:assert test="count(f:id) &lt;= 1">id: maximum cardinality of 'id' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = 'http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score']) &lt;= 1">extension with URL = 'http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score': maximum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:value) &lt;= 1">value: maximum cardinality of 'value' is 1</sch:assert>
+    <sch:title>Questionnaire.item.extension</sch:title>
+    <sch:rule context="f:Questionnaire/f:item/f:extension">
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
+      <sch:assert test="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])">Must have either extensions or value[x], not both (inherited)</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -72,12 +73,20 @@
     <sch:title>f:Questionnaire/f:item/f:option</sch:title>
     <sch:rule context="f:Questionnaire/f:item/f:option">
       <sch:assert test="count(f:extension[@url = 'http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score']) &lt;= 1">extension with URL = 'http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive']) &lt;= 1">extension with URL = 'http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive': maximum cardinality of 'extension' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:title>Questionnaire.item.option</sch:title>
     <sch:rule context="f:Questionnaire/f:item/f:option">
       <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:title>Questionnaire.item.option.extension</sch:title>
+    <sch:rule context="f:Questionnaire/f:item/f:option/f:extension">
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
+      <sch:assert test="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])">Must have either extensions or value[x], not both (inherited)</sch:assert>
     </sch:rule>
   </sch:pattern>
 </sch:schema>

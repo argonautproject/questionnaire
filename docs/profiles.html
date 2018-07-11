@@ -108,24 +108,25 @@
   <li>
     <a href="index.html">Home</a>
   </li>
+<!--
   <li>
     <a href="guidance.html">Guidance</a>
   </li>
-
-  <!--
+-->
   <li class="dropdown">
     <a href="#" data-toggle="dropdown" class="dropdown-toggle">Use Cases<b class="caret">
     </b>
   </a>
   <ul class="dropdown-menu">
     <li>
-      <a href="patient-scheduling.html">Patient Based Scheduling</a>
+      <a href="static.html">Static Forms</a>
     </li>
     <li>
-      <a href="provider-scheduling.html">Provider Based Scheduling</a>
+      <a href="adaptive.html">Adaptive Forms</a>
     </li>
   </ul>
 </li>
+<!--
 <li>
   <a href="operations.html">Operations</a>
 </li>
@@ -250,7 +251,13 @@
 
 <p>The following Profiles have been defined for this implementation guide.</p>
 
-<li><a href="StructureDefinition-qcvs.html">Argonaut_QCVS_Profile</a> The  Argonaut Questionnaire Contained ValueSet Profile constrains the  `ValueSet.url` element to a  [Must Support] element to provide an alternative literal address at which this value set is (or will be) published.</li>
+<li><a href="StructureDefinition-qcvs.html">Argonaut_QCVS_Profile</a> The  Argonaut Questionnaire Contained ValueSet Profile is contained within the Argonaut Questionnaire Profile:
+
+- It requires an [expansion] of the code set to constrains the concepts to particular set of conditions for a given questionnaire.
+
+- The [Ordinal Value] *extension* is added as a [Must Support] element to support the calculation of scores from the associated assessments.
+
+ - The `ValueSet.url` element is constrained to a  [Must Support] element to provide an alternative literal address at which this value set is (or will be) published.</li>
 <li><a href="StructureDefinition-qr.html">Argonaut_QR_Profile</a> The  Argonaut QR profile sets the minimum expectations for the QR resource to record, search and fetch QR from simple assessments, surveys, etc as defined in this implementation guide</li>
 <li><a href="StructureDefinition-q.html">Argonaut_Q_Profile</a> The  Argonaut Q Profile sets the minimum expectations for the Questionnaire resource to record, search and fetch Questionnaire for simple assessments, surveys, etc as defined in this implementation guide</li>
 
@@ -296,7 +303,7 @@
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Jul 5, 2018 19:06-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, Jul 11, 2018 09:28-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>
         </p>
    </div>  <!-- /inner-wrapper -->

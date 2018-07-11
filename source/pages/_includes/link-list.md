@@ -11,7 +11,8 @@
 [use case 5]: http://argonautwiki.hl7.org/images/4/4c/Argonaut_UseCasesV1.pdf
 [four uses cases]: http://argonautwiki.hl7.org/images/4/4c/Argonaut_UseCasesV1.pdf
 [Argonaut Project]: http://argonautwiki.hl7.org/index.php?title=Main_Page
-[Scenario 1]: guidance.html
+[Static Forms Use Case]: static.html
+[Adaptive Forms Use Case]: adaptive.html
 [Downloads]: downloads.html
 [server]: CapabilityStatement-server.html
 [client]: CapabilityStatement-client.html
@@ -34,3 +35,7 @@
 [Argonaut Questionnaire Time Limit]: StructureDefinition-extension-score.html
 [Custom search parameters]: searchparameters.html
 [contained]: {{site.data.fhir.path}}/references.html#contained
+[Questionnaire Hidden]: {{site.data.fhir.path}}/extension-questionnaire-hidden.html "Questionnaire hidden extension: If true, indicates that the extended item should not be displayed to the user."
+[Questionnaire Option Exclusive]: {{site.data.fhir.path}}/extension-questionnaire-optionexclusive.html "Questionnaire optionexclusive extension: If true, indicates that if this option is selected, no other options may be selected."
+[Ordinal Value]: {{site.data.fhir.path}}/extension-valueset-ordinalvalue.html "ValueSet ordinalvalue extension: A numeric value that allows numerical manipulation of a concept."
+[expansion]: {{site.data.fhir.path}}/valueset.html#expansion "The list of codes that are actually in the value set under a given set of conditions ("extension")"

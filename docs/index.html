@@ -108,24 +108,25 @@
   <li>
     <a href="index.html">Home</a>
   </li>
+<!--
   <li>
     <a href="guidance.html">Guidance</a>
   </li>
-
-  <!--
+-->
   <li class="dropdown">
     <a href="#" data-toggle="dropdown" class="dropdown-toggle">Use Cases<b class="caret">
     </b>
   </a>
   <ul class="dropdown-menu">
     <li>
-      <a href="patient-scheduling.html">Patient Based Scheduling</a>
+      <a href="static.html">Static Forms</a>
     </li>
     <li>
-      <a href="provider-scheduling.html">Provider Based Scheduling</a>
+      <a href="adaptive.html">Adaptive Forms</a>
     </li>
   </ul>
 </li>
+<!--
 <li>
   <a href="operations.html">Operations</a>
 </li>
@@ -255,7 +256,11 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
   <li><a href="#scope" id="markdown-toc-scope">Scope</a></li>
   <li><a href="#actors" id="markdown-toc-actors">Actors</a></li>
   <li><a href="#assumptions-and-preconditions" id="markdown-toc-assumptions-and-preconditions">Assumptions and Preconditions</a></li>
-  <li><a href="#workflow-overview" id="markdown-toc-workflow-overview">Workflow Overview</a></li>
+  <li><a href="#workflow-overview" id="markdown-toc-workflow-overview">Workflow Overview</a>    <ul>
+      <li><a href="#static-forms" id="markdown-toc-static-forms">Static Forms</a></li>
+      <li><a href="#adaptive-forms" id="markdown-toc-adaptive-forms">Adaptive Forms</a></li>
+    </ul>
+  </li>
   <li><a href="#security" id="markdown-toc-security">Security</a></li>
   <li><a href="#outstanding-issuesfuture-scope" id="markdown-toc-outstanding-issuesfuture-scope">Outstanding issues/Future scope</a></li>
   <li><a href="#jekyll-site-variables--remove-when-publish" id="markdown-toc-jekyll-site-variables--remove-when-publish">Jekyll Site Variables  (remove when publish)</a></li>
@@ -272,7 +277,7 @@ The requirements were developed and defined by the Argonaut Questionnaire projec
 
 <ul>
   <li>The use case, scope, preconditions and workflow are described in the following sections</li>
-  <li>Detailed guidance on using the Argonaut Questionnaire FHIR artifacts such as profiles and extensions can be found on the <a href="guidance.html">Scenario 1</a> page.</li>
+  <li>Detailed guidance on using the Argonaut Questionnaire FHIR artifacts such as profiles and extensions can be found on the [Scenario 1] page.</li>
   <li>FHIR profiles and extensions are listed on the <a href="profiles.html">Profiles</a> page.</li>
   <li>Implementation Guide specific value sets, and code systems on the <a href="terminology.html">Terminology</a>  page.</li>
   <li>Conformance requirements for the servers and clients that claim conformance to this guide are found in the <a href="CapabilityStatement-assessmentbank.html">Assessment-Bank</a>, <a href="CapabilityStatement-answerbank.html">Answer-Bank</a>,  <a href="CapabilityStatement-server.html">Provider EHR</a> and <a href="CapabilityStatement-client.html">client</a> CapabilityStatements.</li>
@@ -380,18 +385,20 @@ there is clearly a need for a common form standard with a focus on simple assess
 
 <h2 id="workflow-overview">Workflow Overview</h2>
 
-<p><strong>See <a href="guidance.html">Scenario 1</a> for a detailed description of workflow and API guidance.</strong></p>
+<h3 id="static-forms">Static Forms</h3>
+
+<p><strong>See  the <a href="static.html">Static Forms Use Case</a> for a detailed description of workflow and API guidance.</strong></p>
 
 <p>In the basic workflow outlined below., an EHR system retrieves a standardized assessment represented by the Questionnaire resource from an assessment bank.  The Questionnaire is rendered/displayed to the end user - either the subject or provider administrator.  The end user enters responses to the assessment questions and these responses are captured.   The response may be processed (scored, aggregated, etc) and retrieved using the QuestionnaireResponse resource.</p>
 
 <!-- all this Bootstrap html for getting an image to fit nicely in text - 640 pix wide -->
 
-<!-- file:///assets/images/workflow.png -->
+<!-- file:///assets/images/static-workflow.png -->
 
 <div>
 <figure class="figure">
 <figcaption class="figure-caption"><strong>Basic Argonaut Questionnaire Workflow.</strong></figcaption>
-  <img src="assets/images/workflow.png" class="figure-img img-responsive img-rounded center-block" alt="workflow.png" />
+  <img src="assets/images/static-workflow.png" class="figure-img img-responsive img-rounded center-block" alt="static-workflow.png" width="740" height="416" />
 </figure>
 
 <p></p>
@@ -415,11 +422,61 @@ there is clearly a need for a common form standard with a focus on simple assess
     </tr>
     <tr>
       <td>3</td>
-      <td>The end user enters responses to the assessment questions and these responses are captured by the system</td>
+      <td>The end user enters responses to the assessment questions and these responses are stored in the Answer Bank by POSTing a QuestionnaireResponse</td>
     </tr>
     <tr>
       <td>4</td>
-      <td>The answers are requested and retrieved as QuestionnaireResponse resource(s)</td>
+      <td>An EHR system requests answers to an assessment for a particular subject</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>The QuestionnaireResponse is processed by the end user</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="adaptive-forms">Adaptive Forms</h3>
+
+<p><strong>See  the <a href="adaptive.html">Adaptive Forms Use Case</a> for a detailed description of workflow and API guidance.</strong></p>
+
+<p>In the basic workflow outlined below., …todo…</p>
+
+<!-- all this Bootstrap html for getting an image to fit nicely in text - 640 pix wide -->
+
+<!-- file:///assets/images/adaptive-workflow.png -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>Basic Argonaut Questionnaire Workflow.</strong></figcaption>
+  <img src="assets/images/adaptive-workflow.png" class="figure-img img-responsive img-rounded center-block" alt="adaptive-workflow.png" width="740" height="416" />
+</figure>
+
+<p></p>
+</div>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th>step</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>…todo…</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>…todo…</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>…todo…</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>…todo…</td>
     </tr>
   </tbody>
 </table>
@@ -474,7 +531,7 @@ there is clearly a need for a common form standard with a focus on simple assess
     <p>canonical : canonical path to this specification (defined in ig.json)-   {{site.data.fhir.canonical}}  = http://fhir.org/guides/argonaut-questionnaire</p>
   </li>
   <li>
-    <p>errorCount : number of errors in the build file (not including HTML validation errors) -   {{site.data.fhir.errorCount}}  = 115</p>
+    <p>errorCount : number of errors in the build file (not including HTML validation errors) -   {{site.data.fhir.errorCount}}  = 693</p>
   </li>
   <li>
     <p>version : version of FHIR -   {{site.data.fhir.version}}  = 3.0.1</p>
@@ -486,13 +543,13 @@ there is clearly a need for a common form standard with a focus on simple assess
     <p>versionFull : version-revision -   {{site.data.fhir.versionFull}}  = 3.0.1-11917</p>
   </li>
   <li>
-    <p>totalFiles : total number of files found by the build -   {{site.data.fhir.totalFiles}}  = 25</p>
+    <p>totalFiles : total number of files found by the build -   {{site.data.fhir.totalFiles}}  = 26</p>
   </li>
   <li>
-    <p>processedFiles : number of files genrated by the build -   {{site.data.fhir.processedFiles}}  = 140</p>
+    <p>processedFiles : number of files genrated by the build -   {{site.data.fhir.processedFiles}}  = 1</p>
   </li>
   <li>
-    <p>genDate : date of generation (so date stamps in the pages can match those in the conformance resources) -   {{site.data.fhir.genDate}}  = Thu, Jul 5, 2018 19:06-0700</p>
+    <p>genDate : date of generation (so date stamps in the pages can match those in the conformance resources) -   {{site.data.fhir.genDate}}  = Wed, Jul 11, 2018 09:28-0700</p>
   </li>
 </ul>
 
@@ -545,7 +602,7 @@ there is clearly a need for a common form standard with a focus on simple assess
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Jul 5, 2018 19:06-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, Jul 11, 2018 09:28-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>
         </p>
    </div>  <!-- /inner-wrapper -->

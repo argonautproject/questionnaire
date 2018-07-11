@@ -1,31 +1,3 @@
-k = g1.q3|How often do you have six or more drinks on one occasion?, results[k]= Less than Monthly|
-    
-          
-            
-            1
-            
-          
-    
-|valueCoding|http://loinc.org|LA18933-4
-linkId|question - g1.q3|How often do you have six or more drinks on one occasion?  answer = Less than Monthly score = 24
-i = Less than Monthly|
-    
-          
-            
-            1
-            
-          
-    
-|valueCoding|http://loinc.org|LA18933-4
-score = 24
-parent_id = g1
-k = g1.q10|Has a relative or friend, doctor or other health worker been concerned about your drinking or suggested you cut down?, results[k]= Yes, during the last year|
-    
-          
-            
-            4
-            
-          
-    
-|valueCoding|http://loinc.org|LA15519-4
-linkId|question - g1.q10|Has a relative or friend, doctor or other health worker been concerned about your drinking or suggested you cut down?  answer = Yes, during the last year score = 25
+=================
+ q = {'url': 'http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-housing', 'publisher': 'ArgonautProject', 'jurisdiction': [{'coding': [{'system': 'urn:iso:std:iso:3166', 'display': 'UnitedStatesofAmerica', 'code': 'US'}]}], 'title': 'Housing Questions', 'meta': {'lastUpdated': '2018-07-06T02:07:11.862+00:00', 'profile': ['http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q'], 'versionId': '39'}, 'status': 'draft', 'identifier': [{'system': 'http://acme.org/q-identifiers', 'value': 'business-identifier4'}], 'code': [{'system': 'http://acme.org/codes', 'display': 'Housing Questions', 'code': 'housing'}], 'resourceType': 'Questionnaire', 'text': {'status': 'generated', 'div': '<div xmlns="http://www.w3.org/1999/xhtml"><b>Housing Questions</b><hr /><span style="color: gray;">Publisher:</span> ArgonautProject\r\n</div>'}, 'subjectType': ['Patient'], 'id': 'questionnaire-example-housing', 'date': '2018-06-28', 'copyright': 'Billioux, Alexander, MD, Dphil; Verlander, Katherine, MPH; Anthony, Susan, DrPH; Alley, Dawn, PhD; National Academy of Sciences, “Standardized Screening for Health-Related Social Needs in Clinical Settings - The Accountable Health Communities Screening Tool,“ https://nam.edu/wp-content/uploads/2017/05/Standardized-Screening-for-Health-Related-Social-Needs-in-Clinical-Settings.pdf  \n', 'contact': [{'telecom': [{'system': 'url', 'value': 'http://argonautwiki.hl7.org'}]}], 'item': [{'linkId': 'g1', 'extension': [{'url': 'http://hl7.org/fhir/StructureDefinition/questionnaire-hidden', 'valueBoolean': True}], 'type': 'group', 'item': [{'linkId': 'g1.d', 'type': 'display', 'text': 'Accountable Health Communities Core Health-Related Social Needs Screening Questions \nUnderlined answer options indicate positive responses for the associated health-related social need. \nA value greater than 10 when the numerical values for answers to questions 7-10 are summed indicates a positive screen for interpersonal safety.'}, {'type': 'choice', 'repeats': False, 'prefix': '1', 'required': True, 'text': 'What is your housing situation today?', 'option': [{'valueString': 'I do not have housing (I am staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, abandoned building, bus or train station, or in a park)'}, {'valueString': 'I have housing today, but I am worried about losing housing in the future'}, {'valueString': 'I have housing'}], 'linkId': 'g1.1'}, {'type': 'choice', 'repeats': True, 'prefix': '2', 'required': True, 'text': 'Think about the place you live. Do you have problems with any of the following? (check all that apply)', 'option': [{'valueString': 'Bug infestation'}, {'valueString': 'Mold'}, {'valueString': 'Lead paint or pipes'}, {'valueString': 'Inadequate heat'}, {'valueString': 'Oven or stove not working'}, {'valueString': 'No or not working smoke detectors'}, {'valueString': 'Water leaks'}, {'valueString': 'None of the above', 'extension': [{'url': 'http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive', 'valueBoolean': True}]}], 'linkId': 'g1.2'}]}]} 
+=============

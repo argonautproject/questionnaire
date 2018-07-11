@@ -1,9 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="c65cca5d-2437-41d9-a0d4-828778705b32"/>
+  <id value="57b3447a-0035-4f49-b092-fd7fff074551"/>
   <meta>
-    <lastUpdated value="2018-07-05T19:06:41.443-07:00"/>
+    <lastUpdated value="2018-07-11T09:28:12.667-07:00"/>
   </meta>
   <type value="collection"/>
+  <entry>
+    <fullUrl value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/argonaut-item-type"/>
+    <resource>
+      <ValueSet>
+        <id value="argonaut-item-type"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 0 concepts</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/argonaut-item-type"/>
+        <version value="0.0.0"/>
+        <name value="ArgonautQuestionnaireItemType"/>
+        <title value="Argonaut Questionnaire Item Types"/>
+        <status value="active"/>
+        <date value="2018-07-11T00:00:00-07:00"/>
+        <description value="The Argonaut Questionnaire Item Types exclude the question types &#39;attachment&#39; and &#39;reference from  the FHIR Questionnaire Item Types"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+            <display value="United States of America"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:53e1ab5f-6ab3-441b-b35c-06ae1265260b"/>
+          <timestamp value="2018-07-10T17:55:53-07:00"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="true"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="true"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
 </Bundle>

@@ -1,0 +1,41 @@
+{
+  "resourceType": "ValueSet",
+  "id": "argonaut-item-type",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>ArgonautQuestionnaireItemType</h2><div><p>The Argonaut Questionnaire Item Types exclude the question types 'attachment' and 'reference from  the FHIR Questionnaire Item Types</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Exclude these codes as defined in <a href=\"http://hl7.org/fhir/STU3/codesystem-item-type.html\"><code>http://hl7.org/fhir/item-type</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://hl7.org/fhir/STU3/codesystem-item-type.html#item-type-attachment\">attachment</a></td><td>Attachment</td><td>Question with binary content such as a image, PDF, etc. as an answer (valueAttachment)</td></tr><tr><td><a href=\"http://hl7.org/fhir/STU3/codesystem-item-type.html#item-type-reference\">reference</a></td><td>Reference</td><td>Question with a reference to another resource (practitioner, organization, etc.) as an answer (valueReference)</td></tr></table></li></ul></div>"
+  },
+  "url": "http://fhir.org/guides/argonaut-questionnaire/ValueSet/argonaut-item-type",
+  "version": "0.0.0",
+  "name": "ArgonautQuestionnaireItemType",
+  "title": "Argonaut Questionnaire Item Types",
+  "status": "active",
+  "date": "2018-07-11T00:00:00-07:00",
+  "description": "The Argonaut Questionnaire Item Types exclude the question types 'attachment' and 'reference from  the FHIR Questionnaire Item Types",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US",
+          "display": "United States of America"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "exclude": [
+      {
+        "system": "http://hl7.org/fhir/item-type",
+        "concept": [
+          {
+            "code": "attachment"
+          },
+          {
+            "code": "reference"
+          }
+        ]
+      }
+    ]
+  }
+}

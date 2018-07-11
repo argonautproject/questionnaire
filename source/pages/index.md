@@ -106,19 +106,39 @@ there is clearly a need for a common form standard with a focus on simple assess
 
 ## Workflow Overview
 
-**See [Scenario 1] for a detailed description of workflow and API guidance.**
+### Static Forms
+
+**See  the [Static Forms Use Case] for a detailed description of workflow and API guidance.**
 
 In the basic workflow outlined below., an EHR system retrieves a standardized assessment represented by the Questionnaire resource from an assessment bank.  The Questionnaire is rendered/displayed to the end user - either the subject or provider administrator.  The end user enters responses to the assessment questions and these responses are captured.   The response may be processed (scored, aggregated, etc) and retrieved using the QuestionnaireResponse resource.
 
-{% include img.html img="workflow.png" caption="Basic Argonaut Questionnaire Workflow" %}
+{% include img.html img="static-workflow.png" caption="Basic Argonaut Questionnaire Workflow" %}
 
 {:.grid}
 |step|Description|
 |---|---|
 |1|An EHR system retrieves a standardized assessment represented by the Questionnaire resource from an assessment bank.|
 |2|The Questionnaire is rendered/displayed to the end user - either the subject or provider administrator.|
-|3|The end user enters responses to the assessment questions and these responses are captured by the system|
-|4|The answers are requested and retrieved as QuestionnaireResponse resource(s)|
+|3|The end user enters responses to the assessment questions and these responses are stored in the Answer Bank by POSTing a QuestionnaireResponse|
+|4|An EHR system requests answers to an assessment for a particular subject|
+|5|The QuestionnaireResponse is processed by the end user|
+
+
+### Adaptive Forms
+
+**See  the [Adaptive Forms Use Case] for a detailed description of workflow and API guidance.**
+
+In the basic workflow outlined below., ...todo...
+
+{% include img.html img="adaptive-workflow.png" caption="Basic Argonaut Questionnaire Workflow" %}
+
+{:.grid}
+|step|Description|
+|---|---|
+|1| ...todo...
+|2| ...todo...
+|3| ...todo...
+|4| ...todo...
 
 
 ## Security

@@ -151,8 +151,8 @@ user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
 ","","N/A"
 "ValueSet.compose.exclude","","","",0,*,"","","","","Explicitly exclude codes from a code system or other value sets","Exclude one or more codes from the value set based on code system filters and/or other value sets.","Usually this is used to selectively exclude codes that were included by subsumption in the inclusions. Any display names specified for the codes are ignored.","","","","","","","","",,,,,"",,,,"ValueSet.compose.exclude",0,*,"vsd-2
 ","","N/A"
-"ValueSet.expansion","","","",0,1,"","","","BackboneElement {[]} {[]}
-","Used when the value set is ""expanded""","A value set can also be ""expanded"", where the value set is turned into a simple collection of enumerated codes. This element holds the expansion, if it has been performed.","Expansion is performed to produce a collection of codes that are ready to use for data entry or validation.","","","","","","","","",,,,,"",,,,"ValueSet.expansion",0,1,"vsd-5
+"ValueSet.expansion","","","",1,1,"Y","","","BackboneElement {[]} {[]}
+","Used when the value set is ""expanded""","A value set can also be ""expanded"", where the value set is turned into a simple collection of enumerated codes. This element holds the expansion, if it has been performed.","Expansion is performed to produce a collection of codes that are ready to use for data entry or validation.","To ensure that the Questionnaire will not adopt a different version of the ValueSet without revising the Questionnaire.","","","","","","","",,,,,"",,,,"ValueSet.expansion",0,1,"vsd-5
 ","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
 "
 "ValueSet.expansion.id","","","",0,1,"","","","string {[]} {[]}
@@ -186,14 +186,18 @@ user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
 ","Name as assigned by the server","The name of the parameter.","The names are assigned at the discretion of the server.","","","","","","","","",,,,,"",,,,"ValueSet.expansion.parameter.name",1,1,"",""
 "ValueSet.expansion.parameter.value[x]","","","",0,1,"","","","string {[]} {[]}
 boolean {[]} {[]}integer {[]} {[]}decimal {[]} {[]}uri {[]} {[]}code {[]} {[]}","Value of the named parameter","The value of the parameter.","","","","","","","","","",,,,,"",,,,"ValueSet.expansion.parameter.value[x]",0,1,"",""
-"ValueSet.expansion.contains","","","",0,*,"","","","BackboneElement {[]} {[]}
+"ValueSet.expansion.contains","","","",0,*,"Y","","","BackboneElement {[]} {[]}
 ","Codes in the value set","The codes that are contained in the value set expansion.","","","","","","","","","",,,,,"",,,,"ValueSet.expansion.contains",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
 vsd-6:SHALL have a code or a display {code.exists() or display.exists()}vsd-9:Must have a code if not abstract {code.exists() or abstract = true}vsd-10:Must have a system if a code is present {code.empty() or system.exists()}"
 "ValueSet.expansion.contains.id","","","",0,1,"","","","string {[]} {[]}
 ","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
-"ValueSet.expansion.contains.extension","","extensions
-user content","",0,*,"","","","Extension {[]} {[]}
-","Additional Content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"","","n/a"
+"ValueSet.expansion.contains.extension","","","",0,*,"","","","Extension {[]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
+","",,"open","Element.extension",0,*,"",""
+"ValueSet.expansion.contains.extension","ordinal-value","","",0,1,"Y","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue]]} {[]}
+","Extension","An Extension","","Numeric values for answer choices are needed in order to enable calculation of scores in Assessments.","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "ValueSet.expansion.contains.modifierExtension","","extensions
 user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
 ","Extensions that cannot be ignored","May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","","N/A"

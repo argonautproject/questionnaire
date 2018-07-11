@@ -22,7 +22,7 @@ anonymous resourcescontained resources","",0,*,"Y","","","ValueSet {[CanonicalTy
 "Questionnaire.extension","","","",0,*,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","DomainResource.extension",0,*,"",""
-"Questionnaire.extension","tl1","","",0,1,"Y","","","Extension {[CanonicalType[http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timelimit]]} {[]}
+"Questionnaire.extension","q-timelimit","","",0,1,"Y","","","Extension {[CanonicalType[http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timelimit]]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"",""
 "Questionnaire.modifierExtension","","extensions
 user content","",0,*,"","Y","","Extension {[]} {[]}
@@ -79,7 +79,13 @@ que-9:Read-only can't be specified for ""display"" items {type!='display' or rea
 "Questionnaire.item.extension","","","",0,*,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","Element.extension",0,*,"",""
-"Questionnaire.item.extension","tl2","","",0,1,"Y","","","Extension {[CanonicalType[http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timelimit]]} {[]}
+"Questionnaire.item.extension","item-timelimit","","",0,1,"Y","","","Extension {[CanonicalType[http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timelimit]]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"",""
+"Questionnaire.item.extension","item-hidden","","",0,1,"Y","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/questionnaire-hidden]]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"Questionnaire.item.extension","item-score","","",0,1,"Y","","","Extension {[CanonicalType[http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score]]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"",""
 "Questionnaire.item.modifierExtension","","extensions
 user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
@@ -111,15 +117,6 @@ Systems SHOULD NOT generate their own prefixes if prefixes are defined for any i
 ","Primary text for the item","The name of a section, the text of a question or text content for a display item.","","","","","","","","","",,,,,"",,,,"Questionnaire.item.text",0,1,"","","Questionnaire.item.text","Questionnaire.group.text, Questionnaire.group.question.text",".text"
 "Questionnaire.item.type","","","",1,1,"Y","","","code {[]} {[]}
 ","group | display | boolean | decimal | integer | date | dateTime +","The type of questionnaire item this is - whether text for display, a grouping of other items or a particular type of data to be captured (string, integer, coded choice, etc.).","Additional constraints on the type of answer can be conveyed by extensions. The value may come from the ElementDefinition referred to by .definition.","Defines the format in which the user is to be prompted for the answer.","","","","","","","",,"required","Distinguishes groups from questions and display text and indicates data type for questions","http://hl7.org/fhir/ValueSet/item-type","",,,,"Questionnaire.item.type",1,1,"","","Questionnaire.item.type","Questionnaire.group.question.type","N/A - MIF rather than RIM level"
-"Questionnaire.item.type.id","","","",0,1,"","","","string {[]} {[]}
-","xml:id (or equivalent in JSON)","unique id for the element within a resource (for internal references)","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
-"Questionnaire.item.type.extension","","","",0,*,"","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
-","",,"open","Element.extension",0,*,"",""
-"Questionnaire.item.type.extension","s2","","",0,1,"Y","","","Extension {[CanonicalType[http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score]]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"",""
-"Questionnaire.item.type.value","","","",0,1,"","","","null {[]} {[]}
-","Primitive value for code","Primitive value for code","","","","","","","","","",,,,,"",,,,"string.value",0,1,"",""
 "Questionnaire.item.enableWhen","","","",0,*,"","Y","Y","BackboneElement {[]} {[]}
 ","Only allow data when","A constraint indicating that this item should only be enabled (displayed/allow answers to be captured) when the specified condition is true.","If multiple repetitions of this extension are present, the item should be enabled when the condition for *any* of the repetitions is true.  I.e. treat ""enableWhen""s as being joined by an ""or"" clause.
 
@@ -170,8 +167,12 @@ que-5","ele-1:All FHIR elements must have a @value or children {hasValue() | (ch
 "Questionnaire.item.option.extension","","","",0,*,"","","","Extension {[]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
 ","",,"open","Element.extension",0,*,"",""
-"Questionnaire.item.option.extension","s3","","",0,1,"Y","","","Extension {[CanonicalType[http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score]]} {[]}
+"Questionnaire.item.option.extension","option-score","","",0,1,"Y","","","Extension {[CanonicalType[http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score]]} {[]}
 ","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"",""
+"Questionnaire.item.option.extension","option-exclusive","","",0,1,"Y","","","Extension {[CanonicalType[http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive]]} {[]}
+","Extension","An Extension","","","","","","","","","",,,,,"",,,,"Element.extension",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() | (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Questionnaire.item.option.modifierExtension","","extensions
 user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
 ","Extensions that cannot be ignored","May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","","N/A"

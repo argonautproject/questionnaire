@@ -1,6 +1,12 @@
 
 {% extends 'base.html' %}
 
+{% macro is_required(k) %}
+    {% if k.required %}
+        required
+    {% endif %}
+{% endmacro %}
+
 {% macro get_exclusive(k) %}
     {% if k.extension %}
           {% for m in k.extension %}
@@ -35,8 +41,10 @@
 {% endmacro %}
 
 
+
+
 {% macro input(j, type='text', value = '', size=20) -%}
-    <input type="{{ type }}" name="{{j.linkId}}|{{j.text}}|{{value|e }}|{{ get_score(j) }}" value="{{value|e }}" size="{{ size }}"> {{ '(Score = %s)'|format(get_score(j)|default('NA')) }}<br />
+    <input type="{{ type }}" name="{{j.linkId}}|{{j.text}}|{{value|e }}|{{ get_score(j) }}" value="{{value|e }}" size="{{ size }}" {{ is_required(j) }}> {{ '(Score = %s)'|format(get_score(j)|default('NA')) }}<br />
 {%- endmacro %}
 
 
@@ -44,13 +52,13 @@
   {% for k in j.option %}
      {% if k.valueCoding %}
 
-       <input type='radio' name='{{j.linkId}}|{{j.text}}' value='{{k.valueCoding.display}}|{{ get_score(k) }}|valueCoding|{{k.valueCoding.system}}|{{k.valueCoding.code}}' />{{ k.valueCoding.display}} {{ '(Score = %s)'|format(get_score(k)|default('NA')) }}  <br />
+       <input type='radio' name='{{j.linkId}}|{{j.text}}' value='{{k.valueCoding.display}}|{{ get_score(k) }}|valueCoding|{{k.valueCoding.system}}|{{k.valueCoding.code}}' {{ is_required(j) }}/>{{ k.valueCoding.display}} {{ '(Score = %s)'|format(get_score(k)|default('NA')) }}  <br />
     {% else %}
-        <input type='radio' name='{{j.linkId}}|{{j.text}}' value='{{k.valueString}}|{{ get_score(k) }}|valueString||' />{{k.valueString}}  {{ '(Score = %s)'|format(get_score(k)|default('NA')) }} <br />
+        <input type='radio' name='{{j.linkId}}|{{j.text}}' value='{{k.valueString}}|{{ get_score(k) }}|valueString||' {{ is_required(j) }}/>{{k.valueString}}  {{ '(Score = %s)'|format(get_score(k)|default('NA')) }} <br />
     {% endif %}
   {% endfor %}
   {% if j.type == 'open-choice' %}
-  <input type="radio"  name="{{j.linkId}}|{{j.text}}" value="" />Other <input type="text" name="{{j.linkId}}|{{j.text}}" value="" style="width: 200px;" />
+  <input type="radio"  name="{{j.linkId}}|{{j.text}}" value="" {{ is_required(j) }} />Other <input type="text" name="{{j.linkId}}|{{j.text}}" value="" style="width: 200px;"  }}/>
   {% endif %}
 {% endmacro %}
 
@@ -59,13 +67,13 @@
     {% for k in j.option %}
       <!-- on the item - for codings -->
       {% if k.valueCoding %}
-         <input type='checkbox' name='{{j.linkId}}|{{j.text}}' value='{{k.valueCoding.display}}|{{ get_score(k) }}|valueCoding|{{k.valueCoding.system}}|{{k.valueCoding.code}}' />{{ k.valueCoding.display}} {{ '(Score = %s)'|format(get_score(k)|default('NA')) }} {{get_exclusive(k)}}<br />
+         <input type='checkbox' name='{{j.linkId}}|{{j.text}}' value='{{k.valueCoding.display}}|{{ get_score(k) }}|valueCoding|{{k.valueCoding.system}}|{{k.valueCoding.code}}'{{ is_required(j) }} />{{ k.valueCoding.display}} {{ '(Score = %s)'|format(get_score(k)|default('NA')) }} {{get_exclusive(k)}}<br />
       {% else %}
-          <input type='checkbox' name='{{j.linkId}}|{{j.text}}' value='{{k.valueString}}|{{ get_score(k) }}|valueString||' />{{k.valueString}} {{ '(Score = %s)'|format(get_score(k)|default('NA')) }} {{get_exclusive(k)}}<br />
+          <input type='checkbox' name='{{j.linkId}}|{{j.text}}' value='{{k.valueString}}|{{ get_score(k) }}|valueString||' {{ is_required(j) }}/>{{k.valueString}} {{ '(Score = %s)'|format(get_score(k)|default('NA')) }} {{get_exclusive(k)}}<br />
        {% endif %}
     {% endfor %}
     {% if j.type == 'open-choice' %}
-    <input type="radio"  name="{{j.linkId}}|{{j.text}}" value="" />Other <input type="text" name="{{j.linkId}}|{{j.text}}" value="" style="width: 200px;" />
+    <input type="radio"  name="{{j.linkId}}|{{j.text}}" value="" {{ is_required(j) }}/>Other <input type="text" name="{{j.linkId}}|{{j.text}}" value="" style="width: 200px;" />
     {% endif %}
 
 {% endmacro %}
@@ -80,7 +88,7 @@
 
 <h4>Example Questionnaires available for testing:</h4>
   <form name="myForm" action="" method="post">
-    <input type="radio" name="options" id="option1" value="{{ ref_server }}Questionnaire/questionnaire-example-audit"> The Alcohol Use Disorder Identification Test (AUDIT)Form</input><br>
+    <input type="radio" name="options" id="option1" value="{{ ref_server }}Questionnaire/questionnaire-example-audit" required> The Alcohol Use Disorder Identification Test (AUDIT)Form</input><br>
     <input type="radio" name="options" id="option2" value="{{ ref_server }}Questionnaire/questionnaire-example-asq3"> Ages and Stages Questionnaire (ASQ-3) Sample 16 Month Questionnaire</input><br>
     <input type="radio" name="options" id="option3" value="{{ ref_server }}Questionnaire/questionnaire-example-dast"> Drug Abuse Screening Test (DAST-10)</input><br>
     <input type="radio" name="options" id="option4" value="{{ ref_server }}Questionnaire/questionnaire-example-housing"> Housing Instability Questionnaire</input><br>

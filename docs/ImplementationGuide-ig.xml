@@ -115,6 +115,15 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="ValueSet-argonaut-item-type.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="ValueSet/argonaut-item-type"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="ValueSet-example-answerlist1.html"/>
       </extension>
       <example value="false"/>

@@ -108,24 +108,25 @@
   <li>
     <a href="index.html">Home</a>
   </li>
+<!--
   <li>
     <a href="guidance.html">Guidance</a>
   </li>
-
-  <!--
+-->
   <li class="dropdown">
     <a href="#" data-toggle="dropdown" class="dropdown-toggle">Use Cases<b class="caret">
     </b>
   </a>
   <ul class="dropdown-menu">
     <li>
-      <a href="patient-scheduling.html">Patient Based Scheduling</a>
+      <a href="static.html">Static Forms</a>
     </li>
     <li>
-      <a href="provider-scheduling.html">Provider Based Scheduling</a>
+      <a href="adaptive.html">Adaptive Forms</a>
     </li>
   </ul>
 </li>
+<!--
 <li>
   <a href="operations.html">Operations</a>
 </li>
@@ -537,7 +538,10 @@ This element is labelled as a modifier because the implicit rules may provide ad
             }
           ],
           "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "extensible",
-          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "A human language."
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "A human language.",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/languages"
+          }
         }
       },
       {
@@ -841,7 +845,10 @@ This element is labelled as a modifier because the implicit rules may provide ad
             }
           ],
           "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "required",
-          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "Lifecycle status of the questionnaire response."
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "Lifecycle status of the questionnaire response.",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/questionnaire-answers-status"
+          }
         },
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
@@ -1556,7 +1563,10 @@ There is no need for this element if the item pointed to by the linkId has a def
             }
           ],
           "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">strength</a>" : "example",
-          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "Code indicating the response provided for a question."
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.description">description</a>" : "Code indicating the response provided for a question.",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet[x]">valueSetReference</a>" : {
+            "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "http://hl7.org/fhir/ValueSet/questionnaire-answers"
+          }
         },
         "<a href="http://hl7.org/fhir/STU3/datatypes.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
           {
@@ -2036,7 +2046,7 @@ Formats: <a href="StructureDefinition-qr.html">Narrative</a>, <a href="Structure
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Jul 5, 2018 19:06-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, Jul 11, 2018 09:28-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>
         </p>
    </div>  <!-- /inner-wrapper -->

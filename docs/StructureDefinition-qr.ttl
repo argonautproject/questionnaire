@@ -215,7 +215,11 @@
            fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
          ];
          fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "A human language." ]
+         fhir:ElementDefinition.binding.description [ fhir:value "A human language." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/languages>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/languages" ]
+         ]
        ]
      ], [
        fhir:index 5;
@@ -522,7 +526,11 @@
            fhir:Extension.valueString [ fhir:value "QuestionnaireResponseStatus" ]
          ];
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Lifecycle status of the questionnaire response." ]
+         fhir:ElementDefinition.binding.description [ fhir:value "Lifecycle status of the questionnaire response." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/questionnaire-answers-status>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/questionnaire-answers-status" ]
+         ]
        ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
@@ -1233,7 +1241,11 @@
            fhir:Extension.valueString [ fhir:value "QuestionnaireAnswer" ]
          ];
          fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Code indicating the response provided for a question." ]
+         fhir:ElementDefinition.binding.description [ fhir:value "Code indicating the response provided for a question." ];
+         fhir:ElementDefinition.binding.valueSetReference [
+           fhir:link <http://hl7.org/fhir/ValueSet/questionnaire-answers>;
+           fhir:Reference.reference [ fhir:value "http://hl7.org/fhir/ValueSet/questionnaire-answers" ]
+         ]
        ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
@@ -1638,6 +1650,12 @@
   ] .
 
 <http://hl7.org/fhir/ValueSet/all-languages> a fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/languages> a fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/questionnaire-answers-status> a fhir:ValueSet .
+
+<http://hl7.org/fhir/ValueSet/questionnaire-answers> a fhir:ValueSet .
 
 # - ontology header ------------------------------------------------------------
 

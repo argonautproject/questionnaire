@@ -212,7 +212,10 @@
             }
           ],
           "strength": "extensible",
-          "description": "A human language."
+          "description": "A human language.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/languages"
+          }
         }
       },
       {
@@ -516,7 +519,10 @@
             }
           ],
           "strength": "required",
-          "description": "Lifecycle status of the questionnaire response."
+          "description": "Lifecycle status of the questionnaire response.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/questionnaire-answers-status"
+          }
         },
         "mapping": [
           {
@@ -1227,7 +1233,10 @@
             }
           ],
           "strength": "example",
-          "description": "Code indicating the response provided for a question."
+          "description": "Code indicating the response provided for a question.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/questionnaire-answers"
+          }
         },
         "mapping": [
           {

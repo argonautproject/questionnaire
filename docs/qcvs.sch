@@ -10,6 +10,12 @@
     single schematron that validates contained resources (if you have any) 
   -->
   <sch:pattern>
+    <sch:title>f:ValueSet</sch:title>
+    <sch:rule context="f:ValueSet">
+      <sch:assert test="count(f:expansion) &gt;= 1">expansion: minimum cardinality of 'expansion' is 1</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
     <sch:title>ValueSet</sch:title>
     <sch:rule context="f:ValueSet">
       <sch:assert test="not(parent::f:contained and f:contained)">If the resource is contained in another resource, it SHALL NOT contain nested Resources (inherited)</sch:assert>
@@ -65,12 +71,25 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
+    <sch:title>f:ValueSet/f:expansion/f:contains</sch:title>
+    <sch:rule context="f:ValueSet/f:expansion/f:contains">
+      <sch:assert test="count(f:extension[@url = 'http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue']) &lt;= 1">extension with URL = 'http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue': maximum cardinality of 'extension' is 1</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
     <sch:title>ValueSet.expansion.contains</sch:title>
     <sch:rule context="f:ValueSet/f:expansion/f:contains">
       <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
       <sch:assert test="exists(f:code) or exists(f:display)">SHALL have a code or a display (inherited)</sch:assert>
       <sch:assert test="exists(f:code) or (f:abstract/@value = true())">Must have a code if not abstract (inherited)</sch:assert>
       <sch:assert test="exists(f:system) or not(exists(f:code))">Must have a system if a code is present (inherited)</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:title>ValueSet.expansion.contains.extension</sch:title>
+    <sch:rule context="f:ValueSet/f:expansion/f:contains/f:extension">
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
+      <sch:assert test="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])">Must have either extensions or value[x], not both (inherited)</sch:assert>
     </sch:rule>
   </sch:pattern>
 </sch:schema>

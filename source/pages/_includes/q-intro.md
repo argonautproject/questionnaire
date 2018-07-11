@@ -13,19 +13,21 @@ The Argonaut Questionnaire resource supports:
   - Including standardized concepts like [LOINC]
 - Answers
   - T/F, multiple choice (Including standardized concepts like LOINC)
-  - hort answer, narrative, etc
-- Provisions for scoring of answers
-  - Textual based description how to calculate the total scores
-  - Associated scores for each question-answer/answer choice
-- Other Details like whether required or not, Provider instructions hidden or not, etc.
+  - Short answer, narrative and other answer types.
+
+- Provisions for
+
+  - Associating numeric scores for each group of questions or each question or each answer choice.  (How to calculate the total scores can be described as provider instructions )
+  -  Whether the question is required
+  -  Whether the answer choice is excludes other choices ( for example, a choice of 'none of the above').
+  -  Whether the item (for example, provider instructions is hidden)
+  -  Indication for how much time is allowed for the questionnaire, group of questions or each question.
 
 ### Mandatory Data Elements and Terminology
 
 The following data-elements are mandatory:
 
 **Each Questionnaire must have:**
-
-
 
 1. An absolute URI that is used to identify this assessment form when it is referenced by a response (required by SDC )
 1. A human friendly title
@@ -37,6 +39,8 @@ The following data-elements are mandatory:
 
 1. [Argonaut Questionnaire Score] *Extension* for use on all answer types and choices (not just codings).
 1. [Argonaut Questionnaire Time Limit] *Extension* for indicating the duration allowed for all or parts of the assessment.
+1. [Questionnaire Hidden] *Extension* for indicating that the item should not be displayed to the user.
+1. [Questionnaire Option Exclusive] *Extension* for indicating that if this option is selected, no other options may be selected.
 1. A version of the assessment
 1. A description of the assessment
 1. A standard concept code (e.g., LOINC) for the question or questions
@@ -51,8 +55,9 @@ The following data-elements are mandatory:
 1. Nesting or grouping of questions
 1. the questionnaire's context for categorizing and grouping for searches
 
-**What about these?**
+<!--
 
+**What about these?**
 - Questionnaire.identifier
 - Questionnaire.date
 - Questionnaire.publisher
@@ -70,19 +75,24 @@ Extensions:
 - [questionnaire-maxOccurs]
 - [questionnaire-minOccurs]
 
+-->
 
 **Additional Profile specific implementation guidance:**
 
-All ValueSets referenced by the `.options` element are [contained] resources in the Questionnaire.  This ensures that the Questionnaire will not adopt a new version of the referenced value set without revising the Questionnaire to point to that new version - putting the author of the Questionnaire in control of any changes.
+1. All ValueSets referenced by the `.options` element are [contained] resources in the Questionnaire and require a `ValueSet.expansion`.  This ensures that the Questionnaire will not adopt a new version of the referenced value set without revising the Questionnaire to point to that new version - putting the author of the Questionnaire in control of any changes.
+
+1. `boolean` vs `choice` - In a scenario where the end user has to select simple true/false or active/inactive states the `boolean`item answer type (e.g, a checkbox control) is appropriate.  Where two alternative answers can't be handled with a simple checkbox then a `choice` item answer type is needed. For example, for assigning numeric score values to the individual yes or no answers.
+1. `text` vs `string` item types  - `string` item answer types are typically limited to a single line and correspond to the the HTML5 `<input>` element type "text".  The Questionnaire `text` item answer types are intended for multiline answers and correspond to the HTML5 `<textarea>` form attribute.
+
 
 ### Examples
 
 <!-- {% raw %} {% include list-simple-questionnaires.xhtml %}{% endraw %} -->
-- [Sampler](Questionnaire-questionnaire-example-sampler.html)
-- [PHQ-9](Questionnaire-questionnaire-example-phq9.html)
-- [AUDIT](Questionnaire-questionnaire-example-audit.html)
-- [DAST](Questionnaire-questionnaire-example-dast.html)
-- [Housing](Questionnaire-questionnaire-example-housing.html)
-- [ASQ3](Questionnaire-questionnaire-example-asq3.html)
+- [Sampler](Questionnaire-questionnaire-example-sampler.html) - a Sample form using all the supported question types
+- [PHQ-9](Questionnaire-questionnaire-example-phq9.html) - An example demonstrating the use of *contained* value sets for answer choices, decimal scores associated with each value within the valueset, the *hidden* extension to indicate that provider instruction should not be displayed to the end user.
+- [AUDIT](Questionnaire-questionnaire-example-audit.html) - An example multiple choice form demonstrating the use of *contained* value sets for answer choices, decimal scores associated with each value within the valueset, the *hidden* extension to indicate that provider instruction should not be displayed to the end user.
+- [DAST](Questionnaire-questionnaire-example-dast.html) - An example multiple choice form demonstrating the use of inline codings for answer choices, decimal scores associated with each coding, the *hidden* extension to indicate that provider instruction should not be displayed to the end user.
+- [Housing](Questionnaire-questionnaire-example-housing.html) -An example multiple choice form demonstrating the use of inline strings for answer choices, the *hidden* extension to indicate that provider instruction should not be displayed to the end user, an 'any of' choice option with the the *exclusive* extension for one of the choices.
+- [ASQ3](Questionnaire-questionnaire-example-asq3.html) - An example multiple choice form demonstrating the use of inline codings for answer choices, decimal scores associated with each coding, the *hidden* extension to indicate that provider instruction should not be displayed to the end user.
 
 {%include link-list.md %}

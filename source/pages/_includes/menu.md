@@ -4,24 +4,25 @@
   <li>
     <a href="index.html">Home</a>
   </li>
+<!--
   <li>
     <a href="guidance.html">Guidance</a>
   </li>
-
-  <!--
+-->
   <li class="dropdown">
     <a href="#" data-toggle="dropdown" class="dropdown-toggle">Use Cases<b class="caret">
     </b>
   </a>
   <ul class="dropdown-menu">
     <li>
-      <a href="patient-scheduling.html">Patient Based Scheduling</a>
+      <a href="static.html">Static Forms</a>
     </li>
     <li>
-      <a href="provider-scheduling.html">Provider Based Scheduling</a>
+      <a href="adaptive.html">Adaptive Forms</a>
     </li>
   </ul>
 </li>
+<!--
 <li>
   <a href="operations.html">Operations</a>
 </li>
