@@ -153,30 +153,6 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "valueUri": "ValueSet-argonaut-item-type.html"
-            }
-          ],
-          "example": false,
-          "sourceReference": {
-            "reference": "ValueSet/argonaut-item-type"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "valueUri": "ValueSet-example-answerlist1.html"
-            }
-          ],
-          "example": false,
-          "sourceReference": {
-            "reference": "ValueSet/example-answerlist1"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "StructureDefinition-extension-timelimit.html"
             }
           ],
@@ -255,18 +231,6 @@
           "example": false,
           "sourceReference": {
             "reference": "StructureDefinition/q"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "valueUri": "CodeSystem-answer-codes.html"
-            }
-          ],
-          "example": false,
-          "sourceReference": {
-            "reference": "CodeSystem/answer-codes"
           }
         },
         {

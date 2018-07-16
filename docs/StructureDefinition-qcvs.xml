@@ -1855,7 +1855,7 @@
     </element>
     <element id="ValueSet.expansion.contains.extension">
       <path value="ValueSet.expansion.contains.extension"/>
-      <slicing id="6">
+      <slicing id="4">
         <discriminator>
           <type value="value"/>
           <path value="url"/>

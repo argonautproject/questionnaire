@@ -340,8 +340,9 @@ there is clearly a need for a common form standard with a focus on simple assess
   <li><strong><a href="StructureDefinition-q.html" title="Argonaut Questionnaire Profile">Argonaut Questionnaire Profile</a></strong></li>
   <li><strong><a href="StructureDefinition-qr.html" title="Argonaut QuestionnaireResponse Profile">Argonaut QuestionnaireResponse Profile</a></strong></li>
   <li><strong>“<a href="CapabilityStatement-assessmentbank.html">Assessment-Bank</a>“</strong><sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>: A form repository for the collection of the assessments. It is accessible to both the providers and form editors as a FHIR Questionnaire endpoint.</li>
-  <li>(Optionally) <strong>“<a href="CapabilityStatement-answerbank.html">Answer-Bank</a>“</strong><sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>: A repository for the collection of the completed assessments (‘answers’). It is accessible to the providers  as a FHIR QuestionnaireResponse endpoint.  For this guide it is assumed this will be the <strong><a href="CapabilityStatement-server.html">Provider EHR</a></strong>.</li>
+  <li>(Optionally) <strong>“<a href="CapabilityStatement-answerbank.html">Answer-Bank</a>“</strong><sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>: A repository for the collection of the completed assessments (‘answers’). It is accessible to the providers  as a FHIR QuestionnaireResponse endpoint.  It may be internal or external to the <strong><a href="CapabilityStatement-server.html">Provider EHR</a></strong>.</li>
   <li><strong><a href="CapabilityStatement-server.html">Provider EHR</a></strong><sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>: The System that is capable of retrieving, rendering and displaying the assessment to a subject or a provider to fill out.</li>
+  <li><strong>Form-filler</strong>: The software application interacting with the user to get answers for a questionnaire.</li>
   <li><strong>Form Author/Editor</strong>: A system or person authorized to create update and deprecate assessments forms.</li>
   <li><strong>Practitioner</strong>: A healthcare provider authorized to administer the assessment to a subject.</li>
   <li><strong>Provider administrator</strong>: A practitioner or staff member authorized to fill out an assessment on behalf of a subject or with input from a subject.</li>
@@ -531,7 +532,7 @@ there is clearly a need for a common form standard with a focus on simple assess
     <p>canonical : canonical path to this specification (defined in ig.json)-   {{site.data.fhir.canonical}}  = http://fhir.org/guides/argonaut-questionnaire</p>
   </li>
   <li>
-    <p>errorCount : number of errors in the build file (not including HTML validation errors) -   {{site.data.fhir.errorCount}}  = 693</p>
+    <p>errorCount : number of errors in the build file (not including HTML validation errors) -   {{site.data.fhir.errorCount}}  = 322</p>
   </li>
   <li>
     <p>version : version of FHIR -   {{site.data.fhir.version}}  = 3.0.1</p>
@@ -543,13 +544,13 @@ there is clearly a need for a common form standard with a focus on simple assess
     <p>versionFull : version-revision -   {{site.data.fhir.versionFull}}  = 3.0.1-11917</p>
   </li>
   <li>
-    <p>totalFiles : total number of files found by the build -   {{site.data.fhir.totalFiles}}  = 26</p>
+    <p>totalFiles : total number of files found by the build -   {{site.data.fhir.totalFiles}}  = 23</p>
   </li>
   <li>
     <p>processedFiles : number of files genrated by the build -   {{site.data.fhir.processedFiles}}  = 1</p>
   </li>
   <li>
-    <p>genDate : date of generation (so date stamps in the pages can match those in the conformance resources) -   {{site.data.fhir.genDate}}  = Wed, Jul 11, 2018 09:28-0700</p>
+    <p>genDate : date of generation (so date stamps in the pages can match those in the conformance resources) -   {{site.data.fhir.genDate}}  = Mon, Jul 16, 2018 12:21-0700</p>
   </li>
 </ul>
 
@@ -602,7 +603,7 @@ there is clearly a need for a common form standard with a focus on simple assess
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, Jul 11, 2018 09:28-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Mon, Jul 16, 2018 12:21-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>
         </p>
    </div>  <!-- /inner-wrapper -->

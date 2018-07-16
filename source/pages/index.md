@@ -75,8 +75,9 @@ there is clearly a need for a common form standard with a focus on simple assess
 1. **[Argonaut Questionnaire Profile]**
 1. **[Argonaut QuestionnaireResponse Profile]**
 1. **"[Assessment-Bank]"**[^1]: A form repository for the collection of the assessments. It is accessible to both the providers and form editors as a FHIR Questionnaire endpoint.
-1. (Optionally) **"[Answer-Bank]"**[^2]: A repository for the collection of the completed assessments ('answers'). It is accessible to the providers  as a FHIR QuestionnaireResponse endpoint.  For this guide it is assumed this will be the **[Provider EHR]**.
-1. **[Provider EHR]**[^3]: The System that is capable of retrieving, rendering and displaying the assessment to a subject or a provider to fill out.
+1. (Optionally) **"[Answer-Bank]"**[^2]: A repository for the collection of the completed assessments ('answers'). It is accessible to the providers  as a FHIR QuestionnaireResponse endpoint.  It may be internal or external to the **[Provider EHR]**.
+1. **[Provider EHR]**[^3]: The System that is capable of retrieving, rendering and displaying the assessment to a subject or a provider to fill out.  
+1. **Form-filler**: The software application interacting with the user to get answers for a questionnaire.
 1. **Form Author/Editor**: A system or person authorized to create update and deprecate assessments forms.
 1. **Practitioner**: A healthcare provider authorized to administer the assessment to a subject.
 1. **Provider administrator**: A practitioner or staff member authorized to fill out an assessment on behalf of a subject or with input from a subject.

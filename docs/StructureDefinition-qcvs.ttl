@@ -2276,7 +2276,7 @@
        fhir:Element.id [ fhir:value "ValueSet.expansion.contains.extension" ];
        fhir:ElementDefinition.path [ fhir:value "ValueSet.expansion.contains.extension" ];
        fhir:ElementDefinition.slicing [
-         fhir:Element.id [ fhir:value "6" ];
+         fhir:Element.id [ fhir:value "4" ];
          fhir:ElementDefinition.slicing.discriminator [
            fhir:index 0;
            fhir:ElementDefinition.slicing.discriminator.type [ fhir:value "value" ];

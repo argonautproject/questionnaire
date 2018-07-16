@@ -115,24 +115,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="ValueSet-argonaut-item-type.html"/>
-      </extension>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="ValueSet/argonaut-item-type"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="ValueSet-example-answerlist1.html"/>
-      </extension>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="ValueSet/example-answerlist1"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="StructureDefinition-extension-timelimit.html"/>
       </extension>
       <example value="false"/>
@@ -192,15 +174,6 @@
       <example value="false"/>
       <sourceReference>
         <reference value="StructureDefinition/q"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="CodeSystem-answer-codes.html"/>
-      </extension>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="CodeSystem/answer-codes"/>
       </sourceReference>
     </resource>
     <resource>

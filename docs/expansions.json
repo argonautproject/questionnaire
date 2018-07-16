@@ -1,49 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "57b3447a-0035-4f49-b092-fd7fff074551",
+  "id" : "01f656b2-c416-4f12-9a89-ab1dd8d085d4",
   "meta" : {
-    "lastUpdated" : "2018-07-11T09:28:12.667-07:00"
+    "lastUpdated" : "2018-07-16T12:21:35.359-07:00"
   },
-  "type" : "collection",
-  "entry" : [{
-    "fullUrl" : "http://fhir.org/guides/argonaut-questionnaire/ValueSet/argonaut-item-type",
-    "resource" : {
-      "resourceType" : "ValueSet",
-      "id" : "argonaut-item-type",
-      "text" : {
-        "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 0 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr></table></div>"
-      },
-      "url" : "http://fhir.org/guides/argonaut-questionnaire/ValueSet/argonaut-item-type",
-      "version" : "0.0.0",
-      "name" : "ArgonautQuestionnaireItemType",
-      "title" : "Argonaut Questionnaire Item Types",
-      "status" : "active",
-      "date" : "2018-07-11T00:00:00-07:00",
-      "description" : "The Argonaut Questionnaire Item Types exclude the question types \'attachment\' and \'reference from  the FHIR Questionnaire Item Types",
-      "jurisdiction" : [{
-        "coding" : [{
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "US",
-          "display" : "United States of America"
-        }]
-      }],
-      "expansion" : {
-        "identifier" : "urn:uuid:53e1ab5f-6ab3-441b-b35c-06ae1265260b",
-        "timestamp" : "2018-07-10T17:55:53-07:00",
-        "parameter" : [{
-          "name" : "excludeNested",
-          "valueBoolean" : true
-        },
-        {
-          "name" : "excludeNested",
-          "valueBoolean" : true
-        },
-        {
-          "name" : "excludeNested",
-          "valueBoolean" : false
-        }]
-      }
-    }
-  }]
+  "type" : "collection"
 }
