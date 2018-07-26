@@ -961,105 +961,15 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
   <contained>
     <ValueSet>
       <id value="PHQ-9"/>
-      <meta>
-        <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs"/>
-      </meta>
       <url value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-9"/>
-      <identifier>
-        <value value="phq9"/>
-      </identifier>
-      <version value="0.0.0"/>
-      <title value="Patient Health Questionnaire (PHQ-9)"/>
       <status value="active"/>
-      <date value="2018-06-27T00:00:00-07:00"/>
-      <copyright value="This content LOINC is copyright 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use ."/>
-      <expansion>
-        <identifier value="phq9-expansion"/>
-        <timestamp value="2018-06-27T22:49:08-07:00"/>
-        <total value="4"/>
-        <contains>
-          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
-            <valueDecimal value="0"/>
-          </extension>
-          <system value="http://loinc.org"/>
-          <version value="2.64"/>
-          <code value="LA6568-5"/>
-          <display value="Not at all"/>
-        </contains>
-        <contains>
-          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
-            <valueDecimal value="1"/>
-          </extension>
-          <system value="http://loinc.org"/>
-          <version value="2.64"/>
-          <code value="LA6569-3"/>
-          <display value="Several days"/>
-        </contains>
-        <contains>
-          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
-            <valueDecimal value="2"/>
-          </extension>
-          <system value="http://loinc.org"/>
-          <version value="2.64"/>
-          <code value="LA6570-1"/>
-          <display value="More than half the days"/>
-        </contains>
-        <contains>
-          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
-            <valueDecimal value="3"/>
-          </extension>
-          <system value="http://loinc.org"/>
-          <version value="2.64"/>
-          <code value="LA6571-9"/>
-          <display value="Nearly every day"/>
-        </contains>
-      </expansion>
     </ValueSet>
   </contained>
   <contained>
     <ValueSet>
       <id value="PHQ-10"/>
-      <meta>
-        <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs"/>
-      </meta>
       <url value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-10"/>
-      <identifier>
-        <value value="phq10"/>
-      </identifier>
-      <version value="0.0.0"/>
-      <title value="Patient Health Questionnaire (PHQ-9)"/>
       <status value="active"/>
-      <date value="2018-06-27T00:00:00-07:00"/>
-      <copyright value="This content LOINC is copyright 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use ."/>
-      <expansion>
-        <identifier value="phq10-expansion"/>
-        <timestamp value="2018-06-27T22:27:03-07:00"/>
-        <total value="4"/>
-        <contains>
-          <system value="http://loinc.org"/>
-          <version value="2.64"/>
-          <code value="LA6572-7"/>
-          <display value="Not difficult at all"/>
-        </contains>
-        <contains>
-          <system value="http://loinc.org"/>
-          <version value="2.64"/>
-          <code value="LA6573-5"/>
-          <display value="Somewhat difficult"/>
-        </contains>
-        <contains>
-          <system value="http://loinc.org"/>
-          <version value="2.64"/>
-          <code value="LA6575-0"/>
-          <display value="Very difficult"/>
-        </contains>
-        <contains>
-          <system value="http://loinc.org"/>
-          <version value="2.64"/>
-          <code value="LA6574-3"/>
-          <display value="Extremely difficult"/>
-        </contains>
-      </expansion>
     </ValueSet>
   </contained>
   <url value="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9"/>
@@ -1070,13 +980,27 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
   <version value="0.0.0"/>
   <title value="Patient Health Questionnaire (PHQ-9)"/>
   <status value="draft"/>
-  <date value="2018-07-05T00:00:00-07:00"/>
-  <publisher value="ArgonautProject"/>
+  <date value="2018-07-26T00:00:00-07:00"/>
+  <publisher value="Argonaut Project"/>
+  <useContext>
+    <code>
+      <system value="http://hl7.org/fhir/usage-context-type"/>
+      <code value="task"/>
+      <display value="Workflow Task"/>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://acme.org"/>
+        <code value="example"/>
+        <display value="Example of Use"/>
+      </coding>
+    </valueCodeableConcept>
+  </useContext>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
       <code value="US"/>
-      <display value="UnitedStatesofAmerica"/>
+      <display value="United States of America"/>
     </coding>
   </jurisdiction>
   <contact>

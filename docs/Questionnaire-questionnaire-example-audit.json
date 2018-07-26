@@ -14,239 +14,20 @@
     {
       "resourceType": "ValueSet",
       "id": "SAMHSA-6",
-      "meta": {
-        "profile": [
-          "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs"
-        ]
-      },
       "url": "http://fhir.org/guides/argonaut-questionnaire/ValueSet/SAMHSA-6",
-      "identifier": [
-        {
-          "value": "samhsa6"
-        }
-      ],
-      "version": "0.0.0",
-      "title": "SAMHSA-6-drinks",
-      "status": "active",
-      "date": "2018-07-04T00:00:00-07:00",
-      "copyright": "This content LOINC is copyright 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use .",
-      "expansion": {
-        "identifier": "samhsa6-expansion",
-        "timestamp": "2018-07-04T14:43:56-07:00",
-        "total": 5,
-        "contains": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
-                "valueDecimal": 0
-              }
-            ],
-            "system": "http://loinc.org",
-            "version": "2.64",
-            "code": "LA6270-8",
-            "display": "Never"
-          },
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
-                "valueDecimal": 1
-              }
-            ],
-            "system": "http://loinc.org",
-            "version": "2.64",
-            "code": "LA18933-4",
-            "display": "Less than Monthly"
-          },
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
-                "valueDecimal": 2
-              }
-            ],
-            "system": "http://loinc.org",
-            "version": "2.64",
-            "code": "LA18876-5",
-            "display": "Monthly"
-          },
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
-                "valueDecimal": 3
-              }
-            ],
-            "system": "http://loinc.org",
-            "version": "2.64",
-            "code": "LA18891-4",
-            "display": "Weekly"
-          },
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
-                "valueDecimal": 4
-              }
-            ],
-            "system": "http://loinc.org",
-            "version": "2.64",
-            "code": "LA18934-2",
-            "display": "Daily or Almost Daily"
-          }
-        ]
-      }
+      "status": "active"
     },
     {
       "resourceType": "ValueSet",
       "id": "SAMHSA-dad",
-      "meta": {
-        "profile": [
-          "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs"
-        ]
-      },
       "url": "http://fhir.org/guides/argonaut-questionnaire/ValueSet/SAMHSA-dad",
-      "identifier": [
-        {
-          "value": "samhsadad"
-        }
-      ],
-      "version": "0.0.0",
-      "title": "SAMHSA-drinks-a-day",
-      "status": "active",
-      "date": "2018-07-04T00:00:00-07:00",
-      "copyright": "This content LOINC is copyright 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use .",
-      "expansion": {
-        "identifier": "samhsadad-expansion",
-        "timestamp": "2018-07-04T14:49:27-07:00",
-        "total": 5,
-        "contains": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
-                "valueDecimal": 0
-              }
-            ],
-            "system": "http://loinc.org",
-            "version": "2.64",
-            "code": "LA15694-5",
-            "display": "1 or 2"
-          },
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
-                "valueDecimal": 1
-              }
-            ],
-            "system": "http://loinc.org",
-            "version": "2.64",
-            "code": "LA15695-2",
-            "display": "3 or 4"
-          },
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
-                "valueDecimal": 2
-              }
-            ],
-            "system": "http://loinc.org",
-            "version": "2.64",
-            "code": "LA18930-0",
-            "display": "5 or 6"
-          },
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
-                "valueDecimal": 3
-              }
-            ],
-            "system": "http://loinc.org",
-            "version": "2.64",
-            "code": "LA18931-8",
-            "display": "7 to 9"
-          },
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
-                "valueDecimal": 4
-              }
-            ],
-            "system": "http://loinc.org",
-            "version": "2.64",
-            "code": "LA18932-6",
-            "display": "10 or more"
-          }
-        ]
-      }
+      "status": "active"
     },
     {
       "resourceType": "ValueSet",
       "id": "example-answerlist1",
-      "meta": {
-        "profile": [
-          "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs"
-        ]
-      },
       "url": "http://fhir.org/guides/argonaut-questionnaire/ValueSet/example-answerlist1",
-      "identifier": [
-        {
-          "value": "example-answerlist1"
-        }
-      ],
-      "version": "0.0.0",
-      "title": "Argonaut Example Answer List 1",
-      "status": "active",
-      "date": "2018-07-05T00:00:00-07:00",
-      "copyright": "This content LOINC is copyright 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use .",
-      "expansion": {
-        "identifier": "example-answerlist1-expansion",
-        "timestamp": "2018-07-05T09:25:24-07:00",
-        "total": 3,
-        "contains": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
-                "valueDecimal": 0
-              }
-            ],
-            "system": "http://snomed.info/sct",
-            "version": "20180131",
-            "code": "373067005",
-            "display": "No"
-          },
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
-                "valueDecimal": 2
-              }
-            ],
-            "system": "http://fhir.org/guides/argonaut-questionnaire/CodeSystem/answer-codes",
-            "version": "0.0.0",
-            "code": "not-last-year",
-            "display": "Yes, but not in the last year"
-          },
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
-                "valueDecimal": 4
-              }
-            ],
-            "system": "http://loinc.org",
-            "version": "2.64",
-            "code": "LA15519-4",
-            "display": "Yes, during the last year"
-          }
-        ]
-      }
+      "status": "active"
     }
   ],
   "url": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit",
@@ -259,15 +40,33 @@
   "version": "0.0.0",
   "title": "The Alcohol Use Disorder Identification Test (AUDIT) Form",
   "status": "draft",
-  "date": "2018-07-05T00:00:00-07:00",
-  "publisher": "ArgonautProject",
+  "date": "2018-07-26T00:00:00-07:00",
+  "publisher": "Argonaut Project",
+  "useContext": [
+    {
+      "code": {
+        "system": "http://hl7.org/fhir/usage-context-type",
+        "code": "task",
+        "display": "Workflow Task"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://acme.org",
+            "code": "example",
+            "display": "Example of Use"
+          }
+        ]
+      }
+    }
+  ],
   "jurisdiction": [
     {
       "coding": [
         {
           "system": "urn:iso:std:iso:3166",
           "code": "US",
-          "display": "UnitedStatesofAmerica"
+          "display": "United States of America"
         }
       ]
     }

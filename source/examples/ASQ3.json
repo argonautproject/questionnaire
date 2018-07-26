@@ -17,7 +17,7 @@
         }
     ],
     "copyright": "Ages &amp; Stages Questionnaires\u00ae, Third Edition (ASQ-3\u2122), Squires &amp; Bricker \u00a9 2009 Paul H. Brookes Publishing Co. All rights reserved.",
-    "date": "2018-06-28",
+    "date": "2018-07-26",
     "id": "questionnaire-example-asq3",
     "identifier": [
         {
@@ -353,7 +353,7 @@
             "coding": [
                 {
                     "code": "US",
-                    "display": "UnitedStatesofAmerica",
+                    "display": "United States of America",
                     "system": "urn:iso:std:iso:3166"
                 }
             ]
@@ -364,7 +364,7 @@
             "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"
         ]
     },
-    "publisher": "ArgonautProject",
+    "publisher": "Argonaut Project",
     "resourceType": "Questionnaire",
     "status": "draft",
     "subjectType": [
@@ -375,5 +375,23 @@
         "status": "additional"
     },
     "title": "Ages and Stages Questionnaire (ASQ-3) Sample 16 Month Questionnaire",
-    "url": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-asq3"
+    "url": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-asq3",
+    "useContext": [
+        {
+            "code": {
+                "code": "task",
+                "display": "Workflow Task",
+                "system": "http://hl7.org/fhir/usage-context-type"
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "code": "example",
+                        "display": "Example of Use",
+                        "system": "http://acme.org"
+                    }
+                ]
+            }
+        }
+    ]
 }

@@ -17,135 +17,22 @@
         }
     ],
     "contained": [
-      {
-         "id": "PHQ-9",
-         "meta": {
-             "profile": [
-                 "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs"
-             ]
-         },
-         "copyright": "This content LOINC is copyright 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use .",
-         "date": "2018-06-27",
-         "expansion": {
-             "contains": [
-                 {
-                     "extension": [
-                         {
-                             "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
-                             "valueDecimal": 0
-                         }
-                     ],
-                     "code": "LA6568-5",
-                     "display": "Not at all",
-                     "system": "http://loinc.org",
-                     "version": "2.64"
-                 },
-                 {
-                     "extension": [
-                         {
-                             "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
-                             "valueDecimal": 1
-                         }
-                     ],
-                     "code": "LA6569-3",
-                     "display": "Several days",
-                     "system": "http://loinc.org",
-                     "version": "2.64"
-                 },
-                 {
-                     "extension": [
-                         {
-                             "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
-                             "valueDecimal": 2
-                         }
-                     ],
-                     "code": "LA6570-1",
-                     "display": "More than half the days",
-                     "system": "http://loinc.org",
-                     "version": "2.64"
-                 },
-                 {
-                     "extension": [
-                         {
-                             "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
-                             "valueDecimal": 3
-                         }
-                     ],
-                     "code": "LA6571-9",
-                     "display": "Nearly every day",
-                     "system": "http://loinc.org",
-                     "version": "2.64"
-                 }
-             ],
-             "identifier": "phq9-expansion",
-             "timestamp": "2018-06-27T22:49:08",
-             "total": 4
-         },
-         "identifier": [
-             {
-                 "value": "phq9"
-             }
-         ],
-         "status": "active",
-         "title": "Patient Health Questionnaire (PHQ-9)",
-         "url": "http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-9",
-         "version": "0.0.0",
-         "resourceType": "ValueSet"
-     },
-     {
-        "id": "PHQ-10",
-        "meta": {
-            "profile": [
-                "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs"
-            ]
+        {
+            "id": "PHQ-9",
+            "resourceType": "ValueSet",
+            "status": "active",
+            "url": "http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-9"
         },
-        "copyright": "This content LOINC is copyright 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use .",
-        "date": "2018-06-27",
-        "expansion": {
-            "contains": [
-                {
-                    "code": "LA6572-7",
-                    "display": "Not difficult at all",
-                    "system": "http://loinc.org",
-                    "version": "2.64"
-                },
-                {
-                    "code": "LA6573-5",
-                    "display": "Somewhat difficult",
-                    "system": "http://loinc.org",
-                    "version": "2.64"
-                },
-                {
-                    "code": "LA6575-0",
-                    "display": "Very difficult",
-                    "system": "http://loinc.org",
-                    "version": "2.64"
-                },
-                {
-                    "code": "LA6574-3",
-                    "display": "Extremely difficult",
-                    "system": "http://loinc.org",
-                    "version": "2.64"
-                }
-            ],
-            "identifier": "phq10-expansion",
-            "timestamp": "2018-06-27T22:27:03",
-            "total": 4
-        },
-        "identifier": [
-            {
-                "value": "phq10"
-            }
-        ],
-        "status": "active",
-        "title": "Patient Health Questionnaire (PHQ-9)",
-        "url": "http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-10",
-        "version": "0.0.0",
-        "resourceType": "ValueSet"
-     }
+        {
+          
+            "id": "PHQ-10",
+            "resourceType": "ValueSet",
+            "status": "active",
+            "url": "http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-10"
+        }
     ],
     "copyright": "Developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from\nPfizer Inc. No permission required to reproduce, translate, display or distribute.",
-    "date": "2018-07-05",
+    "date": "2018-07-26",
     "id": "questionnaire-example-phq9",
     "identifier": [
         {
@@ -383,7 +270,7 @@
             "coding": [
                 {
                     "code": "US",
-                    "display": "UnitedStatesofAmerica",
+                    "display": "United States of America",
                     "system": "urn:iso:std:iso:3166"
                 }
             ]
@@ -394,7 +281,7 @@
             "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"
         ]
     },
-    "publisher": "ArgonautProject",
+    "publisher": "Argonaut Project",
     "resourceType": "Questionnaire",
     "status": "draft",
     "subjectType": [
@@ -405,5 +292,23 @@
         "status": "additional"
     },
     "title": "Patient Health Questionnaire (PHQ-9)",
-    "url": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9"
+    "url": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9",
+    "useContext": [
+        {
+            "code": {
+                "code": "task",
+                "display": "Workflow Task",
+                "system": "http://hl7.org/fhir/usage-context-type"
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "code": "example",
+                        "display": "Example of Use",
+                        "system": "http://acme.org"
+                    }
+                ]
+            }
+        }
+    ]
 }

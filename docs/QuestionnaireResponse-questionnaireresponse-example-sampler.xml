@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<QuestionnaireResponse xmlns="http://hl7.org/fhir">
+  <id value="questionnaireresponse-example-sampler"/>
+  <meta>
+    <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+    <h3>Response Summary</h3>
+    <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-sampler<br />
+    <strong>Date Completed:</strong> 2018-07-26T00:17:43.707504<br />
+    <hr /> <br /> <strong>Question:</strong> (linkID=g9.q1) Describe in detal how to estimate the average air speed velocity of a laden swallow. Please cite your sources and give examples.<br /><strong>Response:</strong> use a Duck!
+Citaions:http://jinja.pocoo.org/docs/2.10/templates/#builtin-filters<br /><br /> <strong>Question:</strong> (linkID=g3.q1) What is the average air speed velocity of a laden swallow in m/sec?<br /><strong>Response:</strong> 12.38<br /><br /> <strong>Question:</strong> (linkID=g8.q1) Describe how to estimate the average air speed velocity of a laden swallow in 20 words or less.<br /><strong>Response:</strong> use a duck!<br /><br /> <strong>Question:</strong> (linkID=g4.q1) What is the average air speed velocity of a laden swallow in m/sec?<br /><strong>Response:</strong> 12<br /><br /> <strong>Question:</strong> (linkID=g12.q1) What is the average air speed velocity of a laden swallow in m/sec?<br /><strong>Response:</strong> 11( code = )<br /><br /> <strong>Question:</strong> (linkID=g2.q1) Check the box if the following statement is true.  The average air speed velocity of a laden European swallow is greater than a laden African swallow.<br /><strong>Response:</strong> False<br /><br /> <strong>Question:</strong> (linkID=g5.q1) If a laden swallow left Camelot on 7/5/2018 what day would it reach the Castle Anthrax?<br /><strong>Response:</strong> 2018-07-26<br /><br /> <strong>Question:</strong> (linkID=g6.q1) If a laden swallow left Camelot on 7/5/2018 and noon when would it reach Castle Anthrax?<br /><strong>Response:</strong> 2018-07-26T01:58<br /><br /> <strong>Question:</strong> (linkID=g7.q1) If a laden swallow left Camelot at noon what time would it reach Castle Anthrax?<br /><strong>Response:</strong> 22:53<br /><br /> <strong>Question:</strong> (linkID=g10.q1) Provide a link to a video clip where the average air speed velocity of a laden swallow question is discussed.<br /><strong>Response:</strong> http://jinja.pocoo.org/docs/2.10/templates/#builtin-filters<br /><br /> <strong>Question:</strong> (linkID=g11.q1) What is the average air speed velocity of a laden swallow in m/sec?<br /><strong>Response:</strong> 11( code = )<br /> <br /><br />
+    </div>
+  </text>
+  <identifier>
+    <value value="test"/>
+  </identifier>
+  <questionnaire>
+    <reference value="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-sampler"/>
+  </questionnaire>
+  <status value="completed"/>
+  <subject>
+    <reference value="Patient/subject1"/>
+  </subject>
+  <context>
+    <reference value="Encounter/encounter1"/>
+  </context>
+  <authored value="2018-07-26T00:17:43.707504"/>
+  <author>
+    <reference value="Practitioner/prov-admin1"/>
+  </author>
+  <source>
+    <reference value="Patient/subject1"/>
+  </source>
+  <item>
+    <linkId value="g9"/>
+    <item>
+      <linkId value="g9.q1"/>
+      <text value="Describe in detal how to estimate the average air speed velocity of a laden swallow. Please cite your sources and give examples."/>
+      <answer>
+        <valueString value="use a Duck!&#xD;&#xA;Citaions:http://jinja.pocoo.org/docs/2.10/templates/#builtin-filters"/>
+      </answer>
+    </item>
+  </item>
+  <item>
+    <linkId value="g3"/>
+    <item>
+      <linkId value="g3.q1"/>
+      <text value="What is the average air speed velocity of a laden swallow in m/sec?"/>
+      <answer>
+        <valueDecimal value="12.38"/>
+      </answer>
+    </item>
+  </item>
+  <item>
+    <linkId value="g8"/>
+    <item>
+      <linkId value="g8.q1"/>
+      <text value="Describe how to estimate the average air speed velocity of a laden swallow in 20 words or less."/>
+      <answer>
+        <valueString value="use a duck!"/>
+      </answer>
+    </item>
+  </item>
+  <item>
+    <linkId value="g4"/>
+    <item>
+      <linkId value="g4.q1"/>
+      <text value="What is the average air speed velocity of a laden swallow in m/sec?"/>
+      <answer>
+        <valueInteger value="12"/>
+      </answer>
+    </item>
+  </item>
+  <item>
+    <linkId value="g12"/>
+    <item>
+      <linkId value="g12.q1"/>
+      <text value="What is the average air speed velocity of a laden swallow in m/sec?"/>
+      <answer>
+        <valueString value="11"/>
+      </answer>
+    </item>
+  </item>
+  <item>
+    <linkId value="g2"/>
+    <item>
+      <linkId value="g2.q1"/>
+      <text value="Check the box if the following statement is true.  The average air speed velocity of a laden European swallow is greater than a laden African swallow."/>
+      <answer>
+        <valueBoolean value="false"/>
+      </answer>
+    </item>
+  </item>
+  <item>
+    <linkId value="g5"/>
+    <item>
+      <linkId value="g5.q1"/>
+      <text value="If a laden swallow left Camelot on 7/5/2018 what day would it reach the Castle Anthrax?"/>
+      <answer>
+        <valueDate value="2018-07-26"/>
+      </answer>
+    </item>
+  </item>
+  <item>
+    <linkId value="g6"/>
+    <item>
+      <linkId value="g6.q1"/>
+      <text value="If a laden swallow left Camelot on 7/5/2018 and noon when would it reach Castle Anthrax?"/>
+      <answer>
+        <valueDateTime value="2018-07-26T01:58"/>
+      </answer>
+    </item>
+  </item>
+  <item>
+    <linkId value="g7"/>
+    <item>
+      <linkId value="g7.q1"/>
+      <text value="If a laden swallow left Camelot at noon what time would it reach Castle Anthrax?"/>
+      <answer>
+        <valueTime value="22:53"/>
+      </answer>
+    </item>
+  </item>
+  <item>
+    <linkId value="g10"/>
+    <item>
+      <linkId value="g10.q1"/>
+      <text value="Provide a link to a video clip where the average air speed velocity of a laden swallow question is discussed."/>
+      <answer>
+        <valueUri value="http://jinja.pocoo.org/docs/2.10/templates/#builtin-filters"/>
+      </answer>
+    </item>
+  </item>
+  <item>
+    <linkId value="g11"/>
+    <item>
+      <linkId value="g11.q1"/>
+      <text value="What is the average air speed velocity of a laden swallow in m/sec?"/>
+      <answer>
+        <valueString value="11"/>
+      </answer>
+    </item>
+  </item>
+</QuestionnaireResponse>

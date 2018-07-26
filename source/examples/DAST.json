@@ -17,7 +17,7 @@
         }
     ],
     "copyright": "Center for Addiction and Mental Health\nCopyright 982 Center for Addiction and Mental Health. Used with permission.\nURL: http://www.camh.ca/en/hospital/Pages/home.aspx",
-    "date": "2018-06-28",
+    "date": "2018-07-26",
     "id": "questionnaire-example-dast",
     "identifier": [
         {
@@ -497,7 +497,7 @@
             "coding": [
                 {
                     "code": "US",
-                    "display": "UnitedStatesofAmerica",
+                    "display": "United States of America",
                     "system": "urn:iso:std:iso:3166"
                 }
             ]
@@ -508,7 +508,7 @@
             "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"
         ]
     },
-    "publisher": "ArgonautProject",
+    "publisher": "Argonaut Project",
     "resourceType": "Questionnaire",
     "status": "draft",
     "subjectType": [
@@ -519,5 +519,23 @@
         "status": "additional"
     },
     "title": "Drug Abuse Screening Test-10 [DAST-10]",
-    "url": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast"
+    "url": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast",
+    "useContext": [
+        {
+            "code": {
+                "code": "task",
+                "display": "Workflow Task",
+                "system": "http://hl7.org/fhir/usage-context-type"
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "code": "example",
+                        "display": "Example of Use",
+                        "system": "http://acme.org"
+                    }
+                ]
+            }
+        }
+    ]
 }

@@ -18,10 +18,12 @@ created app Bundler to bundle json files in a folder ( and figured out how to us
 
 rendering in Jinja2 where using macros for going through options
 
-to do:
+to do: fix sampler QR renderer.
 
 deploy
 
 add ids (must be lower case an start with letter.) -done , prefixes, bootstrap for pretty,  add value sets in python and load to choice - easiest for rendering....
 
 add more types and more examples fix errors in the example.
+
+render and create QA from all types

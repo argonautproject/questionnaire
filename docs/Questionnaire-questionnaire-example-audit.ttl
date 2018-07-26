@@ -23,223 +23,20 @@
      a fhir:ValueSet;
      fhir:index 0;
      fhir:Resource.id [ fhir:value "SAMHSA-6" ];
-     fhir:Resource.meta [
-       fhir:Meta.profile [
-         fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs";
-         fhir:index 0
-       ]
-     ];
      fhir:ValueSet.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/ValueSet/SAMHSA-6" ];
-     fhir:ValueSet.identifier [
-       fhir:index 0;
-       fhir:Identifier.value [ fhir:value "samhsa6" ]
-     ];
-     fhir:ValueSet.version [ fhir:value "0.0.0" ];
-     fhir:ValueSet.title [ fhir:value "SAMHSA-6-drinks" ];
-     fhir:ValueSet.status [ fhir:value "active" ];
-     fhir:ValueSet.date [ fhir:value "2018-07-04T00:00:00-07:00"^^xsd:dateTime ];
-     fhir:ValueSet.copyright [ fhir:value "This content LOINC is copyright 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use ." ];
-     fhir:ValueSet.expansion [
-       fhir:ValueSet.expansion.identifier [ fhir:value "samhsa6-expansion" ];
-       fhir:ValueSet.expansion.timestamp [ fhir:value "2018-07-04T14:43:56-07:00"^^xsd:dateTime ];
-       fhir:ValueSet.expansion.total [ fhir:value "5"^^xsd:integer ];
-       fhir:ValueSet.expansion.contains [
-         fhir:index 0;
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
-           fhir:Extension.valueDecimal [ fhir:value "0"^^xsd:decimal ]
-         ];
-         fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
-         fhir:ValueSet.expansion.contains.version [ fhir:value "2.64" ];
-         fhir:ValueSet.expansion.contains.code [ fhir:value "LA6270-8" ];
-         fhir:ValueSet.expansion.contains.display [ fhir:value "Never" ]
-       ], [
-         fhir:index 1;
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
-           fhir:Extension.valueDecimal [ fhir:value "1"^^xsd:decimal ]
-         ];
-         fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
-         fhir:ValueSet.expansion.contains.version [ fhir:value "2.64" ];
-         fhir:ValueSet.expansion.contains.code [ fhir:value "LA18933-4" ];
-         fhir:ValueSet.expansion.contains.display [ fhir:value "Less than Monthly" ]
-       ], [
-         fhir:index 2;
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
-           fhir:Extension.valueDecimal [ fhir:value "2"^^xsd:decimal ]
-         ];
-         fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
-         fhir:ValueSet.expansion.contains.version [ fhir:value "2.64" ];
-         fhir:ValueSet.expansion.contains.code [ fhir:value "LA18876-5" ];
-         fhir:ValueSet.expansion.contains.display [ fhir:value "Monthly" ]
-       ], [
-         fhir:index 3;
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
-           fhir:Extension.valueDecimal [ fhir:value "3"^^xsd:decimal ]
-         ];
-         fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
-         fhir:ValueSet.expansion.contains.version [ fhir:value "2.64" ];
-         fhir:ValueSet.expansion.contains.code [ fhir:value "LA18891-4" ];
-         fhir:ValueSet.expansion.contains.display [ fhir:value "Weekly" ]
-       ], [
-         fhir:index 4;
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
-           fhir:Extension.valueDecimal [ fhir:value "4"^^xsd:decimal ]
-         ];
-         fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
-         fhir:ValueSet.expansion.contains.version [ fhir:value "2.64" ];
-         fhir:ValueSet.expansion.contains.code [ fhir:value "LA18934-2" ];
-         fhir:ValueSet.expansion.contains.display [ fhir:value "Daily or Almost Daily" ]
-       ]
-     ]
+     fhir:ValueSet.status [ fhir:value "active" ]
   ], [
      a fhir:ValueSet;
      fhir:index 1;
      fhir:Resource.id [ fhir:value "SAMHSA-dad" ];
-     fhir:Resource.meta [
-       fhir:Meta.profile [
-         fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs";
-         fhir:index 0
-       ]
-     ];
      fhir:ValueSet.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/ValueSet/SAMHSA-dad" ];
-     fhir:ValueSet.identifier [
-       fhir:index 0;
-       fhir:Identifier.value [ fhir:value "samhsadad" ]
-     ];
-     fhir:ValueSet.version [ fhir:value "0.0.0" ];
-     fhir:ValueSet.title [ fhir:value "SAMHSA-drinks-a-day" ];
-     fhir:ValueSet.status [ fhir:value "active" ];
-     fhir:ValueSet.date [ fhir:value "2018-07-04T00:00:00-07:00"^^xsd:dateTime ];
-     fhir:ValueSet.copyright [ fhir:value "This content LOINC is copyright 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use ." ];
-     fhir:ValueSet.expansion [
-       fhir:ValueSet.expansion.identifier [ fhir:value "samhsadad-expansion" ];
-       fhir:ValueSet.expansion.timestamp [ fhir:value "2018-07-04T14:49:27-07:00"^^xsd:dateTime ];
-       fhir:ValueSet.expansion.total [ fhir:value "5"^^xsd:integer ];
-       fhir:ValueSet.expansion.contains [
-         fhir:index 0;
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
-           fhir:Extension.valueDecimal [ fhir:value "0"^^xsd:decimal ]
-         ];
-         fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
-         fhir:ValueSet.expansion.contains.version [ fhir:value "2.64" ];
-         fhir:ValueSet.expansion.contains.code [ fhir:value "LA15694-5" ];
-         fhir:ValueSet.expansion.contains.display [ fhir:value "1 or 2" ]
-       ], [
-         fhir:index 1;
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
-           fhir:Extension.valueDecimal [ fhir:value "1"^^xsd:decimal ]
-         ];
-         fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
-         fhir:ValueSet.expansion.contains.version [ fhir:value "2.64" ];
-         fhir:ValueSet.expansion.contains.code [ fhir:value "LA15695-2" ];
-         fhir:ValueSet.expansion.contains.display [ fhir:value "3 or 4" ]
-       ], [
-         fhir:index 2;
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
-           fhir:Extension.valueDecimal [ fhir:value "2"^^xsd:decimal ]
-         ];
-         fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
-         fhir:ValueSet.expansion.contains.version [ fhir:value "2.64" ];
-         fhir:ValueSet.expansion.contains.code [ fhir:value "LA18930-0" ];
-         fhir:ValueSet.expansion.contains.display [ fhir:value "5 or 6" ]
-       ], [
-         fhir:index 3;
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
-           fhir:Extension.valueDecimal [ fhir:value "3"^^xsd:decimal ]
-         ];
-         fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
-         fhir:ValueSet.expansion.contains.version [ fhir:value "2.64" ];
-         fhir:ValueSet.expansion.contains.code [ fhir:value "LA18931-8" ];
-         fhir:ValueSet.expansion.contains.display [ fhir:value "7 to 9" ]
-       ], [
-         fhir:index 4;
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
-           fhir:Extension.valueDecimal [ fhir:value "4"^^xsd:decimal ]
-         ];
-         fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
-         fhir:ValueSet.expansion.contains.version [ fhir:value "2.64" ];
-         fhir:ValueSet.expansion.contains.code [ fhir:value "LA18932-6" ];
-         fhir:ValueSet.expansion.contains.display [ fhir:value "10 or more" ]
-       ]
-     ]
+     fhir:ValueSet.status [ fhir:value "active" ]
   ], [
      a fhir:ValueSet;
      fhir:index 2;
      fhir:Resource.id [ fhir:value "example-answerlist1" ];
-     fhir:Resource.meta [
-       fhir:Meta.profile [
-         fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs";
-         fhir:index 0
-       ]
-     ];
      fhir:ValueSet.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/ValueSet/example-answerlist1" ];
-     fhir:ValueSet.identifier [
-       fhir:index 0;
-       fhir:Identifier.value [ fhir:value "example-answerlist1" ]
-     ];
-     fhir:ValueSet.version [ fhir:value "0.0.0" ];
-     fhir:ValueSet.title [ fhir:value "Argonaut Example Answer List 1" ];
-     fhir:ValueSet.status [ fhir:value "active" ];
-     fhir:ValueSet.date [ fhir:value "2018-07-05T00:00:00-07:00"^^xsd:dateTime ];
-     fhir:ValueSet.copyright [ fhir:value "This content LOINC is copyright 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use ." ];
-     fhir:ValueSet.expansion [
-       fhir:ValueSet.expansion.identifier [ fhir:value "example-answerlist1-expansion" ];
-       fhir:ValueSet.expansion.timestamp [ fhir:value "2018-07-05T09:25:24-07:00"^^xsd:dateTime ];
-       fhir:ValueSet.expansion.total [ fhir:value "3"^^xsd:integer ];
-       fhir:ValueSet.expansion.contains [
-         fhir:index 0;
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
-           fhir:Extension.valueDecimal [ fhir:value "0"^^xsd:decimal ]
-         ];
-         fhir:ValueSet.expansion.contains.system [ fhir:value "http://snomed.info/sct" ];
-         fhir:ValueSet.expansion.contains.version [ fhir:value "20180131" ];
-         fhir:ValueSet.expansion.contains.code [ fhir:value "373067005" ];
-         fhir:ValueSet.expansion.contains.display [ fhir:value "No" ]
-       ], [
-         fhir:index 1;
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
-           fhir:Extension.valueDecimal [ fhir:value "2"^^xsd:decimal ]
-         ];
-         fhir:ValueSet.expansion.contains.system [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/CodeSystem/answer-codes" ];
-         fhir:ValueSet.expansion.contains.version [ fhir:value "0.0.0" ];
-         fhir:ValueSet.expansion.contains.code [ fhir:value "not-last-year" ];
-         fhir:ValueSet.expansion.contains.display [ fhir:value "Yes, but not in the last year" ]
-       ], [
-         fhir:index 2;
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
-           fhir:Extension.valueDecimal [ fhir:value "4"^^xsd:decimal ]
-         ];
-         fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
-         fhir:ValueSet.expansion.contains.version [ fhir:value "2.64" ];
-         fhir:ValueSet.expansion.contains.code [ fhir:value "LA15519-4" ];
-         fhir:ValueSet.expansion.contains.display [ fhir:value "Yes, during the last year" ]
-       ]
-     ]
+     fhir:ValueSet.status [ fhir:value "active" ]
   ];
   fhir:Questionnaire.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit"];
   fhir:Questionnaire.identifier [
@@ -250,15 +47,31 @@
   fhir:Questionnaire.version [ fhir:value "0.0.0"];
   fhir:Questionnaire.title [ fhir:value "The Alcohol Use Disorder Identification Test (AUDIT) Form"];
   fhir:Questionnaire.status [ fhir:value "draft"];
-  fhir:Questionnaire.date [ fhir:value "2018-07-05T00:00:00-07:00"^^xsd:dateTime];
-  fhir:Questionnaire.publisher [ fhir:value "ArgonautProject"];
+  fhir:Questionnaire.date [ fhir:value "2018-07-26T00:00:00-07:00"^^xsd:dateTime];
+  fhir:Questionnaire.publisher [ fhir:value "Argonaut Project"];
+  fhir:Questionnaire.useContext [
+     fhir:index 0;
+     fhir:UsageContext.code [
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/usage-context-type" ];
+       fhir:Coding.code [ fhir:value "task" ];
+       fhir:Coding.display [ fhir:value "Workflow Task" ]
+     ];
+     fhir:UsageContext.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://acme.org" ];
+         fhir:Coding.code [ fhir:value "example" ];
+         fhir:Coding.display [ fhir:value "Example of Use" ]
+       ]
+     ]
+  ];
   fhir:Questionnaire.jurisdiction [
      fhir:index 0;
      fhir:CodeableConcept.coding [
        fhir:index 0;
        fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
        fhir:Coding.code [ fhir:value "US" ];
-       fhir:Coding.display [ fhir:value "UnitedStatesofAmerica" ]
+       fhir:Coding.display [ fhir:value "United States of America" ]
      ]
   ];
   fhir:Questionnaire.contact [

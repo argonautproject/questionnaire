@@ -27,15 +27,31 @@
   fhir:Questionnaire.version [ fhir:value "0.0.0"];
   fhir:Questionnaire.title [ fhir:value "Argonaut Questionnaire Sampler"];
   fhir:Questionnaire.status [ fhir:value "draft"];
-  fhir:Questionnaire.date [ fhir:value "2018-07-16T00:00:00-07:00"^^xsd:dateTime];
-  fhir:Questionnaire.publisher [ fhir:value "ArgonautProject"];
+  fhir:Questionnaire.date [ fhir:value "2018-07-26T00:00:00-07:00"^^xsd:dateTime];
+  fhir:Questionnaire.publisher [ fhir:value "Argonaut Project"];
+  fhir:Questionnaire.useContext [
+     fhir:index 0;
+     fhir:UsageContext.code [
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/usage-context-type" ];
+       fhir:Coding.code [ fhir:value "task" ];
+       fhir:Coding.display [ fhir:value "Workflow Task" ]
+     ];
+     fhir:UsageContext.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://acme.org" ];
+         fhir:Coding.code [ fhir:value "example" ];
+         fhir:Coding.display [ fhir:value "Example of Use" ]
+       ]
+     ]
+  ];
   fhir:Questionnaire.jurisdiction [
      fhir:index 0;
      fhir:CodeableConcept.coding [
        fhir:index 0;
        fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
        fhir:Coding.code [ fhir:value "US" ];
-       fhir:Coding.display [ fhir:value "UnitedStatesofAmerica" ]
+       fhir:Coding.display [ fhir:value "United States of America" ]
      ]
   ];
   fhir:Questionnaire.contact [

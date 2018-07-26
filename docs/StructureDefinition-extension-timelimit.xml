@@ -15,7 +15,7 @@
   <status value="draft"/>
   <date value="2018-05-16T00:00:00-07:00"/>
   <publisher value="The Argonaut Project"/>
-  <description value="Argonaut Project Questionnaire Time Limit Extension defines a duration associated with completion of a Questionnaire or  Questionnaire item.  This is used to determine if the end user has completed the Questionnaire or individual questions or groups of questions within the specified time-period.&#xD;&#xA;"/>
+  <description value="Argonaut Project Questionnaire Time Limit Extension defines a duration associated with completion of a Questionnaire or  Questionnaire item.  This is used to determine if the end user has completed the Questionnaire or individual questions or groups of questions within the specified time-period. How the start time is defined is an implementation detail outside of scope of this Implementation Guide.&#xD;&#xA;"/>
   <fhirVersion value="3.0.1"/>
   <mapping>
     <identity value="rim"/>

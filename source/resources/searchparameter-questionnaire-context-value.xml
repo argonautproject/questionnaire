@@ -11,8 +11,8 @@
 	<code value="context-value"/>
 	<base value="Questionnaire"/>
 	<type value="token"/>
-	<description value="A value of use context assigned to the questionnaire. When searching for context should pair with [context-type](http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type) parameter."/>
-	<expression value="Questionnaire.useContext.value"/>
+	<description value="A coded value of use context assigned to the questionnaire. When searching for context should pair with [context-type](http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type) parameter."/>
+	<expression value="Questionnaire.useContext.value.as(CodeableConcept)"/>
 	<xpath value="f:Questionnaire/f:useContext/f:value"/>
 	<xpathUsage value="normal"/>
 </SearchParameter>

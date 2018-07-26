@@ -17,7 +17,7 @@
         }
     ],
     "copyright": "Billioux, Alexander, MD, Dphil; Verlander, Katherine, MPH; Anthony, Susan, DrPH; Alley, Dawn, PhD; National Academy of Sciences, \u201cStandardized Screening for Health-Related Social Needs in Clinical Settings - The Accountable Health Communities Screening Tool,\u201c https://nam.edu/wp-content/uploads/2017/05/Standardized-Screening-for-Health-Related-Social-Needs-in-Clinical-Settings.pdf  \n",
-    "date": "2018-06-28",
+    "date": "2018-07-26",
     "id": "questionnaire-example-housing",
     "identifier": [
         {
@@ -108,7 +108,7 @@
             "coding": [
                 {
                     "code": "US",
-                    "display": "UnitedStatesofAmerica",
+                    "display": "United States of America",
                     "system": "urn:iso:std:iso:3166"
                 }
             ]
@@ -119,7 +119,7 @@
             "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"
         ]
     },
-    "publisher": "ArgonautProject",
+    "publisher": "Argonaut Project",
     "resourceType": "Questionnaire",
     "status": "draft",
     "subjectType": [
@@ -130,5 +130,23 @@
         "status": "additional"
     },
     "title": "Housing Questions",
-    "url": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-housing"
+    "url": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-housing",
+    "useContext": [
+        {
+            "code": {
+                "code": "task",
+                "display": "Workflow Task",
+                "system": "http://hl7.org/fhir/usage-context-type"
+            },
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "code": "example",
+                        "display": "Example of Use",
+                        "system": "http://acme.org"
+                    }
+                ]
+            }
+        }
+    ]
 }

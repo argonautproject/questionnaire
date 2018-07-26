@@ -890,184 +890,22 @@ wSrySCW3SnJJJ6lq8kkpm4pySiuRqvJKLYPiKCAAOw==
   <contained>
     <ValueSet>
       <id value="SAMHSA-6"/>
-      <meta>
-        <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs"/>
-      </meta>
       <url value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/SAMHSA-6"/>
-      <identifier>
-        <value value="samhsa6"/>
-      </identifier>
-      <version value="0.0.0"/>
-      <title value="SAMHSA-6-drinks"/>
       <status value="active"/>
-      <date value="2018-07-04T00:00:00-07:00"/>
-      <copyright value="This content LOINC is copyright 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use ."/>
-      <expansion>
-        <identifier value="samhsa6-expansion"/>
-        <timestamp value="2018-07-04T14:43:56-07:00"/>
-        <total value="5"/>
-        <contains>
-          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
-            <valueDecimal value="0"/>
-          </extension>
-          <system value="http://loinc.org"/>
-          <version value="2.64"/>
-          <code value="LA6270-8"/>
-          <display value="Never"/>
-        </contains>
-        <contains>
-          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
-            <valueDecimal value="1"/>
-          </extension>
-          <system value="http://loinc.org"/>
-          <version value="2.64"/>
-          <code value="LA18933-4"/>
-          <display value="Less than Monthly"/>
-        </contains>
-        <contains>
-          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
-            <valueDecimal value="2"/>
-          </extension>
-          <system value="http://loinc.org"/>
-          <version value="2.64"/>
-          <code value="LA18876-5"/>
-          <display value="Monthly"/>
-        </contains>
-        <contains>
-          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
-            <valueDecimal value="3"/>
-          </extension>
-          <system value="http://loinc.org"/>
-          <version value="2.64"/>
-          <code value="LA18891-4"/>
-          <display value="Weekly"/>
-        </contains>
-        <contains>
-          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
-            <valueDecimal value="4"/>
-          </extension>
-          <system value="http://loinc.org"/>
-          <version value="2.64"/>
-          <code value="LA18934-2"/>
-          <display value="Daily or Almost Daily"/>
-        </contains>
-      </expansion>
     </ValueSet>
   </contained>
   <contained>
     <ValueSet>
       <id value="SAMHSA-dad"/>
-      <meta>
-        <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs"/>
-      </meta>
       <url value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/SAMHSA-dad"/>
-      <identifier>
-        <value value="samhsadad"/>
-      </identifier>
-      <version value="0.0.0"/>
-      <title value="SAMHSA-drinks-a-day"/>
       <status value="active"/>
-      <date value="2018-07-04T00:00:00-07:00"/>
-      <copyright value="This content LOINC is copyright 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use ."/>
-      <expansion>
-        <identifier value="samhsadad-expansion"/>
-        <timestamp value="2018-07-04T14:49:27-07:00"/>
-        <total value="5"/>
-        <contains>
-          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
-            <valueDecimal value="0"/>
-          </extension>
-          <system value="http://loinc.org"/>
-          <version value="2.64"/>
-          <code value="LA15694-5"/>
-          <display value="1 or 2"/>
-        </contains>
-        <contains>
-          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
-            <valueDecimal value="1"/>
-          </extension>
-          <system value="http://loinc.org"/>
-          <version value="2.64"/>
-          <code value="LA15695-2"/>
-          <display value="3 or 4"/>
-        </contains>
-        <contains>
-          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
-            <valueDecimal value="2"/>
-          </extension>
-          <system value="http://loinc.org"/>
-          <version value="2.64"/>
-          <code value="LA18930-0"/>
-          <display value="5 or 6"/>
-        </contains>
-        <contains>
-          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
-            <valueDecimal value="3"/>
-          </extension>
-          <system value="http://loinc.org"/>
-          <version value="2.64"/>
-          <code value="LA18931-8"/>
-          <display value="7 to 9"/>
-        </contains>
-        <contains>
-          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
-            <valueDecimal value="4"/>
-          </extension>
-          <system value="http://loinc.org"/>
-          <version value="2.64"/>
-          <code value="LA18932-6"/>
-          <display value="10 or more"/>
-        </contains>
-      </expansion>
     </ValueSet>
   </contained>
   <contained>
     <ValueSet>
       <id value="example-answerlist1"/>
-      <meta>
-        <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs"/>
-      </meta>
       <url value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/example-answerlist1"/>
-      <identifier>
-        <value value="example-answerlist1"/>
-      </identifier>
-      <version value="0.0.0"/>
-      <title value="Argonaut Example Answer List 1"/>
       <status value="active"/>
-      <date value="2018-07-05T00:00:00-07:00"/>
-      <copyright value="This content LOINC is copyright 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use ."/>
-      <expansion>
-        <identifier value="example-answerlist1-expansion"/>
-        <timestamp value="2018-07-05T09:25:24-07:00"/>
-        <total value="3"/>
-        <contains>
-          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
-            <valueDecimal value="0"/>
-          </extension>
-          <system value="http://snomed.info/sct"/>
-          <version value="20180131"/>
-          <code value="373067005"/>
-          <display value="No"/>
-        </contains>
-        <contains>
-          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
-            <valueDecimal value="2"/>
-          </extension>
-          <system value="http://fhir.org/guides/argonaut-questionnaire/CodeSystem/answer-codes"/>
-          <version value="0.0.0"/>
-          <code value="not-last-year"/>
-          <display value="Yes, but not in the last year"/>
-        </contains>
-        <contains>
-          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
-            <valueDecimal value="4"/>
-          </extension>
-          <system value="http://loinc.org"/>
-          <version value="2.64"/>
-          <code value="LA15519-4"/>
-          <display value="Yes, during the last year"/>
-        </contains>
-      </expansion>
     </ValueSet>
   </contained>
   <url value="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit"/>
@@ -1078,13 +916,27 @@ wSrySCW3SnJJJ6lq8kkpm4pySiuRqvJKLYPiKCAAOw==
   <version value="0.0.0"/>
   <title value="The Alcohol Use Disorder Identification Test (AUDIT) Form"/>
   <status value="draft"/>
-  <date value="2018-07-05T00:00:00-07:00"/>
-  <publisher value="ArgonautProject"/>
+  <date value="2018-07-26T00:00:00-07:00"/>
+  <publisher value="Argonaut Project"/>
+  <useContext>
+    <code>
+      <system value="http://hl7.org/fhir/usage-context-type"/>
+      <code value="task"/>
+      <display value="Workflow Task"/>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://acme.org"/>
+        <code value="example"/>
+        <display value="Example of Use"/>
+      </coding>
+    </valueCodeableConcept>
+  </useContext>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
       <code value="US"/>
-      <display value="UnitedStatesofAmerica"/>
+      <display value="United States of America"/>
     </coding>
   </jurisdiction>
   <contact>

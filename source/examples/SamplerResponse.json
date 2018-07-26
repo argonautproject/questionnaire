@@ -1,0 +1,189 @@
+{
+    "author": {
+        "reference": "Practitioner/prov-admin1"
+    },
+    "authored": "2018-07-26T00:17:43.707504",
+    "context": {
+        "reference": "Encounter/encounter1"
+    },
+    "id": "questionnaireresponse-example-sampler",
+    "identifier": {
+        "value": "test"
+    },
+    "item": [
+        {
+            "item": [
+                {
+                    "answer": [
+                        {
+                            "valueString": "use a Duck!\r\nCitaions:http://jinja.pocoo.org/docs/2.10/templates/#builtin-filters"
+                        }
+                    ],
+                    "linkId": "g9.q1",
+                    "text": "Describe in detal how to estimate the average air speed velocity of a laden swallow. Please cite your sources and give examples."
+                }
+            ],
+            "linkId": "g9"
+        },
+        {
+            "item": [
+                {
+                    "answer": [
+                        {
+                            "valueDecimal": 12.38
+                        }
+                    ],
+                    "linkId": "g3.q1",
+                    "text": "What is the average air speed velocity of a laden swallow in m/sec?"
+                }
+            ],
+            "linkId": "g3"
+        },
+        {
+            "item": [
+                {
+                    "answer": [
+                        {
+                            "valueString": "use a duck!"
+                        }
+                    ],
+                    "linkId": "g8.q1",
+                    "text": "Describe how to estimate the average air speed velocity of a laden swallow in 20 words or less."
+                }
+            ],
+            "linkId": "g8"
+        },
+        {
+            "item": [
+                {
+                    "answer": [
+                        {
+                            "valueInteger": 12
+                        }
+                    ],
+                    "linkId": "g4.q1",
+                    "text": "What is the average air speed velocity of a laden swallow in m/sec?"
+                }
+            ],
+            "linkId": "g4"
+        },
+        {
+            "item": [
+                {
+                    "answer": [
+                        {
+                            "valueString": "11"
+                        }
+                    ],
+                    "linkId": "g12.q1",
+                    "text": "What is the average air speed velocity of a laden swallow in m/sec?"
+                }
+            ],
+            "linkId": "g12"
+        },
+        {
+            "item": [
+                {
+                    "answer": [
+                        {
+                            "valueBoolean": false
+                        }
+                    ],
+                    "linkId": "g2.q1",
+                    "text": "Check the box if the following statement is true.  The average air speed velocity of a laden European swallow is greater than a laden African swallow."
+                }
+            ],
+            "linkId": "g2"
+        },
+        {
+            "item": [
+                {
+                    "answer": [
+                        {
+                            "valueDate": "2018-07-26"
+                        }
+                    ],
+                    "linkId": "g5.q1",
+                    "text": "If a laden swallow left Camelot on 7/5/2018 what day would it reach the Castle Anthrax?"
+                }
+            ],
+            "linkId": "g5"
+        },
+        {
+            "item": [
+                {
+                    "answer": [
+                        {
+                            "valueDateTime": "2018-07-26T01:58"
+                        }
+                    ],
+                    "linkId": "g6.q1",
+                    "text": "If a laden swallow left Camelot on 7/5/2018 and noon when would it reach Castle Anthrax?"
+                }
+            ],
+            "linkId": "g6"
+        },
+        {
+            "item": [
+                {
+                    "answer": [
+                        {
+                            "valueTime": "22:53"
+                        }
+                    ],
+                    "linkId": "g7.q1",
+                    "text": "If a laden swallow left Camelot at noon what time would it reach Castle Anthrax?"
+                }
+            ],
+            "linkId": "g7"
+        },
+        {
+            "item": [
+                {
+                    "answer": [
+                        {
+                            "valueUri": "http://jinja.pocoo.org/docs/2.10/templates/#builtin-filters"
+                        }
+                    ],
+                    "linkId": "g10.q1",
+                    "text": "Provide a link to a video clip where the average air speed velocity of a laden swallow question is discussed."
+                }
+            ],
+            "linkId": "g10"
+        },
+        {
+            "item": [
+                {
+                    "answer": [
+                        {
+                            "valueString": "11"
+                        }
+                    ],
+                    "linkId": "g11.q1",
+                    "text": "What is the average air speed velocity of a laden swallow in m/sec?"
+                }
+            ],
+            "linkId": "g11"
+        }
+    ],
+    "meta": {
+        "profile": [
+            "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr"
+        ]
+    },
+    "questionnaire": {
+        "reference": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-sampler"
+    },
+    "resourceType": "QuestionnaireResponse",
+    "source": {
+        "reference": "Patient/subject1"
+    },
+    "status": "completed",
+    "subject": {
+        "reference": "Patient/subject1"
+    },
+    "text": {
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h3>Response Summary</h3>\n    <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-sampler<br />\n    <strong>Date Completed:</strong> 2018-07-26T00:17:43.707504<br />\n    <hr /> <br /> <strong>Question:</strong> (linkID=g9.q1) Describe in detal how to estimate the average air speed velocity of a laden swallow. Please cite your sources and give examples.<br /><strong>Response:</strong> use a Duck!\r\nCitaions:http://jinja.pocoo.org/docs/2.10/templates/#builtin-filters<br /><br /> <strong>Question:</strong> (linkID=g3.q1) What is the average air speed velocity of a laden swallow in m/sec?<br /><strong>Response:</strong> 12.38<br /><br /> <strong>Question:</strong> (linkID=g8.q1) Describe how to estimate the average air speed velocity of a laden swallow in 20 words or less.<br /><strong>Response:</strong> use a duck!<br /><br /> <strong>Question:</strong> (linkID=g4.q1) What is the average air speed velocity of a laden swallow in m/sec?<br /><strong>Response:</strong> 12<br /><br /> <strong>Question:</strong> (linkID=g12.q1) What is the average air speed velocity of a laden swallow in m/sec?<br /><strong>Response:</strong> 11( code = )<br /><br /> <strong>Question:</strong> (linkID=g2.q1) Check the box if the following statement is true.  The average air speed velocity of a laden European swallow is greater than a laden African swallow.<br /><strong>Response:</strong> False<br /><br /> <strong>Question:</strong> (linkID=g5.q1) If a laden swallow left Camelot on 7/5/2018 what day would it reach the Castle Anthrax?<br /><strong>Response:</strong> 2018-07-26<br /><br /> <strong>Question:</strong> (linkID=g6.q1) If a laden swallow left Camelot on 7/5/2018 and noon when would it reach Castle Anthrax?<br /><strong>Response:</strong> 2018-07-26T01:58<br /><br /> <strong>Question:</strong> (linkID=g7.q1) If a laden swallow left Camelot at noon what time would it reach Castle Anthrax?<br /><strong>Response:</strong> 22:53<br /><br /> <strong>Question:</strong> (linkID=g10.q1) Provide a link to a video clip where the average air speed velocity of a laden swallow question is discussed.<br /><strong>Response:</strong> http://jinja.pocoo.org/docs/2.10/templates/#builtin-filters<br /><br /> <strong>Question:</strong> (linkID=g11.q1) What is the average air speed velocity of a laden swallow in m/sec?<br /><strong>Response:</strong> 11( code = )<br /> <br /><br />\n    </div>",
+        "status": "generated"
+    }
+}

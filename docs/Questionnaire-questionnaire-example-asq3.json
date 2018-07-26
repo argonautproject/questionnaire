@@ -20,15 +20,33 @@
   "version": "0.0.0",
   "title": "Ages and Stages Questionnaire (ASQ-3) Sample 16 Month Questionnaire",
   "status": "draft",
-  "date": "2018-06-28T00:00:00-07:00",
-  "publisher": "ArgonautProject",
+  "date": "2018-07-26T00:00:00-07:00",
+  "publisher": "Argonaut Project",
+  "useContext": [
+    {
+      "code": {
+        "system": "http://hl7.org/fhir/usage-context-type",
+        "code": "task",
+        "display": "Workflow Task"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://acme.org",
+            "code": "example",
+            "display": "Example of Use"
+          }
+        ]
+      }
+    }
+  ],
   "jurisdiction": [
     {
       "coding": [
         {
           "system": "urn:iso:std:iso:3166",
           "code": "US",
-          "display": "UnitedStatesofAmerica"
+          "display": "United States of America"
         }
       ]
     }

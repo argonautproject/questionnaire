@@ -23,122 +23,14 @@
      a fhir:ValueSet;
      fhir:index 0;
      fhir:Resource.id [ fhir:value "PHQ-9" ];
-     fhir:Resource.meta [
-       fhir:Meta.profile [
-         fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs";
-         fhir:index 0
-       ]
-     ];
      fhir:ValueSet.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-9" ];
-     fhir:ValueSet.identifier [
-       fhir:index 0;
-       fhir:Identifier.value [ fhir:value "phq9" ]
-     ];
-     fhir:ValueSet.version [ fhir:value "0.0.0" ];
-     fhir:ValueSet.title [ fhir:value "Patient Health Questionnaire (PHQ-9)" ];
-     fhir:ValueSet.status [ fhir:value "active" ];
-     fhir:ValueSet.date [ fhir:value "2018-06-27T00:00:00-07:00"^^xsd:dateTime ];
-     fhir:ValueSet.copyright [ fhir:value "This content LOINC is copyright 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use ." ];
-     fhir:ValueSet.expansion [
-       fhir:ValueSet.expansion.identifier [ fhir:value "phq9-expansion" ];
-       fhir:ValueSet.expansion.timestamp [ fhir:value "2018-06-27T22:49:08-07:00"^^xsd:dateTime ];
-       fhir:ValueSet.expansion.total [ fhir:value "4"^^xsd:integer ];
-       fhir:ValueSet.expansion.contains [
-         fhir:index 0;
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
-           fhir:Extension.valueDecimal [ fhir:value "0"^^xsd:decimal ]
-         ];
-         fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
-         fhir:ValueSet.expansion.contains.version [ fhir:value "2.64" ];
-         fhir:ValueSet.expansion.contains.code [ fhir:value "LA6568-5" ];
-         fhir:ValueSet.expansion.contains.display [ fhir:value "Not at all" ]
-       ], [
-         fhir:index 1;
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
-           fhir:Extension.valueDecimal [ fhir:value "1"^^xsd:decimal ]
-         ];
-         fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
-         fhir:ValueSet.expansion.contains.version [ fhir:value "2.64" ];
-         fhir:ValueSet.expansion.contains.code [ fhir:value "LA6569-3" ];
-         fhir:ValueSet.expansion.contains.display [ fhir:value "Several days" ]
-       ], [
-         fhir:index 2;
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
-           fhir:Extension.valueDecimal [ fhir:value "2"^^xsd:decimal ]
-         ];
-         fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
-         fhir:ValueSet.expansion.contains.version [ fhir:value "2.64" ];
-         fhir:ValueSet.expansion.contains.code [ fhir:value "LA6570-1" ];
-         fhir:ValueSet.expansion.contains.display [ fhir:value "More than half the days" ]
-       ], [
-         fhir:index 3;
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
-           fhir:Extension.valueDecimal [ fhir:value "3"^^xsd:decimal ]
-         ];
-         fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
-         fhir:ValueSet.expansion.contains.version [ fhir:value "2.64" ];
-         fhir:ValueSet.expansion.contains.code [ fhir:value "LA6571-9" ];
-         fhir:ValueSet.expansion.contains.display [ fhir:value "Nearly every day" ]
-       ]
-     ]
+     fhir:ValueSet.status [ fhir:value "active" ]
   ], [
      a fhir:ValueSet;
      fhir:index 1;
      fhir:Resource.id [ fhir:value "PHQ-10" ];
-     fhir:Resource.meta [
-       fhir:Meta.profile [
-         fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs";
-         fhir:index 0
-       ]
-     ];
      fhir:ValueSet.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-10" ];
-     fhir:ValueSet.identifier [
-       fhir:index 0;
-       fhir:Identifier.value [ fhir:value "phq10" ]
-     ];
-     fhir:ValueSet.version [ fhir:value "0.0.0" ];
-     fhir:ValueSet.title [ fhir:value "Patient Health Questionnaire (PHQ-9)" ];
-     fhir:ValueSet.status [ fhir:value "active" ];
-     fhir:ValueSet.date [ fhir:value "2018-06-27T00:00:00-07:00"^^xsd:dateTime ];
-     fhir:ValueSet.copyright [ fhir:value "This content LOINC is copyright 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use ." ];
-     fhir:ValueSet.expansion [
-       fhir:ValueSet.expansion.identifier [ fhir:value "phq10-expansion" ];
-       fhir:ValueSet.expansion.timestamp [ fhir:value "2018-06-27T22:27:03-07:00"^^xsd:dateTime ];
-       fhir:ValueSet.expansion.total [ fhir:value "4"^^xsd:integer ];
-       fhir:ValueSet.expansion.contains [
-         fhir:index 0;
-         fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
-         fhir:ValueSet.expansion.contains.version [ fhir:value "2.64" ];
-         fhir:ValueSet.expansion.contains.code [ fhir:value "LA6572-7" ];
-         fhir:ValueSet.expansion.contains.display [ fhir:value "Not difficult at all" ]
-       ], [
-         fhir:index 1;
-         fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
-         fhir:ValueSet.expansion.contains.version [ fhir:value "2.64" ];
-         fhir:ValueSet.expansion.contains.code [ fhir:value "LA6573-5" ];
-         fhir:ValueSet.expansion.contains.display [ fhir:value "Somewhat difficult" ]
-       ], [
-         fhir:index 2;
-         fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
-         fhir:ValueSet.expansion.contains.version [ fhir:value "2.64" ];
-         fhir:ValueSet.expansion.contains.code [ fhir:value "LA6575-0" ];
-         fhir:ValueSet.expansion.contains.display [ fhir:value "Very difficult" ]
-       ], [
-         fhir:index 3;
-         fhir:ValueSet.expansion.contains.system [ fhir:value "http://loinc.org" ];
-         fhir:ValueSet.expansion.contains.version [ fhir:value "2.64" ];
-         fhir:ValueSet.expansion.contains.code [ fhir:value "LA6574-3" ];
-         fhir:ValueSet.expansion.contains.display [ fhir:value "Extremely difficult" ]
-       ]
-     ]
+     fhir:ValueSet.status [ fhir:value "active" ]
   ];
   fhir:Questionnaire.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9"];
   fhir:Questionnaire.identifier [
@@ -149,15 +41,31 @@
   fhir:Questionnaire.version [ fhir:value "0.0.0"];
   fhir:Questionnaire.title [ fhir:value "Patient Health Questionnaire (PHQ-9)"];
   fhir:Questionnaire.status [ fhir:value "draft"];
-  fhir:Questionnaire.date [ fhir:value "2018-07-05T00:00:00-07:00"^^xsd:dateTime];
-  fhir:Questionnaire.publisher [ fhir:value "ArgonautProject"];
+  fhir:Questionnaire.date [ fhir:value "2018-07-26T00:00:00-07:00"^^xsd:dateTime];
+  fhir:Questionnaire.publisher [ fhir:value "Argonaut Project"];
+  fhir:Questionnaire.useContext [
+     fhir:index 0;
+     fhir:UsageContext.code [
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/usage-context-type" ];
+       fhir:Coding.code [ fhir:value "task" ];
+       fhir:Coding.display [ fhir:value "Workflow Task" ]
+     ];
+     fhir:UsageContext.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://acme.org" ];
+         fhir:Coding.code [ fhir:value "example" ];
+         fhir:Coding.display [ fhir:value "Example of Use" ]
+       ]
+     ]
+  ];
   fhir:Questionnaire.jurisdiction [
      fhir:index 0;
      fhir:CodeableConcept.coding [
        fhir:index 0;
        fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
        fhir:Coding.code [ fhir:value "US" ];
-       fhir:Coding.display [ fhir:value "UnitedStatesofAmerica" ]
+       fhir:Coding.display [ fhir:value "United States of America" ]
      ]
   ];
   fhir:Questionnaire.contact [
