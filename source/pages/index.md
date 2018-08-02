@@ -131,7 +131,7 @@ In the basic workflow outlined below., an EHR system retrieves a standardized as
 
 In the basic workflow outlined below., ...todo...
 
-{% include img.html img="adaptive-workflow.png" caption="Basic Argonaut Questionnaire Workflow" %}
+{% include img.html img="adaptive-workflow.jpg" caption="Basic Argonaut Questionnaire Workflow" %}
 
 {:.grid}
 |step|Description|

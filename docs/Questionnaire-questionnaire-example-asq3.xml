@@ -1056,7 +1056,7 @@ tD579GI7dkpntjbfM2ZzNlNvtR6vs2jn9GmfdCY7hDUvtFxncmgvtmvvtGU/BBwsAHlGgG4nwAKY
 822vCR1bNWwftF4jtkXgNWjTsUy/NmtqyzZDr3ZSQ7MWg7RSI/dV93NdX/dh0zYbe7Zls7Us8/Zv
 B7cxgncmobd5r/f04rOVqTd7x/fzUvKMwbd83zd+57d+7zd/97d//zeAB7iADziBF7iBHziCJ7iC
 LziDN7iDPziER7iEV2hAAAA7
-" alt="Ages and Stages Questionnaire (ASQ-3) Sample 16 Month Questionnaire"/><p>Ages &amp; Stages Questionnaires®, Third Edition (ASQ-3™), Squires &amp; Bricker © 2009 Paul H. Brookes Publishing Co. All rights reserved.</p></div>
+"alt="Ages and Stages Questionnaire (ASQ-3) Sample 16 Month Questionnaire"/><p>Ages &amp; Stages Questionnaires®, Third Edition (ASQ-3™), Squires &amp; Bricker © 2009 Paul H. Brookes Publishing Co. All rights reserved.</p></div>
   </text>
   <url value="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-asq3"/>
   <identifier>
@@ -1066,7 +1066,7 @@ LziDN7iDPziER7iEV2hAAAA7
   <version value="0.0.0"/>
   <title value="Ages and Stages Questionnaire (ASQ-3) Sample 16 Month Questionnaire"/>
   <status value="draft"/>
-  <date value="2018-07-26T00:00:00-07:00"/>
+  <date value="2018-07-26"/>
   <publisher value="Argonaut Project"/>
   <useContext>
     <code>

@@ -885,27 +885,189 @@ tp1b92Xcu33/Ttwb+HDie4UXR5687XHlzZ1/Zf5c+vSp0alfx17Uenbu3XNu9x5efEvw482fH1ke
 /Xr2h2W3hx//pHr59e0PpH9fP/z8+/2f7+8/Ab0LcEADryvwQAWdS3BBB4tr8EEJfYtwQgtrq/BC
 DV3LcEMPT+vwQxE9C3FEE3l770QVkStxRRc7FWvxRRkHi3FGG/mq8UYd68pxRx/d6vFHIc8Kckgj
 wSrySCW3SnJJJ6lq8kkpm4pySiuRqvJKLYPiKCAAOw==
-" alt="The Alcohol Use Disorder Identification Test (AUDIT) Form"/><p>Copyright 2001 World Health Organization. Terms of Use: WHO exercises copyright over its information to make sure that it is used in accordance with the Organization's principles. Extracts of WHO information can be used for private study or for educational purposes without permission. Wider use requires permission to be obtained from WHO.  http://www.who.int/about/licensing/en/</p></div>
+"alt="The Alcohol Use Disorder Identification Test (AUDIT) Form"/><p>Copyright 2001 World Health Organization. Terms of Use: WHO exercises copyright over its information to make sure that it is used in accordance with the Organization's principles. Extracts of WHO information can be used for private study or for educational purposes without permission. Wider use requires permission to be obtained from WHO.  http://www.who.int/about/licensing/en/</p></div>
   </text>
   <contained>
     <ValueSet>
       <id value="SAMHSA-6"/>
+      <meta>
+        <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs"/>
+      </meta>
       <url value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/SAMHSA-6"/>
+      <identifier>
+        <value value="samhsa6"/>
+      </identifier>
+      <version value="0.0.0"/>
+      <title value="SAMHSA-6-drinks"/>
       <status value="active"/>
+      <date value="2018-07-04"/>
+      <copyright value="This content LOINC is copyright 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use ."/>
+      <expansion>
+        <identifier value="samhsa6-expansion"/>
+        <timestamp value="2018-07-04T14:43:56"/>
+        <total value="5"/>
+        <contains>
+          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+            <valueDecimal value="0"/>
+          </extension>
+          <system value="http://loinc.org"/>
+          <version value="2.64"/>
+          <code value="LA6270-8"/>
+          <display value="Never"/>
+        </contains>
+        <contains>
+          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+            <valueDecimal value="1"/>
+          </extension>
+          <system value="http://loinc.org"/>
+          <version value="2.64"/>
+          <code value="LA18933-4"/>
+          <display value="Less than Monthly"/>
+        </contains>
+        <contains>
+          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+            <valueDecimal value="2"/>
+          </extension>
+          <system value="http://loinc.org"/>
+          <version value="2.64"/>
+          <code value="LA18876-5"/>
+          <display value="Monthly"/>
+        </contains>
+        <contains>
+          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+            <valueDecimal value="3"/>
+          </extension>
+          <system value="http://loinc.org"/>
+          <version value="2.64"/>
+          <code value="LA18891-4"/>
+          <display value="Weekly"/>
+        </contains>
+        <contains>
+          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+            <valueDecimal value="4"/>
+          </extension>
+          <system value="http://loinc.org"/>
+          <version value="2.64"/>
+          <code value="LA18934-2"/>
+          <display value="Daily or Almost Daily"/>
+        </contains>
+      </expansion>
     </ValueSet>
   </contained>
   <contained>
     <ValueSet>
       <id value="SAMHSA-dad"/>
+      <meta>
+        <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs"/>
+      </meta>
       <url value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/SAMHSA-dad"/>
+      <identifier>
+        <value value="samhsadad"/>
+      </identifier>
+      <version value="0.0.0"/>
+      <title value="SAMHSA-drinks-a-day"/>
       <status value="active"/>
+      <date value="2018-07-04"/>
+      <copyright value="This content LOINC is copyright 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use ."/>
+      <expansion>
+        <identifier value="samhsadad-expansion"/>
+        <timestamp value="2018-07-04T14:49:27"/>
+        <total value="5"/>
+        <contains>
+          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+            <valueDecimal value="0"/>
+          </extension>
+          <system value="http://loinc.org"/>
+          <version value="2.64"/>
+          <code value="LA15694-5"/>
+          <display value="1 or 2"/>
+        </contains>
+        <contains>
+          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+            <valueDecimal value="1"/>
+          </extension>
+          <system value="http://loinc.org"/>
+          <version value="2.64"/>
+          <code value="LA15695-2"/>
+          <display value="3 or 4"/>
+        </contains>
+        <contains>
+          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+            <valueDecimal value="2"/>
+          </extension>
+          <system value="http://loinc.org"/>
+          <version value="2.64"/>
+          <code value="LA18930-0"/>
+          <display value="5 or 6"/>
+        </contains>
+        <contains>
+          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+            <valueDecimal value="3"/>
+          </extension>
+          <system value="http://loinc.org"/>
+          <version value="2.64"/>
+          <code value="LA18931-8"/>
+          <display value="7 to 9"/>
+        </contains>
+        <contains>
+          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+            <valueDecimal value="4"/>
+          </extension>
+          <system value="http://loinc.org"/>
+          <version value="2.64"/>
+          <code value="LA18932-6"/>
+          <display value="10 or more"/>
+        </contains>
+      </expansion>
     </ValueSet>
   </contained>
   <contained>
     <ValueSet>
       <id value="example-answerlist1"/>
+      <meta>
+        <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs"/>
+      </meta>
       <url value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/example-answerlist1"/>
+      <identifier>
+        <value value="example-answerlist1"/>
+      </identifier>
+      <version value="0.0.0"/>
+      <title value="Argonaut Example Answer List 1"/>
       <status value="active"/>
+      <date value="2018-07-05"/>
+      <copyright value="This content LOINC is copyright 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use ."/>
+      <expansion>
+        <identifier value="example-answerlist1-expansion"/>
+        <timestamp value="2018-07-05T09:25:24"/>
+        <total value="3"/>
+        <contains>
+          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+            <valueDecimal value="0"/>
+          </extension>
+          <system value="http://snomed.info/sct"/>
+          <version value="20180131"/>
+          <code value="373067005"/>
+          <display value="No"/>
+        </contains>
+        <contains>
+          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+            <valueDecimal value="2"/>
+          </extension>
+          <system value="http://fhir.org/guides/argonaut-questionnaire/CodeSystem/answer-codes"/>
+          <version value="0.0.0"/>
+          <code value="not-last-year"/>
+          <display value="Yes, but not in the last year"/>
+        </contains>
+        <contains>
+          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+            <valueDecimal value="4"/>
+          </extension>
+          <system value="http://loinc.org"/>
+          <version value="2.64"/>
+          <code value="LA15519-4"/>
+          <display value="Yes, during the last year"/>
+        </contains>
+      </expansion>
     </ValueSet>
   </contained>
   <url value="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit"/>
@@ -916,7 +1078,7 @@ wSrySCW3SnJJJ6lq8kkpm4pySiuRqvJKLYPiKCAAOw==
   <version value="0.0.0"/>
   <title value="The Alcohol Use Disorder Identification Test (AUDIT) Form"/>
   <status value="draft"/>
-  <date value="2018-07-26T00:00:00-07:00"/>
+  <date value="2018-07-26"/>
   <publisher value="Argonaut Project"/>
   <useContext>
     <code>
@@ -983,6 +1145,7 @@ wSrySCW3SnJJJ6lq8kkpm4pySiuRqvJKLYPiKCAAOw==
       <repeats value="false"/>
       <options>
         <reference value="#SAMHSA-6"/>
+        <display value="SAMHSA-6 drinks / Never/Less than monthly/Monthly/Weekly/Daily/Almost daily"/>
       </options>
     </item>
     <item>
@@ -998,6 +1161,7 @@ wSrySCW3SnJJJ6lq8kkpm4pySiuRqvJKLYPiKCAAOw==
       <repeats value="false"/>
       <options>
         <reference value="#SAMHSA-dad"/>
+        <display value="SAMHSA-drinks a day / 1 or 2/3 or 4/5 or 6/7 to 9/10 or more"/>
       </options>
     </item>
     <item>
@@ -1013,6 +1177,7 @@ wSrySCW3SnJJJ6lq8kkpm4pySiuRqvJKLYPiKCAAOw==
       <repeats value="false"/>
       <options>
         <reference value="#SAMHSA-6"/>
+        <display value="SAMHSA-6 drinks / Never/Less than monthly/Monthly/Weekly/Daily/Almost daily"/>
       </options>
     </item>
     <item>
@@ -1024,6 +1189,7 @@ wSrySCW3SnJJJ6lq8kkpm4pySiuRqvJKLYPiKCAAOw==
       <repeats value="false"/>
       <options>
         <reference value="#SAMHSA-6"/>
+        <display value="SAMHSA-6 drinks / Never/Less than monthly/Monthly/Weekly/Daily/Almost daily"/>
       </options>
     </item>
     <item>
@@ -1035,6 +1201,7 @@ wSrySCW3SnJJJ6lq8kkpm4pySiuRqvJKLYPiKCAAOw==
       <repeats value="false"/>
       <options>
         <reference value="#SAMHSA-6"/>
+        <display value="SAMHSA-6 drinks / Never/Less than monthly/Monthly/Weekly/Daily/Almost daily"/>
       </options>
     </item>
     <item>
@@ -1046,6 +1213,7 @@ wSrySCW3SnJJJ6lq8kkpm4pySiuRqvJKLYPiKCAAOw==
       <repeats value="false"/>
       <options>
         <reference value="#SAMHSA-6"/>
+        <display value="SAMHSA-6 drinks / Never/Less than monthly/Monthly/Weekly/Daily/Almost daily"/>
       </options>
     </item>
     <item>
@@ -1057,6 +1225,7 @@ wSrySCW3SnJJJ6lq8kkpm4pySiuRqvJKLYPiKCAAOw==
       <repeats value="false"/>
       <options>
         <reference value="#SAMHSA-6"/>
+        <display value="SAMHSA-6 drinks / Never/Less than monthly/Monthly/Weekly/Daily/Almost daily"/>
       </options>
     </item>
     <item>
@@ -1068,6 +1237,7 @@ wSrySCW3SnJJJ6lq8kkpm4pySiuRqvJKLYPiKCAAOw==
       <repeats value="false"/>
       <options>
         <reference value="#SAMHSA-6"/>
+        <display value="SAMHSA-6 drinks / Never/Less than monthly/Monthly/Weekly/Daily/Almost daily"/>
       </options>
     </item>
     <item>
@@ -1079,6 +1249,7 @@ wSrySCW3SnJJJ6lq8kkpm4pySiuRqvJKLYPiKCAAOw==
       <repeats value="false"/>
       <options>
         <reference value="#example-answerlist1"/>
+        <display value="No|Yes, but not in the last year|Yes, during the last year"/>
       </options>
     </item>
     <item>
@@ -1089,6 +1260,7 @@ wSrySCW3SnJJJ6lq8kkpm4pySiuRqvJKLYPiKCAAOw==
       <repeats value="false"/>
       <options>
         <reference value="#example-answerlist1"/>
+        <display value="No|Yes, but not in the last year|Yes, during the last year"/>
       </options>
     </item>
     <item>

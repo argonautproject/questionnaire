@@ -662,7 +662,7 @@ BUTQgLC619u03rAmyDb0Do6ork7AX2x6bvPikY/GrZ5QHAO2h6XSqdHGxxLG0KLuRJ+eVbvBlQZK
 BO2OhPYqakq9oAyVA+bQ24NuqibNKT3RBQeFJRNyr/Pib/7q7/7yb//67/9cAnAAC/AAE3ABG/AB
 I3ACK/ACM3ADO/ADQ3AES/AEU3AFW/AFY3AGa/AGc3AHe/AHg3AIi/AIk3AJm/AJo3AKq/AKs3AL
 u/ALw3AMy/AM03AN2/AN43AO67DnBgQAOw==
-" alt="Housing Questions"/><p>Billioux, Alexander, MD, Dphil; Verlander, Katherine, MPH; Anthony, Susan, DrPH; Alley, Dawn, PhD; National Academy of Sciences, “Standardized Screening for Health-Related Social Needs in Clinical Settings - The Accountable Health Communities Screening Tool,“ https://nam.edu/wp-content/uploads/2017/05/Standardized-Screening-for-Health-Related-Social-Needs-in-Clinical-Settings.pdf  
+"alt="Housing Questions"/><p>Billioux, Alexander, MD, Dphil; Verlander, Katherine, MPH; Anthony, Susan, DrPH; Alley, Dawn, PhD; National Academy of Sciences, “Standardized Screening for Health-Related Social Needs in Clinical Settings - The Accountable Health Communities Screening Tool,“ https://nam.edu/wp-content/uploads/2017/05/Standardized-Screening-for-Health-Related-Social-Needs-in-Clinical-Settings.pdf  
 </p></div>
   </text>
   <url value="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-housing"/>
@@ -673,7 +673,7 @@ u/ALw3AMy/AM03AN2/AN43AO67DnBgQAOw==
   <version value="0.0.0"/>
   <title value="Housing Questions"/>
   <status value="draft"/>
-  <date value="2018-07-26T00:00:00-07:00"/>
+  <date value="2018-07-26"/>
   <publisher value="Argonaut Project"/>
   <useContext>
     <code>

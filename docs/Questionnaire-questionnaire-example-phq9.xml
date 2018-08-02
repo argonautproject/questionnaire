@@ -955,21 +955,111 @@ BuZgFuZhJuZiNuZjRuZkVuZlZuZmduZnhuZoluZppuZqtuZrxuZs1uZt5uZu9uZvBudwFudxJudy
 NudzRud0Vud1Zud2dud3hud4lud5pud6tud7xud81ud95ud+9ud/BuiAFuiBJuiCNuiDRuiEVuiF
 ZuiGduiHhuiIluiJpuiKtuiLxuiM1uiN5uiO9uiPBumQFumRJumSNumTRumUVumVZumWdumXhumY
 lumZpumatumbxumc1umd5mmcDggAOw==
-" alt="Patient Health Questionnaire (PHQ-9)"/><p>Developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from
+"alt="Patient Health Questionnaire (PHQ-9)"/><p>Developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from
 Pfizer Inc. No permission required to reproduce, translate, display or distribute.</p></div>
   </text>
   <contained>
     <ValueSet>
       <id value="PHQ-9"/>
+      <meta>
+        <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs"/>
+      </meta>
       <url value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-9"/>
+      <identifier>
+        <value value="phq9"/>
+      </identifier>
+      <version value="0.0.0"/>
+      <title value="Patient Health Questionnaire (PHQ-9)"/>
       <status value="active"/>
+      <date value="2018-06-27"/>
+      <copyright value="This content LOINC is copyright 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use ."/>
+      <expansion>
+        <identifier value="phq9-expansion"/>
+        <timestamp value="2018-06-27T22:49:08"/>
+        <total value="4"/>
+        <contains>
+          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+            <valueDecimal value="0"/>
+          </extension>
+          <system value="http://loinc.org"/>
+          <version value="2.64"/>
+          <code value="LA6568-5"/>
+          <display value="Not at all"/>
+        </contains>
+        <contains>
+          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+            <valueDecimal value="1"/>
+          </extension>
+          <system value="http://loinc.org"/>
+          <version value="2.64"/>
+          <code value="LA6569-3"/>
+          <display value="Several days"/>
+        </contains>
+        <contains>
+          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+            <valueDecimal value="2"/>
+          </extension>
+          <system value="http://loinc.org"/>
+          <version value="2.64"/>
+          <code value="LA6570-1"/>
+          <display value="More than half the days"/>
+        </contains>
+        <contains>
+          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+            <valueDecimal value="3"/>
+          </extension>
+          <system value="http://loinc.org"/>
+          <version value="2.64"/>
+          <code value="LA6571-9"/>
+          <display value="Nearly every day"/>
+        </contains>
+      </expansion>
     </ValueSet>
   </contained>
   <contained>
     <ValueSet>
       <id value="PHQ-10"/>
+      <meta>
+        <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs"/>
+      </meta>
       <url value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-10"/>
+      <identifier>
+        <value value="phq10"/>
+      </identifier>
+      <version value="0.0.0"/>
+      <title value="Patient Health Questionnaire (PHQ-9)"/>
       <status value="active"/>
+      <date value="2018-06-27"/>
+      <copyright value="This content LOINC is copyright 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use ."/>
+      <expansion>
+        <identifier value="phq10-expansion"/>
+        <timestamp value="2018-06-27T22:27:03"/>
+        <total value="4"/>
+        <contains>
+          <system value="http://loinc.org"/>
+          <version value="2.64"/>
+          <code value="LA6572-7"/>
+          <display value="Not difficult at all"/>
+        </contains>
+        <contains>
+          <system value="http://loinc.org"/>
+          <version value="2.64"/>
+          <code value="LA6573-5"/>
+          <display value="Somewhat difficult"/>
+        </contains>
+        <contains>
+          <system value="http://loinc.org"/>
+          <version value="2.64"/>
+          <code value="LA6575-0"/>
+          <display value="Very difficult"/>
+        </contains>
+        <contains>
+          <system value="http://loinc.org"/>
+          <version value="2.64"/>
+          <code value="LA6574-3"/>
+          <display value="Extremely difficult"/>
+        </contains>
+      </expansion>
     </ValueSet>
   </contained>
   <url value="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9"/>
@@ -980,7 +1070,7 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
   <version value="0.0.0"/>
   <title value="Patient Health Questionnaire (PHQ-9)"/>
   <status value="draft"/>
-  <date value="2018-07-26T00:00:00-07:00"/>
+  <date value="2018-07-26"/>
   <publisher value="Argonaut Project"/>
   <useContext>
     <code>
@@ -1043,6 +1133,7 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       <repeats value="false"/>
       <options>
         <reference value="#PHQ-9"/>
+        <display value="Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"/>
       </options>
     </item>
     <item>
@@ -1058,6 +1149,7 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       <repeats value="false"/>
       <options>
         <reference value="#PHQ-9"/>
+        <display value="Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"/>
       </options>
     </item>
     <item>
@@ -1073,6 +1165,7 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       <repeats value="false"/>
       <options>
         <reference value="#PHQ-9"/>
+        <display value="Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"/>
       </options>
     </item>
     <item>
@@ -1088,6 +1181,7 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       <repeats value="false"/>
       <options>
         <reference value="#PHQ-9"/>
+        <display value="Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"/>
       </options>
     </item>
     <item>
@@ -1103,6 +1197,7 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       <repeats value="false"/>
       <options>
         <reference value="#PHQ-9"/>
+        <display value="Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"/>
       </options>
     </item>
     <item>
@@ -1118,6 +1213,7 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       <repeats value="false"/>
       <options>
         <reference value="#PHQ-9"/>
+        <display value="Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"/>
       </options>
     </item>
     <item>
@@ -1133,6 +1229,7 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       <repeats value="false"/>
       <options>
         <reference value="#PHQ-9"/>
+        <display value="Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"/>
       </options>
     </item>
     <item>
@@ -1148,6 +1245,7 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       <repeats value="false"/>
       <options>
         <reference value="#PHQ-9"/>
+        <display value="Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"/>
       </options>
     </item>
     <item>
@@ -1163,6 +1261,7 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       <repeats value="false"/>
       <options>
         <reference value="#PHQ-9"/>
+        <display value="Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"/>
       </options>
     </item>
     <item>
@@ -1195,6 +1294,7 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       <repeats value="false"/>
       <options>
         <reference value="#PHQ-10"/>
+        <display value="Not difficult at all/Somewhat difficult/Very difficult/Extremely difficult-Perceived difficulty (PHQ-9)"/>
       </options>
     </item>
   </item>

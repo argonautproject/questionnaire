@@ -253,7 +253,14 @@
 <ul id="markdown-toc">
   <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
   <li><a href="#example-scenario" id="markdown-toc-example-scenario">Example Scenario</a></li>
-  <li><a href="#workflow-steps" id="markdown-toc-workflow-steps">Workflow Steps</a></li>
+  <li><a href="#workflow-steps" id="markdown-toc-workflow-steps">Workflow Steps</a>    <ul>
+      <li><a href="#initiate-adaptive-questionnaire" id="markdown-toc-initiate-adaptive-questionnaire">Initiate Adaptive Questionnaire</a></li>
+      <li><a href="#get-next-question" id="markdown-toc-get-next-question">Get Next Question</a></li>
+      <li><a href="#get-next-question-1" id="markdown-toc-get-next-question-1">Get Next Question</a></li>
+      <li><a href="#finished" id="markdown-toc-finished">Finished</a></li>
+      <li><a href="#questionnaireresponse-and-scoring" id="markdown-toc-questionnaireresponse-and-scoring">QuestionnaireResponse and Scoring</a></li>
+    </ul>
+  </li>
 </ul>
 
 <h2 id="introduction">Introduction</h2>
@@ -261,11 +268,8 @@
 <p>The Argonaut Questionnaire Implementation Guide defines a series of interactions which cover the basic workflow for the creation, discovery and retrieval of “computer adaptive forms” using FHIR Questionnaire and QuestionnaireResponse and the FHIR API.</p>
 
 <ul>
-  <li>Dynamic forms
-    <ul>
-      <li>Adjust what questions are asked based on previous answers</li>
-    </ul>
-  </li>
+  <li>Dynamic forms</li>
+  <li>Adjust what questions are asked based on previous answers</li>
   <li>Logic defined external to Questionnaire</li>
   <li>Iteratively submit response to API (FHIR operations)</li>
   <li>Locally Questionnaire/QuestionnaireResponse updated on the fly</li>
@@ -287,7 +291,336 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
 
 <h2 id="workflow-steps">Workflow Steps</h2>
 
-<p>…todo…</p>
+<p>initial operation –&gt; subsequent operation –&gt; create QuestionnaireResponse with contained Questionnaire.</p>
+
+<p>Use Parameters resource to capture the data needed between the Client and Server</p>
+
+<p>Assume each Q SHALL only represent:
+- <em>a single</em> question (‘what is the capital of Assyria?’)
+- <em>a single</em> display  (‘Answer these questions three!!’)
+- <em>a single</em> group of:
+  - 1+ question (e.g., age, sex, zip code, occupation to establish demographics)
+  - 1 display + 1+ question  (‘Answer these questions three!!’, ‘what is you favorite color?’, ‘what is the capital of Assyria?’, ‘what is average flight speed of a laden swallow?’)</p>
+
+<p>Argonaut Next Question Operation:</p>
+
+<p>name $next-q</p>
+
+<p>id argonaut-next-q</p>
+
+<p>name Argonaut Next Question Operation</p>
+
+<p>parameters:</p>
+
+<p>in/out:</p>
+
+<p>qa-pairs: 0..*  The previous completed question-answer pairs. If there is no group then the operation is initiating an adaptive-q and the first question/group is returned by the service.</p>
+
+<p>sequence: 1..1 posInteger The sequence number of the of the question/group answer pair.  The sequence of questions is important for scoring and for determining the next question.</p>
+
+<p>url: 1..1 url The url that is associated with the previous Questionnaire.
+  answer[x]: 0..1 string|Coding|… The answer associated with the question identified in the q-id parameter.</p>
+
+<p>score: 0..1 Quantity The calculated score that was returned by the service for the question/group.  This value is used only for prior questions and returned to the service in a stateless model.  When an input it is empty for the current qa pair.  Cumulative/Final scores use the cum-score parameter</p>
+
+<p>out:</p>
+
+<p>cum-score: 0..1 Quantity The cumulative/total score for the adaptive questionnaire.  Individual scores for each question use the q-score parameter</p>
+
+<p>q: 0..1 Resource The Argo-Adaptive-Questionnaire profile of the Questionnaire resource representing the next question/group.  If this parameter is not returned, the adaptive questionnaire is complete.</p>
+
+<!--------- INIT ------------>
+
+<h3 id="initiate-adaptive-questionnaire">Initiate Adaptive Questionnaire</h3>
+
+<p>Launch the adaptive questionnaire by getting first question at its FHIR endpoint - just a regular FHIR RESTful GET to the introductory question.  This may be only a display</p>
+
+<p><strong>request</strong></p>
+
+<p><code class="highlighter-rouge">GET ../Questionnaire/adaptive-first-question</code></p>
+
+<p><strong>response</strong></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Questionnaire"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"first-question-example"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https\://acme.org/questionnaire/1"</span><span class="p">,</span><span class="w">
+  </span><span class="err">...</span><span class="w">
+  </span><span class="err">//assuming</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">single</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">item</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">Q1//</span><span class="w">
+  </span><span class="nt">"item"</span><span class="p">:{</span><span class="w">
+  </span><span class="err">...</span><span class="w">
+  </span><span class="nt">"type"</span><span class="p">:</span><span class="s2">"choice"</span><span class="w">
+  </span><span class="s2">"text"</span><span class="err">:</span><span class="s2">"blah1"</span><span class="w">
+  </span><span class="err">...</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<!--------- NEXT Q - 1 ------------>
+
+<h3 id="get-next-question">Get Next Question</h3>
+
+<p>Client …renders, stores question 1, answer 1… and gets next question using by POSTing the operation $next-q to the service Questionnaire endpoint and supplying the parameters from the prior question</p>
+
+<p><strong>request</strong></p>
+
+<p><code class="highlighter-rouge">POST ../Questionnaire/$next-q</code></p>
+
+<p><strong>payload</strong></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="w">  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parameters"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"next-question-example"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"parameter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qa-pairs"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"part"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+           </span><span class="err">//</span><span class="w"> </span><span class="err">first</span><span class="w"> </span><span class="err">question</span><span class="w">  </span><span class="err">=</span><span class="w"> </span><span class="err">Q-1</span><span class="w"> </span><span class="err">answered</span><span class="w"> </span><span class="nt">"foo"</span><span class="err">,</span><span class="w"> </span><span class="err">with</span><span class="w"> </span><span class="err">no</span><span class="w"> </span><span class="err">score</span><span class="w"> </span><span class="err">returned</span><span class="w"> </span><span class="err">yet</span><span class="w"> </span><span class="err">so</span><span class="w"> </span><span class="err">no</span><span class="w"> </span><span class="err">score</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">available.</span><span class="w">
+            </span><span class="nt">"sequence"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https\://acme.org/questionnaire/1"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"answerString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"foo"</span><span class="p">,</span><span class="w">
+          </span><span class="err">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<p><strong>response</strong></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parameters"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"next-question-example"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"parameter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qa-pairs"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"part"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+         </span><span class="err">//</span><span class="w"> </span><span class="err">first</span><span class="w"> </span><span class="err">question</span><span class="w">  </span><span class="err">=</span><span class="w"> </span><span class="err">Q-1</span><span class="w"> </span><span class="err">answered</span><span class="w"> </span><span class="nt">"foo"</span><span class="err">,</span><span class="w"> </span><span class="err">with</span><span class="w"> </span><span class="err">no</span><span class="w"> </span><span class="err">score</span><span class="w"> </span><span class="err">returned</span><span class="w"> </span><span class="err">yet</span><span class="w"> </span><span class="err">so</span><span class="w"> </span><span class="err">no</span><span class="w"> </span><span class="err">score</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">available.</span><span class="w">
+          </span><span class="nt">"sequence"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https\://acme.org/questionnaire/1"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"answerString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"foo"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"score"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nt">"value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">
+              </span><span class="nt">"unit"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"points"</span><span class="p">}</span><span class="w">
+              </span><span class="p">}</span><span class="w">
+        </span><span class="err">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nt">"cum-score"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">
+      </span><span class="err">'q'</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Questionnaire"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"first-question-example"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https\://acme.org/questionnaire/4"</span><span class="p">,</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+        </span><span class="err">//assuming</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">single</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">item</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">Q4//</span><span class="w">
+        </span><span class="nt">"item"</span><span class="p">:{</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+        </span><span class="nt">"type"</span><span class="p">:</span><span class="s2">"choice"</span><span class="w">
+        </span><span class="s2">"text"</span><span class="err">:</span><span class="s2">"blah4"</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+
+    </span><span class="p">}</span><span class="w">
+  </span><span class="err">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<!--------- NEXT Q - 2 ------------>
+
+<h3 id="get-next-question-1">Get Next Question</h3>
+
+<p>Client renders, stores question 4, answer 2, score 1 and
+gets next question using by POSTing the operation $next-q to the service Questionnaire endpoint and supplying the parameters from the prior question</p>
+
+<p><strong>request</strong></p>
+
+<p><code class="highlighter-rouge">POST ../Questionnaire/$next-q</code></p>
+
+<p><strong>payload</strong></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="w">    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parameters"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"next-question-example"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"parameter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qa-group"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"part"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+             </span><span class="err">//</span><span class="w"> </span><span class="err">first</span><span class="w"> </span><span class="err">question</span><span class="w">  </span><span class="err">=</span><span class="w"> </span><span class="err">Q-1</span><span class="w"> </span><span class="err">answered</span><span class="w"> </span><span class="nt">"foo"</span><span class="err">,</span><span class="w"> </span><span class="err">with</span><span class="w"> </span><span class="err">an</span><span class="w"> </span><span class="err">intermediate</span><span class="w"> </span><span class="err">score</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">17</span><span class="w"> </span><span class="err">returned</span><span class="w">
+              </span><span class="nt">"sequence"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+              </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https\://acme.org/questionnaire/1"</span><span class="p">,</span><span class="w">
+              </span><span class="nt">"answerString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"foo"</span><span class="p">,</span><span class="w">
+              </span><span class="nt">"score"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                  </span><span class="nt">"value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">
+                  </span><span class="nt">"unit"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"points"</span><span class="p">}</span><span class="w">
+                  </span><span class="p">},</span><span class="w">
+              </span><span class="p">{</span><span class="w">
+              </span><span class="err">//</span><span class="w"> </span><span class="err">second</span><span class="w"> </span><span class="err">question</span><span class="w">  </span><span class="err">=</span><span class="w"> </span><span class="err">Q-4</span><span class="w"> </span><span class="err">answered</span><span class="w"> </span><span class="nt">"bar"</span><span class="err">,</span><span class="w"> </span><span class="err">with</span><span class="w"> </span><span class="err">an</span><span class="w"> </span><span class="err">intermediate</span><span class="w"> </span><span class="err">score</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">11</span><span class="w"> </span><span class="err">returned</span><span class="w">
+              </span><span class="nt">"sequence"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+              </span><span class="nt">"q-url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https\://acme.org/questionnaire/4"</span><span class="p">,</span><span class="w">
+              </span><span class="nt">"answerString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bar"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<p><strong>response</strong></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parameters"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"next-question-example"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"parameter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qa-group"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"part"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+         </span><span class="err">//</span><span class="w"> </span><span class="err">first</span><span class="w"> </span><span class="err">question</span><span class="w">  </span><span class="err">=</span><span class="w"> </span><span class="err">Q-1</span><span class="w"> </span><span class="err">answered</span><span class="w"> </span><span class="nt">"foo"</span><span class="err">,</span><span class="w"> </span><span class="err">with</span><span class="w"> </span><span class="err">an</span><span class="w"> </span><span class="err">intermediate</span><span class="w"> </span><span class="err">score</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">17</span><span class="w"> </span><span class="err">returned</span><span class="w">
+          </span><span class="nt">"sequence"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https\://acme.org/questionnaire/1"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"answerString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"foo"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"score"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nt">"value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">
+              </span><span class="nt">"unit"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"points"</span><span class="p">}</span><span class="w">
+              </span><span class="p">}</span><span class="w">
+            </span><span class="err">}</span><span class="p">,</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+          </span><span class="err">//</span><span class="w"> </span><span class="err">second</span><span class="w"> </span><span class="err">question</span><span class="w">  </span><span class="err">=</span><span class="w"> </span><span class="err">Q-4</span><span class="w"> </span><span class="err">answered</span><span class="w"> </span><span class="nt">"bar"</span><span class="err">,</span><span class="w"> </span><span class="err">with</span><span class="w"> </span><span class="err">an</span><span class="w"> </span><span class="err">intermediate</span><span class="w"> </span><span class="err">score</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">11</span><span class="w"> </span><span class="err">returned</span><span class="w">
+          </span><span class="nt">"sequence"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"q-url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https\://acme.org/questionnaire/4"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"answerString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bar"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"score"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nt">"value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w">
+              </span><span class="nt">"unit"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"points"</span><span class="p">}</span><span class="w">
+              </span><span class="p">}</span><span class="w">
+            </span><span class="err">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nt">"cum-score"</span><span class="p">:</span><span class="w"> </span><span class="mi">28</span><span class="p">,</span><span class="w">
+      </span><span class="err">'q'</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Questionnaire"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"first-question-example"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https\://acme.org/questionnaire/9"</span><span class="p">,</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+        </span><span class="err">//assuming</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">single</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">item</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">Q9//</span><span class="w">
+        </span><span class="nt">"item"</span><span class="p">:{</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+        </span><span class="nt">"type"</span><span class="p">:</span><span class="s2">"choice"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"text"</span><span class="p">:</span><span class="s2">"blah9"</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="err">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="err">client</span><span class="w">
+</span><span class="err">...render</span><span class="p">,</span><span class="w"> </span><span class="err">store</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="err">answer</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="err">score</span><span class="w"> </span><span class="mi">1</span><span class="err">...</span><span class="w">
+</span></code></pre>
+</div>
+
+<h3 id="finished">Finished</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Get next question using by POSTing the operation $next-q to the service Questionnaire endpoint and supplying the parameters from the prior question
+</code></pre>
+</div>
+
+<p><strong>request</strong></p>
+
+<p><code class="highlighter-rouge">POST ../Questionnaire/$next-q</code></p>
+
+<p><strong>payload</strong></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="w">    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parameters"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"next-question-example"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"parameter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qa-group"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"part"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+             </span><span class="err">//</span><span class="w"> </span><span class="err">first</span><span class="w"> </span><span class="err">question</span><span class="w">  </span><span class="err">=</span><span class="w"> </span><span class="err">Q-1</span><span class="w"> </span><span class="err">answered</span><span class="w"> </span><span class="nt">"foo"</span><span class="err">,</span><span class="w"> </span><span class="err">with</span><span class="w"> </span><span class="err">an</span><span class="w"> </span><span class="err">intermediate</span><span class="w"> </span><span class="err">score</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">17</span><span class="w"> </span><span class="err">returned</span><span class="w">
+              </span><span class="nt">"sequence"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+              </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https\://acme.org/questionnaire/1"</span><span class="p">,</span><span class="w">
+              </span><span class="nt">"answerString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"foo"</span><span class="p">,</span><span class="w">
+              </span><span class="nt">"score"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                  </span><span class="nt">"value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">
+                  </span><span class="nt">"unit"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"points"</span><span class="p">}</span><span class="w">
+                  </span><span class="p">},</span><span class="w">
+              </span><span class="err">//</span><span class="w"> </span><span class="err">second</span><span class="w"> </span><span class="err">question</span><span class="w">  </span><span class="err">=</span><span class="w"> </span><span class="err">Q</span><span class="mi">-4</span><span class="w"> </span><span class="err">answered</span><span class="w"> </span><span class="s2">"bar"</span><span class="p">,</span><span class="w"> </span><span class="err">with</span><span class="w"> </span><span class="err">an</span><span class="w"> </span><span class="err">intermediate</span><span class="w"> </span><span class="err">score</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="mi">11</span><span class="w"> </span><span class="err">returned</span><span class="w">
+              </span><span class="s2">"sequence"</span><span class="err">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"q-url"</span><span class="err">:</span><span class="w"> </span><span class="s2">"https\://acme.org/questionnaire/4"</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"answerString"</span><span class="err">:</span><span class="w"> </span><span class="s2">"bar"</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"q-score"</span><span class="err">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                  </span><span class="nt">"value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w">
+                  </span><span class="nt">"unit"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"points"</span><span class="p">}</span><span class="w">
+                  </span><span class="err">}</span><span class="p">,</span><span class="w">
+              </span><span class="err">//</span><span class="w"> </span><span class="err">third</span><span class="w"> </span><span class="err">question</span><span class="w">  </span><span class="err">=</span><span class="w"> </span><span class="err">Q</span><span class="mi">-9</span><span class="w"> </span><span class="err">answered</span><span class="w"> </span><span class="s2">"baz"</span><span class="p">,</span><span class="w"> </span><span class="err">with</span><span class="w"> </span><span class="err">no</span><span class="w"> </span><span class="err">intermediate</span><span class="w"> </span><span class="err">score</span><span class="w"> </span><span class="err">since</span><span class="w"> </span><span class="err">this</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">current</span><span class="w"> </span><span class="err">qa</span><span class="w">
+              </span><span class="s2">"sequence"</span><span class="err">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"q-url"</span><span class="err">:</span><span class="w"> </span><span class="s2">"https\://acme.org/questionnaire/9"</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"answerString"</span><span class="err">:</span><span class="w"> </span><span class="s2">"baz"</span><span class="w">
+              </span><span class="err">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<p><strong>response</strong></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parameters"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"next-question-example"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"parameter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qa-group"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"part"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+         </span><span class="err">//</span><span class="w"> </span><span class="err">first</span><span class="w"> </span><span class="err">question</span><span class="w">  </span><span class="err">=</span><span class="w"> </span><span class="err">Q-1</span><span class="w"> </span><span class="err">answered</span><span class="w"> </span><span class="nt">"foo"</span><span class="err">,</span><span class="w"> </span><span class="err">with</span><span class="w"> </span><span class="err">an</span><span class="w"> </span><span class="err">intermediate</span><span class="w"> </span><span class="err">score</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">17</span><span class="w"> </span><span class="err">returned</span><span class="w">
+          </span><span class="nt">"sequence"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https\://acme.org/questionnaire/1"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"answerString"</span><span class="p">:</span><span class="w"> </span><span class="s2">"foo"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"score"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nt">"value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">
+              </span><span class="nt">"unit"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"points"</span><span class="p">}</span><span class="w">
+              </span><span class="p">},</span><span class="w">
+          </span><span class="err">//</span><span class="w"> </span><span class="err">second</span><span class="w"> </span><span class="err">question</span><span class="w">  </span><span class="err">=</span><span class="w"> </span><span class="err">Q</span><span class="mi">-4</span><span class="w"> </span><span class="err">answered</span><span class="w"> </span><span class="s2">"bar"</span><span class="p">,</span><span class="w"> </span><span class="err">with</span><span class="w"> </span><span class="err">an</span><span class="w"> </span><span class="err">intermediate</span><span class="w"> </span><span class="err">score</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="mi">11</span><span class="w"> </span><span class="err">returned</span><span class="w">
+          </span><span class="s2">"sequence"</span><span class="err">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"q-url"</span><span class="err">:</span><span class="w"> </span><span class="s2">"https\://acme.org/questionnaire/4"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"answerString"</span><span class="err">:</span><span class="w"> </span><span class="s2">"bar"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"q-score"</span><span class="err">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nt">"value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w">
+              </span><span class="nt">"unit"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"points"</span><span class="p">}</span><span class="w">
+              </span><span class="err">}</span><span class="p">,</span><span class="w">
+          </span><span class="err">//</span><span class="w"> </span><span class="err">third</span><span class="w"> </span><span class="err">question</span><span class="w">  </span><span class="err">=</span><span class="w"> </span><span class="err">Q</span><span class="mi">-9</span><span class="w"> </span><span class="err">answered</span><span class="w"> </span><span class="s2">"baz"</span><span class="p">,</span><span class="w"> </span><span class="err">with</span><span class="w"> </span><span class="err">no</span><span class="w"> </span><span class="err">intermediate</span><span class="w"> </span><span class="err">score</span><span class="w"> </span><span class="err">since</span><span class="w"> </span><span class="err">this</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">current</span><span class="w"> </span><span class="err">qa</span><span class="w">
+          </span><span class="s2">"sequence"</span><span class="err">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"q-url"</span><span class="err">:</span><span class="w"> </span><span class="s2">"https\://acme.org/questionnaire/9"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"answerString"</span><span class="err">:</span><span class="w"> </span><span class="s2">"baz"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"q-score"</span><span class="err">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nt">"value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+              </span><span class="nt">"unit"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"points"</span><span class="p">}</span><span class="w">
+              </span><span class="err">}</span><span class="p">,</span><span class="w">
+
+          </span><span class="err">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="nt">"cum-score"</span><span class="p">:</span><span class="w"> </span><span class="mi">31</span><span class="w">
+        </span><span class="err">//When</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">adaptive</span><span class="w"> </span><span class="err">questionnaire</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">complete</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">service</span><span class="w"> </span><span class="err">returns</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">payload</span><span class="w"> </span><span class="err">that</span><span class="w"> </span><span class="err">does</span><span class="w"> </span><span class="err">not</span><span class="w"> </span><span class="err">have</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">q</span><span class="w"> </span><span class="err">parameter</span><span class="w"> </span><span class="err">which</span><span class="w"> </span><span class="err">signals</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">client</span><span class="w"> </span><span class="err">that</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Questionnaire</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">complete.</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+<h3 id="questionnaireresponse-and-scoring">QuestionnaireResponse and Scoring</h3>
+
+<p>When the adaptive questionnaire is complete the service returns a payload that does not have a q parameter which signals to the client that the Questionnaire is complete.</p>
+
+<p>The client creates a QuestionnaireResponse with a contained Questionnaire based on the questions it was returned by the service.
+The client may also create an Observation to represent the cumulative or intermediate scores.</p>
 
 <hr />
 
@@ -323,7 +656,7 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Jul 26, 2018 01:59-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
+            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, Aug 1, 2018 14:14-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>
         </p>
    </div>  <!-- /inner-wrapper -->

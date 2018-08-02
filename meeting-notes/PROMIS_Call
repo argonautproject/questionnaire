@@ -1,0 +1,44 @@
+PROMIS Call
+
+Simple Questionnaire
+
+logical extensions
+
+
+Interaction between fhir client  and  Questionnaire Bank  ( Black box)
+
+Fhir Q Resource as Data model
+
+
+transactions  Standard operations to get the next Q
+
+
+REACH-NET  Pilot and a couple of IGs on PROs
+ONC - Dragon to collaborate.
+
+ Net  Louisiana
+
+ONC
+
+PROs
+
+
+no need ot rip and replace
+
+FIXED: client callar GUID  - KV pair  call restful endpoint  pass new QID and response
+
+first no answer
+
+next question with Score  no prior answer
+
+each question with a Score
+
+stop with Null and score.
+
+client in charge of score and answers
+
+Fixed questionnaire  - call service and send Score
+
+Short form get 6 questions  vs computer adaptive
+
+NO PHI exchanged.

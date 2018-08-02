@@ -1,0 +1,58 @@
+connectathon notes:
+
+topic:  program specified in  tag or useContext
+
+describe search across servers
+
+
+Chris Meditech
+
+Cameron -epic
+
+George - Allscipts
+
+Peggy - partners
+
+
+Bearer VdlXwPXXdhBlIXIb9sxGBDYLBXfejP2n
+
+
+
+add check box to Sampler
+
+add publisher must support element and search - bring it up
+
+fix publisher value in Questionnaire
+
+if have both options for reference need way to know which search param to use.  do we constrain out identifier?
+
+groupings or categorization of patients. or demographic profiles.
+
+Use Patient and context to create link to patient to encounter to originating System.
+
+Use separate mechanism for sorting and group
+
+sub-population of patients.
+
+contained patients - may be minimal patient demographic and not identifiers.
+
+for searching and slicing and dicing.
+
+Use Case 1 QR in trusted environment vs Use Case 2 non-trusted environment - anonymized.
+
+This is the reason for prepop forms with demographic information. or add the items to
+Q - how is sliced and diced is out of scope.
+
+More than willing to expose in the answer bank.
+
+answer bank with PHI needs access control.  see security section.
+
+encounter should be 0..1 -  fixed
+
+
+Language considerations - are different languages same questionnaire url and id
+  no add http://hl7.org/fhir/StructureDefinition/translation to all the elements in need of translation for end User
+  make example.
+     elements =  1) item.text when not hidden display  1) question type.
+
+Need to add the non hidden display stuff to QRs.

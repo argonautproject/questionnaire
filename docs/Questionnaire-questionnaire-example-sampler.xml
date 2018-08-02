@@ -527,7 +527,7 @@ tatlbWtd+1rYxla2s6VtbW17W9zmVre7TW1iw/Jb4Ab3VVMlbnGDJlzkAte4y2WuB5Ob3OZGV7ol
 ey50p3td7JKrusjNbne9i63tCve74yVvs4JrAPSm1wDBLW973dsr4ap3vex9b33tCyvkppe79+Vv
 f0GV3PmK178DJvCkwkvfAidYwYI6sHIX/GAI26nBv40ZcIUtrKYJD/fCG+ZwkzJ80g6HWMRH+nBA
 AAA7
-" alt="Argonaut Questionnaire Sampler"/><p>You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.</p></div>
+"alt="Argonaut Questionnaire Sampler"/><p>You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.</p></div>
   </text>
   <url value="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-sampler"/>
   <identifier>
@@ -537,7 +537,7 @@ AAA7
   <version value="0.0.0"/>
   <title value="Argonaut Questionnaire Sampler"/>
   <status value="draft"/>
-  <date value="2018-07-26T00:00:00-07:00"/>
+  <date value="2018-07-26"/>
   <publisher value="Argonaut Project"/>
   <useContext>
     <code>
