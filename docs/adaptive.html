@@ -247,7 +247,7 @@
   <li><a href="#assumptions-and-precondition" id="markdown-toc-assumptions-and-precondition">Assumptions and Precondition</a></li>
   <li><a href="#open-issues-for-discussion" id="markdown-toc-open-issues-for-discussion">Open issues for discussion</a></li>
   <li><a href="#workflow-steps" id="markdown-toc-workflow-steps">Workflow Steps</a>    <ul>
-      <li><a name="beef0068-29d2-4fbc-b11f-bc9a338a84af">​</a><a href="#adaptive-questionnaire-discovery" id="markdown-toc-adaptive-questionnaire-discovery">Adaptive Questionnaire Discovery</a></li>
+      <li><a name="9ccac12f-dc2f-4903-b72e-8cac988a6f78">​</a><a href="#adaptive-questionnaire-discovery" id="markdown-toc-adaptive-questionnaire-discovery">Adaptive Questionnaire Discovery</a></li>
       <li><a href="#initiate-adaptive-questionnaire" id="markdown-toc-initiate-adaptive-questionnaire">Initiate Adaptive Questionnaire</a></li>
       <li><a href="#get-next-question" id="markdown-toc-get-next-question">Get Next Question</a></li>
       <li><a href="#adaptive-questionnaire-is-complete" id="markdown-toc-adaptive-questionnaire-is-complete">Adaptive Questionnaire is Complete</a></li>
@@ -293,14 +293,14 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
   <li>Adaptive Questionnaire Service is a “Black Box”:
     <ul>
       <li>Contains logic for determination of next question and scoring</li>
-      <li>Transactions are Stateless:
-        <ul>
-          <li>Client constructs a record of transaction which is passed to Server</li>
-          <li>Server adds to record and passed back to Client</li>
-          <li>Client and Server free of keeping track of session</li>
-          <li>A Previously disrupted session can be restored if session token expires.</li>
-        </ul>
-      </li>
+    </ul>
+  </li>
+  <li>Transactions are Stateless:
+    <ul>
+      <li>Client constructs a record of transaction which is passed to Server</li>
+      <li>Server adds to record and passed back to Client</li>
+      <li>Client and Server free of keeping track of session</li>
+      <li>A Previously disrupted session can be restored if session token expires.</li>
     </ul>
   </li>
   <li>Client makes RESTful FHIR transactions on Server using a <em>FHIR operation</em></li>
@@ -1438,7 +1438,7 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
   <div class="container">    <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Aug 10, 2018 16:27-0700. | <a rel="license" no-external="true" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
+            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Aug 10, 2018 16:36-0700. | <a rel="license" no-external="true" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
         
         </p>
    </div>    <!-- /inner-wrapper -->

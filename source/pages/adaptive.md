@@ -44,11 +44,11 @@ This simple scenario serves as an effective means to describe the Argonaut Quest
   - Third Party (Smart) App too.
 - Adaptive Questionnaire Service is a “Black Box”:
   - Contains logic for determination of next question and scoring
-  - Transactions are Stateless:
-    - Client constructs a record of transaction which is passed to Server
-    - Server adds to record and passed back to Client
-    - Client and Server free of keeping track of session
-    - A Previously disrupted session can be restored if session token expires.
+- Transactions are Stateless:
+  - Client constructs a record of transaction which is passed to Server
+  - Server adds to record and passed back to Client
+  - Client and Server free of keeping track of session
+  - A Previously disrupted session can be restored if session token expires.
 - Client makes RESTful FHIR transactions on Server using a *FHIR operation*
 - Use QuestionnaireResponse with contained Questionnaire as Parameters to capture the data needed between the Client and Server
 - If Questionnaire timed out

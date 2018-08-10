@@ -2,7 +2,7 @@
 =========================================
 
 err = 248, warn = 68, info = 10
-Generated Fri Aug 10 16:27:23 PDT 2018. FHIR version 3.4.0 for 3.0.1
+Generated Fri Aug 10 16:37:05 PDT 2018. FHIR version 3.4.0 for 3.0.1
 
  Build Errors : 363 / 0
  /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/ASQ3 : 0 / 0
