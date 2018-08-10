@@ -36,11 +36,7 @@ This simple scenario serves as an effective means to describe the Argonaut Quest
  ...todo...
 ~~~
 
-## Workflow Steps
-
-
-
-**Assumptions and Preconditions**
+## Assumptions and Precondition
 
 - Client(Form Filler)
   - EHR-S
@@ -67,18 +63,39 @@ This simple scenario serves as an effective means to describe the Argonaut Quest
 - Calculated Scores as `readOnly` questions with `initial.valueQuantity` that cannot be changed
   - can be marked as hidden using the questionnair-hidden extension to prevent end user from viewing.
 
-**Issues for discussion
-1, Limit what is returned? limit item group nesting?
-  *each* contained Questionnaire.item could be a:
-      - *a single* question ('what is the capital of Assyria?') or
-      - *a single* display  ('Answer these questions three!!') or
-      - *a single* item group of *multiple* display + *multiple* questions  ( 'what is you favorite color?', 'what is the capital of Assyria?', 'what is average flight speed of a laden swallow?')
-      - *a single* item group of: *multiple* item groups ('Answer these questions three!!', 'what is you favorite color?', 'what is the capital of Assyria?', 'what is average flight speed of a laden swallow?')
-1.  Scores needed only at end or after each question?  cumulative vs for each q-a pair.**
+## Open issues for discussion
+
+1. Using QuestionnaireResponse with contained Questionnaire as the "container" to pass information back and forth
+    - other option would be simpler list of Paramters but the client will still have to build the QuestionnaireResponse with contained Questionnaire.
+    - (complexity is just shifted around
+1. limit the structural complexity (i.e. nesting of group items) of the contained Questionnaire?
+    - *each* contained Questionnaire.item could be a:
+        - *a single* question ('what is the capital of Assyria?') or
+        - *a single* display  ('Answer these questions three!!') or
+        - *a single* item group of *multiple* display + *multiple* questions  ( 'what is you favorite color?', 'what is the capital of Assyria?', 'what is average flight speed of a laden swallow?')
+        - *a single* item group of: *multiple* item groups ('Answer these questions three!!', 'what is you favorite color?', 'what is the capital of Assyria?', 'what is average flight speed of a laden swallow?')
+    -  What is the Service going to send in most cases?
+       - We are assuming the adaptive questionnaire are going to be rather short so is this complexity warranted.
+       - On the other hand other projects (SDC and ONC PROs project) are planning to build on this guidance so may be better to not overly constrain.
+1.  What scoring capability is needed only at end or after each question?
+    - cumulative(total score) score only at end or after each question ?
+    - score for each q-a pair ?
+    - what guidance if any should be given on how to store score?
+      - as Observation
+      - as question-answer pair  ( how is shown below )
+      - both
+1. Discovery of Adaptive Questionnaire?
+   - see section below
+
+## Workflow Steps
+
+The following sections provide a detailed description of workflow and API guidance for the Adaptive Forms Use Case.
+
+
+{% include img.html img="adaptive-workflow-steps.jpg" caption="Data Requirements Operation" %}
+
 
 <!-- Discovery of Adaptive Questionnaire --->
-
-
 
 ### Adaptive Questionnaire Discovery
 
@@ -88,6 +105,8 @@ The discovery and preview of the service's adaptive questionnaire is out of scop
 <!--------- INIT ------------>
 
 ### Initiate Adaptive Questionnaire
+
+{% include img-narrow.html img="aw-step1.jpg" %}
 
 Launch the adaptive questionnaire by getting first group item (either a display, question(s), or group + questions ) from the Server by POSTing the operation $next-q to the Server's Questionnaire instance endpoint and supplying a QuestionnaireResponse with a *contained** Questionnaire representing only the resource metadata.  The Server updates the contained Questionnaire with the first item and returns the QuestionnaireResponse in the payload.
 
@@ -113,6 +132,8 @@ To initiate an  adaptive questionnaire:
 <!--------- NEXT Q - 1 ------------>
 
 ### Get Next Question
+
+{% include img-narrow.html img="aw-step2.jpg" %}
 
 Client renders/stores/processes the item and gets the next group item by POSTing the operation $next-q to the service Questionnaire instance endpoint and supplying a1 in the QR and q1 in the contained Q.  As result of the operation, the Server updates the QR and returns it to the Client.
 
@@ -142,6 +163,9 @@ To initiate an  adaptive questionnaire:
 <!--------- done ------------>
 
 ### Adaptive Questionnaire is Complete
+
+{% include img-narrow.html img="aw-step3.jpg" %}
+
 
 The Client renders, stores the  question-answer pair and optionally the previous scores and gets the next item group as described above.  When the adaptive questionnaire is  successfully completed, the Server updates the QR with intermediate and cumulative scores, updates status to ‘complete’ and returns it to the Client.  The status of ‘complete’ is a signal to the Client that the adaptive Questionnaire is done!
 

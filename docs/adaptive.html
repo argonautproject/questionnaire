@@ -244,8 +244,10 @@
 <ul id="markdown-toc">
   <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
   <li><a href="#example-scenario" id="markdown-toc-example-scenario">Example Scenario</a></li>
+  <li><a href="#assumptions-and-precondition" id="markdown-toc-assumptions-and-precondition">Assumptions and Precondition</a></li>
+  <li><a href="#open-issues-for-discussion" id="markdown-toc-open-issues-for-discussion">Open issues for discussion</a></li>
   <li><a href="#workflow-steps" id="markdown-toc-workflow-steps">Workflow Steps</a>    <ul>
-      <li><a name="1e5a60db-7170-4e9b-9fd3-54f252961830">​</a><a href="#adaptive-questionnaire-discovery" id="markdown-toc-adaptive-questionnaire-discovery">Adaptive Questionnaire Discovery</a></li>
+      <li><a name="8993c5b3-03e0-4bb8-8329-55a8e8b9bcf3">​</a><a href="#adaptive-questionnaire-discovery" id="markdown-toc-adaptive-questionnaire-discovery">Adaptive Questionnaire Discovery</a></li>
       <li><a href="#initiate-adaptive-questionnaire" id="markdown-toc-initiate-adaptive-questionnaire">Initiate Adaptive Questionnaire</a></li>
       <li><a href="#get-next-question" id="markdown-toc-get-next-question">Get Next Question</a></li>
       <li><a href="#adaptive-questionnaire-is-complete" id="markdown-toc-adaptive-questionnaire-is-complete">Adaptive Questionnaire is Complete</a></li>
@@ -278,9 +280,7 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
 </code></pre>
 </div>
 
-<h2 id="workflow-steps">Workflow Steps</h2>
-
-<p><strong>Assumptions and Preconditions</strong></p>
+<h2 id="assumptions-and-precondition">Assumptions and Precondition</h2>
 
 <ul>
   <li>Client(Form Filler)
@@ -330,14 +330,69 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
   </li>
 </ul>
 
-<p><strong>Issues for discussion
-1, Limit what is returned? limit item group nesting?
-  <em>each</em> contained Questionnaire.item could be a:
-      - <em>a single</em> question (‘what is the capital of Assyria?’) or
-      - <em>a single</em> display  (‘Answer these questions three!!’) or
-      - <em>a single</em> item group of <em>multiple</em> display + <em>multiple</em> questions  ( ‘what is you favorite color?’, ‘what is the capital of Assyria?’, ‘what is average flight speed of a laden swallow?’)
-      - <em>a single</em> item group of: <em>multiple</em> item groups (‘Answer these questions three!!’, ‘what is you favorite color?’, ‘what is the capital of Assyria?’, ‘what is average flight speed of a laden swallow?’)
-1.  Scores needed only at end or after each question?  cumulative vs for each q-a pair.</strong></p>
+<h2 id="open-issues-for-discussion">Open issues for discussion</h2>
+
+<ol>
+  <li>Using QuestionnaireResponse with contained Questionnaire as the “container” to pass information back and forth
+    <ul>
+      <li>other option would be simpler list of Paramters but the client will still have to build the QuestionnaireResponse with contained Questionnaire.</li>
+      <li>(complexity is just shifted around</li>
+    </ul>
+  </li>
+  <li>limit the structural complexity (i.e. nesting of group items) of the contained Questionnaire?
+    <ul>
+      <li><em>each</em> contained Questionnaire.item could be a:
+        <ul>
+          <li><em>a single</em> question (‘what is the capital of Assyria?’) or</li>
+          <li><em>a single</em> display  (‘Answer these questions three!!’) or</li>
+          <li><em>a single</em> item group of <em>multiple</em> display + <em>multiple</em> questions  ( ‘what is you favorite color?’, ‘what is the capital of Assyria?’, ‘what is average flight speed of a laden swallow?’)</li>
+          <li><em>a single</em> item group of: <em>multiple</em> item groups (‘Answer these questions three!!’, ‘what is you favorite color?’, ‘what is the capital of Assyria?’, ‘what is average flight speed of a laden swallow?’)</li>
+        </ul>
+      </li>
+      <li>What is the Service going to send in most cases?
+        <ul>
+          <li>We are assuming the adaptive questionnaire are going to be rather short so is this complexity warranted.</li>
+          <li>On the other hand other projects (SDC and ONC PROs project) are planning to build on this guidance so may be better to not overly constrain.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>What scoring capability is needed only at end or after each question?
+    <ul>
+      <li>cumulative(total score) score only at end or after each question ?</li>
+      <li>score for each q-a pair ?</li>
+      <li>what guidance if any should be given on how to store score?
+        <ul>
+          <li>as Observation</li>
+          <li>as question-answer pair  ( how is shown below )</li>
+          <li>both</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Discovery of Adaptive Questionnaire?
+    <ul>
+      <li>see section below</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="workflow-steps">Workflow Steps</h2>
+
+<p>The following sections provide a detailed description of workflow and API guidance for the Adaptive Forms Use Case.</p>
+
+  <!-- all this Bootstrap html for getting an narrow image to fit nicely in text - 640 pix wide -->
+
+  <!-- file:///assets/images/adaptive-workflow-steps.jpg -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>Data Requirements Operation.</strong></figcaption>
+  <img src="assets/images/adaptive-workflow-steps.jpg" alt="adaptive-workflow-steps.jpg" class="figure-img img-responsive img-rounded center-block"/>
+</figure>
+
+<p></p>
+</div>
 
   <!-- Discovery of Adaptive Questionnaire --->
 
@@ -348,6 +403,19 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
 <!--------- INIT ---------- -->
 
 <h3 id="initiate-adaptive-questionnaire">Initiate Adaptive Questionnaire</h3>
+
+  <!-- all this Bootstrap html for getting an image to fit nicely in text - 640 pix wide -->
+
+  <!-- file:///assets/images/aw-step1.jpg -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>.</strong></figcaption>
+  <img src="assets/images/aw-step1.jpg" alt="aw-step1.jpg" class="figure-img-narrow img-responsive img-rounded center-block"/>
+</figure>
+
+<p></p>
+</div>
 
 <p>Launch the adaptive questionnaire by getting first group item (either a display, question(s), or group + questions ) from the Server by POSTing the operation $next-q to the Server’s Questionnaire instance endpoint and supplying a QuestionnaireResponse with a *contained** Questionnaire representing only the resource metadata.  The Server updates the contained Questionnaire with the first item and returns the QuestionnaireResponse in the payload.</p>
 
@@ -367,7 +435,7 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
 <p><code class="highlighter-rouge">POST [base]/QuestionnaireResponse/[id]/$next-q</code></p>
 
 <p>
-  <button data-target="#example-aq-initiate" data-toggle="collapse" aria-controls="collapseExample" aria-expanded="false" type="button" class="btn btn-info">
+  <button data-target="#example-aq-initiate" data-toggle="collapse" aria-controls="collapseExample" aria-expanded="false" type="button" title="Click to Open or Close Example" class="btn btn-info btn-lg btn-block">
     Example: $next-q Operation Initiates Adaptive Questionnaire and Returns First Group Item
   </button>
 </p>
@@ -492,6 +560,19 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
 
 <h3 id="get-next-question">Get Next Question</h3>
 
+  <!-- all this Bootstrap html for getting an image to fit nicely in text - 640 pix wide -->
+
+  <!-- file:///assets/images/aw-step2.jpg -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>.</strong></figcaption>
+  <img src="assets/images/aw-step2.jpg" alt="aw-step2.jpg" class="figure-img-narrow img-responsive img-rounded center-block"/>
+</figure>
+
+<p></p>
+</div>
+
 <p>Client renders/stores/processes the item and gets the next group item by POSTing the operation $next-q to the service Questionnaire instance endpoint and supplying a1 in the QR and q1 in the contained Q.  As result of the operation, the Server updates the QR and returns it to the Client.</p>
 
 <p>The Server identifies the adaptive questionnaire group item by the contained Questionnaire <code class="highlighter-rouge">definiton</code> element may add intermediate and cumulative score to the QR based on the preceding item(s) and updates the contained Questionnaire with the next question.  This process step is repeated until the adaptive questionnaire is done or the Questionaire has timed out (footnote?) or another error has occured.</p>
@@ -512,7 +593,7 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
 <p><code class="highlighter-rouge">POST [base]/QuestionnaireResponse/[id]/$next-q</code></p>
 
 <p>
-  <button data-target="#example-aq-next1" data-toggle="collapse" aria-controls="collapseExample" aria-expanded="false" type="button" class="btn btn-info">
+  <button data-target="#example-aq-next1" data-toggle="collapse" aria-controls="collapseExample" aria-expanded="false" type="button" title="Click to Open or Close Example" class="btn btn-info btn-lg btn-block">
     Example: $next-q Operation Returns Next Question
   </button>
 </p>
@@ -699,7 +780,7 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
 <p><br/></p>
 
 <p>
-  <button data-target="#example-aq-next2" data-toggle="collapse" aria-controls="collapseExample" aria-expanded="false" type="button" class="btn btn-info">
+  <button data-target="#example-aq-next2" data-toggle="collapse" aria-controls="collapseExample" aria-expanded="false" type="button" title="Click to Open or Close Example" class="btn btn-info btn-lg btn-block">
     Example: $next-q Operation Returns Next Question and scoring
   </button>
 </p>
@@ -958,6 +1039,19 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
 
 <h3 id="adaptive-questionnaire-is-complete">Adaptive Questionnaire is Complete</h3>
 
+  <!-- all this Bootstrap html for getting an image to fit nicely in text - 640 pix wide -->
+
+  <!-- file:///assets/images/aw-step3.jpg -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>.</strong></figcaption>
+  <img src="assets/images/aw-step3.jpg" alt="aw-step3.jpg" class="figure-img-narrow img-responsive img-rounded center-block"/>
+</figure>
+
+<p></p>
+</div>
+
 <p>The Client renders, stores the  question-answer pair and optionally the previous scores and gets the next item group as described above.  When the adaptive questionnaire is  successfully completed, the Server updates the QR with intermediate and cumulative scores, updates status to ‘complete’ and returns it to the Client.  The status of ‘complete’ is a signal to the Client that the adaptive Questionnaire is done!</p>
 
 <h4 id="apis-2" class="no_toc">APIs</h4>
@@ -976,7 +1070,7 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
 <p><code class="highlighter-rouge">POST [base]/QuestionnaireResponse/[id]/$next-q</code></p>
 
 <p>
-  <button data-target="#example-aq-done" data-toggle="collapse" aria-controls="collapseExample" aria-expanded="false" type="button" class="btn btn-info">
+  <button data-target="#example-aq-done" data-toggle="collapse" aria-controls="collapseExample" aria-expanded="false" type="button" title="Click to Open or Close Example" class="btn btn-info btn-lg btn-block">
     Example: $next-q Operation Returns Completed Adaptive Questionnaire
   </button>
 </p>
@@ -1344,7 +1438,7 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
   <div class="container">    <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Aug 9, 2018 23:28-0700. | <a rel="license" no-external="true" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
+            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Aug 10, 2018 15:50-0700. | <a rel="license" no-external="true" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
         
         </p>
    </div>    <!-- /inner-wrapper -->
