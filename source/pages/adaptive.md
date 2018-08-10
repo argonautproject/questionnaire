@@ -65,10 +65,10 @@ This simple scenario serves as an effective means to describe the Argonaut Quest
 
 ## Open issues for discussion
 
-1. Using QuestionnaireResponse with contained Questionnaire as the "container" to pass information back and forth
+1. Using QuestionnaireResponse with contained Questionnaire as the "container" to pass information back and forth [7](https://github.com/argonautproject/questionnaire/issues/7)
     - other option would be simpler list of Paramters but the client will still have to build the QuestionnaireResponse with contained Questionnaire.
     - (complexity is just shifted around
-1. limit the structural complexity (i.e. nesting of group items) of the contained Questionnaire?
+1. limit the structural complexity (i.e. nesting of group items) of the contained Questionnaire? [8](https://github.com/argonautproject/questionnaire/issues/8)
     - *each* contained Questionnaire.item could be a:
         - *a single* question ('what is the capital of Assyria?') or
         - *a single* display  ('Answer these questions three!!') or
@@ -77,14 +77,14 @@ This simple scenario serves as an effective means to describe the Argonaut Quest
     -  What is the Service going to send in most cases?
        - We are assuming the adaptive questionnaire are going to be rather short so is this complexity warranted.
        - On the other hand other projects (SDC and ONC PROs project) are planning to build on this guidance so may be better to not overly constrain.
-1.  What scoring capability is needed only at end or after each question?
+1.  What scoring capability is needed only at end or after each question? [9](https://github.com/argonautproject/questionnaire/issues/9)
     - cumulative(total score) score only at end or after each question ?
     - score for each q-a pair ?
     - what guidance if any should be given on how to store score?
       - as Observation
       - as question-answer pair  ( how is shown below )
       - both
-1. Discovery of Adaptive Questionnaire?
+1. Discovery of Adaptive Questionnaire? [10](https://github.com/argonautproject/questionnaire/issues/10)
    - see section below
 
 ## Workflow Steps

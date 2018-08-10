@@ -247,7 +247,7 @@
   <li><a href="#assumptions-and-precondition" id="markdown-toc-assumptions-and-precondition">Assumptions and Precondition</a></li>
   <li><a href="#open-issues-for-discussion" id="markdown-toc-open-issues-for-discussion">Open issues for discussion</a></li>
   <li><a href="#workflow-steps" id="markdown-toc-workflow-steps">Workflow Steps</a>    <ul>
-      <li><a name="8993c5b3-03e0-4bb8-8329-55a8e8b9bcf3">​</a><a href="#adaptive-questionnaire-discovery" id="markdown-toc-adaptive-questionnaire-discovery">Adaptive Questionnaire Discovery</a></li>
+      <li><a name="beef0068-29d2-4fbc-b11f-bc9a338a84af">​</a><a href="#adaptive-questionnaire-discovery" id="markdown-toc-adaptive-questionnaire-discovery">Adaptive Questionnaire Discovery</a></li>
       <li><a href="#initiate-adaptive-questionnaire" id="markdown-toc-initiate-adaptive-questionnaire">Initiate Adaptive Questionnaire</a></li>
       <li><a href="#get-next-question" id="markdown-toc-get-next-question">Get Next Question</a></li>
       <li><a href="#adaptive-questionnaire-is-complete" id="markdown-toc-adaptive-questionnaire-is-complete">Adaptive Questionnaire is Complete</a></li>
@@ -333,13 +333,13 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
 <h2 id="open-issues-for-discussion">Open issues for discussion</h2>
 
 <ol>
-  <li>Using QuestionnaireResponse with contained Questionnaire as the “container” to pass information back and forth
+  <li>Using QuestionnaireResponse with contained Questionnaire as the “container” to pass information back and forth <a href="https://github.com/argonautproject/questionnaire/issues/7">7</a>
     <ul>
       <li>other option would be simpler list of Paramters but the client will still have to build the QuestionnaireResponse with contained Questionnaire.</li>
       <li>(complexity is just shifted around</li>
     </ul>
   </li>
-  <li>limit the structural complexity (i.e. nesting of group items) of the contained Questionnaire?
+  <li>limit the structural complexity (i.e. nesting of group items) of the contained Questionnaire? <a href="https://github.com/argonautproject/questionnaire/issues/8">8</a>
     <ul>
       <li><em>each</em> contained Questionnaire.item could be a:
         <ul>
@@ -357,7 +357,7 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
       </li>
     </ul>
   </li>
-  <li>What scoring capability is needed only at end or after each question?
+  <li>What scoring capability is needed only at end or after each question? <a href="https://github.com/argonautproject/questionnaire/issues/9">9</a>
     <ul>
       <li>cumulative(total score) score only at end or after each question ?</li>
       <li>score for each q-a pair ?</li>
@@ -370,7 +370,7 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
       </li>
     </ul>
   </li>
-  <li>Discovery of Adaptive Questionnaire?
+  <li>Discovery of Adaptive Questionnaire? <a href="https://github.com/argonautproject/questionnaire/issues/10">10</a>
     <ul>
       <li>see section below</li>
     </ul>
@@ -1438,7 +1438,7 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
   <div class="container">    <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Aug 10, 2018 15:50-0700. | <a rel="license" no-external="true" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
+            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Aug 10, 2018 16:27-0700. | <a rel="license" no-external="true" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
         
         </p>
    </div>    <!-- /inner-wrapper -->
