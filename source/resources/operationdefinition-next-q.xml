@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OperationDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file://Mac/Home/Documents/FHIR/FHIR%20tools/STU3Schema/fhir-all.xsd">
 	<id value="next-q"/>
+  <!--
 	<text>
 		<status value="generated"/>
 		<div xmlns="http://www.w3.org/1999/xhtml">
@@ -89,6 +90,7 @@
 			<div/>
 		</div>
 	</text>
+-->
 	<url value="http://fhir.org/guides/argonaut-questionnaire/OperationDefinition/next-q"/>
 	<name value="Argonaut Next Question Operation"/>
 	<status value="draft"/>
@@ -113,16 +115,20 @@
 		</profile>
 	</parameter>
 	<parameter>
+<!--
 		<name value="qr-out"/>
+-->
+    <name value="return"/>
 		<use value="out"/>
 		<min value="1"/>
 		<max value="1"/>
-		<documentation value="The [Argo AdaptiveQuestionnaireResponse Profile](StructureDefinition-aqr.html) of the QuestionnaireResponse resource with a *[contained]* Questionnaire.  The Server updates the QuestionnaireResponse&#39;s contained Questionnaire with the next question and returns it as this parameter.  When the questionnaire is complete, the Server updates the status of the QuestionnaireResponse resource parameter to `complete`."/>
+		<documentation value="The [Argo AdaptiveQuestionnaireResponse Profile](StructureDefinition-aqr.html) of the QuestionnaireResponse resource with a *contained* Questionnaire.  The Server updates the QuestionnaireResponse&#39;s contained Questionnaire with the next question and returns it as this parameter.  When the questionnaire is complete, the Server updates the status of the QuestionnaireResponse resource parameter to `complete`."/>
 		<type value="Resource"/>
 		<profile>
 			<reference value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/aqr"/>
 		</profile>
 	</parameter>
+<!--
 	<parameter>
 		<name value="score"/>
 		<use value="out"/>
@@ -139,4 +145,5 @@
 		<documentation value="The cumulative/total score based on all the completed question answer pairs for the adaptive questionnaire.  Individual scores for each question use the `q-score` parameter."/>
 		<type value="Quantity"/>
 	</parameter>
+-->
 </OperationDefinition>

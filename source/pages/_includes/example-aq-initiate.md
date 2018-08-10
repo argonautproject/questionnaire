@@ -1,42 +1,51 @@
 **request**
 
-`POST ../Questionnaire/$next-q`
+`POST [base]/QuestionnaireResponse/questionnaire-example-adaptive-sampler/$next-q`
 
 **payload**
 
 ~~~
 {
-  "resourceType": "QuestionnaireResponse",
-  "id": "questionnaireresponse-example-adaptive-sampler",
-  "meta": {
-    "profile": [
-      "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/aqr"
-    ],
-  // contained Questionnaire
-  "contained": [
+  "resourceType": "Parameters",
+  "id": "next-question-example-initiate",
+  "parameter": [
     {
-      "resourceType": "Questionnaire",
-      "id": "questionnaire-example-adaptive-sampler",
-      "meta": {
-        "profile": [
-          "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"
-        ]
-      },
-      "url": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler",
-      "title": "Argonaut Questionnaire Sampler",
-      "status": "draft",
-      //no items since initiating the adaptive questionnaire
-    ...
-    }
-  ]
-  },
-  //references the contained Questionnaire
-  "questionnaire": {
-    "reference": "#questionnaire-example-adaptive-sampler"
-  },
-  "status": "in-progress",
-...
-//no items since is just getting started
+    "name": "qr-in",
+    "resource": {
+    "resourceType": "QuestionnaireResponse",
+    "id": "questionnaireresponse-example-adaptive-sampler",
+    "meta": {
+      "profile": [
+        "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/aqr"
+      ],
+    // contained Questionnaire
+    "contained": [
+      {
+        "resourceType": "Questionnaire",
+        "id": "questionnaire-example-adaptive-sampler",
+        "meta": {
+          "profile": [
+            "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"
+          ]
+        },
+        "url": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler",
+        "title": "Argonaut Questionnaire Sampler",
+        "status": "draft",
+        //no items since initiating the adaptive questionnaire
+      ...
+      }
+    ]
+    },
+    //references the contained Questionnaire
+    "questionnaire": {
+      "reference": "#questionnaire-example-adaptive-sampler"
+    },
+    "status": "in-progress",
+   ...
+   //no items since is just getting started
+   }
+  }
+ ]
 }
 ~~~
 

@@ -89,7 +89,7 @@ The following Argonaut Questionnaire artifacts are used in this transaction:
 
 To initiate an  adaptive questionnaire:
 
-`POST ../Questionnaire/$next-q`
+`POST [base]/QuestionnaireResponse/[id]/$next-q`
 
 {% include examplebutton.html example="example-aq-initiate" b_title="Example: $next-q Operation Initiates Adaptive Questionnaire and Returns First Group Item" %}
 
@@ -118,7 +118,7 @@ The following Argonaut Questionnaire artifacts are used in this transaction:
 
 To initiate an  adaptive questionnaire:
 
-`POST ../Questionnaire/$next-q`
+`POST [base]/QuestionnaireResponse/[id]/$next-q`
 
 {% include examplebutton.html example="example-aq-next1" b_title="Example: $next-q Operation Returns Next Question" %}
 
@@ -144,7 +144,7 @@ The following Argonaut Questionnaire artifacts are used in this transaction:
 
 To initiate an  adaptive questionnaire:
 
-`POST ../Questionnaire/$next-q`
+`POST [base]/QuestionnaireResponse/[id]/$next-q`
 
 {% include examplebutton.html example="example-aq-done" b_title="Example: $next-q Operation Returns Completed Adaptive Questionnaire" %}
 

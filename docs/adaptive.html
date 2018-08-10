@@ -245,7 +245,7 @@
   <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
   <li><a href="#example-scenario" id="markdown-toc-example-scenario">Example Scenario</a></li>
   <li><a href="#workflow-steps" id="markdown-toc-workflow-steps">Workflow Steps</a>    <ul>
-      <li><a name="14831400-6cd8-4f7a-a427-0629215ded3f">​</a><a href="#adaptive-questionnaire-discovery" id="markdown-toc-adaptive-questionnaire-discovery">Adaptive Questionnaire Discovery</a></li>
+      <li><a name="0919f7e5-e158-4c37-97b5-d63ea976bb0a">​</a><a href="#adaptive-questionnaire-discovery" id="markdown-toc-adaptive-questionnaire-discovery">Adaptive Questionnaire Discovery</a></li>
       <li><a href="#initiate-adaptive-questionnaire" id="markdown-toc-initiate-adaptive-questionnaire">Initiate Adaptive Questionnaire</a></li>
       <li><a href="#get-next-question" id="markdown-toc-get-next-question">Get Next Question</a></li>
       <li><a href="#adaptive-questionnaire-is-complete" id="markdown-toc-adaptive-questionnaire-is-complete">Adaptive Questionnaire is Complete</a></li>
@@ -344,7 +344,7 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
 
 <p>To initiate an  adaptive questionnaire:</p>
 
-<p><code class="highlighter-rouge">POST ../Questionnaire/$next-q</code></p>
+<p><code class="highlighter-rouge">POST [base]/QuestionnaireResponse/[id]/$next-q</code></p>
 
 <p>
   <button data-target="#example-aq-initiate" data-toggle="collapse" aria-controls="collapseExample" aria-expanded="false" type="button" class="btn btn-info">
@@ -356,43 +356,52 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
   <div class="card card-body">
       <p><strong>request</strong></p>
 
-<p><code class="highlighter-rouge">POST ../Questionnaire/$next-q</code></p>
+<p><code class="highlighter-rouge">POST [base]/QuestionnaireResponse/questionnaire-example-adaptive-sampler/$next-q</code></p>
 
 <p><strong>payload</strong></p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"QuestionnaireResponse"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"questionnaireresponse-example-adaptive-sampler"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/aqr"</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-  </span><span class="err">//</span><span class="w"> </span><span class="err">contained</span><span class="w"> </span><span class="err">Questionnaire</span><span class="w">
-  </span><span class="nt">"contained"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parameters"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"next-question-example-initiate"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"parameter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Questionnaire"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"questionnaire-example-adaptive-sampler"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-          </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"</span><span class="w">
-        </span><span class="p">]</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Argonaut Questionnaire Sampler"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"draft"</span><span class="p">,</span><span class="w">
-      </span><span class="err">//no</span><span class="w"> </span><span class="err">items</span><span class="w"> </span><span class="err">since</span><span class="w"> </span><span class="err">initiating</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">adaptive</span><span class="w"> </span><span class="err">questionnaire</span><span class="w">
-    </span><span class="err">...</span><span class="w">
-    </span><span class="err">}</span><span class="w">
-  </span><span class="p">]</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="err">//references</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">contained</span><span class="w"> </span><span class="err">Questionnaire</span><span class="w">
-  </span><span class="nt">"questionnaire"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#questionnaire-example-adaptive-sampler"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"in-progress"</span><span class="p">,</span><span class="w">
-</span><span class="err">...</span><span class="w">
-</span><span class="err">//no</span><span class="w"> </span><span class="err">items</span><span class="w"> </span><span class="err">since</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">just</span><span class="w"> </span><span class="err">getting</span><span class="w"> </span><span class="err">started</span><span class="w">
-</span><span class="err">}</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qr-in"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"resource"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"QuestionnaireResponse"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"questionnaireresponse-example-adaptive-sampler"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/aqr"</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+    </span><span class="err">//</span><span class="w"> </span><span class="err">contained</span><span class="w"> </span><span class="err">Questionnaire</span><span class="w">
+    </span><span class="nt">"contained"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Questionnaire"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"questionnaire-example-adaptive-sampler"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Argonaut Questionnaire Sampler"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"draft"</span><span class="p">,</span><span class="w">
+        </span><span class="err">//no</span><span class="w"> </span><span class="err">items</span><span class="w"> </span><span class="err">since</span><span class="w"> </span><span class="err">initiating</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">adaptive</span><span class="w"> </span><span class="err">questionnaire</span><span class="w">
+      </span><span class="err">...</span><span class="w">
+      </span><span class="err">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="err">//references</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">contained</span><span class="w"> </span><span class="err">Questionnaire</span><span class="w">
+    </span><span class="nt">"questionnaire"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#questionnaire-example-adaptive-sampler"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"in-progress"</span><span class="p">,</span><span class="w">
+   </span><span class="err">...</span><span class="w">
+   </span><span class="err">//no</span><span class="w"> </span><span class="err">items</span><span class="w"> </span><span class="err">since</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">just</span><span class="w"> </span><span class="err">getting</span><span class="w"> </span><span class="err">started</span><span class="w">
+   </span><span class="err">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+ </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre>
 </div>
 
@@ -484,7 +493,7 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
 
 <p>To initiate an  adaptive questionnaire:</p>
 
-<p><code class="highlighter-rouge">POST ../Questionnaire/$next-q</code></p>
+<p><code class="highlighter-rouge">POST [base]/QuestionnaireResponse/[id]/$next-q</code></p>
 
 <p>
   <button data-target="#example-aq-next1" data-toggle="collapse" aria-controls="collapseExample" aria-expanded="false" type="button" class="btn btn-info">
@@ -496,74 +505,84 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
   <div class="card card-body">
       <p><strong>request</strong></p>
 
-<p><code class="highlighter-rouge">POST ../Questionnaire/$next-q</code></p>
+<p><code class="highlighter-rouge">POST [base]/QuestionnaireResponse/questionnaire-example-adaptive-sampler/$next-q</code></p>
 
 <p><strong>payload</strong></p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"QuestionnaireResponse"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"questionnaireresponse-example-adaptive-sampler"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/aqr"</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-  </span><span class="err">//</span><span class="w"> </span><span class="err">contained</span><span class="w"> </span><span class="err">Questionnaire</span><span class="w">
-  </span><span class="nt">"contained"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parameters"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"next-question-example-next1"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"parameter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Questionnaire"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"questionnaire-example-adaptive-sampler"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qr-in"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"resource"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"QuestionnaireResponse"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"questionnaireresponse-example-adaptive-sampler"</span><span class="p">,</span><span class="w">
       </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nt">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-          </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"</span><span class="w">
-        </span><span class="p">]</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="err">//the</span><span class="w"> </span><span class="err">'url'</span><span class="w"> </span><span class="err">element</span><span class="w"> </span><span class="err">identifies</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">adaptive</span><span class="w"> </span><span class="err">questionnaire</span><span class="w"> </span><span class="err">-</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">set</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">questions</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">particular</span><span class="w"> </span><span class="err">adaptive</span><span class="w"> </span><span class="err">questionnaire</span><span class="w">
-      </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Argonaut Questionnaire Sampler"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"draft"</span><span class="p">,</span><span class="w">
-      </span><span class="err">...</span><span class="w">
-      </span><span class="err">//first</span><span class="w"> </span><span class="err">item</span><span class="w"> </span><span class="err">group</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">display</span><span class="w"> </span><span class="err">only</span><span class="w">
-      </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g1"</span><span class="p">,</span><span class="w">
-        </span><span class="err">//</span><span class="w"> </span><span class="err">unique</span><span class="w"> </span><span class="err">url</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Server</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">identify</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">adaptive</span><span class="w"> </span><span class="err">questionnaire</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">processing</span><span class="w">  </span><span class="err">(figure</span><span class="w"> </span><span class="err">out</span><span class="w"> </span><span class="err">what</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">next</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">and/or</span><span class="w"> </span><span class="err">calculating</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">score)</span><span class="w"> </span><span class="err">this</span><span class="w"> </span><span class="err">could</span><span class="w"> </span><span class="err">also</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">GUID.</span><span class="w">
-        </span><span class="nt">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler#g1"</span><span class="w">
-        </span><span class="s2">"text"</span><span class="err">:</span><span class="w"> </span><span class="s2">"Header Text"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"group"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/aqr"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+      </span><span class="err">//</span><span class="w"> </span><span class="err">contained</span><span class="w"> </span><span class="err">Questionnaire</span><span class="w">
+      </span><span class="nt">"contained"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Questionnaire"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"questionnaire-example-adaptive-sampler"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+              </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="err">//the</span><span class="w"> </span><span class="err">'url'</span><span class="w"> </span><span class="err">element</span><span class="w"> </span><span class="err">identifies</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">adaptive</span><span class="w"> </span><span class="err">questionnaire</span><span class="w"> </span><span class="err">-</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">set</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">questions</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">particular</span><span class="w"> </span><span class="err">adaptive</span><span class="w"> </span><span class="err">questionnaire</span><span class="w">
+          </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Argonaut Questionnaire Sampler"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"draft"</span><span class="p">,</span><span class="w">
+          </span><span class="err">...</span><span class="w">
+          </span><span class="err">//first</span><span class="w"> </span><span class="err">item</span><span class="w"> </span><span class="err">group</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">display</span><span class="w"> </span><span class="err">only</span><span class="w">
+          </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
           </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g1.d"</span><span class="p">,</span><span class="w">
-            </span><span class="err">//</span><span class="w"> </span><span class="err">unique</span><span class="w"> </span><span class="err">url</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Server</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">identify</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">adaptive</span><span class="w"> </span><span class="err">questionnaire</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">processing</span><span class="w">  </span><span class="err">(figure</span><span class="w"> </span><span class="err">out</span><span class="w"> </span><span class="err">what</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">next</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">and/or</span><span class="w"> </span><span class="err">calculating</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">score)</span><span class="w">
-            </span><span class="nt">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler#g1.d"</span><span class="w">
-            </span><span class="s2">"text"</span><span class="err">:</span><span class="w"> </span><span class="s2">"The Argonaut Questionnaire Sampler is designed to show all the question types that can be used in the Argonaut Questionnaire Project:\n\n1 boolean\n2 decimal\n3 integer\n4 dateDate\n5 dateTime\n6 timeTime\n7 string\n8 textText\n9 urlUrl\n10 choice\n11 open-choice\n12 quantity\n"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"display"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+            </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g1"</span><span class="p">,</span><span class="w">
+            </span><span class="err">//</span><span class="w"> </span><span class="err">unique</span><span class="w"> </span><span class="err">url</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Server</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">identify</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">adaptive</span><span class="w"> </span><span class="err">questionnaire</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">processing</span><span class="w">  </span><span class="err">(figure</span><span class="w"> </span><span class="err">out</span><span class="w"> </span><span class="err">what</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">next</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">and/or</span><span class="w"> </span><span class="err">calculating</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">score)</span><span class="w"> </span><span class="err">this</span><span class="w"> </span><span class="err">could</span><span class="w"> </span><span class="err">also</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">GUID.</span><span class="w">
+            </span><span class="nt">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler#g1"</span><span class="w">
+            </span><span class="s2">"text"</span><span class="err">:</span><span class="w"> </span><span class="s2">"Header Text"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"group"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+              </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g1.d"</span><span class="p">,</span><span class="w">
+                </span><span class="err">//</span><span class="w"> </span><span class="err">unique</span><span class="w"> </span><span class="err">url</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Server</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">identify</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">adaptive</span><span class="w"> </span><span class="err">questionnaire</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">processing</span><span class="w">  </span><span class="err">(figure</span><span class="w"> </span><span class="err">out</span><span class="w"> </span><span class="err">what</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">next</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">and/or</span><span class="w"> </span><span class="err">calculating</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">score)</span><span class="w">
+                </span><span class="nt">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler#g1.d"</span><span class="w">
+                </span><span class="s2">"text"</span><span class="err">:</span><span class="w"> </span><span class="s2">"The Argonaut Questionnaire Sampler is designed to show all the question types that can be used in the Argonaut Questionnaire Project:\n\n1 boolean\n2 decimal\n3 integer\n4 dateDate\n5 dateTime\n6 timeTime\n7 string\n8 textText\n9 urlUrl\n10 choice\n11 open-choice\n12 quantity\n"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"display"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+              </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
           </span><span class="p">}</span><span class="w">
-        </span><span class="p">]</span><span class="w">
+         </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="err">//references</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">contained</span><span class="w"> </span><span class="err">Questionnaire</span><span class="w">
+      </span><span class="nt">"questionnaire"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#questionnaire-example-adaptive-sampler"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"in-progress"</span><span class="p">,</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+    </span><span class="err">//first</span><span class="w"> </span><span class="err">group</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">display</span><span class="w"> </span><span class="err">only</span><span class="w"> </span><span class="err">so</span><span class="w"> </span><span class="err">no</span><span class="w"> </span><span class="err">scoring</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="err">processing</span><span class="w"> </span><span class="err">by</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Server</span><span class="w">
+    </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g1"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g1.d"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+       </span><span class="p">]</span><span class="w">
       </span><span class="p">}</span><span class="w">
      </span><span class="p">]</span><span class="w">
     </span><span class="p">}</span><span class="w">
-  </span><span class="p">]</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="err">//references</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">contained</span><span class="w"> </span><span class="err">Questionnaire</span><span class="w">
-  </span><span class="nt">"questionnaire"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#questionnaire-example-adaptive-sampler"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"in-progress"</span><span class="p">,</span><span class="w">
-</span><span class="err">...</span><span class="w">
-</span><span class="err">//first</span><span class="w"> </span><span class="err">group</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">display</span><span class="w"> </span><span class="err">only</span><span class="w"> </span><span class="err">so</span><span class="w"> </span><span class="err">no</span><span class="w"> </span><span class="err">scoring</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="err">processing</span><span class="w"> </span><span class="err">by</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Server</span><span class="w">
-</span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-</span><span class="p">{</span><span class="w">
-  </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g1"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g1.d"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-   </span><span class="p">]</span><span class="w">
   </span><span class="p">}</span><span class="w">
  </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
+
 </span></code></pre>
 </div>
 
@@ -673,109 +692,118 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
   <div class="card card-body">
       <p><strong>request</strong></p>
 
-<p><code class="highlighter-rouge">POST ../Questionnaire/$next-q</code></p>
+<p><code class="highlighter-rouge">POST [base]/QuestionnaireResponse/questionnaire-example-adaptive-sampler/$next-q</code></p>
 
 <p><strong>payload</strong></p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"QuestionnaireResponse"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"questionnaireresponse-example-adaptive-sampler"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/aqr"</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-  </span><span class="err">//</span><span class="w"> </span><span class="err">contained</span><span class="w"> </span><span class="err">Questionnaire</span><span class="w">
-  </span><span class="nt">"contained"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parameters"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"next-question-example-next2"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"parameter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Questionnaire"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"questionnaire-example-adaptive-sampler"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qr-in"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"resource"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"QuestionnaireResponse"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"questionnaireresponse-example-adaptive-sampler"</span><span class="p">,</span><span class="w">
       </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nt">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-          </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"</span><span class="w">
-        </span><span class="p">]</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="err">//the</span><span class="w"> </span><span class="err">'url'</span><span class="w"> </span><span class="err">element</span><span class="w"> </span><span class="err">identifies</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">adaptive</span><span class="w"> </span><span class="err">questionnaire</span><span class="w"> </span><span class="err">-</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">set</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">questions</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">particular</span><span class="w"> </span><span class="err">adaptive</span><span class="w"> </span><span class="err">questionnaire</span><span class="w">
-      </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Argonaut Questionnaire Sampler"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"draft"</span><span class="p">,</span><span class="w">
-      </span><span class="err">...</span><span class="w">
-      </span><span class="err">//first</span><span class="w"> </span><span class="err">item</span><span class="w"> </span><span class="err">group</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">display</span><span class="w"> </span><span class="err">only</span><span class="w">
-      </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g1"</span><span class="p">,</span><span class="w">
-        </span><span class="err">//</span><span class="w"> </span><span class="err">unique</span><span class="w"> </span><span class="err">url</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Server</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">identify</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">adaptive</span><span class="w"> </span><span class="err">questionnaire</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">processing</span><span class="w">  </span><span class="err">(figure</span><span class="w"> </span><span class="err">out</span><span class="w"> </span><span class="err">what</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">next</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">and/or</span><span class="w"> </span><span class="err">calculating</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">score)</span><span class="w"> </span><span class="err">this</span><span class="w"> </span><span class="err">could</span><span class="w"> </span><span class="err">also</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">GUID.</span><span class="w">
-        </span><span class="nt">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler#g1"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Header Text"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"group"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/aqr"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+      </span><span class="err">//</span><span class="w"> </span><span class="err">contained</span><span class="w"> </span><span class="err">Questionnaire</span><span class="w">
+      </span><span class="nt">"contained"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Questionnaire"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"questionnaire-example-adaptive-sampler"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+              </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="err">//the</span><span class="w"> </span><span class="err">'url'</span><span class="w"> </span><span class="err">element</span><span class="w"> </span><span class="err">identifies</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">adaptive</span><span class="w"> </span><span class="err">questionnaire</span><span class="w"> </span><span class="err">-</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">set</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">questions</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">particular</span><span class="w"> </span><span class="err">adaptive</span><span class="w"> </span><span class="err">questionnaire</span><span class="w">
+          </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Argonaut Questionnaire Sampler"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"draft"</span><span class="p">,</span><span class="w">
+          </span><span class="err">...</span><span class="w">
+          </span><span class="err">//first</span><span class="w"> </span><span class="err">item</span><span class="w"> </span><span class="err">group</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">display</span><span class="w"> </span><span class="err">only</span><span class="w">
+          </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
           </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g1.d"</span><span class="p">,</span><span class="w">
-            </span><span class="err">//</span><span class="w"> </span><span class="err">unique</span><span class="w"> </span><span class="err">url</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Server</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">identify</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">adaptive</span><span class="w"> </span><span class="err">questionnaire</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">processing</span><span class="w">  </span><span class="err">(figure</span><span class="w"> </span><span class="err">out</span><span class="w"> </span><span class="err">what</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">next</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">and/or</span><span class="w"> </span><span class="err">calculating</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">score)</span><span class="w">
-            </span><span class="nt">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler#g1.d"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The Argonaut Questionnaire Sampler is designed to show all the question types that can be used in the Argonaut Questionnaire Project:\n\n1 boolean\n2 decimal\n3 integer\n4 dateDate\n5 dateTime\n6 timeTime\n7 string\n8 textText\n9 urlUrl\n10 choice\n11 open-choice\n12 quantity\n"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"display"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+            </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g1"</span><span class="p">,</span><span class="w">
+            </span><span class="err">//</span><span class="w"> </span><span class="err">unique</span><span class="w"> </span><span class="err">url</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Server</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">identify</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">adaptive</span><span class="w"> </span><span class="err">questionnaire</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">processing</span><span class="w">  </span><span class="err">(figure</span><span class="w"> </span><span class="err">out</span><span class="w"> </span><span class="err">what</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">next</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">and/or</span><span class="w"> </span><span class="err">calculating</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">score)</span><span class="w"> </span><span class="err">this</span><span class="w"> </span><span class="err">could</span><span class="w"> </span><span class="err">also</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">GUID.</span><span class="w">
+            </span><span class="nt">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler#g1"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Header Text"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"group"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+              </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g1.d"</span><span class="p">,</span><span class="w">
+                </span><span class="err">//</span><span class="w"> </span><span class="err">unique</span><span class="w"> </span><span class="err">url</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Server</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">identify</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">adaptive</span><span class="w"> </span><span class="err">questionnaire</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">processing</span><span class="w">  </span><span class="err">(figure</span><span class="w"> </span><span class="err">out</span><span class="w"> </span><span class="err">what</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">next</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">and/or</span><span class="w"> </span><span class="err">calculating</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">score)</span><span class="w">
+                </span><span class="nt">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler#g1.d"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The Argonaut Questionnaire Sampler is designed to show all the question types that can be used in the Argonaut Questionnaire Project:\n\n1 boolean\n2 decimal\n3 integer\n4 dateDate\n5 dateTime\n6 timeTime\n7 string\n8 textText\n9 urlUrl\n10 choice\n11 open-choice\n12 quantity\n"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"display"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+              </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="err">//second</span><span class="w"> </span><span class="err">item</span><span class="w"> </span><span class="err">group</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">question</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g2"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler#g2"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"group"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+              </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                  </span><span class="p">{</span><span class="w">
+                    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"valueDecimal"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="w">
+                  </span><span class="p">}</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g2.q1"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler#g2.q1"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Check the box if the following statement is true.  The average air speed velocity of a laden European swallow is greater than a laden African swallow."</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"boolean"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"repeats"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+              </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
           </span><span class="p">}</span><span class="w">
-        </span><span class="p">]</span><span class="w">
+         </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
       </span><span class="p">},</span><span class="w">
-      </span><span class="err">//second</span><span class="w"> </span><span class="err">item</span><span class="w"> </span><span class="err">group</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">question</span><span class="w">
+      </span><span class="err">//references</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">contained</span><span class="w"> </span><span class="err">Questionnaire</span><span class="w">
+      </span><span class="nt">"questionnaire"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#questionnaire-example-adaptive-sampler"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"in-progress"</span><span class="p">,</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+    </span><span class="err">//first</span><span class="w"> </span><span class="err">group</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">display</span><span class="w"> </span><span class="err">only</span><span class="w"> </span><span class="err">so</span><span class="w"> </span><span class="err">no</span><span class="w"> </span><span class="err">scoring</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="err">processing</span><span class="w"> </span><span class="err">by</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Server</span><span class="w">
+    </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g1"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g1.d"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+       </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="err">//second</span><span class="w"> </span><span class="err">group</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">question-answer</span><span class="w"> </span><span class="err">pair</span><span class="w"> </span><span class="err">added</span><span class="w"> </span><span class="err">by</span><span class="w"> </span><span class="err">client</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">processed</span><span class="w"> </span><span class="err">by</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Server</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">determine</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">next</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">score</span><span class="w">
       </span><span class="p">{</span><span class="w">
         </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g2"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler#g2"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"group"</span><span class="p">,</span><span class="w">
         </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
           </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-              </span><span class="p">{</span><span class="w">
-                </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score"</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"valueDecimal"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="w">
-              </span><span class="p">}</span><span class="w">
-            </span><span class="p">],</span><span class="w">
             </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g2.q1"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler#g2.q1"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Check the box if the following statement is true.  The average air speed velocity of a laden European swallow is greater than a laden African swallow."</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"boolean"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"repeats"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+            </span><span class="nt">"answer"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+              </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"valueBoolean"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+              </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
           </span><span class="p">}</span><span class="w">
         </span><span class="p">]</span><span class="w">
       </span><span class="p">}</span><span class="w">
+
      </span><span class="p">]</span><span class="w">
     </span><span class="p">}</span><span class="w">
-  </span><span class="p">]</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="err">//references</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">contained</span><span class="w"> </span><span class="err">Questionnaire</span><span class="w">
-  </span><span class="nt">"questionnaire"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#questionnaire-example-adaptive-sampler"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"in-progress"</span><span class="p">,</span><span class="w">
-</span><span class="err">...</span><span class="w">
-</span><span class="err">//first</span><span class="w"> </span><span class="err">group</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">display</span><span class="w"> </span><span class="err">only</span><span class="w"> </span><span class="err">so</span><span class="w"> </span><span class="err">no</span><span class="w"> </span><span class="err">scoring</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="err">processing</span><span class="w"> </span><span class="err">by</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Server</span><span class="w">
-</span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-</span><span class="p">{</span><span class="w">
-  </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g1"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g1.d"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-   </span><span class="p">]</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="err">//second</span><span class="w"> </span><span class="err">group</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">question-answer</span><span class="w"> </span><span class="err">pair</span><span class="w"> </span><span class="err">added</span><span class="w"> </span><span class="err">by</span><span class="w"> </span><span class="err">client</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">processed</span><span class="w"> </span><span class="err">by</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Server</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">determine</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">next</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">score</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g2"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g2.q1"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"answer"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-          </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"valueBoolean"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-          </span><span class="p">}</span><span class="w">
-        </span><span class="p">]</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">]</span><span class="w">
   </span><span class="p">}</span><span class="w">
-
  </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -943,7 +971,7 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
 
 <p>To initiate an  adaptive questionnaire:</p>
 
-<p><code class="highlighter-rouge">POST ../Questionnaire/$next-q</code></p>
+<p><code class="highlighter-rouge">POST [base]/QuestionnaireResponse/[id]/$next-q</code></p>
 
 <p>
   <button data-target="#example-aq-done" data-toggle="collapse" aria-controls="collapseExample" aria-expanded="false" type="button" class="btn btn-info">
@@ -955,155 +983,164 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
   <div class="card card-body">
       <p><strong>request</strong></p>
 
-<p><code class="highlighter-rouge">POST ../Questionnaire/$next-q</code></p>
+<p><code class="highlighter-rouge">POST [base]/QuestionnaireResponse/questionnaire-example-adaptive-sampler/$next-q</code></p>
 
 <p><strong>payload</strong></p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"QuestionnaireResponse"</span><span class="p">,</span><span class="w">
-  </span><span class="err">//</span><span class="w"> </span><span class="err">considering</span><span class="w"> </span><span class="err">using</span><span class="w"> </span><span class="err">this</span><span class="w"> </span><span class="err">extension</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">QR</span><span class="w"> </span><span class="err">as</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">calculated</span><span class="w"> </span><span class="err">cumualative</span><span class="w"> </span><span class="err">score</span><span class="w">
-  </span><span class="nt">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parameters"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"next-question-example-done"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"parameter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"valueDecimal"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">],</span><span class="w">
-  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"questionnaireresponse-example-adaptive-sampler"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/aqr"</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-  </span><span class="err">//</span><span class="w"> </span><span class="err">contained</span><span class="w"> </span><span class="err">Questionnaire</span><span class="w">
-  </span><span class="nt">"contained"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Questionnaire"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"questionnaire-example-adaptive-sampler"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qr-in"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"resource"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"QuestionnaireResponse"</span><span class="p">,</span><span class="w">
+      </span><span class="err">//</span><span class="w"> </span><span class="err">considering</span><span class="w"> </span><span class="err">using</span><span class="w"> </span><span class="err">this</span><span class="w"> </span><span class="err">extension</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">QR</span><span class="w"> </span><span class="err">as</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">calculated</span><span class="w"> </span><span class="err">cumualative</span><span class="w"> </span><span class="err">score</span><span class="w">
+      </span><span class="nt">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"valueDecimal"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"questionnaireresponse-example-adaptive-sampler"</span><span class="p">,</span><span class="w">
       </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nt">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-          </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"</span><span class="w">
-        </span><span class="p">]</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="err">//the</span><span class="w"> </span><span class="err">'url'</span><span class="w"> </span><span class="err">element</span><span class="w"> </span><span class="err">identifies</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">adaptive</span><span class="w"> </span><span class="err">questionnaire</span><span class="w"> </span><span class="err">-</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">set</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">questions</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">particular</span><span class="w"> </span><span class="err">adaptive</span><span class="w"> </span><span class="err">questionnaire</span><span class="w">
-      </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Argonaut Questionnaire Sampler"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"draft"</span><span class="p">,</span><span class="w">
-      </span><span class="err">...</span><span class="w">
-      </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g1"</span><span class="p">,</span><span class="w">
-        </span><span class="err">//</span><span class="w"> </span><span class="err">unique</span><span class="w"> </span><span class="err">url</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Server</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">identify</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">adaptive</span><span class="w"> </span><span class="err">questionnaire</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">processing</span><span class="w">  </span><span class="err">(figure</span><span class="w"> </span><span class="err">out</span><span class="w"> </span><span class="err">what</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">next</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">and/or</span><span class="w"> </span><span class="err">calculating</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">score)</span><span class="w"> </span><span class="err">this</span><span class="w"> </span><span class="err">could</span><span class="w"> </span><span class="err">also</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">GUID.</span><span class="w">
-        </span><span class="nt">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler#g1"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Header Text"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"group"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/aqr"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+      </span><span class="err">//</span><span class="w"> </span><span class="err">contained</span><span class="w"> </span><span class="err">Questionnaire</span><span class="w">
+      </span><span class="nt">"contained"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Questionnaire"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"questionnaire-example-adaptive-sampler"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+              </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="err">//the</span><span class="w"> </span><span class="err">'url'</span><span class="w"> </span><span class="err">element</span><span class="w"> </span><span class="err">identifies</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">adaptive</span><span class="w"> </span><span class="err">questionnaire</span><span class="w"> </span><span class="err">-</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">set</span><span class="w"> </span><span class="err">of</span><span class="w"> </span><span class="err">questions</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">particular</span><span class="w"> </span><span class="err">adaptive</span><span class="w"> </span><span class="err">questionnaire</span><span class="w">
+          </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Argonaut Questionnaire Sampler"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"draft"</span><span class="p">,</span><span class="w">
+          </span><span class="err">...</span><span class="w">
+          </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
           </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g1.d"</span><span class="p">,</span><span class="w">
-            </span><span class="err">//</span><span class="w"> </span><span class="err">unique</span><span class="w"> </span><span class="err">url</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Server</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">identify</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">adaptive</span><span class="w"> </span><span class="err">questionnaire</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">processing</span><span class="w">  </span><span class="err">(figure</span><span class="w"> </span><span class="err">out</span><span class="w"> </span><span class="err">what</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">next</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">and/or</span><span class="w"> </span><span class="err">calculating</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">score)</span><span class="w">
-            </span><span class="nt">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler#g1.d"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The Argonaut Questionnaire Sampler is designed to show all the question types that can be used in the Argonaut Questionnaire Project:\n\n1 boolean\n2 decimal\n3 integer\n4 dateDate\n5 dateTime\n6 timeTime\n7 string\n8 textText\n9 urlUrl\n10 choice\n11 open-choice\n12 quantity\n"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"display"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-          </span><span class="p">}</span><span class="w">
-        </span><span class="p">]</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g2"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler#g2"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"group"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-          </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-              </span><span class="p">{</span><span class="w">
-                </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score"</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"valueDecimal"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="w">
-              </span><span class="p">}</span><span class="w">
-            </span><span class="p">],</span><span class="w">
-            </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g2.q1"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler#g2.q1"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Check the box if the following statement is true.  The average air speed velocity of a laden European swallow is greater than a laden African swallow."</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"boolean"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g1"</span><span class="p">,</span><span class="w">
+            </span><span class="err">//</span><span class="w"> </span><span class="err">unique</span><span class="w"> </span><span class="err">url</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Server</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">identify</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">adaptive</span><span class="w"> </span><span class="err">questionnaire</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">processing</span><span class="w">  </span><span class="err">(figure</span><span class="w"> </span><span class="err">out</span><span class="w"> </span><span class="err">what</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">next</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">and/or</span><span class="w"> </span><span class="err">calculating</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">score)</span><span class="w"> </span><span class="err">this</span><span class="w"> </span><span class="err">could</span><span class="w"> </span><span class="err">also</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">GUID.</span><span class="w">
+            </span><span class="nt">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler#g1"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Header Text"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"group"</span><span class="p">,</span><span class="w">
             </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"repeats"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+            </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+              </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g1.d"</span><span class="p">,</span><span class="w">
+                </span><span class="err">//</span><span class="w"> </span><span class="err">unique</span><span class="w"> </span><span class="err">url</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Server</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">identify</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">adaptive</span><span class="w"> </span><span class="err">questionnaire</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">processing</span><span class="w">  </span><span class="err">(figure</span><span class="w"> </span><span class="err">out</span><span class="w"> </span><span class="err">what</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">next</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">and/or</span><span class="w"> </span><span class="err">calculating</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">score)</span><span class="w">
+                </span><span class="nt">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler#g1.d"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The Argonaut Questionnaire Sampler is designed to show all the question types that can be used in the Argonaut Questionnaire Project:\n\n1 boolean\n2 decimal\n3 integer\n4 dateDate\n5 dateTime\n6 timeTime\n7 string\n8 textText\n9 urlUrl\n10 choice\n11 open-choice\n12 quantity\n"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"display"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+              </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g2"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler#g2"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"group"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+              </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                  </span><span class="p">{</span><span class="w">
+                    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"valueDecimal"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="w">
+                  </span><span class="p">}</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g2.q1"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler#g2.q1"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Check the box if the following statement is true.  The average air speed velocity of a laden European swallow is greater than a laden African swallow."</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"boolean"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"repeats"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+              </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="err">//</span><span class="w"> </span><span class="err">third</span><span class="w"> </span><span class="err">item</span><span class="w"> </span><span class="err">group</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">current</span><span class="w"> </span><span class="err">question</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g3"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"group"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler#g3"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+              </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                  </span><span class="p">{</span><span class="w">
+                    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score"</span><span class="p">,</span><span class="w">
+                    </span><span class="nt">"valueDecimal"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
+                  </span><span class="p">}</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g3.q1"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler#g3"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"What is the average air speed velocity of a laden swallow in m/sec?"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"decimal"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"repeats"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+              </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+         </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="err">//references</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">contained</span><span class="w"> </span><span class="err">Questionnaire</span><span class="w">
+      </span><span class="nt">"questionnaire"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#questionnaire-example-adaptive-sampler"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"in-progress"</span><span class="p">,</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+    </span><span class="err">//first</span><span class="w"> </span><span class="err">group</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">display</span><span class="w"> </span><span class="err">only</span><span class="w"> </span><span class="err">so</span><span class="w"> </span><span class="err">no</span><span class="w"> </span><span class="err">scoring</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="err">processing</span><span class="w"> </span><span class="err">by</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Server</span><span class="w">
+    </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g1"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g1.d"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+       </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="err">//</span><span class="w"> </span><span class="err">considering</span><span class="w"> </span><span class="err">using</span><span class="w"> </span><span class="err">this</span><span class="w"> </span><span class="err">extension</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">QR</span><span class="w"> </span><span class="err">as</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">calculated</span><span class="w"> </span><span class="err">score</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Group</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="err">item.</span><span class="w">
+        </span><span class="nt">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"valueDecimal"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+        </span><span class="s2">"linkId"</span><span class="err">:</span><span class="w"> </span><span class="s2">"g2"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g2.q1"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"answer"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+              </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"valueBoolean"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+              </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
           </span><span class="p">}</span><span class="w">
         </span><span class="p">]</span><span class="w">
       </span><span class="p">},</span><span class="w">
-      </span><span class="err">//</span><span class="w"> </span><span class="err">third</span><span class="w"> </span><span class="err">item</span><span class="w"> </span><span class="err">group</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">current</span><span class="w"> </span><span class="err">question</span><span class="w">
+      </span><span class="err">}</span><span class="p">,</span><span class="w">
+      </span><span class="err">//third</span><span class="w"> </span><span class="err">group</span><span class="w"> </span><span class="err">question-answer</span><span class="w"> </span><span class="err">pair</span><span class="w"> </span><span class="err">updated</span><span class="w"> </span><span class="err">by</span><span class="w"> </span><span class="err">client</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">processed</span><span class="w"> </span><span class="err">by</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Server</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">determine</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">next</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">score</span><span class="w">
       </span><span class="p">{</span><span class="w">
         </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g3"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"group"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler#g3"</span><span class="p">,</span><span class="w">
         </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
           </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-              </span><span class="p">{</span><span class="w">
-                </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score"</span><span class="p">,</span><span class="w">
-                </span><span class="nt">"valueDecimal"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-              </span><span class="p">}</span><span class="w">
-            </span><span class="p">],</span><span class="w">
             </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g3.q1"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"definition"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler#g3"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"What is the average air speed velocity of a laden swallow in m/sec?"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"decimal"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"repeats"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+            </span><span class="nt">"answer"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+              </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"valueDecimal"</span><span class="p">:</span><span class="w"> </span><span class="mf">12.38</span><span class="w">
+              </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
           </span><span class="p">}</span><span class="w">
         </span><span class="p">]</span><span class="w">
       </span><span class="p">}</span><span class="w">
      </span><span class="p">]</span><span class="w">
     </span><span class="p">}</span><span class="w">
-  </span><span class="p">]</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="err">//references</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">contained</span><span class="w"> </span><span class="err">Questionnaire</span><span class="w">
-  </span><span class="nt">"questionnaire"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#questionnaire-example-adaptive-sampler"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"in-progress"</span><span class="p">,</span><span class="w">
-</span><span class="err">...</span><span class="w">
-</span><span class="err">//first</span><span class="w"> </span><span class="err">group</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">display</span><span class="w"> </span><span class="err">only</span><span class="w"> </span><span class="err">so</span><span class="w"> </span><span class="err">no</span><span class="w"> </span><span class="err">scoring</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="err">processing</span><span class="w"> </span><span class="err">by</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Server</span><span class="w">
-</span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-</span><span class="p">{</span><span class="w">
-  </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g1"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g1.d"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-   </span><span class="p">]</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="err">//</span><span class="w"> </span><span class="err">considering</span><span class="w"> </span><span class="err">using</span><span class="w"> </span><span class="err">this</span><span class="w"> </span><span class="err">extension</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">QR</span><span class="w"> </span><span class="err">as</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">calculated</span><span class="w"> </span><span class="err">score</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Group</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="err">item.</span><span class="w">
-    </span><span class="nt">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"valueDecimal"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-      </span><span class="p">]</span><span class="w">
-    </span><span class="s2">"linkId"</span><span class="err">:</span><span class="w"> </span><span class="s2">"g2"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g2.q1"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"answer"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-          </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"valueBoolean"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-          </span><span class="p">}</span><span class="w">
-        </span><span class="p">]</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">]</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="err">}</span><span class="p">,</span><span class="w">
-  </span><span class="err">//third</span><span class="w"> </span><span class="err">group</span><span class="w"> </span><span class="err">question-answer</span><span class="w"> </span><span class="err">pair</span><span class="w"> </span><span class="err">updated</span><span class="w"> </span><span class="err">by</span><span class="w"> </span><span class="err">client</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">processed</span><span class="w"> </span><span class="err">by</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Server</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">determine</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">next</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">score</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g3"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g3.q1"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"answer"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-          </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"valueDecimal"</span><span class="p">:</span><span class="w"> </span><span class="mf">12.38</span><span class="w">
-          </span><span class="p">}</span><span class="w">
-        </span><span class="p">]</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">]</span><span class="w">
   </span><span class="p">}</span><span class="w">
  </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -1313,7 +1350,7 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
   <div class="container">    <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Aug 9, 2018 17:52-0700. | <a rel="license" no-external="true" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
+            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Aug 9, 2018 19:35-0700. | <a rel="license" no-external="true" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
         
         </p>
    </div>    <!-- /inner-wrapper -->
