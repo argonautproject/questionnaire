@@ -21,7 +21,7 @@ The Argonaut Questionnaire Implementation Guide defines a series of interactions
 - Logic defined external to Questionnaire
 - Iteratively submit response to API (FHIR operations)
 - Locally Questionnaire/QuestionnaireResponse updated on the fly
-- Record total score as an Observation
+- Record total score as an Observation or a part of QuestionnaireResponse **Discuss**
 
 <!--
 Demonstration by Raheel Sayeed (Smart on FHIR Post-Doc)
@@ -48,21 +48,37 @@ This simple scenario serves as an effective means to describe the Argonaut Quest
   - Third Party (Smart) App too.
 - Adaptive Questionnaire Service is a “Black Box”:
   - Contains logic for determination of next question and scoring
+  - Transactions are Stateless:
+    - Client constructs a record of transaction which is passed to Server
+    - Server adds to record and passed back to Client
+    - Client and Server free of keeping track of session
+    - A Previously disrupted session can be restored if session token expires.
 - Client makes RESTful FHIR transactions on Server using a *FHIR operation*
-- Transactions are Stateless:
-  - Client constructs a record of transaction which is passed to Server
-  - Server adds to record and passed back to Client
-  - Client and Server free of keeping track of session
-  - A Previously disrupted session can be restored if session token expires.
-- If Questionnaire timed out - then whole session needs to be restarted
-- Use QuestionnaireResponse with contained Questionnaire and Parameters resources to capture the data needed between the Client and Server
-- Assume *each* contained Questionnaire.item SHALL be represented by a:
-    - *a single*  item group of:
+- Use QuestionnaireResponse with contained Questionnaire as Parameters to capture the data needed between the Client and Server
+- If Questionnaire timed out
+   - Response can change over time and the Form is not valid
+   - the whole session needs to be restarted
+   - timing extensions - duration/time-limit?
+      - either Client or Server could validate if within time limit
+      - (OperationOutcome defined error code) **Discusse**
+- Use QuestionnaireResponse with contained Questionnaire as Parameters to capture the data needed between the Client and Server
+- Operationally need to keep assessment short.
+  - e.g.,PROMIS up to 12 transactions  (on average 4-12))
+- Calculated Scores as `readOnly` questions with `initial.valueQuantity` that cannot be changed
+  - can be marked as hidden using the questionnair-hidden extension to prevent end user from viewing.
+
+**Issues for discussion
+1, Limit what is returned? limit item group nesting?
+  *each* contained Questionnaire.item could be a:
       - *a single* question ('what is the capital of Assyria?') or
       - *a single* display  ('Answer these questions three!!') or
-      - *multiple* questions  ( 'what is you favorite color?', 'what is the capital of Assyria?', 'what is average flight speed of a laden swallow?')
-      - *a single* display + *multiple* questions ('Answer these questions three!!', 'what is you favorite color?', 'what is the capital of Assyria?', 'what is average flight speed of a laden swallow?')
+      - *a single* item group of *multiple* display + *multiple* questions  ( 'what is you favorite color?', 'what is the capital of Assyria?', 'what is average flight speed of a laden swallow?')
+      - *a single* item group of: *multiple* item groups ('Answer these questions three!!', 'what is you favorite color?', 'what is the capital of Assyria?', 'what is average flight speed of a laden swallow?')
+1.  Scores needed only at end or after each question?  cumulative vs for each q-a pair.**
+
 <!-- Discovery of Adaptive Questionnaire --->
+
+
 
 ### Adaptive Questionnaire Discovery
 
@@ -102,7 +118,6 @@ Client renders/stores/processes the item and gets the next group item by POSTing
 
 The Server identifies the adaptive questionnaire group item by the contained Questionnaire `definiton` element may add intermediate and cumulative score to the QR based on the preceding item(s) and updates the contained Questionnaire with the next question.  This process step is repeated until the adaptive questionnaire is done or the Questionaire has timed out (footnote?) or another error has occured.
 
-* for discussion extending the score extension to the QR to represent intermediate, and cumulative and total calculated scores  (as decimal only?)*
 
 #### APIs
 {:.no_toc}
@@ -151,7 +166,7 @@ To initiate an  adaptive questionnaire:
 
 ###  QuestionnaireResponse and Scoring
 
-When the adaptive questionnaire is complete, the client processes the QuestionnaireResponse with a contained Questionnaire based on the questions it was returned by the service.  The client may also create Observation(s) to represent the cumulative or intermediate scores.
+When the adaptive questionnaire is complete, the client processes the QuestionnaireResponse with a contained Questionnaire based on the questions it was returned by the service.  The client may represent the cumulative or intermediate scores as answers within the QuestionnaireResponse or as separate Observations.
 
 <br />
 

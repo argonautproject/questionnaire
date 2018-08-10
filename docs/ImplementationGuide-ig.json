@@ -225,6 +225,18 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-aq.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition/aq"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "StructureDefinition-qr.html"
             }
           ],
@@ -369,6 +381,24 @@
           "name": "Argonaut_QR_Profile",
           "sourceReference": {
             "reference": "StructureDefinition/qr"
+          }
+        }
+      ]
+    },
+    {
+      "id": "profile-derived-q-spreadsheet.xml",
+      "name": "Argonaut_Adaptive_Q_Profile",
+      "resource": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-aq.html"
+            }
+          ],
+          "name": "Argonaut_Adaptive_Q_Profile",
+          "sourceReference": {
+            "reference": "StructureDefinition/aq"
           }
         }
       ]

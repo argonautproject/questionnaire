@@ -245,7 +245,7 @@
   <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
   <li><a href="#example-scenario" id="markdown-toc-example-scenario">Example Scenario</a></li>
   <li><a href="#workflow-steps" id="markdown-toc-workflow-steps">Workflow Steps</a>    <ul>
-      <li><a name="0919f7e5-e158-4c37-97b5-d63ea976bb0a">​</a><a href="#adaptive-questionnaire-discovery" id="markdown-toc-adaptive-questionnaire-discovery">Adaptive Questionnaire Discovery</a></li>
+      <li><a name="1e5a60db-7170-4e9b-9fd3-54f252961830">​</a><a href="#adaptive-questionnaire-discovery" id="markdown-toc-adaptive-questionnaire-discovery">Adaptive Questionnaire Discovery</a></li>
       <li><a href="#initiate-adaptive-questionnaire" id="markdown-toc-initiate-adaptive-questionnaire">Initiate Adaptive Questionnaire</a></li>
       <li><a href="#get-next-question" id="markdown-toc-get-next-question">Get Next Question</a></li>
       <li><a href="#adaptive-questionnaire-is-complete" id="markdown-toc-adaptive-questionnaire-is-complete">Adaptive Questionnaire is Complete</a></li>
@@ -264,7 +264,7 @@
   <li>Logic defined external to Questionnaire</li>
   <li>Iteratively submit response to API (FHIR operations)</li>
   <li>Locally Questionnaire/QuestionnaireResponse updated on the fly</li>
-  <li>Record total score as an Observation</li>
+  <li>Record total score as an Observation or a part of QuestionnaireResponse <strong>Discuss</strong></li>
 </ul>
 
   <!-- Demonstration by Raheel Sayeed (Smart on FHIR Post-Doc)
@@ -293,33 +293,53 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
   <li>Adaptive Questionnaire Service is a “Black Box”:
     <ul>
       <li>Contains logic for determination of next question and scoring</li>
-    </ul>
-  </li>
-  <li>Client makes RESTful FHIR transactions on Server using a <em>FHIR operation</em></li>
-  <li>Transactions are Stateless:
-    <ul>
-      <li>Client constructs a record of transaction which is passed to Server</li>
-      <li>Server adds to record and passed back to Client</li>
-      <li>Client and Server free of keeping track of session</li>
-      <li>A Previously disrupted session can be restored if session token expires.</li>
-    </ul>
-  </li>
-  <li>If Questionnaire timed out - then whole session needs to be restarted</li>
-  <li>Use QuestionnaireResponse with contained Questionnaire and Parameters resources to capture the data needed between the Client and Server</li>
-  <li>Assume <em>each</em> contained Questionnaire.item SHALL be represented by a:
-    <ul>
-      <li><em>a single</em>  item group of:
+      <li>Transactions are Stateless:
         <ul>
-          <li><em>a single</em> question (‘what is the capital of Assyria?’) or</li>
-          <li><em>a single</em> display  (‘Answer these questions three!!’) or</li>
-          <li><em>multiple</em> questions  ( ‘what is you favorite color?’, ‘what is the capital of Assyria?’, ‘what is average flight speed of a laden swallow?’)</li>
-          <li><em>a single</em> display + <em>multiple</em> questions (‘Answer these questions three!!’, ‘what is you favorite color?’, ‘what is the capital of Assyria?’, ‘what is average flight speed of a laden swallow?’)
-  <!-- Discovery of Adaptive Questionnaire ---></li>
+          <li>Client constructs a record of transaction which is passed to Server</li>
+          <li>Server adds to record and passed back to Client</li>
+          <li>Client and Server free of keeping track of session</li>
+          <li>A Previously disrupted session can be restored if session token expires.</li>
         </ul>
       </li>
     </ul>
   </li>
+  <li>Client makes RESTful FHIR transactions on Server using a <em>FHIR operation</em></li>
+  <li>Use QuestionnaireResponse with contained Questionnaire as Parameters to capture the data needed between the Client and Server</li>
+  <li>If Questionnaire timed out
+    <ul>
+      <li>Response can change over time and the Form is not valid</li>
+      <li>the whole session needs to be restarted</li>
+      <li>timing extensions - duration/time-limit?
+        <ul>
+          <li>either Client or Server could validate if within time limit</li>
+          <li>(OperationOutcome defined error code) <strong>Discusse</strong></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Use QuestionnaireResponse with contained Questionnaire as Parameters to capture the data needed between the Client and Server</li>
+  <li>Operationally need to keep assessment short.
+    <ul>
+      <li>e.g.,PROMIS up to 12 transactions  (on average 4-12))</li>
+    </ul>
+  </li>
+  <li>Calculated Scores as <code class="highlighter-rouge">readOnly</code> questions with <code class="highlighter-rouge">initial.valueQuantity</code> that cannot be changed
+    <ul>
+      <li>can be marked as hidden using the questionnair-hidden extension to prevent end user from viewing.</li>
+    </ul>
+  </li>
 </ul>
+
+<p><strong>Issues for discussion
+1, Limit what is returned? limit item group nesting?
+  <em>each</em> contained Questionnaire.item could be a:
+      - <em>a single</em> question (‘what is the capital of Assyria?’) or
+      - <em>a single</em> display  (‘Answer these questions three!!’) or
+      - <em>a single</em> item group of <em>multiple</em> display + <em>multiple</em> questions  ( ‘what is you favorite color?’, ‘what is the capital of Assyria?’, ‘what is average flight speed of a laden swallow?’)
+      - <em>a single</em> item group of: <em>multiple</em> item groups (‘Answer these questions three!!’, ‘what is you favorite color?’, ‘what is the capital of Assyria?’, ‘what is average flight speed of a laden swallow?’)
+1.  Scores needed only at end or after each question?  cumulative vs for each q-a pair.</strong></p>
+
+  <!-- Discovery of Adaptive Questionnaire --->
 
 <h3 id="adaptive-questionnaire-discovery">Adaptive Questionnaire Discovery</h3>
 
@@ -475,10 +495,6 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
 <p>Client renders/stores/processes the item and gets the next group item by POSTing the operation $next-q to the service Questionnaire instance endpoint and supplying a1 in the QR and q1 in the contained Q.  As result of the operation, the Server updates the QR and returns it to the Client.</p>
 
 <p>The Server identifies the adaptive questionnaire group item by the contained Questionnaire <code class="highlighter-rouge">definiton</code> element may add intermediate and cumulative score to the QR based on the preceding item(s) and updates the contained Questionnaire with the next question.  This process step is repeated until the adaptive questionnaire is done or the Questionaire has timed out (footnote?) or another error has occured.</p>
-
-<ul>
-  <li>for discussion extending the score extension to the QR to represent intermediate, and cumulative and total calculated scores  (as decimal only?)*</li>
-</ul>
 
 <h4 id="apis-1" class="no_toc">APIs</h4>
 
@@ -786,7 +802,7 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
         </span><span class="p">}</span><span class="w">
        </span><span class="p">]</span><span class="w">
       </span><span class="p">},</span><span class="w">
-      </span><span class="err">//second</span><span class="w"> </span><span class="err">group</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">question-answer</span><span class="w"> </span><span class="err">pair</span><span class="w"> </span><span class="err">added</span><span class="w"> </span><span class="err">by</span><span class="w"> </span><span class="err">client</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">processed</span><span class="w"> </span><span class="err">by</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Server</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">determine</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">next</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">score</span><span class="w">
+      </span><span class="err">//second</span><span class="w"> </span><span class="err">group</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">question-answer</span><span class="w"> </span><span class="err">pair</span><span class="w"> </span><span class="err">added</span><span class="w"> </span><span class="err">by</span><span class="w"> </span><span class="err">client</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">be</span><span class="w"> </span><span class="err">processed</span><span class="w"> </span><span class="err">by</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Server</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">determine</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">next</span><span class="w"> </span><span class="err">question</span><span class="w">
       </span><span class="p">{</span><span class="w">
         </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g2"</span><span class="p">,</span><span class="w">
         </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -813,13 +829,6 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"QuestionnaireResponse"</span><span class="p">,</span><span class="w">
-  </span><span class="err">//</span><span class="w"> </span><span class="err">considering</span><span class="w"> </span><span class="err">using</span><span class="w"> </span><span class="err">this</span><span class="w"> </span><span class="err">extension</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">QR</span><span class="w"> </span><span class="err">as</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">calculated</span><span class="w"> </span><span class="err">cumualative</span><span class="w"> </span><span class="err">score</span><span class="w">
-  </span><span class="nt">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"valueDecimal"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">],</span><span class="w">
   </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"questionnaireresponse-example-adaptive-sampler"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -922,15 +931,8 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
     </span><span class="p">}</span><span class="w">
    </span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="err">//second</span><span class="w"> </span><span class="err">group</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">question-answer</span><span class="w"> </span><span class="err">pair</span><span class="w"> </span><span class="err">so</span><span class="w"> </span><span class="err">processed</span><span class="w"> </span><span class="err">by</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Server</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">determine</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">next</span><span class="w"> </span><span class="err">question</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">score</span><span class="w">
+  </span><span class="err">//second</span><span class="w"> </span><span class="err">group</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">question-answer</span><span class="w"> </span><span class="err">pair</span><span class="w"> </span><span class="err">so</span><span class="w"> </span><span class="err">processed</span><span class="w"> </span><span class="err">by</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Server</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">determine</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">next</span><span class="w"> </span><span class="err">question</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="err">//</span><span class="w"> </span><span class="err">considering</span><span class="w"> </span><span class="err">using</span><span class="w"> </span><span class="err">this</span><span class="w"> </span><span class="err">extension</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">QR</span><span class="w"> </span><span class="err">as</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">calculated</span><span class="w"> </span><span class="err">score</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Group</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="err">item.</span><span class="w">
-    </span><span class="nt">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"valueDecimal"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-      </span><span class="p">],</span><span class="w">
     </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g2"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="p">{</span><span class="w">
@@ -995,13 +997,6 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
     </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"qr-in"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"resource"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"QuestionnaireResponse"</span><span class="p">,</span><span class="w">
-      </span><span class="err">//</span><span class="w"> </span><span class="err">considering</span><span class="w"> </span><span class="err">using</span><span class="w"> </span><span class="err">this</span><span class="w"> </span><span class="err">extension</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">QR</span><span class="w"> </span><span class="err">as</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">calculated</span><span class="w"> </span><span class="err">cumualative</span><span class="w"> </span><span class="err">score</span><span class="w">
-      </span><span class="nt">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score"</span><span class="p">,</span><span class="w">
-          </span><span class="nt">"valueDecimal"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-      </span><span class="p">],</span><span class="w">
       </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"questionnaireresponse-example-adaptive-sampler"</span><span class="p">,</span><span class="w">
       </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nt">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1105,14 +1100,7 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
        </span><span class="p">]</span><span class="w">
       </span><span class="p">},</span><span class="w">
       </span><span class="p">{</span><span class="w">
-        </span><span class="err">//</span><span class="w"> </span><span class="err">considering</span><span class="w"> </span><span class="err">using</span><span class="w"> </span><span class="err">this</span><span class="w"> </span><span class="err">extension</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">QR</span><span class="w"> </span><span class="err">as</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">calculated</span><span class="w"> </span><span class="err">score</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Group</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="err">item.</span><span class="w">
-        </span><span class="nt">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-          </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"valueDecimal"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="w">
-          </span><span class="p">}</span><span class="w">
-          </span><span class="p">]</span><span class="w">
-        </span><span class="s2">"linkId"</span><span class="err">:</span><span class="w"> </span><span class="s2">"g2"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g2"</span><span class="p">,</span><span class="w">
         </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
           </span><span class="p">{</span><span class="w">
             </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g2.q1"</span><span class="p">,</span><span class="w">
@@ -1151,13 +1139,6 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"QuestionnaireResponse"</span><span class="p">,</span><span class="w">
-  </span><span class="err">//</span><span class="w"> </span><span class="err">considering</span><span class="w"> </span><span class="err">using</span><span class="w"> </span><span class="err">this</span><span class="w"> </span><span class="err">extension</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">QR</span><span class="w"> </span><span class="err">as</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">calculated</span><span class="w"> </span><span class="err">cumualative</span><span class="w"> </span><span class="err">score</span><span class="w">
-  </span><span class="nt">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"valueDecimal"</span><span class="p">:</span><span class="w"> </span><span class="mi">24</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">],</span><span class="w">
   </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"questionnaireresponse-example-adaptive-sampler"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1239,6 +1220,33 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
             </span><span class="nt">"repeats"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
           </span><span class="p">}</span><span class="w">
         </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="err">//</span><span class="w"> </span><span class="err">add</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">final</span><span class="w"> </span><span class="err">calculated</span><span class="w"> </span><span class="err">score</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">final</span><span class="w"> </span><span class="err">item</span><span class="w"> </span><span class="err">group.</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">score</span><span class="w"> </span><span class="err">based</span><span class="w"> </span><span class="err">on</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">question-answer</span><span class="w"> </span><span class="err">pairs</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">readOnly</span><span class="p">,</span><span class="w"> </span><span class="err">initialQuantity</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g4"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"group"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+              </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-hidden"</span><span class="p">,</span><span class="w">
+                </span><span class="nt">"valueBoolean"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+              </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g3.q1"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The total score is:"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">,</span><span class="w">
+            </span><span class="nt">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"repeats"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"readOnly"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"initialQuantity"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="nt">"value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span><span class="w">
+              </span><span class="nt">"unit"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"points"</span><span class="p">,</span><span class="w">
+              </span><span class="nt">"system"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"http://unitsofmeasure.org"</span><span class="p">,</span><span class="w">
+              </span><span class="nt">"code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"\{score\}"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
       </span><span class="p">}</span><span class="w">
      </span><span class="p">]</span><span class="w">
     </span><span class="p">}</span><span class="w">
@@ -1261,14 +1269,8 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
    </span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="err">//</span><span class="w"> </span><span class="err">considering</span><span class="w"> </span><span class="err">using</span><span class="w"> </span><span class="err">this</span><span class="w"> </span><span class="err">extension</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">QR</span><span class="w"> </span><span class="err">as</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">calculated</span><span class="w"> </span><span class="err">score</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Group</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="err">item.</span><span class="w">
-    </span><span class="nt">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"valueDecimal"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="s2">"linkId"</span><span class="err">:</span><span class="w"> </span><span class="s2">"g2"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"item"</span><span class="err">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g2"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="p">{</span><span class="w">
         </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g2.q1"</span><span class="p">,</span><span class="w">
         </span><span class="nt">"answer"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1278,17 +1280,9 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
         </span><span class="p">]</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
   </span><span class="err">}</span><span class="p">,</span><span class="w">
-  </span><span class="err">}</span><span class="p">,</span><span class="w">
-  </span><span class="err">//third</span><span class="w"> </span><span class="err">group</span><span class="w"> </span><span class="err">question-answer</span><span class="w"> </span><span class="err">pair</span><span class="w"> </span><span class="err">score</span><span class="w"> </span><span class="err">updated</span><span class="w"> </span><span class="err">by</span><span class="w"> </span><span class="err">server</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="err">//</span><span class="w"> </span><span class="err">considering</span><span class="w"> </span><span class="err">using</span><span class="w"> </span><span class="err">this</span><span class="w"> </span><span class="err">extension</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">QR</span><span class="w"> </span><span class="err">as</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">calculated</span><span class="w"> </span><span class="err">score</span><span class="w"> </span><span class="err">for</span><span class="w"> </span><span class="err">the</span><span class="w"> </span><span class="err">Group</span><span class="w"> </span><span class="err">or</span><span class="w"> </span><span class="err">item.</span><span class="w">
-    </span><span class="nt">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"valueDecimal"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-      </span><span class="p">],</span><span class="w">
     </span><span class="nt">"linkId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g3"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="p">{</span><span class="w">
@@ -1312,7 +1306,7 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
 
 <h3 id="questionnaireresponse-and-scoring">QuestionnaireResponse and Scoring</h3>
 
-<p>When the adaptive questionnaire is complete, the client processes the QuestionnaireResponse with a contained Questionnaire based on the questions it was returned by the service.  The client may also create Observation(s) to represent the cumulative or intermediate scores.</p>
+<p>When the adaptive questionnaire is complete, the client processes the QuestionnaireResponse with a contained Questionnaire based on the questions it was returned by the service.  The client may represent the cumulative or intermediate scores as answers within the QuestionnaireResponse or as separate Observations.</p>
 
 <p><br/></p>
 
@@ -1322,12 +1316,12 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
 
     <!-- ==============END CONTENT END CONTENT=================== -->
 
-    <!-- col -->
-    <!-- /inner-wrapper -->
-    <!-- /row -->
-    <!-- /container -->
-    <!-- /page content -->
-    <!-- /page content wrapper -->
+</div>    <!-- col -->
+</div>    <!-- /inner-wrapper -->
+</div>    <!-- /row -->
+</div>    <!-- /container -->
+</div>    <!-- /page content -->
+</div>    <!-- /page content wrapper -->
 
 
 
@@ -1350,7 +1344,7 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
   <div class="container">    <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Aug 9, 2018 19:35-0700. | <a rel="license" no-external="true" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
+            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Aug 9, 2018 23:28-0700. | <a rel="license" no-external="true" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
         
         </p>
    </div>    <!-- /inner-wrapper -->
@@ -1390,7 +1384,7 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
 
 
 
+</body>
 
 
-
-</li></ul></li></ul></li></ul></div></div></div></div></div></div></body></head></html>
+</head></html>

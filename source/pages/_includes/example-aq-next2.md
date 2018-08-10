@@ -95,7 +95,7 @@
         }
        ]
       },
-      //second group is question-answer pair added by client to be processed by the Server to determine the next question and the score
+      //second group is question-answer pair added by client to be processed by the Server to determine the next question
       {
         "linkId": "g2",
         "item": [
@@ -122,13 +122,6 @@
 ~~~
 {
   "resourceType": "QuestionnaireResponse",
-  // considering using this extension for QR as the calculated cumualative score
-  "extension": [
-    {
-      "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
-      "valueDecimal": 17
-    }
-  ],
   "id": "questionnaireresponse-example-adaptive-sampler",
   "meta": {
     "profile": [
@@ -231,15 +224,8 @@
     }
    ]
   },
-  //second group is question-answer pair so processed by the Server to determine the next question and the score
+  //second group is question-answer pair so processed by the Server to determine the next question
   {
-    // considering using this extension for QR as the calculated score for the Group or item.
-    "extension": [
-      {
-        "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
-        "valueDecimal": 17
-      }
-      ],
     "linkId": "g2",
     "item": [
       {

@@ -169,6 +169,15 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-aq.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/aq"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="StructureDefinition-qr.html"/>
       </extension>
       <example value="false"/>
@@ -273,6 +282,18 @@
       <name value="Argonaut_QR_Profile"/>
       <sourceReference>
         <reference value="StructureDefinition/qr"/>
+      </sourceReference>
+    </resource>
+  </package>
+  <package id="profile-derived-q-spreadsheet.xml">
+    <name value="Argonaut_Adaptive_Q_Profile"/>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-aq.html"/>
+      </extension>
+      <name value="Argonaut_Adaptive_Q_Profile"/>
+      <sourceReference>
+        <reference value="StructureDefinition/aq"/>
       </sourceReference>
     </resource>
   </package>

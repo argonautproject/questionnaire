@@ -13,13 +13,6 @@
     "name": "qr-in",
     "resource": {
       "resourceType": "QuestionnaireResponse",
-      // considering using this extension for QR as the calculated cumualative score
-      "extension": [
-        {
-          "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
-          "valueDecimal": 17
-        }
-      ],
       "id": "questionnaireresponse-example-adaptive-sampler",
       "meta": {
         "profile": [
@@ -123,13 +116,6 @@
        ]
       },
       {
-        // considering using this extension for QR as the calculated score for the Group or item.
-        "extension": [
-          {
-            "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
-            "valueDecimal": 17
-          }
-          ]
         "linkId": "g2",
         "item": [
           {
@@ -169,13 +155,6 @@
 ~~~
 {
   "resourceType": "QuestionnaireResponse",
-  // considering using this extension for QR as the calculated cumualative score
-  "extension": [
-    {
-      "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
-      "valueDecimal": 24
-    }
-  ],
   "id": "questionnaireresponse-example-adaptive-sampler",
   "meta": {
     "profile": [
@@ -257,6 +236,33 @@
             "repeats": false
           }
         ]
+      },
+      // add the final calculated score to a final item group. the score based on the question-answer pairs and is a readOnly, initialQuantity
+      {
+        "linkId": "g4",
+        "type": "group",
+        "item": [
+          {
+            "extension": [
+              {
+                "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-hidden",
+                "valueBoolean": true
+              }
+            ],
+            "linkId": "g3.q1",
+            "text": "The total score is:",
+            "type": ,
+            "required": true,
+            "repeats": false,
+            "readOnly": true,
+            "initialQuantity": {
+              "value" : 24,
+              "unit" : "points",
+              "system" : "http://unitsofmeasure.org",
+              "code" : "\{score\}"
+            }
+          }
+        ]
       }
      ]
     }
@@ -279,12 +285,6 @@
    ]
   },
   {
-    // considering using this extension for QR as the calculated score for the Group or item.
-    "extension": [
-      {
-        "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
-        "valueDecimal": 17
-      }
     "linkId": "g2",
     "item": [
       {
@@ -298,15 +298,7 @@
     ]
   },
   },
-  //third group question-answer pair score updated by server
   {
-    // considering using this extension for QR as the calculated score for the Group or item.
-    "extension": [
-      {
-        "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
-        "valueDecimal": 7
-      }
-      ],
     "linkId": "g3",
     "item": [
       {
