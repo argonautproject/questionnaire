@@ -160,6 +160,15 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-aqr.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/aqr"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="StructureDefinition-qr.html"/>
       </extension>
       <example value="false"/>
@@ -183,6 +192,15 @@
       <example value="false"/>
       <sourceReference>
         <reference value="StructureDefinition/q"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="OperationDefinition-next-q.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="OperationDefinition/next-q"/>
       </sourceReference>
     </resource>
     <resource>
@@ -222,7 +240,7 @@
       </sourceReference>
     </resource>
   </package>
-  <package id="Q-profile-spreadsheet.xml">
+  <package id="profile-base-q-spreadsheet.xml">
     <name value="Argonaut_Q_Profile"/>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
@@ -234,7 +252,7 @@
       </sourceReference>
     </resource>
   </package>
-  <package id="QCVS-profile-spreadsheet.xml">
+  <package id="profile-base-qcvs-spreadsheet.xml">
     <name value="Argonaut_QCVS_Profile"/>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
@@ -246,7 +264,7 @@
       </sourceReference>
     </resource>
   </package>
-  <package id="QR-profile-spreadsheet.xml">
+  <package id="profile-base-qr-spreadsheet.xml">
     <name value="Argonaut_QR_Profile"/>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
@@ -255,6 +273,18 @@
       <name value="Argonaut_QR_Profile"/>
       <sourceReference>
         <reference value="StructureDefinition/qr"/>
+      </sourceReference>
+    </resource>
+  </package>
+  <package id="profile-derived-qr-spreadsheet.xml">
+    <name value="Argonaut_Adaptive_QR_Profile"/>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-aqr.html"/>
+      </extension>
+      <name value="Argonaut_Adaptive_QR_Profile"/>
+      <sourceReference>
+        <reference value="StructureDefinition/aqr"/>
       </sourceReference>
     </resource>
   </package>

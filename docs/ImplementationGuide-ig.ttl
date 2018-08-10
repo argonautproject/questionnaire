@@ -220,6 +220,18 @@
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-aqr.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/aqr>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/aqr" ]
+       ]
+     ], [
+       fhir:index 17;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
          fhir:Extension.valueUri [ fhir:value "StructureDefinition-qr.html" ]
        ];
        fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
@@ -228,7 +240,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/qr" ]
        ]
      ], [
-       fhir:index 17;
+       fhir:index 18;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -240,7 +252,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/qcvs" ]
        ]
      ], [
-       fhir:index 18;
+       fhir:index 19;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -252,7 +264,19 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/q" ]
        ]
      ], [
-       fhir:index 19;
+       fhir:index 20;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "OperationDefinition-next-q.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/OperationDefinition/next-q>;
+         fhir:Reference.reference [ fhir:value "OperationDefinition/next-q" ]
+       ]
+     ], [
+       fhir:index 21;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -264,7 +288,7 @@
          fhir:Reference.reference [ fhir:value "CapabilityStatement/server" ]
        ]
      ], [
-       fhir:index 20;
+       fhir:index 22;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -276,7 +300,7 @@
          fhir:Reference.reference [ fhir:value "CapabilityStatement/client" ]
        ]
      ], [
-       fhir:index 21;
+       fhir:index 23;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -288,7 +312,7 @@
          fhir:Reference.reference [ fhir:value "CapabilityStatement/assessmentbank" ]
        ]
      ], [
-       fhir:index 22;
+       fhir:index 24;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
@@ -302,7 +326,7 @@
      ]
   ], [
      fhir:index 1;
-     fhir:Element.id [ fhir:value "Q-profile-spreadsheet.xml" ];
+     fhir:Element.id [ fhir:value "profile-base-q-spreadsheet.xml" ];
      fhir:ImplementationGuide.package.name [ fhir:value "Argonaut_Q_Profile" ];
      fhir:ImplementationGuide.package.resource [
        fhir:index 0;
@@ -319,7 +343,7 @@
      ]
   ], [
      fhir:index 2;
-     fhir:Element.id [ fhir:value "QCVS-profile-spreadsheet.xml" ];
+     fhir:Element.id [ fhir:value "profile-base-qcvs-spreadsheet.xml" ];
      fhir:ImplementationGuide.package.name [ fhir:value "Argonaut_QCVS_Profile" ];
      fhir:ImplementationGuide.package.resource [
        fhir:index 0;
@@ -336,7 +360,7 @@
      ]
   ], [
      fhir:index 3;
-     fhir:Element.id [ fhir:value "QR-profile-spreadsheet.xml" ];
+     fhir:Element.id [ fhir:value "profile-base-qr-spreadsheet.xml" ];
      fhir:ImplementationGuide.package.name [ fhir:value "Argonaut_QR_Profile" ];
      fhir:ImplementationGuide.package.resource [
        fhir:index 0;
@@ -349,6 +373,23 @@
        fhir:ImplementationGuide.package.resource.sourceReference [
          fhir:link <http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr>;
          fhir:Reference.reference [ fhir:value "StructureDefinition/qr" ]
+       ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:Element.id [ fhir:value "profile-derived-qr-spreadsheet.xml" ];
+     fhir:ImplementationGuide.package.name [ fhir:value "Argonaut_Adaptive_QR_Profile" ];
+     fhir:ImplementationGuide.package.resource [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-aqr.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Argonaut_Adaptive_QR_Profile" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/aqr>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/aqr" ]
        ]
      ]
   ];

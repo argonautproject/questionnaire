@@ -213,6 +213,18 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-aqr.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition/aqr"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "StructureDefinition-qr.html"
             }
           ],
@@ -243,6 +255,18 @@
           "example": false,
           "sourceReference": {
             "reference": "StructureDefinition/q"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "OperationDefinition-next-q.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "OperationDefinition/next-q"
           }
         },
         {
@@ -296,7 +320,7 @@
       ]
     },
     {
-      "id": "Q-profile-spreadsheet.xml",
+      "id": "profile-base-q-spreadsheet.xml",
       "name": "Argonaut_Q_Profile",
       "resource": [
         {
@@ -314,7 +338,7 @@
       ]
     },
     {
-      "id": "QCVS-profile-spreadsheet.xml",
+      "id": "profile-base-qcvs-spreadsheet.xml",
       "name": "Argonaut_QCVS_Profile",
       "resource": [
         {
@@ -332,7 +356,7 @@
       ]
     },
     {
-      "id": "QR-profile-spreadsheet.xml",
+      "id": "profile-base-qr-spreadsheet.xml",
       "name": "Argonaut_QR_Profile",
       "resource": [
         {
@@ -345,6 +369,24 @@
           "name": "Argonaut_QR_Profile",
           "sourceReference": {
             "reference": "StructureDefinition/qr"
+          }
+        }
+      ]
+    },
+    {
+      "id": "profile-derived-qr-spreadsheet.xml",
+      "name": "Argonaut_Adaptive_QR_Profile",
+      "resource": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-aqr.html"
+            }
+          ],
+          "name": "Argonaut_Adaptive_QR_Profile",
+          "sourceReference": {
+            "reference": "StructureDefinition/aqr"
           }
         }
       ]

@@ -6,8 +6,6 @@
 	<experimental value="false"/>
 	<date value="2018-05-16T15:49:01+00:00"/>
 	<publisher value="Argonaut Project"/>
-
-
 	<code value="context-type"/>
 	<base value="Questionnaire"/>
 	<type value="token"/>

@@ -39,3 +39,5 @@
 [Questionnaire Option Exclusive]: {{site.data.fhir.path}}/extension-questionnaire-optionexclusive.html "Questionnaire optionexclusive extension: If true, indicates that if this option is selected, no other options may be selected."
 [Ordinal Value]: {{site.data.fhir.path}}/extension-valueset-ordinalvalue.html "ValueSet ordinalvalue extension: A numeric value that allows numerical manipulation of a concept."
 [expansion]: {{site.data.fhir.path}}/valueset.html#expansion "The list of codes that are actually in the value set under a given set of conditions ("extension")"
+[Argonaut Next Question Operation]: OperationDefinition-next-q.html "The Argonaut Next Question Operation is used for adaptive questionnaires forms where the next question is based on previous answers."
+[Argonaut Adaptive QR Profile]: StructureDefinition-aqr.html "The Argonaut Adaptive QR profile is derived from the Argonaut QR profile requiring a containedArgonaut Questionnaire Profile to support the adaptive questionnaire use case."

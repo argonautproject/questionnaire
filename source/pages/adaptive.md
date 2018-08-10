@@ -14,7 +14,7 @@ topofpage: true
 
 ## Introduction
 
-The Argonaut Questionnaire Implementation Guide defines a series of interactions which cover the basic workflow for the creation, discovery and retrieval of "computer adaptive forms" using FHIR Questionnaire and QuestionnaireResponse and the FHIR API.
+The Argonaut Questionnaire Implementation Guide defines a series of interactions which cover the basic workflow for the creation, discovery and retrieval of "**computer adaptive forms**" using FHIR Questionnaire and QuestionnaireResponse and the FHIR API.
 
 - Dynamic forms
 - Adjust what questions are asked based on previous answers
@@ -39,334 +39,121 @@ This simple scenario serves as an effective means to describe the Argonaut Quest
 ## Workflow Steps
 
 
-initial operation --> subsequent operation --> create QuestionnaireResponse with contained Questionnaire.  
 
-Use Parameters resource to capture the data needed between the Client and Server
+**Assumptions and Preconditions**
 
-Assume each Q SHALL only represent:
-- *a single* question ('what is the capital of Assyria?')
-- *a single* display  ('Answer these questions three!!')
-- *a single* group of:
-  - 1+ question (e.g., age, sex, zip code, occupation to establish demographics)
-  - 1 display + 1+ question  ('Answer these questions three!!', 'what is you favorite color?', 'what is the capital of Assyria?', 'what is average flight speed of a laden swallow?')
+- Client(Form Filler)
+  - EHR-S
+  - Patient Portal (Smart) App
+  - Third Party (Smart) App too.
+- Adaptive Questionnaire Service is a “Black Box”:
+  - Contains logic for determination of next question and scoring
+- Client makes RESTful FHIR transactions on Server using a *FHIR operation*
+- Transactions are Stateless:
+  - Client constructs a record of transaction which is passed to Server
+  - Server adds to record and passed back to Client
+  - Client and Server free of keeping track of session
+  - A Previously disrupted session can be restored if session token expires.
+- If Questionnaire timed out - then whole session needs to be restarted
+- Use QuestionnaireResponse with contained Questionnaire and Parameters resources to capture the data needed between the Client and Server
+- Assume *each* contained Questionnaire.item SHALL be represented by a:
+    - *a single*  item group of:
+      - *a single* question ('what is the capital of Assyria?') or
+      - *a single* display  ('Answer these questions three!!') or
+      - *multiple* questions  ( 'what is you favorite color?', 'what is the capital of Assyria?', 'what is average flight speed of a laden swallow?')
+      - *a single* display + *multiple* questions ('Answer these questions three!!', 'what is you favorite color?', 'what is the capital of Assyria?', 'what is average flight speed of a laden swallow?')
+<!-- Discovery of Adaptive Questionnaire --->
 
-Argonaut Next Question Operation:
+### Adaptive Questionnaire Discovery
 
+The discovery and preview of the service's adaptive questionnaire is out of scope.  It may be done out of band or using the standard [FHIR RESTful search API]. ( todo - discuss )
 
-name $next-q
-
-id argonaut-next-q
-
-name Argonaut Next Question Operation
-
-parameters:
-
-in/out:
-
-qa-pairs: 0..*  The previous completed question-answer pairs. If there is no group then the operation is initiating an adaptive-q and the first question/group is returned by the service.
-
-  sequence: 1..1 posInteger The sequence number of the of the question/group answer pair.  The sequence of questions is important for scoring and for determining the next question.
-
-  url: 1..1 url The url that is associated with the previous Questionnaire.
-  answer[x]: 0..1 string|Coding|... The answer associated with the question identified in the q-id parameter.
-
-  score: 0..1 Quantity The calculated score that was returned by the service for the question/group.  This value is used only for prior questions and returned to the service in a stateless model.  When an input it is empty for the current qa pair.  Cumulative/Final scores use the cum-score parameter
-
-out:
-
-  cum-score: 0..1 Quantity The cumulative/total score for the adaptive questionnaire.  Individual scores for each question use the q-score parameter
-
-  q: 0..1 Resource The Argo-Adaptive-Questionnaire profile of the Questionnaire resource representing the next question/group.  If this parameter is not returned, the adaptive questionnaire is complete.
 
 <!--------- INIT ------------>
 
 ### Initiate Adaptive Questionnaire
 
-Launch the adaptive questionnaire by getting first question at its FHIR endpoint - just a regular FHIR RESTful GET to the introductory question.  This may be only a display
+Launch the adaptive questionnaire by getting first group item (either a display, question(s), or group + questions ) from the Server by POSTing the operation $next-q to the Server's Questionnaire instance endpoint and supplying a QuestionnaireResponse with a *contained** Questionnaire representing only the resource metadata.  The Server updates the contained Questionnaire with the first item and returns the QuestionnaireResponse in the payload.
 
-**request**
+#### APIs
+{:.no_toc}
 
-`GET ../Questionnaire/adaptive-first-question`
+The following Argonaut Questionnaire artifacts are used in this transaction:
 
-**response**
+- **[Argonaut Next Question Operation]**
+- **[Argonaut Adaptive QR Profile]**
 
-~~~
-{
-  "resourceType": "Questionnaire",
-  "id": "first-question-example",
-  "url": "https\://acme.org/questionnaire/1",
-  ...
-  //assuming a single question item for Q1//
-  "item":{
-  ...
-  "type":"choice"
-  "text":"blah1"
-  ...
-  }
-~~~
+
+#### Usage
+{:.no_toc}
+
+To initiate an  adaptive questionnaire:
+
+`POST ../Questionnaire/$next-q`
+
+{% include examplebutton.html example="example-aq-initiate" b_title="Example: $next-q Operation Initiates Adaptive Questionnaire and Returns First Group Item" %}
+
 
 <!--------- NEXT Q - 1 ------------>
 
 ### Get Next Question
 
-Client ...renders, stores question 1, answer 1... and gets next question using by POSTing the operation $next-q to the service Questionnaire endpoint and supplying the parameters from the prior question
+Client renders/stores/processes the item and gets the next group item by POSTing the operation $next-q to the service Questionnaire instance endpoint and supplying a1 in the QR and q1 in the contained Q.  As result of the operation, the Server updates the QR and returns it to the Client.
 
-**request**
+The Server identifies the adaptive questionnaire group item by the contained Questionnaire `definiton` element may add intermediate and cumulative score to the QR based on the preceding item(s) and updates the contained Questionnaire with the next question.  This process step is repeated until the adaptive questionnaire is done or the Questionaire has timed out (footnote?) or another error has occured.
 
-`POST ../Questionnaire/$next-q`
+* for discussion extending the score extension to the QR to represent intermediate, and cumulative and total calculated scores  (as decimal only?)*
 
-**payload**
+#### APIs
+{:.no_toc}
 
-~~~
-  {
-    "resourceType": "Parameters",
-    "id": "next-question-example",
-    "parameter": [
-      {
-        "name": "qa-pairs",
-        "part": [
-          {
-           // first question  = Q-1 answered "foo", with no score returned yet so no score is available.
-            "sequence": "1",
-            "url": "https\://acme.org/questionnaire/1",
-            "answerString": "foo",
-          }
-        ]
-      }
-    ]
-  }
-~~~
+The following Argonaut Questionnaire artifacts are used in this transaction:
 
-**response**
+- **[Argonaut Next Question Operation]**
+- **[Argonaut Adaptive QR Profile]**
 
-~~~
-{
-  "resourceType": "Parameters",
-  "id": "next-question-example",
-  "parameter": [
-    {
-      "name": "qa-pairs",
-      "part": [
-        {
-         // first question  = Q-1 answered "foo", with no score returned yet so no score is available.
-          "sequence": "1",
-          "url": "https\://acme.org/questionnaire/1",
-          "answerString": "foo",
-          "score": {
-              "value" : 17,
-              "unit" : "points"}
-              }
-        }
-      ],
-      "cum-score": 17,
-      'q': {
-        "resourceType": "Questionnaire",
-        "id": "first-question-example",
-        "url": "https\://acme.org/questionnaire/4",
-        ...
-        //assuming a single question item for Q4//
-        "item":{
-        ...
-        "type":"choice"
-        "text":"blah4"
-        ...
-        }
 
-    }
-  ]
-}
-~~~
+#### Usage
+{:.no_toc}
 
-<!--------- NEXT Q - 2 ------------>
-
-### Get Next Question
-
-Client renders, stores question 4, answer 2, score 1 and
-gets next question using by POSTing the operation $next-q to the service Questionnaire endpoint and supplying the parameters from the prior question
-
-**request**
+To initiate an  adaptive questionnaire:
 
 `POST ../Questionnaire/$next-q`
 
-**payload**
+{% include examplebutton.html example="example-aq-next1" b_title="Example: $next-q Operation Returns Next Question" %}
 
-~~~
-    {
-      "resourceType": "Parameters",
-      "id": "next-question-example",
-      "parameter": [
-        {
-          "name": "qa-group",
-          "part": [
-            {
-             // first question  = Q-1 answered "foo", with an intermediate score of 17 returned
-              "sequence": "1",
-              "url": "https\://acme.org/questionnaire/1",
-              "answerString": "foo",
-              "score": {
-                  "value" : 17,
-                  "unit" : "points"}
-                  },
-              {
-              // second question  = Q-4 answered "bar", with an intermediate score of 11 returned
-              "sequence": "2",
-              "q-url": "https\://acme.org/questionnaire/4",
-              "answerString": "bar"
-            }
-          ]
-        }
-      ]
-    }
-~~~
+{% include examplebutton.html example="example-aq-next2" b_title="Example: $next-q Operation Returns Next Question and scoring" %}
 
-**response**
+<!--------- done ------------>
 
-    {
-      "resourceType": "Parameters",
-      "id": "next-question-example",
-      "parameter": [
-        {
-          "name": "qa-group",
-          "part": [
-            {
-             // first question  = Q-1 answered "foo", with an intermediate score of 17 returned
-              "sequence": "1",
-              "url": "https\://acme.org/questionnaire/1",
-              "answerString": "foo",
-              "score": {
-                  "value" : 17,
-                  "unit" : "points"}
-                  }
-                },
-              {
-              // second question  = Q-4 answered "bar", with an intermediate score of 11 returned
-              "sequence": "2",
-              "q-url": "https\://acme.org/questionnaire/4",
-              "answerString": "bar",
-              "score": {
-                  "value" : 11,
-                  "unit" : "points"}
-                  }
-                }
-          ],
-          "cum-score": 28,
-          'q': {
-            "resourceType": "Questionnaire",
-            "id": "first-question-example",
-            "url": "https\://acme.org/questionnaire/9",
-            ...
-            //assuming a single question item for Q9//
-            "item":{
-            ...
-            "type":"choice",
-            "text":"blah9"
-            ...
-            }
-        }
-      ]
-    }
+### Adaptive Questionnaire is Complete
 
-    client
-    ...render, store question 4, answer 2, score 1...
+The Client renders, stores the  question-answer pair and optionally the previous scores and gets the next item group as described above.  When the adaptive questionnaire is  successfully completed, the Server updates the QR with intermediate and cumulative scores, updates status to ‘complete’ and returns it to the Client.  The status of ‘complete’ is a signal to the Client that the adaptive Questionnaire is done!
 
-### Finished
+#### APIs
+{:.no_toc}
 
-Get next question using by POSTing the operation $next-q to the service Questionnaire endpoint and supplying the parameters from the prior question
+The following Argonaut Questionnaire artifacts are used in this transaction:
 
-**request**
+- **[Argonaut Next Question Operation]**
+- **[Argonaut Adaptive QR Profile]**
+
+
+#### Usage
+{:.no_toc}
+
+To initiate an  adaptive questionnaire:
 
 `POST ../Questionnaire/$next-q`
 
-**payload**
+{% include examplebutton.html example="example-aq-done" b_title="Example: $next-q Operation Returns Completed Adaptive Questionnaire" %}
 
-~~~
-    {
-      "resourceType": "Parameters",
-      "id": "next-question-example",
-      "parameter": [
-        {
-          "name": "qa-group",
-          "part": [
-            {
-             // first question  = Q-1 answered "foo", with an intermediate score of 17 returned
-              "sequence": "1",
-              "url": "https\://acme.org/questionnaire/1",
-              "answerString": "foo",
-              "score": {
-                  "value" : 17,
-                  "unit" : "points"}
-                  },
-              // second question  = Q-4 answered "bar", with an intermediate score of 11 returned
-              "sequence": "2",
-              "q-url": "https\://acme.org/questionnaire/4",
-              "answerString": "bar",
-              "q-score": {
-                  "value" : 11,
-                  "unit" : "points"}
-                  },
-              // third question  = Q-9 answered "baz", with no intermediate score since this is the current qa
-              "sequence": "3",
-              "q-url": "https\://acme.org/questionnaire/9",
-              "answerString": "baz"
-              }
-            ]
-          }
-        ]
-      }
-~~~
-
-**response**
-
-~~~
-{
-  "resourceType": "Parameters",
-  "id": "next-question-example",
-  "parameter": [
-    {
-      "name": "qa-group",
-      "part": [
-        {
-         // first question  = Q-1 answered "foo", with an intermediate score of 17 returned
-          "sequence": "1",
-          "url": "https\://acme.org/questionnaire/1",
-          "answerString": "foo",
-          "score": {
-              "value" : 17,
-              "unit" : "points"}
-              },
-          // second question  = Q-4 answered "bar", with an intermediate score of 11 returned
-          "sequence": "2",
-          "q-url": "https\://acme.org/questionnaire/4",
-          "answerString": "bar",
-          "q-score": {
-              "value" : 11,
-              "unit" : "points"}
-              },
-          // third question  = Q-9 answered "baz", with no intermediate score since this is the current qa
-          "sequence": "3",
-          "q-url": "https\://acme.org/questionnaire/9",
-          "answerString": "baz",
-          "q-score": {
-              "value" : 3,
-              "unit" : "points"}
-              },
-
-          }
-        ],
-        "cum-score": 31
-        //When the adaptive questionnaire is complete the service returns a payload that does not have a q parameter which signals to the client that the Questionnaire is complete.
-      }
-    ]
-  }
-~~~
 
 ###  QuestionnaireResponse and Scoring
 
-When the adaptive questionnaire is complete the service returns a payload that does not have a q parameter which signals to the client that the Questionnaire is complete.
+When the adaptive questionnaire is complete, the client processes the QuestionnaireResponse with a contained Questionnaire based on the questions it was returned by the service.  The client may also create Observation(s) to represent the cumulative or intermediate scores.
 
-The client creates a QuestionnaireResponse with a contained Questionnaire based on the questions it was returned by the service.
-The client may also create an Observation to represent the cumulative or intermediate scores.
-
+<br />
 
 ---
 

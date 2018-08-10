@@ -47,7 +47,7 @@ More than willing to expose in the answer bank.
 
 answer bank with PHI needs access control.  see security section.
 
-encounter should be 0..1 -  fixed
+encounter should be 0..1 -  fixed Thisnext-q with payload of QR with a1 and q1 in contained Q
 
 
 Language considerations - are different languages same questionnaire url and id
