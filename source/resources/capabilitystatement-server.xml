@@ -13,7 +13,7 @@
 				<li>Published: May 20, 2018</li>
 				<li>Published by: The Argonaut Project</li>
 			</ul>
-			<p>The Section describes the expected Capabilities of the Argonaut Questonnaire Server (Provider EHR)  which is responsible for fetching, rendering and displaying Questionaires,  storing (scoring) and sharing QuestionnaireAnswers ( ...todo...) , RESTful operations, and search parameters supported by Argonaut questionnaire Servers are defined.</p>
+			<p>The Section describes the expected Capabilities of the Argonaut Questonnaire Server (Provider EHR)  which is responsible for fetching, rendering and displaying Questionnaires,  storing (scoring) and sharing QuestionnaireAnswers ( ...todo...) , RESTful operations, and search parameters supported by Argonaut questionnaire Servers are defined.</p>
 			<h4 id="behavior">Behavior</h4>
 			<p>Description:</p>
 			<p>The Argonaut questionnaire Server <strong>SHALL (...todo... review...)</strong>:</p>

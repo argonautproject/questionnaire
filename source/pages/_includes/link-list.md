@@ -3,7 +3,7 @@
 [Argonaut QuestionnaireResponse Profile]: StructureDefinition-qr.html "Argonaut QuestionnaireResponse Profile"
 [Security section]: {{site.data.fhir.uscore}}/security.html "US Core Security"
 [Assumptions]: index.html#assumptions-and-preconditions  "Assumptions-and-Preconditions"
-[Questionnaire]: {{site.data.fhir.path}}/questionnaire.html "Questionaire resource"
+[Questionnaire]: {{site.data.fhir.path}}/questionnaire.html "Questionnaire resource"
 [QuestionnaireResponse]: {{site.data.fhir.path}}/questionnaireresponse.html "QuestionnaireResponse resource"
 [US Core General Guidance]: {{site.data.fhir.uscore}}/guidance.html "US Core General Guidance"
 [SMART on FHIR]: http://docs.smarthealthit.org/authorization/

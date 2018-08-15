@@ -137,7 +137,7 @@ To initiate an  adaptive questionnaire:
 
 Client renders/stores/processes the item and gets the next group item by POSTing the operation $next-q to the service Questionnaire instance endpoint and supplying a1 in the QR and q1 in the contained Q.  As result of the operation, the Server updates the QR and returns it to the Client.
 
-The Server identifies the adaptive questionnaire group item by the contained Questionnaire `definiton` element may add intermediate and cumulative score to the QR based on the preceding item(s) and updates the contained Questionnaire with the next question.  This process step is repeated until the adaptive questionnaire is done or the Questionaire has timed out (footnote?) or another error has occured.
+The Server identifies the adaptive questionnaire group item by the contained Questionnaire `definiton` element may add intermediate and cumulative score to the QR based on the preceding item(s) and updates the contained Questionnaire with the next question.  This process step is repeated until the adaptive questionnaire is done or the Questionnaire has timed out (footnote?) or another error has occured.
 
 
 #### APIs

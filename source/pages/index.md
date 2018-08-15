@@ -32,7 +32,7 @@ This implementation Guide is organized as follows:
 
 ## Scope
 Clinical Assessment used in healthcare can be very sophisticated and complex tools and there are many facets to them. (for example, automatic prepopulation of fields, rendering,  and interactive UIs).  However,
-there is clearly a need for a common form standard with a focus on simple assessments.  Clinical Assessments that are hand crafted lead to non standard responses and limited reuse.   Forms should be shareable between systems and across organizational boundaries. With this in mind, the Argonaut Questionaire Poject's focus and scope is on *simple* clinical assessments for the provider with general applicability and question sets that are mostly unstructured in systems today.  The  following table summarizes the scope of this implementation's guide:
+there is clearly a need for a common form standard with a focus on simple assessments.  Clinical Assessments that are hand crafted lead to non standard responses and limited reuse.   Forms should be shareable between systems and across organizational boundaries. With this in mind, the Argonaut Questionnaire Poject's focus and scope is on *simple* clinical assessments for the provider with general applicability and question sets that are mostly unstructured in systems today.  The  following table summarizes the scope of this implementation's guide:
 
 <div class="row">
 <div class="col-sm-4" markdown="1">

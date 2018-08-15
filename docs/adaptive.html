@@ -247,7 +247,7 @@
   <li><a href="#assumptions-and-precondition" id="markdown-toc-assumptions-and-precondition">Assumptions and Precondition</a></li>
   <li><a href="#open-issues-for-discussion" id="markdown-toc-open-issues-for-discussion">Open issues for discussion</a></li>
   <li><a href="#workflow-steps" id="markdown-toc-workflow-steps">Workflow Steps</a>    <ul>
-      <li><a name="9ccac12f-dc2f-4903-b72e-8cac988a6f78">​</a><a href="#adaptive-questionnaire-discovery" id="markdown-toc-adaptive-questionnaire-discovery">Adaptive Questionnaire Discovery</a></li>
+      <li><a name="7b492371-5dd3-4e0e-9975-495c1d0f25c2">​</a><a href="#adaptive-questionnaire-discovery" id="markdown-toc-adaptive-questionnaire-discovery">Adaptive Questionnaire Discovery</a></li>
       <li><a href="#initiate-adaptive-questionnaire" id="markdown-toc-initiate-adaptive-questionnaire">Initiate Adaptive Questionnaire</a></li>
       <li><a href="#get-next-question" id="markdown-toc-get-next-question">Get Next Question</a></li>
       <li><a href="#adaptive-questionnaire-is-complete" id="markdown-toc-adaptive-questionnaire-is-complete">Adaptive Questionnaire is Complete</a></li>
@@ -575,7 +575,7 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
 
 <p>Client renders/stores/processes the item and gets the next group item by POSTing the operation $next-q to the service Questionnaire instance endpoint and supplying a1 in the QR and q1 in the contained Q.  As result of the operation, the Server updates the QR and returns it to the Client.</p>
 
-<p>The Server identifies the adaptive questionnaire group item by the contained Questionnaire <code class="highlighter-rouge">definiton</code> element may add intermediate and cumulative score to the QR based on the preceding item(s) and updates the contained Questionnaire with the next question.  This process step is repeated until the adaptive questionnaire is done or the Questionaire has timed out (footnote?) or another error has occured.</p>
+<p>The Server identifies the adaptive questionnaire group item by the contained Questionnaire <code class="highlighter-rouge">definiton</code> element may add intermediate and cumulative score to the QR based on the preceding item(s) and updates the contained Questionnaire with the next question.  This process step is repeated until the adaptive questionnaire is done or the Questionnaire has timed out (footnote?) or another error has occured.</p>
 
 <h4 id="apis-1" class="no_toc">APIs</h4>
 
@@ -1438,7 +1438,7 @@ EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the h
   <div class="container">    <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Fri, Aug 10, 2018 16:36-0700. | <a rel="license" no-external="true" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
+            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Wed, Aug 15, 2018 12:50-0700. | <a rel="license" no-external="true" style="color: #81BEF7" href="http://hl7.org/fhir/STU3license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
         
         </p>
    </div>    <!-- /inner-wrapper -->
