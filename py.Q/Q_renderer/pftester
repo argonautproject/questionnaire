@@ -1,0 +1,13 @@
+#! /usr/bin/env python3.4
+
+import partialformatter as pf
+
+fmt=pf.PartialFormatter()
+data = {'n': 3, 'k': 3.141594, 'p': {'a': '7', 'b': 8}}
+print(fmt.format('old yucky way: {n}, {k:.2f}, {p[a]}, {p[b]}', **data))
+# 3, 3.14, 7, 8
+del data['k']
+data['p']['b'] = None
+print(fmt.format(' new and fancy format = {n}, {k:.2f}, {p[a]:.2f}, {p[b]}', **data))
+# 3, ~~, !!, ~~
+print(format(' new and fancy format = {a}, {b}',a='a',b='b'))

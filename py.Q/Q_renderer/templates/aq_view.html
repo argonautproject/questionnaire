@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% from 'utils.html' import is_required, get_exclusive, get_score, input, choice_type, anyof_type with context %}}
+
+{% block content %}
+
+<!-- select Q --->
+
+{% include 'q_menu.html' %}
+
+<!-- end select Q --->
+<!-- as form --->
+<a href="{{ url_for("q_view") }}"><strong>Questionnaire presented as Form</strong></a>
+<!-- end as form  -->
+
+<p>{{intro|safe}}</p>
+
+<a href="{{ url_for("interim_aqr") }}"><strong>See Current state of Adaptive Questionnaire Response</strong></a>
+<br /><br />
+
+{%if j %}
+
+<form action='{{url_for('aq_view') }}' method='POST'>
+
+  <!-- ********next question assuming no nesting **********-->
+<em>{{name}}</em>
+  <ol style = 'list-style-type: none;'>
+   <h3>
+    {% include 'questions.html' %} <!-- 'j' == item -->
+  </h3>
+  </ol>
+  <!-- *********end root level******-->
+    <input type="submit" value="Get Next Question" style="color:blue;font-size:300%;"/>
+
+
+</form>
+{% endif %}
+
+{% endblock %}

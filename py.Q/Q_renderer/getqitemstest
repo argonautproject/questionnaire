@@ -1,0 +1,53 @@
+#! /usr/bin/env python3.4
+'''
+TODO: stateless changes
+
+each time:
+  need to get the Q (fetch Q from definition)
+  and find the q-a pairs
+  return q if not in the contained q list or  ( subtract the total or retur)
+
+'''
+
+# ========================== imports =========================
+import json
+from pdb import set_trace as bp
+import fhirtemplates as f
+import aq_gets as aq
+import fhirclient.models.questionnaire as Q
+import fhirclient.models.questionnaireresponse as QR
+from fhirclient.models.fhirabstractbase import FHIRValidationError
+
+import logging
+# logging.disable(logging.CRITICAL)
+logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s - %(levelname)s- %(message)s')
+logging.debug('Start of program')
+logging.info('The logging module is working.')
+
+
+# fetch Questionnaire from file
+
+my_path = '/Users/ehaas/Documents/testing/Bundler/q'
+
+q_files = [
+        '/Users/ehaas/Documents/testing/Bundler/q/ASQ3.json',
+        '/Users/ehaas/Documents/testing/Bundler/q/AUDIT.json',
+        '/Users/ehaas/Documents/testing/Bundler/q/DAST.json',
+        '/Users/ehaas/Documents/testing/Bundler/q/Housing.json',
+        '/Users/ehaas/Documents/testing/Bundler/q/PHQ9.json',
+        '/Users/ehaas/Documents/testing/Bundler/q/Sampler.json'
+]
+
+def get_q_file(file):
+    with open(file) as f:
+        return(f.read())
+
+sampler = get_q_file(q_files[4])
+
+q_json = json.loads(sampler, strict=False)  # use false to allow the control character \r
+q = Q.Questionnaire(q_json)  # current questionnaire as json to share between definitions\
+print(q.item)
+
+print(aq.get_q_items(q.item))
+
+#print(aq.get_q_items(q.item))

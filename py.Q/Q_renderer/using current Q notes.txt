@@ -1,0 +1,156 @@
+#! /usr/bin/env python3.4
+
+# ========================== imports =========================
+from flask import Flask, request, render_template, Markup, url_for
+from werkzeug.contrib.cache import SimpleCache
+import requests
+import json
+from datetime import datetime
+from copy import deepcopy
+from pdb import set_trace as bp
+import fhirtemplates as f
+import fhirclient.models.questionnaire as Q
+import fhirclient.models.questionnaireresponse as QR
+import fhirclient.models.valueset as VS
+import fhirclient.models.fhirdate as FD
+import fhirclient.models.quantity as QT
+# import fhirclient.models.codeableconcept as CC
+import fhirclient.models.coding as C
+import fhirclient.models.fhirreference as Ref
+import fhirclient.models.extension as Ext
+import logging
+from logging.handlers import RotatingFileHandler
+
+from fhirclient.models.fhirabstractbase import FHIRValidationError
+
+sampler = '''{"code":[{"code":"foo","display":"Argonaut Questionnaire Sampler","system":"http://acme.org"}],"contact":[{"telecom":[{"system":"url","value":"http://argonautwiki.hl7.org"}]}],"copyright":"You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.","date":"2018-07-28","id":"questionnaire-example-sampler","identifier":[{"system":"http://acme.org/q-identifiers","value":"questionnaire-example-sampler"}],"item":[{"item":[{"linkId":"g1.d","required":true,"text":"The Argonaut Questionnaire Sampler is designed to show all the question types that can be used in the Argonaut Questionnaire Project:\n\n1 boolean\n2 decimal\n3 integer\n4 dateDate\n5 dateTime\n6 timeTime\n7 string\n8 textText\n9 urlUrl\n10 choice\n11 open-choice\n12 quantity\n","type":"display"}],"linkId":"g1","required":true,"text":"Header Text","type":"group"},{"item":[{"extension":[{"url":"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score","valueDecimal":17}],"linkId":"g2.q1","repeats":false,"required":true,"text":"Check the box if the following statement is true.  The average air speed velocity of a laden European swallow is greater than a laden African swallow.","type":"boolean"}],"linkId":"g2","prefix":"1. ","required":true,"text":"boolean","type":"group"},{"item":[{"extension":[{"url":"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score","valueDecimal":7}],"linkId":"g3.q1","repeats":false,"required":true,"text":"What is the average air speed velocity of a laden swallow in m/sec?","type":"decimal"}],"linkId":"g3","prefix":"2. ","required":true,"text":"decimal","type":"group"},{"item":[{"extension":[{"url":"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score","valueDecimal":3}],"linkId":"g4.q1","repeats":false,"required":true,"text":"What is the average air speed velocity of a laden swallow in m/sec?","type":"integer"}],"linkId":"g4","prefix":"3. ","required":true,"text":"integer","type":"group"},{"item":[{"extension":[{"url":"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score","valueDecimal":27}],"linkId":"g5.q1","repeats":false,"required":true,"text":"If a laden swallow left Camelot on 7/5/2018 what day would it reach the Castle Anthrax?","type":"date"}],"linkId":"g5","prefix":"4. ","required":true,"text":"date","type":"group"},{"item":[{"extension":[{"url":"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score","valueDecimal":3}],"linkId":"g6.q1","repeats":false,"required":true,"text":"If a laden swallow left Camelot on 7/5/2018 and noon when would it reach Castle Anthrax?","type":"dateTime"}],"linkId":"g6","prefix":"5. ","required":true,"text":"dateTime","type":"group"},{"item":[{"extension":[{"url":"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score","valueDecimal":8}],"linkId":"g7.q1","repeats":false,"required":true,"text":"If a laden swallow left Camelot at noon what time would it reach Castle Anthrax?","type":"time"}],"linkId":"g7","prefix":"6. ","required":true,"text":"time","type":"group"},{"item":[{"extension":[{"url":"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score","valueDecimal":1}],"linkId":"g8.q1","repeats":false,"required":true,"text":"Describe how to estimate the average air speed velocity of a laden swallow in 20 words or less.","type":"string"}],"linkId":"g8","prefix":"7. ","required":true,"text":"string","type":"group"},{"item":[{"extension":[{"url":"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score","valueDecimal":0}],"linkId":"g9.q1","repeats":false,"required":true,"text":"Describe in detal how to estimate the average air speed velocity of a laden swallow. Please cite your sources and give examples.","type":"text"}],"linkId":"g9","prefix":"8. ","required":true,"text":"text","type":"group"},{"item":[{"extension":[{"url":"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score","valueDecimal":11}],"linkId":"g10.q1","repeats":false,"required":true,"text":"Provide a link to a video clip where the average air speed velocity of a laden swallow question is discussed.","type":"url"}],"linkId":"g10","prefix":"9. ","required":true,"text":"url","type":"group"},{"item":[{"linkId":"g11.q1","option":[{"extension":[{"url":"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score","valueDecimal":0}],"valueString":"10"},{"extension":[{"url":"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score","valueDecimal":43}],"valueString":"11"},{"extension":[{"url":"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score","valueDecimal":0}],"valueString":"12"}],"repeats":false,"required":true,"text":"What is the average air speed velocity of a laden swallow in m/sec?","type":"choice"}],"linkId":"g11","prefix":"10. ","required":true,"text":"choice - one of/radiio button","type":"group"},{"item":[{"linkId":"g12.q1","option":[{"extension":[{"url":"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score","valueDecimal":23}],"valueString":"European"},{"extension":[{"url":"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score","valueDecimal":0}],"valueString":"African"},{"extension":[{"url":"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score","valueDecimal":0}],"valueString":"Asiatic"},{"extension":[{"url":"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score","valueDecimal":0}],"valueString":"North American"}],"repeats":true,"required":true,"text":"Which type of swallow is able to transport coconuts (choose all the correct answers)?","type":"choice"}],"linkId":"g12","prefix":"10. ","required":true,"text":"choice - any of/checkbox","type":"group"},{"item":[{"linkId":"g13.q1","option":[{"extension":[{"url":"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score","valueDecimal":0}],"valueString":"10"},{"extension":[{"url":"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score","valueDecimal":43}],"valueString":"11"},{"extension":[{"url":"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score","valueDecimal":0}],"valueString":"12"}],"repeats":false,"required":true,"text":"What is the average air speed velocity of a laden swallow in m/sec? (not yet fully implemented in the test renderer)","type":"open-choice"}],"linkId":"g13","prefix":"11. ","required":true,"text":"open-choice","type":"group"},{"item":[{"extension":[{"url":"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score","valueDecimal":3}],"linkId":"g14.q1","repeats":false,"required":true,"text":"What is the average air speed velocity of a laden swallow - please provide the units? (not yet fully implemented in the test renderer)","type":"quantity"}],"linkId":"g14","prefix":"12. ","required":true,"text":"quantity","type":"group"}],"jurisdiction":[{"coding":[{"code":"US","display":"United States of America","system":"urn:iso:std:iso:3166"}]}],"meta":{"profile":["http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"]},"publisher":"Argonaut Project","resourceType":"Questionnaire","status":"draft","subjectType":["Patient"],"title":"Argonaut Questionnaire Sampler","url":"http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-sampler","useContext":[{"code":{"code":"task","display":"Workflow Task","system":"http://hl7.org/fhir/usage-context-type"},"valueCodeableConcept":{"coding":[{"code":"example","display":"Example of Use","system":"http://acme.org"}]}}],"version":"0.0.0"}'''
+
+q_json = json.loads(sampler, strict=False)  # use false to allow the control character \r
+
+q = Q.Questionnaire(q_json)  # current questionnaire as json to share between definitions\
+qr = QR.QuestionnaireResponse(f.qr_templ)
+qr.id = "test"
+
+answer_type = {
+    'boolean': 'valueBoolean',
+    'decimal': 'valueDecimal',
+    'integer': 'valueInteger',
+    'date': 'valueDate',
+    'dateTime': 'valueDateTime',
+    'time': 'valueTime',
+    'string': 'valueString',
+    'text': 'valueString',
+    'url': 'valueUri',
+    'choice': 'valueCoding',
+    'open-choice': 'valueCoding',
+    'attachment': 'valueAttachment',
+    'reference': 'valueReference',
+    'quantity': 'valueQuantity',
+}
+# note open-choice can be a value string too
+
+print(q.id, qr.id)
+
+#render based on Q
+
+
+def hidden(item):
+    for ext in item.extension:
+        if ext.url == 'http://hl7.org/fhir/StructureDefinition/questionnaire-hidden' and ext.valueBoolean == True:
+            return(True)
+        else:
+            return(False)
+
+
+def get_answers(answer_list, type, linkId):
+    value_type = answer_type[type]
+    # for answer in answers: # fetch the answers as a structured dict from Flask  get answer list using request.form.getlist(linkId)  answer answer|code|system|score
+        # find the answer that corresponds the linkId
+    qr_answer = QR.QuestionnaireResponseItemAnswer({"valueString": "following"})
+    answer_list.append(qr_answer)
+    return(answer_list)
+
+
+
+
+def get_items(item_list, qr_item_list):  #loop through each item group and nested item using recursion and copy structure and display
+    for item in item_list:
+        qr_item = QR.QuestionnaireResponseItem(strict=False)
+        qr_item.linkId = item.linkId
+        try: # display if present and indicate if should be hidden.
+            if hidden(item):
+                qr_item.text = '{} (this is hidden text/should not be displayed to the user)'.format(item.text)
+            else:
+                qr_item.text = item.text
+        except:
+            pass
+
+
+        try:  # get the answer from Flask to populates the QR
+            qr_item.answer = []
+            get_answers(qr_item.answer, item.type, item.linkId)
+        except KeyError: # not a question type
+            pass
+
+
+        print(item.linkId, item.type, qr_item.as_json(), qr.item)
+        qr_item_list.append(qr_item)  # append item object to qr_item_list
+        try:
+            qr_item.item = [] # init item object to qr_item_list
+            get_items(item.item, qr_item.item)  # get subitems
+        except TypeError:
+            return()
+qr.item = []
+get_items(q.item, qr.item)
+
+print(json.dumps(qr.as_json()))
+
+
+
+'''
+
+assume QR has all the questions and display if no answer then display 'did not answer'
+copy structure and display
+
+if Q.item.type = "group"
+
+  QR.item.linkId = Q.item.linkId
+  try QR.item.text = Q.item.prefix + Q.item.text
+
+  for each Q.item.item
+  repeat
+
+elif Q.item.type = "display"
+( mark as hidden )
+
+  QR.item.linkId = Q.item.linkId
+  try QR.item.text = Q.item.prefix + Q.item.text
+
+
+else
+
+  QR.item.linkId = Q.item.linkId
+  try QR.item.text = Q.item.prefix + Q.item.text
+
+  QR.item.answer
+    for answers = 'linkID'
+    value[x] = dict of type to valuex
+    try:
+    valueXXX = answer  assume right type and fix if not
+
+
+  for each Q.item.item
+  repeat
+
+prototype with string only
+
+
+
+loop through QA
+
+
+
+create score as Answer: only for AQ
+
+Using hidden ansewr and question? on for A_Q for flat form would need an extension/observation for total score in QA - is this an SDC extension
+'''

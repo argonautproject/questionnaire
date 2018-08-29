@@ -7,48 +7,12 @@
 </form>
 
 
-<h3>Response Summary</h3>
-<ul>
-<!-- iterate through the root = groups ...TODO...deeper nested QR -->
+<!-- just show the narrative -->
 
-{% for g in qr.item %}
+{{qr.text.div|safe}}
 
-  {% for i in g.item %}
-
-    <li>
-
-    <strong>Question:</strong> {{i.text}} <br />
-
-    {% for j in i.answer %}
-      {% if j.valueCoding %}
-        <strong>Response: </strong>{{j.valueCoding.display}}<br /><br />
-      {% elif j.valueString %}
-        <strong>Response: </strong>{%autoescape false %}{{j.valueString| replace ('\n', '<br />')}}{% endautoescape %}<br /><br />
-      {% elif j.valueUri %}
-        <strong>Response: </strong>{{j.valueUri}}<br /><br />
-      {% elif j.valueBoolean == true or j.valueBoolean == false %}
-        <strong>Response: </strong>{{j.valueBoolean}}<br /><br />
-      {% elif j.valueInteger %}
-        <strong>Response: </strong>{{j.valueInteger}}<br /><br />
-      {% elif j.valueDecimal %}
-        <strong>Response: </strong>{{j.valueDecimal}}<br /><br />
-      {% elif j.valueDate %}
-        <strong>Response: </strong>{{j.valueDate.as_json()}}<br /><br />
-      {% elif j.valueDateTime %}
-        <strong>Response: </strong>{{j.valueDateTime.as_json()}}<br /><br />
-      {% elif j.valueTime %}
-        <strong>Response: </strong>{{j.valueTime.as_json()}}<br /><br />
-      {% elif j.valueQuantity %}
-        <strong>Response: </strong>{{j.valueQuantity.as_json()}}<br /><br />
-      {% endif %}
-    {% endfor %}
-    </li>
-
-  {% endfor %}
-{% endfor %}
-</ul>
 <hr />
-<h4>Score = {{t_score}}</h4>
+<h4>Score = {{t_score}}</h4> <!--makes this a hidden question -->
 <hr />
 <h3>Resulting QuestionnaireResponse</h3>
 <pre>
