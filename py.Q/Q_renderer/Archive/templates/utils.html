@@ -28,14 +28,16 @@
                 NA
              {%- endif -%}
           {%- endfor -%}
-        {%- elif k.valueCoding.extension -%}
-          {%- for m in k.valueCoding.extension -%}
-            {%- if m.url == 'http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue' -%}
-            {{m.valueDecimal}}
-            {%- else -%}
-              NA
-            {%- endif -%}
-          {%- endfor %}
+        {%- elif k.valueCoding -%}
+          {%- if k.valueCoding.extension -%}
+            {%- for m in k.valueCoding.extension -%}
+              {%- if m.url == 'http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue' -%}
+              {{m.valueDecimal}}
+              {%- else -%}
+                NA
+              {%- endif -%}
+            {%- endfor %}
+          {%- endif -%}
     {%- else -%}
       NA
     {%- endif -%}

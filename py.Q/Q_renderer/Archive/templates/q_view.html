@@ -22,7 +22,12 @@
 <!-- end  Q  views  -->
 <!--  as AQ  -->
 <br />
-<a href="{{ url_for("aq_view") }}"><strong>Questionnaire presented as Adaptive Questionnaire</strong></a>
+<!-- if not housing -->
+
+{% if q.title != 'Housing Questions' %}
+  <a href="{{ url_for("aq_view") }}"><strong>Questionnaire presented as Adaptive Questionnaire</strong></a>
+{% endif %}
+
 <!-- end as AQ  -->
 
 
@@ -71,17 +76,8 @@
 
 <!-- questions -->
     {% else %}
-      <li id='{{i.linkId}}'><strong>{{i.prefix|default('', true)}}</strong>  {{i.text}}</li>
-      <br />
-<!-- multiple choice question like above -->
-      {% if i.type == "choice" and i.option %}
-       {%if i.repeats %}
-        {{ anyof_type(i) }}  <!-- macro --->
-       {% else %}
-        {{ choice_type(i) }}  <!-- macro --->
-        {% endif %}
-      {% endif %}
-
+        {% set j = i %}
+        {% include 'questions.html' %}
 <!-- end root level questions -->
 
 
@@ -92,7 +88,7 @@
 
 {% endfor %} <!-- end root level-->
   </ol>
-<input type="submit" value="submit" style="color:blue;font-size:300%;"/>
+<input type="submit" value="submit" style="color:blue;font-size:150%;"/>
 
 
 </form>
