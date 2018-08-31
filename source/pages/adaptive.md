@@ -42,26 +42,26 @@ This simple scenario serves as an effective means to describe the Argonaut Quest
   - EHR-S
   - Patient Portal (Smart) App
   - Third Party (Smart) App too.
-- Adaptive Questionnaire Service is a “Black Box”:
+- Adaptive Questionnaire Service is treated as a **“Black Box”**:
   - Contains logic for determination of next question and scoring
 - Transactions are Stateless:
-  - Client constructs a record of transaction which is passed to Server
-  - Server adds to record and passed back to Client
-  - Client and Server free of keeping track of session
+  - Client constructs a record of transaction which is passed to Service
+  - Service adds to record and passed back to Client
+  - Client and Service free of keeping track of session
   - A Previously disrupted session can be restored if session token expires.
-- Client makes RESTful FHIR transactions on Server using a *FHIR operation*
-- Use QuestionnaireResponse with contained Questionnaire as Parameters to capture the data needed between the Client and Server
+- Client makes RESTful FHIR transactions on Service using a *FHIR operation*
+- Use QuestionnaireResponse with contained Questionnaire as Parameters to capture the data needed between the Client and Service
 - If Questionnaire timed out
    - Response can change over time and the Form is not valid
    - the whole session needs to be restarted
    - timing extensions - duration/time-limit?
-      - either Client or Server could validate if within time limit
+      - either Client or Service could validate if within time limit
       - (OperationOutcome defined error code) **Discusse**
-- Use QuestionnaireResponse with contained Questionnaire as Parameters to capture the data needed between the Client and Server
+- Use QuestionnaireResponse with contained Questionnaire as Parameters to capture the data needed between the Client and Service
 - Operationally need to keep assessment short.
   - e.g.,PROMIS up to 12 transactions  (on average 4-12))
-- Calculated Scores as `readOnly` questions with `initial.valueQuantity` that cannot be changed
-  - can be marked as hidden using the questionnair-hidden extension to prevent end user from viewing.
+- Calculated Scores as `readOnly` question and a pre-populated value as an answer.
+  - can be marked as hidden using the questionnaire-hidden extension to prevent end user from viewing.
 
 ## Open issues for discussion
 
@@ -73,6 +73,7 @@ This simple scenario serves as an effective means to describe the Argonaut Quest
         - *a single* question ('what is the capital of Assyria?') or
         - *a single* display  ('Answer these questions three!!') or
         - *a single* item group of *multiple* display + *multiple* questions  ( 'what is you favorite color?', 'what is the capital of Assyria?', 'what is average flight speed of a laden swallow?')
+          - or perhaps more commonly a group containing the question-score pairs when transmitting an individual score for each item.
         - *a single* item group of: *multiple* item groups ('Answer these questions three!!', 'what is you favorite color?', 'what is the capital of Assyria?', 'what is average flight speed of a laden swallow?')
     -  What is the Service going to send in most cases?
        - We are assuming the adaptive questionnaire are going to be rather short so is this complexity warranted.
@@ -92,7 +93,7 @@ This simple scenario serves as an effective means to describe the Argonaut Quest
 The following sections provide a detailed description of workflow and API guidance for the Adaptive Forms Use Case.
 
 
-{% include img.html img="adaptive-workflow-steps.jpg" caption="Data Requirements Operation" %}
+{% include img.html img="adaptive-workflow-steps.jpg" caption="Overview of Adaptive Questionnaire Steps" %}
 
 
 <!-- Discovery of Adaptive Questionnaire --->
@@ -108,7 +109,7 @@ The discovery and preview of the service's adaptive questionnaire is out of scop
 
 {% include img-narrow.html img="aw-step1.jpg" %}
 
-Launch the adaptive questionnaire by getting first group item (either a display, question(s), or group + questions ) from the Server by POSTing the operation $next-q to the Server's Questionnaire instance endpoint and supplying a QuestionnaireResponse with a *contained** Questionnaire representing only the resource metadata.  The Server updates the contained Questionnaire with the first item and returns the QuestionnaireResponse in the payload.
+Launch the adaptive questionnaire by getting first group item (typically the first question) from the Adaptive Questionnaire Service (“Black Box”) by POSTing the operation $next-q to the Service's Questionnaire instance endpoint and supplying a QuestionnaireResponse with a *contained** Questionnaire representing only the resource metadata.  The Service updates the contained Questionnaire with the first item and returns the QuestionnaireResponse in the payload.
 
 #### APIs
 {:.no_toc}
@@ -124,7 +125,7 @@ The following Argonaut Questionnaire artifacts are used in this transaction:
 
 To initiate an  adaptive questionnaire:
 
-`POST [base]/QuestionnaireResponse/[id]/$next-q`
+`POST [base]/Questionnaire/[id]/$next-q`
 
 {% include examplebutton.html example="example-aq-initiate" b_title="Example: $next-q Operation Initiates Adaptive Questionnaire and Returns First Group Item" %}
 
@@ -135,9 +136,9 @@ To initiate an  adaptive questionnaire:
 
 {% include img-narrow.html img="aw-step2.jpg" %}
 
-Client renders/stores/processes the item and gets the next group item by POSTing the operation $next-q to the service Questionnaire instance endpoint and supplying a1 in the QR and q1 in the contained Q.  As result of the operation, the Server updates the QR and returns it to the Client.
+Client renders/stores/processes the item and gets the next group item by POSTing the operation $next-q to the service Questionnaire instance endpoint and supplying a1 in the QR and q1 in the contained Q.  As result of the operation, the Service updates the QR and returns it to the Client.
 
-The Server identifies the adaptive questionnaire group item by the contained Questionnaire `definiton` element may add intermediate and cumulative score to the QR based on the preceding item(s) and updates the contained Questionnaire with the next question.  This process step is repeated until the adaptive questionnaire is done or the Questionnaire has timed out (footnote?) or another error has occured.
+The Service identifies the adaptive questionnaire group item by the contained Questionnaire `definiton` element may add intermediate and cumulative score to the QR based on the preceding item(s) and updates the contained Questionnaire with the next question.  This process step is repeated until the adaptive questionnaire is done or the Questionnaire has timed out (footnote?) or another error has occured.
 
 
 #### APIs
@@ -154,7 +155,7 @@ The following Argonaut Questionnaire artifacts are used in this transaction:
 
 To initiate an  adaptive questionnaire:
 
-`POST [base]/QuestionnaireResponse/[id]/$next-q`
+`POST [base]/Questionnaire/[id]/$next-q`
 
 {% include examplebutton.html example="example-aq-next1" b_title="Example: $next-q Operation Returns Next Question" %}
 
@@ -167,7 +168,7 @@ To initiate an  adaptive questionnaire:
 {% include img-narrow.html img="aw-step3.jpg" %}
 
 
-The Client renders, stores the  question-answer pair and optionally the previous scores and gets the next item group as described above.  When the adaptive questionnaire is  successfully completed, the Server updates the QR with intermediate and cumulative scores, updates status to ‘complete’ and returns it to the Client.  The status of ‘complete’ is a signal to the Client that the adaptive Questionnaire is done!
+The Client renders, stores the  question-answer pair and optionally the previous scores and gets the next item group as described above.  When the adaptive questionnaire is  successfully completed, the Service updates the QR with intermediate and cumulative scores, updates status to ‘complete’ and returns it to the Client.  The status of ‘complete’ is a signal to the Client that the adaptive Questionnaire is done!
 
 #### APIs
 {:.no_toc}
@@ -183,7 +184,7 @@ The following Argonaut Questionnaire artifacts are used in this transaction:
 
 To initiate an  adaptive questionnaire:
 
-`POST [base]/QuestionnaireResponse/[id]/$next-q`
+`POST [base]/Questionnaire/[id]/$next-q`
 
 {% include examplebutton.html example="example-aq-done" b_title="Example: $next-q Operation Returns Completed Adaptive Questionnaire" %}
 

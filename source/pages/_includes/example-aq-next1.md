@@ -1,18 +1,11 @@
 **request**
 
-`POST [base]/QuestionnaireResponse/questionnaire-example-adaptive-sampler/$next-q`
+`POST [base]/Questionnaire/questionnaire-example-adaptive-sampler/$next-q`
 
 **payload**
 
 ~~~
-{
-  "resourceType": "Parameters",
-  "id": "next-question-example-next1",
-  "parameter": [
-    {
-    "name": "qr-in",
-    "resource": {
-      "resourceType": "QuestionnaireResponse",
+{"resourceType": "QuestionnaireResponse",
       "id": "questionnaireresponse-example-adaptive-sampler",
       "meta": {
         "profile": [
@@ -76,9 +69,6 @@
      ]
     }
   }
- ]
-}
-
 ~~~
 
 **response**

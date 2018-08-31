@@ -342,6 +342,7 @@
               "valueUri": "StructureDefinition-q.html"
             }
           ],
+          "example": false,
           "name": "Argonaut_Q_Profile",
           "sourceReference": {
             "reference": "StructureDefinition/q"
@@ -360,6 +361,7 @@
               "valueUri": "StructureDefinition-qcvs.html"
             }
           ],
+          "example": false,
           "name": "Argonaut_QCVS_Profile",
           "sourceReference": {
             "reference": "StructureDefinition/qcvs"
@@ -378,6 +380,7 @@
               "valueUri": "StructureDefinition-qr.html"
             }
           ],
+          "example": false,
           "name": "Argonaut_QR_Profile",
           "sourceReference": {
             "reference": "StructureDefinition/qr"
@@ -396,6 +399,7 @@
               "valueUri": "StructureDefinition-aq.html"
             }
           ],
+          "example": false,
           "name": "Argonaut_Adaptive_Q_Profile",
           "sourceReference": {
             "reference": "StructureDefinition/aq"
@@ -414,6 +418,7 @@
               "valueUri": "StructureDefinition-aqr.html"
             }
           ],
+          "example": false,
           "name": "Argonaut_Adaptive_QR_Profile",
           "sourceReference": {
             "reference": "StructureDefinition/aqr"
@@ -425,13 +430,6 @@
   "page": {
     "source": "index.md",
     "title": "Argonaut Questionnaire Homepage",
-    "kind": "page",
-    "page": [
-      {
-        "source": "_includes/toc.md",
-        "title": "Argonaut Questionnaire Table of Contents",
-        "kind": "page"
-      }
-    ]
+    "kind": "page"
   }
 }
