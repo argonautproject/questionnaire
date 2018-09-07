@@ -5,9 +5,6 @@ active: home
 topofpage: true
 ---
 
-{% include publish-box.html %}
-
-
 <!-- TOC  the css styling for this is \pages\assets\css\project.css under 'markdown-toc'-->
 
 * Do not remove this line (it will not be displayed)
@@ -67,20 +64,25 @@ there is clearly a need for a common form standard with a focus on simple assess
 
 </div>
 
-
 </div>
 
 ## Actors
 
+1. **Adaptive Questionnaire Service**:  A System that is capable of providing questions in response to requests and contains logic for determination of the next question and calculation of the score for an [Adaptive Questionnaire].  For this Implementation Guide, this service is treated as a **“[Black Box]”**.
+1. **[Argonaut Adaptive Questionnaire Profile]**
+1. **[Argonaut Adaptive QuestionnaireResponse Profile]**
 1. **[Argonaut Questionnaire Profile]**
 1. **[Argonaut QuestionnaireResponse Profile]**
 1. **"[Assessment-Bank]"**[^1]: A form repository for the collection of the assessments. It is accessible to both the providers and form editors as a FHIR Questionnaire endpoint.
 1. (Optionally) **"[Answer-Bank]"**[^2]: A repository for the collection of the completed assessments ('answers'). It is accessible to the providers  as a FHIR QuestionnaireResponse endpoint.  It may be internal or external to the **[Provider EHR]**.
-1. **[Provider EHR]**[^3]: The System that is capable of retrieving, rendering and displaying the assessment to a subject or a provider to fill out.  
-1. **Form-filler**: The software application interacting with the user to get answers for a questionnaire.
 1. **Form Author/Editor**: A system or person authorized to create update and deprecate assessments forms.
+1. **Form-filler**: The software application interacting with the user to get answers for a questionnaire.  This is also known as the Client and may be a:
+    - Provider EHR
+    - Patient Portal ([SMART on FHIR]])App
+    - Third Party ([SMART on FHIR]) App
 1. **Practitioner**: A healthcare provider authorized to administer the assessment to a subject.
 1. **Provider administrator**: A practitioner or staff member authorized to fill out an assessment on behalf of a subject or with input from a subject.
+1. **[Provider EHR]**[^3]: The System that is capable of retrieving, rendering and displaying the assessment to a subject or a provider to fill out.  
 1. **Subject**: The patient or individual who is the focus of the assessment.  For example, a patient.
 
 
