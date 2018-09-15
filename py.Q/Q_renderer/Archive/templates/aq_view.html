@@ -4,36 +4,68 @@
 
 {% block content %}
 
-<!-- select Q --->
-
-{% include 'q_menu.html' %}
-
-<!-- end select Q --->
-<!-- as form --->
-<a href="{{ url_for("q_view") }}"><strong>Questionnaire presented as Form</strong></a>
-<!-- end as form  -->
-
-<p>{{intro|safe}}</p>
-
-<a href="{{ url_for("interim_aqr") }}"><strong>See Current state of Adaptive Questionnaire Response</strong></a>
-<br /><br />
+<p>{{session['intro']|safe}}</p>
 
 {%if j %}
+<figure>
+  <img src="static/images/bbox_to_client.png" style="height:123px; width:500px;">
+ <figcaption style="padding-left: 150;">
+   Service returns question {{session['q_num'] + 1}}</a>
+ </figcaption>
+</figure>
+<figure>
+  <img src="static/images/client_update.png" style="height:123px; width:500px;">
+ <figcaption style="padding-left: 150;">
+   Render and display question {{session['q_num'] + 1}}</a>
+ </figcaption>
+</figure>
+  <!-- ******** update Questionnaire with next answer **********-->
+<div style="background-color:#e6f2ff;">
+<form action='{{url_for('update_aqr') }}' method='POST'>
 
-<form action='{{url_for('aq_view') }}' method='POST'>
-
-  <!-- ********next question assuming no nesting **********-->
-<em>{{name}}</em>
   <ol style = 'list-style-type: none;'>
    <h3>
     {% include 'questions.html' %} <!-- 'j' == item -->
   </h3>
   </ol>
-  <!-- *********end root level******-->
-    <input type="submit" value="Get Next Question" style="color:blue;font-size:150%;"/>
+  <br/>
+</div>
 
+  <!-- ======== post to server =========-->
+  <br />
+  <input type="submit" value="Click Here to update QuestionnaireResponse with answer to question {{session['q_num'] + 1}}" style="color:blue;font-size:150%;"/>
+
+
+
+  {% else %}
+
+
+  <h3>Question {{session['q_num']}} Answered</h3>
+
+  <!-- ======== post to server =========-->
+
+  <form action='{{url_for('aq_view') }}' method='POST'>
+
+   <img src="static/images/client_to_bbox.png" style="height:123px;
+     width:500px;">
+   <br/>
+  <input type="submit" value="Click Here to 'POST' to Argonaut Adaptive Questionnaire Service" style="color:blue;font-size:150%;"/>
+  {% endif %}
 
 </form>
-{% endif %}
+
+
+
+<hr />
+
+<h3>Current State of QuestionnaireResponse</h3>
+
+<p>Narrative:</p>
+{{narr|safe}}
+
+<pre style="white-space: pre-wrap;">
+{{aqr}}
+</pre>
+
 
 {% endblock %}

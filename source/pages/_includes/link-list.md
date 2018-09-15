@@ -23,7 +23,7 @@
 [expansion]: {{site.data.fhir.path}}valueset.html#expansion "The list of codes that are actually in the value set under a given set of conditions ("extension")"
 [FHIR RESTful API]: {{site.data.fhir.path}}http.html
 [FHIR RESTful search API]: {{site.data.fhir.path}}search.html
-[FHIR Version 3.0.1]: {{site.data.fhir.path}}
+[FHIR Version 3.0.1]: {{site.data.fhir.path}}index.html
 [four uses cases]: http://argonautwiki.hl7.org/images/4/4c/Argonaut_UseCasesV1.pdf
 [LOINC]: http://loinc.org
 [Must Support]: {{site.data.fhir.uscore}}/guidance.html#must-support

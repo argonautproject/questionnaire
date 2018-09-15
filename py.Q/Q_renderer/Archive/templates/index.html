@@ -9,5 +9,17 @@
 
 <!-- end select Q --->
 
+
+{% with messages = get_flashed_messages() %}
+        {% if messages %}
+           <ul>
+              {% for message in messages %}
+              <h3 style="color:red;">{{ message }}</h3>
+              {% endfor %}
+           </ul>
+        {% endif %}
+{% endwith %}
+
+
 {% endblock %}
 <!-- ******** end root level**********-->

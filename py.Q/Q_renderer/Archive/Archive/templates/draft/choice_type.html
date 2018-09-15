@@ -1,0 +1,5 @@
+{% if k.valueCoding %}
+   <input type='radio' value='{{k.valueCoding.display}}' name='{{j.text}}' />{{ k.valueCoding.display}}<br />
+{% else %}
+    <input type='radio' value='{{k.valueString}}' name='{{j.text}}' />{{ k.valueString}}<br />
+{% endif %}

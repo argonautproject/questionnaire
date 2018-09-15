@@ -3,7 +3,7 @@
 <!-- Q content -->
 
 <form action='{{url_for('a_bank') }}' method='POST'>
-<input type="submit" value="Post Answers to Answer Bank">
+<input type="submit" value="Questionniare Complete!...Click here to POST Answers to Answer Bank" style="color:blue;font-size:150%;">
 </form>
 
 
@@ -12,10 +12,8 @@
 {{qr.text.div|safe}}
 
 <hr />
-<h4>Score = {{t_score}}</h4> <!--makes this a hidden question -->
-<hr />
 <h3>Resulting QuestionnaireResponse</h3>
-<pre>
+<pre style="white-space: pre-wrap;">
 {{qr_string}}
 </pre>
 

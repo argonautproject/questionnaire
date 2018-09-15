@@ -4,38 +4,25 @@
 
 {% block content %}
 
-<!-- select Q --->
-
-{% include 'q_menu.html' %}
-
-<!-- end select Q --->
-
-
 <!-- Q content -->
 
 <!-- Q  views  -->
 {% if q %}
-<a href="{{ ref_server }}Questionnaire/{{q.id}}">Questionnaire as XML</a>
+<a href="{{session['form_url']}}">Questionnaire as XML</a>
 <br />
 <a href="{{ url_for("qjson_view") }}">Questionnaire as JSON</a>
 <br />
 <!-- end  Q  views  -->
 <!--  as AQ  -->
 <br />
-<!-- if not housing -->
-
-{% if q.title != 'Housing Questions' %}
-  <a href="{{ url_for("aq_view") }}"><strong>Questionnaire presented as Adaptive Questionnaire</strong></a>
-{% endif %}
-
-<!-- end as AQ  -->
-
-
 
 <h3>{{q.title}}</h3>
-<hr />
+
+<p><em>NOTE: These examples are for educational and testing purposes, see the form copyright statement and do not redistribute without expressed permission from the form author.</em>
+</p>
 <p><i>Copyright information: {{q.copyright|safe}}</i></p>
-<br /><br />
+<hr />
+
 <form action='{{url_for('qr_view') }}' method='POST'>
 
 <ol style = 'list-style-type: none;'>

@@ -87,6 +87,8 @@ Extensions:
 
 ### Examples
 
+*NOTE: These examples are for educational and testing purposes, see the form copyright statement and do not redistribute without expressed permission from the form author.*
+
 <!-- {% raw %} {% include list-simple-questionnaires.xhtml %}{% endraw %} -->
 - [Sampler](Questionnaire-questionnaire-example-sampler.html) - a Sample form using all the supported question types
 - [PHQ-9](Questionnaire-questionnaire-example-phq9.html) - An example demonstrating the use of *contained* value sets for answer choices, decimal scores associated with each value within the valueset, the *hidden* extension to indicate that provider instruction should not be displayed to the end user.

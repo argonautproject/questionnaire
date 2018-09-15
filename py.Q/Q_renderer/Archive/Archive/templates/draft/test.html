@@ -1,0 +1,33 @@
+
+<!-- select Q --->
+
+{% block content %}
+
+
+  <p>
+    This application uses the <i>{{ref_server_name}}</i> FHIR reference implementation at <code>{{ref_server}}</code> as the Assessment Bank.</p>
+
+<h4>Example Questionnaires available for testing:</h4>
+  <form name="view_options" action="" method="post">
+    <input type="radio" name="view_option" id="static" value="" required> Rand 36-Item Health Survey 1.0</input><br>
+    <input type="radio" name="view_option" id="adaptive" value="" required> The Alcohol Use Disorder Identification Test (AUDIT) Form</input><br>
+
+<!-- ===========not available in 3.4 for AWS deployment
+  <br />
+  <input type="checkbox" name="translate" value="es"> Spanish Language Version
+  <br />  <br />
+-->
+<form action='{{ url_for('aqr_view') }}' method='POST'>
+
+  <input type="submit" value="Adaptive Questionnaire View"> Adaptive Questionnaire Version
+</form>
+
+  <input type="submit" value="Choose Example Questionnaire">
+</form>
+
+
+<!-- end select Q --->
+
+
+{% endblock %}
+<!-- ******** end root level**********-->

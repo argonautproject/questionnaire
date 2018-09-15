@@ -1,0 +1,248 @@
+{
+  "resourceType" : "ImplementationGuide",
+  "id" : "ig",
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
+    "valueString" : "/Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
+    "valueString" : "/Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
+    "valueString" : "/Users/ehaas/Documents/FHIR/IG-Template2/framework"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
+    "valueString" : "/Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/pages"
+  }],
+  "url" : "http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig",
+  "version" : "0.0.0",
+  "name" : "Argonaut Questionnaire",
+  "status" : "draft",
+  "experimental" : true,
+  "publisher" : "Argonaut Project",
+  "packageId" : "argonaut.questionnaire",
+  "license" : "CC0-1.0",
+  "fhirVersion" : "3.0.1",
+  "dependsOn" : [{
+    "id" : "uscore",
+    "uri" : "http://hl7.org/fhir/us/core",
+    "packageId" : "hl7.fhir.us.core",
+    "version" : "1.1.0"
+  }],
+  "definition" : {
+    "package" : [{
+      "id" : "p1",
+      "name" : "base"
+    }],
+    "resource" : [{
+      "reference" : {
+        "reference" : "QuestionnaireResponse/questionnaireresponse-example-sampler"
+      },
+      "exampleBoolean" : true,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "Questionnaire/questionnaire-example-sampler"
+      },
+      "exampleBoolean" : true,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "QuestionnaireResponse/questionnaireresponse-example-phq9"
+      },
+      "exampleBoolean" : true,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "Questionnaire/questionnaire-example-phq9"
+      },
+      "exampleBoolean" : true,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "QuestionnaireResponse/questionnaireresponse-example-housing"
+      },
+      "exampleBoolean" : true,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "Questionnaire/questionnaire-example-housing"
+      },
+      "exampleBoolean" : true,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "QuestionnaireResponse/questionnaireresponse-example-dast"
+      },
+      "exampleBoolean" : true,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "Questionnaire/questionnaire-example-dast"
+      },
+      "exampleBoolean" : true,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "QuestionnaireResponse/questionnaireresponse-example-audit"
+      },
+      "exampleBoolean" : true,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "Questionnaire/questionnaire-example-audit"
+      },
+      "exampleBoolean" : true,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "QuestionnaireResponse/questionnaireresponse-example-asq3"
+      },
+      "exampleBoolean" : true,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "Questionnaire/questionnaire-example-asq3"
+      },
+      "exampleBoolean" : true,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/extension-timelimit"
+      },
+      "exampleBoolean" : false,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/extension-score"
+      },
+      "exampleBoolean" : false,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "SearchParameter/Questionnaire-context-value"
+      },
+      "exampleBoolean" : false,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "SearchParameter/Questionnaire-context-type"
+      },
+      "exampleBoolean" : false,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/aqr"
+      },
+      "exampleBoolean" : false,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/aq"
+      },
+      "exampleBoolean" : false,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/qr"
+      },
+      "exampleBoolean" : false,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/qcvs"
+      },
+      "exampleBoolean" : false,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/q"
+      },
+      "exampleBoolean" : false,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "OperationDefinition/next-q"
+      },
+      "exampleBoolean" : false,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "CapabilityStatement/server"
+      },
+      "exampleBoolean" : false,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "CapabilityStatement/client"
+      },
+      "exampleBoolean" : false,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "CapabilityStatement/assessmentbank"
+      },
+      "exampleBoolean" : false,
+      "package" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "CapabilityStatement/answerbank"
+      },
+      "exampleBoolean" : false,
+      "package" : "p1"
+    }],
+    "page" : {
+      "nameUrl" : "index.md",
+      "title" : "Argonaut Questionnaire Homepage",
+      "generation" : "html"
+    },
+    "parameter" : [{
+      "code" : "apply-business-version",
+      "value" : "0.0.0"
+    },
+    {
+      "code" : "html-template",
+      "value" : "html-template.html"
+    },
+    {
+      "code" : "generate-json",
+      "value" : "true"
+    },
+    {
+      "code" : "generate-xml",
+      "value" : "true"
+    },
+    {
+      "code" : "generate-turtle",
+      "value" : "true"
+    }]
+  }
+}

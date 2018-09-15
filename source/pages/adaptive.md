@@ -98,7 +98,7 @@ The following sections provide a detailed description of workflow and API guidan
 
 <!-- Discovery of Adaptive Questionnaire --->
 
-### Adaptive Questionnaire Discovery
+### Discovery of Adaptive Questionnaire
 
 The discovery and preview of the service's adaptive questionnaire is out of scope.  It may be done out of band or using the standard [FHIR RESTful search API]. ( todo - discuss )
 
