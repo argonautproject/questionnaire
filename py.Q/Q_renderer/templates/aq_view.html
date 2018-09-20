@@ -28,7 +28,6 @@
     {% include 'questions.html' %} <!-- 'j' == item -->
   </h3>
   </ol>
-  <br/>
 </div>
 
   <!-- ======== post to server =========-->
@@ -59,6 +58,9 @@
 <hr />
 
 <h3>Current State of QuestionnaireResponse</h3>
+
+<p>step = {{ session['step'] }}</p>
+<img src="static/images/Slide{{ session['step'] }}.png">
 
 <p>Narrative:</p>
 {{narr|safe}}

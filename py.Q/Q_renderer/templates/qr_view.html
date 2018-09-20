@@ -6,7 +6,13 @@
 <input type="submit" value="Questionniare Complete!...Click here to POST Answers to Answer Bank" style="color:blue;font-size:150%;">
 </form>
 
+{% if not adaptive %}
+<h3>Calculated Score = {{session['t_score']}} (standard deviation = {{session['std_dev']}})</h3>
+{% else %}
 
+<img src="static/images/Slide{{ session['step'] }}.png">
+
+{% endif %}
 <!-- just show the narrative -->
 
 {{qr.text.div|safe}}
