@@ -1,0 +1,320 @@
+﻿Argonaut Questionnaire : Validation Results
+=========================================
+
+err = 272, warn = 144, info = 0
+Generated Thu Oct 25 11:30:43 PDT 2018. FHIR version 3.6.0 for 3.0.1
+
+ Build Errors : 49 / 0
+ /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/ASQ3 : 0 / 0
+ /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/ASQ3Response : 8 / 0
+ /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/AUDIT : 7 / 2
+ /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/AUDITResponse : 12 / 8
+ /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/DAST : 30 / 11
+ /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/DASTResponse : 25 / 4
+ /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/Housing : 2 / 0
+ /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/HousingResponse : 6 / 0
+ /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/PHQ9 : 4 / 3
+ /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/PHQ9Response : 15 / 9
+ /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/Sampler : 0 / 13
+ /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/SamplerResponse : 24 / 0
+ /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/StructureDefinition-extension-score : 0 / 0
+ /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/StructureDefinition-extension-timelimit : 0 / 0
+ /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/capabilitystatement-answerbank : 0 / 5
+ /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/capabilitystatement-assessmentbank : 0 / 5
+ /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/capabilitystatement-client : 1 / 2
+ /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/capabilitystatement-server : 0 / 5
+ /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/ig : 2 / 0
+ /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/operationdefinition-next-q : 0 / 0
+ /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/searchparameter-questionnaire-context-type : 0 / 0
+ /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/searchparameter-questionnaire-context-value : 0 / 0
+ Argonaut_Adaptive_QR_Profile : 0 / 1
+ Argonaut_Adaptive_Q_Profile : 0 / 1
+ Argonaut_QCVS_Profile : 0 / 1
+ Argonaut_QR_Profile : 0 / 1
+ Argonaut_Q_Profile : 0 / 1
+</table>
+== n/a ==
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/toc.html#/html/head/body/div/div/div/div/div/div/p/a at Line 300, column 15: The link 'SearchParameter-questionnaire-context-value.html' for "SearchParameter Questionnaire Context Value" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/toc.html#/html/head/body/div/div/div/div/div/div/p/a at Line 302, column 15: The link 'SearchParameter-questionnaire-context-type.html' for "SearchParameter Questionnaire Context Type" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/toc.html#/html/head/body/div/div/div/div/div/div/p/a at Line 314, column 11: The link 'security.html' for "Security" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/CapabilityStatement-assessmentbank.html#/html/head/body/div/div/div/div/div/div/div/ol/li/a at Line 324, column 25: The link 'http://hl7.org/fhir/us/core/1.0.1/index.html' for "US Core Implementation Guide" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/CapabilityStatement-answerbank.html#/html/head/body/div/div/div/div/div/div/div/ol/li/a at Line 324, column 25: The link 'http://hl7.org/fhir/us/core/1.0.1/index.html' for "US Core Implementation Guide" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/adaptive.html#/html/head/body/div/div/div/div/div/div/ul/li/ul/li/a at Line 274, column 12: The link '#discovery-of-adaptive-questionnaire' for "Discovery of Adaptive Questionnaire" cannot be resolved (valid targets: [page-content-wrapper, markdown-toc-questionnaireresponse-and-scoring, example-aq-initiate, publish-box, assumptions-and-precondition, markdown-toc-introduction, usage, segment-post-footer, markdown-toc-discovery-of-adaptive-questionnaire, markdown-toc-initiate-adaptive-questionnaire, adaptive-questionnaire-is-complete, stripe, segment-footer, questionnaireresponse-and-scoring, apis-1, introduction, markdown-toc-example-scenario, apis-2, example-scenario, workflow-steps, segment-header, markdown-toc-assumptions-and-precondition, markdown-toc-adaptive-questionnaire-is-complete, example-aq-next1, example-aq-next2, markdown-toc, markdown-toc-workflow-steps, initiate-adaptive-questionnaire, open-issues-for-discussion, apis, example-aq-done, usage-1, back-to-top, markdown-toc-open-issues-for-discussion, segment-navbar, usage-2, get-next-question, markdown-toc-get-next-question, project-status])
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/CapabilityStatement-server.html#/html/head/body/div/div/div/div/div/div/div/ol/li/a at Line 324, column 25: The link 'http://hl7.org/fhir/us/core/1.0.1/index.html' for "US Core Implementation Guide" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 1285, column 18: The link '' for "Capabilitystatement Answerbank " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 1315, column 18: The link '' for "Capabilitystatement Assessmentbank " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 1345, column 18: The link '' for "Capabilitystatement Client " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 1375, column 18: The link '' for "Capabilitystatement Server " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 1405, column 18: The link '' for "Implementationguide Ig " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 1435, column 18: The link '' for "Operationdefinition Next Q " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 1465, column 18: The link '' for "Questionnaire Questionnaire Example Asq3 " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 1495, column 18: The link '' for "Questionnaire Questionnaire Example Audit " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 1525, column 18: The link '' for "Questionnaire Questionnaire Example Dast " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 1555, column 18: The link '' for "Questionnaire Questionnaire Example Housing " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 1585, column 18: The link '' for "Questionnaire Questionnaire Example Phq9 " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 1615, column 18: The link '' for "Questionnaire Questionnaire Example Sampler " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 1645, column 18: The link '' for "Questionnaireresponse Questionnaireresponse Example Asq3 " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 1675, column 18: The link '' for "Questionnaireresponse Questionnaireresponse Example Audit " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 1705, column 18: The link '' for "Questionnaireresponse Questionnaireresponse Example Dast " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 1735, column 18: The link '' for "Questionnaireresponse Questionnaireresponse Example Housing " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 1765, column 18: The link '' for "Questionnaireresponse Questionnaireresponse Example Phq9 " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 1795, column 18: The link '' for "Questionnaireresponse Questionnaireresponse Example Sampler " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 1825, column 18: The link '' for "Searchparameter Questionnaire Context Type " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 1855, column 18: The link '' for "Searchparameter Questionnaire Context Value " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 1893, column 18: The link '' for "Structuredefinition Aq " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 1931, column 18: The link '' for "Structuredefinition Aqr " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 1969, column 18: The link '' for "Structuredefinition Extension Score " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 2007, column 18: The link '' for "Structuredefinition Extension Timelimit " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 2045, column 18: The link '' for "Structuredefinition Q " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 2083, column 18: The link '' for "Structuredefinition Qcvs " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 2121, column 18: The link '' for "Structuredefinition Qr " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 2151, column 18: The link '' for "Adaptive " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 2169, column 18: The link '' for "All Examples " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 2187, column 18: The link '' for "Capstatements " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 2205, column 18: The link '' for "Downloads " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 2223, column 18: The link '' for "Guidance " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 2241, column 18: The link '' for "History " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 2259, column 18: The link '' for "Html_pages " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 2277, column 18: The link '' for "Index " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 2295, column 18: The link '' for "Operations " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 2313, column 18: The link '' for "Profiles " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 2331, column 18: The link '' for "Searchparameters " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 2349, column 18: The link '' for "Static " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 2367, column 18: The link '' for "Terminology " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 2385, column 18: The link '' for "Toc " cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/html_pages.html#/html/head/body/div/div/div/div/div/div/a at Line 2403, column 18: The link '' for "Todo " cannot be resolved
+== /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/ASQ3.json ==
+== /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/ASQ3Response.json ==
+ERROR: QuestionnaireResponse/questionnaireresponse-example-asq3: QuestionnaireResponse.item: No response answer found for required item G1
+ERROR: QuestionnaireResponse/questionnaireresponse-example-asq3: QuestionnaireResponse.item: No response answer found for required item G2
+ERROR: QuestionnaireResponse/questionnaireresponse-example-asq3: QuestionnaireResponse.item: Structural Error: items are out of order
+ERROR: QuestionnaireResponse/questionnaireresponse-example-asq3: QuestionnaireResponse.subject: Unable to resolve resource 'Patient/subject1'
+ERROR: QuestionnaireResponse/questionnaireresponse-example-asq3: QuestionnaireResponse.context: Unable to resolve resource 'Encounter/encounter1'
+ERROR: QuestionnaireResponse/questionnaireresponse-example-asq3: QuestionnaireResponse.authored: if a date has a time, it must have a timezone
+ERROR: QuestionnaireResponse/questionnaireresponse-example-asq3: QuestionnaireResponse.author: Unable to resolve resource 'Practitioner/prov-admin1'
+ERROR: QuestionnaireResponse/questionnaireresponse-example-asq3: QuestionnaireResponse.source: Unable to resolve resource 'Patient/subject1'
+== /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/AUDIT.json ==
+ERROR: Questionnaire/questionnaire-example-audit: Questionnaire.contained[1].expansion.timestamp: if a date has a time, it must have a timezone
+ERROR: Questionnaire/questionnaire-example-audit: Questionnaire.contained[2].expansion.timestamp: if a date has a time, it must have a timezone
+ERROR: Questionnaire/questionnaire-example-audit: Questionnaire.contained[3].expansion.timestamp: if a date has a time, it must have a timezone
+WARNING: Questionnaire/questionnaire-example-audit: Questionnaire.code: The display "The Alcohol Use Disorder Identification Test (AUDIT)" is not a valid display for the code {http://loinc.org}72110-0 - should be one of ["Alcohol Use Disorder Identification Test [AUDIT]",]
+ERROR: Questionnaire/questionnaire-example-audit: Questionnaire.item.item[2].code: Error null validating Coding
+WARNING: Questionnaire/questionnaire-example-audit: Questionnaire.item.item[2].prefix: value should not start or finish with whitespace
+ERROR: Questionnaire/questionnaire-example-audit: Questionnaire.item.item[3].options.contained.expansion.timestamp: if a date has a time, it must have a timezone
+ERROR: Questionnaire/questionnaire-example-audit: Questionnaire.item.item[10].options.contained.expansion.timestamp: if a date has a time, it must have a timezone
+ERROR: Questionnaire/questionnaire-example-audit: Questionnaire.item.item[2].options.contained.expansion.timestamp: if a date has a time, it must have a timezone
+== /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/AUDITResponse.json ==
+ERROR: QuestionnaireResponse/questionnaireresponse-example-audit: QuestionnaireResponse.item: No response answer found for required item g1
+ERROR: QuestionnaireResponse/questionnaireresponse-example-audit: QuestionnaireResponse.item: Structural Error: items are out of order
+ERROR: QuestionnaireResponse/questionnaireresponse-example-audit: QuestionnaireResponse.item: No response found for required item g1.d
+ERROR: QuestionnaireResponse/questionnaireresponse-example-audit: QuestionnaireResponse.item.item.answer: The value provided (http://loinc.org::LA6270-8) is not in the options value set in the questionnaire
+ERROR: QuestionnaireResponse/questionnaireresponse-example-audit: QuestionnaireResponse.item.item.answer: The value provided (http://loinc.org::LA15694-5) is not in the options value set in the questionnaire
+ERROR: QuestionnaireResponse/questionnaireresponse-example-audit: QuestionnaireResponse.item.item.answer: The value provided (http://snomed.info/sct::373067005) is not in the options value set in the questionnaire
+ERROR: QuestionnaireResponse/questionnaireresponse-example-audit: QuestionnaireResponse.item: No response found for required item g1.d2
+ERROR: QuestionnaireResponse/questionnaireresponse-example-audit: QuestionnaireResponse.subject: Unable to resolve resource 'Patient/subject1'
+ERROR: QuestionnaireResponse/questionnaireresponse-example-audit: QuestionnaireResponse.context: Unable to resolve resource 'Encounter/encounter1'
+ERROR: QuestionnaireResponse/questionnaireresponse-example-audit: QuestionnaireResponse.authored: if a date has a time, it must have a timezone
+ERROR: QuestionnaireResponse/questionnaireresponse-example-audit: QuestionnaireResponse.author: Unable to resolve resource 'Practitioner/prov-admin1'
+ERROR: QuestionnaireResponse/questionnaireresponse-example-audit: QuestionnaireResponse.source: Unable to resolve resource 'Patient/subject1'
+WARNING: QuestionnaireResponse/questionnaireresponse-example-audit: QuestionnaireResponse.item.item[2].answer.valueCoding: The display "Never" is not a valid display for the code {http://loinc.org}LA6270-8 - should be one of []
+WARNING: QuestionnaireResponse/questionnaireresponse-example-audit: QuestionnaireResponse.item.item[3].answer.valueCoding: The display "Never" is not a valid display for the code {http://loinc.org}LA6270-8 - should be one of []
+WARNING: QuestionnaireResponse/questionnaireresponse-example-audit: QuestionnaireResponse.item.item[4].answer.valueCoding: The display "Never" is not a valid display for the code {http://loinc.org}LA6270-8 - should be one of []
+WARNING: QuestionnaireResponse/questionnaireresponse-example-audit: QuestionnaireResponse.item.item[6].answer.valueCoding: The display "Never" is not a valid display for the code {http://loinc.org}LA6270-8 - should be one of []
+WARNING: QuestionnaireResponse/questionnaireresponse-example-audit: QuestionnaireResponse.item.item[7].answer.valueCoding: The display "Never" is not a valid display for the code {http://loinc.org}LA6270-8 - should be one of []
+WARNING: QuestionnaireResponse/questionnaireresponse-example-audit: QuestionnaireResponse.item.item[8].answer.valueCoding: The display "1 or 2" is not a valid display for the code {http://loinc.org}LA15694-5 - should be one of []
+WARNING: QuestionnaireResponse/questionnaireresponse-example-audit: QuestionnaireResponse.item.item[9].answer.valueCoding: The display "Never" is not a valid display for the code {http://loinc.org}LA6270-8 - should be one of []
+WARNING: QuestionnaireResponse/questionnaireresponse-example-audit: QuestionnaireResponse.item.item[10].answer.valueCoding: The display "Never" is not a valid display for the code {http://loinc.org}LA6270-8 - should be one of []
+== /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/DAST.json ==
+WARNING: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[2].prefix: value should not start or finish with whitespace
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[2].option[1].valueCoding: Error null validating Coding
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[2].option[1].valueCoding.code: The code 'LA 32-8 ' is not valid (whitespace rules)
+WARNING: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[2].option[2].valueCoding: The display "Yes" is not a valid display for the code {http://loinc.org}LA33-6 - should be one of []
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[2].option[2].valueCoding.code: The code 'LA33-6 ' is not valid (whitespace rules)
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[3].option[1].valueCoding: Error null validating Coding
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[3].option[1].valueCoding.code: The code 'LA 32-8 ' is not valid (whitespace rules)
+WARNING: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[3].option[2].valueCoding: The display "Yes" is not a valid display for the code {http://loinc.org}LA33-6 - should be one of []
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[3].option[2].valueCoding.code: The code 'LA33-6 ' is not valid (whitespace rules)
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[4].option[1].valueCoding: Error null validating Coding
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[4].option[1].valueCoding.code: The code 'LA 32-8 ' is not valid (whitespace rules)
+WARNING: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[4].option[2].valueCoding: The display "Yes" is not a valid display for the code {http://loinc.org}LA33-6 - should be one of []
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[4].option[2].valueCoding.code: The code 'LA33-6 ' is not valid (whitespace rules)
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[5].option[1].valueCoding: Error null validating Coding
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[5].option[1].valueCoding.code: The code 'LA 32-8 ' is not valid (whitespace rules)
+WARNING: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[5].option[2].valueCoding: The display "Yes" is not a valid display for the code {http://loinc.org}LA33-6 - should be one of []
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[5].option[2].valueCoding.code: The code 'LA33-6 ' is not valid (whitespace rules)
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[6].option[1].valueCoding: Error null validating Coding
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[6].option[1].valueCoding.code: The code 'LA 32-8 ' is not valid (whitespace rules)
+WARNING: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[6].option[2].valueCoding: The display "Yes" is not a valid display for the code {http://loinc.org}LA33-6 - should be one of []
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[6].option[2].valueCoding.code: The code 'LA33-6 ' is not valid (whitespace rules)
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[7].option[1].valueCoding: Error null validating Coding
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[7].option[1].valueCoding.code: The code 'LA 32-8 ' is not valid (whitespace rules)
+WARNING: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[7].option[2].valueCoding: The display "Yes" is not a valid display for the code {http://loinc.org}LA33-6 - should be one of []
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[7].option[2].valueCoding.code: The code 'LA33-6 ' is not valid (whitespace rules)
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[8].option[1].valueCoding: Error null validating Coding
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[8].option[1].valueCoding.code: The code 'LA 32-8 ' is not valid (whitespace rules)
+WARNING: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[8].option[2].valueCoding: The display "Yes" is not a valid display for the code {http://loinc.org}LA33-6 - should be one of []
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[8].option[2].valueCoding.code: The code 'LA33-6 ' is not valid (whitespace rules)
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[9].option[1].valueCoding: Error null validating Coding
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[9].option[1].valueCoding.code: The code 'LA 32-8 ' is not valid (whitespace rules)
+WARNING: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[9].option[2].valueCoding: The display "Yes" is not a valid display for the code {http://loinc.org}LA33-6 - should be one of []
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[9].option[2].valueCoding.code: The code 'LA33-6 ' is not valid (whitespace rules)
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[10].option[1].valueCoding: Error null validating Coding
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[10].option[1].valueCoding.code: The code 'LA 32-8 ' is not valid (whitespace rules)
+WARNING: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[10].option[2].valueCoding: The display "Yes" is not a valid display for the code {http://loinc.org}LA33-6 - should be one of []
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[10].option[2].valueCoding.code: The code 'LA33-6 ' is not valid (whitespace rules)
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[11].option[1].valueCoding: Error null validating Coding
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[11].option[1].valueCoding.code: The code 'LA 32-8 ' is not valid (whitespace rules)
+WARNING: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[11].option[2].valueCoding: The display "Yes" is not a valid display for the code {http://loinc.org}LA33-6 - should be one of []
+ERROR: Questionnaire/questionnaire-example-dast: Questionnaire.item[1].item[11].option[2].valueCoding.code: The code 'LA33-6 ' is not valid (whitespace rules)
+== /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/DASTResponse.json ==
+ERROR: QuestionnaireResponse/questionnaireresponse-example-dast: QuestionnaireResponse.item: No response answer found for required item g1
+ERROR: QuestionnaireResponse/questionnaireresponse-example-dast: QuestionnaireResponse.item: Structural Error: items are out of order
+ERROR: QuestionnaireResponse/questionnaireresponse-example-dast: QuestionnaireResponse.item: No response found for required item g1.d
+ERROR: QuestionnaireResponse/questionnaireresponse-example-dast: QuestionnaireResponse: No response found for required item g2
+ERROR: QuestionnaireResponse/questionnaireresponse-example-dast: QuestionnaireResponse.subject: Unable to resolve resource 'Patient/subject1'
+ERROR: QuestionnaireResponse/questionnaireresponse-example-dast: QuestionnaireResponse.context: Unable to resolve resource 'Encounter/encounter1'
+ERROR: QuestionnaireResponse/questionnaireresponse-example-dast: QuestionnaireResponse.authored: if a date has a time, it must have a timezone
+ERROR: QuestionnaireResponse/questionnaireresponse-example-dast: QuestionnaireResponse.author: Unable to resolve resource 'Practitioner/prov-admin1'
+ERROR: QuestionnaireResponse/questionnaireresponse-example-dast: QuestionnaireResponse.source: Unable to resolve resource 'Patient/subject1'
+WARNING: QuestionnaireResponse/questionnaireresponse-example-dast: QuestionnaireResponse.item.item[1].answer.valueCoding: The display "Yes" is not a valid display for the code {http://loinc.org}LA33-6 - should be one of []
+ERROR: QuestionnaireResponse/questionnaireresponse-example-dast: QuestionnaireResponse.item.item[1].answer.valueCoding.code: The code 'LA33-6 ' is not valid (whitespace rules)
+ERROR: QuestionnaireResponse/questionnaireresponse-example-dast: QuestionnaireResponse.item.item[2].answer.valueCoding: Error null validating Coding
+ERROR: QuestionnaireResponse/questionnaireresponse-example-dast: QuestionnaireResponse.item.item[2].answer.valueCoding.code: The code 'LA 32-8 ' is not valid (whitespace rules)
+WARNING: QuestionnaireResponse/questionnaireresponse-example-dast: QuestionnaireResponse.item.item[3].answer.valueCoding: The display "Yes" is not a valid display for the code {http://loinc.org}LA33-6 - should be one of []
+ERROR: QuestionnaireResponse/questionnaireresponse-example-dast: QuestionnaireResponse.item.item[3].answer.valueCoding.code: The code 'LA33-6 ' is not valid (whitespace rules)
+WARNING: QuestionnaireResponse/questionnaireresponse-example-dast: QuestionnaireResponse.item.item[4].answer.valueCoding: The display "Yes" is not a valid display for the code {http://loinc.org}LA33-6 - should be one of []
+ERROR: QuestionnaireResponse/questionnaireresponse-example-dast: QuestionnaireResponse.item.item[4].answer.valueCoding.code: The code 'LA33-6 ' is not valid (whitespace rules)
+ERROR: QuestionnaireResponse/questionnaireresponse-example-dast: QuestionnaireResponse.item.item[5].answer.valueCoding: Error null validating Coding
+ERROR: QuestionnaireResponse/questionnaireresponse-example-dast: QuestionnaireResponse.item.item[5].answer.valueCoding.code: The code 'LA 32-8 ' is not valid (whitespace rules)
+ERROR: QuestionnaireResponse/questionnaireresponse-example-dast: QuestionnaireResponse.item.item[6].answer.valueCoding: Error null validating Coding
+ERROR: QuestionnaireResponse/questionnaireresponse-example-dast: QuestionnaireResponse.item.item[6].answer.valueCoding.code: The code 'LA 32-8 ' is not valid (whitespace rules)
+ERROR: QuestionnaireResponse/questionnaireresponse-example-dast: QuestionnaireResponse.item.item[7].answer.valueCoding: Error null validating Coding
+ERROR: QuestionnaireResponse/questionnaireresponse-example-dast: QuestionnaireResponse.item.item[7].answer.valueCoding.code: The code 'LA 32-8 ' is not valid (whitespace rules)
+WARNING: QuestionnaireResponse/questionnaireresponse-example-dast: QuestionnaireResponse.item.item[8].answer.valueCoding: The display "Yes" is not a valid display for the code {http://loinc.org}LA33-6 - should be one of []
+ERROR: QuestionnaireResponse/questionnaireresponse-example-dast: QuestionnaireResponse.item.item[8].answer.valueCoding.code: The code 'LA33-6 ' is not valid (whitespace rules)
+ERROR: QuestionnaireResponse/questionnaireresponse-example-dast: QuestionnaireResponse.item.item[9].answer.valueCoding: Error null validating Coding
+ERROR: QuestionnaireResponse/questionnaireresponse-example-dast: QuestionnaireResponse.item.item[9].answer.valueCoding.code: The code 'LA 32-8 ' is not valid (whitespace rules)
+ERROR: QuestionnaireResponse/questionnaireresponse-example-dast: QuestionnaireResponse.item.item[10].answer.valueCoding: Error null validating Coding
+ERROR: QuestionnaireResponse/questionnaireresponse-example-dast: QuestionnaireResponse.item.item[10].answer.valueCoding.code: The code 'LA 32-8 ' is not valid (whitespace rules)
+== /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/Housing.json ==
+ERROR: Questionnaire/questionnaire-example-housing: Questionnaire.item.item[3].option[8].extension[url='http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive']: Extension modifier mismatch: the extension element is not labelled as a modifier, but the underlying extension is
+ERROR: Questionnaire/questionnaire-example-housing: Questionnaire.item.item[3].option[8].extension[url='http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive']: The Extension 'http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive' must not be used as an extension (it's a modifierExtension)
+== /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/HousingResponse.json ==
+ERROR: QuestionnaireResponse/questionnaireresponse-example-housing: QuestionnaireResponse.item: Structural Error: items are out of order
+ERROR: QuestionnaireResponse/questionnaireresponse-example-housing: QuestionnaireResponse.subject: Unable to resolve resource 'Patient/subject1'
+ERROR: QuestionnaireResponse/questionnaireresponse-example-housing: QuestionnaireResponse.context: Unable to resolve resource 'Encounter/encounter1'
+ERROR: QuestionnaireResponse/questionnaireresponse-example-housing: QuestionnaireResponse.authored: if a date has a time, it must have a timezone
+ERROR: QuestionnaireResponse/questionnaireresponse-example-housing: QuestionnaireResponse.author: Unable to resolve resource 'Practitioner/prov-admin1'
+ERROR: QuestionnaireResponse/questionnaireresponse-example-housing: QuestionnaireResponse.source: Unable to resolve resource 'Patient/subject1'
+== /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/PHQ9.json ==
+ERROR: Questionnaire/questionnaire-example-phq9: Questionnaire.contained[1].expansion.timestamp: if a date has a time, it must have a timezone
+ERROR: Questionnaire/questionnaire-example-phq9: Questionnaire.contained[2].expansion.timestamp: if a date has a time, it must have a timezone
+WARNING: Questionnaire/questionnaire-example-phq9: Questionnaire.code: The display "PHQ-9 quick depression assessment panel" is not a valid display for the code {http://loinc.org}44249-1 - should be one of ["PHQ-9 quick depression assessment panel [Reported.PHQ]",]
+WARNING: Questionnaire/questionnaire-example-phq9: Questionnaire.item[1].item[2].prefix: value should not start or finish with whitespace
+WARNING: Questionnaire/questionnaire-example-phq9: Questionnaire.item[1].item[11].text: value should not start or finish with whitespace
+ERROR: Questionnaire/questionnaire-example-phq9: Questionnaire.item[2].item.options.contained.expansion.timestamp: if a date has a time, it must have a timezone
+ERROR: Questionnaire/questionnaire-example-phq9: Questionnaire.item[1].item[2].options.contained.expansion.timestamp: if a date has a time, it must have a timezone
+== /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/PHQ9Response.json ==
+ERROR: QuestionnaireResponse/questionnaireresponse-example-phq9: QuestionnaireResponse.item: No response answer found for required item g1
+ERROR: QuestionnaireResponse/questionnaireresponse-example-phq9: QuestionnaireResponse.item: Structural Error: items are out of order
+ERROR: QuestionnaireResponse/questionnaireresponse-example-phq9: QuestionnaireResponse.item: No response found for required item g1.d
+ERROR: QuestionnaireResponse/questionnaireresponse-example-phq9: QuestionnaireResponse.item.item.answer: The value provided (http://loinc.org::LA6571-9) is not in the options value set in the questionnaire
+ERROR: QuestionnaireResponse/questionnaireresponse-example-phq9: QuestionnaireResponse.item.item.answer: The value provided (http://loinc.org::LA6570-1) is not in the options value set in the questionnaire
+ERROR: QuestionnaireResponse/questionnaireresponse-example-phq9: QuestionnaireResponse.item: No response found for required item g1.q3
+ERROR: QuestionnaireResponse/questionnaireresponse-example-phq9: QuestionnaireResponse.item.item.answer: The value provided (http://loinc.org::LA6568-5) is not in the options value set in the questionnaire
+ERROR: QuestionnaireResponse/questionnaireresponse-example-phq9: QuestionnaireResponse.item.item.answer: The value provided (http://loinc.org::LA6569-3) is not in the options value set in the questionnaire
+ERROR: QuestionnaireResponse/questionnaireresponse-example-phq9: QuestionnaireResponse.item: No response answer found for required item g2
+ERROR: QuestionnaireResponse/questionnaireresponse-example-phq9: QuestionnaireResponse.item.item.answer: The value provided (http://loinc.org::LA6575-0) is not in the options value set in the questionnaire
+ERROR: QuestionnaireResponse/questionnaireresponse-example-phq9: QuestionnaireResponse.subject: Unable to resolve resource 'Patient/subject1'
+ERROR: QuestionnaireResponse/questionnaireresponse-example-phq9: QuestionnaireResponse.context: Unable to resolve resource 'Encounter/encounter1'
+ERROR: QuestionnaireResponse/questionnaireresponse-example-phq9: QuestionnaireResponse.authored: if a date has a time, it must have a timezone
+ERROR: QuestionnaireResponse/questionnaireresponse-example-phq9: QuestionnaireResponse.author: Unable to resolve resource 'Practitioner/prov-admin1'
+ERROR: QuestionnaireResponse/questionnaireresponse-example-phq9: QuestionnaireResponse.source: Unable to resolve resource 'Patient/subject1'
+WARNING: QuestionnaireResponse/questionnaireresponse-example-phq9: QuestionnaireResponse.item[1].item[1].answer.valueCoding: The display "Not at all" is not a valid display for the code {http://loinc.org}LA6568-5 - should be one of []
+WARNING: QuestionnaireResponse/questionnaireresponse-example-phq9: QuestionnaireResponse.item[1].item[2].answer.valueCoding: The display "Several days" is not a valid display for the code {http://loinc.org}LA6569-3 - should be one of []
+WARNING: QuestionnaireResponse/questionnaireresponse-example-phq9: QuestionnaireResponse.item[1].item[3].answer.valueCoding: The display "Not at all" is not a valid display for the code {http://loinc.org}LA6568-5 - should be one of []
+WARNING: QuestionnaireResponse/questionnaireresponse-example-phq9: QuestionnaireResponse.item[1].item[4].answer.valueCoding: The display "Nearly every day" is not a valid display for the code {http://loinc.org}LA6571-9 - should be one of []
+WARNING: QuestionnaireResponse/questionnaireresponse-example-phq9: QuestionnaireResponse.item[1].item[5].answer.valueCoding: The display "More than half the days" is not a valid display for the code {http://loinc.org}LA6570-1 - should be one of []
+WARNING: QuestionnaireResponse/questionnaireresponse-example-phq9: QuestionnaireResponse.item[1].item[6].answer.valueCoding: The display "Nearly every day" is not a valid display for the code {http://loinc.org}LA6571-9 - should be one of []
+WARNING: QuestionnaireResponse/questionnaireresponse-example-phq9: QuestionnaireResponse.item[1].item[7].answer.valueCoding: The display "More than half the days" is not a valid display for the code {http://loinc.org}LA6570-1 - should be one of []
+WARNING: QuestionnaireResponse/questionnaireresponse-example-phq9: QuestionnaireResponse.item[1].item[8].answer.valueCoding: The display "Not at all" is not a valid display for the code {http://loinc.org}LA6568-5 - should be one of []
+WARNING: QuestionnaireResponse/questionnaireresponse-example-phq9: QuestionnaireResponse.item[2].item.answer.valueCoding: The display "Very difficult" is not a valid display for the code {http://loinc.org}LA6575-0 - should be one of []
+== /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/Sampler.json ==
+WARNING: Questionnaire/questionnaire-example-sampler: Questionnaire.item[1].item.text: value should not start or finish with whitespace
+WARNING: Questionnaire/questionnaire-example-sampler: Questionnaire.item[2].prefix: value should not start or finish with whitespace
+WARNING: Questionnaire/questionnaire-example-sampler: Questionnaire.item[3].prefix: value should not start or finish with whitespace
+WARNING: Questionnaire/questionnaire-example-sampler: Questionnaire.item[4].prefix: value should not start or finish with whitespace
+WARNING: Questionnaire/questionnaire-example-sampler: Questionnaire.item[5].prefix: value should not start or finish with whitespace
+WARNING: Questionnaire/questionnaire-example-sampler: Questionnaire.item[6].prefix: value should not start or finish with whitespace
+WARNING: Questionnaire/questionnaire-example-sampler: Questionnaire.item[7].prefix: value should not start or finish with whitespace
+WARNING: Questionnaire/questionnaire-example-sampler: Questionnaire.item[8].prefix: value should not start or finish with whitespace
+WARNING: Questionnaire/questionnaire-example-sampler: Questionnaire.item[9].prefix: value should not start or finish with whitespace
+WARNING: Questionnaire/questionnaire-example-sampler: Questionnaire.item[10].prefix: value should not start or finish with whitespace
+WARNING: Questionnaire/questionnaire-example-sampler: Questionnaire.item[11].prefix: value should not start or finish with whitespace
+WARNING: Questionnaire/questionnaire-example-sampler: Questionnaire.item[12].prefix: value should not start or finish with whitespace
+WARNING: Questionnaire/questionnaire-example-sampler: Questionnaire.item[13].prefix: value should not start or finish with whitespace
+== /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/SamplerResponse.json ==
+ERROR: QuestionnaireResponse/questionnaireresponse-example-sampler: QuestionnaireResponse: Structural Error: items are out of order
+ERROR: QuestionnaireResponse/questionnaireresponse-example-sampler: QuestionnaireResponse: No response found for required item g1
+ERROR: QuestionnaireResponse/questionnaireresponse-example-sampler: QuestionnaireResponse.item: No response answer found for required item g2
+ERROR: QuestionnaireResponse/questionnaireresponse-example-sampler: QuestionnaireResponse.item: No response answer found for required item g3
+ERROR: QuestionnaireResponse/questionnaireresponse-example-sampler: QuestionnaireResponse.item: No response answer found for required item g4
+ERROR: QuestionnaireResponse/questionnaireresponse-example-sampler: QuestionnaireResponse.item: No response answer found for required item g5
+ERROR: QuestionnaireResponse/questionnaireresponse-example-sampler: QuestionnaireResponse.item: No response answer found for required item g6
+ERROR: QuestionnaireResponse/questionnaireresponse-example-sampler: QuestionnaireResponse.item: No response answer found for required item g7
+ERROR: QuestionnaireResponse/questionnaireresponse-example-sampler: QuestionnaireResponse.item: No response answer found for required item g8
+ERROR: QuestionnaireResponse/questionnaireresponse-example-sampler: QuestionnaireResponse.item: No response answer found for required item g9
+ERROR: QuestionnaireResponse/questionnaireresponse-example-sampler: QuestionnaireResponse.item: No response answer found for required item g10
+ERROR: QuestionnaireResponse/questionnaireresponse-example-sampler: QuestionnaireResponse.item: No response answer found for required item g11
+ERROR: QuestionnaireResponse/questionnaireresponse-example-sampler: QuestionnaireResponse.item: No response answer found for required item g12
+ERROR: QuestionnaireResponse/questionnaireresponse-example-sampler: QuestionnaireResponse: No response found for required item g13
+ERROR: QuestionnaireResponse/questionnaireresponse-example-sampler: QuestionnaireResponse.subject: Unable to resolve resource 'Patient/subject1'
+ERROR: QuestionnaireResponse/questionnaireresponse-example-sampler: QuestionnaireResponse.context: Unable to resolve resource 'Encounter/encounter1'
+ERROR: QuestionnaireResponse/questionnaireresponse-example-sampler: QuestionnaireResponse.authored: if a date has a time, it must have a timezone
+ERROR: QuestionnaireResponse/questionnaireresponse-example-sampler: QuestionnaireResponse.author: Unable to resolve resource 'Practitioner/prov-admin1'
+ERROR: QuestionnaireResponse/questionnaireresponse-example-sampler: QuestionnaireResponse.source: Unable to resolve resource 'Patient/subject1'
+ERROR: QuestionnaireResponse/questionnaireresponse-example-sampler: QuestionnaireResponse.item[6].item.answer: The type of element valueBoolean is not known, which is illegal. Valid types at this point are decimal, integer, date, dateTime, time, string, uri, Coding, Quantity
+ERROR: QuestionnaireResponse/questionnaireresponse-example-sampler: QuestionnaireResponse.item[8].item.answer.valueDateTime: Not a valid date time
+ERROR: QuestionnaireResponse/questionnaireresponse-example-sampler: QuestionnaireResponse.item[8].item.answer.valueDateTime: if a date has a time, it must have a timezone
+ERROR: QuestionnaireResponse/questionnaireresponse-example-sampler: QuestionnaireResponse.item[8].item.answer.valueDateTime: Not a valid date/time (Invalid date/time format: "2018-07-26T01:58")
+ERROR: QuestionnaireResponse/questionnaireresponse-example-sampler: QuestionnaireResponse.item[9].item.answer.valueTime: Not a valid time
+== /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/StructureDefinition-extension-score.xml ==
+== /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/StructureDefinition-extension-timelimit.xml ==
+== /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/capabilitystatement-answerbank.xml ==
+WARNING: CapabilityStatement/answerbank: CapabilityStatement.format[1]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+WARNING: CapabilityStatement/answerbank: CapabilityStatement.format[2]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+WARNING: CapabilityStatement/answerbank: CapabilityStatement.patchFormat[1]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+WARNING: CapabilityStatement/answerbank: CapabilityStatement.patchFormat[2]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+WARNING: CapabilityStatement/answerbank: CapabilityStatement.patchFormat[3]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+== /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/capabilitystatement-assessmentbank.xml ==
+WARNING: CapabilityStatement/assessmentbank: CapabilityStatement.format[1]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+WARNING: CapabilityStatement/assessmentbank: CapabilityStatement.format[2]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+WARNING: CapabilityStatement/assessmentbank: CapabilityStatement.patchFormat[1]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+WARNING: CapabilityStatement/assessmentbank: CapabilityStatement.patchFormat[2]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+WARNING: CapabilityStatement/assessmentbank: CapabilityStatement.patchFormat[3]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+== /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/capabilitystatement-client.xml ==
+WARNING: CapabilityStatement/client: CapabilityStatement.format[1]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+WARNING: CapabilityStatement/client: CapabilityStatement.format[2]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+ERROR: CapabilityStatement/client: CapabilityStatement.profile: Unable to resolve resource 'http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/template-basic'
+== /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/capabilitystatement-server.xml ==
+WARNING: CapabilityStatement/server: CapabilityStatement.format[1]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+WARNING: CapabilityStatement/server: CapabilityStatement.format[2]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+WARNING: CapabilityStatement/server: CapabilityStatement.patchFormat[1]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+WARNING: CapabilityStatement/server: CapabilityStatement.patchFormat[2]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+WARNING: CapabilityStatement/server: CapabilityStatement.patchFormat[3]: ValueSet http://hl7.org/fhir/ValueSet/mimetypes not found
+== /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/ig.xml ==
+ERROR: ImplementationGuide/ig: ImplementationGuide.package.resource[15].sourceReference: Unable to resolve resource 'SearchParameter/questionnaire-context-value'
+ERROR: ImplementationGuide/ig: ImplementationGuide.package.resource[16].sourceReference: Unable to resolve resource 'SearchParameter/questionnaire-context-type'
+== /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/operationdefinition-next-q.xml ==
+== /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/searchparameter-questionnaire-context-type.xml ==
+== /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/searchparameter-questionnaire-context-value.xml ==
+== /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/profile-derived-qr-spreadsheet.xml ==
+WARNING: http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/aqr: Profiles SHOULD state the FHIR Version on which they are based
+== /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/profile-derived-q-spreadsheet.xml ==
+WARNING: http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/aq: Profiles SHOULD state the FHIR Version on which they are based
+== /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/profile-base-qcvs-spreadsheet.xml ==
+WARNING: http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs: Profiles SHOULD state the FHIR Version on which they are based
+== /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/profile-base-qr-spreadsheet.xml ==
+WARNING: http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr: Profiles SHOULD state the FHIR Version on which they are based
+== /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/profile-base-q-spreadsheet.xml ==
+WARNING: http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q: Profiles SHOULD state the FHIR Version on which they are based

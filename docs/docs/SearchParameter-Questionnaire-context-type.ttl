@@ -1,0 +1,38 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type> a fhir:SearchParameter;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Questionnaire-context-type"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: Questionnaire-context-type</p><p><b>url</b>: <a href=\"http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type\">http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type</a></p><p><b>name</b>: context-type</p><p><b>status</b>: draft</p><p><b>experimental</b>: false</p><p><b>date</b>: May 16, 2018, 3:49:01 PM</p><p><b>publisher</b>: Argonaut Project</p><p><b>code</b>: context-type</p><p><b>base</b>: Questionnaire</p><p><b>type</b>: token</p><p><b>description</b>: A type of use context assigned to the questionnaire. When searching for context should pair with [context-value](http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-value) parameter.</p><p><b>expression</b>: Questionnaire.useContext.code</p><p><b>xpath</b>: f:Questionnaire/f:useContext/f:code</p><p><b>xpathUsage</b>: normal</p></div>"
+  ];
+  fhir:SearchParameter.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type"];
+  fhir:SearchParameter.name [ fhir:value "context-type"];
+  fhir:SearchParameter.status [ fhir:value "draft"];
+  fhir:SearchParameter.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:SearchParameter.date [ fhir:value "2018-05-16T15:49:01+00:00"^^xsd:dateTime];
+  fhir:SearchParameter.publisher [ fhir:value "Argonaut Project"];
+  fhir:SearchParameter.code [ fhir:value "context-type"];
+  fhir:SearchParameter.base [
+     fhir:value "Questionnaire";
+     fhir:index 0
+  ];
+  fhir:SearchParameter.type [ fhir:value "token"];
+  fhir:SearchParameter.description [ fhir:value "A type of use context assigned to the questionnaire. When searching for context should pair with [context-value](http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-value) parameter."];
+  fhir:SearchParameter.expression [ fhir:value "Questionnaire.useContext.code"];
+  fhir:SearchParameter.xpath [ fhir:value "f:Questionnaire/f:useContext/f:code"];
+  fhir:SearchParameter.xpathUsage [ fhir:value "normal"] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

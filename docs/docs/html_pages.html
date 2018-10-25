@@ -1,0 +1,5186 @@
+﻿<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+   <meta charset="UTF-8"/>
+  <title>Argonaut Questionnaire</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Argonaut Questionnaire Implemenation Guide"/>
+<meta name="author" content="Argonaut Project"/>
+  <link rel="stylesheet" href="fhir.css"/>
+
+
+     <!-- Bootstrap core CSS -->
+
+     <!-- Latest compiled and minified CSS -->
+
+  <link rel="stylesheet" href="assets/css/bootstrap.css"/>
+  <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+  <link rel="stylesheet" href="assets/css/bootstrap-glyphicons.css"/>
+
+    <!-- Project extras -->
+  <link rel="stylesheet" href="assets/css/project.css"/>
+  <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+	<link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+
+
+
+
+    <!-- Favicons -->
+  <link sizes="144x144" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+  <link sizes="114x114" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+  <link sizes="72x72" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+  <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+
+
+<body markdown="1">
+  <!-- ?xml version="1.0" encoding="UTF-8"? -->
+<div id="segment-header" class="segment">
+    <!-- segment-header -->
+  <div class="container">  <!-- container -->
+
+  <!-- hl7 logo -->
+    <a no-external="true" href="http://hl7.org/fhir">
+      <img src="assets/images/fhir-logo-www.png" alt="FHIR Homepage" class="img-responsive logo"/>
+    </a>
+  <!-- end hl7 logo -->
+
+
+   <!-- org logo -->
+               <!-- <a id="your-logo" no-external="true" href="http://www.hl7.org">
+<img height="50" alt="visit the hl7 website" width="42" src="assets/images/hl7-logo.png"/>
+</a>
+
+================THIS IS FOR THE PROJECT LOGO AND URL =============== -->
+
+<a no-external="true" href="http://argonautwiki.hl7.org">
+<img src="assets/images/ArgonautProject_logo_black.png" alt="visit our website" class="img-responsive project-logo"/>
+</a>
+
+    <!-- end org logo -->
+
+
+      <div id="project-status" class="project-status">   <!-- ig title text -->
+
+      
+      <strong>Argonaut Questionnaire Implementation Guide CI Build</strong>
+      
+
+    </div>  <!-- end ig title text -->
+
+  </div>  <!-- end container -->
+  <div class="container">
+      <!-- container -->
+  </div>
+</div>
+  <!-- /segment-header -->
+
+
+
+    <!-- /container -->
+    <!-- /segment-breadcrumb -->
+
+
+<div id="page-content-wrapper">    <!-- page content wrapper -->
+  <div class="page-content">    <!-- page content -->
+    <div class="container">    <!-- container -->
+      <div class="row">    <!-- row -->
+       <div class="inner-wrapper">   <!-- inner-wrapper -->
+         <div class="col-12"><a name="0eee958e-3773-4b4b-91a1-7788c1ebc612">​</a>    <!-- col -->
+              <!-- content of page -->
+
+
+
+    <!-- ============CONTENT CONTENT=============== -->
+
+pagepath = html_pages.html
+<br/>
+
+
+
+<pre>
+#### Table of Contents
+{: nocount="true"}
+
+&nbsp;&nbsp;- 1 - [Home](index.html)
+&nbsp;&nbsp;- 2 - [Use Cases](guidance.html)
+&nbsp;&nbsp;&nbsp;&nbsp;- 2.1 - [Static Forms](static.html)
+&nbsp;&nbsp;&nbsp;&nbsp;- 2.2 - [Adaptive Forms](adaptive.html)
+&nbsp;&nbsp;- 3 - [Profiles and Extensions](profiles.html)
+&nbsp;&nbsp;&nbsp;&nbsp;- 3.1 - [StructureDefinition Aqr](StructureDefinition-aqr.html)
+&nbsp;&nbsp;&nbsp;&nbsp;- 3.2 - [StructureDefinition Aq](StructureDefinition-aq.html)
+&nbsp;&nbsp;&nbsp;&nbsp;- 3.3 - [StructureDefinition Qr](StructureDefinition-qr.html)
+&nbsp;&nbsp;&nbsp;&nbsp;- 3.4 - [StructureDefinition Qcvs](StructureDefinition-qcvs.html)
+&nbsp;&nbsp;&nbsp;&nbsp;- 3.5 - [StructureDefinition Q](StructureDefinition-q.html)
+&nbsp;&nbsp;&nbsp;&nbsp;- 3.6 - [StructureDefinition Extension Timelimit](StructureDefinition-extension-timelimit.html)
+&nbsp;&nbsp;&nbsp;&nbsp;- 3.7 - [StructureDefinition Extension Score](StructureDefinition-extension-score.html)
+&nbsp;&nbsp;- 4 - [Operations](operations.html)
+&nbsp;&nbsp;&nbsp;&nbsp;- 4.1 - [OperationDefinition Next Q](OperationDefinition-next-q.html)
+&nbsp;&nbsp;- 5 - [Terminology](terminology.html)
+&nbsp;&nbsp;- 6 - [Search Parameters](searchparameters.html)
+&nbsp;&nbsp;&nbsp;&nbsp;- 6.1 - [SearchParameter Questionnaire Context Value](SearchParameter-questionnaire-context-value.html)
+&nbsp;&nbsp;&nbsp;&nbsp;- 6.2 - [SearchParameter Questionnaire Context Type](SearchParameter-questionnaire-context-type.html)
+&nbsp;&nbsp;- 7 - [Capability Statements](capstatements.html)
+&nbsp;&nbsp;&nbsp;&nbsp;- 7.1 - [CapabilityStatement Server](CapabilityStatement-server.html)
+&nbsp;&nbsp;&nbsp;&nbsp;- 7.2 - [CapabilityStatement Client](CapabilityStatement-client.html)
+&nbsp;&nbsp;&nbsp;&nbsp;- 7.3 - [CapabilityStatement Assessmentbank](CapabilityStatement-assessmentbank.html)
+&nbsp;&nbsp;&nbsp;&nbsp;- 7.4 - [CapabilityStatement Answerbank](CapabilityStatement-answerbank.html)
+&nbsp;&nbsp;- 8 - [Security](security.html)
+&nbsp;&nbsp;- 9 - [Downloads](downloads.html)
+&nbsp;&nbsp;- 10 - [All Examples](all-examples.html)
+&nbsp;&nbsp;- 11 - [Table of Contents](toc.html)
+</pre>
+
+
+p = index.html{"title"=&gt;"Home", "label"=&gt;"0.0", "breadcrumb"=&gt;"<li><b>Home</b></li>"}
+<br/>
+
+pagepath = index.html
+<br/>
+p.title = Home
+<br/>
+p.label = 1
+<br/>
+p.breadcrumb = <pre><li><b>Home</b></li></pre>
+
+
+
+p = guidance.html{"title"=&gt;"Use Cases", "label"=&gt;"1.0", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><b>Use Cases</b></li>"}
+<br/>
+
+pagepath = guidance.html
+<br/>
+p.title = Use Cases
+<br/>
+p.label = 2
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><b>Use Cases</b></li></pre>
+
+
+
+p = static.html{"title"=&gt;"Static Forms", "label"=&gt;"1.1", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="guidance.html"><b>Use Cases</b></a></li><li><b>Static Forms</b></li>"}
+<br/>
+
+pagepath = static.html
+<br/>
+p.title = Static Forms
+<br/>
+p.label = 2.1
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="guidance.html"><b>Use Cases</b></a></li><li><b>Static Forms</b></li></pre>
+
+
+
+p = adaptive.html{"title"=&gt;"Adaptive Forms", "label"=&gt;"1.2", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="guidance.html"><b>Use Cases</b></a></li><li><b>Adaptive Forms</b></li>"}
+<br/>
+
+pagepath = adaptive.html
+<br/>
+p.title = Adaptive Forms
+<br/>
+p.label = 2.2
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="guidance.html"><b>Use Cases</b></a></li><li><b>Adaptive Forms</b></li></pre>
+
+
+
+p = profiles.html{"title"=&gt;"Profiles and Extensions", "label"=&gt;"2.0", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><b>Profiles and Extensions</b></li>"}
+<br/>
+
+pagepath = profiles.html
+<br/>
+p.title = Profiles and Extensions
+<br/>
+p.label = 3
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><b>Profiles and Extensions</b></li></pre>
+
+
+
+p = StructureDefinition-aqr.html{"title"=&gt;"StructureDefinition Aqr", "label"=&gt;"2.1", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Aqr</b></li>", "examples"=&gt;[]}
+<br/>
+
+pagepath = StructureDefinition-aqr.html
+<br/>
+p.title = StructureDefinition Aqr
+<br/>
+p.label = 3.1
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Aqr</b></li></pre>
+
+
+
+p = StructureDefinition-aqr.xml.html{"title"=&gt;"StructureDefinition Aqr - XML Representation", "label"=&gt;"2.1", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Aqr</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-aqr.xml.html
+<br/>
+p.title = StructureDefinition Aqr - XML Representation
+<br/>
+p.label = 3.1
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Aqr</b></li></pre>
+
+
+
+p = StructureDefinition-aqr.json.html{"title"=&gt;"StructureDefinition Aqr - JSON Representation", "label"=&gt;"2.1", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Aqr</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-aqr.json.html
+<br/>
+p.title = StructureDefinition Aqr - JSON Representation
+<br/>
+p.label = 3.1
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Aqr</b></li></pre>
+
+
+
+p = StructureDefinition-aqr.ttl.html{"title"=&gt;"StructureDefinition Aqr - TTL Representation", "label"=&gt;"2.1", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Aqr</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-aqr.ttl.html
+<br/>
+p.title = StructureDefinition Aqr - TTL Representation
+<br/>
+p.label = 3.1
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Aqr</b></li></pre>
+
+
+
+p = StructureDefinition-aqr-definitions.html{"title"=&gt;"StructureDefinition Aqr - Definitions", "label"=&gt;"2.1", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Aqr</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-aqr-definitions.html
+<br/>
+p.title = StructureDefinition Aqr - Definitions
+<br/>
+p.label = 3.1
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Aqr</b></li></pre>
+
+
+
+p = StructureDefinition-aqr-mappings.html{"title"=&gt;"StructureDefinition Aqr - mappings", "label"=&gt;"2.1", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Aqr</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-aqr-mappings.html
+<br/>
+p.title = StructureDefinition Aqr - mappings
+<br/>
+p.label = 3.1
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Aqr</b></li></pre>
+
+
+
+p = StructureDefinition-aq.html{"title"=&gt;"StructureDefinition Aq", "label"=&gt;"2.2", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Aq</b></li>", "examples"=&gt;[]}
+<br/>
+
+pagepath = StructureDefinition-aq.html
+<br/>
+p.title = StructureDefinition Aq
+<br/>
+p.label = 3.2
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Aq</b></li></pre>
+
+
+
+p = StructureDefinition-aq.xml.html{"title"=&gt;"StructureDefinition Aq - XML Representation", "label"=&gt;"2.2", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Aq</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-aq.xml.html
+<br/>
+p.title = StructureDefinition Aq - XML Representation
+<br/>
+p.label = 3.2
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Aq</b></li></pre>
+
+
+
+p = StructureDefinition-aq.json.html{"title"=&gt;"StructureDefinition Aq - JSON Representation", "label"=&gt;"2.2", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Aq</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-aq.json.html
+<br/>
+p.title = StructureDefinition Aq - JSON Representation
+<br/>
+p.label = 3.2
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Aq</b></li></pre>
+
+
+
+p = StructureDefinition-aq.ttl.html{"title"=&gt;"StructureDefinition Aq - TTL Representation", "label"=&gt;"2.2", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Aq</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-aq.ttl.html
+<br/>
+p.title = StructureDefinition Aq - TTL Representation
+<br/>
+p.label = 3.2
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Aq</b></li></pre>
+
+
+
+p = StructureDefinition-aq-definitions.html{"title"=&gt;"StructureDefinition Aq - Definitions", "label"=&gt;"2.2", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Aq</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-aq-definitions.html
+<br/>
+p.title = StructureDefinition Aq - Definitions
+<br/>
+p.label = 3.2
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Aq</b></li></pre>
+
+
+
+p = StructureDefinition-aq-mappings.html{"title"=&gt;"StructureDefinition Aq - mappings", "label"=&gt;"2.2", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Aq</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-aq-mappings.html
+<br/>
+p.title = StructureDefinition Aq - mappings
+<br/>
+p.label = 3.2
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Aq</b></li></pre>
+
+
+
+p = StructureDefinition-qr.html{"title"=&gt;"StructureDefinition Qr", "label"=&gt;"2.3", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Qr</b></li>", "examples"=&gt;[]}
+<br/>
+
+pagepath = StructureDefinition-qr.html
+<br/>
+p.title = StructureDefinition Qr
+<br/>
+p.label = 3.3
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Qr</b></li></pre>
+
+
+
+p = StructureDefinition-qr.xml.html{"title"=&gt;"StructureDefinition Qr - XML Representation", "label"=&gt;"2.3", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Qr</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-qr.xml.html
+<br/>
+p.title = StructureDefinition Qr - XML Representation
+<br/>
+p.label = 3.3
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Qr</b></li></pre>
+
+
+
+p = StructureDefinition-qr.json.html{"title"=&gt;"StructureDefinition Qr - JSON Representation", "label"=&gt;"2.3", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Qr</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-qr.json.html
+<br/>
+p.title = StructureDefinition Qr - JSON Representation
+<br/>
+p.label = 3.3
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Qr</b></li></pre>
+
+
+
+p = StructureDefinition-qr.ttl.html{"title"=&gt;"StructureDefinition Qr - TTL Representation", "label"=&gt;"2.3", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Qr</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-qr.ttl.html
+<br/>
+p.title = StructureDefinition Qr - TTL Representation
+<br/>
+p.label = 3.3
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Qr</b></li></pre>
+
+
+
+p = StructureDefinition-qr-definitions.html{"title"=&gt;"StructureDefinition Qr - Definitions", "label"=&gt;"2.3", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Qr</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-qr-definitions.html
+<br/>
+p.title = StructureDefinition Qr - Definitions
+<br/>
+p.label = 3.3
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Qr</b></li></pre>
+
+
+
+p = StructureDefinition-qr-mappings.html{"title"=&gt;"StructureDefinition Qr - mappings", "label"=&gt;"2.3", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Qr</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-qr-mappings.html
+<br/>
+p.title = StructureDefinition Qr - mappings
+<br/>
+p.label = 3.3
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Qr</b></li></pre>
+
+
+
+p = StructureDefinition-qcvs.html{"title"=&gt;"StructureDefinition Qcvs", "label"=&gt;"2.4", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Qcvs</b></li>", "examples"=&gt;[]}
+<br/>
+
+pagepath = StructureDefinition-qcvs.html
+<br/>
+p.title = StructureDefinition Qcvs
+<br/>
+p.label = 3.4
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Qcvs</b></li></pre>
+
+
+
+p = StructureDefinition-qcvs.xml.html{"title"=&gt;"StructureDefinition Qcvs - XML Representation", "label"=&gt;"2.4", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Qcvs</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-qcvs.xml.html
+<br/>
+p.title = StructureDefinition Qcvs - XML Representation
+<br/>
+p.label = 3.4
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Qcvs</b></li></pre>
+
+
+
+p = StructureDefinition-qcvs.json.html{"title"=&gt;"StructureDefinition Qcvs - JSON Representation", "label"=&gt;"2.4", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Qcvs</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-qcvs.json.html
+<br/>
+p.title = StructureDefinition Qcvs - JSON Representation
+<br/>
+p.label = 3.4
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Qcvs</b></li></pre>
+
+
+
+p = StructureDefinition-qcvs.ttl.html{"title"=&gt;"StructureDefinition Qcvs - TTL Representation", "label"=&gt;"2.4", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Qcvs</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-qcvs.ttl.html
+<br/>
+p.title = StructureDefinition Qcvs - TTL Representation
+<br/>
+p.label = 3.4
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Qcvs</b></li></pre>
+
+
+
+p = StructureDefinition-qcvs-definitions.html{"title"=&gt;"StructureDefinition Qcvs - Definitions", "label"=&gt;"2.4", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Qcvs</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-qcvs-definitions.html
+<br/>
+p.title = StructureDefinition Qcvs - Definitions
+<br/>
+p.label = 3.4
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Qcvs</b></li></pre>
+
+
+
+p = StructureDefinition-qcvs-mappings.html{"title"=&gt;"StructureDefinition Qcvs - mappings", "label"=&gt;"2.4", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Qcvs</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-qcvs-mappings.html
+<br/>
+p.title = StructureDefinition Qcvs - mappings
+<br/>
+p.label = 3.4
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Qcvs</b></li></pre>
+
+
+
+p = StructureDefinition-q.html{"title"=&gt;"StructureDefinition Q", "label"=&gt;"2.5", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Q</b></li>", "examples"=&gt;[]}
+<br/>
+
+pagepath = StructureDefinition-q.html
+<br/>
+p.title = StructureDefinition Q
+<br/>
+p.label = 3.5
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Q</b></li></pre>
+
+
+
+p = StructureDefinition-q.xml.html{"title"=&gt;"StructureDefinition Q - XML Representation", "label"=&gt;"2.5", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Q</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-q.xml.html
+<br/>
+p.title = StructureDefinition Q - XML Representation
+<br/>
+p.label = 3.5
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Q</b></li></pre>
+
+
+
+p = StructureDefinition-q.json.html{"title"=&gt;"StructureDefinition Q - JSON Representation", "label"=&gt;"2.5", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Q</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-q.json.html
+<br/>
+p.title = StructureDefinition Q - JSON Representation
+<br/>
+p.label = 3.5
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Q</b></li></pre>
+
+
+
+p = StructureDefinition-q.ttl.html{"title"=&gt;"StructureDefinition Q - TTL Representation", "label"=&gt;"2.5", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Q</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-q.ttl.html
+<br/>
+p.title = StructureDefinition Q - TTL Representation
+<br/>
+p.label = 3.5
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Q</b></li></pre>
+
+
+
+p = StructureDefinition-q-definitions.html{"title"=&gt;"StructureDefinition Q - Definitions", "label"=&gt;"2.5", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Q</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-q-definitions.html
+<br/>
+p.title = StructureDefinition Q - Definitions
+<br/>
+p.label = 3.5
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Q</b></li></pre>
+
+
+
+p = StructureDefinition-q-mappings.html{"title"=&gt;"StructureDefinition Q - mappings", "label"=&gt;"2.5", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Q</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-q-mappings.html
+<br/>
+p.title = StructureDefinition Q - mappings
+<br/>
+p.label = 3.5
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Q</b></li></pre>
+
+
+
+p = StructureDefinition-extension-timelimit.html{"title"=&gt;"StructureDefinition Extension Timelimit", "label"=&gt;"2.6", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Extension Timelimit</b></li>", "examples"=&gt;[]}
+<br/>
+
+pagepath = StructureDefinition-extension-timelimit.html
+<br/>
+p.title = StructureDefinition Extension Timelimit
+<br/>
+p.label = 3.6
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Extension Timelimit</b></li></pre>
+
+
+
+p = StructureDefinition-extension-timelimit.xml.html{"title"=&gt;"StructureDefinition Extension Timelimit - XML Representation", "label"=&gt;"2.6", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Extension Timelimit</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-extension-timelimit.xml.html
+<br/>
+p.title = StructureDefinition Extension Timelimit - XML Representation
+<br/>
+p.label = 3.6
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Extension Timelimit</b></li></pre>
+
+
+
+p = StructureDefinition-extension-timelimit.json.html{"title"=&gt;"StructureDefinition Extension Timelimit - JSON Representation", "label"=&gt;"2.6", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Extension Timelimit</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-extension-timelimit.json.html
+<br/>
+p.title = StructureDefinition Extension Timelimit - JSON Representation
+<br/>
+p.label = 3.6
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Extension Timelimit</b></li></pre>
+
+
+
+p = StructureDefinition-extension-timelimit.ttl.html{"title"=&gt;"StructureDefinition Extension Timelimit - TTL Representation", "label"=&gt;"2.6", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Extension Timelimit</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-extension-timelimit.ttl.html
+<br/>
+p.title = StructureDefinition Extension Timelimit - TTL Representation
+<br/>
+p.label = 3.6
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Extension Timelimit</b></li></pre>
+
+
+
+p = StructureDefinition-extension-timelimit-definitions.html{"title"=&gt;"StructureDefinition Extension Timelimit - Definitions", "label"=&gt;"2.6", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Extension Timelimit</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-extension-timelimit-definitions.html
+<br/>
+p.title = StructureDefinition Extension Timelimit - Definitions
+<br/>
+p.label = 3.6
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Extension Timelimit</b></li></pre>
+
+
+
+p = StructureDefinition-extension-timelimit-mappings.html{"title"=&gt;"StructureDefinition Extension Timelimit - mappings", "label"=&gt;"2.6", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Extension Timelimit</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-extension-timelimit-mappings.html
+<br/>
+p.title = StructureDefinition Extension Timelimit - mappings
+<br/>
+p.label = 3.6
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Extension Timelimit</b></li></pre>
+
+
+
+p = StructureDefinition-extension-score.html{"title"=&gt;"StructureDefinition Extension Score", "label"=&gt;"2.7", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Extension Score</b></li>", "examples"=&gt;[]}
+<br/>
+
+pagepath = StructureDefinition-extension-score.html
+<br/>
+p.title = StructureDefinition Extension Score
+<br/>
+p.label = 3.7
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Extension Score</b></li></pre>
+
+
+
+p = StructureDefinition-extension-score.xml.html{"title"=&gt;"StructureDefinition Extension Score - XML Representation", "label"=&gt;"2.7", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Extension Score</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-extension-score.xml.html
+<br/>
+p.title = StructureDefinition Extension Score - XML Representation
+<br/>
+p.label = 3.7
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Extension Score</b></li></pre>
+
+
+
+p = StructureDefinition-extension-score.json.html{"title"=&gt;"StructureDefinition Extension Score - JSON Representation", "label"=&gt;"2.7", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Extension Score</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-extension-score.json.html
+<br/>
+p.title = StructureDefinition Extension Score - JSON Representation
+<br/>
+p.label = 3.7
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Extension Score</b></li></pre>
+
+
+
+p = StructureDefinition-extension-score.ttl.html{"title"=&gt;"StructureDefinition Extension Score - TTL Representation", "label"=&gt;"2.7", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Extension Score</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-extension-score.ttl.html
+<br/>
+p.title = StructureDefinition Extension Score - TTL Representation
+<br/>
+p.label = 3.7
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Extension Score</b></li></pre>
+
+
+
+p = StructureDefinition-extension-score-definitions.html{"title"=&gt;"StructureDefinition Extension Score - Definitions", "label"=&gt;"2.7", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Extension Score</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-extension-score-definitions.html
+<br/>
+p.title = StructureDefinition Extension Score - Definitions
+<br/>
+p.label = 3.7
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Extension Score</b></li></pre>
+
+
+
+p = StructureDefinition-extension-score-mappings.html{"title"=&gt;"StructureDefinition Extension Score - mappings", "label"=&gt;"2.7", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Extension Score</b></li>"}
+<br/>
+
+pagepath = StructureDefinition-extension-score-mappings.html
+<br/>
+p.title = StructureDefinition Extension Score - mappings
+<br/>
+p.label = 3.7
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="profiles.html"><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Extension Score</b></li></pre>
+
+
+
+p = operations.html{"title"=&gt;"Operations", "label"=&gt;"3.0", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><b>Operations</b></li>"}
+<br/>
+
+pagepath = operations.html
+<br/>
+p.title = Operations
+<br/>
+p.label = 4
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><b>Operations</b></li></pre>
+
+
+
+p = OperationDefinition-next-q.html{"title"=&gt;"OperationDefinition Next Q", "label"=&gt;"3.1", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="operations.html"><b>Operations</b></a></li><li><b>OperationDefinition Next Q</b></li>", "examples"=&gt;[]}
+<br/>
+
+pagepath = OperationDefinition-next-q.html
+<br/>
+p.title = OperationDefinition Next Q
+<br/>
+p.label = 4.1
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="operations.html"><b>Operations</b></a></li><li><b>OperationDefinition Next Q</b></li></pre>
+
+
+
+p = OperationDefinition-next-q.xml.html{"title"=&gt;"OperationDefinition Next Q - XML Representation", "label"=&gt;"3.1", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="operations.html"><b>Operations</b></a></li><li><b>OperationDefinition Next Q</b></li>"}
+<br/>
+
+pagepath = OperationDefinition-next-q.xml.html
+<br/>
+p.title = OperationDefinition Next Q - XML Representation
+<br/>
+p.label = 4.1
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="operations.html"><b>Operations</b></a></li><li><b>OperationDefinition Next Q</b></li></pre>
+
+
+
+p = OperationDefinition-next-q.json.html{"title"=&gt;"OperationDefinition Next Q - JSON Representation", "label"=&gt;"3.1", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="operations.html"><b>Operations</b></a></li><li><b>OperationDefinition Next Q</b></li>"}
+<br/>
+
+pagepath = OperationDefinition-next-q.json.html
+<br/>
+p.title = OperationDefinition Next Q - JSON Representation
+<br/>
+p.label = 4.1
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="operations.html"><b>Operations</b></a></li><li><b>OperationDefinition Next Q</b></li></pre>
+
+
+
+p = OperationDefinition-next-q.ttl.html{"title"=&gt;"OperationDefinition Next Q - TTL Representation", "label"=&gt;"3.1", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="operations.html"><b>Operations</b></a></li><li><b>OperationDefinition Next Q</b></li>"}
+<br/>
+
+pagepath = OperationDefinition-next-q.ttl.html
+<br/>
+p.title = OperationDefinition Next Q - TTL Representation
+<br/>
+p.label = 4.1
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="operations.html"><b>Operations</b></a></li><li><b>OperationDefinition Next Q</b></li></pre>
+
+
+
+p = OperationDefinition-next-q-definitions.html{"title"=&gt;"OperationDefinition Next Q - Definitions", "label"=&gt;"3.1", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="operations.html"><b>Operations</b></a></li><li><b>OperationDefinition Next Q</b></li>"}
+<br/>
+
+pagepath = OperationDefinition-next-q-definitions.html
+<br/>
+p.title = OperationDefinition Next Q - Definitions
+<br/>
+p.label = 4.1
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="operations.html"><b>Operations</b></a></li><li><b>OperationDefinition Next Q</b></li></pre>
+
+
+
+p = OperationDefinition-next-q-mappings.html{"title"=&gt;"OperationDefinition Next Q - mappings", "label"=&gt;"3.1", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="operations.html"><b>Operations</b></a></li><li><b>OperationDefinition Next Q</b></li>"}
+<br/>
+
+pagepath = OperationDefinition-next-q-mappings.html
+<br/>
+p.title = OperationDefinition Next Q - mappings
+<br/>
+p.label = 4.1
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="operations.html"><b>Operations</b></a></li><li><b>OperationDefinition Next Q</b></li></pre>
+
+
+
+p = terminology.html{"title"=&gt;"Terminology", "label"=&gt;"4", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><b>Terminology</b></li>"}
+<br/>
+
+pagepath = terminology.html
+<br/>
+p.title = Terminology
+<br/>
+p.label = 5
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><b>Terminology</b></li></pre>
+
+
+
+p = searchparameters.html{"title"=&gt;"Search Parameters", "label"=&gt;"5.0", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><b>Search Parameters</b></li>"}
+<br/>
+
+pagepath = searchparameters.html
+<br/>
+p.title = Search Parameters
+<br/>
+p.label = 6
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><b>Search Parameters</b></li></pre>
+
+
+
+p = SearchParameter-questionnaire-context-value.html{"title"=&gt;"SearchParameter Questionnaire Context Value", "label"=&gt;"5.1", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="searchparameters.html"><b>Search Parameters</b></a></li><li><b>SearchParameter Questionnaire Context Value</b></li>"}
+<br/>
+
+pagepath = SearchParameter-questionnaire-context-value.html
+<br/>
+p.title = SearchParameter Questionnaire Context Value
+<br/>
+p.label = 6.1
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="searchparameters.html"><b>Search Parameters</b></a></li><li><b>SearchParameter Questionnaire Context Value</b></li></pre>
+
+
+
+p = SearchParameter-questionnaire-context-type.html{"title"=&gt;"SearchParameter Questionnaire Context Type", "label"=&gt;"5.2", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="searchparameters.html"><b>Search Parameters</b></a></li><li><b>SearchParameter Questionnaire Context Type</b></li>"}
+<br/>
+
+pagepath = SearchParameter-questionnaire-context-type.html
+<br/>
+p.title = SearchParameter Questionnaire Context Type
+<br/>
+p.label = 6.2
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="searchparameters.html"><b>Search Parameters</b></a></li><li><b>SearchParameter Questionnaire Context Type</b></li></pre>
+
+
+
+p = capstatements.html{"title"=&gt;"Capability Statements", "label"=&gt;"6.0", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><b>Capability Statements</b></li>"}
+<br/>
+
+pagepath = capstatements.html
+<br/>
+p.title = Capability Statements
+<br/>
+p.label = 7
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><b>Capability Statements</b></li></pre>
+
+
+
+p = CapabilityStatement-server.html{"title"=&gt;"CapabilityStatement Server", "label"=&gt;"6.1", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Server</b></li>", "examples"=&gt;[]}
+<br/>
+
+pagepath = CapabilityStatement-server.html
+<br/>
+p.title = CapabilityStatement Server
+<br/>
+p.label = 7.1
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Server</b></li></pre>
+
+
+
+p = CapabilityStatement-server.xml.html{"title"=&gt;"CapabilityStatement Server - XML Representation", "label"=&gt;"6.1", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Server</b></li>"}
+<br/>
+
+pagepath = CapabilityStatement-server.xml.html
+<br/>
+p.title = CapabilityStatement Server - XML Representation
+<br/>
+p.label = 7.1
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Server</b></li></pre>
+
+
+
+p = CapabilityStatement-server.json.html{"title"=&gt;"CapabilityStatement Server - JSON Representation", "label"=&gt;"6.1", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Server</b></li>"}
+<br/>
+
+pagepath = CapabilityStatement-server.json.html
+<br/>
+p.title = CapabilityStatement Server - JSON Representation
+<br/>
+p.label = 7.1
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Server</b></li></pre>
+
+
+
+p = CapabilityStatement-server.ttl.html{"title"=&gt;"CapabilityStatement Server - TTL Representation", "label"=&gt;"6.1", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Server</b></li>"}
+<br/>
+
+pagepath = CapabilityStatement-server.ttl.html
+<br/>
+p.title = CapabilityStatement Server - TTL Representation
+<br/>
+p.label = 7.1
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Server</b></li></pre>
+
+
+
+p = CapabilityStatement-server-definitions.html{"title"=&gt;"CapabilityStatement Server - Definitions", "label"=&gt;"6.1", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Server</b></li>"}
+<br/>
+
+pagepath = CapabilityStatement-server-definitions.html
+<br/>
+p.title = CapabilityStatement Server - Definitions
+<br/>
+p.label = 7.1
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Server</b></li></pre>
+
+
+
+p = CapabilityStatement-server-mappings.html{"title"=&gt;"CapabilityStatement Server - mappings", "label"=&gt;"6.1", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Server</b></li>"}
+<br/>
+
+pagepath = CapabilityStatement-server-mappings.html
+<br/>
+p.title = CapabilityStatement Server - mappings
+<br/>
+p.label = 7.1
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Server</b></li></pre>
+
+
+
+p = CapabilityStatement-client.html{"title"=&gt;"CapabilityStatement Client", "label"=&gt;"6.2", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Client</b></li>", "examples"=&gt;[]}
+<br/>
+
+pagepath = CapabilityStatement-client.html
+<br/>
+p.title = CapabilityStatement Client
+<br/>
+p.label = 7.2
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Client</b></li></pre>
+
+
+
+p = CapabilityStatement-client.xml.html{"title"=&gt;"CapabilityStatement Client - XML Representation", "label"=&gt;"6.2", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Client</b></li>"}
+<br/>
+
+pagepath = CapabilityStatement-client.xml.html
+<br/>
+p.title = CapabilityStatement Client - XML Representation
+<br/>
+p.label = 7.2
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Client</b></li></pre>
+
+
+
+p = CapabilityStatement-client.json.html{"title"=&gt;"CapabilityStatement Client - JSON Representation", "label"=&gt;"6.2", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Client</b></li>"}
+<br/>
+
+pagepath = CapabilityStatement-client.json.html
+<br/>
+p.title = CapabilityStatement Client - JSON Representation
+<br/>
+p.label = 7.2
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Client</b></li></pre>
+
+
+
+p = CapabilityStatement-client.ttl.html{"title"=&gt;"CapabilityStatement Client - TTL Representation", "label"=&gt;"6.2", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Client</b></li>"}
+<br/>
+
+pagepath = CapabilityStatement-client.ttl.html
+<br/>
+p.title = CapabilityStatement Client - TTL Representation
+<br/>
+p.label = 7.2
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Client</b></li></pre>
+
+
+
+p = CapabilityStatement-client-definitions.html{"title"=&gt;"CapabilityStatement Client - Definitions", "label"=&gt;"6.2", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Client</b></li>"}
+<br/>
+
+pagepath = CapabilityStatement-client-definitions.html
+<br/>
+p.title = CapabilityStatement Client - Definitions
+<br/>
+p.label = 7.2
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Client</b></li></pre>
+
+
+
+p = CapabilityStatement-client-mappings.html{"title"=&gt;"CapabilityStatement Client - mappings", "label"=&gt;"6.2", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Client</b></li>"}
+<br/>
+
+pagepath = CapabilityStatement-client-mappings.html
+<br/>
+p.title = CapabilityStatement Client - mappings
+<br/>
+p.label = 7.2
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Client</b></li></pre>
+
+
+
+p = CapabilityStatement-assessmentbank.html{"title"=&gt;"CapabilityStatement Assessmentbank", "label"=&gt;"6.3", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Assessmentbank</b></li>", "examples"=&gt;[]}
+<br/>
+
+pagepath = CapabilityStatement-assessmentbank.html
+<br/>
+p.title = CapabilityStatement Assessmentbank
+<br/>
+p.label = 7.3
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Assessmentbank</b></li></pre>
+
+
+
+p = CapabilityStatement-assessmentbank.xml.html{"title"=&gt;"CapabilityStatement Assessmentbank - XML Representation", "label"=&gt;"6.3", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Assessmentbank</b></li>"}
+<br/>
+
+pagepath = CapabilityStatement-assessmentbank.xml.html
+<br/>
+p.title = CapabilityStatement Assessmentbank - XML Representation
+<br/>
+p.label = 7.3
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Assessmentbank</b></li></pre>
+
+
+
+p = CapabilityStatement-assessmentbank.json.html{"title"=&gt;"CapabilityStatement Assessmentbank - JSON Representation", "label"=&gt;"6.3", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Assessmentbank</b></li>"}
+<br/>
+
+pagepath = CapabilityStatement-assessmentbank.json.html
+<br/>
+p.title = CapabilityStatement Assessmentbank - JSON Representation
+<br/>
+p.label = 7.3
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Assessmentbank</b></li></pre>
+
+
+
+p = CapabilityStatement-assessmentbank.ttl.html{"title"=&gt;"CapabilityStatement Assessmentbank - TTL Representation", "label"=&gt;"6.3", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Assessmentbank</b></li>"}
+<br/>
+
+pagepath = CapabilityStatement-assessmentbank.ttl.html
+<br/>
+p.title = CapabilityStatement Assessmentbank - TTL Representation
+<br/>
+p.label = 7.3
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Assessmentbank</b></li></pre>
+
+
+
+p = CapabilityStatement-assessmentbank-definitions.html{"title"=&gt;"CapabilityStatement Assessmentbank - Definitions", "label"=&gt;"6.3", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Assessmentbank</b></li>"}
+<br/>
+
+pagepath = CapabilityStatement-assessmentbank-definitions.html
+<br/>
+p.title = CapabilityStatement Assessmentbank - Definitions
+<br/>
+p.label = 7.3
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Assessmentbank</b></li></pre>
+
+
+
+p = CapabilityStatement-assessmentbank-mappings.html{"title"=&gt;"CapabilityStatement Assessmentbank - mappings", "label"=&gt;"6.3", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Assessmentbank</b></li>"}
+<br/>
+
+pagepath = CapabilityStatement-assessmentbank-mappings.html
+<br/>
+p.title = CapabilityStatement Assessmentbank - mappings
+<br/>
+p.label = 7.3
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Assessmentbank</b></li></pre>
+
+
+
+p = CapabilityStatement-answerbank.html{"title"=&gt;"CapabilityStatement Answerbank", "label"=&gt;"6.4", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Answerbank</b></li>", "examples"=&gt;[]}
+<br/>
+
+pagepath = CapabilityStatement-answerbank.html
+<br/>
+p.title = CapabilityStatement Answerbank
+<br/>
+p.label = 7.4
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Answerbank</b></li></pre>
+
+
+
+p = CapabilityStatement-answerbank.xml.html{"title"=&gt;"CapabilityStatement Answerbank - XML Representation", "label"=&gt;"6.4", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Answerbank</b></li>"}
+<br/>
+
+pagepath = CapabilityStatement-answerbank.xml.html
+<br/>
+p.title = CapabilityStatement Answerbank - XML Representation
+<br/>
+p.label = 7.4
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Answerbank</b></li></pre>
+
+
+
+p = CapabilityStatement-answerbank.json.html{"title"=&gt;"CapabilityStatement Answerbank - JSON Representation", "label"=&gt;"6.4", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Answerbank</b></li>"}
+<br/>
+
+pagepath = CapabilityStatement-answerbank.json.html
+<br/>
+p.title = CapabilityStatement Answerbank - JSON Representation
+<br/>
+p.label = 7.4
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Answerbank</b></li></pre>
+
+
+
+p = CapabilityStatement-answerbank.ttl.html{"title"=&gt;"CapabilityStatement Answerbank - TTL Representation", "label"=&gt;"6.4", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Answerbank</b></li>"}
+<br/>
+
+pagepath = CapabilityStatement-answerbank.ttl.html
+<br/>
+p.title = CapabilityStatement Answerbank - TTL Representation
+<br/>
+p.label = 7.4
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Answerbank</b></li></pre>
+
+
+
+p = CapabilityStatement-answerbank-definitions.html{"title"=&gt;"CapabilityStatement Answerbank - Definitions", "label"=&gt;"6.4", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Answerbank</b></li>"}
+<br/>
+
+pagepath = CapabilityStatement-answerbank-definitions.html
+<br/>
+p.title = CapabilityStatement Answerbank - Definitions
+<br/>
+p.label = 7.4
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Answerbank</b></li></pre>
+
+
+
+p = CapabilityStatement-answerbank-mappings.html{"title"=&gt;"CapabilityStatement Answerbank - mappings", "label"=&gt;"6.4", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Answerbank</b></li>"}
+<br/>
+
+pagepath = CapabilityStatement-answerbank-mappings.html
+<br/>
+p.title = CapabilityStatement Answerbank - mappings
+<br/>
+p.label = 7.4
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Answerbank</b></li></pre>
+
+
+
+p = security.html{"title"=&gt;"Security", "label"=&gt;"7", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><b>Security</b></li>"}
+<br/>
+
+pagepath = security.html
+<br/>
+p.title = Security
+<br/>
+p.label = 8
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><b>Security</b></li></pre>
+
+
+
+p = downloads.html{"title"=&gt;"Downloads", "label"=&gt;"8", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><b>Downloads</b></li>"}
+<br/>
+
+pagepath = downloads.html
+<br/>
+p.title = Downloads
+<br/>
+p.label = 9
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><b>Downloads</b></li></pre>
+
+
+
+p = all-examples.html{"title"=&gt;"All Examples", "label"=&gt;"9", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><b>All Examples</b></li>"}
+<br/>
+
+pagepath = all-examples.html
+<br/>
+p.title = All Examples
+<br/>
+p.label = 10
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><b>All Examples</b></li></pre>
+
+
+
+p = toc.html{"title"=&gt;"Table of Contents", "label"=&gt;"10", "breadcrumb"=&gt;"<li><a href="index.html"><b>Home</b></a></li><li><b>Table of Contents</b></li>"}
+<br/>
+
+pagepath = toc.html
+<br/>
+p.title = Table of Contents
+<br/>
+p.label = 11
+<br/>
+p.breadcrumb = <pre><li><a href="index.html"><b>Home</b></a></li><li><b>Table of Contents</b></li></pre>
+
+
+
+
+
+site.historypath = history.html
+<br/>
+
+
+
+
+
+0,
+
+
+<em>title</em> = Capabilitystatement Answerbank 
+<em>path</em> = CapabilityStatement-answerbank.html,
+<em>url</em> = /CapabilityStatement-answerbank.html,
+<em>link</em> = <a href="null">Capabilitystatement Answerbank </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1,
+
+
+<em>title</em> = Capabilitystatement Assessmentbank 
+<em>path</em> = CapabilityStatement-assessmentbank.html,
+<em>url</em> = /CapabilityStatement-assessmentbank.html,
+<em>link</em> = <a href="null">Capabilitystatement Assessmentbank </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2,
+
+
+<em>title</em> = Capabilitystatement Client 
+<em>path</em> = CapabilityStatement-client.html,
+<em>url</em> = /CapabilityStatement-client.html,
+<em>link</em> = <a href="null">Capabilitystatement Client </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3,
+
+
+<em>title</em> = Capabilitystatement Server 
+<em>path</em> = CapabilityStatement-server.html,
+<em>url</em> = /CapabilityStatement-server.html,
+<em>link</em> = <a href="null">Capabilitystatement Server </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4,
+
+
+<em>title</em> = Implementationguide Ig 
+<em>path</em> = ImplementationGuide-ig.html,
+<em>url</em> = /ImplementationGuide-ig.html,
+<em>link</em> = <a href="null">Implementationguide Ig </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5,
+
+
+<em>title</em> = Operationdefinition Next Q 
+<em>path</em> = OperationDefinition-next-q.html,
+<em>url</em> = /OperationDefinition-next-q.html,
+<em>link</em> = <a href="null">Operationdefinition Next Q </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6,
+
+
+<em>title</em> = Questionnaire Questionnaire Example Asq3 
+<em>path</em> = Questionnaire-questionnaire-example-asq3.html,
+<em>url</em> = /Questionnaire-questionnaire-example-asq3.html,
+<em>link</em> = <a href="null">Questionnaire Questionnaire Example Asq3 </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7,
+
+
+<em>title</em> = Questionnaire Questionnaire Example Audit 
+<em>path</em> = Questionnaire-questionnaire-example-audit.html,
+<em>url</em> = /Questionnaire-questionnaire-example-audit.html,
+<em>link</em> = <a href="null">Questionnaire Questionnaire Example Audit </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8,
+
+
+<em>title</em> = Questionnaire Questionnaire Example Dast 
+<em>path</em> = Questionnaire-questionnaire-example-dast.html,
+<em>url</em> = /Questionnaire-questionnaire-example-dast.html,
+<em>link</em> = <a href="null">Questionnaire Questionnaire Example Dast </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9,
+
+
+<em>title</em> = Questionnaire Questionnaire Example Housing 
+<em>path</em> = Questionnaire-questionnaire-example-housing.html,
+<em>url</em> = /Questionnaire-questionnaire-example-housing.html,
+<em>link</em> = <a href="null">Questionnaire Questionnaire Example Housing </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10,
+
+
+<em>title</em> = Questionnaire Questionnaire Example Phq9 
+<em>path</em> = Questionnaire-questionnaire-example-phq9.html,
+<em>url</em> = /Questionnaire-questionnaire-example-phq9.html,
+<em>link</em> = <a href="null">Questionnaire Questionnaire Example Phq9 </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+11,
+
+
+<em>title</em> = Questionnaire Questionnaire Example Sampler 
+<em>path</em> = Questionnaire-questionnaire-example-sampler.html,
+<em>url</em> = /Questionnaire-questionnaire-example-sampler.html,
+<em>link</em> = <a href="null">Questionnaire Questionnaire Example Sampler </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12,
+
+
+<em>title</em> = Questionnaireresponse Questionnaireresponse Example Asq3 
+<em>path</em> = QuestionnaireResponse-questionnaireresponse-example-asq3.html,
+<em>url</em> = /QuestionnaireResponse-questionnaireresponse-example-asq3.html,
+<em>link</em> = <a href="null">Questionnaireresponse Questionnaireresponse Example Asq3 </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+13,
+
+
+<em>title</em> = Questionnaireresponse Questionnaireresponse Example Audit 
+<em>path</em> = QuestionnaireResponse-questionnaireresponse-example-audit.html,
+<em>url</em> = /QuestionnaireResponse-questionnaireresponse-example-audit.html,
+<em>link</em> = <a href="null">Questionnaireresponse Questionnaireresponse Example Audit </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14,
+
+
+<em>title</em> = Questionnaireresponse Questionnaireresponse Example Dast 
+<em>path</em> = QuestionnaireResponse-questionnaireresponse-example-dast.html,
+<em>url</em> = /QuestionnaireResponse-questionnaireresponse-example-dast.html,
+<em>link</em> = <a href="null">Questionnaireresponse Questionnaireresponse Example Dast </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+15,
+
+
+<em>title</em> = Questionnaireresponse Questionnaireresponse Example Housing 
+<em>path</em> = QuestionnaireResponse-questionnaireresponse-example-housing.html,
+<em>url</em> = /QuestionnaireResponse-questionnaireresponse-example-housing.html,
+<em>link</em> = <a href="null">Questionnaireresponse Questionnaireresponse Example Housing </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+16,
+
+
+<em>title</em> = Questionnaireresponse Questionnaireresponse Example Phq9 
+<em>path</em> = QuestionnaireResponse-questionnaireresponse-example-phq9.html,
+<em>url</em> = /QuestionnaireResponse-questionnaireresponse-example-phq9.html,
+<em>link</em> = <a href="null">Questionnaireresponse Questionnaireresponse Example Phq9 </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+17,
+
+
+<em>title</em> = Questionnaireresponse Questionnaireresponse Example Sampler 
+<em>path</em> = QuestionnaireResponse-questionnaireresponse-example-sampler.html,
+<em>url</em> = /QuestionnaireResponse-questionnaireresponse-example-sampler.html,
+<em>link</em> = <a href="null">Questionnaireresponse Questionnaireresponse Example Sampler </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+18,
+
+
+<em>title</em> = Searchparameter Questionnaire Context Type 
+<em>path</em> = SearchParameter-Questionnaire-context-type.html,
+<em>url</em> = /SearchParameter-Questionnaire-context-type.html,
+<em>link</em> = <a href="null">Searchparameter Questionnaire Context Type </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+19,
+
+
+<em>title</em> = Searchparameter Questionnaire Context Value 
+<em>path</em> = SearchParameter-Questionnaire-context-value.html,
+<em>url</em> = /SearchParameter-Questionnaire-context-value.html,
+<em>link</em> = <a href="null">Searchparameter Questionnaire Context Value </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+20,
+
+
+<em>title</em> = Structuredefinition Aq 
+<em>path</em> = StructureDefinition-aq.html,
+<em>url</em> = /StructureDefinition-aq.html,
+<em>link</em> = <a href="null">Structuredefinition Aq </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+21,
+
+
+<em>title</em> = Structuredefinition Aqr 
+<em>path</em> = StructureDefinition-aqr.html,
+<em>url</em> = /StructureDefinition-aqr.html,
+<em>link</em> = <a href="null">Structuredefinition Aqr </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+22,
+
+
+<em>title</em> = Structuredefinition Extension Score 
+<em>path</em> = StructureDefinition-extension-score.html,
+<em>url</em> = /StructureDefinition-extension-score.html,
+<em>link</em> = <a href="null">Structuredefinition Extension Score </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+23,
+
+
+<em>title</em> = Structuredefinition Extension Timelimit 
+<em>path</em> = StructureDefinition-extension-timelimit.html,
+<em>url</em> = /StructureDefinition-extension-timelimit.html,
+<em>link</em> = <a href="null">Structuredefinition Extension Timelimit </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+24,
+
+
+<em>title</em> = Structuredefinition Q 
+<em>path</em> = StructureDefinition-q.html,
+<em>url</em> = /StructureDefinition-q.html,
+<em>link</em> = <a href="null">Structuredefinition Q </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+25,
+
+
+<em>title</em> = Structuredefinition Qcvs 
+<em>path</em> = StructureDefinition-qcvs.html,
+<em>url</em> = /StructureDefinition-qcvs.html,
+<em>link</em> = <a href="null">Structuredefinition Qcvs </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+26,
+
+
+<em>title</em> = Structuredefinition Qr 
+<em>path</em> = StructureDefinition-qr.html,
+<em>url</em> = /StructureDefinition-qr.html,
+<em>link</em> = <a href="null">Structuredefinition Qr </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+27,
+
+
+<em>title</em> = Adaptive 
+<em>path</em> = adaptive.md,
+<em>url</em> = /adaptive.html,
+<em>link</em> = <a href="null">Adaptive </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+28,
+
+
+<em>title</em> = All Examples 
+<em>path</em> = all-examples.md,
+<em>url</em> = /all-examples.html,
+<em>link</em> = <a href="null">All Examples </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+29,
+
+
+<em>title</em> = Capstatements 
+<em>path</em> = capstatements.md,
+<em>url</em> = /capstatements.html,
+<em>link</em> = <a href="null">Capstatements </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+30,
+
+
+<em>title</em> = Downloads 
+<em>path</em> = downloads.md,
+<em>url</em> = /downloads.html,
+<em>link</em> = <a href="null">Downloads </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+31,
+
+
+<em>title</em> = Guidance 
+<em>path</em> = guidance.md,
+<em>url</em> = /guidance.html,
+<em>link</em> = <a href="null">Guidance </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+32,
+
+
+<em>title</em> = History 
+<em>path</em> = history.md,
+<em>url</em> = /history.html,
+<em>link</em> = <a href="null">History </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+33,
+
+
+<em>title</em> = Html_pages 
+<em>path</em> = html_pages.html,
+<em>url</em> = /html_pages.html,
+<em>link</em> = <a href="null">Html_pages </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+34,
+
+
+<em>title</em> = Index 
+<em>path</em> = index.md,
+<em>url</em> = /,
+<em>link</em> = <a href="null">Index </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+35,
+
+
+<em>title</em> = Operations 
+<em>path</em> = operations.md,
+<em>url</em> = /operations.html,
+<em>link</em> = <a href="null">Operations </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+36,
+
+
+<em>title</em> = Profiles 
+<em>path</em> = profiles.md,
+<em>url</em> = /profiles.html,
+<em>link</em> = <a href="null">Profiles </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+37,
+
+
+<em>title</em> = Searchparameters 
+<em>path</em> = searchparameters.md,
+<em>url</em> = /searchparameters.html,
+<em>link</em> = <a href="null">Searchparameters </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+38,
+
+
+<em>title</em> = Static 
+<em>path</em> = static.md,
+<em>url</em> = /static.html,
+<em>link</em> = <a href="null">Static </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+39,
+
+
+<em>title</em> = Terminology 
+<em>path</em> = terminology.md,
+<em>url</em> = /terminology.html,
+<em>link</em> = <a href="null">Terminology </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+40,
+
+
+<em>title</em> = Toc 
+<em>path</em> = toc.md,
+<em>url</em> = /toc.html,
+<em>link</em> = <a href="null">Toc </a>
+<br/>
+
+
+
+
+
+
+
+
+
+
+41,
+
+
+<em>title</em> = Todo 
+<em>path</em> = todo.md,
+<em>url</em> = /todo.html,
+<em>link</em> = <a href="null">Todo </a>
+<br/>
+
+
+
+
+
+
+
+
+<br/><br/>
+<hr/>
+
+<h3>R3 IG pages</h3>
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="CapabilityStatement-answerbank.html"/&gt;&lt;title
+value="Capabilitystatement Answerbank "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="resource"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="CapabilityStatement-assessmentbank.html"/&gt;&lt;title
+value="Capabilitystatement Assessmentbank "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="resource"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="CapabilityStatement-client.html"/&gt;&lt;title
+value="Capabilitystatement Client "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="resource"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="CapabilityStatement-server.html"/&gt;&lt;title
+value="Capabilitystatement Server "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="resource"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="ImplementationGuide-ig.html"/&gt;&lt;title
+value="Implementationguide Ig "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="resource"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="OperationDefinition-next-q.html"/&gt;&lt;title
+value="Operationdefinition Next Q "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="resource"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="Questionnaire-questionnaire-example-asq3.html"/&gt;&lt;title
+value="Questionnaire Questionnaire Example Asq3 "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="example"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="Questionnaire-questionnaire-example-audit.html"/&gt;&lt;title
+value="Questionnaire Questionnaire Example Audit "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="example"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="Questionnaire-questionnaire-example-dast.html"/&gt;&lt;title
+value="Questionnaire Questionnaire Example Dast "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="example"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="Questionnaire-questionnaire-example-housing.html"/&gt;&lt;title
+value="Questionnaire Questionnaire Example Housing "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="example"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="Questionnaire-questionnaire-example-phq9.html"/&gt;&lt;title
+value="Questionnaire Questionnaire Example Phq9 "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="example"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="Questionnaire-questionnaire-example-sampler.html"/&gt;&lt;title
+value="Questionnaire Questionnaire Example Sampler "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="example"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="QuestionnaireResponse-questionnaireresponse-example-asq3.html"/&gt;&lt;title
+value="Questionnaireresponse Questionnaireresponse Example Asq3 "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="example"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="QuestionnaireResponse-questionnaireresponse-example-audit.html"/&gt;&lt;title
+value="Questionnaireresponse Questionnaireresponse Example Audit "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="example"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="QuestionnaireResponse-questionnaireresponse-example-dast.html"/&gt;&lt;title
+value="Questionnaireresponse Questionnaireresponse Example Dast "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="example"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="QuestionnaireResponse-questionnaireresponse-example-housing.html"/&gt;&lt;title
+value="Questionnaireresponse Questionnaireresponse Example Housing "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="example"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="QuestionnaireResponse-questionnaireresponse-example-phq9.html"/&gt;&lt;title
+value="Questionnaireresponse Questionnaireresponse Example Phq9 "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="example"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="QuestionnaireResponse-questionnaireresponse-example-sampler.html"/&gt;&lt;title
+value="Questionnaireresponse Questionnaireresponse Example Sampler "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="example"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="SearchParameter-Questionnaire-context-type.html"/&gt;&lt;title
+value="Searchparameter Questionnaire Context Type "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="resource"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="SearchParameter-Questionnaire-context-value.html"/&gt;&lt;title
+value="Searchparameter Questionnaire Context Value "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="resource"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="StructureDefinition-aq.html"/&gt;&lt;title
+value="Structuredefinition Aq "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="resource"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="StructureDefinition-aqr.html"/&gt;&lt;title
+value="Structuredefinition Aqr "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="resource"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="StructureDefinition-extension-score.html"/&gt;&lt;title
+value="Structuredefinition Extension Score "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="resource"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="StructureDefinition-extension-timelimit.html"/&gt;&lt;title
+value="Structuredefinition Extension Timelimit "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="resource"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="StructureDefinition-q.html"/&gt;&lt;title
+value="Structuredefinition Q "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="resource"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="StructureDefinition-qcvs.html"/&gt;&lt;title
+value="Structuredefinition Qcvs "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="resource"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="StructureDefinition-qr.html"/&gt;&lt;title
+value="Structuredefinition Qr "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="resource"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="adaptive.html"/&gt;&lt;title
+value="Adaptive "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="page"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="all-examples.html"/&gt;&lt;title
+value="All Examples "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="page"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="capstatements.html"/&gt;&lt;title
+value="Capstatements "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="page"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="downloads.html"/&gt;&lt;title
+value="Downloads "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="page"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="guidance.html"/&gt;&lt;title
+value="Guidance "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="page"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="history.html"/&gt;&lt;title
+value="History "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="page"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="html_pages.html"/&gt;&lt;title
+value="Html_pages "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="page"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="index.html"/&gt;&lt;title
+value="Index "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="page"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="operations.html"/&gt;&lt;title
+value="Operations "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="page"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="profiles.html"/&gt;&lt;title
+value="Profiles "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="page"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="searchparameters.html"/&gt;&lt;title
+value="Searchparameters "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="page"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="static.html"/&gt;&lt;title
+value="Static "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="page"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="terminology.html"/&gt;&lt;title
+value="Terminology "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="page"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="toc.html"/&gt;&lt;title
+value="Toc "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="page"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;source
+value="todo.html"/&gt;&lt;title
+value="Todo "/&gt;&lt;kind
+
+
+
+
+
+
+
+value="page"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+<br/><br/>
+<hr/>
+
+<h3>R4 IG pages</h3>
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="CapabilityStatement-answerbank.html"/&gt;&lt;title
+value="Capabilitystatement Answerbank "/&gt;&lt;generation
+
+
+
+
+value="generated"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="CapabilityStatement-assessmentbank.html"/&gt;&lt;title
+value="Capabilitystatement Assessmentbank "/&gt;&lt;generation
+
+
+
+
+value="generated"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="CapabilityStatement-client.html"/&gt;&lt;title
+value="Capabilitystatement Client "/&gt;&lt;generation
+
+
+
+
+value="generated"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="CapabilityStatement-server.html"/&gt;&lt;title
+value="Capabilitystatement Server "/&gt;&lt;generation
+
+
+
+
+value="generated"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="ImplementationGuide-ig.html"/&gt;&lt;title
+value="Implementationguide Ig "/&gt;&lt;generation
+
+
+
+
+value="generated"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="OperationDefinition-next-q.html"/&gt;&lt;title
+value="Operationdefinition Next Q "/&gt;&lt;generation
+
+
+
+
+value="generated"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="Questionnaire-questionnaire-example-asq3.html"/&gt;&lt;title
+value="Questionnaire Questionnaire Example Asq3 "/&gt;&lt;generation
+
+
+
+
+value="generated"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="Questionnaire-questionnaire-example-audit.html"/&gt;&lt;title
+value="Questionnaire Questionnaire Example Audit "/&gt;&lt;generation
+
+
+
+
+value="generated"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="Questionnaire-questionnaire-example-dast.html"/&gt;&lt;title
+value="Questionnaire Questionnaire Example Dast "/&gt;&lt;generation
+
+
+
+
+value="generated"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="Questionnaire-questionnaire-example-housing.html"/&gt;&lt;title
+value="Questionnaire Questionnaire Example Housing "/&gt;&lt;generation
+
+
+
+
+value="generated"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="Questionnaire-questionnaire-example-phq9.html"/&gt;&lt;title
+value="Questionnaire Questionnaire Example Phq9 "/&gt;&lt;generation
+
+
+
+
+value="generated"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="Questionnaire-questionnaire-example-sampler.html"/&gt;&lt;title
+value="Questionnaire Questionnaire Example Sampler "/&gt;&lt;generation
+
+
+
+
+value="generated"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="QuestionnaireResponse-questionnaireresponse-example-asq3.html"/&gt;&lt;title
+value="Questionnaireresponse Questionnaireresponse Example Asq3 "/&gt;&lt;generation
+
+
+
+
+value="generated"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="QuestionnaireResponse-questionnaireresponse-example-audit.html"/&gt;&lt;title
+value="Questionnaireresponse Questionnaireresponse Example Audit "/&gt;&lt;generation
+
+
+
+
+value="generated"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="QuestionnaireResponse-questionnaireresponse-example-dast.html"/&gt;&lt;title
+value="Questionnaireresponse Questionnaireresponse Example Dast "/&gt;&lt;generation
+
+
+
+
+value="generated"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="QuestionnaireResponse-questionnaireresponse-example-housing.html"/&gt;&lt;title
+value="Questionnaireresponse Questionnaireresponse Example Housing "/&gt;&lt;generation
+
+
+
+
+value="generated"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="QuestionnaireResponse-questionnaireresponse-example-phq9.html"/&gt;&lt;title
+value="Questionnaireresponse Questionnaireresponse Example Phq9 "/&gt;&lt;generation
+
+
+
+
+value="generated"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="QuestionnaireResponse-questionnaireresponse-example-sampler.html"/&gt;&lt;title
+value="Questionnaireresponse Questionnaireresponse Example Sampler "/&gt;&lt;generation
+
+
+
+
+value="generated"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="SearchParameter-Questionnaire-context-type.html"/&gt;&lt;title
+value="Searchparameter Questionnaire Context Type "/&gt;&lt;generation
+
+
+
+
+value="generated"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="SearchParameter-Questionnaire-context-value.html"/&gt;&lt;title
+value="Searchparameter Questionnaire Context Value "/&gt;&lt;generation
+
+
+
+
+value="generated"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="StructureDefinition-aq.html"/&gt;&lt;title
+value="Structuredefinition Aq "/&gt;&lt;generation
+
+
+
+
+value="generated"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="StructureDefinition-aqr.html"/&gt;&lt;title
+value="Structuredefinition Aqr "/&gt;&lt;generation
+
+
+
+
+value="generated"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="StructureDefinition-extension-score.html"/&gt;&lt;title
+value="Structuredefinition Extension Score "/&gt;&lt;generation
+
+
+
+
+value="generated"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="StructureDefinition-extension-timelimit.html"/&gt;&lt;title
+value="Structuredefinition Extension Timelimit "/&gt;&lt;generation
+
+
+
+
+value="generated"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="StructureDefinition-q.html"/&gt;&lt;title
+value="Structuredefinition Q "/&gt;&lt;generation
+
+
+
+
+value="generated"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="StructureDefinition-qcvs.html"/&gt;&lt;title
+value="Structuredefinition Qcvs "/&gt;&lt;generation
+
+
+
+
+value="generated"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="StructureDefinition-qr.html"/&gt;&lt;title
+value="Structuredefinition Qr "/&gt;&lt;generation
+
+
+
+
+value="generated"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="adaptive.html"/&gt;&lt;title
+value="Adaptive "/&gt;&lt;generation
+
+
+
+
+value="markdown"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="all-examples.html"/&gt;&lt;title
+value="All Examples "/&gt;&lt;generation
+
+
+
+
+value="markdown"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="capstatements.html"/&gt;&lt;title
+value="Capstatements "/&gt;&lt;generation
+
+
+
+
+value="markdown"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="downloads.html"/&gt;&lt;title
+value="Downloads "/&gt;&lt;generation
+
+
+
+
+value="markdown"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="guidance.html"/&gt;&lt;title
+value="Guidance "/&gt;&lt;generation
+
+
+
+
+value="markdown"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="history.html"/&gt;&lt;title
+value="History "/&gt;&lt;generation
+
+
+
+
+value="markdown"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="html_pages.html"/&gt;&lt;title
+value="Html_pages "/&gt;&lt;generation
+
+
+
+
+value="markdown"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="index.html"/&gt;&lt;title
+value="Index "/&gt;&lt;generation
+
+
+
+
+value="markdown"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="operations.html"/&gt;&lt;title
+value="Operations "/&gt;&lt;generation
+
+
+
+
+value="markdown"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="profiles.html"/&gt;&lt;title
+value="Profiles "/&gt;&lt;generation
+
+
+
+
+value="markdown"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="searchparameters.html"/&gt;&lt;title
+value="Searchparameters "/&gt;&lt;generation
+
+
+
+
+value="markdown"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="static.html"/&gt;&lt;title
+value="Static "/&gt;&lt;generation
+
+
+
+
+value="markdown"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="terminology.html"/&gt;&lt;title
+value="Terminology "/&gt;&lt;generation
+
+
+
+
+value="markdown"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="toc.html"/&gt;&lt;title
+value="Toc "/&gt;&lt;generation
+
+
+
+
+value="markdown"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;page&gt;&lt;nameUrl
+value="todo.html"/&gt;&lt;title
+value="Todo "/&gt;&lt;generation
+
+
+
+
+value="markdown"/&gt;&lt;/page&gt;
+<br/>
+<br/>
+
+
+
+
+
+
+
+    <!-- ==============END CONTENT END CONTENT=================== -->
+
+</div>    <!-- col -->
+</div>    <!-- /inner-wrapper -->
+</div>    <!-- /row -->
+</div>    <!-- /container -->
+</div>    <!-- /page content -->
+</div>    <!-- /page content wrapper -->
+
+
+    
+
+
+        <!-- /inner-wrapper -->
+                <!-- /row -->
+            <!-- /container -->
+
+        <!-- /segment-content -->
+
+  <!-- back to top arrow -->
+
+
+  <!-- end back to top arrow -->
+
+<div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+  <div class="container">    <!-- container -->
+   <div class="inner-wrapper">
+    <p>
+      Argonaut Questionnaire Version: 0.0.0 &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Thu, Oct 25, 2018 11:30-0700.
+      | <a style="color: #81BEF7" href="history.html">History</a>
+      | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
+        <a rel="license" style="color: #81BEF7" href="http://hl7.org/fhir/STU3/license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>
+        
+        </p>
+   </div>    <!-- /inner-wrapper -->
+  </div>    <!-- /container -->
+ </div>    <!-- /segment-footer -->
+    <!-- disqus thread -->
+    <!-- disqus -->
+    <!-- end disqus -->
+
+ <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+  <div class="container">    <!-- container -->
+  </div>    <!-- /container -->
+ </div>    <!-- /segment-post-footer -->
+
+   <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/js/jquery.js"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./assets/js/bootstrap.min.js"> </script>
+<script src="./assets/js/respond.min.js"> </script>
+<script src="./assets/js/anchor.min.js"> </script>
+<script src="./assets/js/fhir.js"> </script>
+
+
+
+
+
+
+  <!-- Analytics Below
+================================================== -->
+
+  <!-- add anchors before the closing body tag. -->
+<script> anchors.add()</script>
+
+
+
+</body>
+
+
+</head></html>

@@ -1,0 +1,568 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig> a fhir:ImplementationGuide;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "ig"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Argonaut Questionnaire</h2><p>The official URL for this implementation guide is: </p><pre>http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig</pre></div>"
+  ];
+  fhir:ImplementationGuide.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig"];
+  fhir:ImplementationGuide.version [ fhir:value "0.0.0"];
+  fhir:ImplementationGuide.name [ fhir:value "Argonaut Questionnaire"];
+  fhir:ImplementationGuide.status [ fhir:value "draft"];
+  fhir:ImplementationGuide.experimental [ fhir:value "true"^^xsd:boolean];
+  fhir:ImplementationGuide.publisher [ fhir:value "Argonaut Project"];
+  fhir:ImplementationGuide.fhirVersion [ fhir:value "3.0.1"];
+  fhir:ImplementationGuide.package [
+     fhir:index 0;
+     fhir:Element.id [ fhir:value "p1" ];
+     fhir:ImplementationGuide.package.name [ fhir:value "base" ];
+     fhir:ImplementationGuide.package.resource [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "QuestionnaireResponse-questionnaireresponse-example-sampler.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/QuestionnaireResponse/questionnaireresponse-example-sampler>;
+         fhir:Reference.reference [ fhir:value "QuestionnaireResponse/questionnaireresponse-example-sampler" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Questionnaire-questionnaire-example-sampler.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-sampler>;
+         fhir:Reference.reference [ fhir:value "Questionnaire/questionnaire-example-sampler" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "QuestionnaireResponse-questionnaireresponse-example-phq9.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/QuestionnaireResponse/questionnaireresponse-example-phq9>;
+         fhir:Reference.reference [ fhir:value "QuestionnaireResponse/questionnaireresponse-example-phq9" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Questionnaire-questionnaire-example-phq9.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9>;
+         fhir:Reference.reference [ fhir:value "Questionnaire/questionnaire-example-phq9" ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "QuestionnaireResponse-questionnaireresponse-example-housing.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/QuestionnaireResponse/questionnaireresponse-example-housing>;
+         fhir:Reference.reference [ fhir:value "QuestionnaireResponse/questionnaireresponse-example-housing" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Questionnaire-questionnaire-example-housing.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-housing>;
+         fhir:Reference.reference [ fhir:value "Questionnaire/questionnaire-example-housing" ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "QuestionnaireResponse-questionnaireresponse-example-dast.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/QuestionnaireResponse/questionnaireresponse-example-dast>;
+         fhir:Reference.reference [ fhir:value "QuestionnaireResponse/questionnaireresponse-example-dast" ]
+       ]
+     ], [
+       fhir:index 7;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Questionnaire-questionnaire-example-dast.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast>;
+         fhir:Reference.reference [ fhir:value "Questionnaire/questionnaire-example-dast" ]
+       ]
+     ], [
+       fhir:index 8;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "QuestionnaireResponse-questionnaireresponse-example-audit.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/QuestionnaireResponse/questionnaireresponse-example-audit>;
+         fhir:Reference.reference [ fhir:value "QuestionnaireResponse/questionnaireresponse-example-audit" ]
+       ]
+     ], [
+       fhir:index 9;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Questionnaire-questionnaire-example-audit.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit>;
+         fhir:Reference.reference [ fhir:value "Questionnaire/questionnaire-example-audit" ]
+       ]
+     ], [
+       fhir:index 10;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "QuestionnaireResponse-questionnaireresponse-example-asq3.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/QuestionnaireResponse/questionnaireresponse-example-asq3>;
+         fhir:Reference.reference [ fhir:value "QuestionnaireResponse/questionnaireresponse-example-asq3" ]
+       ]
+     ], [
+       fhir:index 11;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "Questionnaire-questionnaire-example-asq3.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "true"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-asq3>;
+         fhir:Reference.reference [ fhir:value "Questionnaire/questionnaire-example-asq3" ]
+       ]
+     ], [
+       fhir:index 12;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-extension-timelimit.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timelimit>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/extension-timelimit" ]
+       ]
+     ], [
+       fhir:index 13;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-extension-score.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/extension-score" ]
+       ]
+     ], [
+       fhir:index 14;
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/SearchParameter/questionnaire-context-value>;
+         fhir:Reference.reference [ fhir:value "SearchParameter/questionnaire-context-value" ]
+       ]
+     ], [
+       fhir:index 15;
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/SearchParameter/questionnaire-context-type>;
+         fhir:Reference.reference [ fhir:value "SearchParameter/questionnaire-context-type" ]
+       ]
+     ], [
+       fhir:index 16;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-aqr.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/aqr>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/aqr" ]
+       ]
+     ], [
+       fhir:index 17;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-aq.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/aq>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/aq" ]
+       ]
+     ], [
+       fhir:index 18;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-qr.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/qr" ]
+       ]
+     ], [
+       fhir:index 19;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-qcvs.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/qcvs" ]
+       ]
+     ], [
+       fhir:index 20;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-q.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/q" ]
+       ]
+     ], [
+       fhir:index 21;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "OperationDefinition-next-q.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/OperationDefinition/next-q>;
+         fhir:Reference.reference [ fhir:value "OperationDefinition/next-q" ]
+       ]
+     ], [
+       fhir:index 22;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "CapabilityStatement-server.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/CapabilityStatement/server>;
+         fhir:Reference.reference [ fhir:value "CapabilityStatement/server" ]
+       ]
+     ], [
+       fhir:index 23;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "CapabilityStatement-client.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/CapabilityStatement/client>;
+         fhir:Reference.reference [ fhir:value "CapabilityStatement/client" ]
+       ]
+     ], [
+       fhir:index 24;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "CapabilityStatement-assessmentbank.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/CapabilityStatement/assessmentbank>;
+         fhir:Reference.reference [ fhir:value "CapabilityStatement/assessmentbank" ]
+       ]
+     ], [
+       fhir:index 25;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "CapabilityStatement-answerbank.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/CapabilityStatement/answerbank>;
+         fhir:Reference.reference [ fhir:value "CapabilityStatement/answerbank" ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Element.id [ fhir:value "profile-base-q-spreadsheet.xml" ];
+     fhir:ImplementationGuide.package.name [ fhir:value "Argonaut_Q_Profile" ];
+     fhir:ImplementationGuide.package.resource [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-q.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Argonaut_Q_Profile" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/q" ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Element.id [ fhir:value "profile-base-qcvs-spreadsheet.xml" ];
+     fhir:ImplementationGuide.package.name [ fhir:value "Argonaut_QCVS_Profile" ];
+     fhir:ImplementationGuide.package.resource [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-qcvs.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Argonaut_QCVS_Profile" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/qcvs" ]
+       ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Element.id [ fhir:value "profile-base-qr-spreadsheet.xml" ];
+     fhir:ImplementationGuide.package.name [ fhir:value "Argonaut_QR_Profile" ];
+     fhir:ImplementationGuide.package.resource [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-qr.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Argonaut_QR_Profile" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/qr" ]
+       ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:Element.id [ fhir:value "profile-derived-q-spreadsheet.xml" ];
+     fhir:ImplementationGuide.package.name [ fhir:value "Argonaut_Adaptive_Q_Profile" ];
+     fhir:ImplementationGuide.package.resource [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-aq.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Argonaut_Adaptive_Q_Profile" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/aq>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/aq" ]
+       ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:Element.id [ fhir:value "profile-derived-qr-spreadsheet.xml" ];
+     fhir:ImplementationGuide.package.name [ fhir:value "Argonaut_Adaptive_QR_Profile" ];
+     fhir:ImplementationGuide.package.resource [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-aqr.html" ]
+       ];
+       fhir:ImplementationGuide.package.resource.example [ fhir:value "false"^^xsd:boolean ];
+       fhir:ImplementationGuide.package.resource.name [ fhir:value "Argonaut_Adaptive_QR_Profile" ];
+       fhir:ImplementationGuide.package.resource.sourceReference [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/aqr>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/aqr" ]
+       ]
+     ]
+  ];
+  fhir:ImplementationGuide.page [
+     fhir:ImplementationGuide.page.source [ fhir:value "index.html" ];
+     fhir:ImplementationGuide.page.title [ fhir:value "Home" ];
+     fhir:ImplementationGuide.page.kind [ fhir:value "page" ];
+     fhir:ImplementationGuide.page.page [
+       fhir:index 0;
+       fhir:ImplementationGuide.page.source [ fhir:value "guidance.html" ];
+       fhir:ImplementationGuide.page.title [ fhir:value "Use Cases" ];
+       fhir:ImplementationGuide.page.kind [ fhir:value "page" ];
+       fhir:ImplementationGuide.page.page [
+         fhir:index 0;
+         fhir:ImplementationGuide.page.source [ fhir:value "static.html" ];
+         fhir:ImplementationGuide.page.title [ fhir:value "Static Forms" ];
+         fhir:ImplementationGuide.page.kind [ fhir:value "page" ]
+       ], [
+         fhir:index 1;
+         fhir:ImplementationGuide.page.source [ fhir:value "adaptive.html" ];
+         fhir:ImplementationGuide.page.title [ fhir:value "Adaptive Forms" ];
+         fhir:ImplementationGuide.page.kind [ fhir:value "page" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:ImplementationGuide.page.source [ fhir:value "profiles.html" ];
+       fhir:ImplementationGuide.page.title [ fhir:value "Profiles and Extensions" ];
+       fhir:ImplementationGuide.page.kind [ fhir:value "page" ];
+       fhir:ImplementationGuide.page.page [
+         fhir:index 0;
+         fhir:ImplementationGuide.page.source [ fhir:value "StructureDefinition-aqr.html" ];
+         fhir:ImplementationGuide.page.title [ fhir:value "StructureDefinition Aqr" ];
+         fhir:ImplementationGuide.page.kind [ fhir:value "resource" ]
+       ], [
+         fhir:index 1;
+         fhir:ImplementationGuide.page.source [ fhir:value "StructureDefinition-aq.html" ];
+         fhir:ImplementationGuide.page.title [ fhir:value "StructureDefinition Aq" ];
+         fhir:ImplementationGuide.page.kind [ fhir:value "resource" ]
+       ], [
+         fhir:index 2;
+         fhir:ImplementationGuide.page.source [ fhir:value "StructureDefinition-qr.html" ];
+         fhir:ImplementationGuide.page.title [ fhir:value "StructureDefinition Qr" ];
+         fhir:ImplementationGuide.page.kind [ fhir:value "resource" ]
+       ], [
+         fhir:index 3;
+         fhir:ImplementationGuide.page.source [ fhir:value "StructureDefinition-qcvs.html" ];
+         fhir:ImplementationGuide.page.title [ fhir:value "StructureDefinition Qcvs" ];
+         fhir:ImplementationGuide.page.kind [ fhir:value "resource" ]
+       ], [
+         fhir:index 4;
+         fhir:ImplementationGuide.page.source [ fhir:value "StructureDefinition-q.html" ];
+         fhir:ImplementationGuide.page.title [ fhir:value "StructureDefinition Q" ];
+         fhir:ImplementationGuide.page.kind [ fhir:value "resource" ]
+       ], [
+         fhir:index 5;
+         fhir:ImplementationGuide.page.source [ fhir:value "StructureDefinition-extension-timelimit.html" ];
+         fhir:ImplementationGuide.page.title [ fhir:value "StructureDefinition Extension Timelimit" ];
+         fhir:ImplementationGuide.page.kind [ fhir:value "resource" ]
+       ], [
+         fhir:index 6;
+         fhir:ImplementationGuide.page.source [ fhir:value "StructureDefinition-extension-score.html" ];
+         fhir:ImplementationGuide.page.title [ fhir:value "StructureDefinition Extension Score" ];
+         fhir:ImplementationGuide.page.kind [ fhir:value "resource" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:ImplementationGuide.page.source [ fhir:value "operations.html" ];
+       fhir:ImplementationGuide.page.title [ fhir:value "Operations" ];
+       fhir:ImplementationGuide.page.kind [ fhir:value "page" ];
+       fhir:ImplementationGuide.page.page [
+         fhir:index 0;
+         fhir:ImplementationGuide.page.source [ fhir:value "OperationDefinition-next-q.html" ];
+         fhir:ImplementationGuide.page.title [ fhir:value "OperationDefinition Next Q" ];
+         fhir:ImplementationGuide.page.kind [ fhir:value "resource" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:ImplementationGuide.page.source [ fhir:value "terminology.html" ];
+       fhir:ImplementationGuide.page.title [ fhir:value "Terminology" ];
+       fhir:ImplementationGuide.page.kind [ fhir:value "page" ]
+     ], [
+       fhir:index 4;
+       fhir:ImplementationGuide.page.source [ fhir:value "searchparameters.html" ];
+       fhir:ImplementationGuide.page.title [ fhir:value "Search Parameters" ];
+       fhir:ImplementationGuide.page.kind [ fhir:value "page" ];
+       fhir:ImplementationGuide.page.page [
+         fhir:index 0;
+         fhir:ImplementationGuide.page.source [ fhir:value "SearchParameter-questionnaire-context-value.html" ];
+         fhir:ImplementationGuide.page.title [ fhir:value "SearchParameter Questionnaire Context Value" ];
+         fhir:ImplementationGuide.page.kind [ fhir:value "resource" ]
+       ], [
+         fhir:index 1;
+         fhir:ImplementationGuide.page.source [ fhir:value "SearchParameter-questionnaire-context-type.html" ];
+         fhir:ImplementationGuide.page.title [ fhir:value "SearchParameter Questionnaire Context Type" ];
+         fhir:ImplementationGuide.page.kind [ fhir:value "resource" ]
+       ]
+     ], [
+       fhir:index 5;
+       fhir:ImplementationGuide.page.source [ fhir:value "capstatements.html" ];
+       fhir:ImplementationGuide.page.title [ fhir:value "Capability Statements" ];
+       fhir:ImplementationGuide.page.kind [ fhir:value "page" ];
+       fhir:ImplementationGuide.page.page [
+         fhir:index 0;
+         fhir:ImplementationGuide.page.source [ fhir:value "CapabilityStatement-server.html" ];
+         fhir:ImplementationGuide.page.title [ fhir:value "CapabilityStatement Server" ];
+         fhir:ImplementationGuide.page.kind [ fhir:value "resource" ]
+       ], [
+         fhir:index 1;
+         fhir:ImplementationGuide.page.source [ fhir:value "CapabilityStatement-client.html" ];
+         fhir:ImplementationGuide.page.title [ fhir:value "CapabilityStatement Client" ];
+         fhir:ImplementationGuide.page.kind [ fhir:value "resource" ]
+       ], [
+         fhir:index 2;
+         fhir:ImplementationGuide.page.source [ fhir:value "CapabilityStatement-assessmentbank.html" ];
+         fhir:ImplementationGuide.page.title [ fhir:value "CapabilityStatement Assessmentbank" ];
+         fhir:ImplementationGuide.page.kind [ fhir:value "resource" ]
+       ], [
+         fhir:index 3;
+         fhir:ImplementationGuide.page.source [ fhir:value "CapabilityStatement-answerbank.html" ];
+         fhir:ImplementationGuide.page.title [ fhir:value "CapabilityStatement Answerbank" ];
+         fhir:ImplementationGuide.page.kind [ fhir:value "resource" ]
+       ]
+     ], [
+       fhir:index 6;
+       fhir:ImplementationGuide.page.source [ fhir:value "security.html" ];
+       fhir:ImplementationGuide.page.title [ fhir:value "Security" ];
+       fhir:ImplementationGuide.page.kind [ fhir:value "page" ]
+     ], [
+       fhir:index 7;
+       fhir:ImplementationGuide.page.source [ fhir:value "downloads.html" ];
+       fhir:ImplementationGuide.page.title [ fhir:value "Downloads" ];
+       fhir:ImplementationGuide.page.kind [ fhir:value "page" ]
+     ], [
+       fhir:index 8;
+       fhir:ImplementationGuide.page.source [ fhir:value "all-examples.html" ];
+       fhir:ImplementationGuide.page.title [ fhir:value "All Examples" ];
+       fhir:ImplementationGuide.page.kind [ fhir:value "page" ]
+     ], [
+       fhir:index 9;
+       fhir:ImplementationGuide.page.source [ fhir:value "toc.html" ];
+       fhir:ImplementationGuide.page.title [ fhir:value "Table of Contents" ];
+       fhir:ImplementationGuide.page.kind [ fhir:value "resource" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<QuestionnaireResponse xmlns="http://hl7.org/fhir">
+  <id value="questionnaireresponse-example-housing"/>
+  <meta>
+    <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+    <h3>Response Summary</h3>
+    <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-housing<br />
+    <strong>Date Completed:</strong> 2018-07-05T19:02:25.752525<br />
+    <hr /> <br /> <strong>Question:</strong> (linkId = g1.2) Think about the place you live. Do you have problems with any of the following? (check all that apply)<br /><strong>Response:</strong> Bug infestation( code = )<br /><strong>Response:</strong> Inadequate heat( code = )<br /><strong>Response:</strong> Water leaks( code = )<br /><br /> <strong>Question:</strong> (linkId = g1.1) What is your housing situation today?<br /><strong>Response:</strong> I have housing( code = )<br /> <br /><br />
+    </div>
+  </text>
+  <identifier>
+    <value value="test"/>
+  </identifier>
+  <questionnaire>
+    <reference value="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-housing"/>
+  </questionnaire>
+  <status value="completed"/>
+  <subject>
+    <reference value="Patient/subject1"/>
+  </subject>
+  <context>
+    <reference value="Encounter/encounter1"/>
+  </context>
+  <authored value="2018-07-05T19:02:25.752525"/>
+  <author>
+    <reference value="Practitioner/prov-admin1"/>
+  </author>
+  <source>
+    <reference value="Patient/subject1"/>
+  </source>
+  <item>
+    <linkId value="g1"/>
+    <item>
+      <linkId value="g1.2"/>
+      <text value="Think about the place you live. Do you have problems with any of the following? (check all that apply)"/>
+      <answer>
+        <valueString value="Bug infestation"/>
+      </answer>
+      <answer>
+        <valueString value="Inadequate heat"/>
+      </answer>
+      <answer>
+        <valueString value="Water leaks"/>
+      </answer>
+    </item>
+    <item>
+      <linkId value="g1.1"/>
+      <text value="What is your housing situation today?"/>
+      <answer>
+        <valueString value="I have housing"/>
+      </answer>
+    </item>
+  </item>
+</QuestionnaireResponse>

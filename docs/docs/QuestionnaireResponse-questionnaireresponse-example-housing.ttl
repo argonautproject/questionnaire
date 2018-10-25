@@ -1,0 +1,80 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut-questionnaire/QuestionnaireResponse/questionnaireresponse-example-housing> a fhir:QuestionnaireResponse;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "questionnaireresponse-example-housing"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h3>Response Summary</h3>\n    <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-housing<br />\n    <strong>Date Completed:</strong> 2018-07-05T19:02:25.752525<br />\n    <hr /> <br /> <strong>Question:</strong> (linkId = g1.2) Think about the place you live. Do you have problems with any of the following? (check all that apply)<br /><strong>Response:</strong> Bug infestation( code = )<br /><strong>Response:</strong> Inadequate heat( code = )<br /><strong>Response:</strong> Water leaks( code = )<br /><br /> <strong>Question:</strong> (linkId = g1.1) What is your housing situation today?<br /><strong>Response:</strong> I have housing( code = )<br /> <br /><br />\n    </div>"
+  ];
+  fhir:QuestionnaireResponse.identifier [
+     fhir:Identifier.value [ fhir:value "test" ]
+  ];
+  fhir:QuestionnaireResponse.questionnaire [
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-housing>;
+     fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-housing" ]
+  ];
+  fhir:QuestionnaireResponse.status [ fhir:value "completed"];
+  fhir:QuestionnaireResponse.subject [
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/Patient/subject1>;
+     fhir:Reference.reference [ fhir:value "Patient/subject1" ]
+  ];
+  fhir:QuestionnaireResponse.context [
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/Encounter/encounter1>;
+     fhir:Reference.reference [ fhir:value "Encounter/encounter1" ]
+  ];
+  fhir:QuestionnaireResponse.authored [ fhir:value "2018-07-05T19:02:25.752525"^^xsd:dateTime];
+  fhir:QuestionnaireResponse.author [
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/Practitioner/prov-admin1>;
+     fhir:Reference.reference [ fhir:value "Practitioner/prov-admin1" ]
+  ];
+  fhir:QuestionnaireResponse.source [
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/Patient/subject1>;
+     fhir:Reference.reference [ fhir:value "Patient/subject1" ]
+  ];
+  fhir:QuestionnaireResponse.item [
+     fhir:index 0;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1" ];
+     fhir:QuestionnaireResponse.item.item [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1.2" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Think about the place you live. Do you have problems with any of the following? (check all that apply)" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Bug infestation" ]
+       ], [
+         fhir:index 1;
+         fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Inadequate heat" ]
+       ], [
+         fhir:index 2;
+         fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Water leaks" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1.1" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "What is your housing situation today?" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "I have housing" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut-questionnaire/QuestionnaireResponse/questionnaireresponse-example-housing.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

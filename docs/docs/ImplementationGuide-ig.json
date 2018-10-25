@@ -1,0 +1,565 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "ig",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Argonaut Questionnaire</h2><p>The official URL for this implementation guide is: </p><pre>http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig</pre></div>"
+  },
+  "url": "http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig",
+  "version": "0.0.0",
+  "name": "Argonaut Questionnaire",
+  "status": "draft",
+  "experimental": true,
+  "publisher": "Argonaut Project",
+  "fhirVersion": "3.0.1",
+  "package": [
+    {
+      "id": "p1",
+      "name": "base",
+      "resource": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "QuestionnaireResponse-questionnaireresponse-example-sampler.html"
+            }
+          ],
+          "example": true,
+          "sourceReference": {
+            "reference": "QuestionnaireResponse/questionnaireresponse-example-sampler"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Questionnaire-questionnaire-example-sampler.html"
+            }
+          ],
+          "example": true,
+          "sourceReference": {
+            "reference": "Questionnaire/questionnaire-example-sampler"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "QuestionnaireResponse-questionnaireresponse-example-phq9.html"
+            }
+          ],
+          "example": true,
+          "sourceReference": {
+            "reference": "QuestionnaireResponse/questionnaireresponse-example-phq9"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Questionnaire-questionnaire-example-phq9.html"
+            }
+          ],
+          "example": true,
+          "sourceReference": {
+            "reference": "Questionnaire/questionnaire-example-phq9"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "QuestionnaireResponse-questionnaireresponse-example-housing.html"
+            }
+          ],
+          "example": true,
+          "sourceReference": {
+            "reference": "QuestionnaireResponse/questionnaireresponse-example-housing"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Questionnaire-questionnaire-example-housing.html"
+            }
+          ],
+          "example": true,
+          "sourceReference": {
+            "reference": "Questionnaire/questionnaire-example-housing"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "QuestionnaireResponse-questionnaireresponse-example-dast.html"
+            }
+          ],
+          "example": true,
+          "sourceReference": {
+            "reference": "QuestionnaireResponse/questionnaireresponse-example-dast"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Questionnaire-questionnaire-example-dast.html"
+            }
+          ],
+          "example": true,
+          "sourceReference": {
+            "reference": "Questionnaire/questionnaire-example-dast"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "QuestionnaireResponse-questionnaireresponse-example-audit.html"
+            }
+          ],
+          "example": true,
+          "sourceReference": {
+            "reference": "QuestionnaireResponse/questionnaireresponse-example-audit"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Questionnaire-questionnaire-example-audit.html"
+            }
+          ],
+          "example": true,
+          "sourceReference": {
+            "reference": "Questionnaire/questionnaire-example-audit"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "QuestionnaireResponse-questionnaireresponse-example-asq3.html"
+            }
+          ],
+          "example": true,
+          "sourceReference": {
+            "reference": "QuestionnaireResponse/questionnaireresponse-example-asq3"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "Questionnaire-questionnaire-example-asq3.html"
+            }
+          ],
+          "example": true,
+          "sourceReference": {
+            "reference": "Questionnaire/questionnaire-example-asq3"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-extension-timelimit.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition/extension-timelimit"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-extension-score.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition/extension-score"
+          }
+        },
+        {
+          "example": false,
+          "sourceReference": {
+            "reference": "SearchParameter/questionnaire-context-value"
+          }
+        },
+        {
+          "example": false,
+          "sourceReference": {
+            "reference": "SearchParameter/questionnaire-context-type"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-aqr.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition/aqr"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-aq.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition/aq"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-qr.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition/qr"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-qcvs.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition/qcvs"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-q.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "StructureDefinition/q"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "OperationDefinition-next-q.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "OperationDefinition/next-q"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "CapabilityStatement-server.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "CapabilityStatement/server"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "CapabilityStatement-client.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "CapabilityStatement/client"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "CapabilityStatement-assessmentbank.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "CapabilityStatement/assessmentbank"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "CapabilityStatement-answerbank.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "CapabilityStatement/answerbank"
+          }
+        }
+      ]
+    },
+    {
+      "id": "profile-base-q-spreadsheet.xml",
+      "name": "Argonaut_Q_Profile",
+      "resource": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-q.html"
+            }
+          ],
+          "example": false,
+          "name": "Argonaut_Q_Profile",
+          "sourceReference": {
+            "reference": "StructureDefinition/q"
+          }
+        }
+      ]
+    },
+    {
+      "id": "profile-base-qcvs-spreadsheet.xml",
+      "name": "Argonaut_QCVS_Profile",
+      "resource": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-qcvs.html"
+            }
+          ],
+          "example": false,
+          "name": "Argonaut_QCVS_Profile",
+          "sourceReference": {
+            "reference": "StructureDefinition/qcvs"
+          }
+        }
+      ]
+    },
+    {
+      "id": "profile-base-qr-spreadsheet.xml",
+      "name": "Argonaut_QR_Profile",
+      "resource": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-qr.html"
+            }
+          ],
+          "example": false,
+          "name": "Argonaut_QR_Profile",
+          "sourceReference": {
+            "reference": "StructureDefinition/qr"
+          }
+        }
+      ]
+    },
+    {
+      "id": "profile-derived-q-spreadsheet.xml",
+      "name": "Argonaut_Adaptive_Q_Profile",
+      "resource": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-aq.html"
+            }
+          ],
+          "example": false,
+          "name": "Argonaut_Adaptive_Q_Profile",
+          "sourceReference": {
+            "reference": "StructureDefinition/aq"
+          }
+        }
+      ]
+    },
+    {
+      "id": "profile-derived-qr-spreadsheet.xml",
+      "name": "Argonaut_Adaptive_QR_Profile",
+      "resource": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "StructureDefinition-aqr.html"
+            }
+          ],
+          "example": false,
+          "name": "Argonaut_Adaptive_QR_Profile",
+          "sourceReference": {
+            "reference": "StructureDefinition/aqr"
+          }
+        }
+      ]
+    }
+  ],
+  "page": {
+    "source": "index.html",
+    "title": "Home",
+    "kind": "page",
+    "page": [
+      {
+        "source": "guidance.html",
+        "title": "Use Cases",
+        "kind": "page",
+        "page": [
+          {
+            "source": "static.html",
+            "title": "Static Forms",
+            "kind": "page"
+          },
+          {
+            "source": "adaptive.html",
+            "title": "Adaptive Forms",
+            "kind": "page"
+          }
+        ]
+      },
+      {
+        "source": "profiles.html",
+        "title": "Profiles and Extensions",
+        "kind": "page",
+        "page": [
+          {
+            "source": "StructureDefinition-aqr.html",
+            "title": "StructureDefinition Aqr",
+            "kind": "resource"
+          },
+          {
+            "source": "StructureDefinition-aq.html",
+            "title": "StructureDefinition Aq",
+            "kind": "resource"
+          },
+          {
+            "source": "StructureDefinition-qr.html",
+            "title": "StructureDefinition Qr",
+            "kind": "resource"
+          },
+          {
+            "source": "StructureDefinition-qcvs.html",
+            "title": "StructureDefinition Qcvs",
+            "kind": "resource"
+          },
+          {
+            "source": "StructureDefinition-q.html",
+            "title": "StructureDefinition Q",
+            "kind": "resource"
+          },
+          {
+            "source": "StructureDefinition-extension-timelimit.html",
+            "title": "StructureDefinition Extension Timelimit",
+            "kind": "resource"
+          },
+          {
+            "source": "StructureDefinition-extension-score.html",
+            "title": "StructureDefinition Extension Score",
+            "kind": "resource"
+          }
+        ]
+      },
+      {
+        "source": "operations.html",
+        "title": "Operations",
+        "kind": "page",
+        "page": [
+          {
+            "source": "OperationDefinition-next-q.html",
+            "title": "OperationDefinition Next Q",
+            "kind": "resource"
+          }
+        ]
+      },
+      {
+        "source": "terminology.html",
+        "title": "Terminology",
+        "kind": "page"
+      },
+      {
+        "source": "searchparameters.html",
+        "title": "Search Parameters",
+        "kind": "page",
+        "page": [
+          {
+            "source": "SearchParameter-questionnaire-context-value.html",
+            "title": "SearchParameter Questionnaire Context Value",
+            "kind": "resource"
+          },
+          {
+            "source": "SearchParameter-questionnaire-context-type.html",
+            "title": "SearchParameter Questionnaire Context Type",
+            "kind": "resource"
+          }
+        ]
+      },
+      {
+        "source": "capstatements.html",
+        "title": "Capability Statements",
+        "kind": "page",
+        "page": [
+          {
+            "source": "CapabilityStatement-server.html",
+            "title": "CapabilityStatement Server",
+            "kind": "resource"
+          },
+          {
+            "source": "CapabilityStatement-client.html",
+            "title": "CapabilityStatement Client",
+            "kind": "resource"
+          },
+          {
+            "source": "CapabilityStatement-assessmentbank.html",
+            "title": "CapabilityStatement Assessmentbank",
+            "kind": "resource"
+          },
+          {
+            "source": "CapabilityStatement-answerbank.html",
+            "title": "CapabilityStatement Answerbank",
+            "kind": "resource"
+          }
+        ]
+      },
+      {
+        "source": "security.html",
+        "title": "Security",
+        "kind": "page"
+      },
+      {
+        "source": "downloads.html",
+        "title": "Downloads",
+        "kind": "page"
+      },
+      {
+        "source": "all-examples.html",
+        "title": "All Examples",
+        "kind": "page"
+      },
+      {
+        "source": "toc.html",
+        "title": "Table of Contents",
+        "kind": "resource"
+      }
+    ]
+  }
+}

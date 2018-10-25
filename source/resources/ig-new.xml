@@ -29,203 +29,329 @@
     <version value="1.1.0"/>
   </dependsOn>
   <definition>
-    <package id="p1">
+    <grouping id="p1">
       <name value="base"/>
-    </package>
+    </grouping>
     <resource>
       <reference>
         <reference value="QuestionnaireResponse/questionnaireresponse-example-sampler"/>
       </reference>
       <exampleBoolean value="true"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="Questionnaire/questionnaire-example-sampler"/>
       </reference>
       <exampleBoolean value="true"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="QuestionnaireResponse/questionnaireresponse-example-phq9"/>
       </reference>
       <exampleBoolean value="true"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="Questionnaire/questionnaire-example-phq9"/>
       </reference>
       <exampleBoolean value="true"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="QuestionnaireResponse/questionnaireresponse-example-housing"/>
       </reference>
       <exampleBoolean value="true"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="Questionnaire/questionnaire-example-housing"/>
       </reference>
       <exampleBoolean value="true"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="QuestionnaireResponse/questionnaireresponse-example-dast"/>
       </reference>
       <exampleBoolean value="true"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="Questionnaire/questionnaire-example-dast"/>
       </reference>
       <exampleBoolean value="true"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="QuestionnaireResponse/questionnaireresponse-example-audit"/>
       </reference>
       <exampleBoolean value="true"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="Questionnaire/questionnaire-example-audit"/>
       </reference>
       <exampleBoolean value="true"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="QuestionnaireResponse/questionnaireresponse-example-asq3"/>
       </reference>
       <exampleBoolean value="true"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="Questionnaire/questionnaire-example-asq3"/>
       </reference>
       <exampleBoolean value="true"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/extension-timelimit"/>
       </reference>
       <exampleBoolean value="false"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/extension-score"/>
       </reference>
       <exampleBoolean value="false"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
-        <reference value="SearchParameter/Questionnaire-context-value"/>
+        <reference value="SearchParameter/questionnaire-context-value"/>
       </reference>
       <exampleBoolean value="false"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
-        <reference value="SearchParameter/Questionnaire-context-type"/>
+        <reference value="SearchParameter/questionnaire-context-type"/>
       </reference>
       <exampleBoolean value="false"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/aqr"/>
       </reference>
       <exampleBoolean value="false"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/aq"/>
       </reference>
       <exampleBoolean value="false"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/qr"/>
       </reference>
       <exampleBoolean value="false"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/qcvs"/>
       </reference>
       <exampleBoolean value="false"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/q"/>
       </reference>
       <exampleBoolean value="false"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="OperationDefinition/next-q"/>
       </reference>
       <exampleBoolean value="false"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="CapabilityStatement/server"/>
       </reference>
       <exampleBoolean value="false"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="CapabilityStatement/client"/>
       </reference>
       <exampleBoolean value="false"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="CapabilityStatement/assessmentbank"/>
       </reference>
       <exampleBoolean value="false"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="CapabilityStatement/answerbank"/>
       </reference>
       <exampleBoolean value="false"/>
-      <package value="p1"/>
+      <groupingId value="p1"/>
     </resource>
     <page>
-      <nameUrl value="index.md"/>
-      <title value="Argonaut Questionnaire Homepage"/>
+      <nameUrl value="index.html"/>
+      <title value="Home"/>
       <generation value="html"/>
+      <page>
+        <nameUrl value="guidance.html"/>
+        <title value="Use Cases"/>
+        <generation value="html"/>
+        <page>
+          <nameUrl value="static.html"/>
+          <title value="Static Forms"/>
+          <generation value="html"/>
+        </page>
+        <page>
+          <nameUrl value="adaptive.html"/>
+          <title value="Adaptive Forms"/>
+          <generation value="html"/>
+        </page>
+      </page>
+      <page>
+        <nameUrl value="profiles.html"/>
+        <title value="Profiles and Extensions"/>
+        <generation value="html"/>
+        <page>
+          <nameUrl value="StructureDefinition-aqr.html"/>
+          <title value="StructureDefinition Aqr"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-aq.html"/>
+          <title value="StructureDefinition Aq"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-qr.html"/>
+          <title value="StructureDefinition Qr"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-qcvs.html"/>
+          <title value="StructureDefinition Qcvs"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-q.html"/>
+          <title value="StructureDefinition Q"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-extension-timelimit.html"/>
+          <title value="StructureDefinition Extension Timelimit"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-extension-score.html"/>
+          <title value="StructureDefinition Extension Score"/>
+          <generation value="generated"/>
+        </page>
+      </page>
+      <page>
+        <nameUrl value="operations.html"/>
+        <title value="Operations"/>
+        <generation value="html"/>
+        <page>
+          <nameUrl value="OperationDefinition-next-q.html"/>
+          <title value="OperationDefinition Next Q"/>
+          <generation value="generated"/>
+        </page>
+      </page>
+      <page>
+        <nameUrl value="terminology.html"/>
+        <title value="Terminology"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="searchparameters.html"/>
+        <title value="Search Parameters"/>
+        <generation value="html"/>
+        <page>
+          <nameUrl value="SearchParameter-questionnaire-context-value.html"/>
+          <title value="SearchParameter Questionnaire Context Value"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-questionnaire-context-type.html"/>
+          <title value="SearchParameter Questionnaire Context Type"/>
+          <generation value="generated"/>
+        </page>
+      </page>
+      <page>
+        <nameUrl value="capstatements.html"/>
+        <title value="Capability Statements"/>
+        <generation value="html"/>
+        <page>
+          <nameUrl value="CapabilityStatement-server.html"/>
+          <title value="CapabilityStatement Server"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="CapabilityStatement-client.html"/>
+          <title value="CapabilityStatement Client"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="CapabilityStatement-assessmentbank.html"/>
+          <title value="CapabilityStatement Assessmentbank"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="CapabilityStatement-answerbank.html"/>
+          <title value="CapabilityStatement Answerbank"/>
+          <generation value="generated"/>
+        </page>
+      </page>
+      <page>
+        <nameUrl value="security.html"/>
+        <title value="Security"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="downloads.html"/>
+        <title value="Downloads"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="all-examples.html"/>
+        <title value="All Examples"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="toc.html"/>
+        <title value="Table of Contents"/>
+        <generation value="generated"/>
+      </page>
     </page>
     <parameter>
-      <code value="apply-business-version"/>
-      <value value="0.0.0"/>
-    </parameter>
-    <parameter>
-      <code value="html-template"/>
-      <value value="html-template.html"/>
+      <code value="apply"/>
+      <value value="version"/>
     </parameter>
     <parameter>
       <code value="generate-json"/>
