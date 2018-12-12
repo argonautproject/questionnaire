@@ -18,44 +18,55 @@
     {% endif %}
 {% endmacro %}
 
+{% macro get_hidden(k) %}
+    {% if k.extension %}
+          {% for m in k.extension %}
+              {% if m.url == 'http://hl7.org/fhir/StructureDefinition/questionnaire-hidden' and m.valueBoolean == True %}
+              <span style="color:red">(HIDDEN ITEM)</span>
+             {% endif %}
+          {% endfor %}
+    {% endif %}
+{% endmacro %}
+
+{% macro get_readonly(k) %}
+    {% if k.readOnly == True %}
+            <span style="color:red">(READONLY)</span>
+    {% endif %}
+{% endmacro %}
+
 
 {% macro get_score(k) %}
     {%- if k.extension -%}
           {%- for m in k.extension -%}
             {%- if m.url == 'http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score' -%}
-              {{m.valueDecimal}}
-              {%- else -%}
-                NA
+              {{ '(Score = %s)'|format(m.valueDecimal) }}
              {%- endif -%}
           {%- endfor -%}
         {%- elif k.valueCoding -%}
           {%- if k.valueCoding.extension -%}
             {%- for m in k.valueCoding.extension -%}
               {%- if m.url == 'http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue' -%}
-              {{m.valueDecimal}}
-              {%- else -%}
-                NA
+              {{ '(Score = %s)'|format(m.valueDecimal) }}
+
               {%- endif -%}
             {%- endfor %}
           {%- endif -%}
-    {%- else -%}
-      NA
     {%- endif -%}
 {% endmacro %}
 
 
 
 {%- macro input(j, type='text', value = '', size=20, min = '', step = '') %}
-    <input type="{{ type }}" name="{{j.linkId}}" value="{{value|e }}" min="{{min|e }}" step="{{step|e }}" size="{{ size }}" {{ is_required(j) }}> {{ '(Score = %s)'|format(get_score(j)|default('NA')) }}<br />
+    <input type="{{ type }}" name="{{j.linkId}}" value="{{value|e }}" min="{{min|e }}" step="{{step|e }}" size="{{ size }}" {{ is_required(j) }}>{{ get_score(j)|default('') }}{{ get_hidden(j)|default('') }}{{ get_readonly(j)|default('') }}<br />
 {% endmacro -%}
 
 
 {% macro choice_type(j) %}
   {% for k in j.option %}
      {% if k.valueCoding %}
-       <input type='radio' name='{{j.linkId}}' value='{{k.valueCoding.display}}|{{k.valueCoding.system}}|{{k.valueCoding.code}}' {{ is_required(j) }}/>{{ k.valueCoding.display}} {{ '(Score = %s)'|format(get_score(k)|default('NA')) }}  <br />
+       <input type='radio' name='{{j.linkId}}' value='{{k.valueCoding.display}}|{{k.valueCoding.system}}|{{k.valueCoding.code}}' {{ is_required(j) }}/>{{ k.valueCoding.display}} {{ get_score(k)|default('') }}  <br />
     {% else %}
-        <input type='radio' name='{{j.linkId}}' value='{{k.valueString}}' {{ is_required(j) }}/>{{k.valueString}}  {{ '(Score = %s)'|format(get_score(k)|default('NA')) }} <br />
+        <input type='radio' name='{{j.linkId}}' value='{{k.valueString}}' {{ is_required(j) }}/>{{k.valueString}} {{ get_score(k)|default('') }} <br />
     {% endif %}
   {% endfor %}
   {% if j.type == 'open-choice' %}
@@ -68,9 +79,9 @@
     {% for k in j.option %}
       <!-- on the item - for codings -->
       {% if k.valueCoding %}
-         <input type='checkbox' name='{{j.linkId}}' value='{{k.valueCoding.display}}|{{k.valueCoding.system}}|{{k.valueCoding.code}}'{{ is_required(j) }} />{{ k.valueCoding.display}} {{ '(Score = %s)'|format(get_score(k)|default('NA')) }} {{get_exclusive(k)}}<br />
+         <input type='checkbox' name='{{j.linkId}}' value='{{k.valueCoding.display}}|{{k.valueCoding.system}}|{{k.valueCoding.code}}'{{ is_required(j) }} />{{ k.valueCoding.display}} {{ get_score(k)|default('') }} {{get_exclusive(k)}}<br />
       {% else %}
-        <input type='checkbox' name='{{j.linkId}}' value='{{k.valueString}}' {{ is_required(j) }}/>{{k.valueString}}  {{ '(Score = %s)'|format(get_score(k)|default('NA')) }} <br />
+        <input type='checkbox' name='{{j.linkId}}' value='{{k.valueString}}' {{ is_required(j) }}/>{{k.valueString}} {{ get_score(k)|default('') }}  <br />
        {% endif %}
     {% endfor %}
     {% if j.type == 'open-choice' %}

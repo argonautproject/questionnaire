@@ -137,14 +137,14 @@
     },
     {
       "reference" : {
-        "reference" : "SearchParameter/questionnaire-context-value"
+        "reference" : "SearchParameter/Questionnaire-context-value"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
     },
     {
       "reference" : {
-        "reference" : "SearchParameter/questionnaire-context-type"
+        "reference" : "SearchParameter/Questionnaire-context-type"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
@@ -225,18 +225,8 @@
       "generation" : "html",
       "page" : [{
         "nameUrl" : "guidance.html",
-        "title" : "Use Cases",
-        "generation" : "html",
-        "page" : [{
-          "nameUrl" : "static.html",
-          "title" : "Static Forms",
-          "generation" : "html"
-        },
-        {
-          "nameUrl" : "adaptive.html",
-          "title" : "Adaptive Forms",
-          "generation" : "html"
-        }]
+        "title" : "General Guidance",
+        "generation" : "html"
       },
       {
         "nameUrl" : "profiles.html",
@@ -298,12 +288,12 @@
         "title" : "Search Parameters",
         "generation" : "html",
         "page" : [{
-          "nameUrl" : "SearchParameter-questionnaire-context-value.html",
+          "nameUrl" : "SearchParameter-Questionnaire-context-value.html",
           "title" : "SearchParameter Questionnaire Context Value",
           "generation" : "generated"
         },
         {
-          "nameUrl" : "SearchParameter-questionnaire-context-type.html",
+          "nameUrl" : "SearchParameter-Questionnaire-context-type.html",
           "title" : "SearchParameter Questionnaire Context Type",
           "generation" : "generated"
         }]

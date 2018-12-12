@@ -132,14 +132,14 @@
     </resource>
     <resource>
       <reference>
-        <reference value="SearchParameter/questionnaire-context-value"/>
+        <reference value="SearchParameter/Questionnaire-context-value"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
-        <reference value="SearchParameter/questionnaire-context-type"/>
+        <reference value="SearchParameter/Questionnaire-context-type"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -220,18 +220,8 @@
       <generation value="html"/>
       <page>
         <nameUrl value="guidance.html"/>
-        <title value="Use Cases"/>
+        <title value="General Guidance"/>
         <generation value="html"/>
-        <page>
-          <nameUrl value="static.html"/>
-          <title value="Static Forms"/>
-          <generation value="html"/>
-        </page>
-        <page>
-          <nameUrl value="adaptive.html"/>
-          <title value="Adaptive Forms"/>
-          <generation value="html"/>
-        </page>
       </page>
       <page>
         <nameUrl value="profiles.html"/>
@@ -293,12 +283,12 @@
         <title value="Search Parameters"/>
         <generation value="html"/>
         <page>
-          <nameUrl value="SearchParameter-questionnaire-context-value.html"/>
+          <nameUrl value="SearchParameter-Questionnaire-context-value.html"/>
           <title value="SearchParameter Questionnaire Context Value"/>
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="SearchParameter-questionnaire-context-type.html"/>
+          <nameUrl value="SearchParameter-Questionnaire-context-type.html"/>
           <title value="SearchParameter Questionnaire Context Type"/>
           <generation value="generated"/>
         </page>
