@@ -1,5 +1,7 @@
 # Welcome to the [Argonaut](http://argonautwiki.hl7.org/index.php?title=Main_Page) Argonaut Questionnaire Project Repository
 
+See the simulation and test Questionnaire rendering tool at : http://www.fhir.org/guides/argonaut/scheduling/StructureDefinition-argo-sub-notif.html
+
 Argonaut Lead: [Micky Tripathi](mtripathi@maehc.org)
 
 Project Coordinator: [Jennifer Monahan](jmonahan@maehc.org)
