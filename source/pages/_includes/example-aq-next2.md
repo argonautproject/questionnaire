@@ -18,7 +18,7 @@
           "id": "questionnaire-example-adaptive-sampler",
           "meta": {
             "profile": [
-              "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"
+              "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"
             ]
           },
           //the 'url' element identifies the adaptive questionnaire - the set of questions for a particular adaptive questionnaire
@@ -126,7 +126,7 @@
       "id": "questionnaire-example-adaptive-sampler",
       "meta": {
         "profile": [
-          "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"
+          "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"
         ]
       },
       //the 'url' element identifies the adaptive questionnaire - the set of questions for a particular adaptive questionnaire

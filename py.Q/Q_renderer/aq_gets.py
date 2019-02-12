@@ -134,7 +134,6 @@ def get_itemorder(cq_item, o_num):
         if not ordered:
             cq_item.extension.append(getextension('http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder',
                         'valueInteger', 3))  # fhirextension
-
     except AttributeError:
         cq_item.extension.append(getextension('http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder',
                         'valueInteger', 3))  # fhirextension
@@ -162,13 +161,15 @@ def getextension(url, valuetype, value):  # fhirextension
     return(ext)  # note this returning as a list!! TODO fix this
 
 
-def get_next_q_item(q_url, q_items, cq_items):  # assuming no nesting to make sure is unique question
+def get_next_q_item(q_url, q_items, check_list):  # assuming no nesting to make sure is unique question
     cq_item = random.choice(get_q_items(q_items))
-    if any(x.linkId == cq_item.linkId for x in cq_items):
-        get_next_q_item(q_url, q_items, cq_items)
-    else:
+    logging.info('cq_item = {}'.format(cq_item))
+    if  cq_item.linkId not in check_list:
         cq_item.definition = '{}-{}'.format(q_url, cq_item.linkId)
-    return(cq_item)
+        return(cq_item)
+    else:  # try again
+        return get_next_q_item(q_url, q_items, check_list)
+
 
 def get_next_q(q, aqr, score=0):  # assuming no nesting
     cq = aqr.contained[0]
@@ -193,11 +194,16 @@ def get_next_q(q, aqr, score=0):  # assuming no nesting
         aqr.text.div = intro.format(t=cq.title, c=cq.copyright, q=cq.url, d=cq.date.as_json())  # render intro
     elif len(cq.item) < 5:  # check number of q is < 5 add a new q
         logging.info('cq.item = {}'.format(cq.item))
-        cq.item.append(get_next_q_item(q.url, q.item, cq.item))
-        get_itemorder(cq.item[len(cq.item)-1],len(cq.item))
+        check_list =[x.linkId for x in cq.item]
+        logging.info('check_list = {}'.format(check_list))
+        next_cq_item = get_next_q_item(q.url, q.item, check_list)
+        logging.info('next_cq_item = {}'.format(next_cq_item))
+        get_itemorder(next_cq_item,len(cq.item)+1)
+        cq.item.append(next_cq_item)
+
     else:
         # done change the status of the QR to complete and add score as a hidden # QUESTION:
-        aqr.status = 'complete'
+        aqr.status = 'completed'
 
 
     return(aqr)

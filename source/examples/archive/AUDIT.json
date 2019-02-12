@@ -95,7 +95,7 @@
       ],
       "meta": {
         "profile": [
-          "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs"
+          "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire-valueset"
         ]
       },
       "resourceType": "ValueSet",
@@ -182,7 +182,7 @@
       ],
       "meta": {
         "profile": [
-          "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs"
+          "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire-valueset"
         ]
       },
       "resourceType": "ValueSet",
@@ -245,7 +245,7 @@
       ],
       "meta": {
         "profile": [
-          "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs"
+          "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire-valueset"
         ]
       },
       "resourceType": "ValueSet",
@@ -454,7 +454,7 @@
   ],
   "meta": {
     "profile": [
-      "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"
+      "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"
     ]
   },
   "publisher": "Argonaut Project",

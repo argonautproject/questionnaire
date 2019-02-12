@@ -1,7 +1,28 @@
 {% extends 'base.html' %}
 {% block content %}
 <!-- Q content -->
-<h3>Posted to the <i>{{ref_server_name}}</i> FHIR reference implementation at <code>{{ref_server}}</code> as the Answer Bank.</h3>
-<p>...TODO....</p>
+<h3>{{qr_id}} status = {{r.status_code}} </h3>
+{% if r.status_code < 300 %}
+<h3>Posted to the Answer Bank: <i>{{ref_server_name}}</i> FHIR reference implementation at <code>{{r.headers['Location']}}</code>
+{% endif %}
+
+<h4>Headers:</h4>
+<ul>
+<li>Location: {{r.headers['Location']}}</li>
+<li>Content-Type: {{r.headers['Content-Type']}}</li>
+<li>Request-Context: {{r.headers['Request-Context']}}</li>
+<li>Content-Length: {{r.headers['Content-Length']}}</li>
+</ul>
+
+{% if r.status_code >= 300 %}
+{{r.json()}}
+{% endif %}
+
+<hr />
+<h3>Posted QuestionnaireResponse</h3>
+<pre style="white-space: pre-wrap;">
+<!-- {{qr_string}} -->
+{{posted_qr}}
+</pre>
 {% endblock %}
 <!-- End Q content ---->

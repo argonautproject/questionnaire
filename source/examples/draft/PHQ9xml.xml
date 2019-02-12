@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Questionnaire xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd%20-STU3/fhir-all.xsd">
 	<id value="questionnaire-example-phq-9xml"/>
-	<meta><profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"></profile></meta>
+	<meta><profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"></profile></meta>
 	<text>
 		<status value="additional"></status>
 		<div xmlns="http://www.w3.org/1999/xhtml">

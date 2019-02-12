@@ -3,10 +3,12 @@
 # ========================== imports =========================
 from flask import Flask, request, render_template, Markup, url_for, session, redirect, flash
 from werkzeug.contrib.cache import SimpleCache
+from datetime import datetime
 import requests
 import json
-from datetime import datetime
+import io
 from pdb import set_trace as bp
+import my_utils
 import fhirtemplates as f
 import aq_gets as aq
 import fhirclient.models.questionnaire as Q
@@ -21,7 +23,6 @@ import fhirclient.models.extension as Ext
 import fhirclient.models.period as P
 import logging
 from logging.handlers import RotatingFileHandler
-
 from fhirclient.models.fhirabstractbase import FHIRValidationError
 
 # from googletrans import Translator # unavailable for 3.4 as a pip install
@@ -88,8 +89,8 @@ def reset_q_cache(): # reset ALL session variables for new questionnaire
     session['std_dev'] = 0.0
     session['responses'] = ''
     session['narr_list'] = []
-
-
+    session['qr_id'] = ''  # this is for saving my examples
+    session['profile'] = ''
 
 
 def reset_aqr_cache(): # reset session variables for new adaptive questionnaire
@@ -99,7 +100,8 @@ def reset_aqr_cache(): # reset session variables for new adaptive questionnaire
     session['narr_list'] = []
     session['current_aqr'] = {}
     session['step'] = 0
-
+    session['qr_id'] = ''  # this is for saving my examples
+    session['profile'] = ''
 
 def t0(arg):
     pass
@@ -467,6 +469,7 @@ def get_q(request):
     return()
 
 
+
 # ===================== Not available in python 3.4 for AWS deployment ===============
 #def translate_element(t_source):
 #   t = Translator()
@@ -576,12 +579,38 @@ def qr_view():
     <hr /> {r} <br /><br />
     </div>'''.format(q=qr.questionnaire.reference, d=qr.authored.as_json(), r=''.join(session['narr_list']))
 
+    #scrub id for user POST and save as session qr
+    qr.identifier.value = qr.id
+    session['qr_id'] = qr.id  # this is for saving my examples
+    session['profile'] = qr.meta.profile[0]  # this is for uploads if validate by profile
+    qr.id = None # for posting to server
+    set_cache(qr.identifier.value, json.dumps(qr.as_json(),indent = 3, sort_keys=True))
+
+
     # bp()  # ***************** this is a break******************
-    return render_template('qr_view.html', qr=qr, qr_string=json.dumps(qr.as_json(), indent=4, sort_keys=True), adaptive=False )
+    return render_template('qr_view.html', qr=qr, qr_string=cache.get(qr.identifier.value), adaptive=False )
+
+# ================================ POST to Answer Bank ==========================
 
 @application.route('/post_answers', methods=['GET', 'POST'])  # decorator to post to answer bank
 def a_bank():
-    return render_template('a_bank.html',ref_server_name = ref_server_name, ref_server = ref_server)
+    qr_id=session['qr_id']
+    qr = cache.get(qr_id) if cache.get(qr_id) else json.dumps(session.get('current_aqr'),indent =3, sort_keys=True)
+    profile = session['profile']
+    # qr.id = None # iscrub the id  uncomment for users
+    # my_utils.write_file(qr_id, qr) # save to out file for publishing Comment out when done
+    r = my_utils.update_to_server(qr,'QuestionnaireResponse',profile) # ,qr_id) remove the id to post for other users
+    application.logger.info('status code = {}\n headers = {}'.format(r.status_code,r.headers))# udpate QR to server return id.
+    return render_template('a_bank.html',ref_server_name = ref_server_name,
+     ref_server = ref_server,
+      r=r,
+      qr_id = qr_id,
+      qr_string=qr,
+      posted_qr=json.dumps(r.json(),indent = 3, sort_keys=True)
+        )
+
+
+# ===================================View AQR ===================================
 
 @application.route('/aq_view' , methods=['GET', 'POST']) #decorator to view adaptive questionnaire
 def aq_view(): # client view
@@ -614,17 +643,25 @@ def aq_view(): # client view
 
     session['current_aqr']=aqr.as_json() # update session
 
-    if aqr.status == 'complete':  # done!!!
+    if aqr.status == 'completed':  # done!!!
         # add response period extension
         dt = '{}Z'.format(datetime.utcnow().isoformat())  # == stop time
         aqr.extension = [get_responseperiod_x(aqr.authored.as_json(),dt)]
         pop_to_front() # resort narrative
         session['step'] = session['step'] + 1
         # change this to join
-        aqr.text.div = '{}<hr>{}'.format(session['intro'],''.join(session['narr_list'])) # add q-as to narrative
+        aqr.text.div = '{}<hr />{}</div>'.format(session['intro'],''.join(session['narr_list'])) # add q-as to narrative
         # aqr.text.div = '{i}{r}'.format(i=aqr.text.div,r=session['responses']) # add q-as to narrative
         #application.logger.info('aqr as dict ={}'.format(aqr.as_json()))
-        return render_template('qr_view.html', qr=aqr, qr_string=json.dumps(aqr.as_json(), indent=4, sort_keys=True), adaptive=True)
+
+        #scrub id for user POST and save as session qr
+        aqr.identifier.value = aqr.id
+        session['profile'] = aqr.meta.profile[0]  # this is for uploads if validate by profile
+        session['qr_id'] = aqr.id  # this is for saving my examples
+        aqr.id = None # for posting to server
+        session['current_aqr']=aqr.as_json() # update session
+
+        return render_template('qr_view.html', qr=aqr, qr_string=json.dumps(session['current_aqr'],indent =3, sort_keys=True), adaptive=True)
         # TODO use PRG pattern so doesn't update on refresh
 
     j = aq.get_new_question(aqr) #get new question to display

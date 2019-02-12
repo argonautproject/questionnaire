@@ -2,7 +2,7 @@
    "id": "questionnaire-example-phq9",
    "meta": {
       "profile": [
-         "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"
+         "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"
       ]
    },
    "contained": [
@@ -10,7 +10,7 @@
          "id": "LL358-3",
          "meta": {
             "profile": [
-               "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs"
+               "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire-valueset"
             ]
          },
          "copyright": "This content LOINC is copyright 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use .",
@@ -101,7 +101,7 @@
          "id": "LL359-1",
          "meta": {
             "profile": [
-               "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs"
+               "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire-valueset"
             ]
          },
          "copyright": "This content LOINC is copyright 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use .",

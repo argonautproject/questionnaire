@@ -1,0 +1,191 @@
+{
+   "author": {
+      "reference": "Practitioner/prov-admin1"
+   },
+   "authored": "2019-02-12T20:07:41.785521Z",
+   "context": {
+      "reference": "Encounter/encounter1"
+   },
+   "extension": [
+      {
+         "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-responsePeriod",
+         "valuePeriod": {
+            "end": "2019-02-12T20:07:41.785521Z",
+            "start": "2019-02-12T20:07:18.017938Z"
+         }
+      }
+   ],
+   "identifier": {
+      "value": "questionnaireresponse-example-phq9"
+   },
+   "item": [
+      {
+         "item": [
+            {
+               "linkId": "g1.d",
+               "text": "Over the last 2 weeks, how often have you been bothered by any of the following problems? (Use \u201cX\u201d to indicate your answer)"
+            },
+            {
+               "answer": [
+                  {
+                     "valueCoding": {
+                        "code": "LA6568-5",
+                        "display": "Not at all",
+                        "system": "http://loinc.org"
+                     }
+                  }
+               ],
+               "linkId": "g1.q1",
+               "text": "Little interest or pleasure in doing things,"
+            },
+            {
+               "answer": [
+                  {
+                     "valueCoding": {
+                        "code": "LA6568-5",
+                        "display": "Not at all",
+                        "system": "http://loinc.org"
+                     }
+                  }
+               ],
+               "linkId": "g1.q2",
+               "text": "Feeling down, depressed, or hopeless,"
+            },
+            {
+               "answer": [
+                  {
+                     "valueCoding": {
+                        "code": "LA6568-5",
+                        "display": "Not at all",
+                        "system": "http://loinc.org"
+                     }
+                  }
+               ],
+               "linkId": "g1.q3",
+               "text": "Trouble falling or staying asleep, or sleeping too much"
+            },
+            {
+               "answer": [
+                  {
+                     "valueCoding": {
+                        "code": "LA6568-5",
+                        "display": "Not at all",
+                        "system": "http://loinc.org"
+                     }
+                  }
+               ],
+               "linkId": "g1.q4",
+               "text": "Feeling tired or having little energy,"
+            },
+            {
+               "answer": [
+                  {
+                     "valueCoding": {
+                        "code": "LA6568-5",
+                        "display": "Not at all",
+                        "system": "http://loinc.org"
+                     }
+                  }
+               ],
+               "linkId": "g1.q5",
+               "text": "Poor appetite or overeating,"
+            },
+            {
+               "answer": [
+                  {
+                     "valueCoding": {
+                        "code": "LA6568-5",
+                        "display": "Not at all",
+                        "system": "http://loinc.org"
+                     }
+                  }
+               ],
+               "linkId": "g1.q6",
+               "text": "Feeling bad about yourself - or that you are a failure or have let yourself or your family down,"
+            },
+            {
+               "answer": [
+                  {
+                     "valueCoding": {
+                        "code": "LA6568-5",
+                        "display": "Not at all",
+                        "system": "http://loinc.org"
+                     }
+                  }
+               ],
+               "linkId": "g1.q7",
+               "text": "Trouble concentrating on things, such as reading the newspaper or watching television,"
+            },
+            {
+               "answer": [
+                  {
+                     "valueCoding": {
+                        "code": "LA6568-5",
+                        "display": "Not at all",
+                        "system": "http://loinc.org"
+                     }
+                  }
+               ],
+               "linkId": "g1.q8",
+               "text": "Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual,"
+            },
+            {
+               "answer": [
+                  {
+                     "valueCoding": {
+                        "code": "LA6568-5",
+                        "display": "Not at all",
+                        "system": "http://loinc.org"
+                     }
+                  }
+               ],
+               "linkId": "g1.q9",
+               "text": "Thoughts that you would be better off dead, or of hurting yourself"
+            },
+            {
+               "linkId": "g1.s",
+               "text": "Scoring: \nAdd up all checked boxes on PHQ-9. \n\nFor every:\nNot at all = 0;\nSeveral days = 1;\nMore than half the days = 2;\nNearly every day = 3\n\nInterpretation of Total Score\nTotal Score Depression Severity\n1-4 Minimal depression\n5-9 Mild depression\n10-14 Moderate depression\n15-19 Moderately severe depression\n20-27 Severe depression (this is hidden text/should not be displayed to the user)"
+            }
+         ],
+         "linkId": "g1"
+      },
+      {
+         "item": [
+            {
+               "answer": [
+                  {
+                     "valueCoding": {
+                        "code": "LA6572-7",
+                        "display": "Not difficult at all",
+                        "system": "http://loinc.org"
+                     }
+                  }
+               ],
+               "linkId": "g2.q1",
+               "text": "If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people,"
+            }
+         ],
+         "linkId": "g2"
+      }
+   ],
+   "meta": {
+      "profile": [
+         "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/questionnaireresponse"
+      ]
+   },
+   "questionnaire": {
+      "reference": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9"
+   },
+   "resourceType": "QuestionnaireResponse",
+   "source": {
+      "reference": "Patient/subject1"
+   },
+   "status": "completed",
+   "subject": {
+      "reference": "Patient/subject1"
+   },
+   "text": {
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h3>Response Summary</h3>\n    <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9<br />\n    <strong>Date Completed:</strong> 2019-02-12T20:07:41.785521Z<br />\n    <hr /> <br /><strong>Over the last 2 weeks, how often have you been bothered by any of the following problems? (Use \u201cX\u201d to indicate your answer)</strong><br /><br /> <strong>Question:</strong> (linkID=g1.q1) Little interest or pleasure in doing things,<br /><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q2) Feeling down, depressed, or hopeless,<br /><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q3) Trouble falling or staying asleep, or sleeping too much<br /><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q4) Feeling tired or having little energy,<br /><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q5) Poor appetite or overeating,<br /><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q6) Feeling bad about yourself - or that you are a failure or have let yourself or your family down,<br /><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q7) Trouble concentrating on things, such as reading the newspaper or watching television,<br /><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q8) Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual,<br /><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q9) Thoughts that you would be better off dead, or of hurting yourself<br /><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br /><br /><strong>Scoring: \nAdd up all checked boxes on PHQ-9. \n\nFor every:\nNot at all = 0;\nSeveral days = 1;\nMore than half the days = 2;\nNearly every day = 3\n\nInterpretation of Total Score\nTotal Score Depression Severity\n1-4 Minimal depression\n5-9 Mild depression\n10-14 Moderate depression\n15-19 Moderately severe depression\n20-27 Severe depression (this is hidden text/should not be displayed to the user)</strong><br /><br /> <strong>Question:</strong> (linkID=g2.q1) If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people,<br /><strong>Response:</strong>  Not difficult at all ( code = LA6572-7, codesystem = http://loinc.org)<br /> <br /><br />\n    </div>",
+      "status": "generated"
+   }
+}

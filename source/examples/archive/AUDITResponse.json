@@ -149,7 +149,7 @@
     ],
     "meta": {
         "profile": [
-            "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr"
+            "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaireresponse"
         ]
     },
     "questionnaire": {
