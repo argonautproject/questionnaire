@@ -128,7 +128,7 @@ In the basic workflow outlined below., an EHR system retrieves a standardized as
 
 **See  the [Adaptive Forms Use Case] for a detailed description of workflow and API guidance.**
 
-In the basic workflow outlined below., ...todo...
+Adaptive Forms or Questionnaires such as [PROMIS] forms use a stateless model where a selection of items is presented on the computer to an end user based on the answers on the prior items. The server selects the following items optimized for the outcome of the assessment or testee's estimated ability or trait[^?] (https://en.wikipedia.org/wiki/Questionnaire). This implementation guide provides the basic framework for using Questionnaire and QuestionnaireResponse to preserve the state of the Questionnaire as the client retrieves questions from a remote adaptive questionnaire service.
 
 {% include img.html img="adaptive-workflow.jpg" caption="Basic Argonaut Questionnaire Workflow" %}
 
@@ -146,9 +146,12 @@ In the basic workflow outlined below., ...todo...
 
 
 
-## Security
+## Security and Privacy Considerations
 
-For general security consideration refer to the [Security section] in the US Core Implementation Guide. See the [Assumptions] section above for a discussion of login and trust.
+For general security consideration refer to the [Security section] in the US Core Implementation Guide and [FHIR Security] section in core FHIR Specification. See the [Assumptions] section above for a discussion of login and trust.
+
+Responses to Questionnaires may be stored in an external ‘answer bank’ that is shared and may not be in a trusted environment. Therefore careful consideration to determine whether posting a QuestionnaireResponse to a shared answer bank is risking the patient's privacy. Guidance on how to maintain patient privacy and still be able to search the responses effectively is provided in [this section].
+
 
 ## Outstanding issues/Future scope
 

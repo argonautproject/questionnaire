@@ -15,18 +15,24 @@
     <valueString value="/Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/pages"/>
   </extension>
   <url value="http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig"/>
-  <version value="0.0.0"/>
+  <version value="1.0.0"/>
   <name value="Argonaut Questionnaire"/>
   <status value="draft"/>
   <experimental value="true"/>
   <publisher value="Argonaut Project"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://argonautwiki.hl7.org"/>
+    </telecom>
+  </contact>
   <packageId value="argonaut.questionnaire"/>
   <license value="CC0-1.0"/>
   <fhirVersion value="3.0.1"/>
   <dependsOn id="uscore">
     <uri value="http://hl7.org/fhir/us/core"/>
     <packageId value="hl7.fhir.us.core"/>
-    <version value="1.1.0"/>
+    <version value="2.0.0"/>
   </dependsOn>
   <definition>
     <grouping id="p1">
@@ -34,35 +40,7 @@
     </grouping>
     <resource>
       <reference>
-        <reference value="QuestionnaireResponse/questionnaireresponse-example-sampler"/>
-      </reference>
-      <exampleBoolean value="true"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Questionnaire/questionnaire-example-sampler"/>
-      </reference>
-      <exampleBoolean value="true"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="QuestionnaireResponse/questionnaireresponse-example-phq9"/>
-      </reference>
-      <exampleBoolean value="true"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Questionnaire/questionnaire-example-phq9"/>
-      </reference>
-      <exampleBoolean value="true"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="QuestionnaireResponse/questionnaireresponse-example-housing"/>
+        <reference value="Questionnaire/questionnaire-example-dast"/>
       </reference>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
@@ -76,6 +54,34 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Questionnaire/questionnaire-example-audit-c"/>
+      </reference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Questionnaire/questionnaire-example-phq9"/>
+      </reference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="QuestionnaireResponse/questionnaireresponse-example-audit-c"/>
+      </reference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="QuestionnaireResponse/questionnaireresponse-example-housing"/>
+      </reference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="QuestionnaireResponse/questionnaireresponse-example-dast"/>
       </reference>
       <exampleBoolean value="true"/>
@@ -83,49 +89,77 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Questionnaire/questionnaire-example-dast"/>
+        <reference value="QuestionnaireResponse/questionnaireresponse-example-phq9"/>
       </reference>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
-        <reference value="QuestionnaireResponse/questionnaireresponse-example-audit"/>
+        <reference value="Questionnaire/questionnaire-example-sampler"/>
       </reference>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
-        <reference value="Questionnaire/questionnaire-example-audit"/>
+        <reference value="QuestionnaireResponse/questionnaireresponse-example-sampler"/>
       </reference>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
-        <reference value="QuestionnaireResponse/questionnaireresponse-example-asq3"/>
-      </reference>
-      <exampleBoolean value="true"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Questionnaire/questionnaire-example-asq3"/>
-      </reference>
-      <exampleBoolean value="true"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/extension-timelimit"/>
+        <reference value="CapabilityStatement/assessmentbank"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/extension-score"/>
+        <reference value="StructureDefinition/aqr"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CapabilityStatement/server"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/extension-timeLimit"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/extension-itemOrder"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/q"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CapabilityStatement/client"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="OperationDefinition/next-q"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -139,14 +173,28 @@
     </resource>
     <resource>
       <reference>
-        <reference value="SearchParameter/Questionnaire-context-type"/>
+        <reference value="StructureDefinition/extension-responsePeriod"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/aqr"/>
+        <reference value="CapabilityStatement/answerbank"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/qcvs"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="SearchParameter/Questionnaire-context-type"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -161,55 +209,6 @@
     <resource>
       <reference>
         <reference value="StructureDefinition/qr"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/qcvs"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/q"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="OperationDefinition/next-q"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="CapabilityStatement/server"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="CapabilityStatement/client"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="CapabilityStatement/assessmentbank"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="CapabilityStatement/answerbank"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -233,6 +232,16 @@
           <generation value="generated"/>
         </page>
         <page>
+          <nameUrl value="StructureDefinition-q.html"/>
+          <title value="StructureDefinition Q"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-qcvs.html"/>
+          <title value="StructureDefinition Qcvs"/>
+          <generation value="generated"/>
+        </page>
+        <page>
           <nameUrl value="StructureDefinition-aq.html"/>
           <title value="StructureDefinition Aq"/>
           <generation value="generated"/>
@@ -243,23 +252,18 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-qcvs.html"/>
-          <title value="StructureDefinition Qcvs"/>
+          <nameUrl value="StructureDefinition-extension-timeLimit.html"/>
+          <title value="StructureDefinition Extension timeLimit"/>
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-q.html"/>
-          <title value="StructureDefinition Q"/>
+          <nameUrl value="StructureDefinition-extension-itemOrder.html"/>
+          <title value="StructureDefinition Extension itemOrder"/>
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-extension-timelimit.html"/>
-          <title value="StructureDefinition Extension Timelimit"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="StructureDefinition-extension-score.html"/>
-          <title value="StructureDefinition Extension Score"/>
+          <nameUrl value="StructureDefinition-extension-responsePeriod.html"/>
+          <title value="StructureDefinition Extension responsePeriod"/>
           <generation value="generated"/>
         </page>
       </page>
@@ -298,6 +302,11 @@
         <title value="Capability Statements"/>
         <generation value="html"/>
         <page>
+          <nameUrl value="CapabilityStatement-assessmentbank.html"/>
+          <title value="CapabilityStatement Assessmentbank"/>
+          <generation value="generated"/>
+        </page>
+        <page>
           <nameUrl value="CapabilityStatement-server.html"/>
           <title value="CapabilityStatement Server"/>
           <generation value="generated"/>
@@ -305,11 +314,6 @@
         <page>
           <nameUrl value="CapabilityStatement-client.html"/>
           <title value="CapabilityStatement Client"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="CapabilityStatement-assessmentbank.html"/>
-          <title value="CapabilityStatement Assessmentbank"/>
           <generation value="generated"/>
         </page>
         <page>

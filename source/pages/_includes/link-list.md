@@ -10,8 +10,10 @@
 [Argonaut Next Question Operation]: OperationDefinition-next-q.html "The Argonaut Next Question Operation is used for adaptive questionnaires forms where the next question is based on previous answers."
 [Argonaut Project]: http://argonautwiki.hl7.org/index.php?title=Main_Page
 [Argonaut Questionnaire Profile]: StructureDefinition-q.html "Argonaut Questionnaire Profile"
-[Argonaut Questionnaire Score]: StructureDefinition-extension-score.html
-[Argonaut Questionnaire Time Limit]: StructureDefinition-extension-score.html
+[Questionnaire Ordinal Value Extension]: {{site.data.fhir.path}}extension-questionnaire-ordinalvalue.html "A numeric value that allows the comparison (less than, greater than) or other numerical manipulation of a concept (e.g. adding up components of a score)."
+[Argonaut Questionnaire Time Limit Extension]: StructureDefinition-extension-timeLimit.html
+[Argonaut Questionnaire Item Order Extension]: StructureDefinition-extension-itemOrder.html
+[QuestionnaireResponse Response Period Extension]: StructureDefinition-extension-responsePeriod.html
 [Argonaut QuestionnaireResponse Profile]: StructureDefinition-qr.html "Argonaut QuestionnaireResponse Profile"
 [Assessment-Bank]: CapabilityStatement-assessmentbank.html
 [Assumptions]: index.html#assumptions-and-preconditions  "Assumptions-and-Preconditions"
@@ -31,10 +33,11 @@
 [Profiles]: profiles.html
 [Provider EHR]: CapabilityStatement-server.html
 [Questionnaire examples]: StructureDefinition-q.html#examples
-[Questionnaire Hidden]: {{site.data.fhir.path}}extension-questionnaire-hidden.html "Questionnaire hidden extension: If true, indicates that the extended item should not be displayed to the user."
-[Questionnaire Option Exclusive]: {{site.data.fhir.path}}extension-questionnaire-optionexclusive.html "Questionnaire optionexclusive extension: If true, indicates that if this option is selected, no other options may be selected."
+[Questionnaire Hidden Extension]: {{site.data.fhir.path}}extension-questionnaire-hidden.html "Questionnaire hidden extension: If true, indicates that the extended item should not be displayed to the user."
+[Questionnaire Option Exclusive Extension]: {{site.data.fhir.path}}extension-questionnaire-optionexclusive.html "Questionnaire optionexclusive extension: If true, indicates that if this option is selected, no other options may be selected."
 [Questionnaire]: {{site.data.fhir.path}}questionnaire.html "Questionnaire resource"
 [QuestionnaireResponse]: {{site.data.fhir.path}}questionnaireresponse.html "QuestionnaireResponse resource"
+[Observation]: {{site.data.fhir.path}}observation.html "Observation resource"
 [Security section]: {{site.data.fhir.uscore}}/security.html "US Core Security"
 [see issues]: index.html#outstanding-issuesfuture-scope
 [server]: CapabilityStatement-server.html

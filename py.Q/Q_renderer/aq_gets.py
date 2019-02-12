@@ -159,9 +159,10 @@ def get_next_q(q, aqr, score=0):  # assuming no nesting
         # logging.info(q_item.prefix)
         cq.item.append(q_item) # use first question
         cq.copyright = q.copyright
-        dt = datetime.now().isoformat()
+        dt = '{}Z'.format(datetime.utcnow().isoformat())
         cq.date = FD.FHIRDate(dt)
         cq.id = 'contained-adaptive-{}'.format(q.id)
+        cq.extension = q.extension
         cq.title = 'Contained Adaptive {}'.format(q.title)
         cq.url = q.url
         cq = aqr.contained[0]
@@ -173,6 +174,7 @@ def get_next_q(q, aqr, score=0):  # assuming no nesting
         # done change the status of the QR to complete and add score as a hidden # QUESTION:
         aqr.status = 'complete'
 
+
     return(aqr)
 
 
@@ -180,7 +182,7 @@ def init_aqr(q):
     aqr = QR.QuestionnaireResponse(f.aqr_templ, strict=False) # resets aqr and contained q
     aqr.questionnaire = Ref.FHIRReference({'reference': '#contained-adaptive-{}'.format(q.id)}) # update the questionnaire
     aqr.id = q.url.rsplit('/')[-1].replace('questionnaire', 'adaptive-questionnaireresponse')  # update the QR id
-    dt = datetime.now().isoformat()
+    dt = '{}Z'.format(datetime.utcnow().isoformat())  # start time...
     aqr.authored = FD.FHIRDate(dt)  # update datetime
     # application.logger.info(json.dumps(qr.as_json(), indent=4, sort_keys=True))
     # ---create narrative  only answered and static questions ---

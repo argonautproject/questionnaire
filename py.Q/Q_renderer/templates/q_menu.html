@@ -4,13 +4,14 @@
 <h4>Example Questionnaires available for testing:</h4>
 <em>NOTE: These examples are for educational and testing purposes, see the form copyright statement and do not redistribute without expressed permission from the form author.</em>
 <form name="myForm" action='{{url_for('q_view') }}' method="post">
-  <!-- <input type="radio" name="options" id="option1" value="{{ ref_server }}Questionnaire/eTAtxwTlJcwLaR-aif62yGg3" required> Rand 36-Item Health Survey 1.0</input><br> -->
+  <!-- <input type="radio" name="options" id="option1" value="{{ ref_server }}Questionnaire/eTAtxwTlJcwLaR-aif62yGg3" required> Rand 36-Item Health Survey 1.0</input><br>
   <input type="radio" name="options" id="option1" value="{{ ref_server }}Questionnaire/questionnaire-example-audit" required> The Alcohol Use Disorder Identification Test (AUDIT) Form</input><br>
-  <input type="radio" name="options" id="option2" value="{{ ref_server }}Questionnaire/questionnaire-example-asq3"> Ages and Stages Questionnaire (ASQ-3) Sample 16 Month Questionnaire</input><br>
+  <input type="radio" name="options" id="option2" value="{{ ref_server }}Questionnaire/questionnaire-example-asq3"> Ages and Stages Questionnaire (ASQ-3) Sample 16 Month Questionnaire</input><br> -->
+  <input type="radio" name="options" id="option1" value="{{ ref_server }}Questionnaire/questionnaire-example-audit-c"> Alcohol Use Disorder Identification Test - Consumption [AUDIT-C] Form</input><br>
   <input type="radio" name="options" id="option3" value="{{ ref_server }}Questionnaire/questionnaire-example-dast"> Drug Abuse Screening Test (DAST-10)</input><br>
   <input type="radio" name="options" id="option4" value="{{ ref_server }}Questionnaire/questionnaire-example-housing"> Housing Instability Questionnaire</input><br>
   <input type="radio" name="options" id="option5" value="{{ ref_server }}Questionnaire/questionnaire-example-phq9"> Patient Health Questionnaire-9 (PHQ-9)</input><br>
-  <input type="radio" name="options" id="option6" value="{{ ref_server }}Questionnaire/questionnaire-example-sampler">Argonaut Questionnaire Sampler</input><br>
+  <input type="radio" name="options" id="option6" value="{{ ref_server }}Questionnaire/questionnaire-example-sampler" required>Argonaut Questionnaire Sampler</input><br>
 
 <!-- ===========not available in 3.4 for AWS deployment
 <br />

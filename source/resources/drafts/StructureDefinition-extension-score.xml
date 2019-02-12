@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="extension-score" />
-  <url value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score" />
+  <url value="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue" />
   <version value="0.0.0" />
   <name value="argonautQuestionnaireScore" />
-  <title value="Argonaut Project Questionnaire Score Extension" />
+  <title value="Argonaut Questionnaire Score Extension" />
   <status value="draft" />
-  <date value="2018-05-15" />
+  <date value="2018-05-15" />s
   <publisher value="The Argonaut Project" />
-  <description value="Argonaut Project Questionnaire Score  Extension defines a numerical score associated with a question, or answer choice if using the `option` element.  Use the [ordinalValue](http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue) extension to score individual choices in a valuset &#xD;&#xA;" />
+  <description value="A numerical score associated with a question, or answer choice if using the `option` element.  Use the [ordinalValue](http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue) extension to score individual choices in a valuset &#xD;&#xA;" />
   <fhirVersion value="3.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
@@ -37,7 +37,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue" />
     </element>
     <element id="Extension.value[x]:valueDecimal">
       <path value="Extension.valueDecimal" />

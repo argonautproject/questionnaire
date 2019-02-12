@@ -18,6 +18,7 @@ import fhirclient.models.quantity as QT
 import fhirclient.models.coding as C
 import fhirclient.models.fhirreference as Ref
 import fhirclient.models.extension as Ext
+import fhirclient.models.period as P
 import logging
 from logging.handlers import RotatingFileHandler
 
@@ -374,6 +375,16 @@ def get_qr_items(results, item_list, qr_item_list, position=None):  #render QR.i
     return()
 
 
+def get_responseperiod_x(start,end):
+
+    responseperiod_x = Ext.Extension()
+    responseperiod_x.url = 'http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-responsePeriod'
+    responseperiod_x.valuePeriod = P.Period()
+    responseperiod_x.valuePeriod.start = FD.FHIRDate(start)
+    responseperiod_x.valuePeriod.end = FD.FHIRDate(end)
+    return responseperiod_x
+
+
 def pop_option(q, item):
         if item.options.reference.startswith('#'):
             # get contained contained VS
@@ -506,6 +517,7 @@ def index():
 
 @application.route('/q_view', methods=['GET', 'POST'])  # decorator to map to form view
 def q_view():
+    session['q_starttime'] = '{}Z'.format(datetime.utcnow().isoformat()) # start-time as FHIRdate
     error = None
     # q = None  # for local file to start
     application.logger.info('request.form.get("adaptive", None) = {} request.values = {}'.format(request.form.get('adaptive', None),request.values))
@@ -547,7 +559,8 @@ def qr_view():
     qr = QR.QuestionnaireResponse(f.qr_templ, strict=False)
     qr.questionnaire = Ref.FHIRReference({'reference': qr_working_q.url}) # update the questionnaire
     qr.id = qr_working_q.url.rsplit('/')[-1].replace('questionnaire', 'questionnaireresponse')  # update the QR id
-    dt = datetime.now().isoformat()
+    dt = '{}Z'.format(datetime.utcnow().isoformat())  # == stop time
+    qr.extension = [get_responseperiod_x(session['q_starttime'],dt)]    # add extension for FHIRDates start and stoptime
     qr.authored = FD.FHIRDate(dt)  # update datetime
     # application.logger.info(json.dumps(qr.as_json(), indent=4, sort_keys=True))
     qr.item = []
@@ -602,6 +615,9 @@ def aq_view(): # client view
     session['current_aqr']=aqr.as_json() # update session
 
     if aqr.status == 'complete':  # done!!!
+        # add response period extension
+        dt = '{}Z'.format(datetime.utcnow().isoformat())  # == stop time
+        aqr.extension = [get_responseperiod_x(aqr.authored.as_json(),dt)]
         pop_to_front() # resort narrative
         session['step'] = session['step'] + 1
         # change this to join

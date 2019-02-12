@@ -53,7 +53,7 @@
             {
               "extension": [
                 {
-                  "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
                   "valueDecimal": 17
                 }
               ],
@@ -75,7 +75,7 @@
             {
               "extension": [
                 {
-                  "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
                   "valueDecimal": 7
                 }
               ],
@@ -194,7 +194,7 @@
           {
             "extension": [
               {
-                "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
                 "valueDecimal": 17
               }
             ],
@@ -216,7 +216,7 @@
           {
             "extension": [
               {
-                "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
                 "valueDecimal": 7
               }
             ],

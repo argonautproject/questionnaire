@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+	<id value="extension-itemOrder"/>
+	<url value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder"/>
+	<version value="1.0.0"/>
+	<name value="extension_item_order"/>
+	<title value="Argonaut Questionnaire Item Order Extension"/>
+	<status value="active"/>
+	<date value="2019-02-04"/>
+	<publisher value="The Argonaut Project"/>
+	<description value="An integer representing the order of questions within Questionnaires groups, groups within groups and groups within questions and the order of answer choices for questions of type 'choice' and 'open-choice using `Questionnaire.item.option`."/>
+	<purpose value="The order of questions within groups, groups within groups and groups within questions is relevant and must be retained for display and capture for both Questionnaire.  The order of answer choices may also be significant."/>
+	<fhirVersion value="3.0.1"/>
+	<kind value="complex-type"/>
+	<abstract value="false"/>
+	<contextType value="resource"/>
+	<context value="Questionnaire.item"/>
+	<!--<context value="QuestionnaireResponse.item"/>-->
+	<context value="Questionnaire.item.option"/>
+	<type value="Extension"/>
+	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+	<derivation value="constraint"/>
+	<differential>
+		<element id="Extension">
+			<path value="Extension"/>
+			<short value="Questions and answer choice order rank."/>
+			<definition value="An integer representing the order of questions within Questionnaires groups, groups within groups and groups within questions and the order of answer choices for questions of type 'choice' and 'open-choice using `Questionnaire.item.option`."/>
+			<comment value="Note that a the order within an array *SHALL* be maintained in conformant FHIR implementation.  However, this is difficult to validate.  An explicit order element for Questionnaires item groups and answer choices helps the renderer to maintain the proper order as well as when the resource instance is reassembled from an application's internal format.  When using a contained value set representing permitted answers for a 'choice' or 'open-choice' question use the standard FHIR extension [valueset-conceptOrder](http://hl7.org/fhir/STU3/extension-valueset-conceptorder.html) to indicate the order."/>
+			<min value="0"/>
+			<max value="1"/>
+			<isModifier value="false"/>
+		</element>
+		<element id="Extension.url">
+			<path value="Extension.url"/>
+			<type>
+				<code value="uri"/>
+			</type>
+			<fixedUri value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder"/>
+		</element>
+		<element id="Extension.valueUnsignedInt">
+			<path value="Extension.valueUnsignedInt"/>
+			<type>
+				<code value="unsignedInt"/>
+			</type>
+		</element>
+	</differential>
+</StructureDefinition>

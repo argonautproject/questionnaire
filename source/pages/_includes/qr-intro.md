@@ -9,10 +9,8 @@ The Argonaut QuestionnaireResponse resource supports:
 
 - The completed Answer to an assessment form
 - Links to questions and assiociated scores for question-answer/answer choice
-- Because of it standardized data structure, it  is shareable across systems enabling data aggregation and analysis.
-
-(out of scope)
-Can be transformed to other FHIR resources (out of scope)
+- Because of it standardized data structure, it  is shareable across systems enabling data aggregation and analysis
+- **out of scope** Transforming the responses to other FHIR resources such as [Observation].
 
 
 The Argonaut QuestionnaireResponse resource supports:
@@ -30,18 +28,16 @@ The following data-elements are mandatory:
 1. A datetime (Mandatory in SDC)
 
 **The system [Must Support] if available:**
+1. A [contained] patient resource
+1. [QuestionnaireResponse Response Period Extension] to record the start and stop date-times for completing a questionnaire or a questionnnaire item or group
+1. A business identifier
+1. A reference to the envcounter
+1. Who or what recorded the answers
+1. Who answered the questions
+1. Nesting or grouping of answers tha correspond to the structure and grouping of the Questionnaire
+    1. The text of the question
+    1. The actual response to the question
 
-1. QuestionnaireResponse.identifier
-1. QuestionnaireResponse.context
-1. QuestionnaireResponse.author
-1. QuestionnaireResponse.source
-1. QuestionnaireResponse.item
-1. QuestionnaireResponse.item.definition
-1. QuestionnaireResponse.item.text
-1. QuestionnaireResponse.item.answer
-1. QuestionnaireResponse.item.answer.value[x]
-1. QuestionnaireResponse.item.answer.item
-1. QuestionnaireResponse.item.item
 
 
 **Additional Profile specific implementation guidance:**

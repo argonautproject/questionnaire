@@ -1,49 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="extension-timelimit" />
-  <url value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timelimit" />
-  <version value="0.0.0" />
-  <name value="argonautQuestionnaireTimeLimit" />
-  <title value="Argonaut Project Questionnaire Time Limit Extension" />
-  <status value="draft" />
-  <date value="2018-05-16" />
-  <publisher value="The Argonaut Project" />
-  <description value="Argonaut Project Questionnaire Time Limit Extension defines a duration associated with completion of a Questionnaire or  Questionnaire item.  This is used to determine if the end user has completed the Questionnaire or individual questions or groups of questions within the specified time-period. How the start time is defined is an implementation detail outside of scope of this Implementation Guide.&#xD;&#xA;" />
-  <fhirVersion value="3.0.1" />
-  <kind value="complex-type" />
-  <abstract value="false" />
-  <contextType value="resource" />
-  <context value="Questionnaire, Questionnaire.item" />
-  <type value="Extension" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
-  <derivation value="constraint" />
-  <differential>
-    <element id="Extension">
-      <path value="Extension" />
-      <short value="Optional Extensions Element" />
-      <definition value="Optional Extension Element - found in all resources." />
-      <constraint>
-        <key value="ext-1" />
-        <severity value="error" />
-        <human value="Must have either extensions or value[x], not both" />
-        <expression value="extension.exists() != value.exists()" />
-        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" />
-      </constraint>
-      <mapping>
-        <identity value="rim" />
-        <map value="N/A" />
-      </mapping>
-    </element>
-    <element id="Extension.url">
-      <path value="Extension.url" />
-      <fixedUri value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-limit"/>
-    </element>
-    <element id="Extension.value[x]:valueDuration">
-      <path value="Extension.valueDuration" />
-      <sliceName value="valueDuration" />
-      <type>
-        <code value="Duration" />
-      </type>
-    </element>
-  </differential>
+	<id value="extension-timeLimit"/>
+	<url value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timeLimit"/>
+	<version value="0.0.0"/>
+	<name value="argonaut_questionnaire_time_limit"/>
+	<title value="Argonaut Questionnaire Time Limit Extension"/>
+	<status value="active"/>
+	<date value="2018-02-04"/>
+	<publisher value="The Argonaut Project"/>
+	<description value="A duration associated with completion of a Questionnaire or Questionnaire item.  This is used to determine if the end user has completed the Questionnaire or individual questions or groups of questions within the specified time-period."/>
+	<purpose value="How long it takes for a subject to answer a question or complete form may modify the behavior of the Form Filler or interpretation of the responses."/>
+	<fhirVersion value="3.0.1"/>
+	<kind value="complex-type"/>
+	<abstract value="false"/>
+	<contextType value="resource"/>
+	<context value="Questionnaire"/>
+	<context value="Questionnaire.item"/>
+	<type value="Extension"/>
+	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+	<derivation value="constraint"/>
+	<differential>
+		<element id="Extension">
+			<path value="Extension"/>
+			<short value="Questions and answer time limit"/>
+			<definition value="A duration associated with completion of a Questionnaire or Questionnaire item.  This is used to determine if the end user has completed the Questionnaire or individual questions or groups of questions within the specified time-period."/>
+			<comment value="To determine whether the questionnaire or items were answered within the time limit defined by the extension, the Form Filler can record the start and stop date-times in the [Argonaut QuestionnaireResponse responsePeriod Extension]. How this information modifies the behavior of the Form-filler or interpretation of results is an implementation detail outside of scope of this Implementation Guide."/>
+			<min value="0"/>
+			<max value="1"/>
+			<isModifier value="false"/>
+		</element>
+		<element id="Extension.url">
+			<path value="Extension.url"/>
+			<type>
+				<code value="uri"/>
+			</type>
+			<fixedUri value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timeLimit"/>
+		</element>
+		<element id="Extension.value[x]:valueDuration">
+			<path value="Extension.valueDuration"/>
+			<sliceName value="valueDuration"/>
+			<type>
+				<code value="Duration"/>
+			</type>
+		</element>
+	</differential>
 </StructureDefinition>

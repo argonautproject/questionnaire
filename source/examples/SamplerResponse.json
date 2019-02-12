@@ -2,7 +2,7 @@
     "author": {
         "reference": "Practitioner/prov-admin1"
     },
-    "authored": "2018-07-26T00:17:43.707504",
+    "authored": "2018-07-26T00:17:43.707504Z",
     "context": {
         "reference": "Encounter/encounter1"
     },
@@ -114,7 +114,7 @@
                 {
                     "answer": [
                         {
-                            "valueDateTime": "2018-07-26T01:58"
+                            "valueDateTime": "2018-07-26T01:58:00Z"
                         }
                     ],
                     "linkId": "g6.q1",
@@ -128,7 +128,7 @@
                 {
                     "answer": [
                         {
-                            "valueTime": "22:53"
+                            "valueTime": "22:53:00"
                         }
                     ],
                     "linkId": "g7.q1",

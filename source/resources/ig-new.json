@@ -18,11 +18,17 @@
     "valueString" : "/Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/pages"
   }],
   "url" : "http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig",
-  "version" : "0.0.0",
+  "version" : "1.0.0",
   "name" : "Argonaut Questionnaire",
   "status" : "draft",
   "experimental" : true,
   "publisher" : "Argonaut Project",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://argonautwiki.hl7.org"
+    }]
+  }],
   "packageId" : "argonaut.questionnaire",
   "license" : "CC0-1.0",
   "fhirVersion" : ["3.0.1"],
@@ -30,7 +36,7 @@
     "id" : "uscore",
     "uri" : "http://hl7.org/fhir/us/core",
     "packageId" : "hl7.fhir.us.core",
-    "version" : "1.1.0"
+    "version" : "2.0.0"
   }],
   "definition" : {
     "grouping" : [{
@@ -39,35 +45,7 @@
     }],
     "resource" : [{
       "reference" : {
-        "reference" : "QuestionnaireResponse/questionnaireresponse-example-sampler"
-      },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
-        "reference" : "Questionnaire/questionnaire-example-sampler"
-      },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
-        "reference" : "QuestionnaireResponse/questionnaireresponse-example-phq9"
-      },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
-        "reference" : "Questionnaire/questionnaire-example-phq9"
-      },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
-        "reference" : "QuestionnaireResponse/questionnaireresponse-example-housing"
+        "reference" : "Questionnaire/questionnaire-example-dast"
       },
       "exampleBoolean" : true,
       "groupingId" : "p1"
@@ -81,6 +59,34 @@
     },
     {
       "reference" : {
+        "reference" : "Questionnaire/questionnaire-example-audit-c"
+      },
+      "exampleBoolean" : true,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "Questionnaire/questionnaire-example-phq9"
+      },
+      "exampleBoolean" : true,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "QuestionnaireResponse/questionnaireresponse-example-audit-c"
+      },
+      "exampleBoolean" : true,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "QuestionnaireResponse/questionnaireresponse-example-housing"
+      },
+      "exampleBoolean" : true,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
         "reference" : "QuestionnaireResponse/questionnaireresponse-example-dast"
       },
       "exampleBoolean" : true,
@@ -88,49 +94,77 @@
     },
     {
       "reference" : {
-        "reference" : "Questionnaire/questionnaire-example-dast"
+        "reference" : "QuestionnaireResponse/questionnaireresponse-example-phq9"
       },
       "exampleBoolean" : true,
       "groupingId" : "p1"
     },
     {
       "reference" : {
-        "reference" : "QuestionnaireResponse/questionnaireresponse-example-audit"
+        "reference" : "Questionnaire/questionnaire-example-sampler"
       },
       "exampleBoolean" : true,
       "groupingId" : "p1"
     },
     {
       "reference" : {
-        "reference" : "Questionnaire/questionnaire-example-audit"
+        "reference" : "QuestionnaireResponse/questionnaireresponse-example-sampler"
       },
       "exampleBoolean" : true,
       "groupingId" : "p1"
     },
     {
       "reference" : {
-        "reference" : "QuestionnaireResponse/questionnaireresponse-example-asq3"
-      },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
-        "reference" : "Questionnaire/questionnaire-example-asq3"
-      },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/extension-timelimit"
+        "reference" : "CapabilityStatement/assessmentbank"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/extension-score"
+        "reference" : "StructureDefinition/aqr"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "CapabilityStatement/server"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/extension-timeLimit"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/extension-itemOrder"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/q"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "CapabilityStatement/client"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "OperationDefinition/next-q"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
@@ -144,14 +178,28 @@
     },
     {
       "reference" : {
-        "reference" : "SearchParameter/Questionnaire-context-type"
+        "reference" : "StructureDefinition/extension-responsePeriod"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/aqr"
+        "reference" : "CapabilityStatement/answerbank"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/qcvs"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "SearchParameter/Questionnaire-context-type"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
@@ -166,55 +214,6 @@
     {
       "reference" : {
         "reference" : "StructureDefinition/qr"
-      },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/qcvs"
-      },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/q"
-      },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
-        "reference" : "OperationDefinition/next-q"
-      },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
-        "reference" : "CapabilityStatement/server"
-      },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
-        "reference" : "CapabilityStatement/client"
-      },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
-        "reference" : "CapabilityStatement/assessmentbank"
-      },
-      "exampleBoolean" : false,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
-        "reference" : "CapabilityStatement/answerbank"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
@@ -238,6 +237,16 @@
           "generation" : "generated"
         },
         {
+          "nameUrl" : "StructureDefinition-q.html",
+          "title" : "StructureDefinition Q",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-qcvs.html",
+          "title" : "StructureDefinition Qcvs",
+          "generation" : "generated"
+        },
+        {
           "nameUrl" : "StructureDefinition-aq.html",
           "title" : "StructureDefinition Aq",
           "generation" : "generated"
@@ -248,23 +257,18 @@
           "generation" : "generated"
         },
         {
-          "nameUrl" : "StructureDefinition-qcvs.html",
-          "title" : "StructureDefinition Qcvs",
+          "nameUrl" : "StructureDefinition-extension-timeLimit.html",
+          "title" : "StructureDefinition Extension timeLimit",
           "generation" : "generated"
         },
         {
-          "nameUrl" : "StructureDefinition-q.html",
-          "title" : "StructureDefinition Q",
+          "nameUrl" : "StructureDefinition-extension-itemOrder.html",
+          "title" : "StructureDefinition Extension itemOrder",
           "generation" : "generated"
         },
         {
-          "nameUrl" : "StructureDefinition-extension-timelimit.html",
-          "title" : "StructureDefinition Extension Timelimit",
-          "generation" : "generated"
-        },
-        {
-          "nameUrl" : "StructureDefinition-extension-score.html",
-          "title" : "StructureDefinition Extension Score",
+          "nameUrl" : "StructureDefinition-extension-responsePeriod.html",
+          "title" : "StructureDefinition Extension responsePeriod",
           "generation" : "generated"
         }]
       },
@@ -303,6 +307,11 @@
         "title" : "Capability Statements",
         "generation" : "html",
         "page" : [{
+          "nameUrl" : "CapabilityStatement-assessmentbank.html",
+          "title" : "CapabilityStatement Assessmentbank",
+          "generation" : "generated"
+        },
+        {
           "nameUrl" : "CapabilityStatement-server.html",
           "title" : "CapabilityStatement Server",
           "generation" : "generated"
@@ -310,11 +319,6 @@
         {
           "nameUrl" : "CapabilityStatement-client.html",
           "title" : "CapabilityStatement Client",
-          "generation" : "generated"
-        },
-        {
-          "nameUrl" : "CapabilityStatement-assessmentbank.html",
-          "title" : "CapabilityStatement Assessmentbank",
           "generation" : "generated"
         },
         {

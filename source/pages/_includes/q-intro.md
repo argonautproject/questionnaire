@@ -37,10 +37,11 @@ The following data-elements are mandatory:
 
 **The system [Must Support] if available:**
 
-1. [Argonaut Questionnaire Score] *Extension* for use on all answer types and choices (not just codings).
-1. [Argonaut Questionnaire Time Limit] *Extension* for indicating the duration allowed for all or parts of the assessment.
-1. [Questionnaire Hidden] *Extension* for indicating that the item should not be displayed to the user.
-1. [Questionnaire Option Exclusive] *Extension* for indicating that if this option is selected, no other options may be selected.
+1. [Questionnaire Ordinal Value Extension] for use on all answer types and choices.
+1. [Argonaut Questionnaire Time Limit Extension] for indicating the duration allowed for all or parts of the assessment.
+1. [Questionnaire Hidden Extension] for indicating that the item should not be displayed to the user.
+1. [Questionnaire Option Exclusive Extension] for indicating that if this option is selected, no other options may be selected.
+1. [Argonaut Questionnaire Item Order Extension] for representing the order of questions within Questionnaires groups, groups within groups and groups within questions and the order of answer choices for questions.
 1. A version of the assessment
 1. A description of the assessment
 1. A standard concept code (e.g., LOINC) for the question or questions
@@ -87,14 +88,16 @@ Extensions:
 
 ### Examples
 
-*NOTE: These examples are for educational and testing purposes, see the form copyright statement and do not redistribute without expressed permission from the form author.*
+These examples are designed to demonstrate all the supported elements and the extensions defined in the Argonaut Questionnaire Profiles.  *Note that they are for educational and testing purposes, see the form copyright statement and do not redistribute without expressed permission from the form author.*
 
 <!-- {% raw %} {% include list-simple-questionnaires.xhtml %}{% endraw %} -->
 - [Sampler](Questionnaire-questionnaire-example-sampler.html) - a Sample form using all the supported question types
-- [PHQ-9](Questionnaire-questionnaire-example-phq9.html) - An example demonstrating the use of *contained* value sets for answer choices, decimal scores associated with each value within the valueset, the *hidden* extension to indicate that provider instruction should not be displayed to the end user.
-- [AUDIT](Questionnaire-questionnaire-example-audit.html) - An example multiple choice form demonstrating the use of *contained* value sets for answer choices, decimal scores associated with each value within the valueset, the *hidden* extension to indicate that provider instruction should not be displayed to the end user.
-- [DAST](Questionnaire-questionnaire-example-dast.html) - An example multiple choice form demonstrating the use of inline codings for answer choices, decimal scores associated with each coding, the *hidden* extension to indicate that provider instruction should not be displayed to the end user.
-- [Housing](Questionnaire-questionnaire-example-housing.html) -An example multiple choice form demonstrating the use of inline strings for answer choices, the *hidden* extension to indicate that provider instruction should not be displayed to the end user, an 'any of' choice option with the the *exclusive* extension for one of the choices.
+- [PHQ-9](Questionnaire-questionnaire-example-phq9.html) - An example demonstrating the use of *contained* value sets for answer choices, decimal scores associated with each value within the valueset.
+- [AUDIT-C](Questionnaire-questionnaire-example-audit-c.html) - An example multiple choice form demonstrating the use of *contained* value sets for answer choices, decimal scores associated with each value within the valueset.
+- [DAST](Questionnaire-questionnaire-example-dast.html) - An example multiple choice form demonstrating the use of inline codings for answer choices, decimal scores associated with each coding.
+- [Housing](Questionnaire-questionnaire-example-housing.html) - An example multiple choice form demonstrating the use of inline strings for answer choices, and 'any of' choice option with the the *exclusive* extension for one of the choices.
+<!--
 - [ASQ3](Questionnaire-questionnaire-example-asq3.html) - An example multiple choice form demonstrating the use of inline codings for answer choices, decimal scores associated with each coding, the *hidden* extension to indicate that provider instruction should not be displayed to the end user.
+-->
 
 {%include link-list.md %}

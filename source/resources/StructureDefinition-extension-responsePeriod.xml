@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+	<id value="extension-responsePeriod"/>
+
+	<url value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-responsePeriod"/>
+	<version value="1.0.0"/>
+	<name value="extension_response_period"/>
+	<title value="Argonaut QuestionnaireResponse Response Period Extension"/>
+	<status value="active"/>
+	<date value="2018-04-04T00:00:00-07:00"/>
+	<description value="The start and stop date-times for completing a questionnaire or a questionnnaire item or group."/>
+	<purpose value="In order to verify if the questionnaire or items were completed within defined timelimits."/>
+	<fhirVersion value="3.0.1"/>
+
+	<kind value="complex-type"/>
+	<abstract value="false"/>
+	<contextType value="datatype"/>
+	<context value="QuestionnaireResponse"/>
+	<context value="QuestionnaireResponse.item"/>
+	<type value="Extension"/>
+	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+	<derivation value="constraint"/>
+
+	<differential>
+		<element id="Extension">
+			<path value="Extension"/>
+			<short value="Start and stop time of response"/>
+			<definition value="The start and stop date-times for completing a questionnaire or a questionnnaire item or group."/>
+			<comment value="The [Argonaut Questionnaire Time Limit Extension] defines time limits on questions and questionnaire."/>
+			<min value="0"/>
+			<max value="1"/>
+			<isModifier value="false"/>
+		</element>
+		<element id="Extension.url">
+			<path value="Extension.url"/>
+			<type>
+				<code value="uri"/>
+			</type>
+			<fixedUri value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-responsePeriod"/>
+		</element>
+		<element id="Extension.valuePeriod">
+			<path value="Extension.valuePeriod"/>
+			<type>
+				<code value="Period"/>
+			</type>
+		</element>
+	</differential>
+</StructureDefinition>
