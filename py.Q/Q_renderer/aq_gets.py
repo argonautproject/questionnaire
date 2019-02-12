@@ -105,7 +105,10 @@ def get_hidden_score(cq_item):
     q_item.text = 'Cumulative Score is ...'
     q_item.repeats = False
     q_item.readOnly = True
-    q_item.extension = getextension('http://hl7.org/fhir/StructureDefinition/questionnaire-hidden', 'valueBoolean', True)  # fhirextension
+    q_item.extension = []
+    q_item.extension.append(getextension('http://hl7.org/fhir/StructureDefinition/questionnaire-hidden', 'valueBoolean', True))  # fhirextension
+    q_item.extension.append(getextension('http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder',
+                        'valueInteger', 1))  # fhirextension
     cq_item.append(q_item)
     return()
 
@@ -114,9 +117,28 @@ def get_hidden_stddev(cq_item):
     q_item.text = 'Standard Deviation is ...'
     q_item.repeats = False
     q_item.readOnly = True
-    q_item.extension = getextension('http://hl7.org/fhir/StructureDefinition/questionnaire-hidden', 'valueBoolean', True)  # fhirextension
+    q_item.extension = []
+    q_item.extension.append(getextension('http://hl7.org/fhir/StructureDefinition/questionnaire-hidden', 'valueBoolean', True))  # fhirextension
+    q_item.extension.append(getextension('http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder',
+                    'valueInteger', 2))  # fhirextension
     cq_item.append(q_item)
     return()
+
+
+def get_itemorder(cq_item, o_num):
+    try: #assume already has itemOrder
+        for ext in cq_item.extension:
+            if ext.url == "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder":
+                ext.valueInteger = o_num
+                ordered = True
+        if not ordered:
+            cq_item.extension.append(getextension('http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder',
+                        'valueInteger', 3))  # fhirextension
+
+    except AttributeError:
+        cq_item.extension.append(getextension('http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder',
+                        'valueInteger', 3))  # fhirextension
+
 
 
 
@@ -137,7 +159,7 @@ def get_q_items(q_items, q_items_list=None):  # list of all item with a linkId c
 
 def getextension(url, valuetype, value):  # fhirextension
     ext = Ext.Extension({'url': url, valuetype: value})
-    return([ext])  # note this returning as a list!! TODO fix this
+    return(ext)  # note this returning as a list!! TODO fix this
 
 
 def get_next_q_item(q_url, q_items, cq_items):  # assuming no nesting to make sure is unique question
@@ -153,11 +175,13 @@ def get_next_q(q, aqr, score=0):  # assuming no nesting
     if cq.item is None:  # create first response
         cq.item = []  # use first item
         get_hidden_score(cq.item)  # add score as item 0
+        # add score as item 0
         get_hidden_stddev(cq.item)  # add stddev as item 1
         q_item = get_q_items(q.item)[0]
         q_item.definition = '{}-{}'.format(q.url, q_item.linkId)
         # logging.info(q_item.prefix)
         cq.item.append(q_item) # use first question
+        get_itemorder(cq.item[2],3)
         cq.copyright = q.copyright
         dt = '{}Z'.format(datetime.utcnow().isoformat())
         cq.date = FD.FHIRDate(dt)
@@ -167,9 +191,10 @@ def get_next_q(q, aqr, score=0):  # assuming no nesting
         cq.url = q.url
         cq = aqr.contained[0]
         aqr.text.div = intro.format(t=cq.title, c=cq.copyright, q=cq.url, d=cq.date.as_json())  # render intro
-    elif len(cq.item) < 5:  # check number of q is < 4 add a new q and add score on end
+    elif len(cq.item) < 5:  # check number of q is < 5 add a new q
         logging.info('cq.item = {}'.format(cq.item))
         cq.item.append(get_next_q_item(q.url, q.item, cq.item))
+        get_itemorder(cq.item[len(cq.item)-1],len(cq.item))
     else:
         # done change the status of the QR to complete and add score as a hidden # QUESTION:
         aqr.status = 'complete'

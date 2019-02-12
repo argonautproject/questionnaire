@@ -37,10 +37,10 @@
 			</type>
 			<fixedUri value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder"/>
 		</element>
-		<element id="Extension.valueUnsignedInt">
-			<path value="Extension.valueUnsignedInt"/>
+		<element id="Extension.valueInteger">
+			<path value="Extension.valueInteger"/>
 			<type>
-				<code value="unsignedInt"/>
+				<code value="integer"/>
 			</type>
 		</element>
 	</differential>

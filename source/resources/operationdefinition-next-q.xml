@@ -42,11 +42,11 @@
 					<td>IN</td>
 					<td>qr-in</td>
 					<td>1..1</td>
-					<td>Resource (<a href="StructureDefinition-aqr.html">Argo Adaptive QuestionnaireResponse Profile</a>)</td>
+					<td>Resource (<a href="StructureDefinition-argo-adaptive-questionnaire.html">Argo Adaptive QuestionnaireResponse Profile</a>)</td>
 					<td/>
 					<td>
 						<div>
-							<p>The <a href="StructureDefinition-aqr.html">Argo Adaptive QuestionnaireResponse Profile</a> of the QuestionnaireResponse resource with a <em>contained</em> Questionnaire.  When initiating an adaptive questionnaire, the resource represents only metadata, because it precedes the first question.  For subsequent transactions the Client updates the QuestionnaireResponse with the previous question-answer pair and posts it to the Server.</p>
+							<p>The <a href="StructureDefinition-argo-adaptive-questionnaire.html">Argo Adaptive QuestionnaireResponse Profile</a> of the QuestionnaireResponse resource with a <em>contained</em> Questionnaire.  When initiating an adaptive questionnaire, the resource represents only metadata, because it precedes the first question.  For subsequent transactions the Client updates the QuestionnaireResponse with the previous question-answer pair and posts it to the Server.</p>
 						</div>
 					</td>
 				</tr>
@@ -54,11 +54,11 @@
 					<td>OUT</td>
 					<td>qr-out</td>
 					<td>1..1</td>
-					<td>Resource (<a href="StructureDefinition-aqr.html">Argo Adaptive QuestionnaireResponse Profile</a>)</td>
+					<td>Resource (<a href="StructureDefinition-argo-adaptive-questionnaire.html">Argo Adaptive QuestionnaireResponse Profile</a>)</td>
 					<td/>
 					<td>
 						<div>
-							<p>The <a href="StructureDefinition-aqr.html">Argo Adaptive QuestionnaireResponse Profile</a> of the QuestionnaireResponse resource with a <em>[contained]</em> Questionnaire.  The Server updates the QuestionnaireResponse&#39;s contained Questionnaire with the next question and returns it as this parameter.  When the questionnaire is complete, the Server updates the status of the QuestionnaireResponse resource parameter to <code>complete</code>.</p>
+							<p>The <a href="StructureDefinition-argo-adaptive-questionnaire.html">Argo Adaptive QuestionnaireResponse Profile</a> of the QuestionnaireResponse resource with a <em>[contained]</em> Questionnaire.  The Server updates the QuestionnaireResponse&#39;s contained Questionnaire with the next question and returns it as this parameter.  When the questionnaire is complete, the Server updates the status of the QuestionnaireResponse resource parameter to <code>complete</code>.</p>
 						</div>
 					</td>
 				</tr>
@@ -109,10 +109,10 @@
 		<use value="in"/>
 		<min value="1"/>
 		<max value="1"/>
-		<documentation value="The [Argo Adaptive QuestionnaireResponse Profile](StructureDefinition-aqr.html) of the QuestionnaireResponse resource with a *contained* Questionnaire.  When initiating an adaptive questionnaire, the resource represents only metadata, because it precedes the first question.  For subsequent transactions the Client updates the QuestionnaireResponse with the previous question-answer pair and posts it to the Server."/>
+		<documentation value="The [Argo Adaptive QuestionnaireResponse Profile](StructureDefinition-argo-adaptive-questionnaire.html) of the QuestionnaireResponse resource with a *contained* Questionnaire.  When initiating an adaptive questionnaire, the resource represents only metadata, because it precedes the first question.  For subsequent transactions the Client updates the QuestionnaireResponse with the previous question-answer pair and posts it to the Server."/>
 		<type value="Resource"/>
 		<profile>
-			<reference value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/aqr"/>
+			<reference value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adaptive-questionnaire"/>
 		</profile>
 	</parameter>
 	<parameter>
@@ -123,10 +123,10 @@
 		<use value="out"/>
 		<min value="1"/>
 		<max value="1"/>
-		<documentation value="The [Argo AdaptiveQuestionnaireResponse Profile](StructureDefinition-aqr.html) of the QuestionnaireResponse resource with a *contained* Questionnaire.  The Server updates the QuestionnaireResponse&#39;s contained Questionnaire with the next question and returns it as this parameter.  When the questionnaire is complete, the Server updates the status of the QuestionnaireResponse resource parameter to `complete`."/>
+		<documentation value="The [Argo AdaptiveQuestionnaireResponse Profile](StructureDefinition-argo-adaptive-questionnaire.html) of the QuestionnaireResponse resource with a *contained* Questionnaire.  The Server updates the QuestionnaireResponse&#39;s contained Questionnaire with the next question and returns it as this parameter.  When the questionnaire is complete, the Server updates the status of the QuestionnaireResponse resource parameter to `complete`."/>
 		<type value="Resource"/>
 		<profile>
-			<reference value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/aqr"/>
+			<reference value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adaptive-questionnaire"/>
 		</profile>
 	</parameter>
 <!--

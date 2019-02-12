@@ -168,7 +168,7 @@ The responses captured as QuestionnaireResponse are are uploaded to an Answer Ba
 
 The following Argonaut Questionnaire artifacts are used in this transaction:
 
-- **[Argonaut QuestionnaireResponse Profile]**
+- **[Argonaut QuestionnaireResponse Profile](StructureDefinition-argo-questionnaireresponse.html)**
 
 #### Usage
 {:.no_toc}
@@ -236,8 +236,8 @@ For the convenience of the client, the Answer Bank may support including the Que
 
 The following Argonaut Questionnaire artifacts are used in this transaction:
 
-- **[Argonaut Questionnaire Profile]**.
-- **[Argonaut QuestionnaireResponse Profile]**.
+- **[Argonaut Questionnaire Profile]**
+- **[Argonaut QuestionnaireResponse Profile]**
 
 #### Usage
 {:.no_toc}

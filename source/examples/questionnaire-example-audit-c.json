@@ -395,7 +395,7 @@
       "extension": [
         {
           "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
-          "valueUnsignedInt": 0
+          "valueInteger": 0
         }
       ],
       "code": [
@@ -420,7 +420,7 @@
       "extension": [
         {
           "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
-          "valueUnsignedInt": 1
+          "valueInteger": 1
         }
       ],
       "code": [
@@ -445,7 +445,7 @@
       "extension": [
         {
           "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
-          "valueUnsignedInt": 2
+          "valueInteger": 2
         }
       ],
       "code": [
@@ -474,7 +474,7 @@
         },
         {
           "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
-          "valueUnsignedInt": 3
+          "valueInteger": 3
         }
       ],
       "linkId": "d1",

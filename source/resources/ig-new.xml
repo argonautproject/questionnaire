@@ -117,7 +117,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/aqr"/>
+        <reference value="StructureDefinition/argo-adap-questionnaireresponse"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -145,7 +145,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/q"/>
+        <reference value="StructureDefinition/argo-questionnaire"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -187,7 +187,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/qcvs"/>
+        <reference value="StructureDefinition/argo-questionnaire-valueset"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -201,14 +201,14 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/aq"/>
+        <reference value="StructureDefinition/argo-adaptive-questionnaire"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/qr"/>
+        <reference value="StructureDefinition/argo-questionnaireresponse"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -227,28 +227,28 @@
         <title value="Profiles and Extensions"/>
         <generation value="html"/>
         <page>
-          <nameUrl value="StructureDefinition-aqr.html"/>
-          <title value="StructureDefinition Aqr"/>
+          <nameUrl value="StructureDefinition-argo-adap-questionnaireresponse.html"/>
+          <title value="StructureDefinition Argo Adap QuestionnaireResponse"/>
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-q.html"/>
-          <title value="StructureDefinition Q"/>
+          <nameUrl value="StructureDefinition-argo-questionnaire.html"/>
+          <title value="StructureDefinition Argo Questionnaire"/>
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-qcvs.html"/>
-          <title value="StructureDefinition Qcvs"/>
+          <nameUrl value="StructureDefinition-argo-questionnaire-valueset.html"/>
+          <title value="StructureDefinition Argo Questionnaire ValueSet"/>
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-aq.html"/>
-          <title value="StructureDefinition Aq"/>
+          <nameUrl value="StructureDefinition-argo-adaptive-questionnaire.html"/>
+          <title value="StructureDefinition Argo Adaptive Questionnaire"/>
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-qr.html"/>
-          <title value="StructureDefinition Qr"/>
+          <nameUrl value="StructureDefinition-argo-questionnaireresponse.html"/>
+          <title value="StructureDefinition Argo QuestionnaireResponse"/>
           <generation value="generated"/>
         </page>
         <page>

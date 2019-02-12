@@ -122,7 +122,7 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/aqr"
+        "reference" : "StructureDefinition/argo-adap-questionnaireresponse"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
@@ -150,7 +150,7 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/q"
+        "reference" : "StructureDefinition/argo-questionnaire"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
@@ -192,7 +192,7 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/qcvs"
+        "reference" : "StructureDefinition/argo-questionnaire-valueset"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
@@ -206,14 +206,14 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/aq"
+        "reference" : "StructureDefinition/argo-adaptive-questionnaire"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/qr"
+        "reference" : "StructureDefinition/argo-questionnaireresponse"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
@@ -232,28 +232,28 @@
         "title" : "Profiles and Extensions",
         "generation" : "html",
         "page" : [{
-          "nameUrl" : "StructureDefinition-aqr.html",
-          "title" : "StructureDefinition Aqr",
+          "nameUrl" : "StructureDefinition-argo-adap-questionnaireresponse.html",
+          "title" : "StructureDefinition Argo Adap QuestionnaireResponse",
           "generation" : "generated"
         },
         {
-          "nameUrl" : "StructureDefinition-q.html",
-          "title" : "StructureDefinition Q",
+          "nameUrl" : "StructureDefinition-argo-questionnaire.html",
+          "title" : "StructureDefinition Argo Questionnaire",
           "generation" : "generated"
         },
         {
-          "nameUrl" : "StructureDefinition-qcvs.html",
-          "title" : "StructureDefinition Qcvs",
+          "nameUrl" : "StructureDefinition-argo-questionnaire-valueset.html",
+          "title" : "StructureDefinition Argo Questionnaire ValueSet",
           "generation" : "generated"
         },
         {
-          "nameUrl" : "StructureDefinition-aq.html",
-          "title" : "StructureDefinition Aq",
+          "nameUrl" : "StructureDefinition-argo-adaptive-questionnaire.html",
+          "title" : "StructureDefinition Argo Adaptive Questionnaire",
           "generation" : "generated"
         },
         {
-          "nameUrl" : "StructureDefinition-qr.html",
-          "title" : "StructureDefinition Qr",
+          "nameUrl" : "StructureDefinition-argo-questionnaireresponse.html",
+          "title" : "StructureDefinition Argo QuestionnaireResponse",
           "generation" : "generated"
         },
         {

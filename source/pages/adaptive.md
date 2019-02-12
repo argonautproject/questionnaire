@@ -117,7 +117,7 @@ Launch the adaptive questionnaire by getting first group item (typically the fir
 The following Argonaut Questionnaire artifacts are used in this transaction:
 
 - **[Argonaut Next Question Operation]**
-- **[Argonaut Adaptive QR Profile]**
+- **[Argonaut Adaptive QuestionnaireResponse Profile ]**
 
 
 #### Usage
@@ -147,7 +147,7 @@ The Service identifies the adaptive questionnaire group item by the contained Qu
 The following Argonaut Questionnaire artifacts are used in this transaction:
 
 - **[Argonaut Next Question Operation]**
-- **[Argonaut Adaptive QR Profile]**
+- **[Argonaut Adaptive QuestionnaireResponse Profile ]**
 
 
 #### Usage
@@ -176,7 +176,7 @@ The Client renders, stores the  question-answer pair and optionally the previous
 The following Argonaut Questionnaire artifacts are used in this transaction:
 
 - **[Argonaut Next Question Operation]**
-- **[Argonaut Adaptive QR Profile]**
+- **[Argonaut Adaptive QuestionnaireResponse Profile ]**
 
 
 #### Usage

@@ -4,17 +4,17 @@
 [Adaptive Questionnaire]: https://en.wikipedia.org/wiki/Computerized_adaptive_testing
 [Adaptive Forms Use Case]: adaptive.html
 [Answer-Bank]: CapabilityStatement-answerbank.html
-[Argonaut Adaptive QuestionnaireResponse Profile]: StructureDefinition-aqr.html "The Argonaut Adaptive QR profile is derived from the Argonaut QR profile requiring a containedArgonaut Questionnaire Profile to support the adaptive questionnaire use case."
-[Argonaut Adaptive Questionnaire Profile]: StructureDefinition-aqr.html "The contained Argonaut Questionnaire Profile to support the adaptive questionnaire use case."
-[Argonaut Adaptive QR Profile]: StructureDefinition-aqr.html "The Argonaut Adaptive QR profile is derived from the Argonaut QR profile requiring a containedArgonaut Questionnaire Profile to support the adaptive questionnaire use case."
+[Argonaut Adaptive QuestionnaireResponse Profile]: StructureDefinition-argo-adap-questionnaireresponse.html "The Argonaut Adaptive QuestionnaireResponse Profile  is derived from the Argonaut QR profile requiring a containedArgonaut Questionnaire Profile to support the adaptive questionnaire use case."
+[Argonaut Adaptive Questionnaire Profile]: StructureDefinition-argo-adaptive-questionnaire.html "The contained Argonaut Questionnaire Profile to support the adaptive questionnaire use case."
 [Argonaut Next Question Operation]: OperationDefinition-next-q.html "The Argonaut Next Question Operation is used for adaptive questionnaires forms where the next question is based on previous answers."
 [Argonaut Project]: http://argonautwiki.hl7.org/index.php?title=Main_Page
-[Argonaut Questionnaire Profile]: StructureDefinition-q.html "Argonaut Questionnaire Profile"
+[Argonaut Questionnaire Profile]: StructureDefinition-argo-questionnaire.html "Argonaut Questionnaire Profile"
 [Questionnaire Ordinal Value Extension]: {{site.data.fhir.path}}extension-questionnaire-ordinalvalue.html "A numeric value that allows the comparison (less than, greater than) or other numerical manipulation of a concept (e.g. adding up components of a score)."
+[Argonaut Questionnaire Contained ValueSet Profile]: StructureDefinition-argo-questionnaire-valueset.html "The Argonaut Questionnaire Contained ValueSet Profile is contained within the Argonaut Questionnaire Profile"
 [Argonaut Questionnaire Time Limit Extension]: StructureDefinition-extension-timeLimit.html
 [Argonaut Questionnaire Item Order Extension]: StructureDefinition-extension-itemOrder.html
 [QuestionnaireResponse Response Period Extension]: StructureDefinition-extension-responsePeriod.html
-[Argonaut QuestionnaireResponse Profile]: StructureDefinition-qr.html "Argonaut QuestionnaireResponse Profile"
+[Argonaut QuestionnaireResponse Profile]: StructureDefinition-argo-questionnaireresponse.html  "Argonaut QuestionnaireResponse Profile"
 [Assessment-Bank]: CapabilityStatement-assessmentbank.html
 [Assumptions]: index.html#assumptions-and-preconditions  "Assumptions-and-Preconditions"
 [Black Box]: https://en.wikipedia.org/wiki/Black_box

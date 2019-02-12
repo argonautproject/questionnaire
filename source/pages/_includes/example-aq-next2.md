@@ -9,7 +9,7 @@
       "id": "questionnaireresponse-example-adaptive-sampler",
       "meta": {
         "profile": [
-          "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/aqr"
+          "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adaptive-questionnaire"
         ],
       // contained Questionnaire
       "contained": [
@@ -117,7 +117,7 @@
   "id": "questionnaireresponse-example-adaptive-sampler",
   "meta": {
     "profile": [
-      "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/aqr"
+      "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adaptive-questionnaire"
     ],
   // contained Questionnaire
   "contained": [

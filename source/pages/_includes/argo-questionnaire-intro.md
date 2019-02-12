@@ -92,12 +92,12 @@ These examples are designed to demonstrate all the supported elements and the ex
 
 <!-- {% raw %} {% include list-simple-questionnaires.xhtml %}{% endraw %} -->
 - [Sampler](Questionnaire-questionnaire-example-sampler.html) - a Sample form using all the supported question types
+- [Sampler with contained Patient](Questionnaire-questionnaire-example-sampler.html) - a Sample form using all the supported question types with a *contained* de-identified patient resource.
 - [PHQ-9](Questionnaire-questionnaire-example-phq9.html) - An example demonstrating the use of *contained* value sets for answer choices, decimal scores associated with each value within the valueset.
 - [AUDIT-C](Questionnaire-questionnaire-example-audit-c.html) - An example multiple choice form demonstrating the use of *contained* value sets for answer choices, decimal scores associated with each value within the valueset.
 - [DAST](Questionnaire-questionnaire-example-dast.html) - An example multiple choice form demonstrating the use of inline codings for answer choices, decimal scores associated with each coding.
 - [Housing](Questionnaire-questionnaire-example-housing.html) - An example multiple choice form demonstrating the use of inline strings for answer choices, and 'any of' choice option with the the *exclusive* extension for one of the choices.
-<!--
-- [ASQ3](Questionnaire-questionnaire-example-asq3.html) - An example multiple choice form demonstrating the use of inline codings for answer choices, decimal scores associated with each coding, the *hidden* extension to indicate that provider instruction should not be displayed to the end user.
--->
+
+
 
 {%include link-list.md %}
