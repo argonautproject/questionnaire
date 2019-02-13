@@ -48,6 +48,8 @@ Before an assessment can retrieved it must be created.  This step MAY include up
 
 ### Form Author Posts to Assessment Bank
 
+{% include img-narrow.html img="st-step1.jpg" %}
+
 The Author/Editor is able to upload the Questionnaires to a FHIR server which serves as a repository where all the program participants can search and download the standard assessment when they need them.  Multiple version of each assessment may be available. [see issues]
 
 <!-- {% raw %}>{% include img.html img="diagrams/Slide30.png" caption="Appointment Availability Discovery and Search" %}{% endraw %} -->
@@ -68,18 +70,23 @@ To create a Questionnaire:
 
 `POST [base]/Questionnaire/...`
 
+{% include examplebutton_default.html example="example-create_q" b_title = "Example Create..."%}
+
 To update a Questionnaire:
 
 `PUT [base]/Questionnaire/[id]`
+
+{% include examplebutton_default.html example="example-update_q" b_title = "Example Update..."%}
 
 to delete a Questionnaire:
 
 `DELETE [base]/Questionnaire/[id]`
 
-{% include examplebutton.html example="example-step1" %}
+{% include examplebutton_default.html example="example-delete_q" b_title = "Example Delete..."%}
 
-###  Provider EHRSs Fetches Form
+###  Provider EHR Fetches Form
 
+{% include img-narrow.html img="st-step2.jpg" %}
 
 When it is time to perform an assessment of the program participants(subjects), the Provider EHR fetches the appropriate Questionnaire(s) from the Assessment-Bank.  
 
@@ -97,8 +104,6 @@ and the following *optional* search parameters
 - `version`
 - `context-type` ([Custom search parameters])
 - `context-value`([Custom search parameters])
-
-(others?... discuss)
 
 (multiple version of each assessment may be available. [see issues])
 
@@ -119,29 +124,39 @@ Fetching a *single* Questionnaire:
 
 - based on its id:
 
-    `GET [base]/Questionnaire/[id]`
+    `GET [base]/Questionnaire/[id]` or `GET [base]/Questionnaire?_id=[id]`
+
+{% include examplebutton_default.html example="example-fetch_q_id" b_title = "Example Search by ID..."%}
 
 - based on its url (note the QuestionnaireResponse uses the url to reference the assessment upon which it is based):
 
     `GET [base]/Questionnaire?url=[uri]`
 
+{% include examplebutton_default.html example="example-fetch_q_url" b_title = "Example Search by URL..."%}
+
 - based on its title (the supplied parameter can  equals or starts with the title ):
 
     `GET [base]/Questionnaire?title=[title]`
 
+{% include examplebutton_default.html example="example-fetch_q_tit" b_title = "Example Search by Title..."%}
+
 -  based on its title and version:
 
-    `GET [base]/Questionnaire?title=[title]&version=[version]``
+    `GET [base]/Questionnaire?title=[title]&version=[version]`
+
+{% include examplebutton_default.html example="example-fetch_q_tit_ver" b_title = "Example Search by Title and Version..."%}
 
 Searching for *all* the active Questionnaires:
 
   `GET [base]/Questionnaire?status=active`
 
+{% include examplebutton_default.html example="example-fetch_q_status" b_title = "Example Search by Status..."%}
+
 Searching for a *collection* of Questionnaires based on context-type and context-value(think category):
 
   `GET [base]/Questionnaire?context-code=[code]&context-value=[value]`
 
-{% include examplebutton.html example="example-step2" %}
+{% include examplebutton_default.html example="example-fetch_q_context" b_title = "Example Search by Use Context..."%}
 
 
 ### Form Filler Renders And Displays The Form
@@ -153,13 +168,15 @@ Searching for a *collection* of Questionnaires based on context-type and context
 
 ### End User Completes The Assessment
 
-The responses to the assessment are captured by the Form Filler. It may also  calculate a scored based on the associated values associated with each item via the [Argonaut Questionnaire Score Extension].  How the score is calculated may be described within the Questionnaire, often as a hidden display item. The actual logic and calculation is an implementation detail outside of scope of this Implementation Guide.
+The responses to the assessment are captured by the Form Filler. It may also  calculate a scored based on the associated values associated with each item via the [Questionnaire Ordinal Value Extension].  How the score is calculated may be described within the Questionnaire, often as a hidden display item. The actual logic and calculation is an implementation detail outside of scope of this Implementation Guide.
 
 The QuestionnaireResponse resource may be used to capture, exchange and persist the response data.  It represents the response data to the individual questions on the form and is ordered and grouped corresponding to the structure and grouping of the Questionnaire being responded to. How the QuestionnaireResponse gets populated is beyond the scope of this IG.
 
-Time limits for completion of a questionnaire or individual question can be defined in the [Argonaut Questionnaire Time Limit Extension].  The Form Filler can record the start and stop date-times in the [Argonaut QuestionnaireResponse responsePeriod Extension] which can be used to determine whether the questionnaire or items were answered within the prescribed time limit.  How this information modifies the behavior of the Form-filler or interpretation of results is an implementation detail outside of scope of this Implementation Guide.
+Time limits for completion of a questionnaire or individual question can be defined in the [Argonaut Questionnaire Time Limit Extension].  The Form Filler can record the start and stop date-times in the [Argonaut QuestionnaireResponse Response Period Extension] which can be used to determine whether the questionnaire or items were answered within the prescribed time limit.  How this information modifies the behavior of the Form-filler or interpretation of results is an implementation detail outside of scope of this Implementation Guide.
 
 ### Provider EHR Posts to Answer Bank
+
+{% include img-narrow.html img="st-step3.jpg" %}
 
 The responses captured as QuestionnaireResponse are are uploaded to an Answer Bank where they can be retrieved for subsequent use and analysis.  As is defined in the Argonaut QuestionnaireResponse Profile, a [contained] Patient resource may inserted in order to facilitate subsequent analysis as described below. The QuestionnaireResponse resource can be validated against the corresponding Questionnaire to verify that required groups and questions are answered and that answers fit constraints in terms of cardinality, data type, etc.
 
@@ -177,19 +194,23 @@ create a *single* QuestionnaireResponse:
 
   `POST [base]/QuestionnaireResponse`
 
+{% include examplebutton_default.html example="example-create_qr" b_title = "Example Create..."%}
+
 update a *single* QuestionnaireResponse::
 
   `PUT [base]/QuestionnaireResponse/[id]`
+
+{% include examplebutton_default.html example="example-update_qr" b_title = "Example Update..."%}
 
 create *multiple* QuestionnaireResponses using a [batch] transaction:
 
   `POST/[base]`
 
-
-{% include examplebutton.html example="example-step6" %}
-
+{% include examplebutton_default.html example="example-batch_qr" b_title = "Example Batch Create/Update..."%}
 
 ### Provider EHR Searches Answer Bank
+
+{% include img-narrow.html img="st-step4.jpg" %}
 
 Responses to the assessment are retrieved for a variety of purposes. QuestionnaireResponse can be searched using the standard QuestionnaireResponse search parameters listed below.  If the Answer Bank has access to the Questionnaire resource, searches may fetch the Questionnaire at the same time as well using the [`_include`] parameter.   **Note that individual responses are not directly searchable using the FHIR RESTful API**.  In order to search directly on responses, they must be "downloaded" into a searchable form - i.e. to a local  FHIR or non-FHIR data store such as a database or FHIR Observations.
 
@@ -209,7 +230,7 @@ The standard [FHIR RESTful search API] is used with the following *mandatory* se
 
 - `_id`
 - `questionnaire`
-- `patient` ( including chained parameters of (gender, birthdate, us-coreace, us-core ethnicity, address-postalcode ))
+- `patient` ( including chained parameters of (gender, birthdate, us-core race, us-core ethnicity, address-postalcode ))
 - `context`
 - `status`
 
@@ -229,7 +250,7 @@ and the following *optional* chained search parameters:
 
 For the convenience of the client, the Answer Bank may support including the Questionnaire using the following *optional* search parameter:
 
-- `\_include`  Note that this path references a resource on the Assessment Bank server which is typically another server.
+- `_include`  Note that this path references a resource on the Assessment Bank server which is typically another server.
 
 #### APIs
 {:.no_toc}
@@ -247,11 +268,16 @@ Fetching a *single* QuestionnaireResponse:
 
 - based on its id:
 
-    `GET [base]/QuestionnaireResponse/[id]`
+    `GET [base]/QuestionnaireResponse/[id]` or  `GET [base]/QuestionnaireResponse?_id=[id]`
+
+{% include examplebutton_default.html example="example-fetch_qr_id" b_title = "Example Search by ID..." %}
 
 - based on its id and include the Questionnaire:
 
     `GET [base]/QuestionnaireResponse?_id=[id]&_include=QuestionnaireResponse:questionnaire`
+
+{% include examplebutton_default.html example="example-fetch_qr_id_q" b_title = "Example Search by ID with Questionnaire..." %}
+
 
 
 Searching for *all* the completed QuestionnaireResponses
@@ -260,17 +286,27 @@ Searching for *all* the completed QuestionnaireResponses
 
     `GET [base]/QuestionnaireResponse/?status=completed&questionnaire=[questionnaire url]`
 
+{% include examplebutton_default.html example="example-fetch_qr_status_q" b_title = "Completed QuestionnaireResponses for a Single Assessment" %}
+
+
 - based on a patient encounter:
 
     `GET [base]/QuestionnaireResponse/?status=completed&patient=Patient/[patient]&context=Encounter/[encounter]`
+
+{% include examplebutton_default.html example="example-fetch_qr_status_enc" b_title = "Completed QuestionnaireResponses for a Single Encounter" %}
+
 
 Searching for *all* QuestionnaireResponses with any status
 
 - based on who administered it:
 
-    `GET [base]/QuestionnaireResponse/?source=Practitioner/[practitioner]`
+  `GET [base]/QuestionnaireResponse/?source=Practitioner/[practitioner]`
 
-    `GET [base]/QuestionnaireResponse/?author=Practitioner/[practitioner]`
+{% include examplebutton_default.html example="example-fetch_qr_source" b_title = "Search QuestionnaireResponses by Provider" %}
+
+  `GET [base]/QuestionnaireResponse/?author=Practitioner/[practitioner]`
+
+{% include examplebutton_default.html example="example-fetch_qr_author" b_title = "Search QuestionnaireResponses by Provider" %}
 
 Searching for all QuestionnaireResponses based upon patient demographics
 
@@ -278,20 +314,42 @@ Searching for all QuestionnaireResponses based upon patient demographics
 
     `GET [base]/QuestionnaireResponse/?patient.gender=[gender]&patient.birthdate=ge[date]{&patient.birthdate=lt[date]}`
 
+{% include examplebutton_default.html example="example-fetch_qr_p1" b_title = "Chained Search on QuestionnaireResponses by Patient Sex and Age" %}
+
 - based on location:
 
     `GET [base]/QuestionnaireResponse/?patient.address-postalcode=[zip]`
+
+{% include examplebutton_default.html example="example-fetch_qr_p1" b_title = "Chained Search on QuestionnaireResponses by Patient Address" %}
 
 - based on ethnicity:
 
     `GET [base]/QuestionnaireResponse/?patient.ethnicity=[ethnicity code]`
 
+{% include examplebutton_default.html example="example-fetch_qr_p1" b_title = "Chained Search on QuestionnaireResponses by Patient Ethnicity" %}
+
 - based on race:
 
     `GET [base]/QuestionnaireResponse/?patient.race=[race code]`
 
+{% include examplebutton_default.html example="example-fetch_qr_p1" b_title = "Chained Search on QuestionnaireResponses by Patient Race" %}
 
-{% include examplebutton.html example="example-step6" %}
+### Amending and Revising Forms
+
+#### End User wishes to go back and revise an answer to Question
+{:.no_toc}
+
+For static forms this is a rendering issue for the Form Filler which may allow the user to go back and change answer prior to submitting the form.  Retrieving and resuming or correcting a form is currently out of scope for Argonaut Questionnaire but is covered in the [SDC (Structured Data Capture)] implementation Guide.
+
+#### Answer in Error and Needs to be Reentered
+{:.no_toc}
+
+If the  answer is ‘wrong” and needs to be reentered, it is the function of the form filler to prompt the end user to re-answer the question.  For example, if an answer is incomplete or incorrectly formatted such as a date or telephone number.  How this done is out of scope for Argonaut Questionnaire.
+
+#### Technical error
+{:.no_toc}
+
+Technical errors are typically handled by lower level protocols or manual processes.  How the client or server would resubmit the QuestionnaireResponse is out of scope for Argonaut Questionnaire
 
 
 ---

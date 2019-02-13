@@ -583,7 +583,7 @@ def qr_view():
     qr.identifier.value = qr.id
     session['qr_id'] = qr.id  # this is for saving my examples
     session['profile'] = qr.meta.profile[0]  # this is for uploads if validate by profile
-    qr.id = None # for posting to server
+    # qr.id = None # TODO comment out for user posting to server
     set_cache(qr.identifier.value, json.dumps(qr.as_json(),indent = 3, sort_keys=True))
 
 
@@ -597,9 +597,8 @@ def a_bank():
     qr_id=session['qr_id']
     qr = cache.get(qr_id) if cache.get(qr_id) else json.dumps(session.get('current_aqr'),indent =3, sort_keys=True)
     profile = session['profile']
-    # qr.id = None # iscrub the id  uncomment for users
-    # my_utils.write_file(qr_id, qr) # save to out file for publishing Comment out when done
-    r = my_utils.update_to_server(qr,'QuestionnaireResponse',profile) # ,qr_id) remove the id to post for other users
+    my_utils.write_file(qr_id, qr) # save to out file for publishing Comment out when done
+    r = my_utils.update_to_server(qr,'QuestionnaireResponse',profile , qr_id) # remove the id to post for other users
     application.logger.info('status code = {}\n headers = {}'.format(r.status_code,r.headers))# udpate QR to server return id.
     return render_template('a_bank.html',ref_server_name = ref_server_name,
      ref_server = ref_server,
@@ -658,7 +657,7 @@ def aq_view(): # client view
         aqr.identifier.value = aqr.id
         session['profile'] = aqr.meta.profile[0]  # this is for uploads if validate by profile
         session['qr_id'] = aqr.id  # this is for saving my examples
-        aqr.id = None # for posting to server
+        # aqr.id = None # TODO Comment out for user posting to server
         session['current_aqr']=aqr.as_json() # update session
 
         return render_template('qr_view.html', qr=aqr, qr_string=json.dumps(session['current_aqr'],indent =3, sort_keys=True), adaptive=True)

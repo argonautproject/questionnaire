@@ -40,35 +40,7 @@
     </grouping>
     <resource>
       <reference>
-        <reference value="Questionnaire/questionnaire-example-dast"/>
-      </reference>
-      <exampleBoolean value="true"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Questionnaire/questionnaire-example-housing"/>
-      </reference>
-      <exampleBoolean value="true"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Questionnaire/questionnaire-example-audit-c"/>
-      </reference>
-      <exampleBoolean value="true"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Questionnaire/questionnaire-example-phq9"/>
-      </reference>
-      <exampleBoolean value="true"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="QuestionnaireResponse/questionnaireresponse-example-audit-c"/>
+        <reference value="QuestionnaireResponse/adaptive-questionnaireresponse-example-audit-c"/>
       </reference>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
@@ -82,7 +54,42 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Questionnaire/questionnaire-example-audit-c"/>
+      </reference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="QuestionnaireResponse/questionnaireresponse-example-audit-c"/>
+      </reference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Questionnaire/questionnaire-example-housing"/>
+      </reference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="QuestionnaireResponse/questionnaireresponse-example-sampler"/>
+      </reference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="QuestionnaireResponse/questionnaireresponse-example-dast"/>
+      </reference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="QuestionnaireResponse/adaptive-questionnaireresponse-example-dast"/>
       </reference>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
@@ -96,14 +103,42 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Questionnaire/questionnaire-example-sampler"/>
+        <reference value="QuestionnaireResponse/questionnaireresponse-example-sampler-contained-patient"/>
       </reference>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
-        <reference value="QuestionnaireResponse/questionnaireresponse-example-sampler"/>
+        <reference value="QuestionnaireResponse/adaptive-questionnaireresponse-example-phq9"/>
+      </reference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Questionnaire/questionnaire-example-dast"/>
+      </reference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="QuestionnaireResponse/adaptive-questionnaireresponse-example-sampler"/>
+      </reference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Questionnaire/questionnaire-example-phq9"/>
+      </reference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Questionnaire/questionnaire-example-sampler"/>
       </reference>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>

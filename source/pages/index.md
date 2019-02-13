@@ -32,7 +32,7 @@ Clinical Assessment used in healthcare can be very sophisticated and complex too
 there is clearly a need for a common form standard with a focus on simple assessments.  Clinical Assessments that are hand crafted lead to non standard responses and limited reuse.   Forms should be shareable between systems and across organizational boundaries. With this in mind, the Argonaut Questionnaire Poject's focus and scope is on *simple* clinical assessments for the provider with general applicability and question sets that are mostly unstructured in systems today.  The  following table summarizes the scope of this implementation's guide:
 
 <div class="row">
-<div class="col-sm-4" markdown="1">
+<div class="col-sm-4" markdown="1" style="background-color: Lightcyan;">
 
 **In Scope**
 
@@ -47,7 +47,7 @@ there is clearly a need for a common form standard with a focus on simple assess
 ---
 </div>
 
-<div class="col-sm-4" markdown = "1" >
+<div class="col-sm-4" markdown = "1" style="background-color: WhiteSmoke;">
 **Out of Scope**
 
 ---
@@ -65,6 +65,17 @@ there is clearly a need for a common form standard with a focus on simple assess
 </div>
 
 </div>
+
+### Prior and Concurrent Work
+The [SDC (Structured Data Capture)] implementation quide based on [FHIR Version 4.0.0] provides a set of guidance around the use of Questionnaire and QuestionnaireResponse for more advanced implementation of Questionnaires including:
+ - Advanced Rendering
+ - Advanced Form behavior
+ - Importation of Data into Forms
+ - Extraction of Data from Forms
+
+It also overlaps with some of the content covered in this guide including adaptive form.  Efforts have been made to align this guide with SDC wherever possible.
+
+The Patient Reported Outcomes (PRO) implementation guide focus on capturing and exchanging patient reported outcome data electronically using the FHIR standard. The PRO FHIR IG does not define any specific new profiles, but rather uses the profiles defined by SDC.
 
 ## Actors
 
@@ -128,7 +139,7 @@ In the basic workflow outlined below., an EHR system retrieves a standardized as
 
 **See  the [Adaptive Forms Use Case] for a detailed description of workflow and API guidance.**
 
-Adaptive Forms or Questionnaires such as [PROMIS] forms use a stateless model where a selection of items is presented on the computer to an end user based on the answers on the prior items. The server selects the following items optimized for the outcome of the assessment or testee's estimated ability or trait[^?] (https://en.wikipedia.org/wiki/Questionnaire). This implementation guide provides the basic framework for using Questionnaire and QuestionnaireResponse to preserve the state of the Questionnaire as the client retrieves questions from a remote adaptive questionnaire service.
+Adaptive Forms or Questionnaires such as [PROMIS] forms use a stateless model where a selection of items is presented on the computer to an end user based on the answers on the prior items. The server selects the following items optimized for the outcome of the assessment or testee's estimated ability or trait[^4]. This implementation guide provides the basic framework for using Questionnaire and QuestionnaireResponse to preserve the state of the Questionnaire as the client retrieves questions from a remote adaptive questionnaire service.
 
 {% include img.html img="adaptive-workflow.jpg" caption="Basic Argonaut Questionnaire Workflow" %}
 
@@ -167,43 +178,9 @@ Responses to Questionnaires may be stored in an external ‘answer bank’ that 
 - Scoring -  Currently formal logic is not in scope.
 - retrieval of forms as a printable pdf.
 
-
-
-## Jekyll Site Variables  (remove when publish)
-
-These are the site variables defined [here](http://wiki.hl7.org/index.php?title=IG_Publisher_Documentation#Jekyll):
-
-- IG Business version specification (defined in ig.json)- {% raw %}{{site.data.fhir.ig.version}} {% endraw %} = {{site.data.fhir.ig.version}}
-
-- IG status (defined in ig.xml)- {% raw %}{{site.data.fhir.ig.status}} {% endraw %} = {{site.data.fhir.ig.status}}
-
-- Whether is experimental IG (defined in ig.xml) - {% raw %}{{site.data.fhir.ig.experimental}} {% endraw %} = {{site.data.fhir.ig.experimental}}
-
-- IG Publisher name (defined in ig.xml) - {% raw %}{{site.data.fhir.ig.publisher}} {% endraw %} = {{site.data.fhir.ig.publisher}}
-
-- dependency url - e.g. "uscore" : Base url of a dependency implementation Guide (defined in ig.json) -  {% raw %} {{site.data.fhir.uscore}} {% endraw %}= {{site.data.fhir.uscore}}
-
-- igName : Title of the implementation Guide (defined in ig.xml) -  {% raw %} {{site.data.fhir.igName}} {% endraw %}= {{site.data.fhir.igName}}
-
-- path : path to the main FHIR specification (defined in ig.json)-  {% raw %} {{site.data.fhir.path}} {% endraw %}= {{site.data.fhir.path}}
-
-- canonical : canonical path to this specification (defined in ig.json)-  {% raw %} {{site.data.fhir.canonical}} {% endraw %} = {{site.data.fhir.canonical}}
-
-- errorCount : number of errors in the build file (not including HTML validation errors) -  {% raw %} {{site.data.fhir.errorCount}} {% endraw %} = {{site.data.fhir.errorCount}}
-
-- version : version of FHIR -  {% raw %} {{site.data.fhir.version}} {% endraw %} = {{site.data.fhir.version}}
-
-- revision : revision of FHIR -  {% raw %} {{site.data.fhir.revision}} {% endraw %} = {{site.data.fhir.revision}}
-
-- versionFull : version-revision -  {% raw %} {{site.data.fhir.versionFull}} {% endraw %} = {{site.data.fhir.versionFull}}
-
-- totalFiles : total number of files found by the build -  {% raw %} {{site.data.fhir.totalFiles}} {% endraw %} = {{site.data.fhir.totalFiles}}
-
-- processedFiles : number of files genrated by the build -  {% raw %} {{site.data.fhir.processedFiles}} {% endraw %} = {{site.data.fhir.processedFiles}}
-
-- genDate : date of generation (so date stamps in the pages can match those in the conformance resources) -  {% raw %} {{site.data.fhir.genDate}} {% endraw %} = {{site.data.fhir.genDate}}
-
 <br />
+
+
 
 ---
 

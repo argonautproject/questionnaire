@@ -2,11 +2,11 @@
    "author": {
       "reference": "Practitioner/prov-admin1"
    },
-   "authored": "2019-02-12T22:31:33.619763Z",
+   "authored": "2019-02-13T00:36:52.736153Z",
    "contained": [
       {
          "copyright": "Developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from\nPfizer Inc. No permission required to reproduce, translate, display or distribute.",
-         "date": "2019-02-12T22:31:35.064624Z",
+         "date": "2019-02-13T00:36:54.253025Z",
          "extension": [
             {
                "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timeLimit",
@@ -148,27 +148,31 @@
             {
                "code": [
                   {
-                     "code": "69722-7",
+                     "code": "44253-3",
                      "system": "http://loinc.org"
                   }
                ],
-               "definition": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9-g2.q1",
+               "definition": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9-g1.q8",
                "extension": [
                   {
                      "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 4
                   }
                ],
-               "linkId": "g2.q1",
+               "linkId": "g1.q8",
                "option": [
                   {
                      "valueCoding": {
-                        "code": "LA6572-7",
-                        "display": "Not difficult at all",
+                        "code": "LA6568-5",
+                        "display": "Not at all",
                         "extension": [
                            {
                               "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
                               "valueInteger": 1
+                           },
+                           {
+                              "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
+                              "valueDecimal": 0
                            }
                         ],
                         "system": "http://loinc.org"
@@ -176,12 +180,16 @@
                   },
                   {
                      "valueCoding": {
-                        "code": "LA6573-5",
-                        "display": "Somewhat difficult",
+                        "code": "LA6569-3",
+                        "display": "Several days",
                         "extension": [
                            {
                               "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
                               "valueInteger": 2
+                           },
+                           {
+                              "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
+                              "valueDecimal": 1
                            }
                         ],
                         "system": "http://loinc.org"
@@ -189,12 +197,16 @@
                   },
                   {
                      "valueCoding": {
-                        "code": "LA6575-0",
-                        "display": "Very difficult",
+                        "code": "LA6570-1",
+                        "display": "More than half the days",
                         "extension": [
                            {
                               "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
                               "valueInteger": 3
+                           },
+                           {
+                              "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
+                              "valueDecimal": 2
                            }
                         ],
                         "system": "http://loinc.org"
@@ -202,21 +214,26 @@
                   },
                   {
                      "valueCoding": {
-                        "code": "LA6574-3",
-                        "display": "Extremely difficult",
+                        "code": "LA6571-9",
+                        "display": "Nearly every day",
                         "extension": [
                            {
                               "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
                               "valueInteger": 4
+                           },
+                           {
+                              "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
+                              "valueDecimal": 3
                            }
                         ],
                         "system": "http://loinc.org"
                      }
                   }
                ],
+               "prefix": "8.",
                "repeats": false,
                "required": true,
-               "text": "If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people,",
+               "text": "Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual,",
                "type": "choice"
             },
             {
@@ -313,7 +330,7 @@
          ],
          "meta": {
             "profile": [
-               "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/questionnaire"
+               "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adaptive-questionnaire"
             ]
          },
          "resourceType": "Questionnaire",
@@ -329,11 +346,12 @@
       {
          "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-responsePeriod",
          "valuePeriod": {
-            "end": "2019-02-12T22:31:57.106326Z",
-            "start": "2019-02-12T22:31:33.619763Z"
+            "end": "2019-02-13T00:37:17.386325Z",
+            "start": "2019-02-13T00:36:52.736153Z"
          }
       }
    ],
+   "id": "adaptive-questionnaireresponse-example-phq9",
    "identifier": {
       "value": "adaptive-questionnaireresponse-example-phq9"
    },
@@ -374,15 +392,15 @@
          "answer": [
             {
                "valueCoding": {
-                  "code": "LA6572-7",
-                  "display": "Not difficult at all",
+                  "code": "LA6568-5",
+                  "display": "Not at all",
                   "system": "http://loinc.org"
                }
             }
          ],
-         "definition": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9-g2.q1",
-         "linkId": "g2.q1",
-         "text": "If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people,"
+         "definition": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9-g1.q8",
+         "linkId": "g1.q8",
+         "text": "Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual,"
       },
       {
          "answer": [
@@ -401,7 +419,7 @@
    ],
    "meta": {
       "profile": [
-         "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/questionnaireresponse"
+         "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adap-questionnaireresponse"
       ]
    },
    "questionnaire": {
@@ -416,7 +434,7 @@
       "reference": "Patient/subject1"
    },
    "text": {
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h3>Patient Health Questionnaire (PHQ-9) Adaptive View</h3>\n    <p><em>NOTE: These examples are for educational and testing purposes,\n     see the form copyright statement and do not redistribute without expressed\n     permission from the form author.</em></p>\n    <p>This simulates is a simple adaptive questionnaire implementation.\n     After answering and submitting the first question another question is randomly\n     returned from the selected questionnaire. This is repeated two more times and\n     then the adaptive questionnaire will finish by changing the status to completed\n     and returning a score. Note that although these questionnaires are designed as forms and\n     are not really appropriate for the adaptive questionnaire use case,  they are used here to\n      demonstrate a proof of concept implementation.<br />\n    <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9<br />\n    <strong>Date Completed:</strong> 2018-07-26<br /><br />\n    <em>Copyright: Developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from\nPfizer Inc. No permission required to reproduce, translate, display or distribute.</em></p>\n    <hr /><hr /><br /> <strong>Question:</strong> (linkID=score) Cumulative Score is ... (this is hidden text/should not be displayed to the user)<br /><strong>Response:</strong> 0<br /><br /> <strong>Question:</strong> (linkID=std_dev) Standard Deviation is ... (this is hidden text/should not be displayed to the user)<br /><strong>Response:</strong> 0.0<br /><br /> <strong>Question:</strong> (linkID=g1.q1) Little interest or pleasure in doing things,<br /><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g2.q1) If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people,<br /><strong>Response:</strong>  Not difficult at all ( code = LA6572-7, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q4) Feeling tired or having little energy,<br /><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br /></div>",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h3>Patient Health Questionnaire (PHQ-9) Adaptive View</h3>\n    <p><em>NOTE: These examples are for educational and testing purposes,\n     see the form copyright statement and do not redistribute without expressed\n     permission from the form author.</em></p>\n    <p>This simulates is a simple adaptive questionnaire implementation.\n     After answering and submitting the first question another question is randomly\n     returned from the selected questionnaire. This is repeated two more times and\n     then the adaptive questionnaire will finish by changing the status to completed\n     and returning a score. Note that although these questionnaires are designed as forms and\n     are not really appropriate for the adaptive questionnaire use case,  they are used here to\n      demonstrate a proof of concept implementation.<br />\n    <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9<br />\n    <strong>Date Completed:</strong> 2018-07-26<br /><br />\n    <em>Copyright: Developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from\nPfizer Inc. No permission required to reproduce, translate, display or distribute.</em></p>\n    <hr /><hr /><br /> <strong>Question:</strong> (linkID=score) Cumulative Score is ... (this is hidden text/should not be displayed to the user)<br /><strong>Response:</strong> 0<br /><br /> <strong>Question:</strong> (linkID=std_dev) Standard Deviation is ... (this is hidden text/should not be displayed to the user)<br /><strong>Response:</strong> 0.0<br /><br /> <strong>Question:</strong> (linkID=g1.q1) Little interest or pleasure in doing things,<br /><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q8) Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual,<br /><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q4) Feeling tired or having little energy,<br /><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br /></div>",
       "status": "generated"
    }
 }

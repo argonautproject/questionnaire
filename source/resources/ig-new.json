@@ -45,35 +45,7 @@
     }],
     "resource" : [{
       "reference" : {
-        "reference" : "Questionnaire/questionnaire-example-dast"
-      },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
-        "reference" : "Questionnaire/questionnaire-example-housing"
-      },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
-        "reference" : "Questionnaire/questionnaire-example-audit-c"
-      },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
-        "reference" : "Questionnaire/questionnaire-example-phq9"
-      },
-      "exampleBoolean" : true,
-      "groupingId" : "p1"
-    },
-    {
-      "reference" : {
-        "reference" : "QuestionnaireResponse/questionnaireresponse-example-audit-c"
+        "reference" : "QuestionnaireResponse/adaptive-questionnaireresponse-example-audit-c"
       },
       "exampleBoolean" : true,
       "groupingId" : "p1"
@@ -87,7 +59,42 @@
     },
     {
       "reference" : {
+        "reference" : "Questionnaire/questionnaire-example-audit-c"
+      },
+      "exampleBoolean" : true,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "QuestionnaireResponse/questionnaireresponse-example-audit-c"
+      },
+      "exampleBoolean" : true,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "Questionnaire/questionnaire-example-housing"
+      },
+      "exampleBoolean" : true,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "QuestionnaireResponse/questionnaireresponse-example-sampler"
+      },
+      "exampleBoolean" : true,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
         "reference" : "QuestionnaireResponse/questionnaireresponse-example-dast"
+      },
+      "exampleBoolean" : true,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "QuestionnaireResponse/adaptive-questionnaireresponse-example-dast"
       },
       "exampleBoolean" : true,
       "groupingId" : "p1"
@@ -101,14 +108,42 @@
     },
     {
       "reference" : {
-        "reference" : "Questionnaire/questionnaire-example-sampler"
+        "reference" : "QuestionnaireResponse/questionnaireresponse-example-sampler-contained-patient"
       },
       "exampleBoolean" : true,
       "groupingId" : "p1"
     },
     {
       "reference" : {
-        "reference" : "QuestionnaireResponse/questionnaireresponse-example-sampler"
+        "reference" : "QuestionnaireResponse/adaptive-questionnaireresponse-example-phq9"
+      },
+      "exampleBoolean" : true,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "Questionnaire/questionnaire-example-dast"
+      },
+      "exampleBoolean" : true,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "QuestionnaireResponse/adaptive-questionnaireresponse-example-sampler"
+      },
+      "exampleBoolean" : true,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "Questionnaire/questionnaire-example-phq9"
+      },
+      "exampleBoolean" : true,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "Questionnaire/questionnaire-example-sampler"
       },
       "exampleBoolean" : true,
       "groupingId" : "p1"

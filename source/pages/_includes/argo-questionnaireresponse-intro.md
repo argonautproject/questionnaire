@@ -48,10 +48,12 @@ The following data-elements are mandatory:
 <!-- {% raw %} {% include list-simple-QuestionnaireResponses.xhtml %}{% endraw %} -->
 - [Sampler Response](QuestionnaireResponse-questionnaireresponse-example-sampler.html)
 - [PHQ-9 Response](QuestionnaireResponse-questionnaireresponse-example-phq9.html)
-- [AUDIT Response](QuestionnaireResponse-questionnaireresponse-example-audit.html)
+- [AUDIT-C Response](QuestionnaireResponse-questionnaireresponse-example-audit-c.html)
 - [DAST Response](QuestionnaireResponse-questionnaireresponse-example-dast.html)
 - [Housing Response](QuestionnaireResponse-questionnaireresponse-example-housing.html)
-- [ASQ3 Response](QuestionnaireResponse-questionnaireresponse-example-asq3.html)
 
+<!--
+- [ASQ3 Response](QuestionnaireResponse-questionnaireresponse-example-asq3.html)
+-->
 
 {%include link-list.md %}

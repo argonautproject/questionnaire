@@ -16,91 +16,40 @@ topofpage: true
 
 The Argonaut Questionnaire Implementation Guide defines a series of interactions which cover the basic workflow for the creation, discovery and retrieval of "**computer adaptive forms**" using FHIR Questionnaire and QuestionnaireResponse and the FHIR API.
 
-- Dynamic forms
-- Adjust what questions are asked based on previous answers
-- Logic defined external to Questionnaire
-- Iteratively submit response to API (FHIR operations)
-- Locally Questionnaire/QuestionnaireResponse updated on the fly
-- Record total score as an Observation or a part of QuestionnaireResponse **Discuss**
+Argonaut Questionnaire Adaptive forms are dynamic forms that adjust what questions are asked based on previous answers. This is also known as Computerized Adaptive Testing (CAT). The logic to determine the questions are defined external to the Questionnaire resource.[^5]  Responses to questions are iteratively submitted to a FHIR API [FHIR operation] and The form and Questionnaire and QuestionnaireResponse resources are updated on the fly.  A scores based on responses may calculate and recorded separately (e.g., a FHIR [Observation]) or as part of the QuestionnaireResponse
 
-<!--
-Demonstration by Raheel Sayeed (Smart on FHIR Post-Doc)
-EASIPRO: Northwestern, Harvard, USC, working on integration of PROMIS into the healthcare system.
--->
-
-## Example Scenario
-
-This simple scenario serves as an effective means to describe the Argonaut Questionnaire basic workflow and API
-
-~~~ text
- ...todo...
-~~~
+See the [HealthMeasures] website for further background, theory and use cases for adaptive forms.
 
 ## Assumptions and Precondition
 
-- Client(Form Filler)
+1. The Adaptive Questionnaire Service is treated as a **“Black Box”**. It contains the sometimes proprietary logic for determination of next question and scoring. Clients make RESTful FHIR transactions on Service using a *FHIR operation* and pass QuestionnaireResponse with *contained* Questionnaire as the payload to capture the data needed between the Client and Service
+1. Transactions are Stateless.  The client constructs a record of the transaction which is passed to service and the service adds to record and passed it back to client.  The client and service are free of keeping track of the session and a previously disrupted session can be restored if the session token expires.
+1. Client/Form Filler can be a:
   - EHR-S
-  - Patient Portal (Smart) App
-  - Third Party (Smart) App too.
-- Adaptive Questionnaire Service is treated as a **“Black Box”**:
-  - Contains logic for determination of next question and scoring
-- Transactions are Stateless:
-  - Client constructs a record of transaction which is passed to Service
-  - Service adds to record and passed back to Client
-  - Client and Service free of keeping track of session
-  - A Previously disrupted session can be restored if session token expires.
-- Client makes RESTful FHIR transactions on Service using a *FHIR operation*
-- Use QuestionnaireResponse with contained Questionnaire as Parameters to capture the data needed between the Client and Service
-- If Questionnaire timed out
-   - Response can change over time and the Form is not valid
-   - the whole session needs to be restarted
-   - timing extensions - duration/time-limit?
-      - either Client or Service could validate if within time limit
-      - (OperationOutcome defined error code) **Discusse**
-- Use QuestionnaireResponse with contained Questionnaire as Parameters to capture the data needed between the Client and Service
-- Operationally need to keep assessment short.
-  - e.g.,PROMIS up to 12 transactions  (on average 4-12))
-- Calculated Scores as `readOnly` question and a pre-populated value as an answer.
-  - can be marked as hidden using the questionnaire-hidden extension to prevent end user from viewing.
+  - Patient Portal
+  - Third Party App
+1. The Questionnaire may expire and the form may not be valid. Time limits for completion of a questionnaire or individual question can be defined and the Form Filler can record the start and stop date-times using the [Argonaut Questionnaire Time Limit Extension] and [Argonaut QuestionnaireResponse Response Period Extension].  Note that either Client or Service could determine if the response is within a time limit. How this information modifies the behavior of the Form-filler or interpretation of results is an implementation detail outside of scope of this Implementation Guide.
+1. Operationally need to keep the assessment short - e.g., PROMIS forms have up to 12 transactions  (on average 4-12).
+1. Calculated Scores can be recorded as [`readOnly`] question and a pre-populated value as an answer.  These items may be marked as 'hidden' using the [Questionnaire Hidden Extension] to direct the Form Filler indicates that the extended item should not be displayed to the user.
+  - To assist in calculating scores the standard [Valuset Ordinal Value Extension] and [Questionnaire Ordinal Value Extension] may be used on items. *NOTE: This implementation quide extends the context of the Questionnaire Ordinal Value Extension to elements beyond that defined in the FHIR Specification.*
+  - How and when scoring is done is an implementation detail and outside the scope of this guide.
+1. There are no constraints on the nesting of item groups and there are several possible items and item groupings including:
+    - *a single* question ('what is the capital of Assyria?') or
+    - *a single* display  ('Answer these questions three!!') or
+    - *a single* item group of *multiple* display + *multiple* questions  ( 'what is you favorite color?', 'what is the capital of Assyria?', 'what is average flight speed of a laden swallow?')
+      - or a group containing the question-score pairs when transmitting an individual score for each item.
+    - *a single* item group of: *multiple* item groups ('Answer these questions three!!', 'what is you favorite color?', 'what is the capital of Assyria?', 'what is average flight speed of a laden swallow?')
 
-## Open issues for discussion
-
-1. Using QuestionnaireResponse with contained Questionnaire as the "container" to pass information back and forth [7](https://github.com/argonautproject/questionnaire/issues/7)
-    - other option would be simpler list of Paramters but the client will still have to build the QuestionnaireResponse with contained Questionnaire.
-    - (complexity is just shifted around
-1. limit the structural complexity (i.e. nesting of group items) of the contained Questionnaire? [8](https://github.com/argonautproject/questionnaire/issues/8)
-    - *each* contained Questionnaire.item could be a:
-        - *a single* question ('what is the capital of Assyria?') or
-        - *a single* display  ('Answer these questions three!!') or
-        - *a single* item group of *multiple* display + *multiple* questions  ( 'what is you favorite color?', 'what is the capital of Assyria?', 'what is average flight speed of a laden swallow?')
-          - or perhaps more commonly a group containing the question-score pairs when transmitting an individual score for each item.
-        - *a single* item group of: *multiple* item groups ('Answer these questions three!!', 'what is you favorite color?', 'what is the capital of Assyria?', 'what is average flight speed of a laden swallow?')
-    -  What is the Service going to send in most cases?
-       - We are assuming the adaptive questionnaire are going to be rather short so is this complexity warranted.
-       - On the other hand other projects (SDC and ONC PROs project) are planning to build on this guidance so may be better to not overly constrain.
-1.  What scoring capability is needed only at end or after each question? [9](https://github.com/argonautproject/questionnaire/issues/9)
-    - cumulative(total score) score only at end or after each question ?
-    - score for each q-a pair ?
-    - what guidance if any should be given on how to store score?
-      - as Observation
-      - as question-answer pair  ( how is shown below )
-      - both
-1. Discovery of Adaptive Questionnaire? [10](https://github.com/argonautproject/questionnaire/issues/10)
-   - see section below
 
 ## Workflow Steps
 
 The following sections provide a detailed description of workflow and API guidance for the Adaptive Forms Use Case.
 
-
-{% include img.html img="adaptive-workflow-steps.jpg" caption="Overview of Adaptive Questionnaire Steps" %}
-
-
 <!-- Discovery of Adaptive Questionnaire --->
 
 ### Discovery of Adaptive Questionnaire
 
-The discovery and preview of the service's adaptive questionnaire is out of scope.  It may be done out of band or using the standard [FHIR RESTful search API]. ( todo - discuss )
+The discovery and preview of the service's adaptive questionnaire is out of scope.  It may be done out of band or using the standard [FHIR RESTful search API].
 
 
 <!--------- INIT ------------>
