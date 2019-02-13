@@ -194,7 +194,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="OperationDefinition/next-q"/>
+        <reference value="OperationDefinition/next-question"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -307,8 +307,8 @@
         <title value="Operations"/>
         <generation value="html"/>
         <page>
-          <nameUrl value="OperationDefinition-next-q.html"/>
-          <title value="OperationDefinition Next Q"/>
+          <nameUrl value="OperationDefinition-next-question.html"/>
+          <title value="OperationDefinition Next Question"/>
           <generation value="generated"/>
         </page>
       </page>

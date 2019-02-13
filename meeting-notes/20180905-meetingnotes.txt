@@ -1,23 +1,23 @@
-1) add extension for order of items in array.
+1) add extension for order of items in array. - done
 
  reply to this https://www.hl7.org/fhir/json.html - The order of properties of an object is not
 significant in the JSON representation, though order within an array SHALL be maintained
 
-1.3) discuss how to deal with hidden items used for score and std dev.
+1.3) discuss how to deal with hidden items used for score and std dev.  -done
 
 need more hidden items
 
-2)  language question
+2)  language question -done
 
-3) cumulative scoring
+3) cumulative scoring -open
 
 4)  look at all q-a's not just one
 
-5) so can go back and redo an answer
+5) so can go back and redo an answer - done
 
-6) fix refresh issue and uniqueness of questions in simulation and add all steps:
+6) fix refresh issue and uniqueness of questions in simulation and add all steps: -done
 
-7) add all states for aq
+7) add all states for aq -done
    create - init page and view
    see before and after black box views.
 

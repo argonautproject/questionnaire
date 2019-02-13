@@ -18,7 +18,7 @@ The Argonaut Questionnaire Implementation Guide defines a series of interactions
 
 Each assessment tool (i.e., set of questions and answer choices) is created once as FHIR Questionnaires and centrally stored in an “Assessment Bank” which can be accessed by the provider EHRS. The provider can then render the form for the end user to complete.  The form responses are captured and processed by the provider EHRS and can be stored using the QuestionnaireResponse in an "Answer Bank and subsequently retrieved by the providers for review. Although out of scope for this guide, these results can be aggregated and shared within or across systems.
 
-These basic workflow steps and API are detailed below.  This guidance covers more basic scenarios, but can be scaled up towards more complex scenarios ( for example, see [Structured Data Capture Initiative]).
+These basic workflow steps and API are detailed below.  This guidance covers more basic scenarios, but can be scaled up towards more complex scenarios ( for example, see [Structured Data Capture Initiative]).  Note that the search guidance below is applicable for both Static and *completed* Adaptive forms.
 
 ## Example Scenario
 
@@ -263,7 +263,6 @@ The following Argonaut Questionnaire artifacts are used in this transaction:
 #### Usage
 {:.no_toc}
 
-
 Fetching a *single* QuestionnaireResponse:
 
 - based on its id:
@@ -346,11 +345,10 @@ For static forms this is a rendering issue for the Form Filler which may allow t
 
 If the  answer is ‘wrong” and needs to be reentered, it is the function of the form filler to prompt the end user to re-answer the question.  For example, if an answer is incomplete or incorrectly formatted such as a date or telephone number.  How this done is out of scope for Argonaut Questionnaire.
 
-#### Technical error
+#### Technical Error
 {:.no_toc}
 
 Technical errors are typically handled by lower level protocols or manual processes.  How the client or server would resubmit the QuestionnaireResponse is out of scope for Argonaut Questionnaire
-
 
 ---
 

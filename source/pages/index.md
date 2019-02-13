@@ -155,33 +155,13 @@ Adaptive Forms or Questionnaires such as [PROMIS] forms use a stateless model wh
 |7|Steps 5 and 6 are repeated until the questionnaire is done.|
 |8|The Form Filler may process the questions and answers or store or record any scoring.|
 
-
-
 ## Security and Privacy Considerations
 
 For general security consideration refer to the [Security section] in the US Core Implementation Guide and [FHIR Security] section in core FHIR Specification. See the [Assumptions] section above for a discussion of login and trust.
 
 Responses to Questionnaires may be stored in an external ‘answer bank’ that is shared and may not be in a trusted environment. Therefore careful consideration to determine whether posting a QuestionnaireResponse to a shared answer bank is risking the patient's privacy. Guidance on how to maintain patient privacy and still be able to search the responses effectively is provided in [this section].
 
-
-## Outstanding issues/Future scope
-
-- Processing (scoring, aggregating, etc) the responses.
-- Sharing or storing (i.e. a shared 'Answer Bank') and processing answers (QuestionnaireResponse) across systems.
-- Management of versioning of assessments
-- Intellectual Property and Copyright issues
-- Updating completed forms
-- Updating/retrieving half-completed forms
-- Supporting retrieval of standard concepts from external repository like VSAC?  ( example: nursing forms)
-- preference to contain or include return bundle
-- Defining a single way to do X?  e.g choice questions.  (there is more than one way!)
-- Scoring -  Currently formal logic is not in scope.
-- retrieval of forms as a printable pdf.
-
 <br />
-
-
-
 ---
 
 {%include link-list.md %}

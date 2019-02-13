@@ -8,7 +8,7 @@
 [Answer-Bank]: CapabilityStatement-answerbank.html
 [Argonaut Adaptive QuestionnaireResponse Profile]: StructureDefinition-argo-adap-questionnaireresponse.html "The Argonaut Adaptive QuestionnaireResponse Profile  is derived from the Argonaut QR profile requiring a containedArgonaut Questionnaire Profile to support the adaptive questionnaire use case."
 [Argonaut Adaptive Questionnaire Profile]: StructureDefinition-argo-adaptive-questionnaire.html "The contained Argonaut Questionnaire Profile to support the adaptive questionnaire use case."
-[Argonaut Next Question Operation]: OperationDefinition-next-q.html "The Argonaut Next Question Operation is used for adaptive questionnaires forms where the next question is based on previous answers."
+[Argonaut Next Question Operation]: OperationDefinition-next-question.html "The Argonaut Next Question Operation is used for adaptive questionnaires forms where the next question is based on previous answers."
 [Argonaut Project]: http://argonautwiki.hl7.org/index.php?title=Main_Page
 [Argonaut Questionnaire Profile]: StructureDefinition-argo-questionnaire.html "Argonaut Questionnaire Profile"
 [Questionnaire Ordinal Value Extension]: {{site.data.fhir.path}}extension-questionnaire-ordinalvalue.html "A numeric value that allows the comparison (less than, greater than) or other numerical manipulation of a concept (e.g. adding up components of a score)."
@@ -58,3 +58,4 @@
 [Patient Reported Outcomes (PRO)]: http://www.hl7.org/fhir/us/patient-reported-outcomes/history.cfml "Standardization in the creation, administration and sharing of PRO data"
  [HealthMeasures]: http://www.healthmeasures.net/index.php?option=com_content&view=category&layout=blog&id=164&Itemid=1133 "HealthMeasures (also known as the Person-Centered Assessment Resource) is a grant from the National Institutes of Health (NIH) to expand and automate use of four state-of-the-science measurement systems: PROMIS®, NIH Toolbox®, Neuro-QoL, and ASCQ-Me®."
  [`readOnly`]:{site.data.fhir.path}}questionnaire-definitions.html#Questionnaire.item.readOnly  "An indication, when true, that the value cannot be changed by a human respondent to the Questionnaire."
+ [Argonaut Questionnaire Test Renderer]: http://gettingstarte-cjfwz-env.us-west-2.elasticbeanstalk.com/

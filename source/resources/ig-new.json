@@ -199,7 +199,7 @@
     },
     {
       "reference" : {
-        "reference" : "OperationDefinition/next-q"
+        "reference" : "OperationDefinition/next-question"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
@@ -312,8 +312,8 @@
         "title" : "Operations",
         "generation" : "html",
         "page" : [{
-          "nameUrl" : "OperationDefinition-next-q.html",
-          "title" : "OperationDefinition Next Q",
+          "nameUrl" : "OperationDefinition-next-question.html",
+          "title" : "OperationDefinition Next Question",
           "generation" : "generated"
         }]
       },

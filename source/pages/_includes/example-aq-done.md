@@ -1,10 +1,10 @@
 **request**
 
-`POST [base]/Questionnaire/questionnaire-example-adaptive-sampler/$next-q`
+`POST [base]/Questionnaire/questionnaire-example-adaptive-sampler/$next-question`
 
 **payload**
 
-~~~
+~~~json
 {"resourceType": "QuestionnaireResponse",
     "id": "questionnaireresponse-example-adaptive-sampler",
     "meta": {
@@ -144,7 +144,7 @@
 
 **response**
 
-~~~
+~~~json
 {
   "resourceType": "QuestionnaireResponse",
   "id": "questionnaireresponse-example-adaptive-sampler",

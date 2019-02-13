@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OperationDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file://Mac/Home/Documents/FHIR/FHIR%20tools/STU3Schema/fhir-all.xsd">
-	<id value="next-q"/>
+	<id value="next-question"/>
   <!--
 	<text>
 		<status value="generated"/>
@@ -8,14 +8,14 @@
 			<h2>Argonaut Next Question Operation</h2>
 			<p>OPERATION: Argonaut Next Question Operation</p>
 			<p>The official URL for this operation definition is: </p>
-			<pre>http://fhir.org/guides/argonaut-questionnaire/OperationDefinition/next-q</pre>
+			<pre>http://fhir.org/guides/argonaut-questionnaire/OperationDefinition/next-question</pre>
 			<div>
 				<p>The Argonaut Next Question Operation is used for <em>adaptive questionnaires</em> forms where the next question is based on previous answers.  The result of this operation is to return the next question and optionally the questionnaire scoring for an adaptice questionnaire.  This operation uses the <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html">QuestionnaireResponse</a> resource with a <a href="http://hl7.org/fhir/STU3/references.html#contained">
 						<em>contained</em>
 					</a>
 					<a href="http://hl7.org/fhir/STU3/questionnaire.html">Questionnaire</a> as both the input and output parameter. The Client initiates and queries for the next question supplying the answer to the previous question.  The Server updates the contained Questionnaire in the  QuestionnaireResponse in the with the next question.  When the questionnaire is complete, the Server updates the status of the &#39;qr-in&#39; resource parameter to <code>complete</code>.  If the questionnaire has exceeded the time limit, the  Client or Server may return an <a href="http://hl7.org/fhir/STU3/operationoutcome.html">OperationOutcome</a> with an error.</p>
 			</div>
-			<p>URL: [base]/QuestionnaireResponse/[id]/$next-q</p>
+			<p>URL: [base]/QuestionnaireResponse/[id]/$next-question</p>
 			<p>Parameters</p>
 			<table class="grid">
 				<tr>
@@ -91,14 +91,14 @@
 		</div>
 	</text>
 -->
-	<url value="http://fhir.org/guides/argonaut-questionnaire/OperationDefinition/next-q"/>
+	<url value="http://fhir.org/guides/argonaut-questionnaire/OperationDefinition/next-question"/>
 	<name value="Argonaut Next Question Operation"/>
 	<status value="draft"/>
 	<kind value="operation"/>
 	<date value="2018-08-08T14:35:53-07:00"/>
 	<publisher value="The Argonaut Project"/>
-	<description value="The Argonaut Next Question Operation is used for *adaptive questionnaires* forms where the next question is based on previous answers.  The result of this operation is to return the next question and optionally the questionnaire scoring for an adaptive questionnaire.  This operation uses the [QuestionnaireResponse](http://hl7.org/fhir/STU3/questionnaireresponse.html) resource with a [*contained*](http://hl7.org/fhir/STU3/references.html#contained) [Questionnaire](http://hl7.org/fhir/STU3/questionnaire.html) as both the input and output parameter. The Client initiates and queries for the next question supplying the answer to the previous question.  The Server updates the contained Questionnaire in the  QuestionnaireResponse in the with the next question.  When the questionnaire is complete, the Server updates the status of the &#39;qr-in&#39; resource parameter to `complete`.  If the questionnaire has exceeded the time limit, the  Client or Server may return an [OperationOutcome](http://hl7.org/fhir/STU3/operationoutcome.html) with an error."/>
-	<code value="next-q"/>
+	<description value="The Argonaut Next Question Operation is used for *adaptive questionnaires* forms where the next question is based on previous answers.  The result of this operation is to return the next question and optionally the questionnaire scoring for an adaptive questionnaire.  This operation uses the [QuestionnaireResponse](http://hl7.org/fhir/STU3/questionnaireresponse.html) resource with a [*contained*](http://hl7.org/fhir/STU3/references.html#contained) [Questionnaire](http://hl7.org/fhir/STU3/questionnaire.html) as both the input and output parameter. The Client initiates and queries for the next question supplying the answer to the previous question.  The Server updates the contained Questionnaire in the  QuestionnaireResponse in the with the next question.  When the questionnaire is complete, the Server updates the status of the &#39;qr-in&#39; resource parameter to `completed`.  If the questionnaire has exceeded the time limit, the  Client or Server may return an [OperationOutcome](http://hl7.org/fhir/STU3/operationoutcome.html) with an error."/>
+	<code value="next-question"/>
   <comment value="To return a calculated score for the questionnaire or group of items, the service may return a `readOnly` question with `initial.valueQuantity` in the contained Questionnaire.  The extension `questionnaire-hidden` is used to indicate to the client that it should not be displayed to the end user"></comment>
 	<resource value="Questionnaire"/>
 	<system value="false"/>
