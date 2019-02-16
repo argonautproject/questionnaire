@@ -24,7 +24,7 @@
          "item": [
             {
                "linkId": "g1.d",
-               "text": "The Argonaut Questionnaire Sampler is designed to show all the question types that can be used in the Argonaut Questionnaire Project:\n\n1 boolean\n2 decimal\n3 integer\n4 dateDate\n5 dateTime\n6 timeTime\n7 string\n8 textText\n9 urlUrl\n10 choice\n11 open-choice\n12 quantity\n"
+               "text": "The Argonaut Questionnaire Sampler is designed to show all the question types that can be used in the Argonaut Questionnaire Project:\n\n1 boolean\n2 decimal\n3 integer\n4 dateDate\n5 dateTime\n6 timeTime\n7 string\n8 textText\n9 urlUrl\n10 choice\n11 open-choice\n12 quantity"
             }
          ],
          "linkId": "g1",
@@ -95,7 +95,7 @@
             {
                "answer": [
                   {
-                     "valueDateTime": "2019-02-13T12:59"
+                     "valueDateTime": "2019-02-13T12:59:00Z"
                   }
                ],
                "linkId": "g6.q1",
@@ -110,7 +110,7 @@
             {
                "answer": [
                   {
-                     "valueTime": "12:59"
+                     "valueTime": "12:59:00"
                   }
                ],
                "linkId": "g7.q1",
@@ -186,9 +186,6 @@
                "answer": [
                   {
                      "valueString": "11"
-                  },
-                  {
-                     "valueString": ""
                   }
                ],
                "linkId": "g12.q1",
@@ -203,10 +200,13 @@
             {
                "answer": [
                   {
-                     "valueString": "11"
-                  },
-                  {
-                     "valueString": "m/sec"
+                     "valueQuantity":
+                     {
+                        "value" : 11,
+                        "unit" : "m/sec",
+                        "system" : "http://unitsofmeasure.org",
+                        "code" : "m/s"
+                      }
                   }
                ],
                "linkId": "g13.q1",

@@ -1,0 +1,40 @@
+{
+   "id": "prov-admin1",
+   "meta": {
+      "profile": [
+         "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+      ]
+   },
+   "active": true,
+   "communication": [
+      {
+         "coding": [
+            {
+               "code": "en",
+               "display": "English",
+               "system": "urn:ietf:bcp:47"
+            }
+         ],
+         "text": "English"
+      }
+   ],
+   "identifier": [
+      {
+         "system": "http://hl7.org.fhir/sid/us-npi",
+         "value": "999123456"
+      }
+   ],
+   "name": [
+      {
+         "family": "Healer",
+         "given": [
+            "Jane",
+            "M"
+         ],
+         "suffix": [
+            "RN"
+         ]
+      }
+   ],
+   "resourceType": "Practitioner"
+}

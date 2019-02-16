@@ -166,14 +166,15 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive",
-                  "valueBoolean": true
-                },
-                {
                   "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
                   "valueInteger": 7
                 }
               ],
+              "modifierExtension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive",
+                  "valueBoolean": true
+                }],
               "valueString": "None of the above"
             }
           ],

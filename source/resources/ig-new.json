@@ -66,6 +66,13 @@
     },
     {
       "reference" : {
+        "reference" : "Encounter/encounter1"
+      },
+      "exampleBoolean" : true,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
         "reference" : "QuestionnaireResponse/questionnaireresponse-example-audit-c"
       },
       "exampleBoolean" : true,
@@ -81,6 +88,13 @@
     {
       "reference" : {
         "reference" : "QuestionnaireResponse/questionnaireresponse-example-sampler"
+      },
+      "exampleBoolean" : true,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "Practitioner/prov-admin1"
       },
       "exampleBoolean" : true,
       "groupingId" : "p1"
@@ -116,6 +130,13 @@
     {
       "reference" : {
         "reference" : "QuestionnaireResponse/adaptive-questionnaireresponse-example-phq9"
+      },
+      "exampleBoolean" : true,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "Patient/subject1"
       },
       "exampleBoolean" : true,
       "groupingId" : "p1"

@@ -161,7 +161,6 @@ For general security consideration refer to the [Security section] in the US Cor
 
 Responses to Questionnaires may be stored in an external ‘answer bank’ that is shared and may not be in a trusted environment. Therefore careful consideration to determine whether posting a QuestionnaireResponse to a shared answer bank is risking the patient's privacy. Guidance on how to maintain patient privacy and still be able to search the responses effectively is provided in [this section].
 
-<br />
 ---
 
 {%include link-list.md %}

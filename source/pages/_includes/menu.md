@@ -28,9 +28,11 @@
 <li>
   <a href="profiles.html">Profiles/Extensions</a>
 </li>
+<!--
 <li>
   <a href="terminology.html">Terminology</a>
 </li>
+-->
 <li>
   <a href="searchparameters.html">Search Parameters</a>
 </li>

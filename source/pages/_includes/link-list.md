@@ -34,14 +34,13 @@
 [Valuset Ordinal Value Extension]: {{site.data.fhir.path}}extension-valueset-ordinalvalue.html "ValueSet ordinalvalue extension: A numeric value that allows numerical manipulation of a concept."
 [Profiles]: profiles.html
 [Provider EHR]: CapabilityStatement-server.html
-[Questionnaire examples]: StructureDefinition-q.html#examples
+[Questionnaire examples]: StructureDefinition-argo-questionnaire.html#examples
 [Questionnaire Hidden Extension]: {{site.data.fhir.path}}extension-questionnaire-hidden.html "Questionnaire hidden extension: If true, indicates that the extended item should not be displayed to the user."
-[Questionnaire Option Exclusive Extension]: {{site.data.fhir.path}}extension-questionnaire-optionexclusive.html "Questionnaire optionexclusive extension: If true, indicates that if this option is selected, no other options may be selected."
+[Questionnaire Option Exclusive Extension]: {{site.data.fhir.path}}extension-questionnaire-optionexclusive.html "Questionnaire optionexclusive  modifier extension: If true, indicates that if this option is selected, no other options may be selected."
 [Questionnaire]: {{site.data.fhir.path}}questionnaire.html "Questionnaire resource"
 [QuestionnaireResponse]: {{site.data.fhir.path}}questionnaireresponse.html "QuestionnaireResponse resource"
 [Observation]: {{site.data.fhir.path}}observation.html "Observation resource"
 [Security section]: {{site.data.fhir.uscore}}security.html "US Core Security"
-[see issues]: index.html#outstanding-issuesfuture-scope
 [server]: CapabilityStatement-server.html
 [SMART Backend Services]: http://docs.smarthealthit.org/authorization/backend-services/
 [SMART on FHIR]: http://docs.smarthealthit.org/authorization/
@@ -57,5 +56,7 @@
 [FHIR Version 4.0.0]: http://hl7.org/fhir/R4/ "FHIR Release #4: First Normative Content"
 [Patient Reported Outcomes (PRO)]: http://www.hl7.org/fhir/us/patient-reported-outcomes/history.cfml "Standardization in the creation, administration and sharing of PRO data"
  [HealthMeasures]: http://www.healthmeasures.net/index.php?option=com_content&view=category&layout=blog&id=164&Itemid=1133 "HealthMeasures (also known as the Person-Centered Assessment Resource) is a grant from the National Institutes of Health (NIH) to expand and automate use of four state-of-the-science measurement systems: PROMIS®, NIH Toolbox®, Neuro-QoL, and ASCQ-Me®."
- [`readOnly`]:{site.data.fhir.path}}questionnaire-definitions.html#Questionnaire.item.readOnly  "An indication, when true, that the value cannot be changed by a human respondent to the Questionnaire."
+ [`readOnly`]:{{site.data.fhir.path}}questionnaire-definitions.html#Questionnaire.item.readOnly  "An indication, when true, that the value cannot be changed by a human respondent to the Questionnaire."
  [Argonaut Questionnaire Test Renderer]: http://gettingstarte-cjfwz-env.us-west-2.elasticbeanstalk.com/
+ [modifier extension]: {{site.data.fhir.path}}extensibility.html#modifierExtension "An extension that modifies the meaning of the element that contains it. Typically, this means information that qualifies or negates the primary meaning of the element that contains it."
+ [described above]: #get-next-question

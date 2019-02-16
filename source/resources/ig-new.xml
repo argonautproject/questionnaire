@@ -61,6 +61,13 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Encounter/encounter1"/>
+      </reference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="QuestionnaireResponse/questionnaireresponse-example-audit-c"/>
       </reference>
       <exampleBoolean value="true"/>
@@ -76,6 +83,13 @@
     <resource>
       <reference>
         <reference value="QuestionnaireResponse/questionnaireresponse-example-sampler"/>
+      </reference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Practitioner/prov-admin1"/>
       </reference>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>
@@ -111,6 +125,13 @@
     <resource>
       <reference>
         <reference value="QuestionnaireResponse/adaptive-questionnaireresponse-example-phq9"/>
+      </reference>
+      <exampleBoolean value="true"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Patient/subject1"/>
       </reference>
       <exampleBoolean value="true"/>
       <groupingId value="p1"/>

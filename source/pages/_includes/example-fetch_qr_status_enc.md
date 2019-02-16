@@ -43,7 +43,7 @@ Content-Type: application/fhir+json; charset=utf-8
                "versionId": "2",
                "lastUpdated": "2018-07-27T20:36:40.103+00:00",
                "profile": [
-                  "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr"
+                  "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaireresponse"
                ]
             },
             "identifier": {

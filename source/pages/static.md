@@ -14,7 +14,7 @@ topofpage: true
 
 ## Introduction
 
-The Argonaut Questionnaire Implementation Guide defines a series of interactions which cover the basic workflow for the creation, discovery and retrieval of simple static text-based forms using FHIR Questionnaire and QuestionnaireResponse and the FHIR API..
+The Argonaut Questionnaire Implementation Guide defines a series of interactions which cover the basic workflow for the creation, discovery and retrieval of simple static text-based forms using FHIR Questionnaire and QuestionnaireResponse and the FHIR API.  The reader is encouraged to familiarize herself with the capabilities of the Questionnaire and QuestionnaireResponse Response resources by reviewing the guidance given in the FHIR specification and the [Argonaut Questionnaire Profile] and [Argonaut QuestionnaireResponse Profile] pages.
 
 Each assessment tool (i.e., set of questions and answer choices) is created once as FHIR Questionnaires and centrally stored in an “Assessment Bank” which can be accessed by the provider EHRS. The provider can then render the form for the end user to complete.  The form responses are captured and processed by the provider EHRS and can be stored using the QuestionnaireResponse in an "Answer Bank and subsequently retrieved by the providers for review. Although out of scope for this guide, these results can be aggregated and shared within or across systems.
 

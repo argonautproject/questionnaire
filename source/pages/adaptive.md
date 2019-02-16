@@ -14,23 +14,23 @@ topofpage: true
 
 ## Introduction
 
-The Argonaut Questionnaire Implementation Guide defines a series of interactions which cover the basic workflow for the creation, discovery and retrieval of "**computer adaptive forms**" using FHIR Questionnaire and QuestionnaireResponse and the FHIR API.
+The Argonaut Questionnaire Implementation Guide defines a series of interactions which cover the basic workflow for the creation, discovery and retrieval of "**computer adaptive forms**" using FHIR Questionnaire and QuestionnaireResponse and the FHIR API.  The reader is encouraged to familiarize herself with the capabilities of the Questionnaire and QuestionnaireResponse Response resources by reviewing the guidance given in the FHIR specification and the guidance in [Static Forms Use Case].
 
-Argonaut Questionnaire Adaptive forms are dynamic forms that adjust what questions are asked based on previous answers. This is also known as Computerized Adaptive Testing (CAT). The logic to determine the questions are defined external to the Questionnaire resource.[^5]  Responses to questions are iteratively submitted to a FHIR API [FHIR operation] and The form and Questionnaire and QuestionnaireResponse resources are updated on the fly.  A scores based on responses may calculate and recorded separately (e.g., a FHIR [Observation]) or as part of the QuestionnaireResponse
+Argonaut Questionnaire Adaptive forms are dynamic forms that adjust what questions are asked based on previous answers. This is also known as Computerized Adaptive Testing (CAT). The logic to determine the questions are defined external to the Questionnaire resource.[^5]   Responses to questions are iteratively submitted to a FHIR API [FHIR operation] and the contained Questionnaire and QuestionnaireResponse resources are updated on the fly.  A score based on responses may calculate and recorded separately (e.g., a FHIR [Observation]) or as part of the QuestionnaireResponse
 
 See the [HealthMeasures] website for further background, theory and use cases for adaptive forms.
 
 ## Assumptions and Precondition
 
-1. The Adaptive Questionnaire Service is treated as a **“Black Box”**. It contains the sometimes proprietary logic for determination of next question and scoring. Clients make RESTful FHIR transactions on Service using a *FHIR operation* and pass QuestionnaireResponse with *contained* Questionnaire as the payload to capture the data needed between the Client and Service
+1. The Adaptive Questionnaire Service is treated as a **“Black Box”**. It contains the logic for determination of next question and scoring. Clients make RESTful FHIR transactions on Service using a *FHIR operation* and pass QuestionnaireResponse with [contained] Questionnaire as the payload to capture the data needed between the Client and Service
 1. Transactions are Stateless.  The client constructs a record of the transaction which is passed to service and the service adds to record and passed it back to client.  The client and service are free of keeping track of the session and a previously disrupted session can be restored if the session token expires.
-1. Client/Form Filler can be a:
+1. Client (Form Filler) can be a:
   - EHR-S
   - Patient Portal
   - Third Party App
 1. The Questionnaire may expire and the form may not be valid. Time limits for completion of a questionnaire or individual question can be defined and the Form Filler can record the start and stop date-times using the [Argonaut Questionnaire Time Limit Extension] and [Argonaut QuestionnaireResponse Response Period Extension].  Note that either Client or Service could determine if the response is within a time limit. How this information modifies the behavior of the Form-filler or interpretation of results is an implementation detail outside of scope of this Implementation Guide.
-1. Operationally need to keep the assessment short - e.g., PROMIS forms have up to 12 transactions  (on average 4-12).
-1. Calculated Scores can be recorded as [`readOnly`] question and a pre-populated value as an answer.  These items may be marked as 'hidden' using the [Questionnaire Hidden Extension] to direct the Form Filler indicates that the extended item should not be displayed to the user.
+1. The assessment  are short - e.g., PROMIS forms have up to 12 transactions  (on average 4-12).
+1. Calculated Scores may be recorded as [`readOnly`] question and a pre-populated value as an answer.  These items may be marked as 'hidden' using the [Questionnaire Hidden Extension] to direct the Form Filler indicates that the extended item should not be displayed to the user.
   - To assist in calculating scores the standard [Valuset Ordinal Value Extension] and [Questionnaire Ordinal Value Extension] may be used on items. *NOTE: This implementation quide extends the context of the Questionnaire Ordinal Value Extension to elements beyond that defined in the FHIR Specification.*
   - How and when scoring is done is an implementation detail and outside the scope of this guide.
 1. There are no constraints on the nesting of item groups and there are several possible items and item groupings including:
@@ -45,8 +45,6 @@ See the [HealthMeasures] website for further background, theory and use cases fo
 
 The following sections provide a detailed description of workflow and API guidance for the Adaptive Forms Use Case.
 
-<!-- Discovery of Adaptive Questionnaire --->
-
 ### Discovery of Adaptive Questionnaire
 
 The discovery and preview of the service's adaptive questionnaire is out of scope.  It may be done out of band or using the standard [FHIR RESTful search API].
@@ -58,13 +56,13 @@ The discovery and preview of the service's adaptive questionnaire is out of scop
 
 {% include img-narrow.html img="aw-step1.jpg" %}
 
-Launch the adaptive questionnaire by getting first group item (typically the first question) from the Adaptive Questionnaire Service (“Black Box”) by POSTing the operation `$next-question` to the Service's Questionnaire instance endpoint and supplying a QuestionnaireResponse with a *contained* Questionnaire representing only the resource metadata.
+To launch the adaptive questionnaire the Client POSTs the operation `$next-question` to the Adaptive Questionnaire Service (“Black Box”) instance endpoint.  A QuestionnaireResponse with a *contained* Questionnaire representing only the resource metadata is provided as payload data.  
 
-{% include img-narrow.html img="slide1.png" %}
+{% include img-narrow.html img="Slide1.png" %}
 
 The Service updates the contained Questionnaire with the first item and returns the QuestionnaireResponse in the payload.
 
-{% include img-narrow.html img="slide2.png" %}
+{% include img-narrow.html img="Slide2.png" %}
 
 
 #### APIs
@@ -91,15 +89,15 @@ To initiate an  adaptive questionnaire:
 
 {% include img-narrow.html img="aw-step2.jpg" %}
 
-Client renders/stores/processes the item and gets the next group item by POSTing the operation $next-question to the service Questionnaire instance endpoint and supplying a1 in the QuestionnaireResponse and q1 in the contained Q.
+The Client renders the item, presents it to the end-user and records the response in the QuestionnaireResponse.  The Client POSTs the operation `$next-question` to the Service to retrieve the next question.
 
-{% include img-narrow.html img="slide3.png" %}
+{% include img-narrow.html img="Slide3.png" %}
 
-As result of the operation, the Service updates the QuestionnaireResponse and returns it to the Client.
+As result of the operation, the Service updates the Questionnaire and returns it to the Client.  It identifies the adaptive questionnaire items by their  `definiton` or `linkID` elements and determines the next question based on the responses.  It may also calculate intermediate and/or cumulative scores. The Service updates the contained Questionnaire with the next question and scores if scoring is done and returns it within the QuestionnaireResponse.
 
-{% include img-narrow.html img="slide4.png" %}
+{% include img-narrow.html img="Slide4.png" %}
 
-The Service identifies the adaptive questionnaire group item by the contained Questionnaire `definiton` or `linkID` element may add intermediate and cumulative score to the QuestionnaireResponse based on the preceding item(s) and updates the contained Questionnaire with the next question.  This process step is repeated until the adaptive questionnaire is done or the Questionnaire has timed out or another error has occured.
+ This step is repeated until the adaptive questionnaire is done or the Questionnaire has timed out or another error has occured.
 
 
 #### APIs
@@ -114,7 +112,7 @@ The following Argonaut Questionnaire artifacts are used in this transaction:
 #### Usage
 {:.no_toc}
 
-To initiate an  adaptive questionnaire:
+To retrieve the next question:
 
 `POST [base]/Questionnaire/[id]/$next-question`
 
@@ -129,13 +127,13 @@ To initiate an  adaptive questionnaire:
 {% include img-narrow.html img="aw-step3.jpg" %}
 
 
-The Client renders, stores the  question-answer pair and optionally the previous scores and gets the next item group as described above.
+The Client repeats the process to get the next question as [described above].
 
-{% include img-narrow.html img="slide7.png" %}
+{% include img-narrow.html img="Slide7.png" %}
 
-When the adaptive questionnaire is  successfully completed, the Service updates the QuestionnaireResponse with intermediate and cumulative scores, updates status to ‘completed’ and returns it to the Client.  The status of ‘completed’ is a signal to the Client that the adaptive Questionnaire is done!
+The Service repeats the process [described above]. However, if it determines that the adaptive questionnaire is complete, instead of updating the Questionnnaire with the next question, it updates the QuestionnaireResponse status to ‘completed'. The Service may update the contained Questionnaire with scores if scoring is done. The status of ‘completed’ is a signal to the Client that the adaptive Questionnaire is done!
 
-{% include img-narrow.html img="slide8.png" %}
+{% include img-narrow.html img="Slide8.png" %}
 
 #### APIs
 {:.no_toc}
@@ -149,7 +147,7 @@ The following Argonaut Questionnaire artifacts are used in this transaction:
 #### Usage
 {:.no_toc}
 
-To initiate an  adaptive questionnaire:
+To retrieve the finished adaptive questionnaire:
 
 `POST [base]/Questionnaire/[id]/$next-question`
 
@@ -163,7 +161,7 @@ When the adaptive questionnaire is complete, the client processes the Questionna
 
 ### Additional Examples and Reference Implementation
 
-Complete examples of the Adaptive QuestionnaireResponse can be found on the [Argonaut Adaptive QuestionnaireResponse Profile] page.  In addition the [Argonaut Questionnaire Test Renderer] is available to simulation the adaptive form workflow.
+Complete examples of the Adaptive QuestionnaireResponse can be found on the [Argonaut Adaptive QuestionnaireResponse Profile] page.  In addition the [Argonaut Questionnaire Test Renderer] is a simulation of the adaptive form workflow.
 
 ### Amending and Revising Adaptive Forms
 

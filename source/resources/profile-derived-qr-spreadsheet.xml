@@ -1064,7 +1064,7 @@
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="57">
     <Cell ss:StyleID="s74"><Data ss:Type="String">description</Data></Cell>
-    <Cell ss:StyleID="s77"><Data ss:Type="String">The Argonaut Adaptive QuestionnaireResponse Profile  is derived from the [Argonaut QR profile](StructureDefinition-qr.html) requiring a [*contained*](http://hl7.org/fhir/STU3/references.html#contained)[Argonaut Questionnaire Profile](StructureDefinition-q.html) to support the [adaptive questionnaire use case](adaptive.html).  This profile defines the structure that is passed between the Client and Server using the [`$next-question`](OperationDefinition-next-question.html) operation and records the question-answer pairs and questionnaire questions from the adaptive questionnaire.</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">The Argonaut Adaptive QuestionnaireResponse Profile  is derived from the [Argonaut QuestionnaireResponse profile](StructureDefinition-argo-questionnaireresponse.html) requiring a [*contained*](http://hl7.org/fhir/STU3/references.html#contained)[Argonaut Questionnaire Profile](StructureDefinition-argo-questionnaire.html) to support the [adaptive questionnaire use case](adaptive.html).  This profile defines the structure that is passed between the Client and Server using the [`$next-question`](OperationDefinition-next-question.html) operation and records the question-answer pairs and questionnaire questions from the adaptive questionnaire.</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">status</Data></Cell>

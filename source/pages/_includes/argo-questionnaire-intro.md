@@ -40,7 +40,7 @@ The following data-elements are mandatory:
 1. [Questionnaire Ordinal Value Extension] for use on all answer types and choices.
 1. [Argonaut Questionnaire Time Limit Extension] for indicating the duration allowed for all or parts of the assessment.
 1. [Questionnaire Hidden Extension] for indicating that the item should not be displayed to the user.
-1. [Questionnaire Option Exclusive Extension] for indicating that if this option is selected, no other options may be selected.
+1. [Questionnaire Option Exclusive Extension] A [modifier extension] for indicating that if this option is selected, no other options may be selected.
 1. [Argonaut Questionnaire Item Order Extension] for representing the order of questions within Questionnaires groups, groups within groups and groups within questions and the order of answer choices for questions.
 1. A version of the assessment
 1. A description of the assessment

@@ -1,0 +1,58 @@
+{
+   "id": "encounter1",
+   "meta": {
+      "profile": [
+         "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+      ]
+   },
+   "class": {
+      "code": "AMB",
+      "system": "http://hl7.org/fhir/v3/ActCode"
+   },
+   "identifier": [
+      {
+         "system": "http://acme.org/enc-ids",
+         "value": "1234"
+      }
+   ],
+   "participant": [
+      {
+         "individual": {
+            "reference": "Practitioner/prov-admin1"
+         }
+      }
+   ],
+   "period": {
+      "end": "2019-02-14",
+      "start": "2019-02-13"
+   },
+   "reason": [
+      {
+         "coding": [
+            {
+               "code": "370776007",
+               "display": "Assessment of history of substance abuse (procedure)",
+               "system": "http://snomed.info/sct"
+            }
+         ],
+         "text": "Assessment of history of substance abuse (procedure)"
+      }
+   ],
+   "status": "finished",
+   "subject": {
+      "reference": "Patient/subject1"
+   },
+   "type": [
+      {
+         "coding": [
+            {
+               "code": "370776007",
+               "display": "Assessment of history of substance abuse (procedure)",
+               "system": "http://snomed.info/sct"
+            }
+         ],
+         "text": "Assessment of history of substance abuse (procedure)"
+      }
+   ],
+   "resourceType": "Encounter"
+}

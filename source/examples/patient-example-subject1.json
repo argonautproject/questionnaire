@@ -1,0 +1,93 @@
+{
+   "id": "subject1",
+   "meta": {
+      "profile": [
+         "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+      ]
+   },
+   "extension": [
+      {
+         "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+         "valueCode": "M"
+      },
+      {
+         "extension": [
+            {
+               "url": "text",
+               "valueString": "White"
+            },
+            {
+               "url": "ombCategory",
+               "valueCoding": {
+                  "code": "2106-3",
+                  "display": "White",
+                  "system": "urn:oid:2.16.840.1.113883.6.238"
+               }
+            }
+         ],
+         "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+      },
+      {
+         "extension": [
+            {
+               "url": "text",
+               "valueString": "Not Hispanic or Latino"
+            },
+            {
+               "url": "ombCategory",
+               "valueCoding": {
+                  "code": "2186-5",
+                  "display": "Not Hispanic or Latino",
+                  "system": "urn:oid:2.16.840.1.113883.6.238"
+               }
+            }
+         ],
+         "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+      }
+   ],
+   "active": true,
+   "address": [
+      {
+         "city": "Anytown",
+         "country": "USA",
+         "line": [
+            "100 Main St"
+         ],
+         "postalCode": "99999",
+         "state": "CA",
+         "text": "100 Main St\nAnytown, CA 99999\nUSA"
+      }
+   ],
+   "birthDate": "1964-06-19",
+   "communication": [
+      {
+         "language": {
+            "coding": [
+               {
+                  "code": "en",
+                  "display": "English",
+                  "system": "urn:ietf:bcp:47"
+               }
+            ],
+            "text": "English"
+         }
+      }
+   ],
+   "gender": "male",
+   "identifier": [
+      {
+         "system": "http://example.org/pids",
+         "value": "1234"
+      }
+   ],
+   "name": [
+      {
+         "family": "Doe",
+         "given": [
+            "John",
+            "M"
+         ]
+      }
+   ],
+   "resourceType": "Patient"
+}

@@ -97,7 +97,7 @@
                         }
                      ],
                      "valueCoding": {
-                        "code": "LA 32-8 ",
+                        "code": "LA32-8",
                         "display": "No",
                         "system": "http://loinc.org"
                      }
@@ -114,7 +114,7 @@
                         }
                      ],
                      "valueCoding": {
-                        "code": "LA33-6 ",
+                        "code": "LA33-6",
                         "display": "Yes",
                         "system": "http://loinc.org"
                      }
@@ -153,7 +153,7 @@
                         }
                      ],
                      "valueCoding": {
-                        "code": "LA 32-8 ",
+                        "code": "LA32-8",
                         "display": "No",
                         "system": "http://loinc.org"
                      }
@@ -170,7 +170,7 @@
                         }
                      ],
                      "valueCoding": {
-                        "code": "LA33-6 ",
+                        "code": "LA33-6",
                         "display": "Yes",
                         "system": "http://loinc.org"
                      }
@@ -209,7 +209,7 @@
                         }
                      ],
                      "valueCoding": {
-                        "code": "LA 32-8 ",
+                        "code": "LA32-8",
                         "display": "No",
                         "system": "http://loinc.org"
                      }
@@ -226,7 +226,7 @@
                         }
                      ],
                      "valueCoding": {
-                        "code": "LA33-6 ",
+                        "code": "LA33-6",
                         "display": "Yes",
                         "system": "http://loinc.org"
                      }
@@ -265,7 +265,7 @@
                         }
                      ],
                      "valueCoding": {
-                        "code": "LA 32-8 ",
+                        "code": "LA32-8",
                         "display": "No",
                         "system": "http://loinc.org"
                      }
@@ -282,7 +282,7 @@
                         }
                      ],
                      "valueCoding": {
-                        "code": "LA33-6 ",
+                        "code": "LA33-6",
                         "display": "Yes",
                         "system": "http://loinc.org"
                      }
@@ -321,7 +321,7 @@
                         }
                      ],
                      "valueCoding": {
-                        "code": "LA 32-8 ",
+                        "code": "LA32-8",
                         "display": "No",
                         "system": "http://loinc.org"
                      }
@@ -338,7 +338,7 @@
                         }
                      ],
                      "valueCoding": {
-                        "code": "LA33-6 ",
+                        "code": "LA33-6",
                         "display": "Yes",
                         "system": "http://loinc.org"
                      }
@@ -377,7 +377,7 @@
                         }
                      ],
                      "valueCoding": {
-                        "code": "LA 32-8 ",
+                        "code": "LA32-8",
                         "display": "No",
                         "system": "http://loinc.org"
                      }
@@ -394,7 +394,7 @@
                         }
                      ],
                      "valueCoding": {
-                        "code": "LA33-6 ",
+                        "code": "LA33-6",
                         "display": "Yes",
                         "system": "http://loinc.org"
                      }
@@ -433,7 +433,7 @@
                         }
                      ],
                      "valueCoding": {
-                        "code": "LA 32-8 ",
+                        "code": "LA32-8",
                         "display": "No",
                         "system": "http://loinc.org"
                      }
@@ -450,7 +450,7 @@
                         }
                      ],
                      "valueCoding": {
-                        "code": "LA33-6 ",
+                        "code": "LA33-6",
                         "display": "Yes",
                         "system": "http://loinc.org"
                      }
@@ -489,7 +489,7 @@
                         }
                      ],
                      "valueCoding": {
-                        "code": "LA 32-8 ",
+                        "code": "LA32-8",
                         "display": "No",
                         "system": "http://loinc.org"
                      }
@@ -506,7 +506,7 @@
                         }
                      ],
                      "valueCoding": {
-                        "code": "LA33-6 ",
+                        "code": "LA33-6",
                         "display": "Yes",
                         "system": "http://loinc.org"
                      }
@@ -545,7 +545,7 @@
                         }
                      ],
                      "valueCoding": {
-                        "code": "LA 32-8 ",
+                        "code": "LA32-8",
                         "display": "No",
                         "system": "http://loinc.org"
                      }
@@ -562,7 +562,7 @@
                         }
                      ],
                      "valueCoding": {
-                        "code": "LA33-6 ",
+                        "code": "LA33-6",
                         "display": "Yes",
                         "system": "http://loinc.org"
                      }
@@ -601,7 +601,7 @@
                         }
                      ],
                      "valueCoding": {
-                        "code": "LA 32-8 ",
+                        "code": "LA32-8",
                         "display": "No",
                         "system": "http://loinc.org"
                      }
@@ -618,7 +618,7 @@
                         }
                      ],
                      "valueCoding": {
-                        "code": "LA33-6 ",
+                        "code": "LA33-6",
                         "display": "Yes",
                         "system": "http://loinc.org"
                      }

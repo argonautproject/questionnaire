@@ -168,7 +168,7 @@
       {
          "answer": [
             {
-               "valueDateTime": "2019-02-12T01:01"
+               "valueDateTime": "2019-02-12T01:01:00Z"
             }
          ],
          "definition": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-sampler-g6.q1",
