@@ -67,11 +67,10 @@
 
 
       <div id="project-status" class="project-status"> <!-- ig title text -->
-
-      
-      <strong>Argonaut Questionnaire Implementation Guide CI Build</strong>
-      
-
+        <b>Argonaut Questionnaire Implementation Guide</b>
+        
+        CI Build
+        
     </div><!-- end ig title text -->
 
   </div><!-- end container -->
@@ -126,15 +125,19 @@
     </li>
   </ul>
 </li>
+<!--
 <li>
   <a href="operations.html">Operations</a>
 </li>
+-->
 <li>
-  <a href="profiles.html">Profiles/Extensions</a>
+  <a href="profiles.html">Profiles and Operations</a>
 </li>
+<!--
 <li>
   <a href="terminology.html">Terminology</a>
 </li>
+-->
 <li>
   <a href="searchparameters.html">Search Parameters</a>
 </li>
@@ -151,10 +154,15 @@
 </li>
 
   <li>
-    <a href="CapabilityStatement-server.html">Conformance requirements for Server</a>
+    <a href="CapabilityStatement-argo-questionnaire-provider-ehr.html">Conformance requirements for Provider EHR</a>
   </li>
+  <!--
   <li>
-    <a href="CapabilityStatement-client.html">Conformance requirements for Client</a>
+    <a href="CapabilityStatement-argonaut-questionnaire-client.html">Conformance requirements for Client</a>
+  </li>
+  -->
+  <li>
+    <a href="CapabilityStatement-adaptive-q-service.html">Conformance requirements for Adaptive Questionnaire Service</a>
   </li>
 </ul>
 </li>
@@ -225,32 +233,31 @@
             <!-- content of page -->
 
 
-<!-- ============Publish box=============== -->
-
-<!--status-bar-->
-<p id="publish-box">
-This is the   Continuous Integration Build  of the Argonaut Questionnaire Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="http://www.fhir.org/guides//history.html">Directory of published versions</a>
-</p>
-
-
-
 <!-- ============BreadCrumb=============== -->
 
 <nav class="breadcrumb">
   
-    
-    
-        <!--  is structuredefinition or profile example -->
-        <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a><a class="breadcrumb-item" href="index.html">Home</a>
-        /
-        <a class="breadcrumb-item" href="profiles.html">Profiles</a>
-        /
-        <span class="breadcrumb-item active">QuestionnaireResponse-questionnaireresponse-example-sampler.json</span>
-
-    
-  
-
+    <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a> 
 </nav>
+
+
+<!-- ============Publish box=============== -->
+
+<!--status-bar-->
+<p id="publish-box">
+This is the 
+    Continuous Integration Build
+   
+  
+  of the Argonaut Questionnaire Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="#">Directory of published versions</a>
+</p>
+
+
+
+
+
+
+
 
 
 <!-- ============nav-tabs=============== -->
@@ -308,7 +315,7 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
 
   <!-- ============ default xml or json content for structuredefinition CONTENT CONTENT=============== -->
   <p>
-  Raw <a href="QuestionnaireResponse-questionnaireresponse-example-sampler.json" download>json</a>
+  Download Raw <a href="QuestionnaireResponse-questionnaireresponse-example-sampler.json" download>json</a>
   </p>
 
 <pre class="json">
@@ -317,7 +324,7 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
   "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.id">id</a>" : "questionnaireresponse-example-sampler",
   "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.meta">meta</a>" : {
     "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
-      "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr"
+      "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaireresponse"
     ]
   },
   "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.text">text</a>" : {
@@ -325,13 +332,35 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
     "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
     &lt;h3&gt;Response Summary&lt;/h3&gt;
     &lt;strong&gt;Questionnaire URL:&lt;/strong&gt; http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-sampler&lt;br /&gt;
-    &lt;strong&gt;Date Completed:&lt;/strong&gt; 2018-07-26T00:17:43.707504&lt;br /&gt;
-    &lt;hr /&gt; &lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkID=g9.q1) Describe in detal how to estimate the average air speed velocity of a laden swallow. Please cite your sources and give examples.&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; use a Duck!
-Citaions:http://jinja.pocoo.org/docs/2.10/templates/#builtin-filters&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkID=g3.q1) What is the average air speed velocity of a laden swallow in m/sec?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; 12.38&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkID=g8.q1) Describe how to estimate the average air speed velocity of a laden swallow in 20 words or less.&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; use a duck!&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkID=g4.q1) What is the average air speed velocity of a laden swallow in m/sec?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; 12&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkID=g12.q1) What is the average air speed velocity of a laden swallow in m/sec?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; 11( code = )&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkID=g2.q1) Check the box if the following statement is true.  The average air speed velocity of a laden European swallow is greater than a laden African swallow.&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; False&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkID=g5.q1) If a laden swallow left Camelot on 7/5/2018 what day would it reach the Castle Anthrax?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; 2018-07-26&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkID=g6.q1) If a laden swallow left Camelot on 7/5/2018 and noon when would it reach Castle Anthrax?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; 2018-07-26T01:58&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkID=g7.q1) If a laden swallow left Camelot at noon what time would it reach Castle Anthrax?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; 22:53&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkID=g10.q1) Provide a link to a video clip where the average air speed velocity of a laden swallow question is discussed.&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; http://jinja.pocoo.org/docs/2.10/templates/#builtin-filters&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkID=g11.q1) What is the average air speed velocity of a laden swallow in m/sec?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; 11( code = )&lt;br /&gt; &lt;br /&gt;&lt;br /&gt;
+    &lt;strong&gt;Date Completed:&lt;/strong&gt; 2019-02-13T00:39:38.320181Z&lt;br /&gt;
+    &lt;hr /&gt; &lt;br /&gt;&lt;strong&gt;The Argonaut Questionnaire Sampler is designed to show all the question types that can be used in the Argonaut Questionnaire Project:
+
+1 boolean
+2 decimal
+3 integer
+4 dateDate
+5 dateTime
+6 timeTime
+7 string
+8 textText
+9 urlUrl
+10 choice
+11 open-choice
+12 quantity
+&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkID=g2.q1) Check the box if the following statement is true.  The average air speed velocity of a laden European swallow is greater than a laden African swallow.&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; False&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkID=g3.q1) What is the average air speed velocity of a laden swallow in m/sec?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; 11.0&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkID=g4.q1) What is the average air speed velocity of a laden swallow in m/sec?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; 11&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkID=g5.q1) If a laden swallow left Camelot on 7/5/2018 what day would it reach the Castle Anthrax?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; 2019-12-31&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkID=g6.q1) If a laden swallow left Camelot on 7/5/2018 and noon when would it reach Castle Anthrax?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; 2019-02-13T12:59&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkID=g7.q1) If a laden swallow left Camelot at noon what time would it reach Castle Anthrax?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; 12:59&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkID=g8.q1) Describe how to estimate the average air speed velocity of a laden swallow in 20 words or less.&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; use a duck?&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkID=g9.q1) Describe in detal how to estimate the average air speed velocity of a laden swallow. Please cite your sources and give examples.&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; use a duck!!  See https://en.wikipedia.org/wiki/Monty_Python_and_the_Holy_Grail&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkID=g10.q1) Provide a link to a video clip where the average air speed velocity of a laden swallow question is discussed.&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; https://en.wikipedia.org/wiki/Monty_Python_and_the_Holy_Grail&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkID=g11.q1) What is the average air speed velocity of a laden swallow in m/sec?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; 11&lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkID=g12.q1) What is the average air speed velocity of a laden swallow in m/sec?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; 11&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; &lt;br /&gt;&lt;br /&gt; &lt;strong&gt;Question:&lt;/strong&gt; (linkID=g13.q1) What is the average air speed velocity of a laden swallow - please provide the units?&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; 11&lt;br /&gt;&lt;strong&gt;Response:&lt;/strong&gt; m/sec&lt;br /&gt; &lt;br /&gt;&lt;br /&gt;
     &lt;/div&gt;"
   },
+  "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.extension">extension</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-responsePeriod",
+      "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valuePeriod</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#Period#Period.start">start</a>" : "2019-02-13T00:37:27.524361Z",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#Period#Period.end">end</a>" : "2019-02-13T00:39:38.320181Z"
+      }
+    }
+  ],
   "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.identifier">identifier</a>" : {
-    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "test"
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a>" : "questionnaireresponse-example-sampler"
   },
   "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.questionnaire">questionnaire</a>" : {
     "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-sampler"
@@ -343,7 +372,7 @@ Citaions:http://jinja.pocoo.org/docs/2.10/templates/#builtin-filters&lt;br /&gt;
   "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.context">context</a>" : {
     "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "Encounter/encounter1"
   },
-  "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.authored">authored</a>" : "2018-07-26T00:17:43.707504",
+  "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.authored">authored</a>" : "2019-02-13T00:39:38.320181Z",
   "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.author">author</a>" : {
     "<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>" : "Practitioner/prov-admin1"
   },
@@ -352,78 +381,31 @@ Citaions:http://jinja.pocoo.org/docs/2.10/templates/#builtin-filters&lt;br /&gt;
   },
   "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item">item</a>" : [
     {
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g9",
+      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g1",
+      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "Header Text",
       "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.item">item</a>" : [
         {
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g9.q1",
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "Describe in detal how to estimate the average air speed velocity of a laden swallow. Please cite your sources and give examples.",
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueString</a>" : "use a Duck!
-Citaions:http://jinja.pocoo.org/docs/2.10/templates/#builtin-filters"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g3",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.item">item</a>" : [
-        {
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g3.q1",
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "What is the average air speed velocity of a laden swallow in m/sec?",
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueDecimal</a>" : 12.38
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g8",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.item">item</a>" : [
-        {
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g8.q1",
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "Describe how to estimate the average air speed velocity of a laden swallow in 20 words or less.",
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueString</a>" : "use a duck!"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g4",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.item">item</a>" : [
-        {
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g4.q1",
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "What is the average air speed velocity of a laden swallow in m/sec?",
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueInteger</a>" : 12
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g12",
-      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.item">item</a>" : [
-        {
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g12.q1",
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "What is the average air speed velocity of a laden swallow in m/sec?",
-          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
-            {
-              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueString</a>" : "11"
-            }
-          ]
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g1.d",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "The Argonaut Questionnaire Sampler is designed to show all the question types that can be used in the Argonaut Questionnaire Project:
+
+1 boolean
+2 decimal
+3 integer
+4 dateDate
+5 dateTime
+6 timeTime
+7 string
+8 textText
+9 urlUrl
+10 choice
+11 open-choice
+12 quantity"
         }
       ]
     },
     {
       "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g2",
+      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "boolean",
       "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.item">item</a>" : [
         {
           "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g2.q1",
@@ -437,14 +419,45 @@ Citaions:http://jinja.pocoo.org/docs/2.10/templates/#builtin-filters"
       ]
     },
     {
+      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g3",
+      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "decimal",
+      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.item">item</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g3.q1",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "What is the average air speed velocity of a laden swallow in m/sec?",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueDecimal</a>" : 11.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g4",
+      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "integer",
+      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.item">item</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g4.q1",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "What is the average air speed velocity of a laden swallow in m/sec?",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueInteger</a>" : 11
+            }
+          ]
+        }
+      ]
+    },
+    {
       "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g5",
+      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "date",
       "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.item">item</a>" : [
         {
           "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g5.q1",
           "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "If a laden swallow left Camelot on 7/5/2018 what day would it reach the Castle Anthrax?",
           "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
             {
-              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueDate</a>" : "2018-07-26"
+              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueDate</a>" : "2019-12-31"
             }
           ]
         }
@@ -452,13 +465,14 @@ Citaions:http://jinja.pocoo.org/docs/2.10/templates/#builtin-filters"
     },
     {
       "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g6",
+      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "dateTime",
       "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.item">item</a>" : [
         {
           "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g6.q1",
           "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "If a laden swallow left Camelot on 7/5/2018 and noon when would it reach Castle Anthrax?",
           "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
             {
-              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueDateTime</a>" : "2018-07-26T01:58"
+              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueDateTime</a>" : "2019-02-13T12:59:00Z"
             }
           ]
         }
@@ -466,13 +480,44 @@ Citaions:http://jinja.pocoo.org/docs/2.10/templates/#builtin-filters"
     },
     {
       "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g7",
+      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "time",
       "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.item">item</a>" : [
         {
           "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g7.q1",
           "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "If a laden swallow left Camelot at noon what time would it reach Castle Anthrax?",
           "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
             {
-              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueTime</a>" : "22:53"
+              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueTime</a>" : "12:59:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g8",
+      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "string",
+      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.item">item</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g8.q1",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "Describe how to estimate the average air speed velocity of a laden swallow in 20 words or less.",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueString</a>" : "use a duck?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g9",
+      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "text",
+      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.item">item</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g9.q1",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "Describe in detal how to estimate the average air speed velocity of a laden swallow. Please cite your sources and give examples.",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueString</a>" : "use a duck!!  See https://en.wikipedia.org/wiki/Monty_Python_and_the_Holy_Grail"
             }
           ]
         }
@@ -480,13 +525,14 @@ Citaions:http://jinja.pocoo.org/docs/2.10/templates/#builtin-filters"
     },
     {
       "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g10",
+      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "url",
       "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.item">item</a>" : [
         {
           "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g10.q1",
           "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "Provide a link to a video clip where the average air speed velocity of a laden swallow question is discussed.",
           "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
             {
-              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueUri</a>" : "http://jinja.pocoo.org/docs/2.10/templates/#builtin-filters"
+              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueUri</a>" : "https://en.wikipedia.org/wiki/Monty_Python_and_the_Holy_Grail"
             }
           ]
         }
@@ -494,6 +540,7 @@ Citaions:http://jinja.pocoo.org/docs/2.10/templates/#builtin-filters"
     },
     {
       "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g11",
+      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "choice",
       "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.item">item</a>" : [
         {
           "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g11.q1",
@@ -501,6 +548,41 @@ Citaions:http://jinja.pocoo.org/docs/2.10/templates/#builtin-filters"
           "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
             {
               "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueString</a>" : "11"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g12",
+      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "open-choice",
+      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.item">item</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g12.q1",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "What is the average air speed velocity of a laden swallow in m/sec?",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueString</a>" : "11"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g13",
+      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "quantity",
+      "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.item">item</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.linkId">linkId</a>" : "g13.q1",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.text">text</a>" : "What is the average air speed velocity of a laden swallow - please provide the units?",
+          "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer">answer</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/questionnaireresponse.html#QuestionnaireResponse.item.answer.value[x]">valueQuantity</a>" : {
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Quantity#Quantity.value">value</a>" : 11,
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Quantity#Quantity.unit">unit</a>" : "m/sec",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Quantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Quantity#Quantity.code">code</a>" : "m/s"
+              }
             }
           ]
         }
@@ -553,12 +635,16 @@ Formats: <a href="QuestionnaireResponse-questionnaireresponse-example-sampler.ht
 
 <!-- end back to top arrow -->
 
-<div id="segment-footer" class="segment">  <!-- segment-footer -->
+<div id="segment-footer" class="segment"  igtool="footer">  <!-- segment-footer -->
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Sep 6, 2018 21:52-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
-        </span>
+      Argonaut Questionnaire 
+          Continuous Integration Build
+          &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Mon, Feb 18, 2019 18:36-0800.
+      | <a style="color: #81BEF7" href="#">History</a>
+      | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
+        <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->
@@ -576,7 +662,7 @@ Formats: <a href="QuestionnaireResponse-questionnaireresponse-example-sampler.ht
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./assets/js/jquery.min.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
 <script src="./assets/js/bootstrap.min.js"> </script>
 <script src="./assets/js/respond.min.js"> </script>
 <script src="./assets/js/anchor.min.js"> </script>
@@ -588,14 +674,53 @@ Formats: <a href="QuestionnaireResponse-questionnaireresponse-example-sampler.ht
 
 
 
+<script src="assets/js/clipboard.min.js"> </script>
+
+<script>
+  // Tooltip
+
+  $('#copy-button').tooltip({
+    trigger: 'click',
+    placement: 'bottom'
+  });
+
+  function setTooltip(message) {
+    $('#copy-button').tooltip('hide')
+      .attr('data-original-title', message)
+      .tooltip('show');
+  }
+
+  function hideTooltip() {
+    setTimeout(function() {
+      $('#copy-button').tooltip('hide');
+    }, 1000);
+  }
+
+  // Clipboard
+
+  var clipboard = new ClipboardJS('#copy-button');
+
+  clipboard.on('success', function(e) {
+    setTooltip('Copied!');
+    hideTooltip();
+  });
+
+  clipboard.on('error', function(e) {
+    setTooltip('Failed!');
+    hideTooltip();
+  });
+
+</script>
+
+
 
 <!-- Analytics Below
 ================================================== -->
 
-<!-- add anchors before the closing body tag. -->
-<script> anchors.add()</script>
-
-
+<!-- add anchors before the closing body tag -->
+<script>
+anchors.add()
+</script>
 
 </body>
 </html>

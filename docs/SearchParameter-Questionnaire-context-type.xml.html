@@ -67,11 +67,10 @@
 
 
       <div id="project-status" class="project-status"> <!-- ig title text -->
-
-      
-      <strong>Argonaut Questionnaire Implementation Guide CI Build</strong>
-      
-
+        <b>Argonaut Questionnaire Implementation Guide</b>
+        
+        CI Build
+        
     </div><!-- end ig title text -->
 
   </div><!-- end container -->
@@ -126,15 +125,19 @@
     </li>
   </ul>
 </li>
+<!--
 <li>
   <a href="operations.html">Operations</a>
 </li>
+-->
 <li>
-  <a href="profiles.html">Profiles/Extensions</a>
+  <a href="profiles.html">Profiles and Operations</a>
 </li>
+<!--
 <li>
   <a href="terminology.html">Terminology</a>
 </li>
+-->
 <li>
   <a href="searchparameters.html">Search Parameters</a>
 </li>
@@ -151,10 +154,15 @@
 </li>
 
   <li>
-    <a href="CapabilityStatement-server.html">Conformance requirements for Server</a>
+    <a href="CapabilityStatement-argo-questionnaire-provider-ehr.html">Conformance requirements for Provider EHR</a>
   </li>
+  <!--
   <li>
-    <a href="CapabilityStatement-client.html">Conformance requirements for Client</a>
+    <a href="CapabilityStatement-argonaut-questionnaire-client.html">Conformance requirements for Client</a>
+  </li>
+  -->
+  <li>
+    <a href="CapabilityStatement-adaptive-q-service.html">Conformance requirements for Adaptive Questionnaire Service</a>
   </li>
 </ul>
 </li>
@@ -225,32 +233,35 @@
             <!-- content of page -->
 
 
-<!-- ============Publish box=============== -->
-
-<!--status-bar-->
-<p id="publish-box">
-This is the   Continuous Integration Build  of the Argonaut Questionnaire Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="http://www.fhir.org/guides//history.html">Directory of published versions</a>
-</p>
-
-
-
 <!-- ============BreadCrumb=============== -->
 
 <nav class="breadcrumb">
   
-    
-    
-      
-        <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a><a class="breadcrumb-item" href="index.html">Home</a>
-        /
-        <a class="breadcrumb-item" href="searchparameters.html">Search Parameters</a>
-        /
-        <span class="breadcrumb-item active">SearchParameter-Questionnaire-context-type.xml</span>
-
-      
-  
-
+    <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a> <li><a href='index.html'><b>Home</b></a></li><li><a href='searchparameters.html'><b>Search Parameters</b></a></li><li><b>SearchParameter Questionnaire Context Type</b></li>
 </nav>
+
+
+<!-- ============Publish box=============== -->
+
+<!--status-bar-->
+<p id="publish-box">
+This is the 
+    Continuous Integration Build
+   
+  
+  of the Argonaut Questionnaire Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="#">Directory of published versions</a>
+</p>
+
+
+
+
+
+
+
+  <style type="text/css">
+  h2,h3,h4,h5,h6{--pagenumber: "6.13"}
+  </style>
+
 
 
 <!-- ============nav-tabs=============== -->
@@ -308,7 +319,7 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
 
   <!-- ============ default xml or json content for structuredefinition CONTENT CONTENT=============== -->
   <p>
-  Raw <a href="SearchParameter-Questionnaire-context-type.xml" download>xml</a>
+  Download Raw <a href="SearchParameter-Questionnaire-context-type.xml" download>xml</a>
   </p>
 
 <pre class="xml">
@@ -317,23 +328,44 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
   &lt;<a href="http://hl7.org/fhir/STU3/searchparameter.html#SearchParameter.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;Questionnaire-context-type&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/searchparameter.html#SearchParameter.text">text</a>&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
-    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: Questionnaire-context-type&lt;/p&gt;&lt;p&gt;&lt;b&gt;url&lt;/b&gt;: &lt;a href=&quot;http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type&quot;&gt;http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: context-type&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: draft&lt;/p&gt;&lt;p&gt;&lt;b&gt;experimental&lt;/b&gt;: false&lt;/p&gt;&lt;p&gt;&lt;b&gt;date&lt;/b&gt;: May 16, 2018 3:49:01 PM&lt;/p&gt;&lt;p&gt;&lt;b&gt;publisher&lt;/b&gt;: Argonaut Project&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: context-type&lt;/p&gt;&lt;p&gt;&lt;b&gt;base&lt;/b&gt;: Questionnaire&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: token&lt;/p&gt;&lt;p&gt;&lt;b&gt;description&lt;/b&gt;: A type of use context assigned to the questionnaire. When searching for context should pair with [context-value](http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-value) parameter.&lt;/p&gt;&lt;p&gt;&lt;b&gt;expression&lt;/b&gt;: Questionnaire.useContext.code&lt;/p&gt;&lt;p&gt;&lt;b&gt;xpath&lt;/b&gt;: f:Questionnaire/f:useContext/f:code&lt;/p&gt;&lt;p&gt;&lt;b&gt;xpathUsage&lt;/b&gt;: normal&lt;/p&gt;&lt;/div&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: Questionnaire-context-type&lt;/p&gt;&lt;p&gt;&lt;b&gt;url&lt;/b&gt;: &lt;a href=&quot;http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type&quot;&gt;http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;version&lt;/b&gt;: 0.0.0&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: context-type&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;experimental&lt;/b&gt;: false&lt;/p&gt;&lt;p&gt;&lt;b&gt;date&lt;/b&gt;: Dec 13, 2018, 9:29:55 PM&lt;/p&gt;&lt;p&gt;&lt;b&gt;publisher&lt;/b&gt;: Argonaut Project&lt;/p&gt;&lt;p&gt;&lt;b&gt;contact&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: context-type&lt;/p&gt;&lt;p&gt;&lt;b&gt;base&lt;/b&gt;: Questionnaire&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: token&lt;/p&gt;&lt;p&gt;&lt;b&gt;description&lt;/b&gt;: A type of use context assigned to the questionnaire&lt;/p&gt;&lt;p&gt;&lt;b&gt;expression&lt;/b&gt;: Questionnaire.useContext.code&lt;/p&gt;&lt;p&gt;&lt;b&gt;xpath&lt;/b&gt;: f:Questionnaire/f:useContext/f:code&lt;/p&gt;&lt;p&gt;&lt;b&gt;xpathUsage&lt;/b&gt;: normal&lt;/p&gt;&lt;p&gt;&lt;b&gt;modifier&lt;/b&gt;: missing, text, not, in, not-in, below, above&lt;/p&gt;&lt;p&gt;&lt;b&gt;multipleOr Extension&lt;/b&gt;True&lt;/p&gt;&lt;p&gt;&lt;b&gt;multipleAnd Extension&lt;/b&gt;True&lt;/p&gt;&lt;/div&gt;
   &lt;/text&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/searchparameter.html#SearchParameter.extension">extension</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-multipleAnd&quot;&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueBoolean</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+  &lt;/extension&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/searchparameter.html#SearchParameter.extension">extension</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-multipleOr&quot;&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueBoolean</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+  &lt;/extension&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/searchparameter.html#SearchParameter.url">url</a>
        <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/searchparameter.html#SearchParameter.version">version</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;0.0.0&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/searchparameter.html#SearchParameter.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;context-type&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/searchparameter.html#SearchParameter.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/searchparameter.html#SearchParameter.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/searchparameter.html#SearchParameter.experimental">experimental</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/searchparameter.html#SearchParameter.date">date</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2018-05-16T15:49:01+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/searchparameter.html#SearchParameter.date">date</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2018-12-13T21:29:55-08:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/searchparameter.html#SearchParameter.publisher">publisher</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Argonaut Project&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/searchparameter.html#SearchParameter.contact">contact</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;url&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://argonautwiki.hl7.org&quot;/&gt;
+    &lt;/telecom&gt;
+  &lt;/contact&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/searchparameter.html#SearchParameter.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;context-type&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/searchparameter.html#SearchParameter.base">base</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;Questionnaire&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/searchparameter.html#SearchParameter.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;token&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/searchparameter.html#SearchParameter.description">description</a>
-               <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">value</a>=&quot;A type of use context assigned to the questionnaire. When searching for context should pair with [context-value](http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-value) parameter.&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/searchparameter.html#SearchParameter.description">description</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">value</a>=&quot;A type of use context assigned to the questionnaire&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/searchparameter.html#SearchParameter.expression">expression</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Questionnaire.useContext.code&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/searchparameter.html#SearchParameter.xpath">xpath</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;f:Questionnaire/f:useContext/f:code&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/searchparameter.html#SearchParameter.xpathUsage">xpathUsage</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;normal&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/searchparameter.html#SearchParameter.modifier">modifier</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;missing&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/searchparameter.html#SearchParameter.modifier">modifier</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;text&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/searchparameter.html#SearchParameter.modifier">modifier</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;not&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/searchparameter.html#SearchParameter.modifier">modifier</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;in&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/searchparameter.html#SearchParameter.modifier">modifier</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;not-in&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/searchparameter.html#SearchParameter.modifier">modifier</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;below&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/searchparameter.html#SearchParameter.modifier">modifier</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;above&quot;/&gt;
 &lt;/SearchParameter&gt;</pre>
 
 
@@ -380,12 +412,16 @@ Formats: <a href="SearchParameter-Questionnaire-context-type.html">Narrative</a>
 
 <!-- end back to top arrow -->
 
-<div id="segment-footer" class="segment">  <!-- segment-footer -->
+<div id="segment-footer" class="segment"  igtool="footer">  <!-- segment-footer -->
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Sep 6, 2018 21:52-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
-        </span>
+      Argonaut Questionnaire 
+          Continuous Integration Build
+          &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Mon, Feb 18, 2019 18:36-0800.
+      | <a style="color: #81BEF7" href="#">History</a>
+      | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
+        <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->
@@ -403,7 +439,7 @@ Formats: <a href="SearchParameter-Questionnaire-context-type.html">Narrative</a>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./assets/js/jquery.min.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
 <script src="./assets/js/bootstrap.min.js"> </script>
 <script src="./assets/js/respond.min.js"> </script>
 <script src="./assets/js/anchor.min.js"> </script>
@@ -415,14 +451,53 @@ Formats: <a href="SearchParameter-Questionnaire-context-type.html">Narrative</a>
 
 
 
+<script src="assets/js/clipboard.min.js"> </script>
+
+<script>
+  // Tooltip
+
+  $('#copy-button').tooltip({
+    trigger: 'click',
+    placement: 'bottom'
+  });
+
+  function setTooltip(message) {
+    $('#copy-button').tooltip('hide')
+      .attr('data-original-title', message)
+      .tooltip('show');
+  }
+
+  function hideTooltip() {
+    setTimeout(function() {
+      $('#copy-button').tooltip('hide');
+    }, 1000);
+  }
+
+  // Clipboard
+
+  var clipboard = new ClipboardJS('#copy-button');
+
+  clipboard.on('success', function(e) {
+    setTooltip('Copied!');
+    hideTooltip();
+  });
+
+  clipboard.on('error', function(e) {
+    setTooltip('Failed!');
+    hideTooltip();
+  });
+
+</script>
+
+
 
 <!-- Analytics Below
 ================================================== -->
 
-<!-- add anchors before the closing body tag. -->
-<script> anchors.add()</script>
-
-
+<!-- add anchors before the closing body tag -->
+<script>
+anchors.add()
+</script>
 
 </body>
 </html>

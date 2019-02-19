@@ -3,18 +3,39 @@
 <QuestionnaireResponse xmlns="http://hl7.org/fhir">
   <id value="questionnaireresponse-example-phq9"/>
   <meta>
-    <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr"/>
+    <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaireresponse"/>
   </meta>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
     <h3>Response Summary</h3>
     <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9<br />
-    <strong>Date Completed:</strong> 2018-07-05T19:04:33.435516<br />
-    <hr /> <br /> <strong>Question:</strong> (linkId = g1.q8) Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual,<br /><strong>Response:</strong> Not at all( code = LA6568-5)<br /><br /> <strong>Question:</strong> (linkId = g1.q6) Feeling bad about yourself - or that you are a failure or have let yourself or your family down,<br /><strong>Response:</strong> Several days( code = LA6569-3)<br /><br /> <strong>Question:</strong> (linkId = g2.q1) If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people,<br /><strong>Response:</strong> Very difficult( code = LA6575-0)<br /><br /> <strong>Question:</strong> (linkId = g1.q9) Thoughts that you would be better off dead, or of hurting yourself<br /><strong>Response:</strong> Not at all( code = LA6568-5)<br /><br /> <strong>Question:</strong> (linkId = g1.q1) Little interest or pleasure in doing things,<br /><strong>Response:</strong> Nearly every day( code = LA6571-9)<br /><br /> <strong>Question:</strong> (linkId = g1.q7) Trouble concentrating on things, such as reading the newspaper or watching television,<br /><strong>Response:</strong> More than half the days( code = LA6570-1)<br /><br /> <strong>Question:</strong> (linkId = g1.q4) Feeling tired or having little energy,<br /><strong>Response:</strong> Nearly every day( code = LA6571-9)<br /><br /> <strong>Question:</strong> (linkId = g1.q2) Feeling down, depressed, or hopeless,<br /><strong>Response:</strong> More than half the days( code = LA6570-1)<br /><br /> <strong>Question:</strong> (linkId = g1.q5) Poor appetite or overeating,<br /><strong>Response:</strong> Not at all( code = LA6568-5)<br /> <br /><br />
+    <strong>Date Completed:</strong> 2019-02-13T00:36:41.051113Z<br />
+    <hr /> <br /><strong>Over the last 2 weeks, how often have you been bothered by any of the following problems? (Use “X” to indicate your answer)</strong><br /><br /> <strong>Question:</strong> (linkID=g1.q1) Little interest or pleasure in doing things,<br /><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q2) Feeling down, depressed, or hopeless,<br /><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q3) Trouble falling or staying asleep, or sleeping too much<br /><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q4) Feeling tired or having little energy,<br /><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q5) Poor appetite or overeating,<br /><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q6) Feeling bad about yourself - or that you are a failure or have let yourself or your family down,<br /><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q7) Trouble concentrating on things, such as reading the newspaper or watching television,<br /><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q8) Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual,<br /><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q9) Thoughts that you would be better off dead, or of hurting yourself<br /><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br /><br /><strong>Scoring: 
+Add up all checked boxes on PHQ-9. 
+
+For every:
+Not at all = 0;
+Several days = 1;
+More than half the days = 2;
+Nearly every day = 3
+
+Interpretation of Total Score
+Total Score Depression Severity
+1-4 Minimal depression
+5-9 Mild depression
+10-14 Moderate depression
+15-19 Moderately severe depression
+20-27 Severe depression (this is hidden text/should not be displayed to the user)</strong><br /><br /> <strong>Question:</strong> (linkID=g2.q1) If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people,<br /><strong>Response:</strong>  Not difficult at all ( code = LA6572-7, codesystem = http://loinc.org)<br /> <br /><br />
     </div>
   </text>
+  <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-responsePeriod">
+    <valuePeriod>
+      <start value="2019-02-13T00:36:07.985403Z"/>
+      <end value="2019-02-13T00:36:41.051113Z"/>
+    </valuePeriod>
+  </extension>
   <identifier>
-    <value value="test"/>
+    <value value="questionnaireresponse-example-phq9"/>
   </identifier>
   <questionnaire>
     <reference value="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9"/>
@@ -26,7 +47,7 @@
   <context>
     <reference value="Encounter/encounter1"/>
   </context>
-  <authored value="2018-07-05T19:04:33.435516"/>
+  <authored value="2019-02-13T00:36:41.051113Z"/>
   <author>
     <reference value="Practitioner/prov-admin1"/>
   </author>
@@ -36,8 +57,56 @@
   <item>
     <linkId value="g1"/>
     <item>
-      <linkId value="g1.q8"/>
-      <text value="Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual,"/>
+      <linkId value="g1.d"/>
+      <text value="Over the last 2 weeks, how often have you been bothered by any of the following problems? (Use &#x201C;X&#x201D; to indicate your answer)"/>
+    </item>
+    <item>
+      <linkId value="g1.q1"/>
+      <text value="Little interest or pleasure in doing things,"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA6568-5"/>
+          <display value="Not at all"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="g1.q2"/>
+      <text value="Feeling down, depressed, or hopeless,"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA6568-5"/>
+          <display value="Not at all"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="g1.q3"/>
+      <text value="Trouble falling or staying asleep, or sleeping too much"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA6568-5"/>
+          <display value="Not at all"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="g1.q4"/>
+      <text value="Feeling tired or having little energy,"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA6568-5"/>
+          <display value="Not at all"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="g1.q5"/>
+      <text value="Poor appetite or overeating,"/>
       <answer>
         <valueCoding>
           <system value="http://loinc.org"/>
@@ -52,8 +121,30 @@
       <answer>
         <valueCoding>
           <system value="http://loinc.org"/>
-          <code value="LA6569-3"/>
-          <display value="Several days"/>
+          <code value="LA6568-5"/>
+          <display value="Not at all"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="g1.q7"/>
+      <text value="Trouble concentrating on things, such as reading the newspaper or watching television,"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA6568-5"/>
+          <display value="Not at all"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="g1.q8"/>
+      <text value="Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual,"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA6568-5"/>
+          <display value="Not at all"/>
         </valueCoding>
       </answer>
     </item>
@@ -69,59 +160,8 @@
       </answer>
     </item>
     <item>
-      <linkId value="g1.q1"/>
-      <text value="Little interest or pleasure in doing things,"/>
-      <answer>
-        <valueCoding>
-          <system value="http://loinc.org"/>
-          <code value="LA6571-9"/>
-          <display value="Nearly every day"/>
-        </valueCoding>
-      </answer>
-    </item>
-    <item>
-      <linkId value="g1.q7"/>
-      <text value="Trouble concentrating on things, such as reading the newspaper or watching television,"/>
-      <answer>
-        <valueCoding>
-          <system value="http://loinc.org"/>
-          <code value="LA6570-1"/>
-          <display value="More than half the days"/>
-        </valueCoding>
-      </answer>
-    </item>
-    <item>
-      <linkId value="g1.q4"/>
-      <text value="Feeling tired or having little energy,"/>
-      <answer>
-        <valueCoding>
-          <system value="http://loinc.org"/>
-          <code value="LA6571-9"/>
-          <display value="Nearly every day"/>
-        </valueCoding>
-      </answer>
-    </item>
-    <item>
-      <linkId value="g1.q2"/>
-      <text value="Feeling down, depressed, or hopeless,"/>
-      <answer>
-        <valueCoding>
-          <system value="http://loinc.org"/>
-          <code value="LA6570-1"/>
-          <display value="More than half the days"/>
-        </valueCoding>
-      </answer>
-    </item>
-    <item>
-      <linkId value="g1.q5"/>
-      <text value="Poor appetite or overeating,"/>
-      <answer>
-        <valueCoding>
-          <system value="http://loinc.org"/>
-          <code value="LA6568-5"/>
-          <display value="Not at all"/>
-        </valueCoding>
-      </answer>
+      <linkId value="g1.s"/>
+      <text value="Scoring: &#xA;Add up all checked boxes on PHQ-9. &#xA;&#xA;For every:&#xA;Not at all = 0;&#xA;Several days = 1;&#xA;More than half the days = 2;&#xA;Nearly every day = 3&#xA;&#xA;Interpretation of Total Score&#xA;Total Score Depression Severity&#xA;1-4 Minimal depression&#xA;5-9 Mild depression&#xA;10-14 Moderate depression&#xA;15-19 Moderately severe depression&#xA;20-27 Severe depression (this is hidden text/should not be displayed to the user)"/>
     </item>
   </item>
   <item>
@@ -132,8 +172,8 @@
       <answer>
         <valueCoding>
           <system value="http://loinc.org"/>
-          <code value="LA6575-0"/>
-          <display value="Very difficult"/>
+          <code value="LA6572-7"/>
+          <display value="Not difficult at all"/>
         </valueCoding>
       </answer>
     </item>

@@ -3,7 +3,7 @@
   "id": "questionnaire-example-phq9",
   "meta": {
     "profile": [
-      "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"
+      "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"
     ]
   },
   "text": {
@@ -13,16 +13,16 @@
   "contained": [
     {
       "resourceType": "ValueSet",
-      "id": "PHQ-9",
+      "id": "LL358-3",
       "meta": {
         "profile": [
-          "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs"
+          "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire-valueset"
         ]
       },
-      "url": "http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-9",
+      "url": "http://fhir.org/guides/argonaut-questionnaire/ValueSet/LL358-3",
       "identifier": [
         {
-          "value": "phq9"
+          "value": "LL358-3"
         }
       ],
       "version": "0.0.0",
@@ -31,12 +31,16 @@
       "date": "2018-06-27",
       "copyright": "This content LOINC is copyright 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use .",
       "expansion": {
-        "identifier": "phq9-expansion",
-        "timestamp": "2018-06-27T22:49:08",
+        "identifier": "LL358-3ver2.64",
+        "timestamp": "2018-06-27T22:49:08Z",
         "total": 4,
         "contains": [
           {
             "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              },
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
                 "valueDecimal": 0
@@ -50,6 +54,10 @@
           {
             "extension": [
               {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 2
+              },
+              {
                 "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
                 "valueDecimal": 1
               }
@@ -62,6 +70,10 @@
           {
             "extension": [
               {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 3
+              },
+              {
                 "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
                 "valueDecimal": 2
               }
@@ -73,6 +85,10 @@
           },
           {
             "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 4
+              },
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
                 "valueDecimal": 3
@@ -88,53 +104,88 @@
     },
     {
       "resourceType": "ValueSet",
-      "id": "PHQ-10",
+      "id": "LL359-1",
       "meta": {
         "profile": [
-          "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs"
+          "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire-valueset"
         ]
       },
-      "url": "http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-10",
+      "url": "http://fhir.org/guides/argonaut-questionnaire/ValueSet/LL359-1",
       "identifier": [
         {
-          "value": "phq10"
+          "value": "LL359-1ver2.64"
         }
       ],
       "version": "0.0.0",
-      "title": "Patient Health Questionnaire (PHQ-9)",
+      "title": "PHQ.10 / Not difficult at all/Somewhat difficult/Very difficult/Extremely difficult-Perceived difficulty (PHQ-9)",
       "status": "active",
       "date": "2018-06-27",
       "copyright": "This content LOINC is copyright 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use .",
       "expansion": {
-        "identifier": "phq10-expansion",
-        "timestamp": "2018-06-27T22:27:03",
+        "identifier": "LL359",
+        "timestamp": "2018-06-27T22:27:03Z",
         "total": 4,
         "contains": [
           {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 1
+              }
+            ],
             "system": "http://loinc.org",
             "version": "2.64",
             "code": "LA6572-7",
             "display": "Not difficult at all"
           },
           {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 2
+              }
+            ],
             "system": "http://loinc.org",
             "version": "2.64",
             "code": "LA6573-5",
             "display": "Somewhat difficult"
           },
           {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 3
+              }
+            ],
             "system": "http://loinc.org",
             "version": "2.64",
             "code": "LA6575-0",
             "display": "Very difficult"
           },
           {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                "valueInteger": 4
+              }
+            ],
             "system": "http://loinc.org",
             "version": "2.64",
             "code": "LA6574-3",
             "display": "Extremely difficult"
           }
         ]
+      }
+    }
+  ],
+  "extension": [
+    {
+      "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timeLimit",
+      "valueDuration": {
+        "value": 1,
+        "unit": "week",
+        "system": "http://unitsofmeasure.org",
+        "code": "wk"
       }
     }
   ],
@@ -202,6 +253,12 @@
   ],
   "item": [
     {
+      "extension": [
+        {
+          "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+          "valueInteger": 0
+        }
+      ],
       "linkId": "g1",
       "code": [
         {
@@ -213,12 +270,24 @@
       "required": true,
       "item": [
         {
+          "extension": [
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "valueInteger": 0
+            }
+          ],
           "linkId": "g1.d",
           "text": "Over the last 2 weeks, how often have you been bothered by any of the following problems? (Use “X” to indicate your answer)",
           "type": "display",
           "required": true
         },
         {
+          "extension": [
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "valueInteger": 1
+            }
+          ],
           "linkId": "g1.q1",
           "code": [
             {
@@ -232,11 +301,17 @@
           "required": true,
           "repeats": false,
           "options": {
-            "reference": "#PHQ-9",
+            "reference": "#LL358-3",
             "display": "Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"
           }
         },
         {
+          "extension": [
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "valueInteger": 2
+            }
+          ],
           "linkId": "g1.q2",
           "code": [
             {
@@ -250,11 +325,17 @@
           "required": true,
           "repeats": false,
           "options": {
-            "reference": "#PHQ-9",
+            "reference": "#LL358-3",
             "display": "Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"
           }
         },
         {
+          "extension": [
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "valueInteger": 3
+            }
+          ],
           "linkId": "g1.q3",
           "code": [
             {
@@ -268,11 +349,17 @@
           "required": true,
           "repeats": false,
           "options": {
-            "reference": "#PHQ-9",
+            "reference": "#LL358-3",
             "display": "Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"
           }
         },
         {
+          "extension": [
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "valueInteger": 4
+            }
+          ],
           "linkId": "g1.q4",
           "code": [
             {
@@ -286,11 +373,17 @@
           "required": true,
           "repeats": false,
           "options": {
-            "reference": "#PHQ-9",
+            "reference": "#LL358-3",
             "display": "Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"
           }
         },
         {
+          "extension": [
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "valueInteger": 5
+            }
+          ],
           "linkId": "g1.q5",
           "code": [
             {
@@ -304,11 +397,17 @@
           "required": true,
           "repeats": false,
           "options": {
-            "reference": "#PHQ-9",
+            "reference": "#LL358-3",
             "display": "Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"
           }
         },
         {
+          "extension": [
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "valueInteger": 6
+            }
+          ],
           "linkId": "g1.q6",
           "code": [
             {
@@ -322,11 +421,17 @@
           "required": true,
           "repeats": false,
           "options": {
-            "reference": "#PHQ-9",
+            "reference": "#LL358-3",
             "display": "Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"
           }
         },
         {
+          "extension": [
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "valueInteger": 7
+            }
+          ],
           "linkId": "g1.q7",
           "code": [
             {
@@ -340,11 +445,17 @@
           "required": true,
           "repeats": false,
           "options": {
-            "reference": "#PHQ-9",
+            "reference": "#LL358-3",
             "display": "Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"
           }
         },
         {
+          "extension": [
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "valueInteger": 8
+            }
+          ],
           "linkId": "g1.q8",
           "code": [
             {
@@ -358,11 +469,17 @@
           "required": true,
           "repeats": false,
           "options": {
-            "reference": "#PHQ-9",
+            "reference": "#LL358-3",
             "display": "Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"
           }
         },
         {
+          "extension": [
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "valueInteger": 9
+            }
+          ],
           "linkId": "g1.q9",
           "code": [
             {
@@ -376,7 +493,7 @@
           "required": true,
           "repeats": false,
           "options": {
-            "reference": "#PHQ-9",
+            "reference": "#LL358-3",
             "display": "Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"
           }
         },
@@ -385,6 +502,10 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
               "valueBoolean": true
+            },
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "valueInteger": 10
             }
           ],
           "linkId": "g1.s",
@@ -394,18 +515,30 @@
               "code": "44261-6"
             }
           ],
-          "text": "Scoring: \nAdd up all checked boxes on PHQ-9. \n\nFor every:\nNot at all = 0;\nSeveral days = 1;\nMore than half the days = 2;\nNearly every day = 3\n\nInterpretation of Total Score\nTotal Score Depression Severity\n1-4 Minimal depression\n5-9 Mild depression\n10-14 Moderate depression\n15-19 Moderately severe depression\n20-27 Severe depression \n",
+          "text": "Scoring: \nAdd up all checked boxes on PHQ-9. \n\nFor every:\nNot at all = 0;\nSeveral days = 1;\nMore than half the days = 2;\nNearly every day = 3\n\nInterpretation of Total Score\nTotal Score Depression Severity\n1-4 Minimal depression\n5-9 Mild depression\n10-14 Moderate depression\n15-19 Moderately severe depression\n20-27 Severe depression",
           "type": "display",
           "repeats": false
         }
       ]
     },
     {
+      "extension": [
+        {
+          "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+          "valueInteger": 1
+        }
+      ],
       "linkId": "g2",
       "type": "group",
       "required": true,
       "item": [
         {
+          "extension": [
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "valueInteger": 0
+            }
+          ],
           "linkId": "g2.q1",
           "code": [
             {
@@ -418,7 +551,7 @@
           "required": true,
           "repeats": false,
           "options": {
-            "reference": "#PHQ-10",
+            "reference": "#LL359-1",
             "display": "Not difficult at all/Somewhat difficult/Very difficult/Extremely difficult-Perceived difficulty (PHQ-9)"
           }
         }

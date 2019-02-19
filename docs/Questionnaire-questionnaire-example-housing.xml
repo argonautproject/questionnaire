@@ -3,7 +3,7 @@
 <Questionnaire xmlns="http://hl7.org/fhir">
   <id value="questionnaire-example-housing"/>
   <meta>
-    <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"/>
+    <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"/>
   </meta>
   <text>
     <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><h3>Housing Questions</h3><img src="data:image/gif;base64,R0lGODlhLwRYAncAACH5BAEAAAAALAAAAAAvBFgCh/8A/wq99R299RvK+CgkJSgkLigkOCgkTCgk
@@ -710,17 +710,20 @@ u/ALw3AMy/AM03AN2/AN43AO67DnBgQAOw==
   </code>
   <subjectType value="Patient"/>
   <item>
-    <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
-      <valueBoolean value="true"/>
-    </extension>
     <linkId value="g1"/>
     <type value="group"/>
     <item>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="0"/>
+      </extension>
       <linkId value="g1.d"/>
       <text value="Accountable Health Communities Core Health-Related Social Needs Screening Questions &#xA;Underlined answer options indicate positive responses for the associated health-related social need. &#xA;A value greater than 10 when the numerical values for answers to questions 7-10 are summed indicates a positive screen for interpersonal safety."/>
       <type value="display"/>
     </item>
     <item>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="1"/>
+      </extension>
       <linkId value="g1.1"/>
       <prefix value="1"/>
       <text value="What is your housing situation today?"/>
@@ -728,16 +731,28 @@ u/ALw3AMy/AM03AN2/AN43AO67DnBgQAOw==
       <required value="true"/>
       <repeats value="false"/>
       <option>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="0"/>
+        </extension>
         <valueString value="I do not have housing (I am staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, abandoned building, bus or train station, or in a park)"/>
       </option>
       <option>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="1"/>
+        </extension>
         <valueString value="I have housing today, but I am worried about losing housing in the future"/>
       </option>
       <option>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="2"/>
+        </extension>
         <valueString value="I have housing"/>
       </option>
     </item>
     <item>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="2"/>
+      </extension>
       <linkId value="g1.2"/>
       <prefix value="2"/>
       <text value="Think about the place you live. Do you have problems with any of the following? (check all that apply)"/>
@@ -745,30 +760,54 @@ u/ALw3AMy/AM03AN2/AN43AO67DnBgQAOw==
       <required value="true"/>
       <repeats value="true"/>
       <option>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="0"/>
+        </extension>
         <valueString value="Bug infestation"/>
       </option>
       <option>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="1"/>
+        </extension>
         <valueString value="Mold"/>
       </option>
       <option>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="2"/>
+        </extension>
         <valueString value="Lead paint or pipes"/>
       </option>
       <option>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="3"/>
+        </extension>
         <valueString value="Inadequate heat"/>
       </option>
       <option>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="4"/>
+        </extension>
         <valueString value="Oven or stove not working"/>
       </option>
       <option>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="5"/>
+        </extension>
         <valueString value="No or not working smoke detectors"/>
       </option>
       <option>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="6"/>
+        </extension>
         <valueString value="Water leaks"/>
       </option>
       <option>
-        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
-          <valueBoolean value="true"/>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="7"/>
         </extension>
+        <modifierExtension url="http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive">
+          <valueBoolean value="true"/>
+        </modifierExtension>
         <valueString value="None of the above"/>
       </option>
     </item>

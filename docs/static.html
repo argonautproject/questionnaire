@@ -67,11 +67,10 @@
 
 
       <div id="project-status" class="project-status"> <!-- ig title text -->
-
-      
-      <strong>Argonaut Questionnaire Implementation Guide CI Build</strong>
-      
-
+        <b>Argonaut Questionnaire Implementation Guide</b>
+        
+        CI Build
+        
     </div><!-- end ig title text -->
 
   </div><!-- end container -->
@@ -126,15 +125,19 @@
     </li>
   </ul>
 </li>
+<!--
 <li>
   <a href="operations.html">Operations</a>
 </li>
+-->
 <li>
-  <a href="profiles.html">Profiles/Extensions</a>
+  <a href="profiles.html">Profiles and Operations</a>
 </li>
+<!--
 <li>
   <a href="terminology.html">Terminology</a>
 </li>
+-->
 <li>
   <a href="searchparameters.html">Search Parameters</a>
 </li>
@@ -151,10 +154,15 @@
 </li>
 
   <li>
-    <a href="CapabilityStatement-server.html">Conformance requirements for Server</a>
+    <a href="CapabilityStatement-argo-questionnaire-provider-ehr.html">Conformance requirements for Provider EHR</a>
   </li>
+  <!--
   <li>
-    <a href="CapabilityStatement-client.html">Conformance requirements for Client</a>
+    <a href="CapabilityStatement-argonaut-questionnaire-client.html">Conformance requirements for Client</a>
+  </li>
+  -->
+  <li>
+    <a href="CapabilityStatement-adaptive-q-service.html">Conformance requirements for Adaptive Questionnaire Service</a>
   </li>
 </ul>
 </li>
@@ -225,33 +233,42 @@
             <!-- content of page -->
 
 
-<!-- ============Publish box=============== -->
 
-<!--status-bar-->
-<p id="publish-box">
-This is the   Continuous Integration Build  of the Argonaut Questionnaire Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="http://www.fhir.org/guides//history.html">Directory of published versions</a>
-</p>
+
+
+
+
+
 
 
 <!-- ============BreadCrumb=============== -->
 
 <nav class="breadcrumb">
   
-    
-      <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a><a class="breadcrumb-item" href="index.html">Home</a>
-      /
-      <span class="breadcrumb-item active">Static Forms</span>
-    
-    
-
+    <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a> 
 </nav>
 
 
-  <!-- ============CONTENT CONTENT=============== -->
+<!-- ============StatusBox=============== -->
 
-<h1>Static Forms</h1>
+<!--status-bar-->
+<p id="publish-box">
+This is the 
+    Continuous Integration Build
+   
+  
+  of the Argonaut Questionnaire Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="#">Directory of published versions</a>
+</p>
+
+
+<!-- ============CONTENT CONTENT=============== -->
+
+
+<h2>Static Forms</h2>
 
 <!-- page source: static.md  -->
+
+
 
 
 <!-- TOC  the css styling for this is \pages\assets\css\project.css under 'markdown-toc'-->
@@ -260,30 +277,35 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
   <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
   <li><a href="#example-scenario" id="markdown-toc-example-scenario">Example Scenario</a></li>
   <li><a href="#workflow-steps" id="markdown-toc-workflow-steps">Workflow Steps</a>    <ul>
-      <li><a href="#form-author-editor-creates-or-updates-assessment" id="markdown-toc-form-author-editor-creates-or-updates-assessment">Form Author Editor Creates Or Updates Assessment</a></li>
-      <li><a href="#form-author-editor-uploads-the-assessments-to-the-assessment-bank" id="markdown-toc-form-author-editor-uploads-the-assessments-to-the-assessment-bank">Form Author Editor Uploads The Assessments To The Assessment Bank</a></li>
-      <li><a href="#provider-ehrss-retrieve-standard-assessments-from-the-assessment-bank" id="markdown-toc-provider-ehrss-retrieve-standard-assessments-from-the-assessment-bank">Provider EHRSs Retrieve Standard Assessments From The Assessment Bank</a></li>
-      <li><a href="#the-provider-ehr-renders-and-displays-the-standard-assessment-to-the-end-user" id="markdown-toc-the-provider-ehr-renders-and-displays-the-standard-assessment-to-the-end-user">The Provider EHR Renders And Displays The Standard Assessment To The End User</a></li>
-      <li><a href="#the-end-user-completes-the-assessment" id="markdown-toc-the-end-user-completes-the-assessment">The End User Completes The Assessment</a></li>
-      <li><a href="#the-provider-ehr-posts-responses-to-the-answer-bank" id="markdown-toc-the-provider-ehr-posts-responses-to-the-answer-bank">The Provider EHR Posts Responses to the Answer Bank</a></li>
-      <li><a href="#the-provider-ehr-retrieves-the-assessment-responses-from-the-answer-bank" id="markdown-toc-the-provider-ehr-retrieves-the-assessment-responses-from-the-answer-bank">The Provider EHR Retrieves The Assessment Responses from the Answer Bank</a></li>
+      <li><a href="#form-author-creates-assessment" id="markdown-toc-form-author-creates-assessment">Form Author Creates Assessment</a></li>
+      <li><a href="#form-author-posts-to-assessment-bank" id="markdown-toc-form-author-posts-to-assessment-bank">Form Author Posts to Assessment Bank</a></li>
+      <li><a href="#provider-ehr-fetches-form" id="markdown-toc-provider-ehr-fetches-form">Provider EHR Fetches Form</a></li>
+      <li><a href="#client-application-renders-and-displays-the-form" id="markdown-toc-client-application-renders-and-displays-the-form">Client Application Renders And Displays The Form</a></li>
+      <li><a href="#end-user-completes-the-assessment" id="markdown-toc-end-user-completes-the-assessment">End User Completes The Assessment</a></li>
+      <li><a href="#provider-ehr-posts-to-answer-bank" id="markdown-toc-provider-ehr-posts-to-answer-bank">Provider EHR Posts to Answer Bank</a></li>
+      <li><a href="#provider-ehr-searches-answer-bank" id="markdown-toc-provider-ehr-searches-answer-bank">Provider EHR Searches Answer Bank</a>        <ul>
+          <li><a href="#patient-demographic-based-searches" id="markdown-toc-patient-demographic-based-searches">Patient Demographic Based Searches</a></li>
+        </ul>
+      </li>
+      <li><a href="#examples-and-reference-implementation" id="markdown-toc-examples-and-reference-implementation">Examples and Reference Implementation</a></li>
+      <li><a href="#amending-and-revising-forms" id="markdown-toc-amending-and-revising-forms">Amending and Revising Forms</a></li>
     </ul>
   </li>
 </ul>
 
 <h2 id="introduction">Introduction</h2>
 
-<p>The Argonaut Questionnaire Implementation Guide defines a series of interactions which cover the basic workflow for the creation, discovery and retrieval of simple static text-based forms using FHIR Questionnaire and QuestionnaireResponse and the FHIR API..</p>
+<p>The Argonaut Questionnaire Implementation Guide defines a series of interactions which cover the basic workflow for the creation, discovery and retrieval of simple static text-based forms using FHIR Questionnaire and QuestionnaireResponse and the FHIR API.  The reader is encouraged to familiarize herself with the capabilities of the Questionnaire and QuestionnaireResponse Response resources by reviewing the guidance given in the FHIR specification and the <a href="StructureDefinition-argo-questionnaire.html" title="Argonaut Questionnaire Profile">Argonaut Questionnaire Profile</a> and <a href="StructureDefinition-argo-questionnaireresponse.html" title="Argonaut QuestionnaireResponse Profile">Argonaut QuestionnaireResponse Profile</a> pages.</p>
 
-<p>Each assessment tool (i.e., set of questions and answer choices) is created once as FHIR Questionnaires and centrally stored in an “Assessment Bank” which can be accessed by the provider EHRS. The provider can then render the form for the end user to complete.  The form responses are captured and processed by the provider EHRS and can be stored using the QuestionnaireResponse in an “Answer Bank and subsequently retrieved by the providers for review. Although out of scope for this guide, these results can be aggregated and shared within or across systems.</p>
+<p>Each assessment tool (i.e., set of questions and answer choices) is created once as FHIR Questionnaires and centrally stored in an Assessment Bank which can be accessed by the Provider EHR. The Client Application can then render the form for the end user to complete.  The form responses are captured and processed by the Client and can be stored using the QuestionnaireResponse in an Answer Bank and subsequently retrieved by the Providers for review. Although out of scope for this guide, these results can be aggregated and shared within or across systems.</p>
 
-<p>These basic workflow steps and API are detailed below.  This guidance covers more basic scenarios, but can be scaled up towards more complex scenarios ( for example, see <a href="http://build.fhir.org/ig/HL7/sdc/" title="SDC">Structured Data Capture Initiative</a>).</p>
+<p>These basic workflow steps and API are detailed below. This guidance covers more basic scenarios, but can be scaled up towards more complex scenarios ( for example, see <a href="http://build.fhir.org/ig/HL7/sdc/" title="SDC">Structured Data Capture Initiative</a>). Note that the search guidance below is applicable <a href="adaptive.html"><em>completed</em> Adaptive forms</a> as well.</p>
 
 <h2 id="example-scenario">Example Scenario</h2>
 
 <p>This simple scenario serves as an effective means to describe the Argonaut Questionnaire basic workflow and API</p>
 
-<div class="language-text highlighter-rouge"><pre class="highlight"><code>A Jurisdiction (e.g, state or region) publicly funds a program to improve population health.  The program is instituted and a set of standard assessments are to filled out by the program participants (“subjects”) periodically in order to monitor the program’s success or failure.
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>A Jurisdiction (e.g, state or region) publicly funds a program to improve population health.  The program is instituted and a set of standard assessments are to filled out by the program participants (“subjects”) periodically in order to monitor the program’s success or failure.
 
 Example list of Assessment Categories:
 
@@ -296,18 +318,30 @@ Universal screening using depression screening (PHQ 2 &amp; 9)
 ...
 
 Each assessment tool (i.e., set of questions and answer choices) is created once as FHIR Questionnaires and centrally stored in an “Assessment Bank” which can be accessed the program participants (provider EHRS). The provider can then use them to create online questionnaires for their patients.  The responses are captured and processed by the provider EHRS and retrieved by the providers for review. These results are shared with the Agency overseeing the program.
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="workflow-steps">Workflow Steps</h2>
 
-<h3 id="form-author-editor-creates-or-updates-assessment">Form Author Editor Creates Or Updates Assessment</h3>
+<h3 id="form-author-creates-assessment">Form Author Creates Assessment</h3>
 
-<p>Before an assessment can retrieved it must be created.  This step MAY include updating or deprecation of an assessment.  The Form Author/Editor creates a Questionnaire resource based on a set of assessment questions and answers and associated scores as defined by the program coordinators.  The Questionnaire conforms to the <a href="StructureDefinition-q.html" title="Argonaut Questionnaire Profile">Argonaut Questionnaire Profile</a>.  How these questions and answer and scores are defined and how the Questionnaire is created are out of scope.  ( note: there are several tools available for authoring fhir resources. )</p>
+<p>Before an assessment can retrieved it must be created.  This step MAY include updating or deprecation of an assessment.  The Form Author/Editor creates a Questionnaire resource based on a set of assessment questions and answers and associated scores as defined by the program coordinators.  The Questionnaire conforms to the <a href="StructureDefinition-argo-questionnaire.html" title="Argonaut Questionnaire Profile">Argonaut Questionnaire Profile</a>.  How these questions and answer and scores are defined and how the Questionnaire is created are out of scope.</p>
 
-<h3 id="form-author-editor-uploads-the-assessments-to-the-assessment-bank">Form Author Editor Uploads The Assessments To The Assessment Bank</h3>
+<h3 id="form-author-posts-to-assessment-bank">Form Author Posts to Assessment Bank</h3>
 
-<p>The Author/Editor is able to upload the Questionnaires to a FHIR server which serves as a repository where all the program participants can search and download the standard assessment when they need them.  Multiple version of each assessment may be available. <a href="index.html#outstanding-issuesfuture-scope">see issues</a></p>
+<!-- all this Bootstrap html for getting an image to fit nicely in text - 640 pix wide -->
+
+<!-- file:///assets/images/st-step1.jpg -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>.</strong></figcaption>
+  <img src="assets/images/st-step1.jpg" class="figure-img-narrow img-responsive img-rounded center-block" alt="st-step1.jpg" />
+</figure>
+
+<p></p>
+</div>
+
+<p>The Author/Editor is able to upload the Questionnaires to a FHIR server which serves as a repository where all the program participants can search and download the standard assessment when they need them.  Multiple version of each assessment may be available. [see issues]</p>
 
 <!-- >{% include img.html img="diagrams/Slide30.png" caption="Appointment Availability Discovery and Search" %} -->
 
@@ -318,7 +352,7 @@ Each assessment tool (i.e., set of questions and answer choices) is created once
 <p>The following Argonaut Questionnaire artifacts are used in this transaction:</p>
 
 <ul>
-  <li><strong><a href="StructureDefinition-q.html" title="Argonaut Questionnaire Profile">Argonaut Questionnaire Profile</a></strong>.</li>
+  <li><strong><a href="StructureDefinition-argo-questionnaire.html" title="Argonaut Questionnaire Profile">Argonaut Questionnaire Profile</a></strong>.</li>
 </ul>
 
 <h4 class="no_toc" id="usage">Usage</h4>
@@ -327,64 +361,195 @@ Each assessment tool (i.e., set of questions and answer choices) is created once
 
 <p><code class="highlighter-rouge">POST [base]/Questionnaire/...</code></p>
 
+<p>
+  <button class="btn-sm btn-info" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#example-create_q" aria-expanded="false" aria-controls="collapseExample">
+    Example Create...
+  </button>
+</p>
+
+<div class="collapse" id="example-create_q">
+  <div class="card card-body">
+      
+<p><strong>Request</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST http://sqlonfhir-stu3.azurewebsites.net/fhir/Questionnaire
+
+User-Agent: python-requests/2.20.0
+Accept: application/fhir+json
+Content-Type: application/fhir+json
+[other headers]
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Response Code: 201 (Created)
+Content-Type: application/fhir+json; charset=utf-8
+Content-Location: http://sqlonfhir-stu3.azurewebsites.net/fhir/Questionnaire/c644fc509ad84aebb8315b4c587bfcd0/_history/1
+[other headers]
+
+    
+{
+   "resourceType": "Questionnaire",
+   "id": "c644fc509ad84aebb8315b4c587bfcd0",
+   "meta": {
+      "versionId": "1",
+      "lastUpdated": "2019-02-13T08:03:46.927+00:00",
+      "profile": [
+         "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"
+      ]
+   },
+   "text": {
+      "status": "generated",
+      "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;\r\n\t&lt;b&gt;Argonaut Questionnaire Sampler&lt;/b&gt;\r\n\t&lt;hr/&gt;\r\n\t\t&lt;span style=\"color: gray;\"&gt;Publisher:&lt;/span&gt; Argonaut Project\r\n&lt;/div&gt;\r\n"
+   },
+   "extension": [
+      {
+         "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timeLimit",
+         "valueDuration": {
+            "value": 5,
+            "unit": "minute",
+        ...[snipped for brevity]....
+      
+</code></pre></div></div>
+
+  </div>
+</div>
+<p><br /></p>
+
 <p>To update a Questionnaire:</p>
 
 <p><code class="highlighter-rouge">PUT [base]/Questionnaire/[id]</code></p>
+
+<p>
+  <button class="btn-sm btn-info" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#example-update_q" aria-expanded="false" aria-controls="collapseExample">
+    Example Update...
+  </button>
+</p>
+
+<div class="collapse" id="example-update_q">
+  <div class="card card-body">
+      
+<p><strong>Request</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PUT http://sqlonfhir-stu3.azurewebsites.net/fhir/Questionnaire/questionnaire-example-search
+
+User-Agent: python-requests/2.20.0
+Accept: application/fhir+json
+Content-Type: application/fhir+json
+[other headers]
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Response Code: 200 (OK)
+Content-Type: application/fhir+json; charset=utf-8
+Content-Location: http://sqlonfhir-stu3.azurewebsites.net/fhir/Questionnaire/questionnaire-example-search/_history/17
+[other headers]
+
+    
+{
+   "resourceType": "Questionnaire",
+   "id": "questionnaire-example-search",
+   "meta": {
+      "versionId": "17",
+      "lastUpdated": "2019-02-13T08:03:48.115+00:00",
+      "profile": [
+         "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"
+      ]
+   },
+   "text": {
+      "status": "generated",
+      "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;\r\n\t&lt;b&gt;Argonaut Questionnaire Sampler&lt;/b&gt;\r\n\t&lt;hr/&gt;\r\n\t\t&lt;span style=\"color: gray;\"&gt;Publisher:&lt;/span&gt; Argonaut Project\r\n&lt;/div&gt;\r\n"
+   },
+   "extension": [
+      {
+         "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timeLimit",
+         "valueDuration": {
+            "value": 5,
+            "unit": "minute",
+        ...[snipped for brevity]....
+      
+</code></pre></div></div>
+
+  </div>
+</div>
+<p><br /></p>
 
 <p>to delete a Questionnaire:</p>
 
 <p><code class="highlighter-rouge">DELETE [base]/Questionnaire/[id]</code></p>
 
 <p>
-  <button class="btn btn-info btn-lg btn-block" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#example-step1" aria-expanded="false" aria-controls="collapseExample">
-    Example
+  <button class="btn-sm btn-info" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#example-delete_q" aria-expanded="false" aria-controls="collapseExample">
+    Example Delete...
   </button>
 </p>
 
-<div class="collapse" id="example-step1">
+<div class="collapse" id="example-delete_q">
   <div class="card card-body">
-      <div class="highlighter-rouge"><pre class="highlight"><code>example
-...
-</code></pre>
-</div>
+      
+<p><strong>Request</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DELETE http://sqlonfhir-stu3.azurewebsites.net/fhir/Questionnaire/questionnaire-example-delete
+
+User-Agent: python-requests/2.20.0
+Accept: application/fhir+json
+Content-Type: application/fhir+json
+[other headers]
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Response Code: 204 (No Content)
+[other headers]
+</code></pre></div></div>
 
   </div>
 </div>
 <p><br /></p>
 
-<h3 id="provider-ehrss-retrieve-standard-assessments-from-the-assessment-bank">Provider EHRSs Retrieve Standard Assessments From The Assessment Bank</h3>
+<h3 id="provider-ehr-fetches-form">Provider EHR Fetches Form</h3>
+
+<!-- all this Bootstrap html for getting an image to fit nicely in text - 640 pix wide -->
+
+<!-- file:///assets/images/st-step2.jpg -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>.</strong></figcaption>
+  <img src="assets/images/st-step2.jpg" class="figure-img-narrow img-responsive img-rounded center-block" alt="st-step2.jpg" />
+</figure>
+
+<p></p>
+</div>
 
 <p>When it is time to perform an assessment of the program participants(subjects), the Provider EHR fetches the appropriate Questionnaire(s) from the Assessment-Bank.</p>
 
 <!-- >{% include img.html img="diagrams/Slide30.png" caption="Appointment Availability Discovery and Search" %} -->
 
-<p>The standard <a href="http://hl7.org/fhir/STU3/search.html">FHIR RESTful search API</a> is used with the following <em>mandatory</em> search parameters:</p>
+<p>The standard <a href="http://hl7.org/fhir/STU3/search.html">FHIR RESTful search API</a> is used with the following standard and custom <a href="searchparameters.html">search parameters</a>:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">_id</code></li>
-  <li><code class="highlighter-rouge">url</code></li>
-  <li><code class="highlighter-rouge">status</code></li>
-  <li><code class="highlighter-rouge">title</code></li>
+  <li><a href="http://hl7.org/fhir/STU3/search.html#id" title="The search parameter _id refers to the logical id of the resource, and can be used when the search context specifies a resource type"><code class="highlighter-rouge">_id</code></a></li>
+  <li><a href="http://hl7.org/fhir/STU3/search.html#uri" title="The uri parameter refers to a URI (RFC 3986 ) element. Matches are precise (e.g. case, accent, and escape) sensitive, and the entire URI must match."><code class="highlighter-rouge">url</code></a></li>
+  <li><a href="SearchParameter-Questionnaire-status.html"><code class="highlighter-rouge">status</code> (Questionnaire)</a></li>
+  <li><a href="SearchParameter-Questionnaire-title.html"><code class="highlighter-rouge">title</code></a> (including the <code class="highlighter-rouge">:contains</code> modifier option)</li>
+  <li><a href="SearchParameter-Questionnaire-publisher.html"><code class="highlighter-rouge">publisher</code></a> (including the <code class="highlighter-rouge">:contains</code> modifier option)</li>
 </ul>
 
 <p>and the following <em>optional</em> search parameters</p>
 
 <ul>
-  <li><code class="highlighter-rouge">version</code></li>
-  <li><code class="highlighter-rouge">context-type</code> (<a href="searchparameters.html">Custom search parameters</a>)</li>
-  <li><code class="highlighter-rouge">context-value</code>(<a href="searchparameters.html">Custom search parameters</a>)</li>
+  <li><a href="SearchParameter-Questionnaire-version.html"><code class="highlighter-rouge">version</code></a></li>
+  <li><a href="SearchParameter-Questionnaire-context-type-value.html"><code class="highlighter-rouge">context-type-value</code></a></li>
 </ul>
-
-<p>(others?… discuss)</p>
-
-<p>(multiple version of each assessment may be available. <a href="index.html#outstanding-issuesfuture-scope">see issues</a>)</p>
 
 <h4 class="no_toc" id="apis-1">APIs</h4>
 
 <p>The following Argonaut Questionnaire artifacts are used in this transaction:</p>
 
 <ul>
-  <li><strong><a href="StructureDefinition-q.html" title="Argonaut Questionnaire Profile">Argonaut Questionnaire Profile</a></strong>.</li>
+  <li><strong><a href="StructureDefinition-argo-questionnaire.html" title="Argonaut Questionnaire Profile">Argonaut Questionnaire Profile</a></strong>.</li>
 </ul>
 
 <p>Note that all ValueSets used are <a href="http://hl7.org/fhir/STU3/references.html#contained">contained</a> resources within the Questionnaire</p>
@@ -397,127 +562,766 @@ Each assessment tool (i.e., set of questions and answer choices) is created once
   <li>
     <p>based on its id:</p>
 
-    <p><code class="highlighter-rouge">GET [base]/Questionnaire/[id]</code></p>
-  </li>
-  <li>
-    <p>based on its url (note the QuestionnaireResponse uses the url to reference the assessment upon which it is based):</p>
-
-    <p><code class="highlighter-rouge">GET [base]/Questionnaire?url=[uri]</code></p>
-  </li>
-  <li>
-    <p>based on its title (the supplied parameter can  equals or starts with the title ):</p>
-
-    <p><code class="highlighter-rouge">GET [base]/Questionnaire?title=[title]</code></p>
-  </li>
-  <li>
-    <p>based on its title and version:</p>
-
-    <p><code class="highlighter-rouge">GET [base]/Questionnaire?title=[title]&amp;version=[version]</code>`</p>
+    <p><code class="highlighter-rouge">GET [base]/Questionnaire/[id]</code> or <code class="highlighter-rouge">GET [base]/Questionnaire?_id=[id]</code></p>
   </li>
 </ul>
 
-<p>Searching for <em>all</em> the active Questionnaires:</p>
-
-<p><code class="highlighter-rouge">GET [base]/Questionnaire?status=active</code></p>
-
-<p>Searching for a <em>collection</em> of Questionnaires based on context-type and context-value(think category):</p>
-
-<p><code class="highlighter-rouge">GET [base]/Questionnaire?context-code=[code]&amp;context-value=[value]</code></p>
-
 <p>
-  <button class="btn btn-info btn-lg btn-block" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#example-step2" aria-expanded="false" aria-controls="collapseExample">
-    Example
+  <button class="btn-sm btn-info" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#example-fetch_q_id" aria-expanded="false" aria-controls="collapseExample">
+    Example Search by ID...
   </button>
 </p>
 
-<div class="collapse" id="example-step2">
+<div class="collapse" id="example-fetch_q_id">
   <div class="card card-body">
-      <div class="highlighter-rouge"><pre class="highlight"><code>example
-...
-</code></pre>
-</div>
+      
+<p><strong>Request</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET http://sqlonfhir-stu3.azurewebsites.net/fhir/Questionnaire?_id=questionnaire-example-search
+
+User-Agent: python-requests/2.20.0
+Accept: application/fhir+json
+Content-Type: application/fhir+json
+[other headers]
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Response Code: 200 (OK)
+Content-Type: application/fhir+json; charset=utf-8
+Content-Location: http://sqlonfhir-stu3.azurewebsites.net/fhir/Bundle/urn:uuid:ce7769e8aac54f5084f059626d6c32de
+[other headers]
+
+    
+{
+   "resourceType": "Bundle",
+   "id": "urn:uuid:ce7769e8aac54f5084f059626d6c32de",
+   "meta": {
+      "lastUpdated": "2019-02-13T08:38:57.477+00:00"
+   },
+   "type": "searchset",
+   "total": 1,
+   "link": [
+      {
+         "relation": "self",
+         "url": "http://sqlonfhir-stu3.azurewebsites.net/fhir/Questionnaire?_id=questionnaire-example-search&amp;_snapshot=636856439374771977"
+      }
+   ],
+   "entry": [
+      {
+         "fullUrl": "http://sqlonfhir-stu3.azurewebsites.net/fhir/Questionnaire/questionnaire-example-search",
+         "resource": {
+            "resourceType": "Questionnaire",
+            "id": "questionnaire-example-search",
+            "meta": {
+               "versionId": "19",
+               "lastUpdated": "2019-02-13T08:37:05.202+00:00",
+        ...[snipped for brevity]....
+      
+</code></pre></div></div>
 
   </div>
 </div>
 <p><br /></p>
 
-<h3 id="the-provider-ehr-renders-and-displays-the-standard-assessment-to-the-end-user">The Provider EHR Renders And Displays The Standard Assessment To The End User</h3>
+<ul>
+  <li>
+    <p>based on its url (note the QuestionnaireResponse uses the url to reference the assessment upon which it is based):</p>
+
+    <p><code class="highlighter-rouge">GET [base]/Questionnaire?url=[uri]</code></p>
+  </li>
+</ul>
+
+<p>
+  <button class="btn-sm btn-info" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#example-fetch_q_url" aria-expanded="false" aria-controls="collapseExample">
+    Example Search by URL...
+  </button>
+</p>
+
+<div class="collapse" id="example-fetch_q_url">
+  <div class="card card-body">
+      
+<p><strong>Request</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET http://sqlonfhir-stu3.azurewebsites.net/fhir/Questionnaire?url=http%3A%2F%2Ffhir.org%2Fguides%2Fargonaut-questionnaire%2FQuestionnaire%2Fquestionnaire-example-search
+
+User-Agent: python-requests/2.20.0
+Accept: application/fhir+json
+Content-Type: application/fhir+json
+[other headers]
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Response Code: 200 (OK)
+Content-Type: application/fhir+json; charset=utf-8
+Content-Location: http://sqlonfhir-stu3.azurewebsites.net/fhir/Bundle/urn:uuid:334db1311eea4e4b80f5560aed8b6d1f
+[other headers]
+
+
+{
+   "resourceType": "Bundle",
+   "id": "urn:uuid:334db1311eea4e4b80f5560aed8b6d1f",
+   "meta": {
+      "lastUpdated": "2019-02-13T08:38:57.977+00:00"
+   },
+   "type": "searchset",
+   "total": 1,
+   "link": [
+      {
+         "relation": "self",
+         "url": "http://sqlonfhir-stu3.azurewebsites.net/fhir/Questionnaire?url=http%3A%2F%2Ffhir.org%2Fguides%2Fargonaut-questionnaire%2FQuestionnaire%2Fquestionnaire-example-search&amp;_snapshot=636856439379772204"
+      }
+   ],
+   "entry": [
+      {
+         "fullUrl": "http://sqlonfhir-stu3.azurewebsites.net/fhir/Questionnaire/questionnaire-example-search",
+         "resource": {
+            "resourceType": "Questionnaire",
+            "id": "questionnaire-example-search",
+            "meta": {
+               "versionId": "19",
+               "lastUpdated": "2019-02-13T08:37:05.202+00:00",
+    "profile": [
+        "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"
+    ]
+    },
+    "text": {
+    "status": "generated",
+    "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;\r\n\t&lt;b&gt;Argonaut Questionnaire Sampler&lt;/b&gt;\r\n\t&lt;hr/&gt;\r\n\t\t&lt;span style=\"color: gray;\"&gt;Publisher:&lt;/span&gt; Argonaut Project\r\n&lt;/div&gt;\r\n"
+    },
+    "extension": [
+    {
+        "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timeLimit",
+        "valueDuration": {
+            "value": 5,
+            "unit": "minute",
+            "system": "http://unitsofmeasure.org",
+            "code": "min"
+        }
+    }
+    ],
+    "url": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-search",
+        ...[snipped for brevity]....
+
+</code></pre></div></div>
+
+  </div>
+</div>
+<p><br /></p>
+
+<ul>
+  <li>
+    <p>based on its title (the supplied parameter can  equals or starts with the title ):</p>
+
+    <p><code class="highlighter-rouge">GET [base]/Questionnaire?title=[title]</code></p>
+  </li>
+</ul>
+
+<p>
+  <button class="btn-sm btn-info" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#example-fetch_q_tit" aria-expanded="false" aria-controls="collapseExample">
+    Example Search by Title...
+  </button>
+</p>
+
+<div class="collapse" id="example-fetch_q_tit">
+  <div class="card card-body">
+      
+<p><strong>Request</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET http://sqlonfhir-stu3.azurewebsites.net/fhir/Questionnaire?title=Argonaut+Questionnaire+Sampler
+
+User-Agent: python-requests/2.20.0
+Accept: application/fhir+json
+Content-Type: application/fhir+json
+[other headers]
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Response Code: 200 (OK)
+Content-Type: application/fhir+json; charset=utf-8
+Content-Location: http://sqlonfhir-stu3.azurewebsites.net/fhir/Bundle/urn:uuid:a12707826ee74b3f8787c87c437fe583
+[other headers]
+
+    
+{
+   "resourceType": "Bundle",
+   "id": "urn:uuid:a12707826ee74b3f8787c87c437fe583",
+   "meta": {
+      "lastUpdated": "2019-02-13T08:38:58.57+00:00"
+   },
+   "type": "searchset",
+   "total": 26,
+   "link": [
+      {
+         "relation": "self",
+         "url": "http://sqlonfhir-stu3.azurewebsites.net/fhir/Questionnaire?title=Argonaut+Questionnaire+Sampler&amp;_snapshot=636856439385709973"
+      },
+      {
+         "relation": "first",
+         "url": "http://sqlonfhir-stu3.azurewebsites.net/fhir/Questionnaire?title=Argonaut+Questionnaire+Sampler&amp;_snapshot=636856439385709973"
+      },
+      {
+         "relation": "next",
+         "url": "http://sqlonfhir-stu3.azurewebsites.net/fhir/Questionnaire?title=Argonaut+Questionnaire+Sampler&amp;_snapshot=636856439385709973&amp;_page=1"
+
+        ...[snipped for brevity]....
+      
+</code></pre></div></div>
+
+  </div>
+</div>
+<p><br /></p>
+
+<ul>
+  <li>
+    <p>based on its title and version:</p>
+
+    <p><code class="highlighter-rouge">GET [base]/Questionnaire?title=[title]&amp;version=[version]</code></p>
+  </li>
+</ul>
+
+<p>
+  <button class="btn-sm btn-info" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#example-fetch_q_tit_ver" aria-expanded="false" aria-controls="collapseExample">
+    Example Search by Title and Version...
+  </button>
+</p>
+
+<div class="collapse" id="example-fetch_q_tit_ver">
+  <div class="card card-body">
+      
+<p><strong>Request</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET http://sqlonfhir-stu3.azurewebsites.net/fhir/Questionnaire?title=Argonaut+Questionnaire+Sampler&amp;version=3.0.0
+
+User-Agent: python-requests/2.20.0
+Accept: application/fhir+json
+Content-Type: application/fhir+json
+[other headers]
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Response Code: 200 (OK)
+Content-Type: application/fhir+json; charset=utf-8
+Content-Location: http://sqlonfhir-stu3.azurewebsites.net/fhir/Bundle/urn:uuid:b5e40cf4865f46b3a00524b3dac8e364
+[other headers]
+
+
+{
+   "resourceType": "Bundle",
+   "id": "urn:uuid:b5e40cf4865f46b3a00524b3dac8e364",
+   "meta": {
+      "lastUpdated": "2019-02-13T08:38:59.164+00:00"
+   },
+   "type": "searchset",
+   "total": 1,
+   "link": [
+      {
+         "relation": "self",
+         "url": "http://sqlonfhir-stu3.azurewebsites.net/fhir/Questionnaire?title=Argonaut+Questionnaire+Sampler&amp;version=3.0.0&amp;_snapshot=636856439391647462"
+      }
+   ],
+   "entry": [
+      {
+         "fullUrl": "http://sqlonfhir-stu3.azurewebsites.net/fhir/Questionnaire/questionnaire-example-search",
+         "resource": {
+            "resourceType": "Questionnaire",
+            "id": "questionnaire-example-search",
+            "meta": {
+               "versionId": "19",
+               "lastUpdated": "2019-02-13T08:37:05.202+00:00",
+               "profile": [
+        "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"
+    ]
+    },
+    "text": {
+    "status": "generated",
+    "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;\r\n\t&lt;b&gt;Argonaut Questionnaire Sampler&lt;/b&gt;\r\n\t&lt;hr/&gt;\r\n\t\t&lt;span style=\"color: gray;\"&gt;Publisher:&lt;/span&gt; Argonaut Project\r\n&lt;/div&gt;\r\n"
+    },
+    "extension": [
+    {
+        "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timeLimit",
+        "valueDuration": {
+            "value": 5,
+            "unit": "minute",
+            "system": "http://unitsofmeasure.org",
+            "code": "min"
+        }
+    }
+    ],
+    "url": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-search",
+    "identifier": [
+    {
+        "system": "http://acme.org/q-identifiers",
+        "value": "questionnaire-example-sampler"
+    }
+    ],
+    "version": "3.0.0",
+    "title": "Argonaut Questionnaire Sampler",
+    "status": "draft",
+        ...[snipped for brevity]....
+
+</code></pre></div></div>
+
+  </div>
+</div>
+<p><br /></p>
+
+<p>Searching for <em>all</em> the active Questionnaires:</p>
+
+<p><code class="highlighter-rouge">GET [base]/Questionnaire?status=active</code></p>
+
+<p>
+  <button class="btn-sm btn-info" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#example-fetch_q_status" aria-expanded="false" aria-controls="collapseExample">
+    Example Search by Status...
+  </button>
+</p>
+
+<div class="collapse" id="example-fetch_q_status">
+  <div class="card card-body">
+      
+<p><strong>Request</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET http://sqlonfhir-stu3.azurewebsites.net/fhir/Questionnaire?status=active
+
+User-Agent: python-requests/2.20.0
+Accept: application/fhir+json
+Content-Type: application/fhir+json
+[other headers]
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Response Code: 200 (OK)
+Content-Type: application/fhir+json; charset=utf-8
+Content-Location: http://sqlonfhir-stu3.azurewebsites.net/fhir/Bundle/urn:uuid:abcbf2f079c74fab991edf1ad77cdbc6
+[other headers]
+
+    
+{
+   "resourceType": "Bundle",
+   "id": "urn:uuid:abcbf2f079c74fab991edf1ad77cdbc6",
+   "meta": {
+      "lastUpdated": "2019-02-13T08:38:59.852+00:00"
+   },
+   "type": "searchset",
+   "total": 23,
+   "link": [
+      {
+         "relation": "self",
+         "url": "http://sqlonfhir-stu3.azurewebsites.net/fhir/Questionnaire?status=active&amp;_snapshot=636856439398527001"
+      },
+      {
+         "relation": "first",
+         "url": "http://sqlonfhir-stu3.azurewebsites.net/fhir/Questionnaire?status=active&amp;_snapshot=636856439398527001"
+      },
+      {
+         "relation": "next",
+         "url": "http://sqlonfhir-stu3.azurewebsites.net/fhir/Questionnaire?status=active&amp;_snapshot=636856439398527001&amp;_page=1"
+      },
+      {
+         "relation": "last",
+        ...[snipped for brevity]....
+      
+</code></pre></div></div>
+
+  </div>
+</div>
+<p><br /></p>
+
+<p>Searching for <em>all</em> the active Questionnaires by a particular publisher :</p>
+
+<p><code class="highlighter-rouge">GET [base]/Questionnaire?status=active&amp;publisher=[publisher]</code></p>
+
+<p>
+  <button class="btn-sm btn-info" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#example-fetch_q_status" aria-expanded="false" aria-controls="collapseExample">
+    Example Search by Status and Publisher...
+  </button>
+</p>
+
+<div class="collapse" id="example-fetch_q_status">
+  <div class="card card-body">
+      
+<p><strong>Request</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET http://sqlonfhir-stu3.azurewebsites.net/fhir/Questionnaire?status=active
+
+User-Agent: python-requests/2.20.0
+Accept: application/fhir+json
+Content-Type: application/fhir+json
+[other headers]
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Response Code: 200 (OK)
+Content-Type: application/fhir+json; charset=utf-8
+Content-Location: http://sqlonfhir-stu3.azurewebsites.net/fhir/Bundle/urn:uuid:abcbf2f079c74fab991edf1ad77cdbc6
+[other headers]
+
+    
+{
+   "resourceType": "Bundle",
+   "id": "urn:uuid:abcbf2f079c74fab991edf1ad77cdbc6",
+   "meta": {
+      "lastUpdated": "2019-02-13T08:38:59.852+00:00"
+   },
+   "type": "searchset",
+   "total": 23,
+   "link": [
+      {
+         "relation": "self",
+         "url": "http://sqlonfhir-stu3.azurewebsites.net/fhir/Questionnaire?status=active&amp;_snapshot=636856439398527001"
+      },
+      {
+         "relation": "first",
+         "url": "http://sqlonfhir-stu3.azurewebsites.net/fhir/Questionnaire?status=active&amp;_snapshot=636856439398527001"
+      },
+      {
+         "relation": "next",
+         "url": "http://sqlonfhir-stu3.azurewebsites.net/fhir/Questionnaire?status=active&amp;_snapshot=636856439398527001&amp;_page=1"
+      },
+      {
+         "relation": "last",
+        ...[snipped for brevity]....
+      
+</code></pre></div></div>
+
+  </div>
+</div>
+<p><br /></p>
+
+<p>Searching for a <em>collection</em> of Questionnaires based on context-type and context-value(think category):</p>
+
+<p><code class="highlighter-rouge">GET [base]/Questionnaire?context-code-value=[code]&amp;[value]</code></p>
+
+<p>
+  <button class="btn-sm btn-info" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#example-fetch_q_context" aria-expanded="false" aria-controls="collapseExample">
+    Example Search by Use Context...
+  </button>
+</p>
+
+<div class="collapse" id="example-fetch_q_context">
+  <div class="card card-body">
+      
+<p><strong>Request</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET http://sqlonfhir-stu3.azurewebsites.net/fhir/Questionnaire?context-code=task&amp;value=example
+
+User-Agent: python-requests/2.20.0
+Accept: application/fhir+json
+Content-Type: application/fhir+json
+[other headers]
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Response Code: 200 (OK)
+Content-Type: application/fhir+json; charset=utf-8
+Content-Location: http://sqlonfhir-stu3.azurewebsites.net/fhir/Bundle/urn:uuid:f43f23115d954cd28716556d7bb26287
+[other headers]
+
+    
+{
+   "resourceType": "Bundle",
+   "id": "urn:uuid:f43f23115d954cd28716556d7bb26287",
+   "meta": {
+      "lastUpdated": "2019-02-13T08:39:00.883+00:00"
+   },
+   "type": "searchset",
+   "total": 67,
+   "link": [
+      {
+         "relation": "self",
+         "url": "http://sqlonfhir-stu3.azurewebsites.net/fhir/Questionnaire?context-code=task&amp;value=example&amp;_snapshot=636856439408835095"
+      },
+      {
+         "relation": "first",
+         "url": "http://sqlonfhir-stu3.azurewebsites.net/fhir/Questionnaire?context-code=task&amp;value=example&amp;_snapshot=636856439408835095"
+      },
+      {
+         "relation": "next",
+         "url": "http://sqlonfhir-stu3.azurewebsites.net/fhir/Questionnaire?context-code=task&amp;value=example&amp;_snapshot=636856439408835095&amp;_page=1"
+
+        ...[snipped for brevity]....
+      
+</code></pre></div></div>
+
+  </div>
+</div>
+<p><br /></p>
+
+<h3 id="client-application-renders-and-displays-the-form">Client Application Renders And Displays The Form</h3>
 
 <p>The assessment is rendered and displayed to the end user (for example, as an online form ) to be completed by the subject or the provider administrator.   How the form is rendered and displayed are out of scope for this guide.</p>
 
 <!-- >{% include img.html img="diagrams/Slide30.png" caption="Appointment Availability Discovery and Search" %} -->
 
-<h3 id="the-end-user-completes-the-assessment">The End User Completes The Assessment</h3>
+<h3 id="end-user-completes-the-assessment">End User Completes The Assessment</h3>
 
-<p>The responses to the assessment are captured by the Provider EHR. In addition to the recording the response, they are associated with the Assessment and the individual Question on the form.  The Provider EHR may calculate a scored based on the associated scores associated with each item.  How the score is calculated may be described in the Questionnaire, although the actual logic is left to the implementation.  The QuestionnaireResponse may be used to persist the response data.  How the QuestionnaireResponse gets populated is beyond the scope of this IG.</p>
+<p>The responses to the assessment are captured by the Client Application. It may also  calculate a scored based on the associated values associated with each item via the <a href="http://hl7.org/fhir/STU3/extension-questionnaire-ordinalvalue.html" title="A numeric value that allows the comparison (less than, greater than) or other numerical manipulation of a concept (e.g. adding up components of a score).">Questionnaire Ordinal Value Extension</a>.  How the score is calculated may be described within the Questionnaire, often as a hidden display item. The actual logic and calculation is an implementation detail outside of scope of this Implementation Guide.</p>
 
-<h3 id="the-provider-ehr-posts-responses-to-the-answer-bank">The Provider EHR Posts Responses to the Answer Bank</h3>
+<p>The QuestionnaireResponse resource may be used to capture, exchange and persist the response data.  It represents the response data to the individual questions on the form and is ordered and grouped corresponding to the structure and grouping of the Questionnaire being responded to. How the QuestionnaireResponse gets populated is beyond the scope of this IG.</p>
 
-<p>…todo…</p>
+<p>Time limits for completion of a questionnaire or individual question can be defined in the <a href="StructureDefinition-extension-timeLimit.html">Argonaut Questionnaire Time Limit Extension</a>.  The Client Application may record the start and stop date-times in the <a href="StructureDefinition-extension-responsePeriod.html" title="The start and stop date-times for completing a questionnaire or a questionnnaire item or group.">Argonaut QuestionnaireResponse Response Period Extension</a> which can be used to determine whether the questionnaire or items were answered within the prescribed time limit.  How this information modifies the behavior of the Form-filler or interpretation of results is an implementation detail outside of scope of this Implementation Guide.</p>
+
+<h3 id="provider-ehr-posts-to-answer-bank">Provider EHR Posts to Answer Bank</h3>
+
+<!-- all this Bootstrap html for getting an image to fit nicely in text - 640 pix wide -->
+
+<!-- file:///assets/images/st-step3.jpg -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>.</strong></figcaption>
+  <img src="assets/images/st-step3.jpg" class="figure-img-narrow img-responsive img-rounded center-block" alt="st-step3.jpg" />
+</figure>
+
+<p></p>
+</div>
+
+<p>The responses captured as QuestionnaireResponse are are uploaded to an Answer Bank where they can be retrieved for subsequent use and analysis.  As is defined in the Argonaut QuestionnaireResponse Profile, a <a href="http://hl7.org/fhir/STU3/references.html#contained">contained</a> Patient resource may inserted in order to facilitate subsequent analysis as described below. The QuestionnaireResponse resource can be validated against the corresponding Questionnaire to verify that required groups and questions are answered and that answers fit constraints in terms of cardinality, data type, etc.</p>
 
 <h4 class="no_toc" id="apis-2">APIs</h4>
 
 <p>The following Argonaut Questionnaire artifacts are used in this transaction:</p>
 
 <ul>
-  <li><strong><a href="StructureDefinition-qr.html" title="Argonaut QuestionnaireResponse Profile">Argonaut QuestionnaireResponse Profile</a></strong>.</li>
+  <li><strong><a href="StructureDefinition-argo-questionnaireresponse.html">Argonaut QuestionnaireResponse Profile</a></strong></li>
 </ul>
 
 <h4 class="no_toc" id="usage-2">Usage</h4>
 
-<p>POSTing a <em>single</em> QuestionnaireResponse:</p>
+<p>create a <em>single</em> QuestionnaireResponse:</p>
 
-<p><code class="highlighter-rouge">POST [base]/QuestionnaireResponse/</code>`</p>
+<p><code class="highlighter-rouge">POST [base]/QuestionnaireResponse</code></p>
 
 <p>
-  <button class="btn btn-info btn-lg btn-block" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#example-step6" aria-expanded="false" aria-controls="collapseExample">
-    Example
+  <button class="btn-sm btn-info" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#example-create_qr" aria-expanded="false" aria-controls="collapseExample">
+    Example Create...
   </button>
 </p>
 
-<div class="collapse" id="example-step6">
+<div class="collapse" id="example-create_qr">
   <div class="card card-body">
-      <div class="highlighter-rouge"><pre class="highlight"><code>example
-...
-</code></pre>
-</div>
+      
+<p><strong>Request</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireResponse
+
+User-Agent: python-requests/2.20.0
+Accept: application/fhir+json
+Content-Type: application/fhir+json
+[other headers]
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Response Code: 201 (Created)
+Content-Type: application/fhir+json; charset=utf-8
+Content-Location: http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireResponse/2dcdb4a057b941c9b3ad0c8d5bf68d42/_history/1
+[other headers]
+
+    
+{
+   "resourceType": "QuestionnaireResponse",
+   "id": "2dcdb4a057b941c9b3ad0c8d5bf68d42",
+   "meta": {
+      "versionId": "1",
+      "lastUpdated": "2019-02-13T09:07:09.672+00:00",
+      "profile": [
+         "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaireresponse"
+      ]
+   },
+   "text": {
+      "status": "generated",
+      "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;\n    &lt;h3&gt;Response Summary&lt;/h3&gt;\n    &lt;strong&gt;Questionnaire URL:&lt;/strong&gt; http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-sampler&lt;br /&gt;\n    &lt;strong&gt;Date Completed:&lt;/strong&gt; 2019-02-13T00:39:38.320181Z&lt;br /&gt;\n    &lt;hr /&gt; &lt;br /&gt;&lt;strong&gt;The Argonaut Questionnaire Sampler is designed to show all the question types that can be used in the Argonaut Questionnaire Project:\n\n1 boolean\n2 decimal\n3 int
+        ...[snipped for brevity]....
+      
+</code></pre></div></div>
 
   </div>
 </div>
 <p><br /></p>
 
-<h3 id="the-provider-ehr-retrieves-the-assessment-responses-from-the-answer-bank">The Provider EHR Retrieves The Assessment Responses from the Answer Bank</h3>
+<p>update a <em>single</em> QuestionnaireResponse::</p>
 
-<p>The responses to the assessment are retrieved by the practitioner or provider administrator for review and possibly manual processing such as scoring.  The Form associated with the responses may be retrieved at the same time as well.  The QuestionnaireResponse is used to represent the response data in response to the query. In addition to the recording the responses, the responses are associated with the Assessment and the individual Question on the form.  The QuestionnaireResponse resource can be validated against the corresponding Questionnaire to verify that required groups and questions are answered and that answers fit constraints in terms of cardinality, data type, etc.</p>
+<p><code class="highlighter-rouge">PUT [base]/QuestionnaireResponse/[id]</code></p>
+
+<p>
+  <button class="btn-sm btn-info" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#example-update_qr" aria-expanded="false" aria-controls="collapseExample">
+    Example Update...
+  </button>
+</p>
+
+<div class="collapse" id="example-update_qr">
+  <div class="card card-body">
+      
+<p><strong>Request</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PUT http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireResponse/questionnaireresponse-example-search
+
+User-Agent: python-requests/2.20.0
+Accept: application/fhir+json
+Content-Type: application/fhir+json
+[other headers]
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Response Code: 201 (Created)
+Content-Type: application/fhir+json; charset=utf-8
+Content-Location: http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireResponse/questionnaireresponse-example-search/_history/1
+[other headers]
+
+    
+{
+   "resourceType": "QuestionnaireResponse",
+   "id": "questionnaireresponse-example-search",
+   "meta": {
+      "versionId": "1",
+      "lastUpdated": "2019-02-13T09:07:10.464+00:00",
+      "profile": [
+         "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaireresponse"
+      ]
+   },
+   "text": {
+      "status": "generated",
+      "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;\n    &lt;h3&gt;Response Summary&lt;/h3&gt;\n    &lt;strong&gt;Questionnaire URL:&lt;/strong&gt; http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-sampler&lt;br /&gt;\n    &lt;strong&gt;Date Completed:&lt;/strong&gt; 2019-02-13T00:39:38.320181Z&lt;br /&gt;\n    &lt;hr /&gt; &lt;br /&gt;&lt;strong&gt;The Argonaut Questionnaire Sampler is designed to show all the question types that can be used in the Argonaut Questionnaire Project:\n\n1 boolean\n2 decimal\n3
+        ...[snipped for brevity]....
+      
+</code></pre></div></div>
+
+  </div>
+</div>
+<p><br /></p>
+
+<p>create <em>multiple</em> QuestionnaireResponses using a [batch] transaction:</p>
+
+<p><code class="highlighter-rouge">POST/[base]</code></p>
+
+<p>
+  <button class="btn-sm btn-info" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#example-batch_qr" aria-expanded="false" aria-controls="collapseExample">
+    Example Batch Create/Update...
+  </button>
+</p>
+
+<div class="collapse" id="example-batch_qr">
+  <div class="card card-body">
+      
+<p><strong>Request</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST http://sqlonfhir-stu3.azurewebsites.net/fhir
+
+User-Agent: python-requests/2.20.0
+Accept: application/fhir+json
+Content-Type: application/fhir+json
+[other headers]
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Response Code: 200 (OK)
+Content-Type: application/fhir+json; charset=utf-8
+[other headers]
+
+    
+{
+   "resourceType": "Bundle",
+   "type": "transaction-response",
+   "total": 14,
+   "entry": [
+      {
+         "fullUrl": "http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireResponse/questionnaire-example-delete",
+         "resource": {
+            "resourceType": "QuestionnaireResponse",
+            "id": "questionnaire-example-delete",
+            "meta": {
+               "versionId": "8",
+               "lastUpdated": "2019-02-13T09:55:57.695+00:00",
+               "profile": [
+                  "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaireresponse"
+               ]
+            },
+            "text": {
+               "status": "generated",
+               "div": "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;&lt;h3&gt;Response Summary&lt;/h3&gt;&lt;strong&gt;Questionnaire URL:&lt;/strong&gt; http://fhir.org/guides
+        ...[snipped for brevity]....
+      
+</code></pre></div></div>
+
+  </div>
+</div>
+<p><br /></p>
+
+<h3 id="provider-ehr-searches-answer-bank">Provider EHR Searches Answer Bank</h3>
+
+<!-- all this Bootstrap html for getting an image to fit nicely in text - 640 pix wide -->
+
+<!-- file:///assets/images/st-step4.jpg -->
+
+<div>
+<figure class="figure">
+<figcaption class="figure-caption"><strong>.</strong></figcaption>
+  <img src="assets/images/st-step4.jpg" class="figure-img-narrow img-responsive img-rounded center-block" alt="st-step4.jpg" />
+</figure>
+
+<p></p>
+</div>
+
+<p>Responses to the assessment are retrieved for a variety of purposes. QuestionnaireResponse can be searched using the standard QuestionnaireResponse search parameters listed below.  If the Answer Bank has access to the Questionnaire resource, searches may fetch the Questionnaire at the same time as well using the <a href="http://hl7.org/fhir/STU3/search.html#revinclude"><code class="highlighter-rouge">_include</code></a> parameter.   <strong>Note that individual responses are not directly searchable using the FHIR RESTful API</strong>.  In order to search directly on responses, they must be “downloaded” into a searchable form - i.e. to a local  FHIR or non-FHIR data store such as a database or FHIR Observations.</p>
+
+<h4 id="patient-demographic-based-searches">Patient Demographic Based Searches</h4>
+
+<p>It is common to search for responses based on patient demographic information such as such as age, sex, race, location. There are three options for searching based on the subject demographics:</p>
+
+<ol>
+  <li>
+    <p>If the Answer Bank has access the subject’s Patient resource, a [chained] query can be performed using the <code class="highlighter-rouge">subject</code> reference parameter as detailed below.</p>
+  </li>
+  <li>
+    <p>When the Answer Bank does not have access to the subject’s Patient resource, a <a href="http://hl7.org/fhir/STU3/references.html#contained">contained</a> patient resource in the QuestionnaireResponse can be used to allow for searching on the Patient.  If the Answer Bank is in an untrusted environment such as a external shared server, the contained patient resource should only represent the minimum de-identified data necessary to perform the search -  e.g. a resource with month/year of birth, sex, race/ethnicity, and first two or three digits of US zip code.  The search syntax is detailed below.</p>
+  </li>
+  <li>
+    <p>As stated above, individual responses to answers to questions like age, race, sex and location are not directly searchable through QuestionnaireResponse and can be converted to a searchable form for direct access.  This approach to search is outside the scope of this implementation guide.</p>
+  </li>
+</ol>
 
 <!-- >{% include img.html img="diagrams/Slide30.png" caption="Appointment Availability Discovery and Search" %} -->
-
-<!-- TODO -->
-<p><em>Discuss how to deal with incomplete or dupicate sets of answers by the same subject <a href="index.html#outstanding-issuesfuture-scope">see issues</a>.</em></p>
 
 <p>The standard <a href="http://hl7.org/fhir/STU3/search.html">FHIR RESTful search API</a> is used with the following <em>mandatory</em> search parameters:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">_id</code></li>
-  <li><code class="highlighter-rouge">questionnaire</code></li>
-  <li><code class="highlighter-rouge">patient</code></li>
-  <li><code class="highlighter-rouge">context</code></li>
-  <li><code class="highlighter-rouge">status</code></li>
+  <li><a href="http://hl7.org/fhir/STU3/search.html#id" title="The search parameter _id refers to the logical id of the resource, and can be used when the search context specifies a resource type"><code class="highlighter-rouge">_id</code></a></li>
+  <li><a href="SearchParameter-QuestionnaireResponse-questionnaire.html"><code class="highlighter-rouge">questionnaire</code></a></li>
+  <li><a href="SearchParameter-QuestionnaireResponse-patient.html"><code class="highlighter-rouge">patient</code></a></li>
+  <li><a href="SearchParameter-QuestionnaireResponse-context.html"><code class="highlighter-rouge">context</code></a></li>
+  <li><a href="SearchParameter-QuestionnaireResponse-status.html"><code class="highlighter-rouge">status</code> (QuestionnaireResponse)</a></li>
 </ul>
 
 <p>and the following <em>optional</em> search parameters:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">author</code></li>
-  <li><code class="highlighter-rouge">source</code></li>
+  <li><a href="SearchParameter-QuestionnaireResponse-author.html"><code class="highlighter-rouge">author</code></a></li>
+  <li><a href="SearchParameter-QuestionnaireResponse-source.html"><code class="highlighter-rouge">source</code></a></li>
 </ul>
 
-<p><em>DISCUSS whether to add the following on call</em></p>
-
-<p>For the convenience of the client, the server may support including the Questionnaire using the following <em>optional</em> search parameter:</p>
+<p>and the following <em>optional</em> chained search parameters:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">\_include</code>  Note that this path references a resource on the Assessment Bank server which is typically another server.</li>
+  <li><code class="highlighter-rouge">patient.gender</code></li>
+  <li><code class="highlighter-rouge">patient.birthdate</code> (with support for date prefixes <code class="highlighter-rouge">le</code> and <code class="highlighter-rouge">ge</code> and )</li>
+  <li><code class="highlighter-rouge">patient.race</code></li>
+  <li><code class="highlighter-rouge">patient.ethnicity</code></li>
+  <li><code class="highlighter-rouge">patient.address-postalcode</code></li>
+</ul>
+
+<p>For the convenience of the client, the Answer Bank may support including the Questionnaire using the following <em>optional</em> search parameter:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">_include</code>  Note that this path references a resource on the Assessment Bank server which is typically another server.</li>
 </ul>
 
 <h4 class="no_toc" id="apis-3">APIs</h4>
@@ -525,8 +1329,8 @@ Each assessment tool (i.e., set of questions and answer choices) is created once
 <p>The following Argonaut Questionnaire artifacts are used in this transaction:</p>
 
 <ul>
-  <li><strong><a href="StructureDefinition-q.html" title="Argonaut Questionnaire Profile">Argonaut Questionnaire Profile</a></strong>.</li>
-  <li><strong><a href="StructureDefinition-qr.html" title="Argonaut QuestionnaireResponse Profile">Argonaut QuestionnaireResponse Profile</a></strong>.</li>
+  <li><strong><a href="StructureDefinition-argo-questionnaire.html" title="Argonaut Questionnaire Profile">Argonaut Questionnaire Profile</a></strong></li>
+  <li><strong><a href="StructureDefinition-argo-questionnaireresponse.html" title="Argonaut QuestionnaireResponse Profile">Argonaut QuestionnaireResponse Profile</a></strong></li>
 </ul>
 
 <h4 class="no_toc" id="usage-3">Usage</h4>
@@ -537,14 +1341,143 @@ Each assessment tool (i.e., set of questions and answer choices) is created once
   <li>
     <p>based on its id:</p>
 
-    <p><code class="highlighter-rouge">GET [base]/QuestionnaireResponse/[id]</code></p>
+    <p><code class="highlighter-rouge">GET [base]/QuestionnaireResponse/[id]</code> or  <code class="highlighter-rouge">GET [base]/QuestionnaireResponse?_id=[id]</code></p>
   </li>
+</ul>
+
+<p>
+  <button class="btn-sm btn-info" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#example-fetch_qr_id" aria-expanded="false" aria-controls="collapseExample">
+    Example Search by ID...
+  </button>
+</p>
+
+<div class="collapse" id="example-fetch_qr_id">
+  <div class="card card-body">
+      
+<p><strong>Request</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireResponse?_id=questionnaireresponse-example-search
+
+User-Agent: python-requests/2.20.0
+Accept: application/fhir+json
+Content-Type: application/fhir+json
+[other headers]
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Response Code: 200 (OK)
+Content-Type: application/fhir+json; charset=utf-8
+[other headers]
+
+    
+{
+   "resourceType": "Bundle",
+   "id": "urn:uuid:c10d8e84d0924f25a832868b9581670d",
+   "meta": {
+      "lastUpdated": "2019-02-13T10:28:27.237+00:00"
+   },
+   "type": "searchset",
+   "total": 1,
+   "link": [
+      {
+         "relation": "self",
+         "url": "http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireResponse?_id=questionnaireresponse-example-search&amp;_snapshot=636856505072374718"
+      }
+   ],
+   "entry": [
+      {
+         "fullUrl": "http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireResponse/questionnaireresponse-example-search",
+         "resource": {
+            "resourceType": "QuestionnaireResponse",
+            "id": "questionnaireresponse-example-search",
+            "meta": {
+               "versionId": "1",
+        ...[snipped for brevity]....
+      
+</code></pre></div></div>
+
+  </div>
+</div>
+<p><br /></p>
+
+<ul>
   <li>
     <p>based on its id and include the Questionnaire:</p>
 
     <p><code class="highlighter-rouge">GET [base]/QuestionnaireResponse?_id=[id]&amp;_include=QuestionnaireResponse:questionnaire</code></p>
   </li>
 </ul>
+
+<p>
+  <button class="btn-sm btn-info" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#example-fetch_qr_id_q" aria-expanded="false" aria-controls="collapseExample">
+    Example Search by ID with Questionnaire...
+  </button>
+</p>
+
+<div class="collapse" id="example-fetch_qr_id_q">
+  <div class="card card-body">
+      
+<p><strong>Request</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireResponse?_id=questionnaireresponse-example-search&amp;_include=QuestionnaireResponse%3Aquestionnaire
+
+User-Agent: python-requests/2.20.0
+Accept: application/fhir+json
+Content-Type: application/fhir+json
+[other headers]
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Response Code: 200 (OK)
+Content-Type: application/fhir+json; charset=utf-8
+[other headers]
+
+
+{
+   "resourceType": "Bundle",
+   "id": "urn:uuid:25162d3c0d1241348e129bf592fe20a0",
+   "meta": {
+      "lastUpdated": "2019-02-13T10:28:28.112+00:00"
+   },
+   "type": "searchset",
+   "total": 1,
+   "link": [
+      {
+         "relation": "self",
+         "url": "http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireResponse?_id=questionnaireresponse-example-search&amp;_include=QuestionnaireResponse%3Aquestionnaire&amp;_snapshot=636856505081124854"
+      }
+   ],
+   "entry": [
+      {
+         "fullUrl": "http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireResponse/questionnaireresponse-example-search",
+         "resource": {
+            "resourceType": "QuestionnaireResponse",
+            "id": "questionnaireresponse-example-search",
+            "meta": {
+
+        ...[snipped for brevity]....
+
+
+   "resourceType": "Questionnaire",
+   "id": "questionnaire-example-sampler",
+   "meta": {
+      "versionId": "1",
+      "lastUpdated": "2019-02-13T05:57:59.507-05:00",
+      "profile": [
+        "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"
+      ]
+    },
+  "text": {
+
+        ...[snipped for brevity]....
+
+</code></pre></div></div>
+
+  </div>
+</div>
+<p><br /></p>
 
 <p>Searching for <em>all</em> the completed QuestionnaireResponses</p>
 
@@ -554,12 +1487,148 @@ Each assessment tool (i.e., set of questions and answer choices) is created once
 
     <p><code class="highlighter-rouge">GET [base]/QuestionnaireResponse/?status=completed&amp;questionnaire=[questionnaire url]</code></p>
   </li>
+</ul>
+
+<p>
+  <button class="btn-sm btn-info" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#example-fetch_qr_status_q" aria-expanded="false" aria-controls="collapseExample">
+    Completed QuestionnaireResponses for a Single Assessment
+  </button>
+</p>
+
+<div class="collapse" id="example-fetch_qr_status_q">
+  <div class="card card-body">
+      
+<p><strong>Request</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireResponse?status=completed&amp;questionnaire=questionnaire-example-search
+
+User-Agent: python-requests/2.20.0
+Accept: application/fhir+json
+Content-Type: application/fhir+json
+[other headers]
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Response Code: 200 (OK)
+Content-Type: application/fhir+json; charset=utf-8
+[other headers]
+
+    
+{
+   "resourceType": "Bundle",
+   "id": "urn:uuid:1e79af295b464c7a95e037ed445bd03b",
+   "meta": {
+      "lastUpdated": "2019-02-13T10:28:30.82+00:00"
+   },
+   "type": "searchset",
+   "total": 2,
+   "link": [
+      {
+         "relation": "self",
+         "url": "http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireResponse?status=completed&amp;questionnaire=questionnaire-example-search&amp;_snapshot=636856505108205642"
+      }
+   ],
+   "entry": [
+      {
+         "fullUrl": "http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireResponse/questionnaireresponse-example-search",
+         "resource": {
+            "resourceType": "QuestionnaireResponse",
+            "id": "questionnaireresponse-example-search",
+            "meta": {
+               "versionId": "1",
+        ...[snipped for brevity]....
+      
+</code></pre></div></div>
+
+  </div>
+</div>
+<p><br /></p>
+
+<ul>
   <li>
     <p>based on a patient encounter:</p>
 
     <p><code class="highlighter-rouge">GET [base]/QuestionnaireResponse/?status=completed&amp;patient=Patient/[patient]&amp;context=Encounter/[encounter]</code></p>
   </li>
 </ul>
+
+<p>
+  <button class="btn-sm btn-info" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#example-fetch_qr_status_enc" aria-expanded="false" aria-controls="collapseExample">
+    Completed QuestionnaireResponses for a Single Encounter
+  </button>
+</p>
+
+<div class="collapse" id="example-fetch_qr_status_enc">
+  <div class="card card-body">
+      
+<p><strong>Request</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireResponse?status=completed&amp;patient=subject1&amp;context=encounter2
+
+User-Agent: python-requests/2.20.0
+Accept: application/fhir+json
+Content-Type: application/fhir+json
+[other headers]
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Response Code: 200 (OK)
+Content-Type: application/fhir+json; charset=utf-8
+[other headers]
+
+
+{
+   "resourceType": "Bundle",
+   "id": "urn:uuid:e9a87fdd8b244ca4ab4ee4a29caef4b1",
+   "meta": {
+      "lastUpdated": "2019-02-13T11:15:50.915+00:00"
+   },
+   "type": "searchset",
+   "total": 1,
+   "link": [
+      {
+         "relation": "self",
+         "url": "http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireResponse?status=completed&amp;patient=subject1&amp;context=encounter2&amp;_snapshot=636856533509154158"
+      }
+   ],
+   "entry": [
+      {
+         "fullUrl": "http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireResponse/questionnaireresponse-example-phq9-enc2",
+         "resource": {
+            "resourceType": "QuestionnaireResponse",
+            "id": "questionnaireresponse-example-phq9-enc2",
+            "meta": {
+               "versionId": "2",
+               "lastUpdated": "2018-07-27T20:36:40.103+00:00",
+               "profile": [
+                  "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaireresponse"
+               ]
+            },
+            "identifier": {
+               "value": "test"
+            },
+            "questionnaire": {
+               "reference": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9"
+            },
+            "status": "completed",
+            "subject": {
+               "reference": "Patient/subject1"
+            },
+            "context": {
+               "reference": "Encounter/encounter2"
+            },
+            "authored": "2018-07-27T04:04:33.927848",
+            "author": {
+
+        ...[snipped for brevity]....
+
+</code></pre></div></div>
+
+  </div>
+</div>
+<p><br /></p>
 
 <p>Searching for <em>all</em> QuestionnaireResponses with any status</p>
 
@@ -568,92 +1637,391 @@ Each assessment tool (i.e., set of questions and answer choices) is created once
     <p>based on who administered it:</p>
 
     <p><code class="highlighter-rouge">GET [base]/QuestionnaireResponse/?source=Practitioner/[practitioner]</code></p>
-
-    <p><code class="highlighter-rouge">GET [base]/QuestionnaireResponse/?author=Practitioner/[practitioner]</code></p>
   </li>
 </ul>
 
 <p>
-  <button class="btn btn-info btn-lg btn-block" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#example-step6" aria-expanded="false" aria-controls="collapseExample">
-    Example
+  <button class="btn-sm btn-info" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#example-fetch_qr_source" aria-expanded="false" aria-controls="collapseExample">
+    Search QuestionnaireResponses by Provider
   </button>
 </p>
 
-<div class="collapse" id="example-step6">
+<div class="collapse" id="example-fetch_qr_source">
   <div class="card card-body">
-      <div class="highlighter-rouge"><pre class="highlight"><code>example
-...
-</code></pre>
-</div>
+      
+<p><strong>Request</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireResponse?source=prov-admin1
+
+User-Agent: python-requests/2.20.0
+Accept: application/fhir+json
+Content-Type: application/fhir+json
+[other headers]
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Response Code: 200 (OK)
+Content-Type: application/fhir+json; charset=utf-8
+[other headers]
+
+
+{
+   "resourceType": "Bundle",
+   "id": "urn:uuid:f32aa17a75c8422199796e30761b5c47",
+   "meta": {
+      "lastUpdated": "2019-02-13T11:34:49.427+00:00"
+   },
+   "type": "searchset",
+   "total": 1,
+   "link": [
+      {
+         "relation": "self",
+         "url": "http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireResponse?source=prov-admin1&amp;_snapshot=636856544894273541"
+      }
+   ],
+   "entry": [
+      {
+         "fullUrl": "http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireResponse/05b19f1aa2bb42049e0876912ec7880b",
+         "resource": {
+            "resourceType": "QuestionnaireResponse",
+            "id": "05b19f1aa2bb42049e0876912ec7880b",
+            "meta": {
+               "versionId": "1",
+               "lastUpdated": "2019-02-13T11:28:34.913+00:00",
+               "profile": [
+
+        ...[snipped for brevity]....
+
+          "authored": "2019-02-13T00:39:38.320181Z",
+          "author": {
+              "reference": "Practitioner/prov-admin1"
+          },
+          "source": {
+              "reference": "Practitioner/prov-admin1"
+          },
+
+        ...[snipped for brevity]....
+
+
+
+</code></pre></div></div>
 
   </div>
 </div>
 <p><br /></p>
 
-<!--
+<p><code class="highlighter-rouge">GET [base]/QuestionnaireResponse/?author=Practitioner/[practitioner]</code></p>
 
-###  The Assessment Responses Are Analyzed And Shared Across Organizations
-{:.no_toc}
+<p>
+  <button class="btn-sm btn-info" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#example-fetch_qr_author" aria-expanded="false" aria-controls="collapseExample">
+    Search QuestionnaireResponses by Provider
+  </button>
+</p>
 
-The assessment responses are shared with the program administrators using the QuestionnaireResponse resource. By capturing the data in standard structured way, it can be readily processed.  The assessment may be reference to a Questionnaire resource that defines the questions as well as the constraints on the allowed answers.
--->
-<!-- >{% include img.html img="diagrams/Slide30.png" caption="Appointment Availability Discovery and Search" %} -->
-<!--
+<div class="collapse" id="example-fetch_qr_author">
+  <div class="card card-body">
+      
+<p><strong>Request</strong></p>
 
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireResponse?author=prov-admin1
 
+User-Agent: python-requests/2.20.0
+Accept: application/fhir+json
+Content-Type: application/fhir+json
+[other headers]
+</code></pre></div></div>
 
-Discuss - is this a push?    in scope?
+<p><strong>Response</strong></p>
 
-
-
-#### APIs
-{:.no_toc}
-
-The following Argonaut Questionnaire artifacts are used in this transaction:
-
-- **[Argonaut Questionnaire Profile](optionally)**.
-- **[Argonaut QuestionnaireResponse Profile]**.
-
-#### Usage
-
-{:.no_toc}
-
-...todo...
-
-{% include examplebutton.html example="example-step6" %}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Response Code: 200 (OK)
+Content-Type: application/fhir+json; charset=utf-8
+[other headers]
 
 
+{
+   "resourceType": "Bundle",
+   "id": "urn:uuid:fde5eb3ec033455f9d482bd37cde379c",
+   "meta": {
+      "lastUpdated": "2019-02-13T11:34:49.958+00:00"
+   },
+   "type": "searchset",
+   "total": 75,
+   "link": [
+      {
+         "relation": "self",
+         "url": "http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireResponse?author=prov-admin1&amp;_snapshot=636856544899585969"
+      },
+      {
+         "relation": "first",
+         "url": "http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireResponse?author=prov-admin1&amp;_snapshot=636856544899585969"
+      },
+      {
+         "relation": "next",
+         "url": "http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireResponse?author=prov-admin1&amp;_snapshot=636856544899585969&amp;_page=1"
+      },
+      {
+         "relation": "last",
+         "url": "http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireRe
 
-###  Step
-{:.no_toc}
+        ...[snipped for brevity]....
 
-[description]
+          "authored": "2019-02-13T00:39:38.320181Z",
+          "author": {
+              "reference": "Practitioner/prov-admin1"
+          },
+          "source": {
+              "reference": "Practitioner/prov-admin1"
+          },
 
--->
+        ...[snipped for brevity]....
 
-<!-- {% include img.html img="diagrams/Slide30.png" caption="Appointment Availability Discovery and Search" %} -->
 
-<!--
+</code></pre></div></div>
 
-[optional more description]
+  </div>
+</div>
+<p><br /></p>
 
-#### APIs
-{:.no_toc}
+<p>Searching for all QuestionnaireResponses based upon patient demographics</p>
 
-The following Argonaut Questionnaire artifacts are used in this transaction:
+<ul>
+  <li>
+    <p>based on sex and age range:</p>
 
-- **[Argonaut Questionnaire Profile]**.
-- **[Argonaut QuestionnaireResponse Profile]**.
-- **[Other]**.
+    <p><code class="highlighter-rouge">GET [base]/QuestionnaireResponse/?patient.gender=[gender]&amp;patient.birthdate=ge[date]{&amp;patient.birthdate=lt[date]}</code></p>
+  </li>
+</ul>
 
-#### Usage
-{:.no_toc}
+<p>
+  <button class="btn-sm btn-info" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#example-fetch_qr_p1" aria-expanded="false" aria-controls="collapseExample">
+    Chained Search on QuestionnaireResponses by Patient Sex and Age
+  </button>
+</p>
 
-...todo...
+<div class="collapse" id="example-fetch_qr_p1">
+  <div class="card card-body">
+      
+<p><strong>Request</strong></p>
 
-{% include examplebutton.html example="example-step7" %}
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireResponse?patient.gender=female&amp;patient.birthdate=le2006
 
--->
+User-Agent: python-requests/2.20.0
+Accept: application/fhir+json
+Content-Type: application/fhir+json
+[other headers]
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Response Code: 500 (Internal Server Error)
+Content-Type: application/fhir+json; charset=utf-8
+[other headers]
+
+    
+{
+   "resourceType": "OperationOutcome",
+   "issue": [
+      {
+         "severity": "error",
+         "details": {
+            "text": "EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details."
+         }
+      },
+      {
+         "severity": "information",
+         "details": {
+            "text": "   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)\r\n   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)\r\n   at System.Data.Entity.Core.Objects.ObjectQuery`1.&lt;&gt;c__DisplayClass7.&lt;GetResults&gt;b__6()\r\n   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)\r\n   at System.Data.Entity.Core.Objects.ObjectQuery`1.&lt;&gt;c__DisplayClass7.&lt;GetResults&gt;b__5()\r\n   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)\r\n   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)\r\n   at System.Data.Entity.Core.Objects.ObjectQuery`1.&lt;System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator&gt;b__0()\r\n   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()\r\n   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)\r\n   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.&lt;GetElementFunction&gt;b__3[TResult](IEnumerable`1 sequence)\r\n   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)\r\n   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider
+        ...[snipped for brevity]....
+      
+</code></pre></div></div>
+
+  </div>
+</div>
+<p><br /></p>
+
+<ul>
+  <li>
+    <p>based on location:</p>
+
+    <p><code class="highlighter-rouge">GET [base]/QuestionnaireResponse/?patient.address-postalcode=[zip]</code></p>
+  </li>
+</ul>
+
+<p>
+  <button class="btn-sm btn-info" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#example-fetch_qr_p1" aria-expanded="false" aria-controls="collapseExample">
+    Chained Search on QuestionnaireResponses by Patient Address
+  </button>
+</p>
+
+<div class="collapse" id="example-fetch_qr_p1">
+  <div class="card card-body">
+      
+<p><strong>Request</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireResponse?patient.gender=female&amp;patient.birthdate=le2006
+
+User-Agent: python-requests/2.20.0
+Accept: application/fhir+json
+Content-Type: application/fhir+json
+[other headers]
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Response Code: 500 (Internal Server Error)
+Content-Type: application/fhir+json; charset=utf-8
+[other headers]
+
+    
+{
+   "resourceType": "OperationOutcome",
+   "issue": [
+      {
+         "severity": "error",
+         "details": {
+            "text": "EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details."
+         }
+      },
+      {
+         "severity": "information",
+         "details": {
+            "text": "   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)\r\n   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)\r\n   at System.Data.Entity.Core.Objects.ObjectQuery`1.&lt;&gt;c__DisplayClass7.&lt;GetResults&gt;b__6()\r\n   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)\r\n   at System.Data.Entity.Core.Objects.ObjectQuery`1.&lt;&gt;c__DisplayClass7.&lt;GetResults&gt;b__5()\r\n   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)\r\n   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)\r\n   at System.Data.Entity.Core.Objects.ObjectQuery`1.&lt;System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator&gt;b__0()\r\n   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()\r\n   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)\r\n   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.&lt;GetElementFunction&gt;b__3[TResult](IEnumerable`1 sequence)\r\n   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)\r\n   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider
+        ...[snipped for brevity]....
+      
+</code></pre></div></div>
+
+  </div>
+</div>
+<p><br /></p>
+
+<ul>
+  <li>
+    <p>based on ethnicity:</p>
+
+    <p><code class="highlighter-rouge">GET [base]/QuestionnaireResponse/?patient.ethnicity=[ethnicity code]</code></p>
+  </li>
+</ul>
+
+<p>
+  <button class="btn-sm btn-info" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#example-fetch_qr_p1" aria-expanded="false" aria-controls="collapseExample">
+    Chained Search on QuestionnaireResponses by Patient Ethnicity
+  </button>
+</p>
+
+<div class="collapse" id="example-fetch_qr_p1">
+  <div class="card card-body">
+      
+<p><strong>Request</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireResponse?patient.gender=female&amp;patient.birthdate=le2006
+
+User-Agent: python-requests/2.20.0
+Accept: application/fhir+json
+Content-Type: application/fhir+json
+[other headers]
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Response Code: 500 (Internal Server Error)
+Content-Type: application/fhir+json; charset=utf-8
+[other headers]
+
+    
+{
+   "resourceType": "OperationOutcome",
+   "issue": [
+      {
+         "severity": "error",
+         "details": {
+            "text": "EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details."
+         }
+      },
+      {
+         "severity": "information",
+         "details": {
+            "text": "   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)\r\n   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)\r\n   at System.Data.Entity.Core.Objects.ObjectQuery`1.&lt;&gt;c__DisplayClass7.&lt;GetResults&gt;b__6()\r\n   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)\r\n   at System.Data.Entity.Core.Objects.ObjectQuery`1.&lt;&gt;c__DisplayClass7.&lt;GetResults&gt;b__5()\r\n   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)\r\n   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)\r\n   at System.Data.Entity.Core.Objects.ObjectQuery`1.&lt;System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator&gt;b__0()\r\n   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()\r\n   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)\r\n   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.&lt;GetElementFunction&gt;b__3[TResult](IEnumerable`1 sequence)\r\n   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)\r\n   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider
+        ...[snipped for brevity]....
+      
+</code></pre></div></div>
+
+  </div>
+</div>
+<p><br /></p>
+
+<ul>
+  <li>
+    <p>based on race:</p>
+
+    <p><code class="highlighter-rouge">GET [base]/QuestionnaireResponse/?patient.race=[race code]</code></p>
+  </li>
+</ul>
+
+<p>
+  <button class="btn-sm btn-info" type="button" title="Click to Open or Close Example" data-toggle="collapse" data-target="#example-fetch_qr_p1" aria-expanded="false" aria-controls="collapseExample">
+    Chained Search on QuestionnaireResponses by Patient Race
+  </button>
+</p>
+
+<div class="collapse" id="example-fetch_qr_p1">
+  <div class="card card-body">
+      
+<p><strong>Request</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireResponse?patient.gender=female&amp;patient.birthdate=le2006
+
+User-Agent: python-requests/2.20.0
+Accept: application/fhir+json
+Content-Type: application/fhir+json
+[other headers]
+</code></pre></div></div>
+
+<p><strong>Response</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Response Code: 500 (Internal Server Error)
+Content-Type: application/fhir+json; charset=utf-8
+[other headers]
+
+    
+{
+   "resourceType": "OperationOutcome",
+   "issue": [
+      {
+         "severity": "error",
+         "details": {
+            "text": "EntityCommandExecutionException: An error occurred while executing the command definition. See the inner exception for details."
+         }
+      },
+      {
+         "severity": "information",
+         "details": {
+            "text": "   at System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)\r\n   at System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)\r\n   at System.Data.Entity.Core.Objects.ObjectQuery`1.&lt;&gt;c__DisplayClass7.&lt;GetResults&gt;b__6()\r\n   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)\r\n   at System.Data.Entity.Core.Objects.ObjectQuery`1.&lt;&gt;c__DisplayClass7.&lt;GetResults&gt;b__5()\r\n   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)\r\n   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)\r\n   at System.Data.Entity.Core.Objects.ObjectQuery`1.&lt;System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator&gt;b__0()\r\n   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()\r\n   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)\r\n   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.&lt;GetElementFunction&gt;b__3[TResult](IEnumerable`1 sequence)\r\n   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)\r\n   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider
+        ...[snipped for brevity]....
+      
+</code></pre></div></div>
+
+  </div>
+</div>
+<p><br /></p>
+
+<h3 id="examples-and-reference-implementation">Examples and Reference Implementation</h3>
+
+<p>Examples of Questionnaires and QuestionnaireResponses which demonstrate use of many of the the extensions and supported elements and question types can be found on the <a href="StructureDefinition-argo-questionnaire.html" title="Argonaut Questionnaire Profile">Argonaut Questionnaire Profile</a> and <a href="StructureDefinition-argo-questionnaireresponse.html" title="Argonaut QuestionnaireResponse Profile">Argonaut QuestionnaireResponse Profile</a> page.  In addition, the <a href="http://gettingstarte-cjfwz-env.us-west-2.elasticbeanstalk.com/">Argonaut Questionnaire Test Renderer</a>    simulates of the static form workflow.</p>
+
+<h3 id="amending-and-revising-forms">Amending and Revising Forms</h3>
+
+<h4 class="no_toc" id="end-user-wishes-to-go-back-and-revise-an-answer-to-question">End User wishes to go back and revise an answer to Question</h4>
+
+<p>For static forms this is a rendering issue for the Client Application which may allow the user to go back and change answer prior to submitting the form.  Retrieving and resuming or correcting a form is currently out of scope for Argonaut Questionnaire but is covered in the <a href="http://hl7.org/fhir/us/sdc/history.html" title="Defines expectations for sharing of Questionnaires and answers, including mechanisms for automatically populating portions of a questionnaire based on embedded mappings to underlying data elements">SDC (Structured Data Capture)</a> implementation Guide.</p>
+
+<h4 class="no_toc" id="answer-in-error-and-needs-to-be-reentered">Answer in Error and Needs to be Reentered</h4>
+
+<p>If the  answer is ‘wrong” and needs to be reentered, it is the function of the Client Application to prompt the end user to re-answer the question.  For example, if an answer is incomplete or incorrectly formatted such as a date or telephone number.  How this done is out of scope for Argonaut Questionnaire.</p>
+
+<h4 class="no_toc" id="technical-error">Technical Error</h4>
+
+<p>Technical errors are typically handled by lower level protocols or manual processes.  How the client or server would resubmit the QuestionnaireResponse is out of scope for Argonaut Questionnaire</p>
 
 <hr />
 
@@ -685,12 +2053,16 @@ The following Argonaut Questionnaire artifacts are used in this transaction:
 
 <!-- end back to top arrow -->
 
-<div id="segment-footer" class="segment">  <!-- segment-footer -->
+<div id="segment-footer" class="segment"  igtool="footer">  <!-- segment-footer -->
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Sep 6, 2018 21:52-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
-        </span>
+      Argonaut Questionnaire 
+          Continuous Integration Build
+          &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Mon, Feb 18, 2019 18:36-0800.
+      | <a style="color: #81BEF7" href="#">History</a>
+      | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
+        <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->
@@ -708,7 +2080,7 @@ The following Argonaut Questionnaire artifacts are used in this transaction:
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./assets/js/jquery.min.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
 <script src="./assets/js/bootstrap.min.js"> </script>
 <script src="./assets/js/respond.min.js"> </script>
 <script src="./assets/js/anchor.min.js"> </script>
@@ -720,14 +2092,53 @@ The following Argonaut Questionnaire artifacts are used in this transaction:
 
 
 
+<script src="assets/js/clipboard.min.js"> </script>
+
+<script>
+  // Tooltip
+
+  $('#copy-button').tooltip({
+    trigger: 'click',
+    placement: 'bottom'
+  });
+
+  function setTooltip(message) {
+    $('#copy-button').tooltip('hide')
+      .attr('data-original-title', message)
+      .tooltip('show');
+  }
+
+  function hideTooltip() {
+    setTimeout(function() {
+      $('#copy-button').tooltip('hide');
+    }, 1000);
+  }
+
+  // Clipboard
+
+  var clipboard = new ClipboardJS('#copy-button');
+
+  clipboard.on('success', function(e) {
+    setTooltip('Copied!');
+    hideTooltip();
+  });
+
+  clipboard.on('error', function(e) {
+    setTooltip('Failed!');
+    hideTooltip();
+  });
+
+</script>
+
+
 
 <!-- Analytics Below
 ================================================== -->
 
-<!-- add anchors before the closing body tag. -->
-<script> anchors.add()</script>
-
-
+<!-- add anchors before the closing body tag -->
+<script>
+anchors.add()
+</script>
 
 </body>
 </html>

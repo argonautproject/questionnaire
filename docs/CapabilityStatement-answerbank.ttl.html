@@ -67,11 +67,10 @@
 
 
       <div id="project-status" class="project-status"> <!-- ig title text -->
-
-      
-      <strong>Argonaut Questionnaire Implementation Guide CI Build</strong>
-      
-
+        <b>Argonaut Questionnaire Implementation Guide</b>
+        
+        CI Build
+        
     </div><!-- end ig title text -->
 
   </div><!-- end container -->
@@ -126,15 +125,19 @@
     </li>
   </ul>
 </li>
+<!--
 <li>
   <a href="operations.html">Operations</a>
 </li>
+-->
 <li>
-  <a href="profiles.html">Profiles/Extensions</a>
+  <a href="profiles.html">Profiles and Operations</a>
 </li>
+<!--
 <li>
   <a href="terminology.html">Terminology</a>
 </li>
+-->
 <li>
   <a href="searchparameters.html">Search Parameters</a>
 </li>
@@ -151,10 +154,15 @@
 </li>
 
   <li>
-    <a href="CapabilityStatement-server.html">Conformance requirements for Server</a>
+    <a href="CapabilityStatement-argo-questionnaire-provider-ehr.html">Conformance requirements for Provider EHR</a>
   </li>
+  <!--
   <li>
-    <a href="CapabilityStatement-client.html">Conformance requirements for Client</a>
+    <a href="CapabilityStatement-argonaut-questionnaire-client.html">Conformance requirements for Client</a>
+  </li>
+  -->
+  <li>
+    <a href="CapabilityStatement-adaptive-q-service.html">Conformance requirements for Adaptive Questionnaire Service</a>
   </li>
 </ul>
 </li>
@@ -225,32 +233,35 @@
             <!-- content of page -->
 
 
-<!-- ============Publish box=============== -->
-
-<!--status-bar-->
-<p id="publish-box">
-This is the   Continuous Integration Build  of the Argonaut Questionnaire Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="http://www.fhir.org/guides//history.html">Directory of published versions</a>
-</p>
-
-
-
 <!-- ============BreadCrumb=============== -->
 
 <nav class="breadcrumb">
   
-    
-    
-      
-        <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a><a class="breadcrumb-item" href="index.html">Home</a>
-        /
-        <a class="breadcrumb-item" href="capstatements.html">Capability Statements</a>
-        /
-        <span class="breadcrumb-item active">CapabilityStatement-answerbank.ttl</span>
-
-      
-  
-
+    <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a> <li><a href='index.html'><b>Home</b></a></li><li><a href='capstatements.html'><b>Capability Statements</b></a></li><li><b>CapabilityStatement Answerbank</b></li>
 </nav>
+
+
+<!-- ============Publish box=============== -->
+
+<!--status-bar-->
+<p id="publish-box">
+This is the 
+    Continuous Integration Build
+   
+  
+  of the Argonaut Questionnaire Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="#">Directory of published versions</a>
+</p>
+
+
+
+
+
+
+
+  <style type="text/css">
+  h2,h3,h4,h5,h6{--pagenumber: "7.2"}
+  </style>
+
 
 
 <!-- ============nav-tabs=============== -->
@@ -308,7 +319,7 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
 
   <!-- ============ default xml or json content for structuredefinition CONTENT CONTENT=============== -->
   <p>
-  Raw <a href="CapabilityStatement-answerbank.ttl" download>ttl</a>
+  Download Raw <a href="CapabilityStatement-answerbank.ttl" download>ttl</a>
   </p>
 
 <pre class="rdf">
@@ -324,11 +335,11 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
   <a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;answerbank&quot;];
   <a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.text">fhir:DomainResource.text</a> [
      <a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;additional&quot; ];
-     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n			&lt;h2 id=\&quot;argonaut-questionnaire-conformance-requirements\&quot;&gt;Argonaut Questionnaire Conformance Requirements&lt;/h2&gt;\n			&lt;p&gt;This section outlines conformance requirements for the Argonaut questionnaire Answer-Bank Server, identifying the specific profiles that need to be supported, the specific RESTful operations that need to be supported, and the search parameters that need to be supported. Note: The individual Argonaut questionnaire profiles identify the structural constraints, terminology bindings and invariants, however, implementers must refer to the conformance requirements for details on the RESTful operations, specific profiles and the search parameters applicable to each of the Argonaut questionnaire actors.&lt;/p&gt;\n			&lt;h3 id=\&quot;conformance-requirements-for-the-argonaut-questionnaire-implementation-guide-answerbank\&quot;&gt;Conformance requirements for the Argonaut questionnaire Implementation Guide Answer-Bank Server&lt;/h3&gt;\n			&lt;ul&gt;\n				&lt;li&gt;FHIR Version: 3.0.1&lt;/li&gt;\n				&lt;li&gt;Supported formats: xml, json&lt;/li&gt;\n				&lt;li&gt;Published: May 20, 2018&lt;/li&gt;\n				&lt;li&gt;Published by: The Argonaut Project&lt;/li&gt;\n			&lt;/ul&gt;\n			&lt;p&gt;The Section describes the expected Capabilities of the Argonaut Answer-Bank Server which is responsible for providing responses to the requests submitted by the Argonaut questionnaire clients (Form Author/Editor and Provider EHRs). The complete list of FHIR profiles, RESTful operations, and search parameters supported by Argonaut questionnaire Answer-Banks are defined.&lt;/p&gt;\n			&lt;h4 id=\&quot;behavior\&quot;&gt;Behavior&lt;/h4&gt;\n			&lt;p&gt;Description:&lt;/p&gt;\n			&lt;p&gt;The Argonaut questionnaire Answer-Bank &lt;strong&gt;SHALL (...todo... review...)&lt;/strong&gt;:&lt;/p&gt;\n			&lt;ol&gt;\n				&lt;li&gt;Support at least one Argonaut questionnaireuse case.&lt;/li&gt;\n				&lt;li&gt;Implement the RESTful behavior according to the FHIR specification including returning the appropriate response classes as described in the FHIR specification for &lt;a href=\&quot;http://hl7.org/fhir/STU3/http.html\&quot;&gt;FHIR RESTful API&lt;/a&gt; and &lt;a href=\&quot;http://hl7.org/fhir/STU3/operations.html\&quot;&gt;Extended Operations on the RESTful API&lt;/a&gt;.&lt;/li&gt;\n				&lt;li&gt;Conform to the &lt;a href=\&quot;http://hl7.org/fhir/us/core/1.0.1\&quot;&gt;US Core Implementation Guiide&lt;/a&gt;.&lt;/li&gt;\n				&lt;li&gt;Support &lt;em&gt;json&lt;/em&gt; resource formats for all Argonaut questionnaire interactions.&lt;/li&gt;\n				&lt;li&gt;Declare a CapabilityStatement identifying the list of profiles, operations, search parameter supported.&lt;/li&gt;\n			&lt;/ol&gt;\n			&lt;p&gt;The Argonaut questionnaire Answer-Bank &lt;strong&gt;SHOULD (...todo... review...)&lt;/strong&gt;:&lt;/p&gt;\n			&lt;ol&gt;\n				&lt;li&gt;Support &lt;em&gt;xml&lt;/em&gt; resource formats for all Argonaut questionnaire interactions.&lt;/li&gt;\n				&lt;li&gt;Identify the Argonaut questionnaire profiles supported as part of the FHIR &lt;code&gt;meta.profile&lt;/code&gt; attribute for each instance.&lt;/li&gt;\n			&lt;/ol&gt;\n			&lt;h4 id=\&quot;security-\&quot;&gt;Security:&lt;/h4&gt;\n			&lt;p&gt;For general security consideration refer to the &lt;a href=\&quot;http://hl7.org/fhir/us/core/security.html\&quot;&gt;Security section&lt;/a&gt; in the US Core Implementation Guide.&lt;/p&gt;\n			&lt;h4 id=\&quot;profile-interaction-summary-\&quot;&gt;Profile Interaction Summary: (...todo... review...)&lt;/h4&gt;\n			&lt;h4 id=\&quot;resource-details-\&quot;&gt;Resource  Details: (...todo... review...)&lt;/h4&gt;\n			&lt;hr/&gt;\n		&lt;/div&gt;&quot;
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n			&lt;h2 id=\&quot;argonaut-questionnaire-conformance-requirements\&quot;&gt;Argonaut Questionnaire Conformance Requirements&lt;/h2&gt;\n			&lt;p&gt;This section outlines conformance requirements for the Argonaut questionnaire Answer-Bank Server, identifying the specific profiles that need to be supported, the specific RESTful operations that need to be supported, and the search parameters that need to be supported. Note: The individual Argonaut questionnaire profiles identify the structural constraints, terminology bindings and invariants, however, implementers must refer to the conformance requirements for details on the RESTful operations, specific profiles and the search parameters applicable to each of the Argonaut questionnaire actors.&lt;/p&gt;\n			&lt;h3 id=\&quot;conformance-requirements-for-the-argonaut-questionnaire-implementation-guide-answerbank\&quot;&gt;Conformance requirements for the Argonaut questionnaire Implementation Guide Answer-Bank Server&lt;/h3&gt;\n			&lt;ul&gt;\n				&lt;li&gt;FHIR Version: 3.0.1&lt;/li&gt;\n				&lt;li&gt;Supported formats: xml, json&lt;/li&gt;\n				&lt;li&gt;Published: May 20, 2018&lt;/li&gt;\n				&lt;li&gt;Published by: The Argonaut Project&lt;/li&gt;\n			&lt;/ul&gt;\n			&lt;p&gt;The Section describes the expected Capabilities of the Argonaut Answer-Bank Server which is responsible for providing responses to the requests submitted by the Argonaut questionnaire clients (Form Author/Editor and Provider EHRs). The complete list of FHIR profiles, RESTful operations, and search parameters supported by Argonaut questionnaire Answer-Banks are defined.&lt;/p&gt;\n			&lt;h4 id=\&quot;behavior\&quot;&gt;Behavior&lt;/h4&gt;\n			&lt;p&gt;Description:&lt;/p&gt;\n			&lt;p&gt;The Argonaut questionnaire Answer-Bank &lt;strong&gt;SHALL (...todo... review...)&lt;/strong&gt;:&lt;/p&gt;\n			&lt;ol&gt;\n				&lt;li&gt;Support at least one Argonaut questionnaireuse case.&lt;/li&gt;\n				&lt;li&gt;Implement the RESTful behavior according to the FHIR specification including returning the appropriate response classes as described in the FHIR specification for &lt;a href=\&quot;http://hl7.org/fhir/STU3/http.html\&quot;&gt;FHIR RESTful API&lt;/a&gt; and &lt;a href=\&quot;http://hl7.org/fhir/STU3/operations.html\&quot;&gt;Extended Operations on the RESTful API&lt;/a&gt;.&lt;/li&gt;\n				&lt;li&gt;Conform to the &lt;a href=\&quot;http://hl7.org/fhir/us/core/1.0.1/index.html\&quot;&gt;US Core Implementation Guide&lt;/a&gt;.&lt;/li&gt;\n				&lt;li&gt;Support &lt;em&gt;json&lt;/em&gt; resource formats for all Argonaut questionnaire interactions.&lt;/li&gt;\n				&lt;li&gt;Declare a CapabilityStatement identifying the list of profiles, operations, search parameter supported.&lt;/li&gt;\n			&lt;/ol&gt;\n			&lt;p&gt;The Argonaut questionnaire Answer-Bank &lt;strong&gt;SHOULD (...todo... review...)&lt;/strong&gt;:&lt;/p&gt;\n			&lt;ol&gt;\n				&lt;li&gt;Support &lt;em&gt;xml&lt;/em&gt; resource formats for all Argonaut questionnaire interactions.&lt;/li&gt;\n				&lt;li&gt;Identify the Argonaut questionnaire profiles supported as part of the FHIR &lt;code&gt;meta.profile&lt;/code&gt; attribute for each instance.&lt;/li&gt;\n			&lt;/ol&gt;\n			&lt;h4 id=\&quot;security-\&quot;&gt;Security:&lt;/h4&gt;\n			&lt;p&gt;For general security consideration refer to the &lt;a href=\&quot;http://hl7.org/fhir/us/core/security.html\&quot;&gt;Security section&lt;/a&gt; in the US Core Implementation Guide.&lt;/p&gt;\n			&lt;h4 id=\&quot;profile-interaction-summary-\&quot;&gt;Profile Interaction Summary: (...todo... review...)&lt;/h4&gt;\n			&lt;h4 id=\&quot;resource-details-\&quot;&gt;Resource  Details: (...todo... review...)&lt;/h4&gt;\n			&lt;hr/&gt;\n		&lt;/div&gt;&quot;
   ];
   <a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.url">fhir:CapabilityStatement.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/CapabilityStatement/answerbank&quot;];
   <a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.version">fhir:CapabilityStatement.version</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;0.0.0&quot;];
-  <a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.name">fhir:CapabilityStatement.name</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;argonautQuestionnaireAnswerBankCapabilityStatement&quot;];
+  <a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.name">fhir:CapabilityStatement.name</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;answerbank&quot;];
   <a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.title">fhir:CapabilityStatement.title</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Argonaut questionnaire Answer Bank CapabilityStatement&quot;];
   <a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.status">fhir:CapabilityStatement.status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;draft&quot;];
   <a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.experimental">fhir:CapabilityStatement.experimental</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean];
@@ -371,12 +382,12 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
   ];
   <a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.profile">fhir:CapabilityStatement.profile</a> [
      <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
-     <a href="http://hl7.org/fhir/STU3/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q&gt;;
-     <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q&quot; ]
+     <a href="http://hl7.org/fhir/STU3/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire&gt;;
+     <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire&quot; ]
   ], [
      <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
-     <a href="http://hl7.org/fhir/STU3/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr&gt;;
-     <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr&quot; ]
+     <a href="http://hl7.org/fhir/STU3/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaireresponse&gt;;
+     <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaireresponse&quot; ]
   ];
   <a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest">fhir:CapabilityStatement.rest</a> [
      <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
@@ -464,12 +475,16 @@ Formats: <a href="CapabilityStatement-answerbank.html">Narrative</a>, <a href="C
 
 <!-- end back to top arrow -->
 
-<div id="segment-footer" class="segment">  <!-- segment-footer -->
+<div id="segment-footer" class="segment"  igtool="footer">  <!-- segment-footer -->
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Sep 6, 2018 21:52-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
-        </span>
+      Argonaut Questionnaire 
+          Continuous Integration Build
+          &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Mon, Feb 18, 2019 18:36-0800.
+      | <a style="color: #81BEF7" href="#">History</a>
+      | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
+        <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->
@@ -487,7 +502,7 @@ Formats: <a href="CapabilityStatement-answerbank.html">Narrative</a>, <a href="C
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./assets/js/jquery.min.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
 <script src="./assets/js/bootstrap.min.js"> </script>
 <script src="./assets/js/respond.min.js"> </script>
 <script src="./assets/js/anchor.min.js"> </script>
@@ -499,14 +514,53 @@ Formats: <a href="CapabilityStatement-answerbank.html">Narrative</a>, <a href="C
 
 
 
+<script src="assets/js/clipboard.min.js"> </script>
+
+<script>
+  // Tooltip
+
+  $('#copy-button').tooltip({
+    trigger: 'click',
+    placement: 'bottom'
+  });
+
+  function setTooltip(message) {
+    $('#copy-button').tooltip('hide')
+      .attr('data-original-title', message)
+      .tooltip('show');
+  }
+
+  function hideTooltip() {
+    setTimeout(function() {
+      $('#copy-button').tooltip('hide');
+    }, 1000);
+  }
+
+  // Clipboard
+
+  var clipboard = new ClipboardJS('#copy-button');
+
+  clipboard.on('success', function(e) {
+    setTooltip('Copied!');
+    hideTooltip();
+  });
+
+  clipboard.on('error', function(e) {
+    setTooltip('Failed!');
+    hideTooltip();
+  });
+
+</script>
+
+
 
 <!-- Analytics Below
 ================================================== -->
 
-<!-- add anchors before the closing body tag. -->
-<script> anchors.add()</script>
-
-
+<!-- add anchors before the closing body tag -->
+<script>
+anchors.add()
+</script>
 
 </body>
 </html>

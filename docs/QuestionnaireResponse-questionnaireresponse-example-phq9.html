@@ -67,11 +67,10 @@
 
 
       <div id="project-status" class="project-status"> <!-- ig title text -->
-
-      
-      <strong>Argonaut Questionnaire Implementation Guide CI Build</strong>
-      
-
+        <b>Argonaut Questionnaire Implementation Guide</b>
+        
+        CI Build
+        
     </div><!-- end ig title text -->
 
   </div><!-- end container -->
@@ -126,15 +125,19 @@
     </li>
   </ul>
 </li>
+<!--
 <li>
   <a href="operations.html">Operations</a>
 </li>
+-->
 <li>
-  <a href="profiles.html">Profiles/Extensions</a>
+  <a href="profiles.html">Profiles and Operations</a>
 </li>
+<!--
 <li>
   <a href="terminology.html">Terminology</a>
 </li>
+-->
 <li>
   <a href="searchparameters.html">Search Parameters</a>
 </li>
@@ -151,10 +154,15 @@
 </li>
 
   <li>
-    <a href="CapabilityStatement-server.html">Conformance requirements for Server</a>
+    <a href="CapabilityStatement-argo-questionnaire-provider-ehr.html">Conformance requirements for Provider EHR</a>
   </li>
+  <!--
   <li>
-    <a href="CapabilityStatement-client.html">Conformance requirements for Client</a>
+    <a href="CapabilityStatement-argonaut-questionnaire-client.html">Conformance requirements for Client</a>
+  </li>
+  -->
+  <li>
+    <a href="CapabilityStatement-adaptive-q-service.html">Conformance requirements for Adaptive Questionnaire Service</a>
   </li>
 </ul>
 </li>
@@ -225,32 +233,31 @@
             <!-- content of page -->
 
 
-<!-- ============Publish box=============== -->
-
-<!--status-bar-->
-<p id="publish-box">
-This is the   Continuous Integration Build  of the Argonaut Questionnaire Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="http://www.fhir.org/guides//history.html">Directory of published versions</a>
-</p>
-
-
-
 <!-- ============BreadCrumb=============== -->
 
 <nav class="breadcrumb">
   
-    
-    
-        <!--  is structuredefinition or profile example -->
-        <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a><a class="breadcrumb-item" href="index.html">Home</a>
-        /
-        <a class="breadcrumb-item" href="profiles.html">Profiles</a>
-        /
-        <span class="breadcrumb-item active">QuestionnaireResponse-questionnaireresponse-example-phq9</span>
-
-    
-  
-
+    <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a> 
 </nav>
+
+
+<!-- ============Publish box=============== -->
+
+<!--status-bar-->
+<p id="publish-box">
+This is the 
+    Continuous Integration Build
+   
+  
+  of the Argonaut Questionnaire Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="#">Directory of published versions</a>
+</p>
+
+
+
+
+
+
+
 
 
 <!-- ============nav-tabs=============== -->
@@ -307,8 +314,23 @@ Formats: <a href="QuestionnaireResponse-questionnaireresponse-example-phq9.xml.h
 <div xmlns="http://www.w3.org/1999/xhtml">
     <h3>Response Summary</h3>
     <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9<br/>
-    <strong>Date Completed:</strong> 2018-07-05T19:04:33.435516<br/>
-    <hr/> <br/> <strong>Question:</strong> (linkId = g1.q8) Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual,<br/><strong>Response:</strong> Not at all( code = LA6568-5)<br/><br/> <strong>Question:</strong> (linkId = g1.q6) Feeling bad about yourself - or that you are a failure or have let yourself or your family down,<br/><strong>Response:</strong> Several days( code = LA6569-3)<br/><br/> <strong>Question:</strong> (linkId = g2.q1) If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people,<br/><strong>Response:</strong> Very difficult( code = LA6575-0)<br/><br/> <strong>Question:</strong> (linkId = g1.q9) Thoughts that you would be better off dead, or of hurting yourself<br/><strong>Response:</strong> Not at all( code = LA6568-5)<br/><br/> <strong>Question:</strong> (linkId = g1.q1) Little interest or pleasure in doing things,<br/><strong>Response:</strong> Nearly every day( code = LA6571-9)<br/><br/> <strong>Question:</strong> (linkId = g1.q7) Trouble concentrating on things, such as reading the newspaper or watching television,<br/><strong>Response:</strong> More than half the days( code = LA6570-1)<br/><br/> <strong>Question:</strong> (linkId = g1.q4) Feeling tired or having little energy,<br/><strong>Response:</strong> Nearly every day( code = LA6571-9)<br/><br/> <strong>Question:</strong> (linkId = g1.q2) Feeling down, depressed, or hopeless,<br/><strong>Response:</strong> More than half the days( code = LA6570-1)<br/><br/> <strong>Question:</strong> (linkId = g1.q5) Poor appetite or overeating,<br/><strong>Response:</strong> Not at all( code = LA6568-5)<br/> <br/><br/>
+    <strong>Date Completed:</strong> 2019-02-13T00:36:41.051113Z<br/>
+    <hr/> <br/><strong>Over the last 2 weeks, how often have you been bothered by any of the following problems? (Use “X” to indicate your answer)</strong><br/><br/> <strong>Question:</strong> (linkID=g1.q1) Little interest or pleasure in doing things,<br/><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br/><br/> <strong>Question:</strong> (linkID=g1.q2) Feeling down, depressed, or hopeless,<br/><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br/><br/> <strong>Question:</strong> (linkID=g1.q3) Trouble falling or staying asleep, or sleeping too much<br/><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br/><br/> <strong>Question:</strong> (linkID=g1.q4) Feeling tired or having little energy,<br/><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br/><br/> <strong>Question:</strong> (linkID=g1.q5) Poor appetite or overeating,<br/><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br/><br/> <strong>Question:</strong> (linkID=g1.q6) Feeling bad about yourself - or that you are a failure or have let yourself or your family down,<br/><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br/><br/> <strong>Question:</strong> (linkID=g1.q7) Trouble concentrating on things, such as reading the newspaper or watching television,<br/><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br/><br/> <strong>Question:</strong> (linkID=g1.q8) Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual,<br/><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br/><br/> <strong>Question:</strong> (linkID=g1.q9) Thoughts that you would be better off dead, or of hurting yourself<br/><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br/><br/><strong>Scoring: 
+Add up all checked boxes on PHQ-9. 
+
+For every:
+Not at all = 0;
+Several days = 1;
+More than half the days = 2;
+Nearly every day = 3
+
+Interpretation of Total Score
+Total Score Depression Severity
+1-4 Minimal depression
+5-9 Mild depression
+10-14 Moderate depression
+15-19 Moderately severe depression
+20-27 Severe depression (this is hidden text/should not be displayed to the user)</strong><br/><br/> <strong>Question:</strong> (linkID=g2.q1) If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people,<br/><strong>Response:</strong>  Not difficult at all ( code = LA6572-7, codesystem = http://loinc.org)<br/> <br/><br/>
     </div>
 
   <!-- ==============END CONTENT END CONTENT=================== -->
@@ -342,12 +364,16 @@ Formats: <a href="QuestionnaireResponse-questionnaireresponse-example-phq9.xml.h
 
 <!-- end back to top arrow -->
 
-<div id="segment-footer" class="segment">  <!-- segment-footer -->
+<div id="segment-footer" class="segment"  igtool="footer">  <!-- segment-footer -->
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Sep 6, 2018 21:52-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
-        </span>
+      Argonaut Questionnaire 
+          Continuous Integration Build
+          &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Mon, Feb 18, 2019 18:36-0800.
+      | <a style="color: #81BEF7" href="#">History</a>
+      | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
+        <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->
@@ -365,7 +391,7 @@ Formats: <a href="QuestionnaireResponse-questionnaireresponse-example-phq9.xml.h
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./assets/js/jquery.min.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
 <script src="./assets/js/bootstrap.min.js"> </script>
 <script src="./assets/js/respond.min.js"> </script>
 <script src="./assets/js/anchor.min.js"> </script>
@@ -375,14 +401,53 @@ Formats: <a href="QuestionnaireResponse-questionnaireresponse-example-phq9.xml.h
 
 
 
+<script src="assets/js/clipboard.min.js"> </script>
+
+<script>
+  // Tooltip
+
+  $('#copy-button').tooltip({
+    trigger: 'click',
+    placement: 'bottom'
+  });
+
+  function setTooltip(message) {
+    $('#copy-button').tooltip('hide')
+      .attr('data-original-title', message)
+      .tooltip('show');
+  }
+
+  function hideTooltip() {
+    setTimeout(function() {
+      $('#copy-button').tooltip('hide');
+    }, 1000);
+  }
+
+  // Clipboard
+
+  var clipboard = new ClipboardJS('#copy-button');
+
+  clipboard.on('success', function(e) {
+    setTooltip('Copied!');
+    hideTooltip();
+  });
+
+  clipboard.on('error', function(e) {
+    setTooltip('Failed!');
+    hideTooltip();
+  });
+
+</script>
+
+
 
 <!-- Analytics Below
 ================================================== -->
 
-<!-- add anchors before the closing body tag. -->
-<script> anchors.add()</script>
-
-
+<!-- add anchors before the closing body tag -->
+<script>
+anchors.add()
+</script>
 
 </body>
 </html>

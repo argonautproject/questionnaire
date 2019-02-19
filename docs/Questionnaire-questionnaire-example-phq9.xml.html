@@ -67,11 +67,10 @@
 
 
       <div id="project-status" class="project-status"> <!-- ig title text -->
-
-      
-      <strong>Argonaut Questionnaire Implementation Guide CI Build</strong>
-      
-
+        <b>Argonaut Questionnaire Implementation Guide</b>
+        
+        CI Build
+        
     </div><!-- end ig title text -->
 
   </div><!-- end container -->
@@ -126,15 +125,19 @@
     </li>
   </ul>
 </li>
+<!--
 <li>
   <a href="operations.html">Operations</a>
 </li>
+-->
 <li>
-  <a href="profiles.html">Profiles/Extensions</a>
+  <a href="profiles.html">Profiles and Operations</a>
 </li>
+<!--
 <li>
   <a href="terminology.html">Terminology</a>
 </li>
+-->
 <li>
   <a href="searchparameters.html">Search Parameters</a>
 </li>
@@ -151,10 +154,15 @@
 </li>
 
   <li>
-    <a href="CapabilityStatement-server.html">Conformance requirements for Server</a>
+    <a href="CapabilityStatement-argo-questionnaire-provider-ehr.html">Conformance requirements for Provider EHR</a>
   </li>
+  <!--
   <li>
-    <a href="CapabilityStatement-client.html">Conformance requirements for Client</a>
+    <a href="CapabilityStatement-argonaut-questionnaire-client.html">Conformance requirements for Client</a>
+  </li>
+  -->
+  <li>
+    <a href="CapabilityStatement-adaptive-q-service.html">Conformance requirements for Adaptive Questionnaire Service</a>
   </li>
 </ul>
 </li>
@@ -225,32 +233,31 @@
             <!-- content of page -->
 
 
-<!-- ============Publish box=============== -->
-
-<!--status-bar-->
-<p id="publish-box">
-This is the   Continuous Integration Build  of the Argonaut Questionnaire Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="http://www.fhir.org/guides//history.html">Directory of published versions</a>
-</p>
-
-
-
 <!-- ============BreadCrumb=============== -->
 
 <nav class="breadcrumb">
   
-    
-    
-        <!--  is structuredefinition or profile example -->
-        <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a><a class="breadcrumb-item" href="index.html">Home</a>
-        /
-        <a class="breadcrumb-item" href="profiles.html">Profiles</a>
-        /
-        <span class="breadcrumb-item active">Questionnaire-questionnaire-example-phq9.xml</span>
-
-    
-  
-
+    <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a> 
 </nav>
+
+
+<!-- ============Publish box=============== -->
+
+<!--status-bar-->
+<p id="publish-box">
+This is the 
+    Continuous Integration Build
+   
+  
+  of the Argonaut Questionnaire Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="#">Directory of published versions</a>
+</p>
+
+
+
+
+
+
+
 
 
 <!-- ============nav-tabs=============== -->
@@ -308,7 +315,7 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
 
   <!-- ============ default xml or json content for structuredefinition CONTENT CONTENT=============== -->
   <p>
-  Raw <a href="Questionnaire-questionnaire-example-phq9.xml" download>xml</a>
+  Download Raw <a href="Questionnaire-questionnaire-example-phq9.xml" download>xml</a>
   </p>
 
 <pre class="xml">
@@ -317,7 +324,7 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
   &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;questionnaire-example-phq9&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.meta">meta</a>&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>
-             <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q&quot;/&gt;
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire&quot;/&gt;
   &lt;/meta&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.text">text</a>&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;additional&quot;/&gt;
@@ -1275,14 +1282,15 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
   &lt;/text&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet">contained</a>&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet">ValueSet</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;PHQ-9&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;LL358-3&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.meta">meta</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>
-                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs&quot;/&gt;
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire-valueset&quot;/&gt;
       &lt;/meta&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.url">url</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-9&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.url">url</a>
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/ValueSet/LL358-3&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.identifier">identifier</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;phq9&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LL358-3&quot;/&gt;
       &lt;/identifier&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.version">version</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;0.0.0&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.title">title</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient Health Questionnaire (PHQ-9)&quot;/&gt;
@@ -1291,10 +1299,14 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.copyright">copyright</a>
                  <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">value</a>=&quot;This content LOINC is copyright 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use .&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion">expansion</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.identifier">identifier</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;phq9-expansion&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.timestamp">timestamp</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2018-06-27T22:49:08&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.identifier">identifier</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;LL358-3ver2.64&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.timestamp">timestamp</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2018-06-27T22:49:08Z&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.total">total</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">value</a>=&quot;4&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.extension">extension</a>
+                     <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">value</a>=&quot;1&quot;/&gt;
+          &lt;/extension&gt;
           &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.extension">extension</a>
                      <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue&quot;&gt;
             &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">value</a>=&quot;0&quot;/&gt;
@@ -1306,6 +1318,10 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
         &lt;/contains&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
           &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.extension">extension</a>
+                     <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">value</a>=&quot;2&quot;/&gt;
+          &lt;/extension&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.extension">extension</a>
                      <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue&quot;&gt;
             &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">value</a>=&quot;1&quot;/&gt;
           &lt;/extension&gt;
@@ -1316,6 +1332,10 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
         &lt;/contains&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
           &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.extension">extension</a>
+                     <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">value</a>=&quot;3&quot;/&gt;
+          &lt;/extension&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.extension">extension</a>
                      <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue&quot;&gt;
             &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">value</a>=&quot;2&quot;/&gt;
           &lt;/extension&gt;
@@ -1325,6 +1345,10 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
           &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;More than half the days&quot;/&gt;
         &lt;/contains&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.extension">extension</a>
+                     <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">value</a>=&quot;4&quot;/&gt;
+          &lt;/extension&gt;
           &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.extension">extension</a>
                      <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue&quot;&gt;
             &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">value</a>=&quot;3&quot;/&gt;
@@ -1339,44 +1363,62 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
   &lt;/contained&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet">contained</a>&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet">ValueSet</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;PHQ-10&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;LL359-1&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.meta">meta</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>
-                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs&quot;/&gt;
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire-valueset&quot;/&gt;
       &lt;/meta&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.url">url</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-10&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.url">url</a>
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/ValueSet/LL359-1&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.identifier">identifier</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;phq10&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;LL359-1ver2.64&quot;/&gt;
       &lt;/identifier&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.version">version</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;0.0.0&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.title">title</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient Health Questionnaire (PHQ-9)&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.title">title</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;PHQ.10 / Not difficult at all/Somewhat difficult/Very difficult/Extremely difficult-Perceived difficulty (PHQ-9)&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.date">date</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2018-06-27&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.copyright">copyright</a>
                  <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">value</a>=&quot;This content LOINC is copyright 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use .&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion">expansion</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.identifier">identifier</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;phq10-expansion&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.timestamp">timestamp</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2018-06-27T22:27:03&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.identifier">identifier</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;LL359&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.timestamp">timestamp</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2018-06-27T22:27:03Z&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.total">total</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">value</a>=&quot;4&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.extension">extension</a>
+                     <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">value</a>=&quot;1&quot;/&gt;
+          &lt;/extension&gt;
           &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.version">version</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;2.64&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;LA6572-7&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Not difficult at all&quot;/&gt;
         &lt;/contains&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.extension">extension</a>
+                     <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">value</a>=&quot;2&quot;/&gt;
+          &lt;/extension&gt;
           &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.version">version</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;2.64&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;LA6573-5&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Somewhat difficult&quot;/&gt;
         &lt;/contains&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.extension">extension</a>
+                     <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">value</a>=&quot;3&quot;/&gt;
+          &lt;/extension&gt;
           &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.version">version</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;2.64&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;LA6575-0&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Very difficult&quot;/&gt;
         &lt;/contains&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains">contains</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.extension">extension</a>
+                     <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">value</a>=&quot;4&quot;/&gt;
+          &lt;/extension&gt;
           &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.version">version</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;2.64&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;LA6574-3&quot;/&gt;
@@ -1385,6 +1427,15 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       &lt;/expansion&gt;
     &lt;/ValueSet&gt;
   &lt;/contained&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.extension">extension</a>
+             <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timeLimit&quot;&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDuration</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Duration#Duration.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">value</a>=&quot;1&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Duration#Duration.unit">unit</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;week&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Duration#Duration.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://unitsofmeasure.org&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Duration#Duration.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;wk&quot;/&gt;
+    &lt;/valueDuration&gt;
+  &lt;/extension&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.url">url</a>
        <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.identifier">identifier</a>&gt;
@@ -1433,6 +1484,10 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
   &lt;/code&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.subjectType">subjectType</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;Patient&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item">item</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">extension</a>
+               <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">value</a>=&quot;0&quot;/&gt;
+    &lt;/extension&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;g1&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">code</a>&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
@@ -1441,6 +1496,10 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;group&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.item">item</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">value</a>=&quot;0&quot;/&gt;
+      &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;g1.d&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a>
             <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Over the last 2 weeks, how often have you been bothered by any of the following problems? (Use “X” to indicate your answer)&quot;/&gt;
@@ -1448,6 +1507,10 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
     &lt;/item&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.item">item</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">value</a>=&quot;1&quot;/&gt;
+      &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;g1.q1&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">code</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
@@ -1459,12 +1522,16 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">repeats</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.options">options</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#PHQ-9&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#LL358-3&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">display</a>
                  <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day&quot;/&gt;
       &lt;/options&gt;
     &lt;/item&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.item">item</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">value</a>=&quot;2&quot;/&gt;
+      &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;g1.q2&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">code</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
@@ -1476,12 +1543,16 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">repeats</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.options">options</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#PHQ-9&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#LL358-3&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">display</a>
                  <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day&quot;/&gt;
       &lt;/options&gt;
     &lt;/item&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.item">item</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">value</a>=&quot;3&quot;/&gt;
+      &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;g1.q3&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">code</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
@@ -1493,12 +1564,16 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">repeats</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.options">options</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#PHQ-9&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#LL358-3&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">display</a>
                  <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day&quot;/&gt;
       &lt;/options&gt;
     &lt;/item&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.item">item</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">value</a>=&quot;4&quot;/&gt;
+      &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;g1.q4&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">code</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
@@ -1510,12 +1585,16 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">repeats</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.options">options</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#PHQ-9&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#LL358-3&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">display</a>
                  <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day&quot;/&gt;
       &lt;/options&gt;
     &lt;/item&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.item">item</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">value</a>=&quot;5&quot;/&gt;
+      &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;g1.q5&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">code</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
@@ -1527,12 +1606,16 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">repeats</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.options">options</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#PHQ-9&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#LL358-3&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">display</a>
                  <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day&quot;/&gt;
       &lt;/options&gt;
     &lt;/item&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.item">item</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">value</a>=&quot;6&quot;/&gt;
+      &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;g1.q6&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">code</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
@@ -1545,12 +1628,16 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">repeats</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.options">options</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#PHQ-9&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#LL358-3&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">display</a>
                  <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day&quot;/&gt;
       &lt;/options&gt;
     &lt;/item&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.item">item</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">value</a>=&quot;7&quot;/&gt;
+      &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;g1.q7&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">code</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
@@ -1563,12 +1650,16 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">repeats</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.options">options</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#PHQ-9&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#LL358-3&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">display</a>
                  <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day&quot;/&gt;
       &lt;/options&gt;
     &lt;/item&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.item">item</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">value</a>=&quot;8&quot;/&gt;
+      &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;g1.q8&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">code</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
@@ -1581,12 +1672,16 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">repeats</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.options">options</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#PHQ-9&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#LL358-3&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">display</a>
                  <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day&quot;/&gt;
       &lt;/options&gt;
     &lt;/item&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.item">item</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">value</a>=&quot;9&quot;/&gt;
+      &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;g1.q9&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">code</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
@@ -1599,7 +1694,7 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">repeats</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.options">options</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#PHQ-9&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#LL358-3&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">display</a>
                  <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day&quot;/&gt;
       &lt;/options&gt;
@@ -1608,6 +1703,10 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">extension</a>
                  <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/questionnaire-hidden&quot;&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueBoolean</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">value</a>=&quot;10&quot;/&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;g1.s&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">code</a>&gt;
@@ -1630,17 +1729,24 @@ Total Score Depression Severity
 5-9 Mild depression
 10-14 Moderate depression
 15-19 Moderately severe depression
-20-27 Severe depression 
-&quot;/&gt;
+20-27 Severe depression&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;display&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">repeats</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
     &lt;/item&gt;
   &lt;/item&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item">item</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">extension</a>
+               <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">value</a>=&quot;1&quot;/&gt;
+    &lt;/extension&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;g2&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;group&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.item">item</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">value</a>=&quot;0&quot;/&gt;
+      &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;g2.q1&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">code</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://loinc.org&quot;/&gt;
@@ -1652,7 +1758,7 @@ Total Score Depression Severity
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">repeats</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.options">options</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#PHQ-10&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;#LL359-1&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">display</a>
                  <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Not difficult at all/Somewhat difficult/Very difficult/Extremely difficult-Perceived difficulty (PHQ-9)&quot;/&gt;
       &lt;/options&gt;
@@ -1704,12 +1810,16 @@ Formats: <a href="Questionnaire-questionnaire-example-phq9.html">Narrative</a>, 
 
 <!-- end back to top arrow -->
 
-<div id="segment-footer" class="segment">  <!-- segment-footer -->
+<div id="segment-footer" class="segment"  igtool="footer">  <!-- segment-footer -->
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-            Argonaut Questionnaire Version: 0.0.0  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> (IG Publisher v3.0.1-11917) generated on Thu, Sep 6, 2018 21:52-0700. | <a no-external = "true" style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
-        </span>
+      Argonaut Questionnaire 
+          Continuous Integration Build
+          &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Mon, Feb 18, 2019 18:36-0800.
+      | <a style="color: #81BEF7" href="#">History</a>
+      | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
+        <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->
@@ -1727,7 +1837,7 @@ Formats: <a href="Questionnaire-questionnaire-example-phq9.html">Narrative</a>, 
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./assets/js/jquery.min.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
 <script src="./assets/js/bootstrap.min.js"> </script>
 <script src="./assets/js/respond.min.js"> </script>
 <script src="./assets/js/anchor.min.js"> </script>
@@ -1739,14 +1849,53 @@ Formats: <a href="Questionnaire-questionnaire-example-phq9.html">Narrative</a>, 
 
 
 
+<script src="assets/js/clipboard.min.js"> </script>
+
+<script>
+  // Tooltip
+
+  $('#copy-button').tooltip({
+    trigger: 'click',
+    placement: 'bottom'
+  });
+
+  function setTooltip(message) {
+    $('#copy-button').tooltip('hide')
+      .attr('data-original-title', message)
+      .tooltip('show');
+  }
+
+  function hideTooltip() {
+    setTimeout(function() {
+      $('#copy-button').tooltip('hide');
+    }, 1000);
+  }
+
+  // Clipboard
+
+  var clipboard = new ClipboardJS('#copy-button');
+
+  clipboard.on('success', function(e) {
+    setTooltip('Copied!');
+    hideTooltip();
+  });
+
+  clipboard.on('error', function(e) {
+    setTooltip('Failed!');
+    hideTooltip();
+  });
+
+</script>
+
+
 
 <!-- Analytics Below
 ================================================== -->
 
-<!-- add anchors before the closing body tag. -->
-<script> anchors.add()</script>
-
-
+<!-- add anchors before the closing body tag -->
+<script>
+anchors.add()
+</script>
 
 </body>
 </html>

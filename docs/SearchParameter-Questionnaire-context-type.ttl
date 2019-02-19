@@ -10,24 +10,64 @@
   fhir:Resource.id [ fhir:value "Questionnaire-context-type"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: Questionnaire-context-type</p><p><b>url</b>: <a href=\"http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type\">http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type</a></p><p><b>name</b>: context-type</p><p><b>status</b>: draft</p><p><b>experimental</b>: false</p><p><b>date</b>: May 16, 2018 3:49:01 PM</p><p><b>publisher</b>: Argonaut Project</p><p><b>code</b>: context-type</p><p><b>base</b>: Questionnaire</p><p><b>type</b>: token</p><p><b>description</b>: A type of use context assigned to the questionnaire. When searching for context should pair with [context-value](http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-value) parameter.</p><p><b>expression</b>: Questionnaire.useContext.code</p><p><b>xpath</b>: f:Questionnaire/f:useContext/f:code</p><p><b>xpathUsage</b>: normal</p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: Questionnaire-context-type</p><p><b>url</b>: <a href=\"http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type\">http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type</a></p><p><b>version</b>: 0.0.0</p><p><b>name</b>: context-type</p><p><b>status</b>: active</p><p><b>experimental</b>: false</p><p><b>date</b>: Dec 13, 2018, 9:29:55 PM</p><p><b>publisher</b>: Argonaut Project</p><p><b>contact</b>: </p><p><b>code</b>: context-type</p><p><b>base</b>: Questionnaire</p><p><b>type</b>: token</p><p><b>description</b>: A type of use context assigned to the questionnaire</p><p><b>expression</b>: Questionnaire.useContext.code</p><p><b>xpath</b>: f:Questionnaire/f:useContext/f:code</p><p><b>xpathUsage</b>: normal</p><p><b>modifier</b>: missing, text, not, in, not-in, below, above</p><p><b>multipleOr Extension</b>True</p><p><b>multipleAnd Extension</b>True</p></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-multipleAnd" ];
+     fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+  ], [
+     fhir:index 1;
+     fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-multipleOr" ];
+     fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
   ];
   fhir:SearchParameter.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type"];
+  fhir:SearchParameter.version [ fhir:value "0.0.0"];
   fhir:SearchParameter.name [ fhir:value "context-type"];
-  fhir:SearchParameter.status [ fhir:value "draft"];
+  fhir:SearchParameter.status [ fhir:value "active"];
   fhir:SearchParameter.experimental [ fhir:value "false"^^xsd:boolean];
-  fhir:SearchParameter.date [ fhir:value "2018-05-16T15:49:01+00:00"^^xsd:dateTime];
+  fhir:SearchParameter.date [ fhir:value "2018-12-13T21:29:55-08:00"^^xsd:dateTime];
   fhir:SearchParameter.publisher [ fhir:value "Argonaut Project"];
+  fhir:SearchParameter.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://argonautwiki.hl7.org" ]
+     ]
+  ];
   fhir:SearchParameter.code [ fhir:value "context-type"];
   fhir:SearchParameter.base [
      fhir:value "Questionnaire";
      fhir:index 0
   ];
   fhir:SearchParameter.type [ fhir:value "token"];
-  fhir:SearchParameter.description [ fhir:value "A type of use context assigned to the questionnaire. When searching for context should pair with [context-value](http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-value) parameter."];
+  fhir:SearchParameter.description [ fhir:value "A type of use context assigned to the questionnaire"];
   fhir:SearchParameter.expression [ fhir:value "Questionnaire.useContext.code"];
   fhir:SearchParameter.xpath [ fhir:value "f:Questionnaire/f:useContext/f:code"];
-  fhir:SearchParameter.xpathUsage [ fhir:value "normal"] .
+  fhir:SearchParameter.xpathUsage [ fhir:value "normal"];
+  fhir:SearchParameter.modifier [
+     fhir:value "missing";
+     fhir:index 0
+  ], [
+     fhir:value "text";
+     fhir:index 1
+  ], [
+     fhir:value "not";
+     fhir:index 2
+  ], [
+     fhir:value "in";
+     fhir:index 3
+  ], [
+     fhir:value "not-in";
+     fhir:index 4
+  ], [
+     fhir:value "below";
+     fhir:index 5
+  ], [
+     fhir:value "above";
+     fhir:index 6
+  ] .
 
 # - ontology header ------------------------------------------------------------
 

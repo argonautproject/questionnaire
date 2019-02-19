@@ -10,16 +10,24 @@
   fhir:Resource.id [ fhir:value "questionnaireresponse-example-housing"];
   fhir:Resource.meta [
      fhir:Meta.profile [
-       fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr";
+       fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaireresponse";
        fhir:index 0
      ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h3>Response Summary</h3>\n    <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-housing<br />\n    <strong>Date Completed:</strong> 2018-07-05T19:02:25.752525<br />\n    <hr /> <br /> <strong>Question:</strong> (linkId = g1.2) Think about the place you live. Do you have problems with any of the following? (check all that apply)<br /><strong>Response:</strong> Bug infestation( code = )<br /><strong>Response:</strong> Inadequate heat( code = )<br /><strong>Response:</strong> Water leaks( code = )<br /><br /> <strong>Question:</strong> (linkId = g1.1) What is your housing situation today?<br /><strong>Response:</strong> I have housing( code = )<br /> <br /><br />\n    </div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h3>Response Summary</h3>\n    <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-housing<br />\n    <strong>Date Completed:</strong> 2019-02-13T00:35:59.723988Z<br />\n    <hr /> <br /><strong>Accountable Health Communities Core Health-Related Social Needs Screening Questions \nUnderlined answer options indicate positive responses for the associated health-related social need. \nA value greater than 10 when the numerical values for answers to questions 7-10 are summed indicates a positive screen for interpersonal safety.</strong><br /><br /> <strong>Question:</strong> (linkID=g1.1) What is your housing situation today?<br /><strong>Response:</strong> I have housing<br /><br /> <strong>Question:</strong> (linkID=g1.2) Think about the place you live. Do you have problems with any of the following? (check all that apply)<br /><strong>Response:</strong> None of the above<br /> <br /><br />\n    </div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-responsePeriod" ];
+     fhir:Extension.valuePeriod [
+       fhir:Period.start [ fhir:value "2019-02-13T00:35:52.916382Z"^^xsd:dateTime ];
+       fhir:Period.end [ fhir:value "2019-02-13T00:35:59.723988Z"^^xsd:dateTime ]
+     ]
   ];
   fhir:QuestionnaireResponse.identifier [
-     fhir:Identifier.value [ fhir:value "test" ]
+     fhir:Identifier.value [ fhir:value "questionnaireresponse-example-housing" ]
   ];
   fhir:QuestionnaireResponse.questionnaire [
      fhir:link <http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-housing>;
@@ -34,7 +42,7 @@
      fhir:link <http://fhir.org/guides/argonaut-questionnaire/Encounter/encounter1>;
      fhir:Reference.reference [ fhir:value "Encounter/encounter1" ]
   ];
-  fhir:QuestionnaireResponse.authored [ fhir:value "2018-07-05T19:02:25.752525"^^xsd:dateTime];
+  fhir:QuestionnaireResponse.authored [ fhir:value "2019-02-13T00:35:59.723988Z"^^xsd:dateTime];
   fhir:QuestionnaireResponse.author [
      fhir:link <http://fhir.org/guides/argonaut-questionnaire/Practitioner/prov-admin1>;
      fhir:Reference.reference [ fhir:value "Practitioner/prov-admin1" ]
@@ -48,18 +56,8 @@
      fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1" ];
      fhir:QuestionnaireResponse.item.item [
        fhir:index 0;
-       fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1.2" ];
-       fhir:QuestionnaireResponse.item.text [ fhir:value "Think about the place you live. Do you have problems with any of the following? (check all that apply)" ];
-       fhir:QuestionnaireResponse.item.answer [
-         fhir:index 0;
-         fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Bug infestation" ]
-       ], [
-         fhir:index 1;
-         fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Inadequate heat" ]
-       ], [
-         fhir:index 2;
-         fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "Water leaks" ]
-       ]
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1.d" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Accountable Health Communities Core Health-Related Social Needs Screening Questions \nUnderlined answer options indicate positive responses for the associated health-related social need. \nA value greater than 10 when the numerical values for answers to questions 7-10 are summed indicates a positive screen for interpersonal safety." ]
      ], [
        fhir:index 1;
        fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1.1" ];
@@ -67,6 +65,14 @@
        fhir:QuestionnaireResponse.item.answer [
          fhir:index 0;
          fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "I have housing" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1.2" ];
+       fhir:QuestionnaireResponse.item.text [ fhir:value "Think about the place you live. Do you have problems with any of the following? (check all that apply)" ];
+       fhir:QuestionnaireResponse.item.answer [
+         fhir:index 0;
+         fhir:QuestionnaireResponse.item.answer.valueString [ fhir:value "None of the above" ]
        ]
      ]
   ] .
