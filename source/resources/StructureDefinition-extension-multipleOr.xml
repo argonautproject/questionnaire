@@ -9,9 +9,8 @@
   <title value="Argonaut SearchParameter Multiple OR Extension"/>
   <status value="active"/>
   <date value="2018-04-04T00:00:00-07:00"/>
-  <description value="Whether multiple parameters are allowed - e.g. more than one parameter with the same name. The search matches if all the parameters match."/>
+  <description value="Whether multiple values are allowed for each time the parameter exists. Values are separated by commas, and the parameter matches if any of the values match."/>
   <fhirVersion value="3.0.1"/>
-
   <kind value="complex-type"/>
   <abstract value="false"/>
   <contextType value="datatype"/>
@@ -23,8 +22,8 @@
   <differential>
     <element id="Extension">
       <path value="Extension"/>
-      <short value="Whether multiple parameters are allowed - e.g. more than one parameter with the same name. The search matches if all the parameters match."/>
-      <definition value="Whether multiple parameters are allowed - e.g. more than one parameter with the same name. The search matches if all the parameters match."/>
+      <short value="Whether multiple values are allowed for each time the parameter exists. Values are separated by commas, and the parameter matches if any of the values match."/>
+      <definition value="Whether multiple values are allowed for each time the parameter exists. Values are separated by commas, and the parameter matches if any of the values match."/>
       <min value="0"/>
       <max value="1"/>
       <isModifier value="false"/>
