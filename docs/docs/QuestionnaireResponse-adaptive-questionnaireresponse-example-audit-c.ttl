@@ -1,0 +1,500 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut-questionnaire/QuestionnaireResponse/adaptive-questionnaireresponse-example-audit-c> a fhir:QuestionnaireResponse;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "adaptive-questionnaireresponse-example-audit-c"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adap-questionnaireresponse";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h3>Alcohol Use Disorder Identification Test - Consumption [AUDIT-C] Adaptive View</h3>\n    <p><em>NOTE: These examples are for educational and testing purposes,\n     see the form copyright statement and do not redistribute without expressed\n     permission from the form author.</em></p>\n    <p>This simulates is a simple adaptive questionnaire implementation.\n     After answering and submitting the first question another question is randomly\n     returned from the selected questionnaire. This is repeated two more times and\n     then the adaptive questionnaire will finish by changing the status to completed\n     and returning a score. Note that although these questionnaires are designed as forms and\n     are not really appropriate for the adaptive questionnaire use case,  they are used here to\n      demonstrate a proof of concept implementation.<br />\n    <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit-c<br />\n    <strong>Date Completed:</strong> 2019-02-06<br /><br />\n    <em>Copyright: Copyright 2001 World Health Organization. Terms of Use: WHO exercises copyright over its information to make sure that it is used in accordance with the Organization's principles. Extracts of WHO information can be used for private study or for educational purposes without permission. Wider use requires permission to be obtained from WHO.  http://www.who.int/about/licensing/en/</em></p>\n    <hr /><hr /><br /> <strong>Question:</strong> (linkID=score) Cumulative Score is ... (this is hidden text/should not be displayed to the user)<br /><strong>Response:</strong> 0<br /><br /> <strong>Question:</strong> (linkID=std_dev) Standard Deviation is ... (this is hidden text/should not be displayed to the user)<br /><strong>Response:</strong> 0.0<br /><br /> <strong>Question:</strong> (linkID=q1) How often do you have a drink containing alcohol<br /><strong>Response:</strong>  Never ( code = LA6270-8, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=q2) How many standard drinks containing alcohol do you have on a typical day<br /><strong>Response:</strong>  1 or 2 ( code = LA15694-5, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=q3) How often do you have 6 or more drinks on 1 occasion<br /><strong>Response:</strong>  Never ( code = LA6270-8, codesystem = http://loinc.org)<br /></div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:Questionnaire;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "contained-adaptive-questionnaire-example-audit-c" ];
+     fhir:Resource.meta [
+       fhir:Meta.profile [
+         fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire";
+         fhir:index 0
+       ]
+     ];
+     fhir:DomainResource.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timeLimit" ];
+       fhir:Extension.valueDuration [
+         fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ];
+         fhir:Quantity.unit [ fhir:value "hour" ];
+         fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+         fhir:Quantity.code [ fhir:value "h" ]
+       ]
+     ];
+     fhir:Questionnaire.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit-c" ];
+     fhir:Questionnaire.title [ fhir:value "Contained Adaptive Alcohol Use Disorder Identification Test - Consumption [AUDIT-C]" ];
+     fhir:Questionnaire.status [ fhir:value "active" ];
+     fhir:Questionnaire.date [ fhir:value "2019-02-13T00:33:09.090670Z"^^xsd:dateTime ];
+     fhir:Questionnaire.copyright [ fhir:value "Copyright 2001 World Health Organization. Terms of Use: WHO exercises copyright over its information to make sure that it is used in accordance with the Organization's principles. Extracts of WHO information can be used for private study or for educational purposes without permission. Wider use requires permission to be obtained from WHO.  http://www.who.int/about/licensing/en/" ];
+     fhir:Questionnaire.item [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden" ];
+         fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder" ];
+         fhir:Extension.valueInteger [ fhir:value "1"^^xsd:integer ]
+       ];
+       fhir:Questionnaire.item.linkId [ fhir:value "score" ];
+       fhir:Questionnaire.item.text [ fhir:value "Cumulative Score is ..." ];
+       fhir:Questionnaire.item.type [ fhir:value "integer" ];
+       fhir:Questionnaire.item.repeats [ fhir:value "false"^^xsd:boolean ];
+       fhir:Questionnaire.item.readOnly [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden" ];
+         fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder" ];
+         fhir:Extension.valueInteger [ fhir:value "2"^^xsd:integer ]
+       ];
+       fhir:Questionnaire.item.linkId [ fhir:value "std_dev" ];
+       fhir:Questionnaire.item.text [ fhir:value "Standard Deviation is ..." ];
+       fhir:Questionnaire.item.type [ fhir:value "decimal" ];
+       fhir:Questionnaire.item.repeats [ fhir:value "false"^^xsd:boolean ];
+       fhir:Questionnaire.item.readOnly [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder" ];
+         fhir:Extension.valueInteger [ fhir:value "3"^^xsd:integer ]
+       ];
+       fhir:Questionnaire.item.linkId [ fhir:value "q1" ];
+       fhir:Questionnaire.item.definition [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit-c-q1" ];
+       fhir:Questionnaire.item.code [
+         fhir:index 0;
+         a loinc:68518-0;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "68518-0" ];
+         fhir:Coding.display [ fhir:value "How often do you have a drink containing alcohol" ]
+       ];
+       fhir:Questionnaire.item.prefix [ fhir:value "1." ];
+       fhir:Questionnaire.item.text [ fhir:value "How often do you have a drink containing alcohol" ];
+       fhir:Questionnaire.item.type [ fhir:value "choice" ];
+       fhir:Questionnaire.item.required [ fhir:value "true"^^xsd:boolean ];
+       fhir:Questionnaire.item.repeats [ fhir:value "false"^^xsd:boolean ];
+       fhir:Questionnaire.item.option [
+         fhir:index 0;
+         fhir:Questionnaire.item.option.valueCoding [
+           a loinc:LA6270-8;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder" ];
+             fhir:Extension.valueInteger [ fhir:value "1"^^xsd:integer ]
+           ], [
+             fhir:index 1;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+             fhir:Extension.valueDecimal [ fhir:value "0"^^xsd:decimal ]
+           ];
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA6270-8" ];
+           fhir:Coding.display [ fhir:value "Never" ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:Questionnaire.item.option.valueCoding [
+           a loinc:LA18926-8;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder" ];
+             fhir:Extension.valueInteger [ fhir:value "2"^^xsd:integer ]
+           ], [
+             fhir:index 1;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+             fhir:Extension.valueDecimal [ fhir:value "1"^^xsd:decimal ]
+           ];
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA18926-8" ];
+           fhir:Coding.display [ fhir:value "Monthly or less" ]
+         ]
+       ], [
+         fhir:index 2;
+         fhir:Questionnaire.item.option.valueCoding [
+           a loinc:LA18927-6;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder" ];
+             fhir:Extension.valueInteger [ fhir:value "3"^^xsd:integer ]
+           ], [
+             fhir:index 1;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+             fhir:Extension.valueDecimal [ fhir:value "2"^^xsd:decimal ]
+           ];
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA18927-6" ];
+           fhir:Coding.display [ fhir:value "2-4 times a month" ]
+         ]
+       ], [
+         fhir:index 3;
+         fhir:Questionnaire.item.option.valueCoding [
+           a loinc:LA18928-4;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder" ];
+             fhir:Extension.valueInteger [ fhir:value "4"^^xsd:integer ]
+           ], [
+             fhir:index 1;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+             fhir:Extension.valueDecimal [ fhir:value "3"^^xsd:decimal ]
+           ];
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA18928-4" ];
+           fhir:Coding.display [ fhir:value "2-3 times a week" ]
+         ]
+       ], [
+         fhir:index 4;
+         fhir:Questionnaire.item.option.valueCoding [
+           a loinc:LA18929-2;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder" ];
+             fhir:Extension.valueInteger [ fhir:value "5"^^xsd:integer ]
+           ], [
+             fhir:index 1;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+             fhir:Extension.valueDecimal [ fhir:value "4"^^xsd:decimal ]
+           ];
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA18929-2" ];
+           fhir:Coding.display [ fhir:value "4 or more times a week" ]
+         ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder" ];
+         fhir:Extension.valueInteger [ fhir:value "4"^^xsd:integer ]
+       ];
+       fhir:Questionnaire.item.linkId [ fhir:value "q2" ];
+       fhir:Questionnaire.item.definition [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit-c-q2" ];
+       fhir:Questionnaire.item.code [
+         fhir:index 0;
+         a loinc:68519-8;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "68519-8" ];
+         fhir:Coding.display [ fhir:value "How many standard drinks containing alcohol do you have on a typical day" ]
+       ];
+       fhir:Questionnaire.item.prefix [ fhir:value "2." ];
+       fhir:Questionnaire.item.text [ fhir:value "How many standard drinks containing alcohol do you have on a typical day" ];
+       fhir:Questionnaire.item.type [ fhir:value "choice" ];
+       fhir:Questionnaire.item.required [ fhir:value "true"^^xsd:boolean ];
+       fhir:Questionnaire.item.repeats [ fhir:value "false"^^xsd:boolean ];
+       fhir:Questionnaire.item.option [
+         fhir:index 0;
+         fhir:Questionnaire.item.option.valueCoding [
+           a loinc:LA15694-5;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder" ];
+             fhir:Extension.valueInteger [ fhir:value "1"^^xsd:integer ]
+           ], [
+             fhir:index 1;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+             fhir:Extension.valueDecimal [ fhir:value "0"^^xsd:decimal ]
+           ];
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA15694-5" ];
+           fhir:Coding.display [ fhir:value "1 or 2" ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:Questionnaire.item.option.valueCoding [
+           a loinc:LA15695-2;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder" ];
+             fhir:Extension.valueInteger [ fhir:value "2"^^xsd:integer ]
+           ], [
+             fhir:index 1;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+             fhir:Extension.valueDecimal [ fhir:value "1"^^xsd:decimal ]
+           ];
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA15695-2" ];
+           fhir:Coding.display [ fhir:value "3 or 4" ]
+         ]
+       ], [
+         fhir:index 2;
+         fhir:Questionnaire.item.option.valueCoding [
+           a loinc:LA18930-0;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder" ];
+             fhir:Extension.valueInteger [ fhir:value "3"^^xsd:integer ]
+           ], [
+             fhir:index 1;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+             fhir:Extension.valueDecimal [ fhir:value "2"^^xsd:decimal ]
+           ];
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA18930-0" ];
+           fhir:Coding.display [ fhir:value "5 or 6" ]
+         ]
+       ], [
+         fhir:index 3;
+         fhir:Questionnaire.item.option.valueCoding [
+           a loinc:LA18931-8;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder" ];
+             fhir:Extension.valueInteger [ fhir:value "4"^^xsd:integer ]
+           ], [
+             fhir:index 1;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+             fhir:Extension.valueDecimal [ fhir:value "3"^^xsd:decimal ]
+           ];
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA18931-8" ];
+           fhir:Coding.display [ fhir:value "7 to 9" ]
+         ]
+       ], [
+         fhir:index 4;
+         fhir:Questionnaire.item.option.valueCoding [
+           a loinc:LA18932-6;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder" ];
+             fhir:Extension.valueInteger [ fhir:value "5"^^xsd:integer ]
+           ], [
+             fhir:index 1;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+             fhir:Extension.valueDecimal [ fhir:value "4"^^xsd:decimal ]
+           ];
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA18932-6" ];
+           fhir:Coding.display [ fhir:value "10 or more" ]
+         ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder" ];
+         fhir:Extension.valueInteger [ fhir:value "5"^^xsd:integer ]
+       ];
+       fhir:Questionnaire.item.linkId [ fhir:value "q3" ];
+       fhir:Questionnaire.item.definition [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit-c-q3" ];
+       fhir:Questionnaire.item.code [
+         fhir:index 0;
+         a loinc:68520-6;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "68520-6" ];
+         fhir:Coding.display [ fhir:value "How often do you have 6 or more drinks on 1 occasion" ]
+       ];
+       fhir:Questionnaire.item.prefix [ fhir:value "3." ];
+       fhir:Questionnaire.item.text [ fhir:value "How often do you have 6 or more drinks on 1 occasion" ];
+       fhir:Questionnaire.item.type [ fhir:value "choice" ];
+       fhir:Questionnaire.item.required [ fhir:value "true"^^xsd:boolean ];
+       fhir:Questionnaire.item.repeats [ fhir:value "false"^^xsd:boolean ];
+       fhir:Questionnaire.item.option [
+         fhir:index 0;
+         fhir:Questionnaire.item.option.valueCoding [
+           a loinc:LA6270-8;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder" ];
+             fhir:Extension.valueInteger [ fhir:value "1"^^xsd:integer ]
+           ], [
+             fhir:index 1;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+             fhir:Extension.valueDecimal [ fhir:value "0"^^xsd:decimal ]
+           ];
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA6270-8" ];
+           fhir:Coding.display [ fhir:value "Never" ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:Questionnaire.item.option.valueCoding [
+           a loinc:LA18933-4;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder" ];
+             fhir:Extension.valueInteger [ fhir:value "2"^^xsd:integer ]
+           ], [
+             fhir:index 1;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+             fhir:Extension.valueDecimal [ fhir:value "1"^^xsd:decimal ]
+           ];
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA18933-4" ];
+           fhir:Coding.display [ fhir:value "Less than monthly" ]
+         ]
+       ], [
+         fhir:index 2;
+         fhir:Questionnaire.item.option.valueCoding [
+           a loinc:LA18876-5;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder" ];
+             fhir:Extension.valueInteger [ fhir:value "3"^^xsd:integer ]
+           ], [
+             fhir:index 1;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+             fhir:Extension.valueDecimal [ fhir:value "2"^^xsd:decimal ]
+           ];
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA18876-5" ];
+           fhir:Coding.display [ fhir:value "Monthly" ]
+         ]
+       ], [
+         fhir:index 3;
+         fhir:Questionnaire.item.option.valueCoding [
+           a loinc:LA18891-4;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder" ];
+             fhir:Extension.valueInteger [ fhir:value "4"^^xsd:integer ]
+           ], [
+             fhir:index 1;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+             fhir:Extension.valueDecimal [ fhir:value "3"^^xsd:decimal ]
+           ];
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA18891-4" ];
+           fhir:Coding.display [ fhir:value "Weekly" ]
+         ]
+       ], [
+         fhir:index 4;
+         fhir:Questionnaire.item.option.valueCoding [
+           a loinc:LA18934-2;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder" ];
+             fhir:Extension.valueInteger [ fhir:value "5"^^xsd:integer ]
+           ], [
+             fhir:index 1;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+             fhir:Extension.valueDecimal [ fhir:value "4"^^xsd:decimal ]
+           ];
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA18934-2" ];
+           fhir:Coding.display [ fhir:value "Daily or almost daily" ]
+         ]
+       ]
+     ]
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-responsePeriod" ];
+     fhir:Extension.valuePeriod [
+       fhir:Period.start [ fhir:value "2019-02-13T00:33:06.209791Z"^^xsd:dateTime ];
+       fhir:Period.end [ fhir:value "2019-02-13T00:33:32.202676Z"^^xsd:dateTime ]
+     ]
+  ];
+  fhir:QuestionnaireResponse.identifier [
+     fhir:Identifier.value [ fhir:value "adaptive-questionnaireresponse-example-audit-c" ]
+  ];
+  fhir:QuestionnaireResponse.questionnaire [
+     fhir:Reference.reference [ fhir:value "#contained-adaptive-questionnaire-example-audit-c" ]
+  ];
+  fhir:QuestionnaireResponse.status [ fhir:value "completed"];
+  fhir:QuestionnaireResponse.subject [
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/Patient/subject1>;
+     fhir:Reference.reference [ fhir:value "Patient/subject1" ]
+  ];
+  fhir:QuestionnaireResponse.context [
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/Encounter/encounter1>;
+     fhir:Reference.reference [ fhir:value "Encounter/encounter1" ]
+  ];
+  fhir:QuestionnaireResponse.authored [ fhir:value "2019-02-13T00:33:06.209791Z"^^xsd:dateTime];
+  fhir:QuestionnaireResponse.author [
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/Practitioner/prov-admin1>;
+     fhir:Reference.reference [ fhir:value "Practitioner/prov-admin1" ]
+  ];
+  fhir:QuestionnaireResponse.source [
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/Patient/subject1>;
+     fhir:Reference.reference [ fhir:value "Patient/subject1" ]
+  ];
+  fhir:QuestionnaireResponse.item [
+     fhir:index 0;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "score" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "Cumulative Score is ... (this is hidden text/should not be displayed to the user)" ];
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.answer.valueInteger [ fhir:value "0"^^xsd:integer ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "std_dev" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "Standard Deviation is ... (this is hidden text/should not be displayed to the user)" ];
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.answer.valueDecimal [ fhir:value "0.0"^^xsd:decimal ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "q1" ];
+     fhir:QuestionnaireResponse.item.definition [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit-c-q1" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "How often do you have a drink containing alcohol" ];
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.answer.valueCoding [
+         a loinc:LA6270-8;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "LA6270-8" ];
+         fhir:Coding.display [ fhir:value "Never" ]
+       ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "q2" ];
+     fhir:QuestionnaireResponse.item.definition [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit-c-q2" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "How many standard drinks containing alcohol do you have on a typical day" ];
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.answer.valueCoding [
+         a loinc:LA15694-5;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "LA15694-5" ];
+         fhir:Coding.display [ fhir:value "1 or 2" ]
+       ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "q3" ];
+     fhir:QuestionnaireResponse.item.definition [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit-c-q3" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "How often do you have 6 or more drinks on 1 occasion" ];
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.answer.valueCoding [
+         a loinc:LA6270-8;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "LA6270-8" ];
+         fhir:Coding.display [ fhir:value "Never" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut-questionnaire/QuestionnaireResponse/adaptive-questionnaireresponse-example-audit-c.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

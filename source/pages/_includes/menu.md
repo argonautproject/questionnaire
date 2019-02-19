@@ -22,11 +22,13 @@
     </li>
   </ul>
 </li>
+<!--
 <li>
   <a href="operations.html">Operations</a>
 </li>
+-->
 <li>
-  <a href="profiles.html">Profiles/Extensions</a>
+  <a href="profiles.html">Profiles and Operations</a>
 </li>
 <!--
 <li>
@@ -49,10 +51,15 @@
 </li>
 
   <li>
-    <a href="CapabilityStatement-server.html">Conformance requirements for Server</a>
+    <a href="CapabilityStatement-argo-questionnaire-provider-ehr.html">Conformance requirements for Provider EHR</a>
   </li>
+  <!--
   <li>
-    <a href="CapabilityStatement-client.html">Conformance requirements for Client</a>
+    <a href="CapabilityStatement-argonaut-questionnaire-client.html">Conformance requirements for Client</a>
+  </li>
+  -->
+  <li>
+    <a href="CapabilityStatement-adaptive-q-service.html">Conformance requirements for Adaptive Questionnaire Service</a>
   </li>
 </ul>
 </li>

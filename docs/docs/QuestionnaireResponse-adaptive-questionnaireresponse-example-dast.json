@@ -1,0 +1,338 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "id": "adaptive-questionnaireresponse-example-dast",
+  "meta": {
+    "profile": [
+      "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adap-questionnaireresponse"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h3>Drug Abuse Screening Test-10 [DAST-10] Adaptive View</h3>\n    <p><em>NOTE: These examples are for educational and testing purposes,\n     see the form copyright statement and do not redistribute without expressed\n     permission from the form author.</em></p>\n    <p>This simulates is a simple adaptive questionnaire implementation.\n     After answering and submitting the first question another question is randomly\n     returned from the selected questionnaire. This is repeated two more times and\n     then the adaptive questionnaire will finish by changing the status to completed\n     and returning a score. Note that although these questionnaires are designed as forms and\n     are not really appropriate for the adaptive questionnaire use case,  they are used here to\n      demonstrate a proof of concept implementation.<br />\n    <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast<br />\n    <strong>Date Completed:</strong> 2018-07-26<br /><br />\n    <em>Copyright: Center for Addiction and Mental Health\nCopyright 982 Center for Addiction and Mental Health. Used with permission.\nURL: http://www.camh.ca/en/hospital/Pages/home.aspx</em></p>\n    <hr /><hr /><br /> <strong>Question:</strong> (linkID=score) Cumulative Score is ... (this is hidden text/should not be displayed to the user)<br /><strong>Response:</strong> 0<br /><br /> <strong>Question:</strong> (linkID=std_dev) Standard Deviation is ... (this is hidden text/should not be displayed to the user)<br /><strong>Response:</strong> 0.0<br /><br /> <strong>Question:</strong> (linkID=g1.q1) Have you used drugs other than those required for medical reasons?<br /><strong>Response:</strong>  No ( code = LA32-8 , codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q4) Have you ever had blackouts or flashbacks as a result of drug use?<br /><strong>Response:</strong>  No ( code = LA32-8 , codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q8) Have you engaged in illegal activities in order to obtain drugs?<br /><strong>Response:</strong>  No ( code = LA32-8 , codesystem = http://loinc.org)<br /></div>"
+  },
+  "contained": [
+    {
+      "resourceType": "Questionnaire",
+      "id": "contained-adaptive-questionnaire-example-dast",
+      "meta": {
+        "profile": [
+          "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"
+        ]
+      },
+      "extension": [
+        {
+          "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timeLimit",
+          "valueDuration": {
+            "value": 2,
+            "unit": "day",
+            "system": "http://unitsofmeasure.org",
+            "code": "d"
+          }
+        }
+      ],
+      "url": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast",
+      "title": "Contained Adaptive Drug Abuse Screening Test-10 [DAST-10]",
+      "status": "active",
+      "date": "2019-02-13T00:35:13.638711Z",
+      "copyright": "Center for Addiction and Mental Health\nCopyright 982 Center for Addiction and Mental Health. Used with permission.\nURL: http://www.camh.ca/en/hospital/Pages/home.aspx",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+              "valueBoolean": true
+            },
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "valueInteger": 1
+            }
+          ],
+          "linkId": "score",
+          "text": "Cumulative Score is ...",
+          "type": "integer",
+          "repeats": false,
+          "readOnly": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+              "valueBoolean": true
+            },
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "valueInteger": 2
+            }
+          ],
+          "linkId": "std_dev",
+          "text": "Standard Deviation is ...",
+          "type": "decimal",
+          "repeats": false,
+          "readOnly": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "valueInteger": 3
+            }
+          ],
+          "linkId": "g1.q1",
+          "definition": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast-g1.q1",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "68525-5"
+            }
+          ],
+          "prefix": "1. ",
+          "text": "Have you used drugs other than those required for medical reasons?",
+          "type": "choice",
+          "required": true,
+          "repeats": false,
+          "option": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
+                  "valueDecimal": 0
+                },
+                {
+                  "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "valueInteger": 0
+                }
+              ],
+              "valueCoding": {
+                "system": "http://loinc.org",
+                "code": "LA32-8",
+                "display": "No"
+              }
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
+                  "valueDecimal": 1
+                },
+                {
+                  "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "valueInteger": 1
+                }
+              ],
+              "valueCoding": {
+                "system": "http://loinc.org",
+                "code": "LA33-6",
+                "display": "Yes"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "valueInteger": 4
+            }
+          ],
+          "linkId": "g1.q4",
+          "definition": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast-g1.q4",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "68528-9"
+            }
+          ],
+          "prefix": "4.",
+          "text": "Have you ever had blackouts or flashbacks as a result of drug use?",
+          "type": "choice",
+          "required": true,
+          "repeats": false,
+          "option": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
+                  "valueDecimal": 0
+                },
+                {
+                  "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "valueInteger": 0
+                }
+              ],
+              "valueCoding": {
+                "system": "http://loinc.org",
+                "code": "LA32-8",
+                "display": "No"
+              }
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
+                  "valueDecimal": 1
+                },
+                {
+                  "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "valueInteger": 1
+                }
+              ],
+              "valueCoding": {
+                "system": "http://loinc.org",
+                "code": "LA33-6",
+                "display": "Yes"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "valueInteger": 5
+            }
+          ],
+          "linkId": "g1.q8",
+          "definition": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast-g1.q8",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "68532-1"
+            }
+          ],
+          "prefix": "8.",
+          "text": "Have you engaged in illegal activities in order to obtain drugs?",
+          "type": "choice",
+          "required": true,
+          "repeats": false,
+          "option": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
+                  "valueDecimal": 0
+                },
+                {
+                  "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "valueInteger": 0
+                }
+              ],
+              "valueCoding": {
+                "system": "http://loinc.org",
+                "code": "LA32-8",
+                "display": "No"
+              }
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
+                  "valueDecimal": 1
+                },
+                {
+                  "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "valueInteger": 1
+                }
+              ],
+              "valueCoding": {
+                "system": "http://loinc.org",
+                "code": "LA33-6",
+                "display": "Yes"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extension": [
+    {
+      "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-responsePeriod",
+      "valuePeriod": {
+        "start": "2019-02-13T00:35:12.073629Z",
+        "end": "2019-02-13T00:35:33.341374Z"
+      }
+    }
+  ],
+  "identifier": {
+    "value": "adaptive-questionnaireresponse-example-dast"
+  },
+  "questionnaire": {
+    "reference": "#contained-adaptive-questionnaire-example-dast"
+  },
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/subject1"
+  },
+  "context": {
+    "reference": "Encounter/encounter1"
+  },
+  "authored": "2019-02-13T00:35:12.073629Z",
+  "author": {
+    "reference": "Practitioner/prov-admin1"
+  },
+  "source": {
+    "reference": "Patient/subject1"
+  },
+  "item": [
+    {
+      "linkId": "score",
+      "text": "Cumulative Score is ... (this is hidden text/should not be displayed to the user)",
+      "answer": [
+        {
+          "valueInteger": 0
+        }
+      ]
+    },
+    {
+      "linkId": "std_dev",
+      "text": "Standard Deviation is ... (this is hidden text/should not be displayed to the user)",
+      "answer": [
+        {
+          "valueDecimal": 0.0
+        }
+      ]
+    },
+    {
+      "linkId": "g1.q1",
+      "definition": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast-g1.q1",
+      "text": "Have you used drugs other than those required for medical reasons?",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA32-8",
+            "display": "No"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "g1.q4",
+      "definition": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast-g1.q4",
+      "text": "Have you ever had blackouts or flashbacks as a result of drug use?",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA32-8",
+            "display": "No"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "g1.q8",
+      "definition": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast-g1.q8",
+      "text": "Have you engaged in illegal activities in order to obtain drugs?",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA32-8",
+            "display": "No"
+          }
+        }
+      ]
+    }
+  ]
+}

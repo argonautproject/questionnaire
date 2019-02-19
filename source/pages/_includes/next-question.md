@@ -1,3 +1,7 @@
-source: next-question.md file
+Further quidance on using of this operation is described in the [Adaptive Forms Use Case].
 
-    This is the  markdown file that gets inserted into the op.html template.
+Examples of completed Adaptive QuestionnaireResponses can be found on the [Argonaut Adaptive QuestionnaireResponse Profile] page.  In addition, the [Argonaut Questionnaire Test Renderer] is a simulation of the adaptive form workflow.
+
+---
+
+{%include link-list.md %}

@@ -67,11 +67,10 @@
 
 
       <div id="project-status" class="project-status"> <!-- ig title text -->
-
-      
-      <strong>Argonaut Questionnaire Implementation Guide CI Build</strong>
-      
-
+        <b>Argonaut Questionnaire Implementation Guide</b>
+        
+        CI Build
+        
     </div><!-- end ig title text -->
 
   </div><!-- end container -->
@@ -126,15 +125,19 @@
     </li>
   </ul>
 </li>
+<!--
 <li>
   <a href="operations.html">Operations</a>
 </li>
+-->
 <li>
-  <a href="profiles.html">Profiles/Extensions</a>
+  <a href="profiles.html">Profiles and Operations</a>
 </li>
+<!--
 <li>
   <a href="terminology.html">Terminology</a>
 </li>
+-->
 <li>
   <a href="searchparameters.html">Search Parameters</a>
 </li>
@@ -151,10 +154,15 @@
 </li>
 
   <li>
-    <a href="CapabilityStatement-server.html">Conformance requirements for Server</a>
+    <a href="CapabilityStatement-argo-questionnaire-provider-ehr.html">Conformance requirements for Provider EHR</a>
   </li>
+  <!--
   <li>
-    <a href="CapabilityStatement-client.html">Conformance requirements for Client</a>
+    <a href="CapabilityStatement-argonaut-questionnaire-client.html">Conformance requirements for Client</a>
+  </li>
+  -->
+  <li>
+    <a href="CapabilityStatement-adaptive-q-service.html">Conformance requirements for Adaptive Questionnaire Service</a>
   </li>
 </ul>
 </li>
@@ -249,7 +257,11 @@
 
 <!--status-bar-->
 <p id="publish-box">
-This is the   Continuous Integration Build  of the Argonaut Questionnaire Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="history.html">Directory of published versions</a>
+This is the 
+    Continuous Integration Build
+   
+  
+  of the Argonaut Questionnaire Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="#">Directory of published versions</a>
 </p>
 
 
@@ -266,7 +278,10 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
 
 <ul id="markdown-toc">
   <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
-  <li><a href="#scope" id="markdown-toc-scope">Scope</a></li>
+  <li><a href="#scope" id="markdown-toc-scope">Scope</a>    <ul>
+      <li><a href="#prior-and-concurrent-work" id="markdown-toc-prior-and-concurrent-work">Prior and Concurrent Work</a></li>
+    </ul>
+  </li>
   <li><a href="#actors" id="markdown-toc-actors">Actors</a></li>
   <li><a href="#assumptions-and-preconditions" id="markdown-toc-assumptions-and-preconditions">Assumptions and Preconditions</a></li>
   <li><a href="#workflow-overview" id="markdown-toc-workflow-overview">Workflow Overview</a>    <ul>
@@ -274,9 +289,7 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
       <li><a href="#adaptive-forms" id="markdown-toc-adaptive-forms">Adaptive Forms</a></li>
     </ul>
   </li>
-  <li><a href="#security" id="markdown-toc-security">Security</a></li>
-  <li><a href="#outstanding-issuesfuture-scope" id="markdown-toc-outstanding-issuesfuture-scope">Outstanding issues/Future scope</a></li>
-  <li><a href="#jekyll-site-variables--remove-when-publish" id="markdown-toc-jekyll-site-variables--remove-when-publish">Jekyll Site Variables  (remove when publish)</a></li>
+  <li><a href="#security-and-privacy-considerations" id="markdown-toc-security-and-privacy-considerations">Security and Privacy Considerations</a></li>
 </ul>
 
 <!-- end TOC -->
@@ -292,8 +305,8 @@ The requirements were developed and defined by the Argonaut Questionnaire projec
   <li>The use case, scope, preconditions and workflow are described in the following sections</li>
   <li>Detailed guidance on using the Argonaut Questionnaire FHIR artifacts such as profiles and extensions can be found on the [Scenario 1] page.</li>
   <li>FHIR profiles and extensions are listed on the <a href="profiles.html">Profiles</a> page.</li>
-  <li>Implementation Guide specific value sets, and code systems on the <a href="terminology.html">Terminology</a>  page.</li>
-  <li>Conformance requirements for the servers and clients that claim conformance to this guide are found in the <a href="CapabilityStatement-assessmentbank.html">Assessment-Bank</a>, <a href="CapabilityStatement-answerbank.html">Answer-Bank</a>,  <a href="CapabilityStatement-server.html">Provider EHR</a> and <a href="CapabilityStatement-client.html">client</a> CapabilityStatements.</li>
+  <li>Implementation Guide specific value sets, and code systems on the <a href="terminology.html" title="Defines expectations for sharing of Questionnaires and answers, including mechanisms for automatically populating portions of a questionnaire based on embedded mappings to underlying data elements">Terminology</a>  page.</li>
+  <li>Conformance requirements for the systems that claim conformance to this guide are found in the <a href="CapabilityStatement-assessmentbank.html">Assessment-Bank</a>, <a href="CapabilityStatement-answerbank.html">Answer-Bank</a>, <a href="CapabilityStatement-argo-questionnaire-provider-ehr.html">Provider EHR</a> and <a href="CapabilityStatement-adaptive-q-service.html">Adaptive Questionnaire Service</a> CapabilityStatements.</li>
   <li>The <a href="downloads.html">Downloads</a> page contains many downloadable files to help with implementation of this specification.</li>
 </ul>
 
@@ -302,7 +315,7 @@ The requirements were developed and defined by the Argonaut Questionnaire projec
 there is clearly a need for a common form standard with a focus on simple assessments.  Clinical Assessments that are hand crafted lead to non standard responses and limited reuse.   Forms should be shareable between systems and across organizational boundaries. With this in mind, the Argonaut Questionnaire Poject’s focus and scope is on <em>simple</em> clinical assessments for the provider with general applicability and question sets that are mostly unstructured in systems today.  The  following table summarizes the scope of this implementation’s guide:</p>
 
 <div class="row">
-<div class="col-sm-4">
+<div class="col-sm-4" style="background-color: Lightcyan;">
 
     <p><strong>In Scope</strong></p>
 
@@ -322,7 +335,7 @@ there is clearly a need for a common form standard with a focus on simple assess
     <hr />
   </div>
 
-<div class="col-sm-4">
+<div class="col-sm-4" style="background-color: WhiteSmoke;">
     <p><strong>Out of Scope</strong></p>
 
     <hr />
@@ -346,28 +359,33 @@ there is clearly a need for a common form standard with a focus on simple assess
 
 </div>
 
+<h3 id="prior-and-concurrent-work">Prior and Concurrent Work</h3>
+<p>The <a href="http://hl7.org/fhir/us/sdc/history.html" title="Defines expectations for sharing of Questionnaires and answers, including mechanisms for automatically populating portions of a questionnaire based on embedded mappings to underlying data elements">SDC (Structured Data Capture)</a> implementation quide based on <a href="http://hl7.org/fhir/R4/" title="FHIR Release #4: First Normative Content">FHIR Version 4.0.0</a> provides a set of guidance around the use of Questionnaire and QuestionnaireResponse for more advanced implementation of Questionnaires including:</p>
+<ul>
+  <li>Advanced Rendering</li>
+  <li>Advanced Form behavior</li>
+  <li>Importation of Data into Forms</li>
+  <li>Extraction of Data from Forms</li>
+</ul>
+
+<p>It also overlaps with some of the content covered in this guide including adaptive form.  Efforts have been made to align this guide with SDC wherever possible.</p>
+
+<p>The Patient Reported Outcomes (PRO) implementation guide focus on capturing and exchanging patient reported outcome data electronically using the FHIR standard. The PRO FHIR IG does not define any specific new profiles, but rather uses the profiles defined by SDC.</p>
+
 <h2 id="actors">Actors</h2>
 
 <ol>
-  <li><strong>Adaptive Questionnaire Service</strong>:  A System that is capable of providing questions in response to requests and contains logic for determination of the next question and calculation of the score for an <a href="https://en.wikipedia.org/wiki/Computerized_adaptive_testing">Adaptive Questionnaire</a>.  For this Implementation Guide, this service is treated as a <strong>“<a href="https://en.wikipedia.org/wiki/Black_box">Black Box</a>”</strong>.</li>
-  <li><strong><a href="StructureDefinition-aqr.html" title="The contained Argonaut Questionnaire Profile to support the adaptive questionnaire use case.">Argonaut Adaptive Questionnaire Profile</a></strong></li>
-  <li><strong><a href="StructureDefinition-aqr.html" title="The Argonaut Adaptive QR profile is derived from the Argonaut QR profile requiring a containedArgonaut Questionnaire Profile to support the adaptive questionnaire use case.">Argonaut Adaptive QuestionnaireResponse Profile</a></strong></li>
-  <li><strong><a href="StructureDefinition-q.html" title="Argonaut Questionnaire Profile">Argonaut Questionnaire Profile</a></strong></li>
-  <li><strong><a href="StructureDefinition-qr.html" title="Argonaut QuestionnaireResponse Profile">Argonaut QuestionnaireResponse Profile</a></strong></li>
-  <li><strong>“<a href="CapabilityStatement-assessmentbank.html">Assessment-Bank</a>“</strong><sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>: A form repository for the collection of the assessments. It is accessible to both the providers and form editors as a FHIR Questionnaire endpoint.</li>
-  <li>(Optionally) <strong>“<a href="CapabilityStatement-answerbank.html">Answer-Bank</a>“</strong><sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>: A repository for the collection of the completed assessments (‘answers’). It is accessible to the providers  as a FHIR QuestionnaireResponse endpoint.  It may be internal or external to the <strong><a href="CapabilityStatement-server.html">Provider EHR</a></strong>.</li>
+  <li><strong><a href="CapabilityStatement-adaptive-q-service.html">Adaptive Questionnaire Service</a></strong>:  A System that is capable of providing questions in response to requests and contains logic for determination of the next question and calculation of the score for an <a href="https://en.wikipedia.org/wiki/Computerized_adaptive_testing">Adaptive Questionnaire</a>.  For this Implementation Guide, this service is treated as a <strong>“<a href="https://en.wikipedia.org/wiki/Black_box">Black Box</a>”</strong>.</li>
+  <li><strong><a href="StructureDefinition-argo-adap-questionnaireresponse.html" title="The Argonaut Adaptive QuestionnaireResponse Profile  is derived from the Argonaut QR profile requiring a containedArgonaut Questionnaire Profile to support the adaptive questionnaire use case.">Argonaut Adaptive QuestionnaireResponse Profile</a></strong></li>
+  <li><strong><a href="StructureDefinition-argo-questionnaire.html" title="Argonaut Questionnaire Profile">Argonaut Questionnaire Profile</a></strong></li>
+  <li><strong><a href="StructureDefinition-argo-questionnaireresponse.html" title="Argonaut QuestionnaireResponse Profile">Argonaut QuestionnaireResponse Profile</a></strong></li>
+  <li><strong><a href="CapabilityStatement-assessmentbank.html">Assessment-Bank</a></strong><sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>: A form repository for the collection of the assessments. It is accessible to both the providers and form editors as a FHIR Questionnaire endpoint.</li>
+  <li><strong><a href="CapabilityStatement-answerbank.html">Answer-Bank</a></strong><sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>: A repository for the collection of the completed assessments (‘answers’). It is accessible to the providers  as a FHIR QuestionnaireResponse endpoint.  It may be internal or external to the <strong><a href="CapabilityStatement-argo-questionnaire-provider-ehr.html">Provider EHR</a></strong>.</li>
   <li><strong>Form Author/Editor</strong>: A system or person authorized to create update and deprecate assessments forms.</li>
-  <li><strong>Form-filler</strong>: The software application interacting with the user to get answers for a questionnaire.  This is also known as the Client and may be any of the <a href="http://argonautwiki.hl7.org/images/4/4c/Argonaut_UseCasesV1.pdf">four uses cases</a> defined for Phase 1 of the <a href="http://argonautwiki.hl7.org/index.php?title=Main_Page">Argonaut Project</a>:
-    <ul>
-      <li>Patients apps that launch standalone ( i.e., a third party (<a href="http://docs.smarthealthit.org/authorization/">SMART on FHIR</a>) App )</li>
-      <li>Patient apps that launch from a portal</li>
-      <li>Provider apps that launch standalone</li>
-      <li>Provider apps that launch from a portal</li>
-    </ul>
-  </li>
+  <li><strong>Client Application</strong>: The software application interacting with the user to get answers for a questionnaire.  It can be integrated into the Provider EHR or an external patient portal or third party app.</li>
   <li><strong>Practitioner</strong>: A healthcare provider authorized to administer the assessment to a subject.</li>
   <li><strong>Provider administrator</strong>: A practitioner or staff member authorized to fill out an assessment on behalf of a subject or with input from a subject.</li>
-  <li><strong><a href="CapabilityStatement-server.html">Provider EHR</a></strong><sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>: A System that is capable of retrieving, rendering and displaying the assessment to a subject or a provider to fill out.</li>
+  <li><strong><a href="CapabilityStatement-argo-questionnaire-provider-ehr.html">Provider EHR</a></strong><sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>: Also Referred to as “Form Filler”. A System that is capable of retrieving, rendering and displaying the assessment to a subject or a provider to fill out.</li>
   <li><strong>Subject</strong>: The patient or individual who is the focus of the assessment.  For example, a patient.</li>
 </ol>
 
@@ -396,7 +414,7 @@ there is clearly a need for a common form standard with a focus on simple assess
 –&gt;</li>
     </ul>
   </li>
-  <li><a href="http://hl7.org/fhir/us/core/guidance.html" title="US Core General Guidance">US Core General Guidance</a> and conventions apply to this guide.</li>
+  <li><a href="http://hl7.org/fhir/us/coreguidance.html" title="US Core General Guidance">US Core General Guidance</a> and conventions apply to this guide.</li>
 </ul>
 
 <h2 id="workflow-overview">Workflow Overview</h2>
@@ -455,7 +473,7 @@ there is clearly a need for a common form standard with a focus on simple assess
 
 <p><strong>See  the <a href="adaptive.html">Adaptive Forms Use Case</a> for a detailed description of workflow and API guidance.</strong></p>
 
-<p>In the basic workflow outlined below., …todo…</p>
+<p>Adaptive Forms or Questionnaires such as <a href="http://www.healthmeasures.net/explore-measurement-systems/promis" title="PROMIS® (Patient-Reported Outcomes Measurement Information System) is a set of person-centered measures that evaluates and monitors physical, mental, and social health in adults and children. It can be used with the general population and with individuals living with chronic conditions.">PROMIS</a> forms use a stateless model where a selection of items is presented on the computer to an end user based on the answers on the prior items. The server selects the following items optimized for the outcome of the assessment or testee’s estimated ability or trait<sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup>. This implementation guide provides the basic framework for using Questionnaire and QuestionnaireResponse to preserve the state of the Questionnaire as the client retrieves questions from a remote adaptive questionnaire service.</p>
 
 <!-- all this Bootstrap html for getting an narrow image to fit nicely in text - 640 pix wide -->
 
@@ -480,7 +498,7 @@ there is clearly a need for a common form standard with a focus on simple assess
   <tbody>
     <tr>
       <td>1</td>
-      <td>​A Provider EHR or Form Filler may need to discover and review available  Adaptive Questionnaire’s (not shown).</td>
+      <td>​A Provider EHR may need to discover and review available Adaptive Questionnaire’s (not shown).</td>
     </tr>
     <tr>
       <td>2</td>
@@ -508,97 +526,32 @@ there is clearly a need for a common form standard with a focus on simple assess
     </tr>
     <tr>
       <td>8</td>
-      <td>The Form Filler may process the questions and answers or store or record any scoring.</td>
+      <td>The Provider EHR may process the questions and answers.</td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="security">Security</h2>
+<h2 id="security-and-privacy-considerations">Security and Privacy Considerations</h2>
 
-<p>For general security consideration refer to the <a href="http://hl7.org/fhir/us/core/security.html" title="US Core Security">Security section</a> in the US Core Implementation Guide. See the <a href="index.html#assumptions-and-preconditions" title="Assumptions-and-Preconditions">Assumptions</a> section above for a discussion of login and trust.</p>
+<p>For general security consideration refer to the <a href="http://hl7.org/fhir/us/coresecurity.html" title="US Core Security">Security section</a> in the US Core Implementation Guide and [FHIR Security] section in core FHIR Specification. See the <a href="index.html#assumptions-and-preconditions" title="Assumptions-and-Preconditions">Assumptions</a> section above for a discussion of login and trust.</p>
 
-<h2 id="outstanding-issuesfuture-scope">Outstanding issues/Future scope</h2>
-
-<ul>
-  <li>Processing (scoring, aggregating, etc) the responses.</li>
-  <li>Sharing or storing (i.e. a shared ‘Answer Bank’) and processing answers (QuestionnaireResponse) across systems.</li>
-  <li>Management of versioning of assessments</li>
-  <li>Intellectual Property and Copyright issues</li>
-  <li>Updating completed forms</li>
-  <li>Updating/retrieving half-completed forms</li>
-  <li>Supporting retrieval of standard concepts from external repository like VSAC?  ( example: nursing forms)</li>
-  <li>preference to contain or include return bundle</li>
-  <li>Defining a single way to do X?  e.g choice questions.  (there is more than one way!)</li>
-  <li>Scoring -  Currently formal logic is not in scope.</li>
-  <li>retrieval of forms as a printable pdf.</li>
-</ul>
-
-<h2 id="jekyll-site-variables--remove-when-publish">Jekyll Site Variables  (remove when publish)</h2>
-
-<p>These are the site variables defined <a href="http://wiki.hl7.org/index.php?title=IG_Publisher_Documentation#Jekyll">here</a>:</p>
-
-<ul>
-  <li>
-    <p>IG Business version specification (defined in ig.json)- {{site.data.fhir.ig.version}}  = 0.0.0</p>
-  </li>
-  <li>
-    <p>IG status (defined in ig.xml)- {{site.data.fhir.ig.status}}  = draft</p>
-  </li>
-  <li>
-    <p>Whether is experimental IG (defined in ig.xml) - {{site.data.fhir.ig.experimental}}  = true</p>
-  </li>
-  <li>
-    <p>IG Publisher name (defined in ig.xml) - {{site.data.fhir.ig.publisher}}  = Argonaut Project</p>
-  </li>
-  <li>
-    <p>dependency url - e.g. “uscore” : Base url of a dependency implementation Guide (defined in ig.json) -   {{site.data.fhir.uscore}} = http://hl7.org/fhir/us/core</p>
-  </li>
-  <li>
-    <p>igName : Title of the implementation Guide (defined in ig.xml) -   {{site.data.fhir.igName}} = Argonaut Questionnaire</p>
-  </li>
-  <li>
-    <p>path : path to the main FHIR specification (defined in ig.json)-   {{site.data.fhir.path}} = http://hl7.org/fhir/STU3/</p>
-  </li>
-  <li>
-    <p>canonical : canonical path to this specification (defined in ig.json)-   {{site.data.fhir.canonical}}  = http://fhir.org/guides/argonaut-questionnaire</p>
-  </li>
-  <li>
-    <p>errorCount : number of errors in the build file (not including HTML validation errors) -   {{site.data.fhir.errorCount}}  = 185</p>
-  </li>
-  <li>
-    <p>version : version of FHIR -   {{site.data.fhir.version}}  = 3.0.1</p>
-  </li>
-  <li>
-    <p>revision : revision of FHIR -   {{site.data.fhir.revision}}  = 11917</p>
-  </li>
-  <li>
-    <p>versionFull : version-revision -   {{site.data.fhir.versionFull}}  = 3.0.1-11917</p>
-  </li>
-  <li>
-    <p>totalFiles : total number of files found by the build -   {{site.data.fhir.totalFiles}}  = 27</p>
-  </li>
-  <li>
-    <p>processedFiles : number of files genrated by the build -   {{site.data.fhir.processedFiles}}  = 1</p>
-  </li>
-  <li>
-    <p>genDate : date of generation (so date stamps in the pages can match those in the conformance resources) -   {{site.data.fhir.genDate}}  = Thu, Oct 25, 2018 11:30-0700</p>
-  </li>
-</ul>
-
-<p><br /></p>
+<p>Responses to Questionnaires may be stored in an external ‘answer bank’ that is shared and may not be in a trusted environment. Therefore careful consideration to determine whether posting a QuestionnaireResponse to a shared answer bank is risking the patient’s privacy. Guidance on how to maintain patient privacy and still be able to search the responses effectively is provided in [this section].</p>
 
 <hr />
 
 <div class="footnotes">
   <ol>
     <li id="fn:1">
-      <p>This is called the ‘Form Manager’ in the <a href="http://build.fhir.org/ig/HL7/sdc/" title="SDC">Structured Data Capture Initiative</a> (SDC) <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+      <p>This corresponds to the ‘Form Manager’ in the <a href="http://build.fhir.org/ig/HL7/sdc/" title="SDC">Structured Data Capture Initiative</a> (SDC) <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:2">
-      <p>This is called the ‘Form Receiver/Archiver’ in the <a href="http://build.fhir.org/ig/HL7/sdc/" title="SDC">Structured Data Capture Initiative</a> (SDC) <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+      <p>This corresponds to the the ‘Form Receiver/Archiver’ in the <a href="http://build.fhir.org/ig/HL7/sdc/" title="SDC">Structured Data Capture Initiative</a> (SDC) <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:3">
-      <p>This is called the ‘Form Filler’ and/or ‘Form Response Handler’ in the <a href="http://build.fhir.org/ig/HL7/sdc/" title="SDC">Structured Data Capture Initiative</a> (SDC) <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+      <p>This corresponds to the the ‘Form Filler’ and/or ‘Form Response Handler’ in the <a href="http://build.fhir.org/ig/HL7/sdc/" title="SDC">Structured Data Capture Initiative</a> (SDC) <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:4">
+      <p>https://en.wikipedia.org/wiki/Questionnaire <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -634,11 +587,12 @@ there is clearly a need for a common form standard with a focus on simple assess
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      Argonaut Questionnaire Version: 0.0.0 &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Thu, Oct 25, 2018 11:30-0700.
-      | <a style="color: #81BEF7" href="history.html">History</a>
+      Argonaut Questionnaire 
+          Continuous Integration Build
+          &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Mon, Feb 18, 2019 18:36-0800.
+      | <a style="color: #81BEF7" href="#">History</a>
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
-        </span>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->
@@ -656,7 +610,7 @@ there is clearly a need for a common form standard with a focus on simple assess
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./assets/js/jquery.min.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
 <script src="./assets/js/bootstrap.min.js"> </script>
 <script src="./assets/js/respond.min.js"> </script>
 <script src="./assets/js/anchor.min.js"> </script>
@@ -668,14 +622,53 @@ there is clearly a need for a common form standard with a focus on simple assess
 
 
 
+<script src="assets/js/clipboard.min.js"> </script>
+
+<script>
+  // Tooltip
+
+  $('#copy-button').tooltip({
+    trigger: 'click',
+    placement: 'bottom'
+  });
+
+  function setTooltip(message) {
+    $('#copy-button').tooltip('hide')
+      .attr('data-original-title', message)
+      .tooltip('show');
+  }
+
+  function hideTooltip() {
+    setTimeout(function() {
+      $('#copy-button').tooltip('hide');
+    }, 1000);
+  }
+
+  // Clipboard
+
+  var clipboard = new ClipboardJS('#copy-button');
+
+  clipboard.on('success', function(e) {
+    setTooltip('Copied!');
+    hideTooltip();
+  });
+
+  clipboard.on('error', function(e) {
+    setTooltip('Failed!');
+    hideTooltip();
+  });
+
+</script>
+
+
 
 <!-- Analytics Below
 ================================================== -->
 
-<!-- add anchors before the closing body tag. -->
-<script> anchors.add()</script>
-
-
+<!-- add anchors before the closing body tag -->
+<script>
+anchors.add()
+</script>
 
 </body>
 </html>

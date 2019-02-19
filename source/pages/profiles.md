@@ -1,24 +1,27 @@
 ---
-title: Profiles defined as part of this Guide
+title: Profiles, Extensions, and Operations
 layout: default
 active: profiles
 ---
-#### Profiles
+### Profiles
 
 The following Profiles have been defined for this implementation guide.
 
-{% include list-profiles.xhtml %}
+{% include list-simple-profiles.xhtml %}
 
 <br />
+### Extensions
 
-#### Extensions
+The following Extensions have been defined for this implementation guide.
 
-These extensions have been defined for this implementation guide.
+{% include list-simple-extensions.xhtml %}
 
+<br />
+### Operations
 
-{% include list-extensions.xhtml %}
+The following OperationDefinitions have been defined for this implementation guide:
 
+{% include list-simple-operationdefinitions.xhtml %}
+<br />
 
 {% include link-list.md %}
-
-<br />

@@ -1,5 +1,5 @@
 {% assign id = {{page.id}} %}
-source file: source/pages/\_includes/{{id}}-intro.md
+
 
 {{site.data.structuredefinitions.[id].description}}
 
@@ -29,11 +29,16 @@ The following data-elements are mandatory:
 
 **Each Questionnaire must have:**
 
-1. An absolute URI that is used to identify this assessment form when it is referenced by a response (required by SDC )
+1. An absolute URI that is used to identify this assessment form when it is referenced by a response **
 1. A human friendly title
-1. The form's status (base specification requirement)
-1. An identifier to link to the response in a QuestionnaireResponse resource  (base specification requirement)
-1. A questions type including if a display only  question grouping elements (base specification requirement)
+1. The form's status *
+1. for each questionnaire item:
+    1. An identifier for each item to link to the response in a QuestionnaireResponse resource  *
+    1. A questions type for each item (including if a display only or a question grouping element) *
+
+\* Mandatory in the base FHIR QuestionnaireResponse resource
+
+\** Mandatory in the SDC implementation guide
 
 **The system [Must Support] if available:**
 
@@ -50,6 +55,7 @@ The following data-elements are mandatory:
     1. Instructions to the Subject/Provider administrator and or scorer
 1. A required flag
 1. A repeat flag
+1. A readOnly flag
 1. Choice list:
    1. as a [contained] valueset of standard concepts
    1. or as an enumerated list
@@ -84,6 +90,12 @@ Extensions:
 
 1. `boolean` vs `choice` - In a scenario where the end user has to select simple true/false or active/inactive states the `boolean`item answer type (e.g, a checkbox control) is appropriate.  Where two alternative answers can't be handled with a simple checkbox then a `choice` item answer type is needed. For example, for assigning numeric score values to the individual yes or no answers.
 1. `text` vs `string` item types  - `string` item answer types are typically limited to a single line and correspond to the the HTML5 `<input>` element type "text".  The Questionnaire `text` item answer types are intended for multiline answers and correspond to the HTML5 `<textarea>` form attribute.
+1.  Using the item question types `reference` and `attachment` is discouraged but not prohibited. The [Argonaut QuestionnaireResponse Profile] does not require them as answer types and thus a conformant system may be unable to process them.
+1.  If a question is marked as `repeats` = true, then multiple answers can be provided for the question in the corresponding QuestionnaireResponse. When rendering the questionnaire, it is up to the rendering software whether to render the question text for each answer repetition or to simply list each of the answers beneath the question. (Which is most appropriate visually may depend on the type of answer as well as whether there are nested items.)
+1. In many cases, an assessment form may need available in several languages.  A simple translation can be applied the the Questionnaires's text(string) elements using the standard FHIR [Translation] extension.  However in many case translations involves reworking the form due to cultural difference and result several unique forms each with its own id and url to identify it.
+1. The item type `display` can have many uses in a form.
+In addition to providing instruction to the end user, the form author may want to provide provider instructions or educational material within the form.  To indicated these different purposes to the Form Filler for rendering, the standard FHIR [displayCategory] extension is available to indicated the different purposes of the text.
+
 
 
 ### Examples

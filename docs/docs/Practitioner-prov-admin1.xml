@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="prov-admin1"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: prov-admin1</p><p><b>meta</b>: </p><p><b>identifier</b>: 999123456</p><p><b>active</b>: true</p><p><b>name</b>: Jane M Healer </p><p><b>communication</b>: English <span style="background: LightGoldenRodYellow">(Details : {urn:ietf:bcp:47 code 'en' = 'English', given as 'English'})</span></p></div>
+  </text>
+  <identifier>
+    <system value="http://hl7.org.fhir/sid/us-npi"/>
+    <value value="999123456"/>
+  </identifier>
+  <active value="true"/>
+  <name>
+    <family value="Healer"/>
+    <given value="Jane"/>
+    <given value="M"/>
+    <suffix value="RN"/>
+  </name>
+  <communication>
+    <coding>
+      <system value="urn:ietf:bcp:47"/>
+      <code value="en"/>
+      <display value="English"/>
+    </coding>
+    <text value="English"/>
+  </communication>
+</Practitioner>

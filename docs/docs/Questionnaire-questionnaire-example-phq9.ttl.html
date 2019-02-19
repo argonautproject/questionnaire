@@ -67,11 +67,10 @@
 
 
       <div id="project-status" class="project-status"> <!-- ig title text -->
-
-      
-      <strong>Argonaut Questionnaire Implementation Guide CI Build</strong>
-      
-
+        <b>Argonaut Questionnaire Implementation Guide</b>
+        
+        CI Build
+        
     </div><!-- end ig title text -->
 
   </div><!-- end container -->
@@ -126,15 +125,19 @@
     </li>
   </ul>
 </li>
+<!--
 <li>
   <a href="operations.html">Operations</a>
 </li>
+-->
 <li>
-  <a href="profiles.html">Profiles/Extensions</a>
+  <a href="profiles.html">Profiles and Operations</a>
 </li>
+<!--
 <li>
   <a href="terminology.html">Terminology</a>
 </li>
+-->
 <li>
   <a href="searchparameters.html">Search Parameters</a>
 </li>
@@ -151,10 +154,15 @@
 </li>
 
   <li>
-    <a href="CapabilityStatement-server.html">Conformance requirements for Server</a>
+    <a href="CapabilityStatement-argo-questionnaire-provider-ehr.html">Conformance requirements for Provider EHR</a>
   </li>
+  <!--
   <li>
-    <a href="CapabilityStatement-client.html">Conformance requirements for Client</a>
+    <a href="CapabilityStatement-argonaut-questionnaire-client.html">Conformance requirements for Client</a>
+  </li>
+  -->
+  <li>
+    <a href="CapabilityStatement-adaptive-q-service.html">Conformance requirements for Adaptive Questionnaire Service</a>
   </li>
 </ul>
 </li>
@@ -237,7 +245,11 @@
 
 <!--status-bar-->
 <p id="publish-box">
-This is the   Continuous Integration Build  of the Argonaut Questionnaire Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="history.html">Directory of published versions</a>
+This is the 
+    Continuous Integration Build
+   
+  
+  of the Argonaut Questionnaire Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="#">Directory of published versions</a>
 </p>
 
 
@@ -299,12 +311,11 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
   <!-- ============CONTENT CONTENT=============== -->
 
 
-
 <!-- ============ CONTENT CONTENT=============== -->
 
   <!-- ============ default xml or json content for structuredefinition CONTENT CONTENT=============== -->
   <p>
-  Raw <a href="Questionnaire-questionnaire-example-phq9.ttl" download>ttl</a>
+  Download Raw <a href="Questionnaire-questionnaire-example-phq9.ttl" download>ttl</a>
   </p>
 
 <pre class="rdf">
@@ -321,7 +332,7 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
   <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;questionnaire-example-phq9&quot;];
   <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.meta">fhir:Resource.meta</a> [
      <a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
-       <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q&quot;;
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire&quot;;
        <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0     ]
   ];
   <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.text">fhir:DomainResource.text</a> [
@@ -331,28 +342,31 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
   <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet">fhir:DomainResource.contained</a> [
      <a href="http://hl7.org/fhir/STU3/valueset.html">a</a> fhir:ValueSet;
      <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
-     <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;PHQ-9&quot; ];
+     <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;LL358-3&quot; ];
      <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.meta">fhir:Resource.meta</a> [
        <a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
-         <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs&quot;;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire-valueset&quot;;
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0       ]     ];
-     <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.url">fhir:ValueSet.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-9&quot; ];
+     <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.url">fhir:ValueSet.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/ValueSet/LL358-3&quot; ];
      <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.identifier">fhir:ValueSet.identifier</a> [
        <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
-       <a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">fhir:Identifier.value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;phq9&quot; ]     ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">fhir:Identifier.value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;LL358-3&quot; ]     ];
      <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.version">fhir:ValueSet.version</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;0.0.0&quot; ];
      <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.title">fhir:ValueSet.title</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Patient Health Questionnaire (PHQ-9)&quot; ];
      <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.status">fhir:ValueSet.status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;active&quot; ];
      <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.date">fhir:ValueSet.date</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:value</a> &quot;2018-06-27&quot;^^xsd:date ];
      <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.copyright">fhir:ValueSet.copyright</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">fhir:value</a> &quot;This content LOINC is copyright 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use .&quot; ];
      <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion">fhir:ValueSet.expansion</a> [
-       <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.identifier">fhir:ValueSet.expansion.identifier</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;phq9-expansion&quot; ];
-       <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.timestamp">fhir:ValueSet.expansion.timestamp</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:value</a> &quot;2018-06-27T22:49:08&quot;^^xsd:dateTime ];
+       <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.identifier">fhir:ValueSet.expansion.identifier</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;LL358-3ver2.64&quot; ];
+       <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.timestamp">fhir:ValueSet.expansion.timestamp</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:value</a> &quot;2018-06-27T22:49:08Z&quot;^^xsd:dateTime ];
        <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.total">fhir:ValueSet.expansion.total</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">fhir:value</a> &quot;4&quot;^^xsd:integer ];
        <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains">fhir:ValueSet.expansion.contains</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.extension">fhir:Element.extension</a> [
            <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot; ];
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueInteger</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">fhir:value</a> &quot;1&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
            <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue&quot; ];
            <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueDecimal</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">fhir:value</a> &quot;0&quot;^^xsd:decimal ]         ];
          <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
@@ -362,6 +376,9 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
          <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.extension">fhir:Element.extension</a> [
            <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot; ];
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueInteger</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">fhir:value</a> &quot;2&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
            <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue&quot; ];
            <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueDecimal</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">fhir:value</a> &quot;1&quot;^^xsd:decimal ]         ];
          <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
@@ -371,6 +388,9 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
          <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.extension">fhir:Element.extension</a> [
            <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot; ];
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueInteger</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">fhir:value</a> &quot;3&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
            <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue&quot; ];
            <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueDecimal</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">fhir:value</a> &quot;2&quot;^^xsd:decimal ]         ];
          <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
@@ -380,6 +400,9 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 3;
          <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.extension">fhir:Element.extension</a> [
            <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot; ];
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueInteger</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">fhir:value</a> &quot;4&quot;^^xsd:integer ]         ], [
+           <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
            <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue&quot; ];
            <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueDecimal</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">fhir:value</a> &quot;3&quot;^^xsd:decimal ]         ];
          <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
@@ -389,45 +412,70 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
   ], [
      <a href="http://hl7.org/fhir/STU3/valueset.html">a</a> fhir:ValueSet;
      <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
-     <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;PHQ-10&quot; ];
+     <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;LL359-1&quot; ];
      <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.meta">fhir:Resource.meta</a> [
        <a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
-         <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs&quot;;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire-valueset&quot;;
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0       ]     ];
-     <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.url">fhir:ValueSet.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-10&quot; ];
+     <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.url">fhir:ValueSet.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/ValueSet/LL359-1&quot; ];
      <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.identifier">fhir:ValueSet.identifier</a> [
        <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
-       <a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">fhir:Identifier.value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;phq10&quot; ]     ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#Identifier#Identifier.value">fhir:Identifier.value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;LL359-1ver2.64&quot; ]     ];
      <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.version">fhir:ValueSet.version</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;0.0.0&quot; ];
-     <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.title">fhir:ValueSet.title</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Patient Health Questionnaire (PHQ-9)&quot; ];
+     <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.title">fhir:ValueSet.title</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;PHQ.10 / Not difficult at all/Somewhat difficult/Very difficult/Extremely difficult-Perceived difficulty (PHQ-9)&quot; ];
      <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.status">fhir:ValueSet.status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;active&quot; ];
      <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.date">fhir:ValueSet.date</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:value</a> &quot;2018-06-27&quot;^^xsd:date ];
      <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.copyright">fhir:ValueSet.copyright</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">fhir:value</a> &quot;This content LOINC is copyright 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use .&quot; ];
      <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion">fhir:ValueSet.expansion</a> [
-       <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.identifier">fhir:ValueSet.expansion.identifier</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;phq10-expansion&quot; ];
-       <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.timestamp">fhir:ValueSet.expansion.timestamp</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:value</a> &quot;2018-06-27T22:27:03&quot;^^xsd:dateTime ];
+       <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.identifier">fhir:ValueSet.expansion.identifier</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;LL359&quot; ];
+       <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.timestamp">fhir:ValueSet.expansion.timestamp</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">fhir:value</a> &quot;2018-06-27T22:27:03Z&quot;^^xsd:dateTime ];
        <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.total">fhir:ValueSet.expansion.total</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">fhir:value</a> &quot;4&quot;^^xsd:integer ];
        <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains">fhir:ValueSet.expansion.contains</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.extension">fhir:Element.extension</a> [
+           <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot; ];
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueInteger</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">fhir:value</a> &quot;1&quot;^^xsd:integer ]         ];
          <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
          <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.version">fhir:ValueSet.expansion.contains.version</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;2.64&quot; ];
          <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;LA6572-7&quot; ];
          <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Not difficult at all&quot; ]       ], [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.extension">fhir:Element.extension</a> [
+           <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot; ];
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueInteger</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">fhir:value</a> &quot;2&quot;^^xsd:integer ]         ];
          <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
          <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.version">fhir:ValueSet.expansion.contains.version</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;2.64&quot; ];
          <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;LA6573-5&quot; ];
          <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Somewhat difficult&quot; ]       ], [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
+         <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.extension">fhir:Element.extension</a> [
+           <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot; ];
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueInteger</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">fhir:value</a> &quot;3&quot;^^xsd:integer ]         ];
          <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
          <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.version">fhir:ValueSet.expansion.contains.version</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;2.64&quot; ];
          <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;LA6575-0&quot; ];
          <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Very difficult&quot; ]       ], [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 3;
+         <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.extension">fhir:Element.extension</a> [
+           <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder&quot; ];
+           <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueInteger</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">fhir:value</a> &quot;4&quot;^^xsd:integer ]         ];
          <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
          <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.version">fhir:ValueSet.expansion.contains.version</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;2.64&quot; ];
          <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;LA6574-3&quot; ];
          <a href="http://hl7.org/fhir/STU3/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Extremely difficult&quot; ]       ]     ]
+  ];
+  <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.extension">fhir:DomainResource.extension</a> [
+     <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timeLimit&quot; ];
+     <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueDuration</a> [
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#Duration#Duration.value">fhir:Quantity.value</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#decimal">fhir:value</a> &quot;1&quot;^^xsd:decimal ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#Duration#Duration.unit">fhir:Quantity.unit</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;week&quot; ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#Duration#Duration.system">fhir:Quantity.system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://unitsofmeasure.org&quot; ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#Duration#Duration.code">fhir:Quantity.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;wk&quot; ]     ]
   ];
   <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.url">fhir:Questionnaire.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9&quot;];
   <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.identifier">fhir:Questionnaire.identifier</a> [
@@ -482,6 +530,10 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
   ];
   <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item">fhir:Questionnaire.item</a> [
      <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">fhir:Element.extension</a> [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder&quot; ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueInteger</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:integer ]     ];
      <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">fhir:Questionnaire.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;g1&quot; ];
      <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">fhir:Questionnaire.item.code</a> [
        <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
@@ -492,11 +544,19 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
      <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">fhir:Questionnaire.item.required</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
      <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.item">fhir:Questionnaire.item.item</a> [
        <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueInteger</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:integer ]       ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">fhir:Questionnaire.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;g1.d&quot; ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">fhir:Questionnaire.item.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Over the last 2 weeks, how often have you been bothered by any of the following problems? (Use “X” to indicate your answer)&quot; ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">fhir:Questionnaire.item.type</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;display&quot; ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">fhir:Questionnaire.item.required</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ]     ], [
        <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
+       <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueInteger</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">fhir:value</a> &quot;1&quot;^^xsd:integer ]       ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">fhir:Questionnaire.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;g1.q1&quot; ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">fhir:Questionnaire.item.code</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
@@ -509,9 +569,13 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">fhir:Questionnaire.item.required</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">fhir:Questionnaire.item.repeats</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.options">fhir:Questionnaire.item.options</a> [
-         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;#PHQ-9&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;#LL358-3&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day&quot; ]       ]     ], [
        <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 2;
+       <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueInteger</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">fhir:value</a> &quot;2&quot;^^xsd:integer ]       ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">fhir:Questionnaire.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;g1.q2&quot; ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">fhir:Questionnaire.item.code</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
@@ -524,9 +588,13 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">fhir:Questionnaire.item.required</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">fhir:Questionnaire.item.repeats</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.options">fhir:Questionnaire.item.options</a> [
-         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;#PHQ-9&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;#LL358-3&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day&quot; ]       ]     ], [
        <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 3;
+       <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueInteger</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">fhir:value</a> &quot;3&quot;^^xsd:integer ]       ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">fhir:Questionnaire.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;g1.q3&quot; ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">fhir:Questionnaire.item.code</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
@@ -539,9 +607,13 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">fhir:Questionnaire.item.required</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">fhir:Questionnaire.item.repeats</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.options">fhir:Questionnaire.item.options</a> [
-         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;#PHQ-9&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;#LL358-3&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day&quot; ]       ]     ], [
        <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 4;
+       <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueInteger</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">fhir:value</a> &quot;4&quot;^^xsd:integer ]       ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">fhir:Questionnaire.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;g1.q4&quot; ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">fhir:Questionnaire.item.code</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
@@ -554,9 +626,13 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">fhir:Questionnaire.item.required</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">fhir:Questionnaire.item.repeats</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.options">fhir:Questionnaire.item.options</a> [
-         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;#PHQ-9&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;#LL358-3&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day&quot; ]       ]     ], [
        <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 5;
+       <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueInteger</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">fhir:value</a> &quot;5&quot;^^xsd:integer ]       ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">fhir:Questionnaire.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;g1.q5&quot; ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">fhir:Questionnaire.item.code</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
@@ -569,9 +645,13 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">fhir:Questionnaire.item.required</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">fhir:Questionnaire.item.repeats</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.options">fhir:Questionnaire.item.options</a> [
-         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;#PHQ-9&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;#LL358-3&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day&quot; ]       ]     ], [
        <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 6;
+       <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueInteger</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">fhir:value</a> &quot;6&quot;^^xsd:integer ]       ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">fhir:Questionnaire.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;g1.q6&quot; ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">fhir:Questionnaire.item.code</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
@@ -584,9 +664,13 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">fhir:Questionnaire.item.required</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">fhir:Questionnaire.item.repeats</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.options">fhir:Questionnaire.item.options</a> [
-         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;#PHQ-9&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;#LL358-3&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day&quot; ]       ]     ], [
        <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 7;
+       <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueInteger</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">fhir:value</a> &quot;7&quot;^^xsd:integer ]       ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">fhir:Questionnaire.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;g1.q7&quot; ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">fhir:Questionnaire.item.code</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
@@ -599,9 +683,13 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">fhir:Questionnaire.item.required</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">fhir:Questionnaire.item.repeats</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.options">fhir:Questionnaire.item.options</a> [
-         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;#PHQ-9&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;#LL358-3&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day&quot; ]       ]     ], [
        <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 8;
+       <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueInteger</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">fhir:value</a> &quot;8&quot;^^xsd:integer ]       ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">fhir:Questionnaire.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;g1.q8&quot; ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">fhir:Questionnaire.item.code</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
@@ -614,9 +702,13 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">fhir:Questionnaire.item.required</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">fhir:Questionnaire.item.repeats</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.options">fhir:Questionnaire.item.options</a> [
-         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;#PHQ-9&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;#LL358-3&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day&quot; ]       ]     ], [
        <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 9;
+       <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueInteger</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">fhir:value</a> &quot;9&quot;^^xsd:integer ]       ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">fhir:Questionnaire.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;g1.q9&quot; ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">fhir:Questionnaire.item.code</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
@@ -629,29 +721,40 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">fhir:Questionnaire.item.required</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">fhir:Questionnaire.item.repeats</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.options">fhir:Questionnaire.item.options</a> [
-         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;#PHQ-9&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;#LL358-3&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day&quot; ]       ]     ], [
        <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 10;
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">fhir:Element.extension</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/questionnaire-hidden&quot; ];
-         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueBoolean</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ]       ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueBoolean</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ]       ], [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueInteger</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">fhir:value</a> &quot;10&quot;^^xsd:integer ]       ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">fhir:Questionnaire.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;g1.s&quot; ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">fhir:Questionnaire.item.code</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
          a loinc:44261-6;
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://loinc.org&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;44261-6&quot; ]       ];
-       <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">fhir:Questionnaire.item.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Scoring: \nAdd up all checked boxes on PHQ-9. \n\nFor every:\nNot at all = 0;\nSeveral days = 1;\nMore than half the days = 2;\nNearly every day = 3\n\nInterpretation of Total Score\nTotal Score Depression Severity\n1-4 Minimal depression\n5-9 Mild depression\n10-14 Moderate depression\n15-19 Moderately severe depression\n20-27 Severe depression \n&quot; ];
+       <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">fhir:Questionnaire.item.text</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Scoring: \nAdd up all checked boxes on PHQ-9. \n\nFor every:\nNot at all = 0;\nSeveral days = 1;\nMore than half the days = 2;\nNearly every day = 3\n\nInterpretation of Total Score\nTotal Score Depression Severity\n1-4 Minimal depression\n5-9 Mild depression\n10-14 Moderate depression\n15-19 Moderately severe depression\n20-27 Severe depression&quot; ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">fhir:Questionnaire.item.type</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;display&quot; ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">fhir:Questionnaire.item.repeats</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ]     ]
   ], [
      <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 1;
+     <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">fhir:Element.extension</a> [
+       <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder&quot; ];
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueInteger</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">fhir:value</a> &quot;1&quot;^^xsd:integer ]     ];
      <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">fhir:Questionnaire.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;g2&quot; ];
      <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.type">fhir:Questionnaire.item.type</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;group&quot; ];
      <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">fhir:Questionnaire.item.required</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
      <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.item">fhir:Questionnaire.item.item</a> [
        <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">fhir:Element.extension</a> [
+         <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">fhir:Extension.valueInteger</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:integer ]       ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">fhir:Questionnaire.item.linkId</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;g2.q1&quot; ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">fhir:Questionnaire.item.code</a> [
          <a href="http://hl7.org/fhir/STU3/rdf.html#index">fhir:index</a> 0;
@@ -663,7 +766,7 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">fhir:Questionnaire.item.required</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.repeats">fhir:Questionnaire.item.repeats</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean ];
        <a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.options">fhir:Questionnaire.item.options</a> [
-         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;#PHQ-10&quot; ];
+         <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">fhir:Reference.reference</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;#LL359-1&quot; ];
          <a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">fhir:Reference.display</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Not difficult at all/Somewhat difficult/Very difficult/Extremely difficult-Perceived difficulty (PHQ-9)&quot; ]       ]     ]
   ].
 
@@ -723,11 +826,12 @@ Formats: <a href="Questionnaire-questionnaire-example-phq9.html">Narrative</a>, 
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      Argonaut Questionnaire Version: 0.0.0 &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Thu, Oct 25, 2018 11:30-0700.
-      | <a style="color: #81BEF7" href="history.html">History</a>
+      Argonaut Questionnaire 
+          Continuous Integration Build
+          &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Mon, Feb 18, 2019 18:36-0800.
+      | <a style="color: #81BEF7" href="#">History</a>
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
-        </span>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->
@@ -745,7 +849,7 @@ Formats: <a href="Questionnaire-questionnaire-example-phq9.html">Narrative</a>, 
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./assets/js/jquery.min.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
 <script src="./assets/js/bootstrap.min.js"> </script>
 <script src="./assets/js/respond.min.js"> </script>
 <script src="./assets/js/anchor.min.js"> </script>
@@ -757,14 +861,53 @@ Formats: <a href="Questionnaire-questionnaire-example-phq9.html">Narrative</a>, 
 
 
 
+<script src="assets/js/clipboard.min.js"> </script>
+
+<script>
+  // Tooltip
+
+  $('#copy-button').tooltip({
+    trigger: 'click',
+    placement: 'bottom'
+  });
+
+  function setTooltip(message) {
+    $('#copy-button').tooltip('hide')
+      .attr('data-original-title', message)
+      .tooltip('show');
+  }
+
+  function hideTooltip() {
+    setTimeout(function() {
+      $('#copy-button').tooltip('hide');
+    }, 1000);
+  }
+
+  // Clipboard
+
+  var clipboard = new ClipboardJS('#copy-button');
+
+  clipboard.on('success', function(e) {
+    setTooltip('Copied!');
+    hideTooltip();
+  });
+
+  clipboard.on('error', function(e) {
+    setTooltip('Failed!');
+    hideTooltip();
+  });
+
+</script>
+
+
 
 <!-- Analytics Below
 ================================================== -->
 
-<!-- add anchors before the closing body tag. -->
-<script> anchors.add()</script>
-
-
+<!-- add anchors before the closing body tag -->
+<script>
+anchors.add()
+</script>
 
 </body>
 </html>

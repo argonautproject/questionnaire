@@ -6,48 +6,27 @@
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Argonaut Questionnaire</h2><p>The official URL for this implementation guide is: </p><pre>http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig</pre></div>
   </text>
   <url value="http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig"/>
-  <version value="0.0.0"/>
+  <version value="1.0.0"/>
   <name value="Argonaut Questionnaire"/>
   <status value="draft"/>
   <experimental value="true"/>
   <publisher value="Argonaut Project"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://argonautwiki.hl7.org"/>
+    </telecom>
+  </contact>
   <fhirVersion value="3.0.1"/>
   <package id="p1">
     <name value="base"/>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="QuestionnaireResponse-questionnaireresponse-example-sampler.html"/>
+        <valueUri value="QuestionnaireResponse-adaptive-questionnaireresponse-example-audit-c.html"/>
       </extension>
       <example value="true"/>
       <sourceReference>
-        <reference value="QuestionnaireResponse/questionnaireresponse-example-sampler"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="Questionnaire-questionnaire-example-sampler.html"/>
-      </extension>
-      <example value="true"/>
-      <sourceReference>
-        <reference value="Questionnaire/questionnaire-example-sampler"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="QuestionnaireResponse-questionnaireresponse-example-phq9.html"/>
-      </extension>
-      <example value="true"/>
-      <sourceReference>
-        <reference value="QuestionnaireResponse/questionnaireresponse-example-phq9"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="Questionnaire-questionnaire-example-phq9.html"/>
-      </extension>
-      <example value="true"/>
-      <sourceReference>
-        <reference value="Questionnaire/questionnaire-example-phq9"/>
+        <reference value="QuestionnaireResponse/adaptive-questionnaireresponse-example-audit-c"/>
       </sourceReference>
     </resource>
     <resource>
@@ -61,11 +40,56 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Questionnaire-questionnaire-example-audit-c.html"/>
+      </extension>
+      <example value="true"/>
+      <sourceReference>
+        <reference value="Questionnaire/questionnaire-example-audit-c"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Encounter-encounter1.html"/>
+      </extension>
+      <example value="true"/>
+      <sourceReference>
+        <reference value="Encounter/encounter1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="QuestionnaireResponse-questionnaireresponse-example-audit-c.html"/>
+      </extension>
+      <example value="true"/>
+      <sourceReference>
+        <reference value="QuestionnaireResponse/questionnaireresponse-example-audit-c"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="Questionnaire-questionnaire-example-housing.html"/>
       </extension>
       <example value="true"/>
       <sourceReference>
         <reference value="Questionnaire/questionnaire-example-housing"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="QuestionnaireResponse-questionnaireresponse-example-sampler.html"/>
+      </extension>
+      <example value="true"/>
+      <sourceReference>
+        <reference value="QuestionnaireResponse/questionnaireresponse-example-sampler"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Practitioner-prov-admin1.html"/>
+      </extension>
+      <example value="true"/>
+      <sourceReference>
+        <reference value="Practitioner/prov-admin1"/>
       </sourceReference>
     </resource>
     <resource>
@@ -79,6 +103,51 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="QuestionnaireResponse-adaptive-questionnaireresponse-example-dast.html"/>
+      </extension>
+      <example value="true"/>
+      <sourceReference>
+        <reference value="QuestionnaireResponse/adaptive-questionnaireresponse-example-dast"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="QuestionnaireResponse-questionnaireresponse-example-phq9.html"/>
+      </extension>
+      <example value="true"/>
+      <sourceReference>
+        <reference value="QuestionnaireResponse/questionnaireresponse-example-phq9"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="QuestionnaireResponse-questionnaireresponse-example-sampler-contained-patient.html"/>
+      </extension>
+      <example value="true"/>
+      <sourceReference>
+        <reference value="QuestionnaireResponse/questionnaireresponse-example-sampler-contained-patient"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="QuestionnaireResponse-adaptive-questionnaireresponse-example-phq9.html"/>
+      </extension>
+      <example value="true"/>
+      <sourceReference>
+        <reference value="QuestionnaireResponse/adaptive-questionnaireresponse-example-phq9"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="Patient-subject1.html"/>
+      </extension>
+      <example value="true"/>
+      <sourceReference>
+        <reference value="Patient/subject1"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="Questionnaire-questionnaire-example-dast.html"/>
       </extension>
       <example value="true"/>
@@ -88,140 +157,38 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="QuestionnaireResponse-questionnaireresponse-example-audit.html"/>
+        <valueUri value="QuestionnaireResponse-adaptive-questionnaireresponse-example-sampler.html"/>
       </extension>
       <example value="true"/>
       <sourceReference>
-        <reference value="QuestionnaireResponse/questionnaireresponse-example-audit"/>
+        <reference value="QuestionnaireResponse/adaptive-questionnaireresponse-example-sampler"/>
       </sourceReference>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="Questionnaire-questionnaire-example-audit.html"/>
+        <valueUri value="Questionnaire-questionnaire-example-phq9.html"/>
       </extension>
       <example value="true"/>
       <sourceReference>
-        <reference value="Questionnaire/questionnaire-example-audit"/>
+        <reference value="Questionnaire/questionnaire-example-phq9"/>
       </sourceReference>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="QuestionnaireResponse-questionnaireresponse-example-asq3.html"/>
+        <valueUri value="Questionnaire-questionnaire-example-sampler.html"/>
       </extension>
       <example value="true"/>
       <sourceReference>
-        <reference value="QuestionnaireResponse/questionnaireresponse-example-asq3"/>
+        <reference value="Questionnaire/questionnaire-example-sampler"/>
       </sourceReference>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="Questionnaire-questionnaire-example-asq3.html"/>
-      </extension>
-      <example value="true"/>
-      <sourceReference>
-        <reference value="Questionnaire/questionnaire-example-asq3"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-extension-timelimit.html"/>
+        <valueUri value="SearchParameter-Questionnaire-publisher.html"/>
       </extension>
       <example value="false"/>
       <sourceReference>
-        <reference value="StructureDefinition/extension-timelimit"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-extension-score.html"/>
-      </extension>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/extension-score"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="SearchParameter/questionnaire-context-value"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="SearchParameter/questionnaire-context-type"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-aqr.html"/>
-      </extension>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/aqr"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-aq.html"/>
-      </extension>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/aq"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-qr.html"/>
-      </extension>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/qr"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-qcvs.html"/>
-      </extension>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/qcvs"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-q.html"/>
-      </extension>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="StructureDefinition/q"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="OperationDefinition-next-q.html"/>
-      </extension>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="OperationDefinition/next-q"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="CapabilityStatement-server.html"/>
-      </extension>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="CapabilityStatement/server"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="CapabilityStatement-client.html"/>
-      </extension>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="CapabilityStatement/client"/>
+        <reference value="SearchParameter/Questionnaire-publisher"/>
       </sourceReference>
     </resource>
     <resource>
@@ -235,6 +202,168 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-extension-multipleAnd.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/extension-multipleAnd"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-extension-multipleOr.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/extension-multipleOr"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-argo-adap-questionnaireresponse.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/argo-adap-questionnaireresponse"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="SearchParameter-QuestionnaireResponse-status.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="SearchParameter/QuestionnaireResponse-status"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="SearchParameter-QuestionnaireResponse-questionnaire.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="SearchParameter/QuestionnaireResponse-questionnaire"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="SearchParameter-QuestionnaireResponse-author.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="SearchParameter/QuestionnaireResponse-author"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-extension-timeLimit.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/extension-timeLimit"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="SearchParameter-Questionnaire-status.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="SearchParameter/Questionnaire-status"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="SearchParameter-QuestionnaireResponse-patient.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="SearchParameter/QuestionnaireResponse-patient"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-extension-itemOrder.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/extension-itemOrder"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-argo-questionnaire.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/argo-questionnaire"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="SearchParameter-patient-birthdate.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="SearchParameter/patient-birthdate"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="OperationDefinition-next-question.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="OperationDefinition/next-question"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="SearchParameter-Questionnaire-context-type-value.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="SearchParameter/Questionnaire-context-type-value"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="SearchParameter-Questionnaire-context.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="SearchParameter/Questionnaire-context"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="SearchParameter-Questionnaire-title.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="SearchParameter/Questionnaire-title"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="SearchParameter-Questionnaire-version.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="SearchParameter/Questionnaire-version"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-extension-responsePeriod.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/extension-responsePeriod"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="CapabilityStatement-answerbank.html"/>
       </extension>
       <example value="false"/>
@@ -242,69 +371,119 @@
         <reference value="CapabilityStatement/answerbank"/>
       </sourceReference>
     </resource>
-  </package>
-  <package id="profile-base-q-spreadsheet.xml">
-    <name value="Argonaut_Q_Profile"/>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-q.html"/>
+        <valueUri value="StructureDefinition-argo-questionnaire-valueset.html"/>
       </extension>
       <example value="false"/>
-      <name value="Argonaut_Q_Profile"/>
       <sourceReference>
-        <reference value="StructureDefinition/q"/>
+        <reference value="StructureDefinition/argo-questionnaire-valueset"/>
       </sourceReference>
     </resource>
-  </package>
-  <package id="profile-base-qcvs-spreadsheet.xml">
-    <name value="Argonaut_QCVS_Profile"/>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-qcvs.html"/>
+        <valueUri value="SearchParameter-QuestionnaireResponse-context.html"/>
       </extension>
       <example value="false"/>
-      <name value="Argonaut_QCVS_Profile"/>
       <sourceReference>
-        <reference value="StructureDefinition/qcvs"/>
+        <reference value="SearchParameter/QuestionnaireResponse-context"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="CapabilityStatement-argo-questionnaire-provider-ehr.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CapabilityStatement/argo-questionnaire-provider-ehr"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="SearchParameter-Questionnaire-context-type.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="SearchParameter/Questionnaire-context-type"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="CapabilityStatement-adaptive-q-service.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CapabilityStatement/adaptive-q-service"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="SearchParameter-QuestionnaireResponse-source.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="SearchParameter/QuestionnaireResponse-source"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-argo-questionnaireresponse.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="StructureDefinition/argo-questionnaireresponse"/>
       </sourceReference>
     </resource>
   </package>
   <package id="profile-base-qr-spreadsheet.xml">
-    <name value="Argonaut_QR_Profile"/>
+    <name value="argo_questionnaireresponse"/>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-qr.html"/>
+        <valueUri value="StructureDefinition-argo-questionnaireresponse.html"/>
       </extension>
       <example value="false"/>
-      <name value="Argonaut_QR_Profile"/>
+      <name value="argo_questionnaireresponse"/>
       <sourceReference>
-        <reference value="StructureDefinition/qr"/>
+        <reference value="StructureDefinition/argo-questionnaireresponse"/>
       </sourceReference>
     </resource>
   </package>
-  <package id="profile-derived-q-spreadsheet.xml">
-    <name value="Argonaut_Adaptive_Q_Profile"/>
+  <package id="profile-base-qcvs-spreadsheet.xml">
+    <name value="argo_questionnaire_valueset"/>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-aq.html"/>
+        <valueUri value="StructureDefinition-argo-questionnaire-valueset.html"/>
       </extension>
       <example value="false"/>
-      <name value="Argonaut_Adaptive_Q_Profile"/>
+      <name value="argo_questionnaire_valueset"/>
       <sourceReference>
-        <reference value="StructureDefinition/aq"/>
+        <reference value="StructureDefinition/argo-questionnaire-valueset"/>
+      </sourceReference>
+    </resource>
+  </package>
+  <package id="profile-base-q-spreadsheet.xml">
+    <name value="argo_questionnaire"/>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-argo-questionnaire.html"/>
+      </extension>
+      <example value="false"/>
+      <name value="argo_questionnaire"/>
+      <sourceReference>
+        <reference value="StructureDefinition/argo-questionnaire"/>
       </sourceReference>
     </resource>
   </package>
   <package id="profile-derived-qr-spreadsheet.xml">
-    <name value="Argonaut_Adaptive_QR_Profile"/>
+    <name value="argo_adap_questionnaireresponse"/>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-aqr.html"/>
+        <valueUri value="StructureDefinition-argo-adap-questionnaireresponse.html"/>
       </extension>
       <example value="false"/>
-      <name value="Argonaut_Adaptive_QR_Profile"/>
+      <name value="argo_adap_questionnaireresponse"/>
       <sourceReference>
-        <reference value="StructureDefinition/aqr"/>
+        <reference value="StructureDefinition/argo-adap-questionnaireresponse"/>
       </sourceReference>
     </resource>
   </package>
@@ -314,56 +493,56 @@
     <kind value="page"/>
     <page>
       <source value="guidance.html"/>
-      <title value="Use Cases"/>
+      <title value="General Guidance"/>
       <kind value="page"/>
-      <page>
-        <source value="static.html"/>
-        <title value="Static Forms"/>
-        <kind value="page"/>
-      </page>
-      <page>
-        <source value="adaptive.html"/>
-        <title value="Adaptive Forms"/>
-        <kind value="page"/>
-      </page>
     </page>
     <page>
       <source value="profiles.html"/>
       <title value="Profiles and Extensions"/>
       <kind value="page"/>
       <page>
-        <source value="StructureDefinition-aqr.html"/>
-        <title value="StructureDefinition Aqr"/>
+        <source value="StructureDefinition-argo-adap-questionnaireresponse.html"/>
+        <title value="StructureDefinition Argo Adap QuestionnaireResponse"/>
         <kind value="resource"/>
       </page>
       <page>
-        <source value="StructureDefinition-aq.html"/>
-        <title value="StructureDefinition Aq"/>
+        <source value="StructureDefinition-argo-questionnaire.html"/>
+        <title value="StructureDefinition Argo Questionnaire"/>
         <kind value="resource"/>
       </page>
       <page>
-        <source value="StructureDefinition-qr.html"/>
-        <title value="StructureDefinition Qr"/>
+        <source value="StructureDefinition-argo-questionnaire-valueset.html"/>
+        <title value="StructureDefinition Argo Questionnaire ValueSet"/>
         <kind value="resource"/>
       </page>
       <page>
-        <source value="StructureDefinition-qcvs.html"/>
-        <title value="StructureDefinition Qcvs"/>
+        <source value="StructureDefinition-argo-questionnaireresponse.html"/>
+        <title value="StructureDefinition Argo QuestionnaireResponse"/>
         <kind value="resource"/>
       </page>
       <page>
-        <source value="StructureDefinition-q.html"/>
-        <title value="StructureDefinition Q"/>
+        <source value="StructureDefinition-extension-multipleAnd.html"/>
+        <title value="StructureDefinition Extension multipleAnd"/>
         <kind value="resource"/>
       </page>
       <page>
-        <source value="StructureDefinition-extension-timelimit.html"/>
-        <title value="StructureDefinition Extension Timelimit"/>
+        <source value="StructureDefinition-extension-multipleOr.html"/>
+        <title value="StructureDefinition Extension multipleOr"/>
         <kind value="resource"/>
       </page>
       <page>
-        <source value="StructureDefinition-extension-score.html"/>
-        <title value="StructureDefinition Extension Score"/>
+        <source value="StructureDefinition-extension-timeLimit.html"/>
+        <title value="StructureDefinition Extension timeLimit"/>
+        <kind value="resource"/>
+      </page>
+      <page>
+        <source value="StructureDefinition-extension-itemOrder.html"/>
+        <title value="StructureDefinition Extension itemOrder"/>
+        <kind value="resource"/>
+      </page>
+      <page>
+        <source value="StructureDefinition-extension-responsePeriod.html"/>
+        <title value="StructureDefinition Extension responsePeriod"/>
         <kind value="resource"/>
       </page>
     </page>
@@ -372,8 +551,8 @@
       <title value="Operations"/>
       <kind value="page"/>
       <page>
-        <source value="OperationDefinition-next-q.html"/>
-        <title value="OperationDefinition Next Q"/>
+        <source value="OperationDefinition-next-question.html"/>
+        <title value="OperationDefinition Next Question"/>
         <kind value="resource"/>
       </page>
     </page>
@@ -387,13 +566,73 @@
       <title value="Search Parameters"/>
       <kind value="page"/>
       <page>
-        <source value="SearchParameter-questionnaire-context-value.html"/>
-        <title value="SearchParameter Questionnaire Context Value"/>
+        <source value="SearchParameter-Questionnaire-publisher.html"/>
+        <title value="SearchParameter Questionnaire Publisher"/>
         <kind value="resource"/>
       </page>
       <page>
-        <source value="SearchParameter-questionnaire-context-type.html"/>
+        <source value="SearchParameter-QuestionnaireResponse-status.html"/>
+        <title value="SearchParameter QuestionnaireResponse Status"/>
+        <kind value="resource"/>
+      </page>
+      <page>
+        <source value="SearchParameter-QuestionnaireResponse-questionnaire.html"/>
+        <title value="SearchParameter QuestionnaireResponse Questionnaire"/>
+        <kind value="resource"/>
+      </page>
+      <page>
+        <source value="SearchParameter-QuestionnaireResponse-author.html"/>
+        <title value="SearchParameter QuestionnaireResponse Author"/>
+        <kind value="resource"/>
+      </page>
+      <page>
+        <source value="SearchParameter-Questionnaire-status.html"/>
+        <title value="SearchParameter Questionnaire Status"/>
+        <kind value="resource"/>
+      </page>
+      <page>
+        <source value="SearchParameter-QuestionnaireResponse-patient.html"/>
+        <title value="SearchParameter QuestionnaireResponse Patient"/>
+        <kind value="resource"/>
+      </page>
+      <page>
+        <source value="SearchParameter-patient-birthdate.html"/>
+        <title value="SearchParameter Patient Birthdate"/>
+        <kind value="resource"/>
+      </page>
+      <page>
+        <source value="SearchParameter-Questionnaire-context-type-value.html"/>
+        <title value="SearchParameter Questionnaire Context Type Value"/>
+        <kind value="resource"/>
+      </page>
+      <page>
+        <source value="SearchParameter-Questionnaire-context.html"/>
+        <title value="SearchParameter Questionnaire Context"/>
+        <kind value="resource"/>
+      </page>
+      <page>
+        <source value="SearchParameter-Questionnaire-title.html"/>
+        <title value="SearchParameter Questionnaire Title"/>
+        <kind value="resource"/>
+      </page>
+      <page>
+        <source value="SearchParameter-Questionnaire-version.html"/>
+        <title value="SearchParameter Questionnaire Version"/>
+        <kind value="resource"/>
+      </page>
+      <page>
+        <source value="SearchParameter-QuestionnaireResponse-context.html"/>
+        <title value="SearchParameter QuestionnaireResponse Context"/>
+        <kind value="resource"/>
+      </page>
+      <page>
+        <source value="SearchParameter-Questionnaire-context-type.html"/>
         <title value="SearchParameter Questionnaire Context Type"/>
+        <kind value="resource"/>
+      </page>
+      <page>
+        <source value="SearchParameter-QuestionnaireResponse-source.html"/>
+        <title value="SearchParameter QuestionnaireResponse Source"/>
         <kind value="resource"/>
       </page>
     </page>
@@ -402,16 +641,6 @@
       <title value="Capability Statements"/>
       <kind value="page"/>
       <page>
-        <source value="CapabilityStatement-server.html"/>
-        <title value="CapabilityStatement Server"/>
-        <kind value="resource"/>
-      </page>
-      <page>
-        <source value="CapabilityStatement-client.html"/>
-        <title value="CapabilityStatement Client"/>
-        <kind value="resource"/>
-      </page>
-      <page>
         <source value="CapabilityStatement-assessmentbank.html"/>
         <title value="CapabilityStatement Assessmentbank"/>
         <kind value="resource"/>
@@ -419,6 +648,16 @@
       <page>
         <source value="CapabilityStatement-answerbank.html"/>
         <title value="CapabilityStatement Answerbank"/>
+        <kind value="resource"/>
+      </page>
+      <page>
+        <source value="CapabilityStatement-argo-questionnaire-provider-ehr.html"/>
+        <title value="CapabilityStatement Argo Questionnaire Provider Ehr"/>
+        <kind value="resource"/>
+      </page>
+      <page>
+        <source value="CapabilityStatement-adaptive-q-service.html"/>
+        <title value="CapabilityStatement Adaptive Q Service"/>
         <kind value="resource"/>
       </page>
     </page>

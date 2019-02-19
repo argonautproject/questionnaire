@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+  <id value="QuestionnaireResponse-questionnaire"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: QuestionnaireResponse-questionnaire</p><p><b>url</b>: <a href="http://fhir.org/guides/argonaut-questionnaire/QuestionnaireResponse-questionnaire">http://fhir.org/guides/argonaut-questionnaire/QuestionnaireResponse-questionnaire</a></p><p><b>name</b>: questionnaireresponse_questionnaire</p><p><b>status</b>: active</p><p><b>experimental</b>: false</p><p><b>date</b>: Feb 18, 2019, 11:50:02 PM</p><p><b>publisher</b>: The Argonaut Project</p><p><b>contact</b>: </p><p><b>code</b>: questionnaire</p><p><b>base</b>: QuestionnaireResponse</p><p><b>type</b>: reference</p><p><b>derivedFrom</b>: <a href="http://hl7.org/fhir/SearchParameter/QuestionnaireResponse-questionnaire">http://hl7.org/fhir/SearchParameter/QuestionnaireResponse-questionnaire</a></p><p><b>description</b>: The questionnaire the answers are provided for</p><p><b>expression</b>: QuestionnaireResponse.questionnaire</p><p><b>xpath</b>: f:QuestionnaireResponse/f:questionnaire</p><p><b>xpathUsage</b>: normal</p><p><b>target</b>: Questionnaire</p><p><b>multipleOr Extension</b>True</p><p><b>multipleAnd Extension</b>True</p></div>
+  </text>
+  <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-multipleAnd">
+    <valueBoolean value="true"/>
+  </extension>
+  <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-multipleOr">
+    <valueBoolean value="true"/>
+  </extension>
+  <url value="http://fhir.org/guides/argonaut-questionnaire/QuestionnaireResponse-questionnaire"/>
+  <name value="questionnaireresponse_questionnaire"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2019-02-18T23:50:02.017203Z"/>
+  <publisher value="The Argonaut Project"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="https://github.com/argonautproject/questionnaire/issues"/>
+    </telecom>
+  </contact>
+  <code value="questionnaire"/>
+  <base value="QuestionnaireResponse"/>
+  <type value="reference"/>
+  <derivedFrom value="http://hl7.org/fhir/SearchParameter/QuestionnaireResponse-questionnaire"/>
+  <description value="The questionnaire the answers are provided for"/>
+  <expression value="QuestionnaireResponse.questionnaire"/>
+  <xpath value="f:QuestionnaireResponse/f:questionnaire"/>
+  <xpathUsage value="normal"/>
+  <target value="Questionnaire"/>
+</SearchParameter>

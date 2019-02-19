@@ -1,0 +1,56 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-version> a fhir:SearchParameter;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Questionnaire-version"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: Questionnaire-version</p><p><b>url</b>: <a href=\"http://fhir.org/guides/argonaut-questionnaire/Questionnaire-version\">http://fhir.org/guides/argonaut-questionnaire/Questionnaire-version</a></p><p><b>name</b>: questionnaire_version</p><p><b>status</b>: active</p><p><b>experimental</b>: false</p><p><b>date</b>: Feb 18, 2019, 11:50:01 PM</p><p><b>publisher</b>: The Argonaut Project</p><p><b>contact</b>: </p><p><b>code</b>: version</p><p><b>base</b>: Questionnaire</p><p><b>type</b>: token</p><p><b>derivedFrom</b>: <a href=\"http://hl7.org/fhir/SearchParameter/Questionnaire-version\">http://hl7.org/fhir/SearchParameter/Questionnaire-version</a></p><p><b>description</b>: The business version of the questionnaire</p><p><b>expression</b>: Questionnaire.version</p><p><b>xpath</b>: f:Questionnaire/f:version</p><p><b>xpathUsage</b>: normal</p><p><b>multipleOr Extension</b>True</p><p><b>multipleAnd Extension</b>True</p></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-multipleAnd" ];
+     fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+  ], [
+     fhir:index 1;
+     fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-multipleOr" ];
+     fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+  ];
+  fhir:SearchParameter.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/Questionnaire-version"];
+  fhir:SearchParameter.name [ fhir:value "questionnaire_version"];
+  fhir:SearchParameter.status [ fhir:value "active"];
+  fhir:SearchParameter.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:SearchParameter.date [ fhir:value "2019-02-18T23:50:01.813834Z"^^xsd:dateTime];
+  fhir:SearchParameter.publisher [ fhir:value "The Argonaut Project"];
+  fhir:SearchParameter.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "https://github.com/argonautproject/questionnaire/issues" ]
+     ]
+  ];
+  fhir:SearchParameter.code [ fhir:value "version"];
+  fhir:SearchParameter.base [
+     fhir:value "Questionnaire";
+     fhir:index 0
+  ];
+  fhir:SearchParameter.type [ fhir:value "token"];
+  fhir:SearchParameter.derivedFrom [ fhir:value "http://hl7.org/fhir/SearchParameter/Questionnaire-version"];
+  fhir:SearchParameter.description [ fhir:value "The business version of the questionnaire"];
+  fhir:SearchParameter.expression [ fhir:value "Questionnaire.version"];
+  fhir:SearchParameter.xpath [ fhir:value "f:Questionnaire/f:version"];
+  fhir:SearchParameter.xpathUsage [ fhir:value "normal"] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-version.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

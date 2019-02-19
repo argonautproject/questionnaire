@@ -188,8 +188,8 @@ def get_next_q(q, aqr, score=0):  # assuming no nesting
         cq.date = FD.FHIRDate(dt)
         cq.id = 'contained-adaptive-{}'.format(q.id)
         cq.extension = q.extension
-        cq.title = 'Contained Adaptive {}'.format(q.title)
-        cq.url = q.url
+        #cq.title = 'Contained Adaptive {}'.format(q.title)
+        #cq.url = q.url
         cq = aqr.contained[0]
         aqr.text.div = intro.format(t=cq.title, c=cq.copyright, q=cq.url, d=cq.date.as_json())  # render intro
     elif len(cq.item) < 5:  # check number of q is < 5 add a new q
@@ -210,7 +210,7 @@ def get_next_q(q, aqr, score=0):  # assuming no nesting
 
 
 def init_aqr(q):
-    aqr = QR.QuestionnaireResponse(f.aqr_templ, strict=False) # resets aqr and contained q
+    aqr = QR.QuestionnaireResponse(f.aqr_templ(q.url), strict=False) # resets aqr and contained q
     aqr.questionnaire = Ref.FHIRReference({'reference': '#contained-adaptive-{}'.format(q.id)}) # update the questionnaire
     aqr.id = q.url.rsplit('/')[-1].replace('questionnaire', 'adaptive-questionnaireresponse')  # update the QR id
     dt = '{}Z'.format(datetime.utcnow().isoformat())  # start time...

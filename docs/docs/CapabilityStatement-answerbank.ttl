@@ -14,7 +14,7 @@
   ];
   fhir:CapabilityStatement.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/CapabilityStatement/answerbank"];
   fhir:CapabilityStatement.version [ fhir:value "0.0.0"];
-  fhir:CapabilityStatement.name [ fhir:value "argonautQuestionnaireAnswerBankCapabilityStatement"];
+  fhir:CapabilityStatement.name [ fhir:value "answerbank"];
   fhir:CapabilityStatement.title [ fhir:value "Argonaut questionnaire Answer Bank CapabilityStatement"];
   fhir:CapabilityStatement.status [ fhir:value "draft"];
   fhir:CapabilityStatement.experimental [ fhir:value "false"^^xsd:boolean];
@@ -58,12 +58,12 @@
   ];
   fhir:CapabilityStatement.profile [
      fhir:index 0;
-     fhir:link <http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q>;
-     fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q" ]
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire>;
+     fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire" ]
   ], [
      fhir:index 1;
-     fhir:link <http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr>;
-     fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr" ]
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaireresponse>;
+     fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaireresponse" ]
   ];
   fhir:CapabilityStatement.rest [
      fhir:index 0;

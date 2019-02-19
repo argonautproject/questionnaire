@@ -1,0 +1,440 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "id": "adaptive-questionnaireresponse-example-phq9",
+  "meta": {
+    "profile": [
+      "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adap-questionnaireresponse"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h3>Patient Health Questionnaire (PHQ-9) Adaptive View</h3>\n    <p><em>NOTE: These examples are for educational and testing purposes,\n     see the form copyright statement and do not redistribute without expressed\n     permission from the form author.</em></p>\n    <p>This simulates is a simple adaptive questionnaire implementation.\n     After answering and submitting the first question another question is randomly\n     returned from the selected questionnaire. This is repeated two more times and\n     then the adaptive questionnaire will finish by changing the status to completed\n     and returning a score. Note that although these questionnaires are designed as forms and\n     are not really appropriate for the adaptive questionnaire use case,  they are used here to\n      demonstrate a proof of concept implementation.<br />\n    <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9<br />\n    <strong>Date Completed:</strong> 2018-07-26<br /><br />\n    <em>Copyright: Developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from\nPfizer Inc. No permission required to reproduce, translate, display or distribute.</em></p>\n    <hr /><hr /><br /> <strong>Question:</strong> (linkID=score) Cumulative Score is ... (this is hidden text/should not be displayed to the user)<br /><strong>Response:</strong> 0<br /><br /> <strong>Question:</strong> (linkID=std_dev) Standard Deviation is ... (this is hidden text/should not be displayed to the user)<br /><strong>Response:</strong> 0.0<br /><br /> <strong>Question:</strong> (linkID=g1.q1) Little interest or pleasure in doing things,<br /><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q8) Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual,<br /><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q4) Feeling tired or having little energy,<br /><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br /></div>"
+  },
+  "contained": [
+    {
+      "resourceType": "Questionnaire",
+      "id": "contained-adaptive-questionnaire-example-phq9",
+      "meta": {
+        "profile": [
+          "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"
+        ]
+      },
+      "extension": [
+        {
+          "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timeLimit",
+          "valueDuration": {
+            "value": 1,
+            "unit": "week",
+            "system": "http://unitsofmeasure.org",
+            "code": "wk"
+          }
+        }
+      ],
+      "url": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9",
+      "title": "Contained Adaptive Patient Health Questionnaire (PHQ-9)",
+      "status": "active",
+      "date": "2019-02-13T00:36:54.253025Z",
+      "copyright": "Developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from\nPfizer Inc. No permission required to reproduce, translate, display or distribute.",
+      "item": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+              "valueBoolean": true
+            },
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "valueInteger": 1
+            }
+          ],
+          "linkId": "score",
+          "text": "Cumulative Score is ...",
+          "type": "integer",
+          "repeats": false,
+          "readOnly": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
+              "valueBoolean": true
+            },
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "valueInteger": 2
+            }
+          ],
+          "linkId": "std_dev",
+          "text": "Standard Deviation is ...",
+          "type": "decimal",
+          "repeats": false,
+          "readOnly": true
+        },
+        {
+          "extension": [
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "valueInteger": 3
+            }
+          ],
+          "linkId": "g1.q1",
+          "definition": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9-g1.q1",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "44250-9"
+            }
+          ],
+          "prefix": "1. ",
+          "text": "Little interest or pleasure in doing things,",
+          "type": "choice",
+          "required": true,
+          "repeats": false,
+          "option": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
+                    "valueDecimal": 0
+                  }
+                ],
+                "system": "http://loinc.org",
+                "code": "LA6568-5",
+                "display": "Not at all"
+              }
+            },
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                    "valueInteger": 2
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
+                    "valueDecimal": 1
+                  }
+                ],
+                "system": "http://loinc.org",
+                "code": "LA6569-3",
+                "display": "Several days"
+              }
+            },
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                    "valueInteger": 3
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
+                    "valueDecimal": 2
+                  }
+                ],
+                "system": "http://loinc.org",
+                "code": "LA6570-1",
+                "display": "More than half the days"
+              }
+            },
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                    "valueInteger": 4
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
+                    "valueDecimal": 3
+                  }
+                ],
+                "system": "http://loinc.org",
+                "code": "LA6571-9",
+                "display": "Nearly every day"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "valueInteger": 4
+            }
+          ],
+          "linkId": "g1.q8",
+          "definition": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9-g1.q8",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "44253-3"
+            }
+          ],
+          "prefix": "8.",
+          "text": "Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual,",
+          "type": "choice",
+          "required": true,
+          "repeats": false,
+          "option": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
+                    "valueDecimal": 0
+                  }
+                ],
+                "system": "http://loinc.org",
+                "code": "LA6568-5",
+                "display": "Not at all"
+              }
+            },
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                    "valueInteger": 2
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
+                    "valueDecimal": 1
+                  }
+                ],
+                "system": "http://loinc.org",
+                "code": "LA6569-3",
+                "display": "Several days"
+              }
+            },
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                    "valueInteger": 3
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
+                    "valueDecimal": 2
+                  }
+                ],
+                "system": "http://loinc.org",
+                "code": "LA6570-1",
+                "display": "More than half the days"
+              }
+            },
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                    "valueInteger": 4
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
+                    "valueDecimal": 3
+                  }
+                ],
+                "system": "http://loinc.org",
+                "code": "LA6571-9",
+                "display": "Nearly every day"
+              }
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "valueInteger": 5
+            }
+          ],
+          "linkId": "g1.q4",
+          "definition": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9-g1.q4",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "44254-1"
+            }
+          ],
+          "prefix": "4.",
+          "text": "Feeling tired or having little energy,",
+          "type": "choice",
+          "required": true,
+          "repeats": false,
+          "option": [
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                    "valueInteger": 1
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
+                    "valueDecimal": 0
+                  }
+                ],
+                "system": "http://loinc.org",
+                "code": "LA6568-5",
+                "display": "Not at all"
+              }
+            },
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                    "valueInteger": 2
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
+                    "valueDecimal": 1
+                  }
+                ],
+                "system": "http://loinc.org",
+                "code": "LA6569-3",
+                "display": "Several days"
+              }
+            },
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                    "valueInteger": 3
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
+                    "valueDecimal": 2
+                  }
+                ],
+                "system": "http://loinc.org",
+                "code": "LA6570-1",
+                "display": "More than half the days"
+              }
+            },
+            {
+              "valueCoding": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder",
+                    "valueInteger": 4
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue",
+                    "valueDecimal": 3
+                  }
+                ],
+                "system": "http://loinc.org",
+                "code": "LA6571-9",
+                "display": "Nearly every day"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "extension": [
+    {
+      "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-responsePeriod",
+      "valuePeriod": {
+        "start": "2019-02-13T00:36:52.736153Z",
+        "end": "2019-02-13T00:37:17.386325Z"
+      }
+    }
+  ],
+  "identifier": {
+    "value": "adaptive-questionnaireresponse-example-phq9"
+  },
+  "questionnaire": {
+    "reference": "#contained-adaptive-questionnaire-example-phq9"
+  },
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/subject1"
+  },
+  "context": {
+    "reference": "Encounter/encounter1"
+  },
+  "authored": "2019-02-13T00:36:52.736153Z",
+  "author": {
+    "reference": "Practitioner/prov-admin1"
+  },
+  "source": {
+    "reference": "Patient/subject1"
+  },
+  "item": [
+    {
+      "linkId": "score",
+      "text": "Cumulative Score is ... (this is hidden text/should not be displayed to the user)",
+      "answer": [
+        {
+          "valueInteger": 0
+        }
+      ]
+    },
+    {
+      "linkId": "std_dev",
+      "text": "Standard Deviation is ... (this is hidden text/should not be displayed to the user)",
+      "answer": [
+        {
+          "valueDecimal": 0.0
+        }
+      ]
+    },
+    {
+      "linkId": "g1.q1",
+      "definition": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9-g1.q1",
+      "text": "Little interest or pleasure in doing things,",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA6568-5",
+            "display": "Not at all"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "g1.q8",
+      "definition": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9-g1.q8",
+      "text": "Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual,",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA6568-5",
+            "display": "Not at all"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "g1.q4",
+      "definition": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9-g1.q4",
+      "text": "Feeling tired or having little energy,",
+      "answer": [
+        {
+          "valueCoding": {
+            "system": "http://loinc.org",
+            "code": "LA6568-5",
+            "display": "Not at all"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -67,11 +67,10 @@
 
 
       <div id="project-status" class="project-status"> <!-- ig title text -->
-
-      
-      <strong>Argonaut Questionnaire Implementation Guide CI Build</strong>
-      
-
+        <b>Argonaut Questionnaire Implementation Guide</b>
+        
+        CI Build
+        
     </div><!-- end ig title text -->
 
   </div><!-- end container -->
@@ -126,15 +125,19 @@
     </li>
   </ul>
 </li>
+<!--
 <li>
   <a href="operations.html">Operations</a>
 </li>
+-->
 <li>
-  <a href="profiles.html">Profiles/Extensions</a>
+  <a href="profiles.html">Profiles and Operations</a>
 </li>
+<!--
 <li>
   <a href="terminology.html">Terminology</a>
 </li>
+-->
 <li>
   <a href="searchparameters.html">Search Parameters</a>
 </li>
@@ -151,10 +154,15 @@
 </li>
 
   <li>
-    <a href="CapabilityStatement-server.html">Conformance requirements for Server</a>
+    <a href="CapabilityStatement-argo-questionnaire-provider-ehr.html">Conformance requirements for Provider EHR</a>
   </li>
+  <!--
   <li>
-    <a href="CapabilityStatement-client.html">Conformance requirements for Client</a>
+    <a href="CapabilityStatement-argonaut-questionnaire-client.html">Conformance requirements for Client</a>
+  </li>
+  -->
+  <li>
+    <a href="CapabilityStatement-adaptive-q-service.html">Conformance requirements for Adaptive Questionnaire Service</a>
   </li>
 </ul>
 </li>
@@ -237,7 +245,11 @@
 
 <!--status-bar-->
 <p id="publish-box">
-This is the   Continuous Integration Build  of the Argonaut Questionnaire Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="history.html">Directory of published versions</a>
+This is the 
+    Continuous Integration Build
+   
+  
+  of the Argonaut Questionnaire Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="#">Directory of published versions</a>
 </p>
 
 
@@ -290,7 +302,6 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
   <!-- ============CONTENT CONTENT=============== -->
 
 
-
   <!--  template typically for examples -->
 <!-- ============CONTENT CONTENT=============== -->
 
@@ -303,9 +314,22 @@ Formats: <a href="QuestionnaireResponse-questionnaireresponse-example-sampler.xm
 <div xmlns="http://www.w3.org/1999/xhtml">
     <h3>Response Summary</h3>
     <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-sampler<br/>
-    <strong>Date Completed:</strong> 2018-07-26T00:17:43.707504<br/>
-    <hr/> <br/> <strong>Question:</strong> (linkID=g9.q1) Describe in detal how to estimate the average air speed velocity of a laden swallow. Please cite your sources and give examples.<br/><strong>Response:</strong> use a Duck!
-Citaions:http://jinja.pocoo.org/docs/2.10/templates/#builtin-filters<br/><br/> <strong>Question:</strong> (linkID=g3.q1) What is the average air speed velocity of a laden swallow in m/sec?<br/><strong>Response:</strong> 12.38<br/><br/> <strong>Question:</strong> (linkID=g8.q1) Describe how to estimate the average air speed velocity of a laden swallow in 20 words or less.<br/><strong>Response:</strong> use a duck!<br/><br/> <strong>Question:</strong> (linkID=g4.q1) What is the average air speed velocity of a laden swallow in m/sec?<br/><strong>Response:</strong> 12<br/><br/> <strong>Question:</strong> (linkID=g12.q1) What is the average air speed velocity of a laden swallow in m/sec?<br/><strong>Response:</strong> 11( code = )<br/><br/> <strong>Question:</strong> (linkID=g2.q1) Check the box if the following statement is true.  The average air speed velocity of a laden European swallow is greater than a laden African swallow.<br/><strong>Response:</strong> False<br/><br/> <strong>Question:</strong> (linkID=g5.q1) If a laden swallow left Camelot on 7/5/2018 what day would it reach the Castle Anthrax?<br/><strong>Response:</strong> 2018-07-26<br/><br/> <strong>Question:</strong> (linkID=g6.q1) If a laden swallow left Camelot on 7/5/2018 and noon when would it reach Castle Anthrax?<br/><strong>Response:</strong> 2018-07-26T01:58<br/><br/> <strong>Question:</strong> (linkID=g7.q1) If a laden swallow left Camelot at noon what time would it reach Castle Anthrax?<br/><strong>Response:</strong> 22:53<br/><br/> <strong>Question:</strong> (linkID=g10.q1) Provide a link to a video clip where the average air speed velocity of a laden swallow question is discussed.<br/><strong>Response:</strong> http://jinja.pocoo.org/docs/2.10/templates/#builtin-filters<br/><br/> <strong>Question:</strong> (linkID=g11.q1) What is the average air speed velocity of a laden swallow in m/sec?<br/><strong>Response:</strong> 11( code = )<br/> <br/><br/>
+    <strong>Date Completed:</strong> 2019-02-13T00:39:38.320181Z<br/>
+    <hr/> <br/><strong>The Argonaut Questionnaire Sampler is designed to show all the question types that can be used in the Argonaut Questionnaire Project:
+
+1 boolean
+2 decimal
+3 integer
+4 dateDate
+5 dateTime
+6 timeTime
+7 string
+8 textText
+9 urlUrl
+10 choice
+11 open-choice
+12 quantity
+</strong><br/><br/> <strong>Question:</strong> (linkID=g2.q1) Check the box if the following statement is true.  The average air speed velocity of a laden European swallow is greater than a laden African swallow.<br/><strong>Response:</strong> False<br/><br/> <strong>Question:</strong> (linkID=g3.q1) What is the average air speed velocity of a laden swallow in m/sec?<br/><strong>Response:</strong> 11.0<br/><br/> <strong>Question:</strong> (linkID=g4.q1) What is the average air speed velocity of a laden swallow in m/sec?<br/><strong>Response:</strong> 11<br/><br/> <strong>Question:</strong> (linkID=g5.q1) If a laden swallow left Camelot on 7/5/2018 what day would it reach the Castle Anthrax?<br/><strong>Response:</strong> 2019-12-31<br/><br/> <strong>Question:</strong> (linkID=g6.q1) If a laden swallow left Camelot on 7/5/2018 and noon when would it reach Castle Anthrax?<br/><strong>Response:</strong> 2019-02-13T12:59<br/><br/> <strong>Question:</strong> (linkID=g7.q1) If a laden swallow left Camelot at noon what time would it reach Castle Anthrax?<br/><strong>Response:</strong> 12:59<br/><br/> <strong>Question:</strong> (linkID=g8.q1) Describe how to estimate the average air speed velocity of a laden swallow in 20 words or less.<br/><strong>Response:</strong> use a duck?<br/><br/> <strong>Question:</strong> (linkID=g9.q1) Describe in detal how to estimate the average air speed velocity of a laden swallow. Please cite your sources and give examples.<br/><strong>Response:</strong> use a duck!!  See https://en.wikipedia.org/wiki/Monty_Python_and_the_Holy_Grail<br/><br/> <strong>Question:</strong> (linkID=g10.q1) Provide a link to a video clip where the average air speed velocity of a laden swallow question is discussed.<br/><strong>Response:</strong> https://en.wikipedia.org/wiki/Monty_Python_and_the_Holy_Grail<br/><br/> <strong>Question:</strong> (linkID=g11.q1) What is the average air speed velocity of a laden swallow in m/sec?<br/><strong>Response:</strong> 11<br/><br/> <strong>Question:</strong> (linkID=g12.q1) What is the average air speed velocity of a laden swallow in m/sec?<br/><strong>Response:</strong> 11<br/><strong>Response:</strong> <br/><br/> <strong>Question:</strong> (linkID=g13.q1) What is the average air speed velocity of a laden swallow - please provide the units?<br/><strong>Response:</strong> 11<br/><strong>Response:</strong> m/sec<br/> <br/><br/>
     </div>
 
   <!-- ==============END CONTENT END CONTENT=================== -->
@@ -343,11 +367,12 @@ Citaions:http://jinja.pocoo.org/docs/2.10/templates/#builtin-filters<br/><br/> <
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      Argonaut Questionnaire Version: 0.0.0 &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Thu, Oct 25, 2018 11:30-0700.
-      | <a style="color: #81BEF7" href="history.html">History</a>
+      Argonaut Questionnaire 
+          Continuous Integration Build
+          &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Mon, Feb 18, 2019 18:36-0800.
+      | <a style="color: #81BEF7" href="#">History</a>
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
-        </span>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->
@@ -365,7 +390,7 @@ Citaions:http://jinja.pocoo.org/docs/2.10/templates/#builtin-filters<br/><br/> <
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./assets/js/jquery.min.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
 <script src="./assets/js/bootstrap.min.js"> </script>
 <script src="./assets/js/respond.min.js"> </script>
 <script src="./assets/js/anchor.min.js"> </script>
@@ -375,14 +400,53 @@ Citaions:http://jinja.pocoo.org/docs/2.10/templates/#builtin-filters<br/><br/> <
 
 
 
+<script src="assets/js/clipboard.min.js"> </script>
+
+<script>
+  // Tooltip
+
+  $('#copy-button').tooltip({
+    trigger: 'click',
+    placement: 'bottom'
+  });
+
+  function setTooltip(message) {
+    $('#copy-button').tooltip('hide')
+      .attr('data-original-title', message)
+      .tooltip('show');
+  }
+
+  function hideTooltip() {
+    setTimeout(function() {
+      $('#copy-button').tooltip('hide');
+    }, 1000);
+  }
+
+  // Clipboard
+
+  var clipboard = new ClipboardJS('#copy-button');
+
+  clipboard.on('success', function(e) {
+    setTooltip('Copied!');
+    hideTooltip();
+  });
+
+  clipboard.on('error', function(e) {
+    setTooltip('Failed!');
+    hideTooltip();
+  });
+
+</script>
+
+
 
 <!-- Analytics Below
 ================================================== -->
 
-<!-- add anchors before the closing body tag. -->
-<script> anchors.add()</script>
-
-
+<!-- add anchors before the closing body tag -->
+<script>
+anchors.add()
+</script>
 
 </body>
 </html>

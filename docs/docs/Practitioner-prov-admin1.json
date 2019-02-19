@@ -1,0 +1,44 @@
+{
+  "resourceType": "Practitioner",
+  "id": "prov-admin1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: prov-admin1</p><p><b>meta</b>: </p><p><b>identifier</b>: 999123456</p><p><b>active</b>: true</p><p><b>name</b>: Jane M Healer </p><p><b>communication</b>: English <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'en' = 'English', given as 'English'})</span></p></div>"
+  },
+  "identifier": [
+    {
+      "system": "http://hl7.org.fhir/sid/us-npi",
+      "value": "999123456"
+    }
+  ],
+  "active": true,
+  "name": [
+    {
+      "family": "Healer",
+      "given": [
+        "Jane",
+        "M"
+      ],
+      "suffix": [
+        "RN"
+      ]
+    }
+  ],
+  "communication": [
+    {
+      "coding": [
+        {
+          "system": "urn:ietf:bcp:47",
+          "code": "en",
+          "display": "English"
+        }
+      ],
+      "text": "English"
+    }
+  ]
+}

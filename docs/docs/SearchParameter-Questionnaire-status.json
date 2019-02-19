@@ -1,0 +1,44 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "Questionnaire-status",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: Questionnaire-status</p><p><b>url</b>: <a href=\"http://fhir.org/guides/argonaut-questionnaire/Questionnaire-status\">http://fhir.org/guides/argonaut-questionnaire/Questionnaire-status</a></p><p><b>name</b>: questionnaire_status</p><p><b>status</b>: active</p><p><b>experimental</b>: false</p><p><b>date</b>: Feb 18, 2019, 11:50:01 PM</p><p><b>publisher</b>: The Argonaut Project</p><p><b>contact</b>: </p><p><b>code</b>: status</p><p><b>base</b>: Questionnaire</p><p><b>type</b>: token</p><p><b>derivedFrom</b>: <a href=\"http://hl7.org/fhir/SearchParameter/Questionnaire-status\">http://hl7.org/fhir/SearchParameter/Questionnaire-status</a></p><p><b>description</b>: The current status of the questionnaire</p><p><b>expression</b>: Questionnaire.status</p><p><b>xpath</b>: f:Questionnaire/f:status</p><p><b>xpathUsage</b>: normal</p><p><b>multipleOr Extension</b>True</p><p><b>multipleAnd Extension</b>True</p></div>"
+  },
+  "extension": [
+    {
+      "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-multipleAnd",
+      "valueBoolean": true
+    },
+    {
+      "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-multipleOr",
+      "valueBoolean": true
+    }
+  ],
+  "url": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire-status",
+  "name": "questionnaire_status",
+  "status": "active",
+  "experimental": false,
+  "date": "2019-02-18T23:50:01.168523Z",
+  "publisher": "The Argonaut Project",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://github.com/argonautproject/questionnaire/issues"
+        }
+      ]
+    }
+  ],
+  "code": "status",
+  "base": [
+    "Questionnaire"
+  ],
+  "type": "token",
+  "derivedFrom": "http://hl7.org/fhir/SearchParameter/Questionnaire-status",
+  "description": "The current status of the questionnaire",
+  "expression": "Questionnaire.status",
+  "xpath": "f:Questionnaire/f:status",
+  "xpathUsage": "normal"
+}

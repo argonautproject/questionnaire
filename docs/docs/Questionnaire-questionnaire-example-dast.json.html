@@ -67,11 +67,10 @@
 
 
       <div id="project-status" class="project-status"> <!-- ig title text -->
-
-      
-      <strong>Argonaut Questionnaire Implementation Guide CI Build</strong>
-      
-
+        <b>Argonaut Questionnaire Implementation Guide</b>
+        
+        CI Build
+        
     </div><!-- end ig title text -->
 
   </div><!-- end container -->
@@ -126,15 +125,19 @@
     </li>
   </ul>
 </li>
+<!--
 <li>
   <a href="operations.html">Operations</a>
 </li>
+-->
 <li>
-  <a href="profiles.html">Profiles/Extensions</a>
+  <a href="profiles.html">Profiles and Operations</a>
 </li>
+<!--
 <li>
   <a href="terminology.html">Terminology</a>
 </li>
+-->
 <li>
   <a href="searchparameters.html">Search Parameters</a>
 </li>
@@ -151,10 +154,15 @@
 </li>
 
   <li>
-    <a href="CapabilityStatement-server.html">Conformance requirements for Server</a>
+    <a href="CapabilityStatement-argo-questionnaire-provider-ehr.html">Conformance requirements for Provider EHR</a>
   </li>
+  <!--
   <li>
-    <a href="CapabilityStatement-client.html">Conformance requirements for Client</a>
+    <a href="CapabilityStatement-argonaut-questionnaire-client.html">Conformance requirements for Client</a>
+  </li>
+  -->
+  <li>
+    <a href="CapabilityStatement-adaptive-q-service.html">Conformance requirements for Adaptive Questionnaire Service</a>
   </li>
 </ul>
 </li>
@@ -237,7 +245,11 @@
 
 <!--status-bar-->
 <p id="publish-box">
-This is the   Continuous Integration Build  of the Argonaut Questionnaire Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="history.html">Directory of published versions</a>
+This is the 
+    Continuous Integration Build
+   
+  
+  of the Argonaut Questionnaire Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="#">Directory of published versions</a>
 </p>
 
 
@@ -299,12 +311,11 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
   <!-- ============CONTENT CONTENT=============== -->
 
 
-
 <!-- ============ CONTENT CONTENT=============== -->
 
   <!-- ============ default xml or json content for structuredefinition CONTENT CONTENT=============== -->
   <p>
-  Raw <a href="Questionnaire-questionnaire-example-dast.json" download>json</a>
+  Download Raw <a href="Questionnaire-questionnaire-example-dast.json" download>json</a>
   </p>
 
 <pre class="json">
@@ -313,7 +324,7 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
   "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.id">id</a>" : "questionnaire-example-dast",
   "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.meta">meta</a>" : {
     "<a href="http://hl7.org/fhir/STU3/datatypes.html#Meta#Meta.profile">profile</a>" : [
-      "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"
+      "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"
     ]
   },
   "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.text">text</a>" : {
@@ -1002,6 +1013,17 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
 Copyright 982 Center for Addiction and Mental Health. Used with permission.
 URL: http://www.camh.ca/en/hospital/Pages/home.aspx&lt;/p&gt;&lt;/div&gt;"
   },
+  "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.extension">extension</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timeLimit",
+      "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDuration</a>" : {
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#Duration#Duration.value">value</a>" : 2,
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#Duration#Duration.unit">unit</a>" : "day",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#Duration#Duration.system">system</a>" : "http://unitsofmeasure.org",
+        "<a href="http://hl7.org/fhir/STU3/datatypes.html#Duration#Duration.code">code</a>" : "d"
+      }
+    }
+  ],
   "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast",
   "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.identifier">identifier</a>" : [
     {
@@ -1072,6 +1094,10 @@ URL: http://www.camh.ca/en/hospital/Pages/home.aspx",
         {
           "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
           "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueBoolean</a>" : true
+        },
+        {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 0
         }
       ],
       "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "g1",
@@ -1080,6 +1106,12 @@ URL: http://www.camh.ca/en/hospital/Pages/home.aspx",
       "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a>" : true,
       "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.item">item</a>" : [
         {
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 0
+            }
+          ],
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "g1.d",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.text">text</a>" : "The following questions concern information about your possible involvement with drugs not including alcoholic beverages during the past 12 months. &quot;Drug abuse&quot; refers to (1) the use of prescribed or over-the-counter drugs in excess of the directions, and (2) any nonmedical use of drugs.
 
@@ -1090,6 +1122,12 @@ Please answer every question. If you have difficulty with a statement, then choo
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.required">required</a>" : true
         },
         {
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 1
+            }
+          ],
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "g1.q1",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">code</a>" : [
             {
@@ -1106,32 +1144,46 @@ Please answer every question. If you have difficulty with a statement, then choo
             {
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>" : [
                 {
-                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
                   "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a>" : 0
+                },
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 0
                 }
               ],
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueCoding</a>" : {
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA 32-8 ",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA32-8",
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "No"
               }
             },
             {
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>" : [
                 {
-                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
                   "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a>" : 1
+                },
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 1
                 }
               ],
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueCoding</a>" : {
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA33-6 ",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA33-6",
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Yes"
               }
             }
           ]
         },
         {
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 2
+            }
+          ],
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "g1.q2",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">code</a>" : [
             {
@@ -1148,32 +1200,46 @@ Please answer every question. If you have difficulty with a statement, then choo
             {
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>" : [
                 {
-                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
                   "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a>" : 0
+                },
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 0
                 }
               ],
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueCoding</a>" : {
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA 32-8 ",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA32-8",
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "No"
               }
             },
             {
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>" : [
                 {
-                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
                   "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a>" : 1
+                },
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 1
                 }
               ],
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueCoding</a>" : {
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA33-6 ",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA33-6",
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Yes"
               }
             }
           ]
         },
         {
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 3
+            }
+          ],
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "g1.q3",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">code</a>" : [
             {
@@ -1190,32 +1256,46 @@ Please answer every question. If you have difficulty with a statement, then choo
             {
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>" : [
                 {
-                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
                   "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a>" : 1
+                },
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 0
                 }
               ],
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueCoding</a>" : {
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA 32-8 ",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA32-8",
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "No"
               }
             },
             {
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>" : [
                 {
-                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
                   "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a>" : 0
+                },
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 1
                 }
               ],
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueCoding</a>" : {
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA33-6 ",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA33-6",
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Yes"
               }
             }
           ]
         },
         {
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 4
+            }
+          ],
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "g1.q4",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">code</a>" : [
             {
@@ -1232,32 +1312,46 @@ Please answer every question. If you have difficulty with a statement, then choo
             {
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>" : [
                 {
-                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
                   "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a>" : 0
+                },
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 0
                 }
               ],
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueCoding</a>" : {
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA 32-8 ",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA32-8",
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "No"
               }
             },
             {
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>" : [
                 {
-                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
                   "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a>" : 1
+                },
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 1
                 }
               ],
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueCoding</a>" : {
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA33-6 ",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA33-6",
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Yes"
               }
             }
           ]
         },
         {
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 5
+            }
+          ],
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "g1.q5",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">code</a>" : [
             {
@@ -1274,32 +1368,46 @@ Please answer every question. If you have difficulty with a statement, then choo
             {
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>" : [
                 {
-                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
                   "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a>" : 0
+                },
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 0
                 }
               ],
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueCoding</a>" : {
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA 32-8 ",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA32-8",
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "No"
               }
             },
             {
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>" : [
                 {
-                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
                   "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a>" : 1
+                },
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 1
                 }
               ],
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueCoding</a>" : {
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA33-6 ",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA33-6",
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Yes"
               }
             }
           ]
         },
         {
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 6
+            }
+          ],
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "g1.q6",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">code</a>" : [
             {
@@ -1316,32 +1424,46 @@ Please answer every question. If you have difficulty with a statement, then choo
             {
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>" : [
                 {
-                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
                   "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a>" : 0
+                },
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 0
                 }
               ],
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueCoding</a>" : {
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA 32-8 ",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA32-8",
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "No"
               }
             },
             {
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>" : [
                 {
-                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
                   "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a>" : 1
+                },
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 1
                 }
               ],
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueCoding</a>" : {
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA33-6 ",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA33-6",
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Yes"
               }
             }
           ]
         },
         {
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 7
+            }
+          ],
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "g1.q7",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">code</a>" : [
             {
@@ -1358,32 +1480,46 @@ Please answer every question. If you have difficulty with a statement, then choo
             {
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>" : [
                 {
-                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
                   "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a>" : 0
+                },
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 0
                 }
               ],
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueCoding</a>" : {
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA 32-8 ",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA32-8",
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "No"
               }
             },
             {
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>" : [
                 {
-                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
                   "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a>" : 1
+                },
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 1
                 }
               ],
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueCoding</a>" : {
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA33-6 ",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA33-6",
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Yes"
               }
             }
           ]
         },
         {
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 8
+            }
+          ],
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "g1.q8",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">code</a>" : [
             {
@@ -1400,32 +1536,46 @@ Please answer every question. If you have difficulty with a statement, then choo
             {
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>" : [
                 {
-                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
                   "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a>" : 0
+                },
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 0
                 }
               ],
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueCoding</a>" : {
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA 32-8 ",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA32-8",
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "No"
               }
             },
             {
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>" : [
                 {
-                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
                   "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a>" : 1
+                },
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 1
                 }
               ],
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueCoding</a>" : {
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA33-6 ",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA33-6",
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Yes"
               }
             }
           ]
         },
         {
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 9
+            }
+          ],
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "g1.q9",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">code</a>" : [
             {
@@ -1442,32 +1592,46 @@ Please answer every question. If you have difficulty with a statement, then choo
             {
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>" : [
                 {
-                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
                   "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a>" : 0
+                },
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 0
                 }
               ],
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueCoding</a>" : {
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA 32-8 ",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA32-8",
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "No"
               }
             },
             {
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>" : [
                 {
-                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
                   "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a>" : 1
+                },
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 1
                 }
               ],
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueCoding</a>" : {
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA33-6 ",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA33-6",
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Yes"
               }
             }
           ]
         },
         {
+          "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.extension">extension</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 10
+            }
+          ],
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "g1.q10",
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.code">code</a>" : [
             {
@@ -1483,26 +1647,34 @@ Please answer every question. If you have difficulty with a statement, then choo
             {
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>" : [
                 {
-                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
                   "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a>" : 0
+                },
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 0
                 }
               ],
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueCoding</a>" : {
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA 32-8 ",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA32-8",
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "No"
               }
             },
             {
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.extension">extension</a>" : [
                 {
-                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
                   "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueDecimal</a>" : 1
+                },
+                {
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 1
                 }
               ],
               "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.option.value[x]">valueCoding</a>" : {
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA33-6 ",
+                "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a>" : "LA33-6",
                 "<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.display">display</a>" : "Yes"
               }
             }
@@ -1515,6 +1687,10 @@ Please answer every question. If you have difficulty with a statement, then choo
         {
           "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
           "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueBoolean</a>" : true
+        },
+        {
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+          "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 1
         }
       ],
       "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "g2",
@@ -1527,6 +1703,10 @@ Please answer every question. If you have difficulty with a statement, then choo
             {
               "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
               "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueBoolean</a>" : true
+            },
+            {
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueInteger</a>" : 0
             }
           ],
           "<a href="http://hl7.org/fhir/STU3/questionnaire.html#Questionnaire.item.linkId">linkId</a>" : "g2.d",
@@ -1596,11 +1776,12 @@ Formats: <a href="Questionnaire-questionnaire-example-dast.html">Narrative</a>, 
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      Argonaut Questionnaire Version: 0.0.0 &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Thu, Oct 25, 2018 11:30-0700.
-      | <a style="color: #81BEF7" href="history.html">History</a>
+      Argonaut Questionnaire 
+          Continuous Integration Build
+          &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Mon, Feb 18, 2019 18:36-0800.
+      | <a style="color: #81BEF7" href="#">History</a>
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
-        </span>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->
@@ -1618,7 +1799,7 @@ Formats: <a href="Questionnaire-questionnaire-example-dast.html">Narrative</a>, 
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./assets/js/jquery.min.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
 <script src="./assets/js/bootstrap.min.js"> </script>
 <script src="./assets/js/respond.min.js"> </script>
 <script src="./assets/js/anchor.min.js"> </script>
@@ -1630,14 +1811,53 @@ Formats: <a href="Questionnaire-questionnaire-example-dast.html">Narrative</a>, 
 
 
 
+<script src="assets/js/clipboard.min.js"> </script>
+
+<script>
+  // Tooltip
+
+  $('#copy-button').tooltip({
+    trigger: 'click',
+    placement: 'bottom'
+  });
+
+  function setTooltip(message) {
+    $('#copy-button').tooltip('hide')
+      .attr('data-original-title', message)
+      .tooltip('show');
+  }
+
+  function hideTooltip() {
+    setTimeout(function() {
+      $('#copy-button').tooltip('hide');
+    }, 1000);
+  }
+
+  // Clipboard
+
+  var clipboard = new ClipboardJS('#copy-button');
+
+  clipboard.on('success', function(e) {
+    setTooltip('Copied!');
+    hideTooltip();
+  });
+
+  clipboard.on('error', function(e) {
+    setTooltip('Failed!');
+    hideTooltip();
+  });
+
+</script>
+
+
 
 <!-- Analytics Below
 ================================================== -->
 
-<!-- add anchors before the closing body tag. -->
-<script> anchors.add()</script>
-
-
+<!-- add anchors before the closing body tag -->
+<script>
+anchors.add()
+</script>
 
 </body>
 </html>

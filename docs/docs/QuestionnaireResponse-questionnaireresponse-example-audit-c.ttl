@@ -1,0 +1,106 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut-questionnaire/QuestionnaireResponse/questionnaireresponse-example-audit-c> a fhir:QuestionnaireResponse;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "questionnaireresponse-example-audit-c"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaireresponse";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h3>Response Summary</h3>\n    <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit-c<br />\n    <strong>Date Completed:</strong> 2019-02-13T00:31:20.708405Z<br />\n    <hr /> <br /> <strong>Question:</strong> (linkID=q1) How often do you have a drink containing alcohol<br /><strong>Response:</strong>  Never ( code = LA6270-8, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=q2) How many standard drinks containing alcohol do you have on a typical day<br /><strong>Response:</strong>  1 or 2 ( code = LA15694-5, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=q3) How often do you have 6 or more drinks on 1 occasion<br /><strong>Response:</strong>  Never ( code = LA6270-8, codesystem = http://loinc.org)<br /><br /><strong>The Alcohol Use Disorders Identification Test C (AUDIT-C) is scored on a scale of 0-12 where the higher the score, the more likely the patient's drinking is hazardous. A score of 4 ormore for men and 3 or more for women is considered positive for hazardous drinking or active alcohol use disorders. If the points are all from Question 1 alone where 2 and 3 are 0, it is likely the patient is drinking below recommended limits. The care provider may review the patientsalcohol intake over that past few months to confirm accuracy. (this is hidden text/should not be displayed to the user)</strong><br /> <br /><br />\n    </div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-responsePeriod" ];
+     fhir:Extension.valuePeriod [
+       fhir:Period.start [ fhir:value "2019-02-13T00:31:11.329331Z"^^xsd:dateTime ];
+       fhir:Period.end [ fhir:value "2019-02-13T00:31:20.708405Z"^^xsd:dateTime ]
+     ]
+  ];
+  fhir:QuestionnaireResponse.identifier [
+     fhir:Identifier.value [ fhir:value "questionnaireresponse-example-audit-c" ]
+  ];
+  fhir:QuestionnaireResponse.questionnaire [
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit-c>;
+     fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit-c" ]
+  ];
+  fhir:QuestionnaireResponse.status [ fhir:value "completed"];
+  fhir:QuestionnaireResponse.subject [
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/Patient/subject1>;
+     fhir:Reference.reference [ fhir:value "Patient/subject1" ]
+  ];
+  fhir:QuestionnaireResponse.context [
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/Encounter/encounter1>;
+     fhir:Reference.reference [ fhir:value "Encounter/encounter1" ]
+  ];
+  fhir:QuestionnaireResponse.authored [ fhir:value "2019-02-13T00:31:20.708405Z"^^xsd:dateTime];
+  fhir:QuestionnaireResponse.author [
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/Practitioner/prov-admin1>;
+     fhir:Reference.reference [ fhir:value "Practitioner/prov-admin1" ]
+  ];
+  fhir:QuestionnaireResponse.source [
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/Patient/subject1>;
+     fhir:Reference.reference [ fhir:value "Patient/subject1" ]
+  ];
+  fhir:QuestionnaireResponse.item [
+     fhir:index 0;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "q1" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "How often do you have a drink containing alcohol" ];
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.answer.valueCoding [
+         a loinc:LA6270-8;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "LA6270-8" ];
+         fhir:Coding.display [ fhir:value "Never" ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "q2" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "How many standard drinks containing alcohol do you have on a typical day" ];
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.answer.valueCoding [
+         a loinc:LA15694-5;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "LA15694-5" ];
+         fhir:Coding.display [ fhir:value "1 or 2" ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "q3" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "How often do you have 6 or more drinks on 1 occasion" ];
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.answer.valueCoding [
+         a loinc:LA6270-8;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "LA6270-8" ];
+         fhir:Coding.display [ fhir:value "Never" ]
+       ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "d1" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "The Alcohol Use Disorders Identification Test C (AUDIT-C) is scored on a scale of 0-12 where the higher the score, the more likely the patient's drinking is hazardous. A score of 4 ormore for men and 3 or more for women is considered positive for hazardous drinking or active alcohol use disorders. If the points are all from Question 1 alone where 2 and 3 are 0, it is likely the patient is drinking below recommended limits. The care provider may review the patientsalcohol intake over that past few months to confirm accuracy. (this is hidden text/should not be displayed to the user)" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut-questionnaire/QuestionnaireResponse/questionnaireresponse-example-audit-c.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

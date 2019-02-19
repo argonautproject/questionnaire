@@ -38,7 +38,7 @@
 	</text>
 	<url value="http://fhir.org/guides/argonaut-questionnaire/CapabilityStatement/answerbank"/>
 	<version value="0.0.0"/>
-	<name value="argonautQuestionnaireAnswerBankCapabilityStatement"/>
+	<name value="answerbank"/>
 	<title value="Argonaut questionnaire Answer Bank CapabilityStatement"/>
 	<status value="draft"/>
 	<experimental value="false"/>

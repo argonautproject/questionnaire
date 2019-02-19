@@ -3,7 +3,7 @@
 <Questionnaire xmlns="http://hl7.org/fhir">
   <id value="questionnaire-example-phq9"/>
   <meta>
-    <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"/>
+    <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"/>
   </meta>
   <text>
     <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><h3>Patient Health Questionnaire (PHQ-9)</h3><img src="data:image/gif;base64,R0lGODdhwAPQAncAACH+GlNvZnR3YXJlOiBNaWNyb3NvZnQgT2ZmaWNlACwAAAAAwAPQAof///8A
@@ -960,13 +960,13 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
   </text>
   <contained>
     <ValueSet>
-      <id value="PHQ-9"/>
+      <id value="LL358-3"/>
       <meta>
-        <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs"/>
+        <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire-valueset"/>
       </meta>
-      <url value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-9"/>
+      <url value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/LL358-3"/>
       <identifier>
-        <value value="phq9"/>
+        <value value="LL358-3"/>
       </identifier>
       <version value="0.0.0"/>
       <title value="Patient Health Questionnaire (PHQ-9)"/>
@@ -974,10 +974,13 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       <date value="2018-06-27"/>
       <copyright value="This content LOINC is copyright 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use ."/>
       <expansion>
-        <identifier value="phq9-expansion"/>
-        <timestamp value="2018-06-27T22:49:08"/>
+        <identifier value="LL358-3ver2.64"/>
+        <timestamp value="2018-06-27T22:49:08Z"/>
         <total value="4"/>
         <contains>
+          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder">
+            <valueInteger value="1"/>
+          </extension>
           <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
             <valueDecimal value="0"/>
           </extension>
@@ -987,6 +990,9 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
           <display value="Not at all"/>
         </contains>
         <contains>
+          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder">
+            <valueInteger value="2"/>
+          </extension>
           <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
             <valueDecimal value="1"/>
           </extension>
@@ -996,6 +1002,9 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
           <display value="Several days"/>
         </contains>
         <contains>
+          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder">
+            <valueInteger value="3"/>
+          </extension>
           <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
             <valueDecimal value="2"/>
           </extension>
@@ -1005,6 +1014,9 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
           <display value="More than half the days"/>
         </contains>
         <contains>
+          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder">
+            <valueInteger value="4"/>
+          </extension>
           <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
             <valueDecimal value="3"/>
           </extension>
@@ -1018,42 +1030,54 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
   </contained>
   <contained>
     <ValueSet>
-      <id value="PHQ-10"/>
+      <id value="LL359-1"/>
       <meta>
-        <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qcvs"/>
+        <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire-valueset"/>
       </meta>
-      <url value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/PHQ-10"/>
+      <url value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/LL359-1"/>
       <identifier>
-        <value value="phq10"/>
+        <value value="LL359-1ver2.64"/>
       </identifier>
       <version value="0.0.0"/>
-      <title value="Patient Health Questionnaire (PHQ-9)"/>
+      <title value="PHQ.10 / Not difficult at all/Somewhat difficult/Very difficult/Extremely difficult-Perceived difficulty (PHQ-9)"/>
       <status value="active"/>
       <date value="2018-06-27"/>
       <copyright value="This content LOINC is copyright 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use ."/>
       <expansion>
-        <identifier value="phq10-expansion"/>
-        <timestamp value="2018-06-27T22:27:03"/>
+        <identifier value="LL359"/>
+        <timestamp value="2018-06-27T22:27:03Z"/>
         <total value="4"/>
         <contains>
+          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder">
+            <valueInteger value="1"/>
+          </extension>
           <system value="http://loinc.org"/>
           <version value="2.64"/>
           <code value="LA6572-7"/>
           <display value="Not difficult at all"/>
         </contains>
         <contains>
+          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder">
+            <valueInteger value="2"/>
+          </extension>
           <system value="http://loinc.org"/>
           <version value="2.64"/>
           <code value="LA6573-5"/>
           <display value="Somewhat difficult"/>
         </contains>
         <contains>
+          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder">
+            <valueInteger value="3"/>
+          </extension>
           <system value="http://loinc.org"/>
           <version value="2.64"/>
           <code value="LA6575-0"/>
           <display value="Very difficult"/>
         </contains>
         <contains>
+          <extension url="http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder">
+            <valueInteger value="4"/>
+          </extension>
           <system value="http://loinc.org"/>
           <version value="2.64"/>
           <code value="LA6574-3"/>
@@ -1062,6 +1086,14 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       </expansion>
     </ValueSet>
   </contained>
+  <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timeLimit">
+    <valueDuration>
+      <value value="1"/>
+      <unit value="week"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="wk"/>
+    </valueDuration>
+  </extension>
   <url value="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9"/>
   <identifier>
     <system value="http://acme.org/q-identifiers"/>
@@ -1107,6 +1139,9 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
   </code>
   <subjectType value="Patient"/>
   <item>
+    <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+      <valueInteger value="0"/>
+    </extension>
     <linkId value="g1"/>
     <code>
       <system value="http://loinc.org"/>
@@ -1115,12 +1150,18 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
     <type value="group"/>
     <required value="true"/>
     <item>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="0"/>
+      </extension>
       <linkId value="g1.d"/>
       <text value="Over the last 2 weeks, how often have you been bothered by any of the following problems? (Use &#x201C;X&#x201D; to indicate your answer)"/>
       <type value="display"/>
       <required value="true"/>
     </item>
     <item>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="1"/>
+      </extension>
       <linkId value="g1.q1"/>
       <code>
         <system value="http://loinc.org"/>
@@ -1132,11 +1173,14 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       <required value="true"/>
       <repeats value="false"/>
       <options>
-        <reference value="#PHQ-9"/>
+        <reference value="#LL358-3"/>
         <display value="Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"/>
       </options>
     </item>
     <item>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="2"/>
+      </extension>
       <linkId value="g1.q2"/>
       <code>
         <system value="http://loinc.org"/>
@@ -1148,11 +1192,14 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       <required value="true"/>
       <repeats value="false"/>
       <options>
-        <reference value="#PHQ-9"/>
+        <reference value="#LL358-3"/>
         <display value="Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"/>
       </options>
     </item>
     <item>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="3"/>
+      </extension>
       <linkId value="g1.q3"/>
       <code>
         <system value="http://loinc.org"/>
@@ -1164,11 +1211,14 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       <required value="true"/>
       <repeats value="false"/>
       <options>
-        <reference value="#PHQ-9"/>
+        <reference value="#LL358-3"/>
         <display value="Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"/>
       </options>
     </item>
     <item>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="4"/>
+      </extension>
       <linkId value="g1.q4"/>
       <code>
         <system value="http://loinc.org"/>
@@ -1180,11 +1230,14 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       <required value="true"/>
       <repeats value="false"/>
       <options>
-        <reference value="#PHQ-9"/>
+        <reference value="#LL358-3"/>
         <display value="Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"/>
       </options>
     </item>
     <item>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="5"/>
+      </extension>
       <linkId value="g1.q5"/>
       <code>
         <system value="http://loinc.org"/>
@@ -1196,11 +1249,14 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       <required value="true"/>
       <repeats value="false"/>
       <options>
-        <reference value="#PHQ-9"/>
+        <reference value="#LL358-3"/>
         <display value="Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"/>
       </options>
     </item>
     <item>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="6"/>
+      </extension>
       <linkId value="g1.q6"/>
       <code>
         <system value="http://loinc.org"/>
@@ -1212,11 +1268,14 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       <required value="true"/>
       <repeats value="false"/>
       <options>
-        <reference value="#PHQ-9"/>
+        <reference value="#LL358-3"/>
         <display value="Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"/>
       </options>
     </item>
     <item>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="7"/>
+      </extension>
       <linkId value="g1.q7"/>
       <code>
         <system value="http://loinc.org"/>
@@ -1228,11 +1287,14 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       <required value="true"/>
       <repeats value="false"/>
       <options>
-        <reference value="#PHQ-9"/>
+        <reference value="#LL358-3"/>
         <display value="Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"/>
       </options>
     </item>
     <item>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="8"/>
+      </extension>
       <linkId value="g1.q8"/>
       <code>
         <system value="http://loinc.org"/>
@@ -1244,11 +1306,14 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       <required value="true"/>
       <repeats value="false"/>
       <options>
-        <reference value="#PHQ-9"/>
+        <reference value="#LL358-3"/>
         <display value="Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"/>
       </options>
     </item>
     <item>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="9"/>
+      </extension>
       <linkId value="g1.q9"/>
       <code>
         <system value="http://loinc.org"/>
@@ -1260,7 +1325,7 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       <required value="true"/>
       <repeats value="false"/>
       <options>
-        <reference value="#PHQ-9"/>
+        <reference value="#LL358-3"/>
         <display value="Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day"/>
       </options>
     </item>
@@ -1268,21 +1333,30 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
         <valueBoolean value="true"/>
       </extension>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="10"/>
+      </extension>
       <linkId value="g1.s"/>
       <code>
         <system value="http://loinc.org"/>
         <code value="44261-6"/>
       </code>
-      <text value="Scoring: &#xA;Add up all checked boxes on PHQ-9. &#xA;&#xA;For every:&#xA;Not at all = 0;&#xA;Several days = 1;&#xA;More than half the days = 2;&#xA;Nearly every day = 3&#xA;&#xA;Interpretation of Total Score&#xA;Total Score Depression Severity&#xA;1-4 Minimal depression&#xA;5-9 Mild depression&#xA;10-14 Moderate depression&#xA;15-19 Moderately severe depression&#xA;20-27 Severe depression &#xA;"/>
+      <text value="Scoring: &#xA;Add up all checked boxes on PHQ-9. &#xA;&#xA;For every:&#xA;Not at all = 0;&#xA;Several days = 1;&#xA;More than half the days = 2;&#xA;Nearly every day = 3&#xA;&#xA;Interpretation of Total Score&#xA;Total Score Depression Severity&#xA;1-4 Minimal depression&#xA;5-9 Mild depression&#xA;10-14 Moderate depression&#xA;15-19 Moderately severe depression&#xA;20-27 Severe depression"/>
       <type value="display"/>
       <repeats value="false"/>
     </item>
   </item>
   <item>
+    <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+      <valueInteger value="1"/>
+    </extension>
     <linkId value="g2"/>
     <type value="group"/>
     <required value="true"/>
     <item>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="0"/>
+      </extension>
       <linkId value="g2.q1"/>
       <code>
         <system value="http://loinc.org"/>
@@ -1293,7 +1367,7 @@ Pfizer Inc. No permission required to reproduce, translate, display or distribut
       <required value="true"/>
       <repeats value="false"/>
       <options>
-        <reference value="#PHQ-10"/>
+        <reference value="#LL359-1"/>
         <display value="Not difficult at all/Somewhat difficult/Very difficult/Extremely difficult-Perceived difficulty (PHQ-9)"/>
       </options>
     </item>

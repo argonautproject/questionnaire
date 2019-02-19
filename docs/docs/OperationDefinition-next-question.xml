@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<OperationDefinition xmlns="http://hl7.org/fhir">
+  <id value="next-question"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Argonaut Next Question Operation</h2><p>OPERATION: Argonaut Next Question Operation</p><p>The official URL for this operation definition is: </p><pre>http://fhir.org/guides/argonaut-questionnaire/OperationDefinition/next-question</pre><div><p>The Argonaut Next Question Operation is used for <em>adaptive questionnaires</em> forms where the next question is based on previous answers.  The result of this operation is to return the next question and optionally the questionnaire scoring for an adaptive questionnaire.  This operation uses the <a href="http://hl7.org/fhir/STU3/questionnaireresponse.html">QuestionnaireResponse</a> resource with a <a href="http://hl7.org/fhir/STU3/references.html#contained"><em>contained</em></a> <a href="http://hl7.org/fhir/STU3/questionnaire.html">Questionnaire</a> as both the input and output parameter. The Client initiates and queries for the next question supplying the answer to the previous question.  The Server updates the contained Questionnaire in the  QuestionnaireResponse in the with the next question.  When the questionnaire is complete, the Server updates the status element of the QuestionnaireResponse resource to <code>completed</code>.  If the questionnaire has exceeded the time limit, the  Client or Server may return an <a href="http://hl7.org/fhir/STU3/operationoutcome.html">OperationOutcome</a> with an error.</p>
+</div><p>URL: [base]/Questionnaire/$next-question</p><p>Parameters</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>questionnaire-response</td><td>1..1</td><td><a href="http://hl7.org/fhir/STU3/resource.html">Resource</a></td><td/><td><div><p>The <a href="StructureDefinition-argo-adap-questionnaireresponse.html">Argo Adaptive QuestionnaireResponse Profile</a> of the QuestionnaireResponse resource with a <em>contained</em> Questionnaire.  The <code>url</code> element in the <em>contained</em> Questionnaire identifies which set of questions are being requested.  When initiating an adaptive questionnaire, the resource represents only metadata, because it precedes the first question.  For subsequent transactions the Client updates the QuestionnaireResponse with the previous question-answer pair and posts it to the Server.</p>
+</div></td></tr><tr><td>OUT</td><td>return</td><td>1..1</td><td><a href="http://hl7.org/fhir/STU3/resource.html">Resource</a></td><td/><td><div><p>The <a href="StructureDefinition-argo-adap-questionnaireresponse.html">Argo Adaptive QuestionnaireResponse Profile</a> of the QuestionnaireResponse resource with a <em>contained</em> Questionnaire.  The Server updates the QuestionnaireResponse's contained Questionnaire with the next question and optionally scoring or other data and returns it as this parameter.  When the questionnaire is complete, the Server updates the status element of the QuestionnaireResponse to <code>completed</code>.</p>
+</div></td></tr></table></div>
+  </text>
+  <url value="http://fhir.org/guides/argonaut-questionnaire/OperationDefinition/next-question"/>
+  <version value="1.0.0"/>
+  <name value="Argonaut Next Question Operation"/>
+  <status value="draft"/>
+  <kind value="operation"/>
+  <date value="2018-08-08T14:35:53-07:00"/>
+  <publisher value="The Argonaut Project"/>
+  <description value="The Argonaut Next Question Operation is used for *adaptive questionnaires* forms where the next question is based on previous answers.  The result of this operation is to return the next question and optionally the questionnaire scoring for an adaptive questionnaire.  This operation uses the [QuestionnaireResponse](http://hl7.org/fhir/STU3/questionnaireresponse.html) resource with a [*contained*](http://hl7.org/fhir/STU3/references.html#contained) [Questionnaire](http://hl7.org/fhir/STU3/questionnaire.html) as both the input and output parameter. The Client initiates and queries for the next question supplying the answer to the previous question.  The Server updates the contained Questionnaire in the  QuestionnaireResponse in the with the next question.  When the questionnaire is complete, the Server updates the status element of the QuestionnaireResponse resource to `completed`.  If the questionnaire has exceeded the time limit, the  Client or Server may return an [OperationOutcome](http://hl7.org/fhir/STU3/operationoutcome.html) with an error."/>
+  <code value="next-question"/>
+  <resource value="Questionnaire"/>
+  <system value="false"/>
+  <type value="true"/>
+  <instance value="false"/>
+  <parameter>
+    <name value="questionnaire-response"/>
+    <use value="in"/>
+    <min value="1"/>
+    <max value="1"/>
+    <documentation value="The [Argo Adaptive QuestionnaireResponse Profile](StructureDefinition-argo-adap-questionnaireresponse.html) of the QuestionnaireResponse resource with a *contained* Questionnaire.  The `url` element in the *contained* Questionnaire identifies which set of questions are being requested.  When initiating an adaptive questionnaire, the resource represents only metadata, because it precedes the first question.  For subsequent transactions the Client updates the QuestionnaireResponse with the previous question-answer pair and posts it to the Server."/>
+    <type value="Resource"/>
+    <profile>
+      <reference value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adap-questionnaireresponse"/>
+    </profile>
+  </parameter>
+  <parameter>
+    <name value="return"/>
+    <use value="out"/>
+    <min value="1"/>
+    <max value="1"/>
+    <documentation value="The [Argo Adaptive QuestionnaireResponse Profile](StructureDefinition-argo-adap-questionnaireresponse.html) of the QuestionnaireResponse resource with a *contained* Questionnaire.  The Server updates the QuestionnaireResponse&#39;s contained Questionnaire with the next question and optionally scoring or other data and returns it as this parameter.  When the questionnaire is complete, the Server updates the status element of the QuestionnaireResponse to `completed`."/>
+    <type value="Resource"/>
+    <profile>
+      <reference value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adap-questionnaireresponse"/>
+    </profile>
+  </parameter>
+</OperationDefinition>

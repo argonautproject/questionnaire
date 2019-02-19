@@ -1,0 +1,62 @@
+{
+  "resourceType": "Encounter",
+  "id": "encounter1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: encounter1</p><p><b>meta</b>: </p><p><b>identifier</b>: 1234</p><p><b>status</b>: finished</p><p><b>class</b>: ambulatory (Details: http://hl7.org/fhir/v3/ActCode code AMB = 'ambulatory', stated as 'null')</p><p><b>type</b>: Assessment of history of substance abuse (procedure) <span style=\"background: LightGoldenRodYellow\">(Details : {SNOMED CT code '370776007' = 'Assessment of history of substance abuse (procedure)', given as 'Assessment of history of substance abuse (procedure)'})</span></p><p><b>subject</b>: <a href=\"Patient-subject1.html\">Generated Summary: id: subject1; 1234; active; John M Doe ; gender: male; birthDate: Jun 19, 1964</a></p><h3>Participants</h3><table class=\"grid\"><tr><td>-</td><td><b>Individual</b></td></tr><tr><td>*</td><td><a href=\"Practitioner-prov-admin1.html\">Generated Summary: id: prov-admin1; 999123456; active; Jane M Healer ; <span title=\"Codes: {urn:ietf:bcp:47 en}\">English</span></a></td></tr></table><p><b>period</b>: Feb 13, 2019, 12:00:00 AM --&gt; Feb 14, 2019, 12:00:00 AM</p><p><b>reason</b>: Assessment of history of substance abuse (procedure) <span style=\"background: LightGoldenRodYellow\">(Details : {SNOMED CT code '370776007' = 'Assessment of history of substance abuse (procedure)', given as 'Assessment of history of substance abuse (procedure)'})</span></p></div>"
+  },
+  "identifier": [
+    {
+      "system": "http://acme.org/enc-ids",
+      "value": "1234"
+    }
+  ],
+  "status": "finished",
+  "class": {
+    "system": "http://hl7.org/fhir/v3/ActCode",
+    "code": "AMB"
+  },
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "370776007",
+          "display": "Assessment of history of substance abuse (procedure)"
+        }
+      ],
+      "text": "Assessment of history of substance abuse (procedure)"
+    }
+  ],
+  "subject": {
+    "reference": "Patient/subject1"
+  },
+  "participant": [
+    {
+      "individual": {
+        "reference": "Practitioner/prov-admin1"
+      }
+    }
+  ],
+  "period": {
+    "start": "2019-02-13",
+    "end": "2019-02-14"
+  },
+  "reason": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "370776007",
+          "display": "Assessment of history of substance abuse (procedure)"
+        }
+      ],
+      "text": "Assessment of history of substance abuse (procedure)"
+    }
+  ]
+}

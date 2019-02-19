@@ -1,25 +1,17 @@
 
 {% assign id = {{page.id}} %}
-source file: source/pages/\_includes/{{id}}-intro.md
+
 
 {{site.data.structuredefinitions.[id].description}}
 
-#### Scope and Usage
-
-scope and usage text here
-
-#### Mandatory Data Elements and Terminology
-
-The following data-elements are mandatory (i.e data MUST be present). blah blah blah
-
-**must have:**
-
-1. blah
-1. blah
-1. blah
-
 **Additional Profile specific implementation guidance:**
+
+See the [Argonaut QuestionnaireResponse Profile] for a description of the constraints on the data elements.
 
 #### Examples
 
-- list examples here
+Examples of Adaptive Questionnaires can be found found on the [Argonaut Adaptive QuestionnaireResponse Profile] page.
+
+<br />
+
+{%include link-list.md %}

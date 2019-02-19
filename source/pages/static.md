@@ -16,9 +16,9 @@ topofpage: true
 
 The Argonaut Questionnaire Implementation Guide defines a series of interactions which cover the basic workflow for the creation, discovery and retrieval of simple static text-based forms using FHIR Questionnaire and QuestionnaireResponse and the FHIR API.  The reader is encouraged to familiarize herself with the capabilities of the Questionnaire and QuestionnaireResponse Response resources by reviewing the guidance given in the FHIR specification and the [Argonaut Questionnaire Profile] and [Argonaut QuestionnaireResponse Profile] pages.
 
-Each assessment tool (i.e., set of questions and answer choices) is created once as FHIR Questionnaires and centrally stored in an “Assessment Bank” which can be accessed by the provider EHRS. The provider can then render the form for the end user to complete.  The form responses are captured and processed by the provider EHRS and can be stored using the QuestionnaireResponse in an "Answer Bank and subsequently retrieved by the providers for review. Although out of scope for this guide, these results can be aggregated and shared within or across systems.
+Each assessment tool (i.e., set of questions and answer choices) is created once as FHIR Questionnaires and centrally stored in an Assessment Bank which can be accessed by the Provider EHR. The Client Application can then render the form for the end user to complete.  The form responses are captured and processed by the Client and can be stored using the QuestionnaireResponse in an Answer Bank and subsequently retrieved by the Providers for review. Although out of scope for this guide, these results can be aggregated and shared within or across systems.
 
-These basic workflow steps and API are detailed below.  This guidance covers more basic scenarios, but can be scaled up towards more complex scenarios ( for example, see [Structured Data Capture Initiative]).  Note that the search guidance below is applicable for both Static and *completed* Adaptive forms.
+These basic workflow steps and API are detailed below. This guidance covers more basic scenarios, but can be scaled up towards more complex scenarios ( for example, see [Structured Data Capture Initiative]). Note that the search guidance below is applicable [*completed* Adaptive forms] as well.
 
 ## Example Scenario
 
@@ -44,7 +44,7 @@ Each assessment tool (i.e., set of questions and answer choices) is created once
 
 ### Form Author Creates Assessment
 
-Before an assessment can retrieved it must be created.  This step MAY include updating or deprecation of an assessment.  The Form Author/Editor creates a Questionnaire resource based on a set of assessment questions and answers and associated scores as defined by the program coordinators.  The Questionnaire conforms to the [Argonaut Questionnaire Profile].  How these questions and answer and scores are defined and how the Questionnaire is created are out of scope.  ( note: there are several tools available for authoring fhir resources. )
+Before an assessment can retrieved it must be created.  This step MAY include updating or deprecation of an assessment.  The Form Author/Editor creates a Questionnaire resource based on a set of assessment questions and answers and associated scores as defined by the program coordinators.  The Questionnaire conforms to the [Argonaut Questionnaire Profile].  How these questions and answer and scores are defined and how the Questionnaire is created are out of scope.
 
 ### Form Author Posts to Assessment Bank
 
@@ -88,24 +88,22 @@ to delete a Questionnaire:
 
 {% include img-narrow.html img="st-step2.jpg" %}
 
-When it is time to perform an assessment of the program participants(subjects), the Provider EHR fetches the appropriate Questionnaire(s) from the Assessment-Bank.  
+When it is time to perform an assessment of the program participants(subjects), the Provider EHR fetches the appropriate Questionnaire(s) from the Assessment-Bank.
 
 <!-- {% raw %}>{% include img.html img="diagrams/Slide30.png" caption="Appointment Availability Discovery and Search" %}{% endraw %} -->
 
-The standard [FHIR RESTful search API] is used with the following *mandatory* search parameters:
+The standard [FHIR RESTful search API] is used with the following standard and custom [search parameters]:
 
-- `_id`
-- `url`
-- `status`
-- `title`
+- [`_id`]
+- [`url`]
+- [`status` (Questionnaire)]
+- [`title`] (including the `:contains` modifier option)
+- [`publisher`] (including the `:contains` modifier option)
 
 and the following *optional* search parameters
 
-- `version`
-- `context-type` ([Custom search parameters])
-- `context-value`([Custom search parameters])
-
-(multiple version of each assessment may be available. [see issues])
+- [`version`]
+- [`context-type-value`]
 
 #### APIs
 {:.no_toc}
@@ -152,14 +150,20 @@ Searching for *all* the active Questionnaires:
 
 {% include examplebutton_default.html example="example-fetch_q_status" b_title = "Example Search by Status..."%}
 
+Searching for *all* the active Questionnaires by a particular publisher :
+
+  `GET [base]/Questionnaire?status=active&publisher=[publisher]`
+
+{% include examplebutton_default.html example="example-fetch_q_status" b_title = "Example Search by Status and Publisher..."%}
+
 Searching for a *collection* of Questionnaires based on context-type and context-value(think category):
 
-  `GET [base]/Questionnaire?context-code=[code]&context-value=[value]`
+  `GET [base]/Questionnaire?context-code-value=[code]&[value]`
 
 {% include examplebutton_default.html example="example-fetch_q_context" b_title = "Example Search by Use Context..."%}
 
 
-### Form Filler Renders And Displays The Form
+### Client Application Renders And Displays The Form
 
 
  The assessment is rendered and displayed to the end user (for example, as an online form ) to be completed by the subject or the provider administrator.   How the form is rendered and displayed are out of scope for this guide.
@@ -168,11 +172,11 @@ Searching for a *collection* of Questionnaires based on context-type and context
 
 ### End User Completes The Assessment
 
-The responses to the assessment are captured by the Form Filler. It may also  calculate a scored based on the associated values associated with each item via the [Questionnaire Ordinal Value Extension].  How the score is calculated may be described within the Questionnaire, often as a hidden display item. The actual logic and calculation is an implementation detail outside of scope of this Implementation Guide.
+The responses to the assessment are captured by the Client Application. It may also  calculate a scored based on the associated values associated with each item via the [Questionnaire Ordinal Value Extension].  How the score is calculated may be described within the Questionnaire, often as a hidden display item. The actual logic and calculation is an implementation detail outside of scope of this Implementation Guide.
 
 The QuestionnaireResponse resource may be used to capture, exchange and persist the response data.  It represents the response data to the individual questions on the form and is ordered and grouped corresponding to the structure and grouping of the Questionnaire being responded to. How the QuestionnaireResponse gets populated is beyond the scope of this IG.
 
-Time limits for completion of a questionnaire or individual question can be defined in the [Argonaut Questionnaire Time Limit Extension].  The Form Filler can record the start and stop date-times in the [Argonaut QuestionnaireResponse Response Period Extension] which can be used to determine whether the questionnaire or items were answered within the prescribed time limit.  How this information modifies the behavior of the Form-filler or interpretation of results is an implementation detail outside of scope of this Implementation Guide.
+Time limits for completion of a questionnaire or individual question can be defined in the [Argonaut Questionnaire Time Limit Extension].  The Client Application may record the start and stop date-times in the [Argonaut QuestionnaireResponse Response Period Extension] which can be used to determine whether the questionnaire or items were answered within the prescribed time limit.  How this information modifies the behavior of the Form-filler or interpretation of results is an implementation detail outside of scope of this Implementation Guide.
 
 ### Provider EHR Posts to Answer Bank
 
@@ -228,24 +232,24 @@ It is common to search for responses based on patient demographic information su
 
 The standard [FHIR RESTful search API] is used with the following *mandatory* search parameters:
 
-- `_id`
-- `questionnaire`
-- `patient` ( including chained parameters of (gender, birthdate, us-core race, us-core ethnicity, address-postalcode ))
-- `context`
-- `status`
+- [`_id`]
+- [`questionnaire`]
+- [`patient`]
+- [`context`]
+- [`status` (QuestionnaireResponse)]
 
 and the following *optional* search parameters:
 
-- `author`
-- `source`
+- [`author`]
+- [`source`]
 
 and the following *optional* chained search parameters:
 
-- patient.gender
-- patient.birthdate (with support for date prefixes `le` and `ge`)
-- patient.race
-- patient.ethnicity
-- patient.address-postalcode
+- `patient.gender`
+- `patient.birthdate` (with support for date prefixes `le` and `ge` and )
+- `patient.race`
+- `patient.ethnicity`
+- `patient.address-postalcode`
 
 
 For the convenience of the client, the Answer Bank may support including the Questionnaire using the following *optional* search parameter:
@@ -333,17 +337,21 @@ Searching for all QuestionnaireResponses based upon patient demographics
 
 {% include examplebutton_default.html example="example-fetch_qr_p1" b_title = "Chained Search on QuestionnaireResponses by Patient Race" %}
 
+### Examples and Reference Implementation
+
+Examples of Questionnaires and QuestionnaireResponses which demonstrate use of many of the the extensions and supported elements and question types can be found on the [Argonaut Questionnaire Profile] and [Argonaut QuestionnaireResponse Profile] page.  In addition, the [Argonaut Questionnaire Test Renderer]    simulates of the static form workflow.
+
 ### Amending and Revising Forms
 
 #### End User wishes to go back and revise an answer to Question
 {:.no_toc}
 
-For static forms this is a rendering issue for the Form Filler which may allow the user to go back and change answer prior to submitting the form.  Retrieving and resuming or correcting a form is currently out of scope for Argonaut Questionnaire but is covered in the [SDC (Structured Data Capture)] implementation Guide.
+For static forms this is a rendering issue for the Client Application which may allow the user to go back and change answer prior to submitting the form.  Retrieving and resuming or correcting a form is currently out of scope for Argonaut Questionnaire but is covered in the [SDC (Structured Data Capture)] implementation Guide.
 
 #### Answer in Error and Needs to be Reentered
 {:.no_toc}
 
-If the  answer is ‘wrong” and needs to be reentered, it is the function of the form filler to prompt the end user to re-answer the question.  For example, if an answer is incomplete or incorrectly formatted such as a date or telephone number.  How this done is out of scope for Argonaut Questionnaire.
+If the  answer is ‘wrong” and needs to be reentered, it is the function of the Client Application to prompt the end user to re-answer the question.  For example, if an answer is incomplete or incorrectly formatted such as a date or telephone number.  How this done is out of scope for Argonaut Questionnaire.
 
 #### Technical Error
 {:.no_toc}

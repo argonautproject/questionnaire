@@ -3,7 +3,7 @@
 <Questionnaire xmlns="http://hl7.org/fhir">
   <id value="questionnaire-example-dast"/>
   <meta>
-    <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"/>
+    <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"/>
   </meta>
   <text>
     <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><h3>Drug Abuse Screening Test-10 [DAST-10]</h3><img src="data:image/gif;base64,R0lGODlh0gJkAXcAMSH+GlNvZnR3YXJlOiBNaWNyb3NvZnQgT2ZmaWNlACH5BAEAAAAALAEAAQDQ
@@ -690,6 +690,14 @@ zJvMyduHxaPHS/iFU+SFUvx8Xvj80AM90Qt90SP90St90DO90Td90gf9F0K901P91Fv90lf9FTA0
 Copyright 982 Center for Addiction and Mental Health. Used with permission.
 URL: http://www.camh.ca/en/hospital/Pages/home.aspx</p></div>
   </text>
+  <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timeLimit">
+    <valueDuration>
+      <value value="2"/>
+      <unit value="day"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="d"/>
+    </valueDuration>
+  </extension>
   <url value="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast"/>
   <identifier>
     <system value="http://acme.org/q-identifiers"/>
@@ -738,17 +746,26 @@ URL: http://www.camh.ca/en/hospital/Pages/home.aspx</p></div>
     <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
       <valueBoolean value="true"/>
     </extension>
+    <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+      <valueInteger value="0"/>
+    </extension>
     <linkId value="g1"/>
     <text value="Form"/>
     <type value="group"/>
     <required value="true"/>
     <item>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="0"/>
+      </extension>
       <linkId value="g1.d"/>
       <text value="The following questions concern information about your possible involvement with drugs not including alcoholic beverages during the past 12 months. &quot;Drug abuse&quot; refers to (1) the use of prescribed or over-the-counter drugs in excess of the directions, and (2) any nonmedical use of drugs.&#xA;&#xA; The various classes of drugs may include cannabis (marijuana, hashish), solvents (e.g., paint thinner), tranquilizers (e.g., Valium), barbiturates, cocaine, stimulants (e.g., speed), hallucinogens (e.g., LSD) or narcotics (e.g., heroin). Remember that the questions do not include alcoholic beverages. &#xA;&#xA;Please answer every question. If you have difficulty with a statement, then choose the response that is mostly right."/>
       <type value="display"/>
       <required value="true"/>
     </item>
     <item>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="1"/>
+      </extension>
       <linkId value="g1.q1"/>
       <code>
         <system value="http://loinc.org"/>
@@ -760,27 +777,36 @@ URL: http://www.camh.ca/en/hospital/Pages/home.aspx</p></div>
       <required value="true"/>
       <repeats value="false"/>
       <option>
-        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
           <valueDecimal value="0"/>
+        </extension>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="0"/>
         </extension>
         <valueCoding>
           <system value="http://loinc.org"/>
-          <code value="LA 32-8 "/>
+          <code value="LA32-8"/>
           <display value="No"/>
         </valueCoding>
       </option>
       <option>
-        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
           <valueDecimal value="1"/>
+        </extension>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="1"/>
         </extension>
         <valueCoding>
           <system value="http://loinc.org"/>
-          <code value="LA33-6 "/>
+          <code value="LA33-6"/>
           <display value="Yes"/>
         </valueCoding>
       </option>
     </item>
     <item>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="2"/>
+      </extension>
       <linkId value="g1.q2"/>
       <code>
         <system value="http://loinc.org"/>
@@ -792,27 +818,36 @@ URL: http://www.camh.ca/en/hospital/Pages/home.aspx</p></div>
       <required value="true"/>
       <repeats value="false"/>
       <option>
-        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
           <valueDecimal value="0"/>
+        </extension>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="0"/>
         </extension>
         <valueCoding>
           <system value="http://loinc.org"/>
-          <code value="LA 32-8 "/>
+          <code value="LA32-8"/>
           <display value="No"/>
         </valueCoding>
       </option>
       <option>
-        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
           <valueDecimal value="1"/>
+        </extension>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="1"/>
         </extension>
         <valueCoding>
           <system value="http://loinc.org"/>
-          <code value="LA33-6 "/>
+          <code value="LA33-6"/>
           <display value="Yes"/>
         </valueCoding>
       </option>
     </item>
     <item>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="3"/>
+      </extension>
       <linkId value="g1.q3"/>
       <code>
         <system value="http://loinc.org"/>
@@ -824,27 +859,36 @@ URL: http://www.camh.ca/en/hospital/Pages/home.aspx</p></div>
       <required value="true"/>
       <repeats value="false"/>
       <option>
-        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
           <valueDecimal value="1"/>
+        </extension>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="0"/>
         </extension>
         <valueCoding>
           <system value="http://loinc.org"/>
-          <code value="LA 32-8 "/>
+          <code value="LA32-8"/>
           <display value="No"/>
         </valueCoding>
       </option>
       <option>
-        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
           <valueDecimal value="0"/>
+        </extension>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="1"/>
         </extension>
         <valueCoding>
           <system value="http://loinc.org"/>
-          <code value="LA33-6 "/>
+          <code value="LA33-6"/>
           <display value="Yes"/>
         </valueCoding>
       </option>
     </item>
     <item>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="4"/>
+      </extension>
       <linkId value="g1.q4"/>
       <code>
         <system value="http://loinc.org"/>
@@ -856,27 +900,36 @@ URL: http://www.camh.ca/en/hospital/Pages/home.aspx</p></div>
       <required value="true"/>
       <repeats value="false"/>
       <option>
-        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
           <valueDecimal value="0"/>
+        </extension>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="0"/>
         </extension>
         <valueCoding>
           <system value="http://loinc.org"/>
-          <code value="LA 32-8 "/>
+          <code value="LA32-8"/>
           <display value="No"/>
         </valueCoding>
       </option>
       <option>
-        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
           <valueDecimal value="1"/>
+        </extension>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="1"/>
         </extension>
         <valueCoding>
           <system value="http://loinc.org"/>
-          <code value="LA33-6 "/>
+          <code value="LA33-6"/>
           <display value="Yes"/>
         </valueCoding>
       </option>
     </item>
     <item>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="5"/>
+      </extension>
       <linkId value="g1.q5"/>
       <code>
         <system value="http://loinc.org"/>
@@ -888,27 +941,36 @@ URL: http://www.camh.ca/en/hospital/Pages/home.aspx</p></div>
       <required value="true"/>
       <repeats value="false"/>
       <option>
-        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
           <valueDecimal value="0"/>
+        </extension>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="0"/>
         </extension>
         <valueCoding>
           <system value="http://loinc.org"/>
-          <code value="LA 32-8 "/>
+          <code value="LA32-8"/>
           <display value="No"/>
         </valueCoding>
       </option>
       <option>
-        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
           <valueDecimal value="1"/>
+        </extension>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="1"/>
         </extension>
         <valueCoding>
           <system value="http://loinc.org"/>
-          <code value="LA33-6 "/>
+          <code value="LA33-6"/>
           <display value="Yes"/>
         </valueCoding>
       </option>
     </item>
     <item>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="6"/>
+      </extension>
       <linkId value="g1.q6"/>
       <code>
         <system value="http://loinc.org"/>
@@ -920,27 +982,36 @@ URL: http://www.camh.ca/en/hospital/Pages/home.aspx</p></div>
       <required value="true"/>
       <repeats value="false"/>
       <option>
-        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
           <valueDecimal value="0"/>
+        </extension>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="0"/>
         </extension>
         <valueCoding>
           <system value="http://loinc.org"/>
-          <code value="LA 32-8 "/>
+          <code value="LA32-8"/>
           <display value="No"/>
         </valueCoding>
       </option>
       <option>
-        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
           <valueDecimal value="1"/>
+        </extension>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="1"/>
         </extension>
         <valueCoding>
           <system value="http://loinc.org"/>
-          <code value="LA33-6 "/>
+          <code value="LA33-6"/>
           <display value="Yes"/>
         </valueCoding>
       </option>
     </item>
     <item>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="7"/>
+      </extension>
       <linkId value="g1.q7"/>
       <code>
         <system value="http://loinc.org"/>
@@ -952,27 +1023,36 @@ URL: http://www.camh.ca/en/hospital/Pages/home.aspx</p></div>
       <required value="true"/>
       <repeats value="false"/>
       <option>
-        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
           <valueDecimal value="0"/>
+        </extension>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="0"/>
         </extension>
         <valueCoding>
           <system value="http://loinc.org"/>
-          <code value="LA 32-8 "/>
+          <code value="LA32-8"/>
           <display value="No"/>
         </valueCoding>
       </option>
       <option>
-        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
           <valueDecimal value="1"/>
+        </extension>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="1"/>
         </extension>
         <valueCoding>
           <system value="http://loinc.org"/>
-          <code value="LA33-6 "/>
+          <code value="LA33-6"/>
           <display value="Yes"/>
         </valueCoding>
       </option>
     </item>
     <item>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="8"/>
+      </extension>
       <linkId value="g1.q8"/>
       <code>
         <system value="http://loinc.org"/>
@@ -984,27 +1064,36 @@ URL: http://www.camh.ca/en/hospital/Pages/home.aspx</p></div>
       <required value="true"/>
       <repeats value="false"/>
       <option>
-        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
           <valueDecimal value="0"/>
+        </extension>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="0"/>
         </extension>
         <valueCoding>
           <system value="http://loinc.org"/>
-          <code value="LA 32-8 "/>
+          <code value="LA32-8"/>
           <display value="No"/>
         </valueCoding>
       </option>
       <option>
-        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
           <valueDecimal value="1"/>
+        </extension>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="1"/>
         </extension>
         <valueCoding>
           <system value="http://loinc.org"/>
-          <code value="LA33-6 "/>
+          <code value="LA33-6"/>
           <display value="Yes"/>
         </valueCoding>
       </option>
     </item>
     <item>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="9"/>
+      </extension>
       <linkId value="g1.q9"/>
       <code>
         <system value="http://loinc.org"/>
@@ -1016,27 +1105,36 @@ URL: http://www.camh.ca/en/hospital/Pages/home.aspx</p></div>
       <required value="true"/>
       <repeats value="false"/>
       <option>
-        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
           <valueDecimal value="0"/>
+        </extension>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="0"/>
         </extension>
         <valueCoding>
           <system value="http://loinc.org"/>
-          <code value="LA 32-8 "/>
+          <code value="LA32-8"/>
           <display value="No"/>
         </valueCoding>
       </option>
       <option>
-        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
           <valueDecimal value="1"/>
+        </extension>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="1"/>
         </extension>
         <valueCoding>
           <system value="http://loinc.org"/>
-          <code value="LA33-6 "/>
+          <code value="LA33-6"/>
           <display value="Yes"/>
         </valueCoding>
       </option>
     </item>
     <item>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="10"/>
+      </extension>
       <linkId value="g1.q10"/>
       <code>
         <system value="http://loinc.org"/>
@@ -1047,22 +1145,28 @@ URL: http://www.camh.ca/en/hospital/Pages/home.aspx</p></div>
       <type value="choice"/>
       <repeats value="false"/>
       <option>
-        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
           <valueDecimal value="0"/>
+        </extension>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="0"/>
         </extension>
         <valueCoding>
           <system value="http://loinc.org"/>
-          <code value="LA 32-8 "/>
+          <code value="LA32-8"/>
           <display value="No"/>
         </valueCoding>
       </option>
       <option>
-        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
           <valueDecimal value="1"/>
+        </extension>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="1"/>
         </extension>
         <valueCoding>
           <system value="http://loinc.org"/>
-          <code value="LA33-6 "/>
+          <code value="LA33-6"/>
           <display value="Yes"/>
         </valueCoding>
       </option>
@@ -1072,6 +1176,9 @@ URL: http://www.camh.ca/en/hospital/Pages/home.aspx</p></div>
     <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
       <valueBoolean value="true"/>
     </extension>
+    <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+      <valueInteger value="1"/>
+    </extension>
     <linkId value="g2"/>
     <text value="Scoring Instructions"/>
     <type value="group"/>
@@ -1079,6 +1186,9 @@ URL: http://www.camh.ca/en/hospital/Pages/home.aspx</p></div>
     <item>
       <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
         <valueBoolean value="true"/>
+      </extension>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="0"/>
       </extension>
       <linkId value="g2.d"/>
       <text value="Scoring: Score 1 point for each question answered &#x201C;Yes,&#x201D; except for question 3 for which&#xA;a &#x201C;No&#x201D; receives 1 point.&#xA;&#xA;Interpretation of Score:&#xA;Score Degree of Problems Related to Drug Abuse Suggested Action&#xA;0 No problems reported None at this time&#xA;1&#x2010;2 Low level Monitor, re&#x2010;assess at a later date&#xA;3&#x2010;5 Moderate level Further investigation&#xA;6&#x2010;8 Substantial level Intensive assessment&#xA;9&#x2010;10 Severe level Intensive assessment"/>

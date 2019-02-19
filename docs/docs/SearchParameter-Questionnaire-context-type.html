@@ -67,11 +67,10 @@
 
 
       <div id="project-status" class="project-status"> <!-- ig title text -->
-
-      
-      <strong>Argonaut Questionnaire Implementation Guide CI Build</strong>
-      
-
+        <b>Argonaut Questionnaire Implementation Guide</b>
+        
+        CI Build
+        
     </div><!-- end ig title text -->
 
   </div><!-- end container -->
@@ -126,15 +125,19 @@
     </li>
   </ul>
 </li>
+<!--
 <li>
   <a href="operations.html">Operations</a>
 </li>
+-->
 <li>
-  <a href="profiles.html">Profiles/Extensions</a>
+  <a href="profiles.html">Profiles and Operations</a>
 </li>
+<!--
 <li>
   <a href="terminology.html">Terminology</a>
 </li>
+-->
 <li>
   <a href="searchparameters.html">Search Parameters</a>
 </li>
@@ -151,10 +154,15 @@
 </li>
 
   <li>
-    <a href="CapabilityStatement-server.html">Conformance requirements for Server</a>
+    <a href="CapabilityStatement-argo-questionnaire-provider-ehr.html">Conformance requirements for Provider EHR</a>
   </li>
+  <!--
   <li>
-    <a href="CapabilityStatement-client.html">Conformance requirements for Client</a>
+    <a href="CapabilityStatement-argonaut-questionnaire-client.html">Conformance requirements for Client</a>
+  </li>
+  -->
+  <li>
+    <a href="CapabilityStatement-adaptive-q-service.html">Conformance requirements for Adaptive Questionnaire Service</a>
   </li>
 </ul>
 </li>
@@ -229,7 +237,7 @@
 
 <nav class="breadcrumb">
   
-    <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a> 
+    <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a> <li><a href='index.html'><b>Home</b></a></li><li><a href='searchparameters.html'><b>Search Parameters</b></a></li><li><b>SearchParameter Questionnaire Context Type</b></li>
 </nav>
 
 
@@ -237,7 +245,11 @@
 
 <!--status-bar-->
 <p id="publish-box">
-This is the   Continuous Integration Build  of the Argonaut Questionnaire Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="history.html">Directory of published versions</a>
+This is the 
+    Continuous Integration Build
+   
+  
+  of the Argonaut Questionnaire Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="#">Directory of published versions</a>
 </p>
 
 
@@ -245,6 +257,10 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
 
 
 
+
+  <style type="text/css">
+  h2,h3,h4,h5,h6{--pagenumber: "6.13"}
+  </style>
 
 
 
@@ -290,17 +306,15 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
   <!-- ============CONTENT CONTENT=============== -->
 
 
-
 <!-- ig template for many conformance resource html pages  ('base' in definitions file)  can not be used for conformance resources that have more that a single base template. e.g.,  sd since there are mapping and definitions templates for it as well  they need to be split out into 3 separate templates -->
 
 <!-- ============ CONTENT CONTENT=============== -->
 
 
-<!-- ============CodeSystem ConceptMap CapabilityStatement SearchParameter CONTENT CONTENT=============== -->
+<!-- ============ConceptMap CapabilityStatement SearchParameter CONTENT CONTENT=============== -->
 
-  <h2>SearchParameter: Questionnaire-context-type</h2>
-
-  <div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: Questionnaire-context-type</p><p><b>url</b>: <a href="http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type">http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type</a></p><p><b>name</b>: context-type</p><p><b>status</b>: draft</p><p><b>experimental</b>: false</p><p><b>date</b>: May 16, 2018, 3:49:01 PM</p><p><b>publisher</b>: Argonaut Project</p><p><b>code</b>: context-type</p><p><b>base</b>: Questionnaire</p><p><b>type</b>: token</p><p><b>description</b>: A type of use context assigned to the questionnaire. When searching for context should pair with [context-value](http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-value) parameter.</p><p><b>expression</b>: Questionnaire.useContext.code</p><p><b>xpath</b>: f:Questionnaire/f:useContext/f:code</p><p><b>xpathUsage</b>: normal</p></div>
+  <div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: Questionnaire-context-type</p><p><b>url</b>: <a href="http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type">http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type</a></p><p><b>version</b>: 0.0.0</p><p><b>name</b>: context-type</p><p><b>status</b>: active</p><p><b>experimental</b>: false</p><p><b>date</b>: Dec 13, 2018, 9:29:55 PM</p><p><b>publisher</b>: Argonaut Project</p><p><b>contact</b>: </p><p><b>code</b>: context-type</p><p><b>base</b>: Questionnaire</p><p><b>type</b>: token</p><p><b>description</b>: A type of use context assigned to the questionnaire</p><p><b>expression</b>: Questionnaire.useContext.code</p><p><b>xpath</b>: f:Questionnaire/f:useContext/f:code</p><p><b>xpathUsage</b>: normal</p><p><b>modifier</b>: missing, text, not, in, not-in, below, above</p><p><b>multipleOr Extension</b>True</p><p><b>multipleAnd Extension</b>True</p></div>
+  
   <!-- ============CodeSystem ConceptMap CapabilityStatement CONTENT CONTENT=============== -->
 
 
@@ -350,11 +364,12 @@ Formats: <a href="SearchParameter-Questionnaire-context-type.html">Narrative</a>
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      Argonaut Questionnaire Version: 0.0.0 &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Thu, Oct 25, 2018 11:30-0700.
-      | <a style="color: #81BEF7" href="history.html">History</a>
+      Argonaut Questionnaire 
+          Continuous Integration Build
+          &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Mon, Feb 18, 2019 18:36-0800.
+      | <a style="color: #81BEF7" href="#">History</a>
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
-        </span>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->
@@ -372,7 +387,7 @@ Formats: <a href="SearchParameter-Questionnaire-context-type.html">Narrative</a>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./assets/js/jquery.min.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
 <script src="./assets/js/bootstrap.min.js"> </script>
 <script src="./assets/js/respond.min.js"> </script>
 <script src="./assets/js/anchor.min.js"> </script>
@@ -384,14 +399,53 @@ Formats: <a href="SearchParameter-Questionnaire-context-type.html">Narrative</a>
 
 
 
+<script src="assets/js/clipboard.min.js"> </script>
+
+<script>
+  // Tooltip
+
+  $('#copy-button').tooltip({
+    trigger: 'click',
+    placement: 'bottom'
+  });
+
+  function setTooltip(message) {
+    $('#copy-button').tooltip('hide')
+      .attr('data-original-title', message)
+      .tooltip('show');
+  }
+
+  function hideTooltip() {
+    setTimeout(function() {
+      $('#copy-button').tooltip('hide');
+    }, 1000);
+  }
+
+  // Clipboard
+
+  var clipboard = new ClipboardJS('#copy-button');
+
+  clipboard.on('success', function(e) {
+    setTooltip('Copied!');
+    hideTooltip();
+  });
+
+  clipboard.on('error', function(e) {
+    setTooltip('Failed!');
+    hideTooltip();
+  });
+
+</script>
+
+
 
 <!-- Analytics Below
 ================================================== -->
 
-<!-- add anchors before the closing body tag. -->
-<script> anchors.add()</script>
-
-
+<!-- add anchors before the closing body tag -->
+<script>
+anchors.add()
+</script>
 
 </body>
 </html>

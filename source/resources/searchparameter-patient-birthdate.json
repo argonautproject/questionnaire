@@ -1,0 +1,34 @@
+{
+   "id": "patient-birthdate",
+   "base": [
+      "Patient"
+   ],
+   "code": "birthdate",
+   "comparator": [
+      "le",
+      "ge"
+   ],
+   "contact": [
+      {
+         "telecom": [
+            {
+               "system": "url",
+               "value": "https://github.com/argonautproject/questionnaire/issues"
+            }
+         ]
+      }
+   ],
+   "date": "2019-02-18T23:57:46.835306Z",
+   "derivedFrom": "http://hl7.org/fhir/SearchParameter/individual-birthdate",
+   "description": "[Patient](patient.html): The patient's date of birth\r\n",
+   "experimental": false,
+   "expression": "Patient.birthDate",
+   "name": "patient_birthdate",
+   "publisher": "The Argonaut Project",
+   "status": "active",
+   "type": "date",
+   "url": "http://fhir.org/guides/argonaut-questionnaire/patient-birthdate",
+   "xpath": "f:Patient/f:birthDate",
+   "xpathUsage": "normal",
+   "resourceType": "SearchParameter"
+}

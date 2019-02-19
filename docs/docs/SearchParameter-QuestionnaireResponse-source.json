@@ -1,0 +1,53 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "QuestionnaireResponse-source",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: QuestionnaireResponse-source</p><p><b>url</b>: <a href=\"http://fhir.org/guides/argonaut-questionnaire/QuestionnaireResponse-source\">http://fhir.org/guides/argonaut-questionnaire/QuestionnaireResponse-source</a></p><p><b>name</b>: questionnaireresponse_source</p><p><b>status</b>: active</p><p><b>experimental</b>: false</p><p><b>date</b>: Feb 18, 2019, 11:50:03 PM</p><p><b>publisher</b>: The Argonaut Project</p><p><b>contact</b>: </p><p><b>code</b>: source</p><p><b>base</b>: QuestionnaireResponse</p><p><b>type</b>: reference</p><p><b>derivedFrom</b>: <a href=\"http://hl7.org/fhir/SearchParameter/QuestionnaireResponse-source\">http://hl7.org/fhir/SearchParameter/QuestionnaireResponse-source</a></p><p><b>description</b>: The individual providing the information reflected in the questionnaire respose</p><p><b>expression</b>: QuestionnaireResponse.source</p><p><b>xpath</b>: f:QuestionnaireResponse/f:source</p><p><b>xpathUsage</b>: normal</p><p><b>target</b>: Practitioner, Patient, RelatedPerson</p><p><b>comparator</b>: le, ge</p><p><b>multipleOr Extension</b>True</p><p><b>multipleAnd Extension</b>True</p></div>"
+  },
+  "extension": [
+    {
+      "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-multipleAnd",
+      "valueBoolean": true
+    },
+    {
+      "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-multipleOr",
+      "valueBoolean": true
+    }
+  ],
+  "url": "http://fhir.org/guides/argonaut-questionnaire/QuestionnaireResponse-source",
+  "name": "questionnaireresponse_source",
+  "status": "active",
+  "experimental": false,
+  "date": "2019-02-18T23:50:03.159486Z",
+  "publisher": "The Argonaut Project",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://github.com/argonautproject/questionnaire/issues"
+        }
+      ]
+    }
+  ],
+  "code": "source",
+  "base": [
+    "QuestionnaireResponse"
+  ],
+  "type": "reference",
+  "derivedFrom": "http://hl7.org/fhir/SearchParameter/QuestionnaireResponse-source",
+  "description": "The individual providing the information reflected in the questionnaire respose",
+  "expression": "QuestionnaireResponse.source",
+  "xpath": "f:QuestionnaireResponse/f:source",
+  "xpathUsage": "normal",
+  "target": [
+    "Practitioner",
+    "Patient",
+    "RelatedPerson"
+  ],
+  "comparator": [
+    "le",
+    "ge"
+  ]
+}

@@ -38,7 +38,7 @@
   </text>
   <url value="http://fhir.org/guides/argonaut-questionnaire/CapabilityStatement/answerbank"/>
   <version value="0.0.0"/>
-  <name value="argonautQuestionnaireAnswerBankCapabilityStatement"/>
+  <name value="answerbank"/>
   <title value="Argonaut questionnaire Answer Bank CapabilityStatement"/>
   <status value="draft"/>
   <experimental value="false"/>
@@ -62,10 +62,10 @@
   <implementationGuide value="http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig"/>
   <implementationGuide value="http://hl7.org/fhir/us/core/ImplementationGuide/ig"/>
   <profile>
-    <reference value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"/>
+    <reference value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"/>
   </profile>
   <profile>
-    <reference value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr"/>
+    <reference value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaireresponse"/>
   </profile>
   <rest>
     <mode value="server"/>

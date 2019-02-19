@@ -3,7 +3,7 @@
 <Questionnaire xmlns="http://hl7.org/fhir">
   <id value="questionnaire-example-sampler"/>
   <meta>
-    <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"/>
+    <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"/>
   </meta>
   <text>
     <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><h3>Argonaut Questionnaire Sampler</h3><img src="data:image/gif;base64,R0lGODlhAAW3BncAACH5BAEAAAAALAAAAAAABbcGh/8A/wAAAD8/P1lZWWZmZp+fn6ioqKqqqqur
@@ -529,6 +529,14 @@ f0GV3PmK178DJvCkwkvfAidYwYI6sHIX/GAI26nBv40ZcIUtrKYJD/fCG+ZwkzJ80g6HWMRH+nBA
 AAA7
 "alt="Argonaut Questionnaire Sampler"/><p>You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.</p></div>
   </text>
+  <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timeLimit">
+    <valueDuration>
+      <value value="5"/>
+      <unit value="minute"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="min"/>
+    </valueDuration>
+  </extension>
   <url value="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-sampler"/>
   <identifier>
     <system value="http://acme.org/q-identifiers"/>
@@ -574,11 +582,17 @@ AAA7
   </code>
   <subjectType value="Patient"/>
   <item>
+    <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+      <valueInteger value="0"/>
+    </extension>
     <linkId value="g1"/>
     <text value="Header Text"/>
     <type value="group"/>
     <required value="true"/>
     <item>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="0"/>
+      </extension>
       <linkId value="g1.d"/>
       <text value="The Argonaut Questionnaire Sampler is designed to show all the question types that can be used in the Argonaut Questionnaire Project:&#xA;&#xA;1 boolean&#xA;2 decimal&#xA;3 integer&#xA;4 dateDate&#xA;5 dateTime&#xA;6 timeTime&#xA;7 string&#xA;8 textText&#xA;9 urlUrl&#xA;10 choice&#xA;11 open-choice&#xA;12 quantity&#xA;"/>
       <type value="display"/>
@@ -586,14 +600,20 @@ AAA7
     </item>
   </item>
   <item>
+    <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+      <valueInteger value="1"/>
+    </extension>
     <linkId value="g2"/>
     <prefix value="1. "/>
     <text value="boolean"/>
     <type value="group"/>
     <required value="true"/>
     <item>
-      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
         <valueDecimal value="17"/>
+      </extension>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="0"/>
       </extension>
       <linkId value="g2.q1"/>
       <text value="Check the box if the following statement is true.  The average air speed velocity of a laden European swallow is greater than a laden African swallow."/>
@@ -603,14 +623,20 @@ AAA7
     </item>
   </item>
   <item>
+    <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+      <valueInteger value="2"/>
+    </extension>
     <linkId value="g3"/>
     <prefix value="2. "/>
     <text value="decimal"/>
     <type value="group"/>
     <required value="true"/>
     <item>
-      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
         <valueDecimal value="7"/>
+      </extension>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="0"/>
       </extension>
       <linkId value="g3.q1"/>
       <text value="What is the average air speed velocity of a laden swallow in m/sec?"/>
@@ -620,14 +646,20 @@ AAA7
     </item>
   </item>
   <item>
+    <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+      <valueInteger value="3"/>
+    </extension>
     <linkId value="g4"/>
     <prefix value="3. "/>
     <text value="integer"/>
     <type value="group"/>
     <required value="true"/>
     <item>
-      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
         <valueDecimal value="3"/>
+      </extension>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="0"/>
       </extension>
       <linkId value="g4.q1"/>
       <text value="What is the average air speed velocity of a laden swallow in m/sec?"/>
@@ -637,14 +669,20 @@ AAA7
     </item>
   </item>
   <item>
+    <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+      <valueInteger value="4"/>
+    </extension>
     <linkId value="g5"/>
     <prefix value="4. "/>
     <text value="date"/>
     <type value="group"/>
     <required value="true"/>
     <item>
-      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
         <valueDecimal value="27"/>
+      </extension>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="0"/>
       </extension>
       <linkId value="g5.q1"/>
       <text value="If a laden swallow left Camelot on 7/5/2018 what day would it reach the Castle Anthrax?"/>
@@ -654,14 +692,20 @@ AAA7
     </item>
   </item>
   <item>
+    <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+      <valueInteger value="5"/>
+    </extension>
     <linkId value="g6"/>
     <prefix value="5. "/>
     <text value="dateTime"/>
     <type value="group"/>
     <required value="true"/>
     <item>
-      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
         <valueDecimal value="3"/>
+      </extension>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="0"/>
       </extension>
       <linkId value="g6.q1"/>
       <text value="If a laden swallow left Camelot on 7/5/2018 and noon when would it reach Castle Anthrax?"/>
@@ -671,14 +715,20 @@ AAA7
     </item>
   </item>
   <item>
+    <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+      <valueInteger value="6"/>
+    </extension>
     <linkId value="g7"/>
     <prefix value="6. "/>
     <text value="time"/>
     <type value="group"/>
     <required value="true"/>
     <item>
-      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
         <valueDecimal value="8"/>
+      </extension>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="0"/>
       </extension>
       <linkId value="g7.q1"/>
       <text value="If a laden swallow left Camelot at noon what time would it reach Castle Anthrax?"/>
@@ -688,14 +738,20 @@ AAA7
     </item>
   </item>
   <item>
+    <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+      <valueInteger value="7"/>
+    </extension>
     <linkId value="g8"/>
     <prefix value="7. "/>
     <text value="string"/>
     <type value="group"/>
     <required value="true"/>
     <item>
-      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
         <valueDecimal value="1"/>
+      </extension>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="0"/>
       </extension>
       <linkId value="g8.q1"/>
       <text value="Describe how to estimate the average air speed velocity of a laden swallow in 20 words or less."/>
@@ -705,14 +761,20 @@ AAA7
     </item>
   </item>
   <item>
+    <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+      <valueInteger value="8"/>
+    </extension>
     <linkId value="g9"/>
     <prefix value="8. "/>
     <text value="text"/>
     <type value="group"/>
     <required value="true"/>
     <item>
-      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
         <valueDecimal value="0"/>
+      </extension>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="0"/>
       </extension>
       <linkId value="g9.q1"/>
       <text value="Describe in detal how to estimate the average air speed velocity of a laden swallow. Please cite your sources and give examples."/>
@@ -722,14 +784,20 @@ AAA7
     </item>
   </item>
   <item>
+    <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+      <valueInteger value="9"/>
+    </extension>
     <linkId value="g10"/>
     <prefix value="9. "/>
     <text value="url"/>
     <type value="group"/>
     <required value="true"/>
     <item>
-      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
         <valueDecimal value="11"/>
+      </extension>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="0"/>
       </extension>
       <linkId value="g10.q1"/>
       <text value="Provide a link to a video clip where the average air speed velocity of a laden swallow question is discussed."/>
@@ -739,78 +807,114 @@ AAA7
     </item>
   </item>
   <item>
+    <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+      <valueInteger value="10"/>
+    </extension>
     <linkId value="g11"/>
     <prefix value="10. "/>
     <text value="choice"/>
     <type value="group"/>
     <required value="true"/>
     <item>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="0"/>
+      </extension>
       <linkId value="g11.q1"/>
       <text value="What is the average air speed velocity of a laden swallow in m/sec?"/>
       <type value="choice"/>
       <required value="true"/>
       <repeats value="false"/>
       <option>
-        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
           <valueDecimal value="0"/>
+        </extension>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="0"/>
         </extension>
         <valueString value="10"/>
       </option>
       <option>
-        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
           <valueDecimal value="43"/>
+        </extension>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="1"/>
         </extension>
         <valueString value="11"/>
       </option>
       <option>
-        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
           <valueDecimal value="0"/>
+        </extension>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="2"/>
         </extension>
         <valueString value="12"/>
       </option>
     </item>
   </item>
   <item>
+    <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+      <valueInteger value="11"/>
+    </extension>
     <linkId value="g12"/>
     <prefix value="11. "/>
     <text value="open-choice"/>
     <type value="group"/>
     <required value="true"/>
     <item>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="0"/>
+      </extension>
       <linkId value="g12.q1"/>
       <text value="What is the average air speed velocity of a laden swallow in m/sec?"/>
       <type value="open-choice"/>
       <required value="true"/>
       <repeats value="false"/>
       <option>
-        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
           <valueDecimal value="0"/>
+        </extension>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="0"/>
         </extension>
         <valueString value="10"/>
       </option>
       <option>
-        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
           <valueDecimal value="43"/>
+        </extension>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="1"/>
         </extension>
         <valueString value="11"/>
       </option>
       <option>
-        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
           <valueDecimal value="0"/>
+        </extension>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="2"/>
         </extension>
         <valueString value="12"/>
       </option>
     </item>
   </item>
   <item>
+    <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+      <valueInteger value="12"/>
+    </extension>
     <linkId value="g13"/>
     <prefix value="12. "/>
     <text value="quantity"/>
     <type value="group"/>
     <required value="true"/>
     <item>
-      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-score">
+      <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue">
         <valueDecimal value="3"/>
+      </extension>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+        <valueInteger value="0"/>
       </extension>
       <linkId value="g13.q1"/>
       <text value="What is the average air speed velocity of a laden swallow - please provide the units?"/>

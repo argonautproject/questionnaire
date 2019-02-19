@@ -10,7 +10,7 @@
   fhir:Resource.id [ fhir:value "questionnaire-example-housing"];
   fhir:Resource.meta [
      fhir:Meta.profile [
-       fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q";
+       fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire";
        fhir:index 0
      ]
   ];
@@ -75,20 +75,25 @@
   ];
   fhir:Questionnaire.item [
      fhir:index 0;
-     fhir:Element.extension [
-       fhir:index 0;
-       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden" ];
-       fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
-     ];
      fhir:Questionnaire.item.linkId [ fhir:value "g1" ];
      fhir:Questionnaire.item.type [ fhir:value "group" ];
      fhir:Questionnaire.item.item [
        fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder" ];
+         fhir:Extension.valueInteger [ fhir:value "0"^^xsd:integer ]
+       ];
        fhir:Questionnaire.item.linkId [ fhir:value "g1.d" ];
        fhir:Questionnaire.item.text [ fhir:value "Accountable Health Communities Core Health-Related Social Needs Screening Questions \nUnderlined answer options indicate positive responses for the associated health-related social need. \nA value greater than 10 when the numerical values for answers to questions 7-10 are summed indicates a positive screen for interpersonal safety." ];
        fhir:Questionnaire.item.type [ fhir:value "display" ]
      ], [
        fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder" ];
+         fhir:Extension.valueInteger [ fhir:value "1"^^xsd:integer ]
+       ];
        fhir:Questionnaire.item.linkId [ fhir:value "g1.1" ];
        fhir:Questionnaire.item.prefix [ fhir:value "1" ];
        fhir:Questionnaire.item.text [ fhir:value "What is your housing situation today?" ];
@@ -97,16 +102,36 @@
        fhir:Questionnaire.item.repeats [ fhir:value "false"^^xsd:boolean ];
        fhir:Questionnaire.item.option [
          fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder" ];
+           fhir:Extension.valueInteger [ fhir:value "0"^^xsd:integer ]
+         ];
          fhir:Questionnaire.item.option.valueString [ fhir:value "I do not have housing (I am staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, abandoned building, bus or train station, or in a park)" ]
        ], [
          fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder" ];
+           fhir:Extension.valueInteger [ fhir:value "1"^^xsd:integer ]
+         ];
          fhir:Questionnaire.item.option.valueString [ fhir:value "I have housing today, but I am worried about losing housing in the future" ]
        ], [
          fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder" ];
+           fhir:Extension.valueInteger [ fhir:value "2"^^xsd:integer ]
+         ];
          fhir:Questionnaire.item.option.valueString [ fhir:value "I have housing" ]
        ]
      ], [
        fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder" ];
+         fhir:Extension.valueInteger [ fhir:value "2"^^xsd:integer ]
+       ];
        fhir:Questionnaire.item.linkId [ fhir:value "g1.2" ];
        fhir:Questionnaire.item.prefix [ fhir:value "2" ];
        fhir:Questionnaire.item.text [ fhir:value "Think about the place you live. Do you have problems with any of the following? (check all that apply)" ];
@@ -115,28 +140,68 @@
        fhir:Questionnaire.item.repeats [ fhir:value "true"^^xsd:boolean ];
        fhir:Questionnaire.item.option [
          fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder" ];
+           fhir:Extension.valueInteger [ fhir:value "0"^^xsd:integer ]
+         ];
          fhir:Questionnaire.item.option.valueString [ fhir:value "Bug infestation" ]
        ], [
          fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder" ];
+           fhir:Extension.valueInteger [ fhir:value "1"^^xsd:integer ]
+         ];
          fhir:Questionnaire.item.option.valueString [ fhir:value "Mold" ]
        ], [
          fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder" ];
+           fhir:Extension.valueInteger [ fhir:value "2"^^xsd:integer ]
+         ];
          fhir:Questionnaire.item.option.valueString [ fhir:value "Lead paint or pipes" ]
        ], [
          fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder" ];
+           fhir:Extension.valueInteger [ fhir:value "3"^^xsd:integer ]
+         ];
          fhir:Questionnaire.item.option.valueString [ fhir:value "Inadequate heat" ]
        ], [
          fhir:index 4;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder" ];
+           fhir:Extension.valueInteger [ fhir:value "4"^^xsd:integer ]
+         ];
          fhir:Questionnaire.item.option.valueString [ fhir:value "Oven or stove not working" ]
        ], [
          fhir:index 5;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder" ];
+           fhir:Extension.valueInteger [ fhir:value "5"^^xsd:integer ]
+         ];
          fhir:Questionnaire.item.option.valueString [ fhir:value "No or not working smoke detectors" ]
        ], [
          fhir:index 6;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder" ];
+           fhir:Extension.valueInteger [ fhir:value "6"^^xsd:integer ]
+         ];
          fhir:Questionnaire.item.option.valueString [ fhir:value "Water leaks" ]
        ], [
          fhir:index 7;
          fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder" ];
+           fhir:Extension.valueInteger [ fhir:value "7"^^xsd:integer ]
+         ];
+         fhir:BackboneElement.modifierExtension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive" ];
            fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]

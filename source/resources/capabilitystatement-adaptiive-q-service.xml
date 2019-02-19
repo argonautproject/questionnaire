@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/Eric/Documents/HL7/FHIR/BUILD_EDIT_FILES/fhir-all-xsd%20-STU3/fhir-all.xsd">
-	<id value="server"/>
+	<id value="adaptive-q-service"/>
 	<text>
 		<status value="additional"/>
 		<div xmlns="http://www.w3.org/1999/xhtml">
 			<h2 id="argonaut-questionnaire-conformance-requirements">Argonaut Questionnaire Conformance Requirements</h2>
-			<p>This section outlines conformance requirements for the Argonaut questionnaire Server, identifying the specific profiles that need to be supported, the specific RESTful operations that need to be supported, and the search parameters that need to be supported. Note: The individual Argonaut questionnaire profiles identify the structural constraints, terminology bindings and invariants, however, implementers must refer to the conformance requirements for details on the RESTful operations, specific profiles and the search parameters applicable to each of the Argonaut questionnaire actors.</p>
-			<h3 id="conformance-requirements-for-the-argonaut-questionnaire-implementation-guide-server">Conformance requirements for the Argonaut questionnaire Implementation Guide Server</h3>
+			<p>This section outlines conformance requirements for the Argonaut questionnaire Answer-Bank Server, identifying the specific profiles that need to be supported, the specific RESTful operations that need to be supported, and the search parameters that need to be supported. Note: The individual Argonaut questionnaire profiles identify the structural constraints, terminology bindings and invariants, however, implementers must refer to the conformance requirements for details on the RESTful operations, specific profiles and the search parameters applicable to each of the Argonaut questionnaire actors.</p>
+			<h3 id="conformance-requirements-for-the-argonaut-questionnaire-implementation-guide-answerbank">Conformance requirements for the Argonaut questionnaire Implementation Guide Answer-Bank Server</h3>
 			<ul>
 				<li>FHIR Version: 3.0.1</li>
 				<li>Supported formats: xml, json</li>
 				<li>Published: May 20, 2018</li>
 				<li>Published by: The Argonaut Project</li>
 			</ul>
-			<p>The Section describes the expected Capabilities of the Argonaut Questonnaire Server (Provider EHR)  which is responsible for fetching, rendering and displaying Questionnaires,  storing (scoring) and sharing QuestionnaireAnswers ( ...todo...) , RESTful operations, and search parameters supported by Argonaut questionnaire Servers are defined.</p>
+			<p>The Section describes the expected Capabilities of the Argonaut Answer-Bank Server which is responsible for providing responses to the requests submitted by the Argonaut questionnaire clients (Form Author/Editor and Provider EHRs). The complete list of FHIR profiles, RESTful operations, and search parameters supported by Argonaut questionnaire Answer-Banks are defined.</p>
 			<h4 id="behavior">Behavior</h4>
 			<p>Description:</p>
-			<p>The Argonaut questionnaire Server <strong>SHALL (...todo... review...)</strong>:</p>
+			<p>The Argonaut questionnaire Answer-Bank <strong>SHALL (...todo... review...)</strong>:</p>
 			<ol>
-				<li>Support at least one Argonaut questionnaire use case.</li>
+				<li>Support at least one Argonaut questionnaireuse case.</li>
 				<li>Implement the RESTful behavior according to the FHIR specification including returning the appropriate response classes as described in the FHIR specification for <a href="{{site.data.fhir.path}}http.html">FHIR RESTful API</a> and <a href="{{site.data.fhir.path}}operations.html">Extended Operations on the RESTful API</a>.</li>
 				<li>Conform to the <a href="http://hl7.org/fhir/us/core/1.0.1/index.html">US Core Implementation Guide</a>.</li>
 				<li>Support <em>json</em> resource formats for all Argonaut questionnaire interactions.</li>
 				<li>Declare a CapabilityStatement identifying the list of profiles, operations, search parameter supported.</li>
 			</ol>
-			<p>The Argonaut questionnaire Server <strong>SHOULD (...todo... review...)</strong>:</p>
+			<p>The Argonaut questionnaire Answer-Bank <strong>SHOULD (...todo... review...)</strong>:</p>
 			<ol>
 				<li>Support <em>xml</em> resource formats for all Argonaut questionnaire interactions.</li>
 				<li>Identify the Argonaut questionnaire profiles supported as part of the FHIR <code>meta.profile</code> attribute for each instance.</li>
@@ -36,15 +36,15 @@
 			<hr/>
 		</div>
 	</text>
-	<url value="http://fhir.org/guides/argonaut-questionnaire/CapabilityStatement/server"/>
+	<url value="http://fhir.org/guides/argonaut-questionnaire/CapabilityStatement/answerbank"/>
 	<version value="0.0.0"/>
-	<name value="argonautQuestionnaireServerCapabilityStatement"/>
-	<title value="Argonaut Questionnaire Server CapabilityStatement"/>
+	<name value="adaptive_q_service"/>
+	<title value="Argonaut questionnaire Adaptive Questionnaire Service CapabilityStatement"/>
 	<status value="draft"/>
 	<experimental value="false"/>
 	<date value="2018-05-18T00:00:00-07:00"/>
 	<publisher value="Argonaut Project"/>
-	<description value="The Argonaut questionnaire Server CapabilityStatement provides a for a complete list of supported RESTful interactions for the Argonaut questionnaire Implementation Guide"/>
+	<description value="The Argonaut questionnaire Answer-Bank CapabilityStatement provides a for a complete list of supported RESTful interactions for the Argonaut questionnaire Implementation Guide"/>
 	<jurisdiction>
 		<coding>
 			<system value="urn:iso:std:iso:3166"/>
@@ -79,62 +79,7 @@
 			</service>
 			<description value="For general security consideration refer to the [Security section](http://hl7.org/fhir/us/core/security.html) in the US Core Implementation Guide."/>
 		</security>
-		<resource>
-			<type value="Questionnaire"/>
-			<interaction>
-				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-					<valueCode value="SHALL"/>
-				</extension>
-				<code value="read"/>
-			</interaction>
-			<interaction>
-				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-					<valueCode value="SHALL"/>
-				</extension>
-				<code value="search-type"/>
-			</interaction>
-			<interaction>
-				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-					<valueCode value="SHALL"/>
-				</extension>
-				<code value="patch"/>
-			</interaction>
-			<referencePolicy value="enforced"/>
-			<searchParam>
-				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-					<valueCode value="SHALL"/>
-				</extension>
-				<name value="_id"/>
-				<definition value="http://hl7.org/fhir/SearchParameter/_id"/>
-				<type value="token"/>
-			</searchParam>
 
-			<searchParam>
-				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-					<valueCode value="SHALL"/>
-				</extension>
-				<name value="title"/>
-				<definition value="http://hl7.org/fhir/SearchParameter/title"/>
-				<type value="string"/>
-			</searchParam>
-			<searchParam>
-				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-					<valueCode value="SHALL"/>
-				</extension>
-				<name value="status"/>
-				<definition value="http://hl7.org/fhir/SearchParameter/status"/>
-				<type value="token"/>
-			</searchParam>
-			<searchParam>
-				<extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
-					<valueCode value="SHOULD"/>
-				</extension>
-				<name value="version"/>
-				<definition value="http://hl7.org/fhir/SearchParameter/version"/>
-				<type value="token"/>
-			</searchParam>
-
-		</resource>
 		<resource>
 			<type value="QuestionnaireResponse"/>
 			<interaction>

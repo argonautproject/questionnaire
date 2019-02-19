@@ -67,11 +67,10 @@
 
 
       <div id="project-status" class="project-status"> <!-- ig title text -->
-
-      
-      <strong>Argonaut Questionnaire Implementation Guide CI Build</strong>
-      
-
+        <b>Argonaut Questionnaire Implementation Guide</b>
+        
+        CI Build
+        
     </div><!-- end ig title text -->
 
   </div><!-- end container -->
@@ -126,15 +125,19 @@
     </li>
   </ul>
 </li>
+<!--
 <li>
   <a href="operations.html">Operations</a>
 </li>
+-->
 <li>
-  <a href="profiles.html">Profiles/Extensions</a>
+  <a href="profiles.html">Profiles and Operations</a>
 </li>
+<!--
 <li>
   <a href="terminology.html">Terminology</a>
 </li>
+-->
 <li>
   <a href="searchparameters.html">Search Parameters</a>
 </li>
@@ -151,10 +154,15 @@
 </li>
 
   <li>
-    <a href="CapabilityStatement-server.html">Conformance requirements for Server</a>
+    <a href="CapabilityStatement-argo-questionnaire-provider-ehr.html">Conformance requirements for Provider EHR</a>
   </li>
+  <!--
   <li>
-    <a href="CapabilityStatement-client.html">Conformance requirements for Client</a>
+    <a href="CapabilityStatement-argonaut-questionnaire-client.html">Conformance requirements for Client</a>
+  </li>
+  -->
+  <li>
+    <a href="CapabilityStatement-adaptive-q-service.html">Conformance requirements for Adaptive Questionnaire Service</a>
   </li>
 </ul>
 </li>
@@ -229,7 +237,7 @@
 
 <nav class="breadcrumb">
   
-    <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a> <li><a href='index.html'><b>Home</b></a></li><li><a href='profiles.html'><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Extension Timelimit</b></li>
+    <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a> <li><a href='index.html'><b>Home</b></a></li><li><a href='profiles.html'><b>Profiles and Extensions</b></a></li><li><b>StructureDefinition Extension timeLimit</b></li>
 </nav>
 
 
@@ -237,7 +245,11 @@
 
 <!--status-bar-->
 <p id="publish-box">
-This is the   Continuous Integration Build  of the Argonaut Questionnaire Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="history.html">Directory of published versions</a>
+This is the 
+    Continuous Integration Build
+   
+  
+  of the Argonaut Questionnaire Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="#">Directory of published versions</a>
 </p>
 
 
@@ -247,7 +259,7 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
 
 
   <style type="text/css">
-  h2,h3,h4,h5,h6{--pagenumber: "3.6"}
+  h2,h3,h4,h5,h6{--pagenumber: "3.7"}
   </style>
 
 
@@ -265,26 +277,26 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
 	{ % if content == "definitions"  % }
 		<li class="active"><a href="#">Detailed Descriptions</a></li>
 	{ % else % }
-		<li><a href="StructureDefinition-extension-timelimit-definitions.html">Detailed Descriptions</a></li>
+		<li><a href="StructureDefinition-extension-timeLimit-definitions.html">Detailed Descriptions</a></li>
 	{ % endif % }
 	{ % if content == "mappings" % }
 		<li class="active"><a href="#">Mappings</a></li>
 	{ % else % }
-		<li><a href="StructureDefinition-extension-timelimit-mappings.html">Mappings</a></li>
+		<li><a href="StructureDefinition-extension-timeLimit-mappings.html">Mappings</a></li>
 	{ % endif % }
 { % endif % }
 -->
 
-<li><a href="StructureDefinition-extension-timelimit.xml.html">XML</a></li>
+<li><a href="StructureDefinition-extension-timeLimit.xml.html">XML</a></li>
 
 
-	<li><a href="StructureDefinition-extension-timelimit.json.html">JSON</a></li>
+	<li><a href="StructureDefinition-extension-timeLimit.json.html">JSON</a></li>
 
 <!--
 { % if content == "turtle" % }
 	<li class="active"><a href="#">Turtle</a></li>
 { % else % }
-	<li><a href="StructureDefinition-extension-timelimit.ttl.html">Turtle</a></li>
+	<li><a href="StructureDefinition-extension-timeLimit.ttl.html">Turtle</a></li>
 { % endif % }
 -->
 </ul>
@@ -294,14 +306,13 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
   <!-- ============CONTENT CONTENT=============== -->
 
 
-
 <!-- ============CONTENT CONTENT=============== -->
 
-<h3>Mappings for the StructureDefinition-extension-timelimit Profile.</h3>
+<h3>Mappings for the StructureDefinition-extension-timeLimit Profile.</h3>
 
 <a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
- <tr><td colspan="3"><b>argonautQuestionnaireTimeLimit</b></td></tr>
- <tr><td>Extension</td><td>N/A</td> </tr>
+ <tr><td colspan="3"><b>argonaut_questionnaire_time_limit</b></td></tr>
+ <tr><td>Extension</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;url</td><td>N/A</td> </tr>
@@ -344,11 +355,12 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      Argonaut Questionnaire Version: 0.0.0 &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Thu, Oct 25, 2018 11:30-0700.
-      | <a style="color: #81BEF7" href="history.html">History</a>
+      Argonaut Questionnaire 
+          Continuous Integration Build
+          &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Mon, Feb 18, 2019 18:36-0800.
+      | <a style="color: #81BEF7" href="#">History</a>
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
-        </span>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->
@@ -366,7 +378,7 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./assets/js/jquery.min.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
 <script src="./assets/js/bootstrap.min.js"> </script>
 <script src="./assets/js/respond.min.js"> </script>
 <script src="./assets/js/anchor.min.js"> </script>
@@ -378,14 +390,53 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
 
 
 
+<script src="assets/js/clipboard.min.js"> </script>
+
+<script>
+  // Tooltip
+
+  $('#copy-button').tooltip({
+    trigger: 'click',
+    placement: 'bottom'
+  });
+
+  function setTooltip(message) {
+    $('#copy-button').tooltip('hide')
+      .attr('data-original-title', message)
+      .tooltip('show');
+  }
+
+  function hideTooltip() {
+    setTimeout(function() {
+      $('#copy-button').tooltip('hide');
+    }, 1000);
+  }
+
+  // Clipboard
+
+  var clipboard = new ClipboardJS('#copy-button');
+
+  clipboard.on('success', function(e) {
+    setTooltip('Copied!');
+    hideTooltip();
+  });
+
+  clipboard.on('error', function(e) {
+    setTooltip('Failed!');
+    hideTooltip();
+  });
+
+</script>
+
+
 
 <!-- Analytics Below
 ================================================== -->
 
-<!-- add anchors before the closing body tag. -->
-<script> anchors.add()</script>
-
-
+<!-- add anchors before the closing body tag -->
+<script>
+anchors.add()
+</script>
 
 </body>
 </html>

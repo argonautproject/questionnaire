@@ -1,7 +1,9 @@
+Adaptive Forms Use Case:
 
-{% assign id = {{page.id}} %}
-source file: source/pages/\_includes/{{id}}-search.md
+  - [Initiate Adaptive Questionnaire]
+  - [Get Next Question]
+  - [Adaptive Questionnaire is Complete]
 
-~~~
-This is the search markdown file that gets inserted into the sd.html Quick Start section for explanation of the search requirements.
-~~~
+<br />
+
+{%include link-list.md %}

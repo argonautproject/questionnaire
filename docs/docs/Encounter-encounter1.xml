@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="encounter1"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: encounter1</p><p><b>meta</b>: </p><p><b>identifier</b>: 1234</p><p><b>status</b>: finished</p><p><b>class</b>: ambulatory (Details: http://hl7.org/fhir/v3/ActCode code AMB = 'ambulatory', stated as 'null')</p><p><b>type</b>: Assessment of history of substance abuse (procedure) <span style="background: LightGoldenRodYellow">(Details : {SNOMED CT code '370776007' = 'Assessment of history of substance abuse (procedure)', given as 'Assessment of history of substance abuse (procedure)'})</span></p><p><b>subject</b>: <a href="Patient-subject1.html">Generated Summary: id: subject1; 1234; active; John M Doe ; gender: male; birthDate: Jun 19, 1964</a></p><h3>Participants</h3><table class="grid"><tr><td>-</td><td><b>Individual</b></td></tr><tr><td>*</td><td><a href="Practitioner-prov-admin1.html">Generated Summary: id: prov-admin1; 999123456; active; Jane M Healer ; <span title="Codes: {urn:ietf:bcp:47 en}">English</span></a></td></tr></table><p><b>period</b>: Feb 13, 2019, 12:00:00 AM --&gt; Feb 14, 2019, 12:00:00 AM</p><p><b>reason</b>: Assessment of history of substance abuse (procedure) <span style="background: LightGoldenRodYellow">(Details : {SNOMED CT code '370776007' = 'Assessment of history of substance abuse (procedure)', given as 'Assessment of history of substance abuse (procedure)'})</span></p></div>
+  </text>
+  <identifier>
+    <system value="http://acme.org/enc-ids"/>
+    <value value="1234"/>
+  </identifier>
+  <status value="finished"/>
+  <class>
+    <system value="http://hl7.org/fhir/v3/ActCode"/>
+    <code value="AMB"/>
+  </class>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="370776007"/>
+      <display value="Assessment of history of substance abuse (procedure)"/>
+    </coding>
+    <text value="Assessment of history of substance abuse (procedure)"/>
+  </type>
+  <subject>
+    <reference value="Patient/subject1"/>
+  </subject>
+  <participant>
+    <individual>
+      <reference value="Practitioner/prov-admin1"/>
+    </individual>
+  </participant>
+  <period>
+    <start value="2019-02-13"/>
+    <end value="2019-02-14"/>
+  </period>
+  <reason>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="370776007"/>
+      <display value="Assessment of history of substance abuse (procedure)"/>
+    </coding>
+    <text value="Assessment of history of substance abuse (procedure)"/>
+  </reason>
+</Encounter>

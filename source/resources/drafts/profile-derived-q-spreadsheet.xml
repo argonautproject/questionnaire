@@ -1139,7 +1139,7 @@
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="57">
     <Cell ss:StyleID="s74"><Data ss:Type="String">description</Data></Cell>
-    <Cell ss:StyleID="s77"><Data ss:Type="String">The  Argonaut Adaptive Questionnaire Profile sets the minimum expectations for the Questionnaire resource for the [adaptive questionnaire use case](adaptive.html).  It defines the [*contained*](http://hl7.org/fhir/STU3/references.html#contained) structure that is passed between the Client and Server using the [`$next-question`](OperationDefinition-next-question.html) operation and records the questionnaire questions and calculated scores from the adaptive questionnaire.</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">The  Argonaut Adaptive Questionnaire Profile supports the [adaptive questionnaire use case](adaptive.html) and is derived from the [Argonaut Questionnaire Profile].  It defines the [*contained*](http://hl7.org/fhir/STU3/references.html#contained) structure that is passed between the Client and Server using the [`$next-question`](OperationDefinition-next-question.html) operation and records the questionnaire questions and optional calculated scores produced by the adaptive questionnaire service.</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">status</Data></Cell>

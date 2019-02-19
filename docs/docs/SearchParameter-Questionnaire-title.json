@@ -1,0 +1,47 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "Questionnaire-title",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: Questionnaire-title</p><p><b>url</b>: <a href=\"http://fhir.org/guides/argonaut-questionnaire/Questionnaire-title\">http://fhir.org/guides/argonaut-questionnaire/Questionnaire-title</a></p><p><b>name</b>: questionnaire_title</p><p><b>status</b>: active</p><p><b>experimental</b>: false</p><p><b>date</b>: Feb 18, 2019, 11:50:01 PM</p><p><b>publisher</b>: The Argonaut Project</p><p><b>contact</b>: </p><p><b>code</b>: title</p><p><b>base</b>: Questionnaire</p><p><b>type</b>: string</p><p><b>derivedFrom</b>: <a href=\"http://hl7.org/fhir/SearchParameter/Questionnaire-title\">http://hl7.org/fhir/SearchParameter/Questionnaire-title</a></p><p><b>description</b>: The human-friendly name of the questionnaire</p><p><b>expression</b>: Questionnaire.title</p><p><b>xpath</b>: f:Questionnaire/f:title</p><p><b>xpathUsage</b>: normal</p><p><b>modifier</b>: contains</p><p><b>multipleOr Extension</b>True</p><p><b>multipleAnd Extension</b>True</p></div>"
+  },
+  "extension": [
+    {
+      "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-multipleAnd",
+      "valueBoolean": true
+    },
+    {
+      "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-multipleOr",
+      "valueBoolean": true
+    }
+  ],
+  "url": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire-title",
+  "name": "questionnaire_title",
+  "status": "active",
+  "experimental": false,
+  "date": "2019-02-18T23:50:01.392465Z",
+  "publisher": "The Argonaut Project",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://github.com/argonautproject/questionnaire/issues"
+        }
+      ]
+    }
+  ],
+  "code": "title",
+  "base": [
+    "Questionnaire"
+  ],
+  "type": "string",
+  "derivedFrom": "http://hl7.org/fhir/SearchParameter/Questionnaire-title",
+  "description": "The human-friendly name of the questionnaire",
+  "expression": "Questionnaire.title",
+  "xpath": "f:Questionnaire/f:title",
+  "xpathUsage": "normal",
+  "modifier": [
+    "contains"
+  ]
+}

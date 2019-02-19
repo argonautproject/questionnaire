@@ -24,7 +24,7 @@ This implementation Guide is organized as follows:
 - Detailed guidance on using the Argonaut Questionnaire FHIR artifacts such as profiles and extensions can be found on the [Scenario 1] page.
 - FHIR profiles and extensions are listed on the [Profiles] page.
 - Implementation Guide specific value sets, and code systems on the [Terminology]  page.
-- Conformance requirements for the servers and clients that claim conformance to this guide are found in the [Assessment-Bank], [Answer-Bank],  [Provider EHR] and [client] CapabilityStatements.
+- Conformance requirements for the systems that claim conformance to this guide are found in the [Assessment-Bank], [Answer-Bank], [Provider EHR] and [Adaptive Questionnaire Service] CapabilityStatements.
 - The [Downloads] page contains many downloadable files to help with implementation of this specification.
 
 ## Scope
@@ -79,22 +79,17 @@ The Patient Reported Outcomes (PRO) implementation guide focus on capturing and 
 
 ## Actors
 
-1. **Adaptive Questionnaire Service**:  A System that is capable of providing questions in response to requests and contains logic for determination of the next question and calculation of the score for an [Adaptive Questionnaire].  For this Implementation Guide, this service is treated as a **“[Black Box]”**.
-1. **[Argonaut Adaptive Questionnaire Profile]**
+1. **[Adaptive Questionnaire Service]**:  A System that is capable of providing questions in response to requests and contains logic for determination of the next question and calculation of the score for an [Adaptive Questionnaire].  For this Implementation Guide, this service is treated as a **“[Black Box]”**.
 1. **[Argonaut Adaptive QuestionnaireResponse Profile]**
 1. **[Argonaut Questionnaire Profile]**
 1. **[Argonaut QuestionnaireResponse Profile]**
-1. **"[Assessment-Bank]"**[^1]: A form repository for the collection of the assessments. It is accessible to both the providers and form editors as a FHIR Questionnaire endpoint.
-1. (Optionally) **"[Answer-Bank]"**[^2]: A repository for the collection of the completed assessments ('answers'). It is accessible to the providers  as a FHIR QuestionnaireResponse endpoint.  It may be internal or external to the **[Provider EHR]**.
+1. **[Assessment-Bank]**[^1]: A form repository for the collection of the assessments. It is accessible to both the providers and form editors as a FHIR Questionnaire endpoint.
+1. **[Answer-Bank]**[^2]: A repository for the collection of the completed assessments ('answers'). It is accessible to the providers  as a FHIR QuestionnaireResponse endpoint.  It may be internal or external to the **[Provider EHR]**.
 1. **Form Author/Editor**: A system or person authorized to create update and deprecate assessments forms.
-1. **Form-filler**: The software application interacting with the user to get answers for a questionnaire.  This is also known as the Client and may be any of the [four uses cases] defined for Phase 1 of the [Argonaut Project]:
-  - Patients apps that launch standalone ( i.e., a third party ([SMART on FHIR]) App )
-  - Patient apps that launch from a portal
-  - Provider apps that launch standalone
-  - Provider apps that launch from a portal
+1. **Client Application**: The software application interacting with the user to get answers for a questionnaire.  It can be integrated into the Provider EHR or an external patient portal or third party app.
 1. **Practitioner**: A healthcare provider authorized to administer the assessment to a subject.
 1. **Provider administrator**: A practitioner or staff member authorized to fill out an assessment on behalf of a subject or with input from a subject.
-1. **[Provider EHR]**[^3]: A System that is capable of retrieving, rendering and displaying the assessment to a subject or a provider to fill out.  
+1. **[Provider EHR]**[^3]: Also Referred to as "Form Filler". A System that is capable of retrieving, rendering and displaying the assessment to a subject or a provider to fill out.  
 1. **Subject**: The patient or individual who is the focus of the assessment.  For example, a patient.
 
 
@@ -146,14 +141,14 @@ Adaptive Forms or Questionnaires such as [PROMIS] forms use a stateless model wh
 {:.grid}
 |step|Description|
 |---|---|
-|1|​A Provider EHR or Form Filler may need to discover and review available  Adaptive Questionnaire's (not shown).|
+|1|​A Provider EHR may need to discover and review available Adaptive Questionnaire's (not shown).|
 |2|The Form Filler initiates the Adaptive Questionnaire by posting to the Adaptive Questionnaire Service's endpoint.|
 |3|Treated as a "Black Box", the Adaptive Questionnaire Service's returns the first question to the Form Filler.|
 |4|The Questionnaire is rendered/displayed to the end user - either the subject or provider administrator.|
 |5|The Form Filler returns the question and answer pair to the Adaptive Questionnaire Service's endpoint.|
 |6|Based on the prior question and answer pair(s), the Adaptive Questionnaire Service returns the next question to the Form Filler.|
 |7|Steps 5 and 6 are repeated until the questionnaire is done.|
-|8|The Form Filler may process the questions and answers or store or record any scoring.|
+|8|The Provider EHR may process the questions and answers.|
 
 ## Security and Privacy Considerations
 

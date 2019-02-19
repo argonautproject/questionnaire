@@ -1,7 +1,5 @@
+See the [Argonaut Questionnaire Profile Quick Start]
 
-{% assign id = {{page.id}} %}
-source file: source/pages/\_includes/{{id}}-search.md
+<br />
 
-~~~
-This is the search markdown file that gets inserted into the sd.html Quick Start section for explanation of the search requirements.
-~~~
+{%include link-list.md %}

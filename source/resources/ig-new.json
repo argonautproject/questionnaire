@@ -171,7 +171,28 @@
     },
     {
       "reference" : {
+        "reference" : "SearchParameter/Questionnaire-publisher"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
         "reference" : "CapabilityStatement/assessmentbank"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/extension-multipleAnd"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/extension-multipleOr"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
@@ -185,7 +206,21 @@
     },
     {
       "reference" : {
-        "reference" : "CapabilityStatement/server"
+        "reference" : "SearchParameter/QuestionnaireResponse-status"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "SearchParameter/QuestionnaireResponse-questionnaire"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "SearchParameter/QuestionnaireResponse-author"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
@@ -193,6 +228,20 @@
     {
       "reference" : {
         "reference" : "StructureDefinition/extension-timeLimit"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "SearchParameter/Questionnaire-status"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "SearchParameter/QuestionnaireResponse-patient"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
@@ -213,7 +262,7 @@
     },
     {
       "reference" : {
-        "reference" : "CapabilityStatement/client"
+        "reference" : "SearchParameter/patient-birthdate"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
@@ -227,7 +276,28 @@
     },
     {
       "reference" : {
-        "reference" : "SearchParameter/Questionnaire-context-value"
+        "reference" : "SearchParameter/Questionnaire-context-type-value"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "SearchParameter/Questionnaire-context"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "SearchParameter/Questionnaire-title"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "SearchParameter/Questionnaire-version"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
@@ -255,6 +325,20 @@
     },
     {
       "reference" : {
+        "reference" : "SearchParameter/QuestionnaireResponse-context"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "CapabilityStatement/argo-questionnaire-provider-ehr"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
         "reference" : "SearchParameter/Questionnaire-context-type"
       },
       "exampleBoolean" : false,
@@ -262,7 +346,14 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/argo-adaptive-questionnaire"
+        "reference" : "CapabilityStatement/adaptive-q-service"
+      },
+      "exampleBoolean" : false,
+      "groupingId" : "p1"
+    },
+    {
+      "reference" : {
+        "reference" : "SearchParameter/QuestionnaireResponse-source"
       },
       "exampleBoolean" : false,
       "groupingId" : "p1"
@@ -303,13 +394,18 @@
           "generation" : "generated"
         },
         {
-          "nameUrl" : "StructureDefinition-argo-adaptive-questionnaire.html",
-          "title" : "StructureDefinition Argo Adaptive Questionnaire",
+          "nameUrl" : "StructureDefinition-argo-questionnaireresponse.html",
+          "title" : "StructureDefinition Argo QuestionnaireResponse",
           "generation" : "generated"
         },
         {
-          "nameUrl" : "StructureDefinition-argo-questionnaireresponse.html",
-          "title" : "StructureDefinition Argo QuestionnaireResponse",
+          "nameUrl" : "StructureDefinition-extension-multipleAnd.html",
+          "title" : "StructureDefinition Extension multipleAnd",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "StructureDefinition-extension-multipleOr.html",
+          "title" : "StructureDefinition Extension multipleOr",
           "generation" : "generated"
         },
         {
@@ -348,13 +444,73 @@
         "title" : "Search Parameters",
         "generation" : "html",
         "page" : [{
-          "nameUrl" : "SearchParameter-Questionnaire-context-value.html",
-          "title" : "SearchParameter Questionnaire Context Value",
+          "nameUrl" : "SearchParameter-Questionnaire-publisher.html",
+          "title" : "SearchParameter Questionnaire Publisher",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-QuestionnaireResponse-status.html",
+          "title" : "SearchParameter QuestionnaireResponse Status",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-QuestionnaireResponse-questionnaire.html",
+          "title" : "SearchParameter QuestionnaireResponse Questionnaire",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-QuestionnaireResponse-author.html",
+          "title" : "SearchParameter QuestionnaireResponse Author",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-Questionnaire-status.html",
+          "title" : "SearchParameter Questionnaire Status",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-QuestionnaireResponse-patient.html",
+          "title" : "SearchParameter QuestionnaireResponse Patient",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-patient-birthdate.html",
+          "title" : "SearchParameter Patient Birthdate",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-Questionnaire-context-type-value.html",
+          "title" : "SearchParameter Questionnaire Context Type Value",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-Questionnaire-context.html",
+          "title" : "SearchParameter Questionnaire Context",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-Questionnaire-title.html",
+          "title" : "SearchParameter Questionnaire Title",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-Questionnaire-version.html",
+          "title" : "SearchParameter Questionnaire Version",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-QuestionnaireResponse-context.html",
+          "title" : "SearchParameter QuestionnaireResponse Context",
           "generation" : "generated"
         },
         {
           "nameUrl" : "SearchParameter-Questionnaire-context-type.html",
           "title" : "SearchParameter Questionnaire Context Type",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "SearchParameter-QuestionnaireResponse-source.html",
+          "title" : "SearchParameter QuestionnaireResponse Source",
           "generation" : "generated"
         }]
       },
@@ -368,18 +524,18 @@
           "generation" : "generated"
         },
         {
-          "nameUrl" : "CapabilityStatement-server.html",
-          "title" : "CapabilityStatement Server",
-          "generation" : "generated"
-        },
-        {
-          "nameUrl" : "CapabilityStatement-client.html",
-          "title" : "CapabilityStatement Client",
-          "generation" : "generated"
-        },
-        {
           "nameUrl" : "CapabilityStatement-answerbank.html",
           "title" : "CapabilityStatement Answerbank",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "CapabilityStatement-argo-questionnaire-provider-ehr.html",
+          "title" : "CapabilityStatement Argo Questionnaire Provider Ehr",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "CapabilityStatement-adaptive-q-service.html",
+          "title" : "CapabilityStatement Adaptive Q Service",
           "generation" : "generated"
         }]
       },

@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<QuestionnaireResponse xmlns="http://hl7.org/fhir">
+  <id value="adaptive-questionnaireresponse-example-phq9"/>
+  <meta>
+    <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adap-questionnaireresponse"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+    <h3>Patient Health Questionnaire (PHQ-9) Adaptive View</h3>
+    <p><em>NOTE: These examples are for educational and testing purposes,
+     see the form copyright statement and do not redistribute without expressed
+     permission from the form author.</em></p>
+    <p>This simulates is a simple adaptive questionnaire implementation.
+     After answering and submitting the first question another question is randomly
+     returned from the selected questionnaire. This is repeated two more times and
+     then the adaptive questionnaire will finish by changing the status to completed
+     and returning a score. Note that although these questionnaires are designed as forms and
+     are not really appropriate for the adaptive questionnaire use case,  they are used here to
+      demonstrate a proof of concept implementation.<br />
+    <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9<br />
+    <strong>Date Completed:</strong> 2018-07-26<br /><br />
+    <em>Copyright: Developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from
+Pfizer Inc. No permission required to reproduce, translate, display or distribute.</em></p>
+    <hr /><hr /><br /> <strong>Question:</strong> (linkID=score) Cumulative Score is ... (this is hidden text/should not be displayed to the user)<br /><strong>Response:</strong> 0<br /><br /> <strong>Question:</strong> (linkID=std_dev) Standard Deviation is ... (this is hidden text/should not be displayed to the user)<br /><strong>Response:</strong> 0.0<br /><br /> <strong>Question:</strong> (linkID=g1.q1) Little interest or pleasure in doing things,<br /><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q8) Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual,<br /><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q4) Feeling tired or having little energy,<br /><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br /></div>
+  </text>
+  <contained>
+    <Questionnaire>
+      <id value="contained-adaptive-questionnaire-example-phq9"/>
+      <meta>
+        <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"/>
+      </meta>
+      <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timeLimit">
+        <valueDuration>
+          <value value="1"/>
+          <unit value="week"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="wk"/>
+        </valueDuration>
+      </extension>
+      <url value="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9"/>
+      <title value="Contained Adaptive Patient Health Questionnaire (PHQ-9)"/>
+      <status value="active"/>
+      <date value="2019-02-13T00:36:54.253025Z"/>
+      <copyright value="Developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from&#xA;Pfizer Inc. No permission required to reproduce, translate, display or distribute."/>
+      <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+          <valueBoolean value="true"/>
+        </extension>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="1"/>
+        </extension>
+        <linkId value="score"/>
+        <text value="Cumulative Score is ..."/>
+        <type value="integer"/>
+        <repeats value="false"/>
+        <readOnly value="true"/>
+      </item>
+      <item>
+        <extension url="http://hl7.org/fhir/StructureDefinition/questionnaire-hidden">
+          <valueBoolean value="true"/>
+        </extension>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="2"/>
+        </extension>
+        <linkId value="std_dev"/>
+        <text value="Standard Deviation is ..."/>
+        <type value="decimal"/>
+        <repeats value="false"/>
+        <readOnly value="true"/>
+      </item>
+      <item>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="3"/>
+        </extension>
+        <linkId value="g1.q1"/>
+        <definition value="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9-g1.q1"/>
+        <code>
+          <system value="http://loinc.org"/>
+          <code value="44250-9"/>
+        </code>
+        <prefix value="1. "/>
+        <text value="Little interest or pleasure in doing things,"/>
+        <type value="choice"/>
+        <required value="true"/>
+        <repeats value="false"/>
+        <option>
+          <valueCoding>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder">
+              <valueInteger value="1"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+              <valueDecimal value="0"/>
+            </extension>
+            <system value="http://loinc.org"/>
+            <code value="LA6568-5"/>
+            <display value="Not at all"/>
+          </valueCoding>
+        </option>
+        <option>
+          <valueCoding>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder">
+              <valueInteger value="2"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+              <valueDecimal value="1"/>
+            </extension>
+            <system value="http://loinc.org"/>
+            <code value="LA6569-3"/>
+            <display value="Several days"/>
+          </valueCoding>
+        </option>
+        <option>
+          <valueCoding>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder">
+              <valueInteger value="3"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+              <valueDecimal value="2"/>
+            </extension>
+            <system value="http://loinc.org"/>
+            <code value="LA6570-1"/>
+            <display value="More than half the days"/>
+          </valueCoding>
+        </option>
+        <option>
+          <valueCoding>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder">
+              <valueInteger value="4"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+              <valueDecimal value="3"/>
+            </extension>
+            <system value="http://loinc.org"/>
+            <code value="LA6571-9"/>
+            <display value="Nearly every day"/>
+          </valueCoding>
+        </option>
+      </item>
+      <item>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="4"/>
+        </extension>
+        <linkId value="g1.q8"/>
+        <definition value="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9-g1.q8"/>
+        <code>
+          <system value="http://loinc.org"/>
+          <code value="44253-3"/>
+        </code>
+        <prefix value="8."/>
+        <text value="Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual,"/>
+        <type value="choice"/>
+        <required value="true"/>
+        <repeats value="false"/>
+        <option>
+          <valueCoding>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder">
+              <valueInteger value="1"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+              <valueDecimal value="0"/>
+            </extension>
+            <system value="http://loinc.org"/>
+            <code value="LA6568-5"/>
+            <display value="Not at all"/>
+          </valueCoding>
+        </option>
+        <option>
+          <valueCoding>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder">
+              <valueInteger value="2"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+              <valueDecimal value="1"/>
+            </extension>
+            <system value="http://loinc.org"/>
+            <code value="LA6569-3"/>
+            <display value="Several days"/>
+          </valueCoding>
+        </option>
+        <option>
+          <valueCoding>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder">
+              <valueInteger value="3"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+              <valueDecimal value="2"/>
+            </extension>
+            <system value="http://loinc.org"/>
+            <code value="LA6570-1"/>
+            <display value="More than half the days"/>
+          </valueCoding>
+        </option>
+        <option>
+          <valueCoding>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder">
+              <valueInteger value="4"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+              <valueDecimal value="3"/>
+            </extension>
+            <system value="http://loinc.org"/>
+            <code value="LA6571-9"/>
+            <display value="Nearly every day"/>
+          </valueCoding>
+        </option>
+      </item>
+      <item>
+        <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder">
+          <valueInteger value="5"/>
+        </extension>
+        <linkId value="g1.q4"/>
+        <definition value="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9-g1.q4"/>
+        <code>
+          <system value="http://loinc.org"/>
+          <code value="44254-1"/>
+        </code>
+        <prefix value="4."/>
+        <text value="Feeling tired or having little energy,"/>
+        <type value="choice"/>
+        <required value="true"/>
+        <repeats value="false"/>
+        <option>
+          <valueCoding>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder">
+              <valueInteger value="1"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+              <valueDecimal value="0"/>
+            </extension>
+            <system value="http://loinc.org"/>
+            <code value="LA6568-5"/>
+            <display value="Not at all"/>
+          </valueCoding>
+        </option>
+        <option>
+          <valueCoding>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder">
+              <valueInteger value="2"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+              <valueDecimal value="1"/>
+            </extension>
+            <system value="http://loinc.org"/>
+            <code value="LA6569-3"/>
+            <display value="Several days"/>
+          </valueCoding>
+        </option>
+        <option>
+          <valueCoding>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder">
+              <valueInteger value="3"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+              <valueDecimal value="2"/>
+            </extension>
+            <system value="http://loinc.org"/>
+            <code value="LA6570-1"/>
+            <display value="More than half the days"/>
+          </valueCoding>
+        </option>
+        <option>
+          <valueCoding>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder">
+              <valueInteger value="4"/>
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue">
+              <valueDecimal value="3"/>
+            </extension>
+            <system value="http://loinc.org"/>
+            <code value="LA6571-9"/>
+            <display value="Nearly every day"/>
+          </valueCoding>
+        </option>
+      </item>
+    </Questionnaire>
+  </contained>
+  <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-responsePeriod">
+    <valuePeriod>
+      <start value="2019-02-13T00:36:52.736153Z"/>
+      <end value="2019-02-13T00:37:17.386325Z"/>
+    </valuePeriod>
+  </extension>
+  <identifier>
+    <value value="adaptive-questionnaireresponse-example-phq9"/>
+  </identifier>
+  <questionnaire>
+    <reference value="#contained-adaptive-questionnaire-example-phq9"/>
+  </questionnaire>
+  <status value="completed"/>
+  <subject>
+    <reference value="Patient/subject1"/>
+  </subject>
+  <context>
+    <reference value="Encounter/encounter1"/>
+  </context>
+  <authored value="2019-02-13T00:36:52.736153Z"/>
+  <author>
+    <reference value="Practitioner/prov-admin1"/>
+  </author>
+  <source>
+    <reference value="Patient/subject1"/>
+  </source>
+  <item>
+    <linkId value="score"/>
+    <text value="Cumulative Score is ... (this is hidden text/should not be displayed to the user)"/>
+    <answer>
+      <valueInteger value="0"/>
+    </answer>
+  </item>
+  <item>
+    <linkId value="std_dev"/>
+    <text value="Standard Deviation is ... (this is hidden text/should not be displayed to the user)"/>
+    <answer>
+      <valueDecimal value="0.0"/>
+    </answer>
+  </item>
+  <item>
+    <linkId value="g1.q1"/>
+    <definition value="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9-g1.q1"/>
+    <text value="Little interest or pleasure in doing things,"/>
+    <answer>
+      <valueCoding>
+        <system value="http://loinc.org"/>
+        <code value="LA6568-5"/>
+        <display value="Not at all"/>
+      </valueCoding>
+    </answer>
+  </item>
+  <item>
+    <linkId value="g1.q8"/>
+    <definition value="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9-g1.q8"/>
+    <text value="Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual,"/>
+    <answer>
+      <valueCoding>
+        <system value="http://loinc.org"/>
+        <code value="LA6568-5"/>
+        <display value="Not at all"/>
+      </valueCoding>
+    </answer>
+  </item>
+  <item>
+    <linkId value="g1.q4"/>
+    <definition value="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9-g1.q4"/>
+    <text value="Feeling tired or having little energy,"/>
+    <answer>
+      <valueCoding>
+        <system value="http://loinc.org"/>
+        <code value="LA6568-5"/>
+        <display value="Not at all"/>
+      </valueCoding>
+    </answer>
+  </item>
+</QuestionnaireResponse>

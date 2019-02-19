@@ -1,0 +1,446 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut-questionnaire/QuestionnaireResponse/adaptive-questionnaireresponse-example-phq9> a fhir:QuestionnaireResponse;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "adaptive-questionnaireresponse-example-phq9"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adap-questionnaireresponse";
+       fhir:index 0
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h3>Patient Health Questionnaire (PHQ-9) Adaptive View</h3>\n    <p><em>NOTE: These examples are for educational and testing purposes,\n     see the form copyright statement and do not redistribute without expressed\n     permission from the form author.</em></p>\n    <p>This simulates is a simple adaptive questionnaire implementation.\n     After answering and submitting the first question another question is randomly\n     returned from the selected questionnaire. This is repeated two more times and\n     then the adaptive questionnaire will finish by changing the status to completed\n     and returning a score. Note that although these questionnaires are designed as forms and\n     are not really appropriate for the adaptive questionnaire use case,  they are used here to\n      demonstrate a proof of concept implementation.<br />\n    <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9<br />\n    <strong>Date Completed:</strong> 2018-07-26<br /><br />\n    <em>Copyright: Developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from\nPfizer Inc. No permission required to reproduce, translate, display or distribute.</em></p>\n    <hr /><hr /><br /> <strong>Question:</strong> (linkID=score) Cumulative Score is ... (this is hidden text/should not be displayed to the user)<br /><strong>Response:</strong> 0<br /><br /> <strong>Question:</strong> (linkID=std_dev) Standard Deviation is ... (this is hidden text/should not be displayed to the user)<br /><strong>Response:</strong> 0.0<br /><br /> <strong>Question:</strong> (linkID=g1.q1) Little interest or pleasure in doing things,<br /><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q8) Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual,<br /><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q4) Feeling tired or having little energy,<br /><strong>Response:</strong>  Not at all ( code = LA6568-5, codesystem = http://loinc.org)<br /></div>"
+  ];
+  fhir:DomainResource.contained [
+     a fhir:Questionnaire;
+     fhir:index 0;
+     fhir:Resource.id [ fhir:value "contained-adaptive-questionnaire-example-phq9" ];
+     fhir:Resource.meta [
+       fhir:Meta.profile [
+         fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire";
+         fhir:index 0
+       ]
+     ];
+     fhir:DomainResource.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timeLimit" ];
+       fhir:Extension.valueDuration [
+         fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ];
+         fhir:Quantity.unit [ fhir:value "week" ];
+         fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+         fhir:Quantity.code [ fhir:value "wk" ]
+       ]
+     ];
+     fhir:Questionnaire.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9" ];
+     fhir:Questionnaire.title [ fhir:value "Contained Adaptive Patient Health Questionnaire (PHQ-9)" ];
+     fhir:Questionnaire.status [ fhir:value "active" ];
+     fhir:Questionnaire.date [ fhir:value "2019-02-13T00:36:54.253025Z"^^xsd:dateTime ];
+     fhir:Questionnaire.copyright [ fhir:value "Developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from\nPfizer Inc. No permission required to reproduce, translate, display or distribute." ];
+     fhir:Questionnaire.item [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden" ];
+         fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder" ];
+         fhir:Extension.valueInteger [ fhir:value "1"^^xsd:integer ]
+       ];
+       fhir:Questionnaire.item.linkId [ fhir:value "score" ];
+       fhir:Questionnaire.item.text [ fhir:value "Cumulative Score is ..." ];
+       fhir:Questionnaire.item.type [ fhir:value "integer" ];
+       fhir:Questionnaire.item.repeats [ fhir:value "false"^^xsd:boolean ];
+       fhir:Questionnaire.item.readOnly [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden" ];
+         fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder" ];
+         fhir:Extension.valueInteger [ fhir:value "2"^^xsd:integer ]
+       ];
+       fhir:Questionnaire.item.linkId [ fhir:value "std_dev" ];
+       fhir:Questionnaire.item.text [ fhir:value "Standard Deviation is ..." ];
+       fhir:Questionnaire.item.type [ fhir:value "decimal" ];
+       fhir:Questionnaire.item.repeats [ fhir:value "false"^^xsd:boolean ];
+       fhir:Questionnaire.item.readOnly [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder" ];
+         fhir:Extension.valueInteger [ fhir:value "3"^^xsd:integer ]
+       ];
+       fhir:Questionnaire.item.linkId [ fhir:value "g1.q1" ];
+       fhir:Questionnaire.item.definition [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9-g1.q1" ];
+       fhir:Questionnaire.item.code [
+         fhir:index 0;
+         a loinc:44250-9;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "44250-9" ]
+       ];
+       fhir:Questionnaire.item.prefix [ fhir:value "1. " ];
+       fhir:Questionnaire.item.text [ fhir:value "Little interest or pleasure in doing things," ];
+       fhir:Questionnaire.item.type [ fhir:value "choice" ];
+       fhir:Questionnaire.item.required [ fhir:value "true"^^xsd:boolean ];
+       fhir:Questionnaire.item.repeats [ fhir:value "false"^^xsd:boolean ];
+       fhir:Questionnaire.item.option [
+         fhir:index 0;
+         fhir:Questionnaire.item.option.valueCoding [
+           a loinc:LA6568-5;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder" ];
+             fhir:Extension.valueInteger [ fhir:value "1"^^xsd:integer ]
+           ], [
+             fhir:index 1;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+             fhir:Extension.valueDecimal [ fhir:value "0"^^xsd:decimal ]
+           ];
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA6568-5" ];
+           fhir:Coding.display [ fhir:value "Not at all" ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:Questionnaire.item.option.valueCoding [
+           a loinc:LA6569-3;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder" ];
+             fhir:Extension.valueInteger [ fhir:value "2"^^xsd:integer ]
+           ], [
+             fhir:index 1;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+             fhir:Extension.valueDecimal [ fhir:value "1"^^xsd:decimal ]
+           ];
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA6569-3" ];
+           fhir:Coding.display [ fhir:value "Several days" ]
+         ]
+       ], [
+         fhir:index 2;
+         fhir:Questionnaire.item.option.valueCoding [
+           a loinc:LA6570-1;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder" ];
+             fhir:Extension.valueInteger [ fhir:value "3"^^xsd:integer ]
+           ], [
+             fhir:index 1;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+             fhir:Extension.valueDecimal [ fhir:value "2"^^xsd:decimal ]
+           ];
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA6570-1" ];
+           fhir:Coding.display [ fhir:value "More than half the days" ]
+         ]
+       ], [
+         fhir:index 3;
+         fhir:Questionnaire.item.option.valueCoding [
+           a loinc:LA6571-9;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder" ];
+             fhir:Extension.valueInteger [ fhir:value "4"^^xsd:integer ]
+           ], [
+             fhir:index 1;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+             fhir:Extension.valueDecimal [ fhir:value "3"^^xsd:decimal ]
+           ];
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA6571-9" ];
+           fhir:Coding.display [ fhir:value "Nearly every day" ]
+         ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder" ];
+         fhir:Extension.valueInteger [ fhir:value "4"^^xsd:integer ]
+       ];
+       fhir:Questionnaire.item.linkId [ fhir:value "g1.q8" ];
+       fhir:Questionnaire.item.definition [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9-g1.q8" ];
+       fhir:Questionnaire.item.code [
+         fhir:index 0;
+         a loinc:44253-3;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "44253-3" ]
+       ];
+       fhir:Questionnaire.item.prefix [ fhir:value "8." ];
+       fhir:Questionnaire.item.text [ fhir:value "Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual," ];
+       fhir:Questionnaire.item.type [ fhir:value "choice" ];
+       fhir:Questionnaire.item.required [ fhir:value "true"^^xsd:boolean ];
+       fhir:Questionnaire.item.repeats [ fhir:value "false"^^xsd:boolean ];
+       fhir:Questionnaire.item.option [
+         fhir:index 0;
+         fhir:Questionnaire.item.option.valueCoding [
+           a loinc:LA6568-5;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder" ];
+             fhir:Extension.valueInteger [ fhir:value "1"^^xsd:integer ]
+           ], [
+             fhir:index 1;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+             fhir:Extension.valueDecimal [ fhir:value "0"^^xsd:decimal ]
+           ];
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA6568-5" ];
+           fhir:Coding.display [ fhir:value "Not at all" ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:Questionnaire.item.option.valueCoding [
+           a loinc:LA6569-3;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder" ];
+             fhir:Extension.valueInteger [ fhir:value "2"^^xsd:integer ]
+           ], [
+             fhir:index 1;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+             fhir:Extension.valueDecimal [ fhir:value "1"^^xsd:decimal ]
+           ];
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA6569-3" ];
+           fhir:Coding.display [ fhir:value "Several days" ]
+         ]
+       ], [
+         fhir:index 2;
+         fhir:Questionnaire.item.option.valueCoding [
+           a loinc:LA6570-1;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder" ];
+             fhir:Extension.valueInteger [ fhir:value "3"^^xsd:integer ]
+           ], [
+             fhir:index 1;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+             fhir:Extension.valueDecimal [ fhir:value "2"^^xsd:decimal ]
+           ];
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA6570-1" ];
+           fhir:Coding.display [ fhir:value "More than half the days" ]
+         ]
+       ], [
+         fhir:index 3;
+         fhir:Questionnaire.item.option.valueCoding [
+           a loinc:LA6571-9;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder" ];
+             fhir:Extension.valueInteger [ fhir:value "4"^^xsd:integer ]
+           ], [
+             fhir:index 1;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+             fhir:Extension.valueDecimal [ fhir:value "3"^^xsd:decimal ]
+           ];
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA6571-9" ];
+           fhir:Coding.display [ fhir:value "Nearly every day" ]
+         ]
+       ]
+     ], [
+       fhir:index 4;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder" ];
+         fhir:Extension.valueInteger [ fhir:value "5"^^xsd:integer ]
+       ];
+       fhir:Questionnaire.item.linkId [ fhir:value "g1.q4" ];
+       fhir:Questionnaire.item.definition [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9-g1.q4" ];
+       fhir:Questionnaire.item.code [
+         fhir:index 0;
+         a loinc:44254-1;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "44254-1" ]
+       ];
+       fhir:Questionnaire.item.prefix [ fhir:value "4." ];
+       fhir:Questionnaire.item.text [ fhir:value "Feeling tired or having little energy," ];
+       fhir:Questionnaire.item.type [ fhir:value "choice" ];
+       fhir:Questionnaire.item.required [ fhir:value "true"^^xsd:boolean ];
+       fhir:Questionnaire.item.repeats [ fhir:value "false"^^xsd:boolean ];
+       fhir:Questionnaire.item.option [
+         fhir:index 0;
+         fhir:Questionnaire.item.option.valueCoding [
+           a loinc:LA6568-5;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder" ];
+             fhir:Extension.valueInteger [ fhir:value "1"^^xsd:integer ]
+           ], [
+             fhir:index 1;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+             fhir:Extension.valueDecimal [ fhir:value "0"^^xsd:decimal ]
+           ];
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA6568-5" ];
+           fhir:Coding.display [ fhir:value "Not at all" ]
+         ]
+       ], [
+         fhir:index 1;
+         fhir:Questionnaire.item.option.valueCoding [
+           a loinc:LA6569-3;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder" ];
+             fhir:Extension.valueInteger [ fhir:value "2"^^xsd:integer ]
+           ], [
+             fhir:index 1;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+             fhir:Extension.valueDecimal [ fhir:value "1"^^xsd:decimal ]
+           ];
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA6569-3" ];
+           fhir:Coding.display [ fhir:value "Several days" ]
+         ]
+       ], [
+         fhir:index 2;
+         fhir:Questionnaire.item.option.valueCoding [
+           a loinc:LA6570-1;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder" ];
+             fhir:Extension.valueInteger [ fhir:value "3"^^xsd:integer ]
+           ], [
+             fhir:index 1;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+             fhir:Extension.valueDecimal [ fhir:value "2"^^xsd:decimal ]
+           ];
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA6570-1" ];
+           fhir:Coding.display [ fhir:value "More than half the days" ]
+         ]
+       ], [
+         fhir:index 3;
+         fhir:Questionnaire.item.option.valueCoding [
+           a loinc:LA6571-9;
+           fhir:Element.extension [
+             fhir:index 0;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-conceptOrder" ];
+             fhir:Extension.valueInteger [ fhir:value "4"^^xsd:integer ]
+           ], [
+             fhir:index 1;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/valueset-ordinalValue" ];
+             fhir:Extension.valueDecimal [ fhir:value "3"^^xsd:decimal ]
+           ];
+           fhir:Coding.system [ fhir:value "http://loinc.org" ];
+           fhir:Coding.code [ fhir:value "LA6571-9" ];
+           fhir:Coding.display [ fhir:value "Nearly every day" ]
+         ]
+       ]
+     ]
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-responsePeriod" ];
+     fhir:Extension.valuePeriod [
+       fhir:Period.start [ fhir:value "2019-02-13T00:36:52.736153Z"^^xsd:dateTime ];
+       fhir:Period.end [ fhir:value "2019-02-13T00:37:17.386325Z"^^xsd:dateTime ]
+     ]
+  ];
+  fhir:QuestionnaireResponse.identifier [
+     fhir:Identifier.value [ fhir:value "adaptive-questionnaireresponse-example-phq9" ]
+  ];
+  fhir:QuestionnaireResponse.questionnaire [
+     fhir:Reference.reference [ fhir:value "#contained-adaptive-questionnaire-example-phq9" ]
+  ];
+  fhir:QuestionnaireResponse.status [ fhir:value "completed"];
+  fhir:QuestionnaireResponse.subject [
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/Patient/subject1>;
+     fhir:Reference.reference [ fhir:value "Patient/subject1" ]
+  ];
+  fhir:QuestionnaireResponse.context [
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/Encounter/encounter1>;
+     fhir:Reference.reference [ fhir:value "Encounter/encounter1" ]
+  ];
+  fhir:QuestionnaireResponse.authored [ fhir:value "2019-02-13T00:36:52.736153Z"^^xsd:dateTime];
+  fhir:QuestionnaireResponse.author [
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/Practitioner/prov-admin1>;
+     fhir:Reference.reference [ fhir:value "Practitioner/prov-admin1" ]
+  ];
+  fhir:QuestionnaireResponse.source [
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/Patient/subject1>;
+     fhir:Reference.reference [ fhir:value "Patient/subject1" ]
+  ];
+  fhir:QuestionnaireResponse.item [
+     fhir:index 0;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "score" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "Cumulative Score is ... (this is hidden text/should not be displayed to the user)" ];
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.answer.valueInteger [ fhir:value "0"^^xsd:integer ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "std_dev" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "Standard Deviation is ... (this is hidden text/should not be displayed to the user)" ];
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.answer.valueDecimal [ fhir:value "0.0"^^xsd:decimal ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1.q1" ];
+     fhir:QuestionnaireResponse.item.definition [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9-g1.q1" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "Little interest or pleasure in doing things," ];
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.answer.valueCoding [
+         a loinc:LA6568-5;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "LA6568-5" ];
+         fhir:Coding.display [ fhir:value "Not at all" ]
+       ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1.q8" ];
+     fhir:QuestionnaireResponse.item.definition [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9-g1.q8" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual," ];
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.answer.valueCoding [
+         a loinc:LA6568-5;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "LA6568-5" ];
+         fhir:Coding.display [ fhir:value "Not at all" ]
+       ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:QuestionnaireResponse.item.linkId [ fhir:value "g1.q4" ];
+     fhir:QuestionnaireResponse.item.definition [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9-g1.q4" ];
+     fhir:QuestionnaireResponse.item.text [ fhir:value "Feeling tired or having little energy," ];
+     fhir:QuestionnaireResponse.item.answer [
+       fhir:index 0;
+       fhir:QuestionnaireResponse.item.answer.valueCoding [
+         a loinc:LA6568-5;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ];
+         fhir:Coding.code [ fhir:value "LA6568-5" ];
+         fhir:Coding.display [ fhir:value "Not at all" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut-questionnaire/QuestionnaireResponse/adaptive-questionnaireresponse-example-phq9.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

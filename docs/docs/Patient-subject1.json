@@ -1,0 +1,97 @@
+{
+  "resourceType": "Patient",
+  "id": "subject1",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: subject1</p><p><b>meta</b>: </p><p><b>identifier</b>: 1234</p><p><b>active</b>: true</p><p><b>name</b>: John M Doe </p><p><b>gender</b>: male</p><p><b>birthDate</b>: Jun 19, 1964</p><p><b>address</b>: 100 Main St\nAnytown, CA 99999\nUSA</p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td></tr><tr><td>*</td><td>English <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'en' = 'English', given as 'English'})</span></td></tr></table></div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+      "valueCode": "M"
+    },
+    {
+      "extension": [
+        {
+          "url": "text",
+          "valueString": "White"
+        },
+        {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2106-3",
+            "display": "White"
+          }
+        }
+      ],
+      "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+    },
+    {
+      "extension": [
+        {
+          "url": "text",
+          "valueString": "Not Hispanic or Latino"
+        },
+        {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2186-5",
+            "display": "Not Hispanic or Latino"
+          }
+        }
+      ],
+      "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+    }
+  ],
+  "identifier": [
+    {
+      "system": "http://example.org/pids",
+      "value": "1234"
+    }
+  ],
+  "active": true,
+  "name": [
+    {
+      "family": "Doe",
+      "given": [
+        "John",
+        "M"
+      ]
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1964-06-19",
+  "address": [
+    {
+      "text": "100 Main St\nAnytown, CA 99999\nUSA",
+      "line": [
+        "100 Main St"
+      ],
+      "city": "Anytown",
+      "state": "CA",
+      "postalCode": "99999",
+      "country": "USA"
+    }
+  ],
+  "communication": [
+    {
+      "language": {
+        "coding": [
+          {
+            "system": "urn:ietf:bcp:47",
+            "code": "en",
+            "display": "English"
+          }
+        ],
+        "text": "English"
+      }
+    }
+  ]
+}

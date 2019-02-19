@@ -2,11 +2,11 @@
   "url": "http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig",
   "name": "Argonaut Questionnaire",
   "package-id": "argonaut.questionnaire",
-  "ig-ver": "0.0.0",
-  "date": "Thu, 25 Oct, 2018 11:30:28 -0700",
-  "errs": 272,
-  "warnings": 144,
+  "ig-ver": "1.0.0",
+  "date": "Mon, 18 Feb, 2019 18:36:27 -0800",
+  "errs": 98,
+  "warnings": 110,
   "hints": 0,
   "version": "3.0.1",
-  "tool": "3.6.0 (3)"
+  "tool": "4.0.0 (3)"
 }

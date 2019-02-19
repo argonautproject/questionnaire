@@ -3,7 +3,7 @@
   "id": "questionnaire-example-housing",
   "meta": {
     "profile": [
-      "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"
+      "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"
     ]
   },
   "text": {
@@ -74,21 +74,27 @@
   ],
   "item": [
     {
-      "extension": [
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden",
-          "valueBoolean": true
-        }
-      ],
       "linkId": "g1",
       "type": "group",
       "item": [
         {
+          "extension": [
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "valueInteger": 0
+            }
+          ],
           "linkId": "g1.d",
           "text": "Accountable Health Communities Core Health-Related Social Needs Screening Questions \nUnderlined answer options indicate positive responses for the associated health-related social need. \nA value greater than 10 when the numerical values for answers to questions 7-10 are summed indicates a positive screen for interpersonal safety.",
           "type": "display"
         },
         {
+          "extension": [
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "valueInteger": 1
+            }
+          ],
           "linkId": "g1.1",
           "prefix": "1",
           "text": "What is your housing situation today?",
@@ -97,17 +103,41 @@
           "repeats": false,
           "option": [
             {
+              "extension": [
+                {
+                  "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "valueInteger": 0
+                }
+              ],
               "valueString": "I do not have housing (I am staying with others, in a hotel, in a shelter, living outside on the street, on a beach, in a car, abandoned building, bus or train station, or in a park)"
             },
             {
+              "extension": [
+                {
+                  "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "valueInteger": 1
+                }
+              ],
               "valueString": "I have housing today, but I am worried about losing housing in the future"
             },
             {
+              "extension": [
+                {
+                  "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "valueInteger": 2
+                }
+              ],
               "valueString": "I have housing"
             }
           ]
         },
         {
+          "extension": [
+            {
+              "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+              "valueInteger": 2
+            }
+          ],
           "linkId": "g1.2",
           "prefix": "2",
           "text": "Think about the place you live. Do you have problems with any of the following? (check all that apply)",
@@ -116,28 +146,76 @@
           "repeats": true,
           "option": [
             {
+              "extension": [
+                {
+                  "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "valueInteger": 0
+                }
+              ],
               "valueString": "Bug infestation"
             },
             {
+              "extension": [
+                {
+                  "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "valueInteger": 1
+                }
+              ],
               "valueString": "Mold"
             },
             {
+              "extension": [
+                {
+                  "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "valueInteger": 2
+                }
+              ],
               "valueString": "Lead paint or pipes"
             },
             {
+              "extension": [
+                {
+                  "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "valueInteger": 3
+                }
+              ],
               "valueString": "Inadequate heat"
             },
             {
+              "extension": [
+                {
+                  "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "valueInteger": 4
+                }
+              ],
               "valueString": "Oven or stove not working"
             },
             {
+              "extension": [
+                {
+                  "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "valueInteger": 5
+                }
+              ],
               "valueString": "No or not working smoke detectors"
             },
             {
+              "extension": [
+                {
+                  "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "valueInteger": 6
+                }
+              ],
               "valueString": "Water leaks"
             },
             {
               "extension": [
+                {
+                  "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                  "valueInteger": 7
+                }
+              ],
+              "modifierExtension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive",
                   "valueBoolean": true

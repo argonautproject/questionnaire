@@ -7,7 +7,7 @@
   },
   "url": "http://fhir.org/guides/argonaut-questionnaire/CapabilityStatement/assessmentbank",
   "version": "0.0.0",
-  "name": "argonautQuestionnaireAssessmentBankCapabilityStatement",
+  "name": "assessmentbank",
   "title": "Argonaut questionnaire Assessment Bank CapabilityStatement",
   "status": "draft",
   "experimental": false,
@@ -42,10 +42,10 @@
   ],
   "profile": [
     {
-      "reference": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/q"
+      "reference": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"
     },
     {
-      "reference": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr"
+      "reference": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaireresponse"
     }
   ],
   "rest": [

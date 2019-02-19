@@ -67,11 +67,10 @@
 
 
       <div id="project-status" class="project-status"> <!-- ig title text -->
-
-      
-      <strong>Argonaut Questionnaire Implementation Guide CI Build</strong>
-      
-
+        <b>Argonaut Questionnaire Implementation Guide</b>
+        
+        CI Build
+        
     </div><!-- end ig title text -->
 
   </div><!-- end container -->
@@ -126,15 +125,19 @@
     </li>
   </ul>
 </li>
+<!--
 <li>
   <a href="operations.html">Operations</a>
 </li>
+-->
 <li>
-  <a href="profiles.html">Profiles/Extensions</a>
+  <a href="profiles.html">Profiles and Operations</a>
 </li>
+<!--
 <li>
   <a href="terminology.html">Terminology</a>
 </li>
+-->
 <li>
   <a href="searchparameters.html">Search Parameters</a>
 </li>
@@ -151,10 +154,15 @@
 </li>
 
   <li>
-    <a href="CapabilityStatement-server.html">Conformance requirements for Server</a>
+    <a href="CapabilityStatement-argo-questionnaire-provider-ehr.html">Conformance requirements for Provider EHR</a>
   </li>
+  <!--
   <li>
-    <a href="CapabilityStatement-client.html">Conformance requirements for Client</a>
+    <a href="CapabilityStatement-argonaut-questionnaire-client.html">Conformance requirements for Client</a>
+  </li>
+  -->
+  <li>
+    <a href="CapabilityStatement-adaptive-q-service.html">Conformance requirements for Adaptive Questionnaire Service</a>
   </li>
 </ul>
 </li>
@@ -237,7 +245,11 @@
 
 <!--status-bar-->
 <p id="publish-box">
-This is the   Continuous Integration Build  of the Argonaut Questionnaire Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="history.html">Directory of published versions</a>
+This is the 
+    Continuous Integration Build
+   
+  
+  of the Argonaut Questionnaire Implementation Guide,  based on <a href="http://hl7.org/fhir/STU3/index.html">FHIR Version 3.0.1</a>.  See the <a href="#">Directory of published versions</a>
 </p>
 
 
@@ -290,7 +302,6 @@ This is the   Continuous Integration Build  of the Argonaut Questionnaire Implem
   <!-- ============CONTENT CONTENT=============== -->
 
 
-
   <!--  template typically for examples -->
 <!-- ============CONTENT CONTENT=============== -->
 
@@ -303,8 +314,21 @@ Formats: <a href="QuestionnaireResponse-questionnaireresponse-example-dast.xml.h
 <div xmlns="http://www.w3.org/1999/xhtml">
     <h3>Response Summary</h3>
     <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast<br/>
-    <strong>Date Completed:</strong> 2018-07-05T18:19:36.571848<br/>
-    <hr/> <br/> <strong>Question:</strong> (linkId = g1.q1) Have you used drugs other than those required for medical reasons?<br/><strong>Response:</strong> Yes ( code = LA33-6 )<br/><br/> <strong>Question:</strong> (linkId = g1.q7) Have you neglected your family because of your use of drugs?<br/><strong>Response:</strong> No ( code = LA 32-8 )<br/><br/> <strong>Question:</strong> (linkId = g1.q2) Do you abuse more than one drug at a time?<br/><strong>Response:</strong> Yes ( code = LA33-6 )<br/><br/> <strong>Question:</strong> (linkId = g1.q6) Does your spouse (or parents) ever complain about your involvement with drugs?<br/><strong>Response:</strong> Yes ( code = LA33-6 )<br/><br/> <strong>Question:</strong> (linkId = g1.q8) Have you engaged in illegal activities in order to obtain drugs?<br/><strong>Response:</strong> No ( code = LA 32-8 )<br/><br/> <strong>Question:</strong> (linkId = g1.q4) Have you ever had blackouts or flashbacks as a result of drug use?<br/><strong>Response:</strong> No ( code = LA 32-8 )<br/><br/> <strong>Question:</strong> (linkId = g1.q10) Have you had medical problems as a result of your drug use (e.g. memory loss, hepatitis, convulsions, bleeding)?<br/><strong>Response:</strong> No ( code = LA 32-8 )<br/><br/> <strong>Question:</strong> (linkId = g1.q3) Are you unable to stop abusing drugs when you want to?<br/><strong>Response:</strong> Yes ( code = LA33-6 )<br/><br/> <strong>Question:</strong> (linkId = g1.q9) Have you ever experienced withdrawal symptoms (felt sick) when you stopped taking drugs?<br/><strong>Response:</strong> No ( code = LA 32-8 )<br/><br/> <strong>Question:</strong> (linkId = g1.q5) Do you ever feel bad or guilty about your drug use?<br/><strong>Response:</strong> No ( code = LA 32-8 )<br/>
+    <strong>Date Completed:</strong> 2019-02-13T00:34:57.601979Z<br/>
+    <hr/> <br/><strong>The following questions concern information about your possible involvement with drugs not including alcoholic beverages during the past 12 months. &quot;Drug abuse&quot; refers to (1) the use of prescribed or over-the-counter drugs in excess of the directions, and (2) any nonmedical use of drugs.
+
+ The various classes of drugs may include cannabis (marijuana, hashish), solvents (e.g., paint thinner), tranquilizers (e.g., Valium), barbiturates, cocaine, stimulants (e.g., speed), hallucinogens (e.g., LSD) or narcotics (e.g., heroin). Remember that the questions do not include alcoholic beverages. 
+
+Please answer every question. If you have difficulty with a statement, then choose the response that is mostly right.</strong><br/><br/> <strong>Question:</strong> (linkID=g1.q1) Have you used drugs other than those required for medical reasons?<br/><strong>Response:</strong>  No ( code = LA32-8 , codesystem = http://loinc.org)<br/><br/> <strong>Question:</strong> (linkID=g1.q2) Do you abuse more than one drug at a time?<br/><strong>Response:</strong>  No ( code = LA32-8 , codesystem = http://loinc.org)<br/><br/> <strong>Question:</strong> (linkID=g1.q3) Are you unable to stop abusing drugs when you want to?<br/><strong>Response:</strong>  No ( code = LA32-8 , codesystem = http://loinc.org)<br/><br/> <strong>Question:</strong> (linkID=g1.q4) Have you ever had blackouts or flashbacks as a result of drug use?<br/><strong>Response:</strong>  No ( code = LA32-8 , codesystem = http://loinc.org)<br/><br/> <strong>Question:</strong> (linkID=g1.q5) Do you ever feel bad or guilty about your drug use?<br/><strong>Response:</strong>  No ( code = LA32-8 , codesystem = http://loinc.org)<br/><br/> <strong>Question:</strong> (linkID=g1.q6) Does your spouse (or parents) ever complain about your involvement with drugs?<br/><strong>Response:</strong>  No ( code = LA32-8 , codesystem = http://loinc.org)<br/><br/> <strong>Question:</strong> (linkID=g1.q7) Have you neglected your family because of your use of drugs?<br/><strong>Response:</strong>  No ( code = LA32-8 , codesystem = http://loinc.org)<br/><br/> <strong>Question:</strong> (linkID=g1.q8) Have you engaged in illegal activities in order to obtain drugs?<br/><strong>Response:</strong>  No ( code = LA32-8 , codesystem = http://loinc.org)<br/><br/> <strong>Question:</strong> (linkID=g1.q9) Have you ever experienced withdrawal symptoms (felt sick) when you stopped taking drugs?<br/><strong>Response:</strong>  No ( code = LA32-8 , codesystem = http://loinc.org)<br/><br/> <strong>Question:</strong> (linkID=g1.q10) Have you had medical problems as a result of your drug use (e.g. memory loss, hepatitis, convulsions, bleeding)?<br/><strong>Response:</strong>  No ( code = LA32-8 , codesystem = http://loinc.org)<br/><br/><strong>Scoring: Score 1 point for each question answered “Yes,” except for question 3 for which
+a “No” receives 1 point.
+
+Interpretation of Score:
+Score Degree of Problems Related to Drug Abuse Suggested Action
+0 No problems reported None at this time
+1‐2 Low level Monitor, re‐assess at a later date
+3‐5 Moderate level Further investigation
+6‐8 Substantial level Intensive assessment
+9‐10 Severe level Intensive assessment (this is hidden text/should not be displayed to the user)</strong><br/> <br/><br/>
     </div>
 
   <!-- ==============END CONTENT END CONTENT=================== -->
@@ -342,11 +366,12 @@ Formats: <a href="QuestionnaireResponse-questionnaireresponse-example-dast.xml.h
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      Argonaut Questionnaire Version: 0.0.0 &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Thu, Oct 25, 2018 11:30-0700.
-      | <a style="color: #81BEF7" href="history.html">History</a>
+      Argonaut Questionnaire 
+          Continuous Integration Build
+          &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Mon, Feb 18, 2019 18:36-0800.
+      | <a style="color: #81BEF7" href="#">History</a>
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
-        </span>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->
@@ -364,7 +389,7 @@ Formats: <a href="QuestionnaireResponse-questionnaireresponse-example-dast.xml.h
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="./assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="./assets/js/jquery.min.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
 <script src="./assets/js/bootstrap.min.js"> </script>
 <script src="./assets/js/respond.min.js"> </script>
 <script src="./assets/js/anchor.min.js"> </script>
@@ -374,14 +399,53 @@ Formats: <a href="QuestionnaireResponse-questionnaireresponse-example-dast.xml.h
 
 
 
+<script src="assets/js/clipboard.min.js"> </script>
+
+<script>
+  // Tooltip
+
+  $('#copy-button').tooltip({
+    trigger: 'click',
+    placement: 'bottom'
+  });
+
+  function setTooltip(message) {
+    $('#copy-button').tooltip('hide')
+      .attr('data-original-title', message)
+      .tooltip('show');
+  }
+
+  function hideTooltip() {
+    setTimeout(function() {
+      $('#copy-button').tooltip('hide');
+    }, 1000);
+  }
+
+  // Clipboard
+
+  var clipboard = new ClipboardJS('#copy-button');
+
+  clipboard.on('success', function(e) {
+    setTooltip('Copied!');
+    hideTooltip();
+  });
+
+  clipboard.on('error', function(e) {
+    setTooltip('Failed!');
+    hideTooltip();
+  });
+
+</script>
+
+
 
 <!-- Analytics Below
 ================================================== -->
 
-<!-- add anchors before the closing body tag. -->
-<script> anchors.add()</script>
-
-
+<!-- add anchors before the closing body tag -->
+<script>
+anchors.add()
+</script>
 
 </body>
 </html>

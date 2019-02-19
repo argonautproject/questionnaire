@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<QuestionnaireResponse xmlns="http://hl7.org/fhir">
+  <id value="questionnaireresponse-example-sampler-contained-patient"/>
+  <meta>
+    <profile value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaireresponse"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+    <h3>Response Summary</h3>
+    <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-sampler<br />
+    <strong>Date Completed:</strong> 2019-02-13T00:39:38.320181Z<br />
+    <hr /> <br /><strong>The Argonaut Questionnaire Sampler is designed to show all the question types that can be used in the Argonaut Questionnaire Project:
+
+1 boolean
+2 decimal
+3 integer
+4 dateDate
+5 dateTime
+6 timeTime
+7 string
+8 textText
+9 urlUrl
+10 choice
+11 open-choice
+12 quantity
+</strong><br /><br /> <strong>Question:</strong> (linkID=g2.q1) Check the box if the following statement is true.  The average air speed velocity of a laden European swallow is greater than a laden African swallow.<br /><strong>Response:</strong> False<br /><br /> <strong>Question:</strong> (linkID=g3.q1) What is the average air speed velocity of a laden swallow in m/sec?<br /><strong>Response:</strong> 11.0<br /><br /> <strong>Question:</strong> (linkID=g4.q1) What is the average air speed velocity of a laden swallow in m/sec?<br /><strong>Response:</strong> 11<br /><br /> <strong>Question:</strong> (linkID=g5.q1) If a laden swallow left Camelot on 7/5/2018 what day would it reach the Castle Anthrax?<br /><strong>Response:</strong> 2019-12-31<br /><br /> <strong>Question:</strong> (linkID=g6.q1) If a laden swallow left Camelot on 7/5/2018 and noon when would it reach Castle Anthrax?<br /><strong>Response:</strong> 2019-02-13T12:59<br /><br /> <strong>Question:</strong> (linkID=g7.q1) If a laden swallow left Camelot at noon what time would it reach Castle Anthrax?<br /><strong>Response:</strong> 12:59<br /><br /> <strong>Question:</strong> (linkID=g8.q1) Describe how to estimate the average air speed velocity of a laden swallow in 20 words or less.<br /><strong>Response:</strong> use a duck?<br /><br /> <strong>Question:</strong> (linkID=g9.q1) Describe in detal how to estimate the average air speed velocity of a laden swallow. Please cite your sources and give examples.<br /><strong>Response:</strong> use a duck!!  See https://en.wikipedia.org/wiki/Monty_Python_and_the_Holy_Grail<br /><br /> <strong>Question:</strong> (linkID=g10.q1) Provide a link to a video clip where the average air speed velocity of a laden swallow question is discussed.<br /><strong>Response:</strong> https://en.wikipedia.org/wiki/Monty_Python_and_the_Holy_Grail<br /><br /> <strong>Question:</strong> (linkID=g11.q1) What is the average air speed velocity of a laden swallow in m/sec?<br /><strong>Response:</strong> 11<br /><br /> <strong>Question:</strong> (linkID=g12.q1) What is the average air speed velocity of a laden swallow in m/sec?<br /><strong>Response:</strong> 11<br /><strong>Response:</strong> <br /><br /> <strong>Question:</strong> (linkID=g13.q1) What is the average air speed velocity of a laden swallow - please provide the units?<br /><strong>Response:</strong> 11<br /><strong>Response:</strong> m/sec<br /> <br /><br />
+    </div>
+  </text>
+  <contained>
+    <Patient>
+      <id value="deid-p"/>
+      <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-race">
+        <extension url="text">
+          <valueString value="Asian"/>
+        </extension>
+        <extension url="ombCategory">
+          <valueCoding>
+            <system value="urn:oid:2.16.840.1.113883.6.238"/>
+            <code value="asian"/>
+            <display value="Asian"/>
+          </valueCoding>
+        </extension>
+      </extension>
+      <gender value="male"/>
+      <birthDate value="1969"/>
+      <address>
+        <postalCode value="945"/>
+      </address>
+    </Patient>
+  </contained>
+  <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-responsePeriod">
+    <valuePeriod>
+      <start value="2019-02-13T00:37:27.524361Z"/>
+      <end value="2019-02-13T00:39:38.320181Z"/>
+    </valuePeriod>
+  </extension>
+  <identifier>
+    <value value="questionnaireresponse-example-sampler"/>
+  </identifier>
+  <questionnaire>
+    <reference value="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-sampler"/>
+  </questionnaire>
+  <status value="completed"/>
+  <subject>
+    <reference value="#deid-p"/>
+  </subject>
+  <context>
+    <reference value="Encounter/encounter1"/>
+  </context>
+  <authored value="2019-02-13T00:39:38.320181Z"/>
+  <author>
+    <reference value="Practitioner/prov-admin1"/>
+  </author>
+  <source>
+    <reference value="Patient/subject1"/>
+  </source>
+  <item>
+    <linkId value="g1"/>
+    <text value="Header Text"/>
+    <item>
+      <linkId value="g1.d"/>
+      <text value="The Argonaut Questionnaire Sampler is designed to show all the question types that can be used in the Argonaut Questionnaire Project:&#xA;&#xA;1 boolean&#xA;2 decimal&#xA;3 integer&#xA;4 dateDate&#xA;5 dateTime&#xA;6 timeTime&#xA;7 string&#xA;8 textText&#xA;9 urlUrl&#xA;10 choice&#xA;11 open-choice&#xA;12 quantity"/>
+    </item>
+  </item>
+  <item>
+    <linkId value="g2"/>
+    <text value="boolean"/>
+    <item>
+      <linkId value="g2.q1"/>
+      <text value="Check the box if the following statement is true.  The average air speed velocity of a laden European swallow is greater than a laden African swallow."/>
+      <answer>
+        <valueBoolean value="false"/>
+      </answer>
+    </item>
+  </item>
+  <item>
+    <linkId value="g3"/>
+    <text value="decimal"/>
+    <item>
+      <linkId value="g3.q1"/>
+      <text value="What is the average air speed velocity of a laden swallow in m/sec?"/>
+      <answer>
+        <valueDecimal value="11.0"/>
+      </answer>
+    </item>
+  </item>
+  <item>
+    <linkId value="g4"/>
+    <text value="integer"/>
+    <item>
+      <linkId value="g4.q1"/>
+      <text value="What is the average air speed velocity of a laden swallow in m/sec?"/>
+      <answer>
+        <valueInteger value="11"/>
+      </answer>
+    </item>
+  </item>
+  <item>
+    <linkId value="g5"/>
+    <text value="date"/>
+    <item>
+      <linkId value="g5.q1"/>
+      <text value="If a laden swallow left Camelot on 7/5/2018 what day would it reach the Castle Anthrax?"/>
+      <answer>
+        <valueDate value="2019-12-31"/>
+      </answer>
+    </item>
+  </item>
+  <item>
+    <linkId value="g6"/>
+    <text value="dateTime"/>
+    <item>
+      <linkId value="g6.q1"/>
+      <text value="If a laden swallow left Camelot on 7/5/2018 and noon when would it reach Castle Anthrax?"/>
+      <answer>
+        <valueDateTime value="2019-02-13T12:59:00Z"/>
+      </answer>
+    </item>
+  </item>
+  <item>
+    <linkId value="g7"/>
+    <text value="time"/>
+    <item>
+      <linkId value="g7.q1"/>
+      <text value="If a laden swallow left Camelot at noon what time would it reach Castle Anthrax?"/>
+      <answer>
+        <valueTime value="12:59:00"/>
+      </answer>
+    </item>
+  </item>
+  <item>
+    <linkId value="g8"/>
+    <text value="string"/>
+    <item>
+      <linkId value="g8.q1"/>
+      <text value="Describe how to estimate the average air speed velocity of a laden swallow in 20 words or less."/>
+      <answer>
+        <valueString value="use a duck?"/>
+      </answer>
+    </item>
+  </item>
+  <item>
+    <linkId value="g9"/>
+    <text value="text"/>
+    <item>
+      <linkId value="g9.q1"/>
+      <text value="Describe in detal how to estimate the average air speed velocity of a laden swallow. Please cite your sources and give examples."/>
+      <answer>
+        <valueString value="use a duck!!  See https://en.wikipedia.org/wiki/Monty_Python_and_the_Holy_Grail"/>
+      </answer>
+    </item>
+  </item>
+  <item>
+    <linkId value="g10"/>
+    <text value="url"/>
+    <item>
+      <linkId value="g10.q1"/>
+      <text value="Provide a link to a video clip where the average air speed velocity of a laden swallow question is discussed."/>
+      <answer>
+        <valueUri value="https://en.wikipedia.org/wiki/Monty_Python_and_the_Holy_Grail"/>
+      </answer>
+    </item>
+  </item>
+  <item>
+    <linkId value="g11"/>
+    <text value="choice"/>
+    <item>
+      <linkId value="g11.q1"/>
+      <text value="What is the average air speed velocity of a laden swallow in m/sec?"/>
+      <answer>
+        <valueString value="11"/>
+      </answer>
+    </item>
+  </item>
+  <item>
+    <linkId value="g12"/>
+    <text value="open-choice"/>
+    <item>
+      <linkId value="g12.q1"/>
+      <text value="What is the average air speed velocity of a laden swallow in m/sec?"/>
+      <answer>
+        <valueString value="11"/>
+      </answer>
+    </item>
+  </item>
+  <item>
+    <linkId value="g13"/>
+    <text value="quantity"/>
+    <item>
+      <linkId value="g13.q1"/>
+      <text value="What is the average air speed velocity of a laden swallow - please provide the units?"/>
+      <answer>
+        <valueQuantity>
+          <value value="11"/>
+          <unit value="m/sec"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="m/s"/>
+        </valueQuantity>
+      </answer>
+    </item>
+  </item>
+</QuestionnaireResponse>

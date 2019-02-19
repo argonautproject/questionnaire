@@ -166,7 +166,28 @@
     </resource>
     <resource>
       <reference>
+        <reference value="SearchParameter/Questionnaire-publisher"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="CapabilityStatement/assessmentbank"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/extension-multipleAnd"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/extension-multipleOr"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -180,7 +201,21 @@
     </resource>
     <resource>
       <reference>
-        <reference value="CapabilityStatement/server"/>
+        <reference value="SearchParameter/QuestionnaireResponse-status"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="SearchParameter/QuestionnaireResponse-questionnaire"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="SearchParameter/QuestionnaireResponse-author"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -188,6 +223,20 @@
     <resource>
       <reference>
         <reference value="StructureDefinition/extension-timeLimit"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="SearchParameter/Questionnaire-status"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="SearchParameter/QuestionnaireResponse-patient"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -208,7 +257,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="CapabilityStatement/client"/>
+        <reference value="SearchParameter/patient-birthdate"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -222,7 +271,28 @@
     </resource>
     <resource>
       <reference>
-        <reference value="SearchParameter/Questionnaire-context-value"/>
+        <reference value="SearchParameter/Questionnaire-context-type-value"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="SearchParameter/Questionnaire-context"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="SearchParameter/Questionnaire-title"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="SearchParameter/Questionnaire-version"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -250,6 +320,20 @@
     </resource>
     <resource>
       <reference>
+        <reference value="SearchParameter/QuestionnaireResponse-context"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CapabilityStatement/argo-questionnaire-provider-ehr"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="SearchParameter/Questionnaire-context-type"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -257,7 +341,14 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/argo-adaptive-questionnaire"/>
+        <reference value="CapabilityStatement/adaptive-q-service"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="SearchParameter/QuestionnaireResponse-source"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -298,13 +389,18 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-argo-adaptive-questionnaire.html"/>
-          <title value="StructureDefinition Argo Adaptive Questionnaire"/>
+          <nameUrl value="StructureDefinition-argo-questionnaireresponse.html"/>
+          <title value="StructureDefinition Argo QuestionnaireResponse"/>
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="StructureDefinition-argo-questionnaireresponse.html"/>
-          <title value="StructureDefinition Argo QuestionnaireResponse"/>
+          <nameUrl value="StructureDefinition-extension-multipleAnd.html"/>
+          <title value="StructureDefinition Extension multipleAnd"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="StructureDefinition-extension-multipleOr.html"/>
+          <title value="StructureDefinition Extension multipleOr"/>
           <generation value="generated"/>
         </page>
         <page>
@@ -343,13 +439,73 @@
         <title value="Search Parameters"/>
         <generation value="html"/>
         <page>
-          <nameUrl value="SearchParameter-Questionnaire-context-value.html"/>
-          <title value="SearchParameter Questionnaire Context Value"/>
+          <nameUrl value="SearchParameter-Questionnaire-publisher.html"/>
+          <title value="SearchParameter Questionnaire Publisher"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-QuestionnaireResponse-status.html"/>
+          <title value="SearchParameter QuestionnaireResponse Status"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-QuestionnaireResponse-questionnaire.html"/>
+          <title value="SearchParameter QuestionnaireResponse Questionnaire"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-QuestionnaireResponse-author.html"/>
+          <title value="SearchParameter QuestionnaireResponse Author"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-Questionnaire-status.html"/>
+          <title value="SearchParameter Questionnaire Status"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-QuestionnaireResponse-patient.html"/>
+          <title value="SearchParameter QuestionnaireResponse Patient"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-patient-birthdate.html"/>
+          <title value="SearchParameter Patient Birthdate"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-Questionnaire-context-type-value.html"/>
+          <title value="SearchParameter Questionnaire Context Type Value"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-Questionnaire-context.html"/>
+          <title value="SearchParameter Questionnaire Context"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-Questionnaire-title.html"/>
+          <title value="SearchParameter Questionnaire Title"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-Questionnaire-version.html"/>
+          <title value="SearchParameter Questionnaire Version"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-QuestionnaireResponse-context.html"/>
+          <title value="SearchParameter QuestionnaireResponse Context"/>
           <generation value="generated"/>
         </page>
         <page>
           <nameUrl value="SearchParameter-Questionnaire-context-type.html"/>
           <title value="SearchParameter Questionnaire Context Type"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="SearchParameter-QuestionnaireResponse-source.html"/>
+          <title value="SearchParameter QuestionnaireResponse Source"/>
           <generation value="generated"/>
         </page>
       </page>
@@ -363,18 +519,18 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="CapabilityStatement-server.html"/>
-          <title value="CapabilityStatement Server"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="CapabilityStatement-client.html"/>
-          <title value="CapabilityStatement Client"/>
-          <generation value="generated"/>
-        </page>
-        <page>
           <nameUrl value="CapabilityStatement-answerbank.html"/>
           <title value="CapabilityStatement Answerbank"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="CapabilityStatement-argo-questionnaire-provider-ehr.html"/>
+          <title value="CapabilityStatement Argo Questionnaire Provider Ehr"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="CapabilityStatement-adaptive-q-service.html"/>
+          <title value="CapabilityStatement Adaptive Q Service"/>
           <generation value="generated"/>
         </page>
       </page>

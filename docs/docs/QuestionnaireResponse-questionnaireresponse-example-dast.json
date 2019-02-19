@@ -3,15 +3,24 @@
   "id": "questionnaireresponse-example-dast",
   "meta": {
     "profile": [
-      "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/qr"
+      "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaireresponse"
     ]
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h3>Response Summary</h3>\n    <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast<br />\n    <strong>Date Completed:</strong> 2018-07-05T18:19:36.571848<br />\n    <hr /> <br /> <strong>Question:</strong> (linkId = g1.q1) Have you used drugs other than those required for medical reasons?<br /><strong>Response:</strong> Yes ( code = LA33-6 )<br /><br /> <strong>Question:</strong> (linkId = g1.q7) Have you neglected your family because of your use of drugs?<br /><strong>Response:</strong> No ( code = LA 32-8 )<br /><br /> <strong>Question:</strong> (linkId = g1.q2) Do you abuse more than one drug at a time?<br /><strong>Response:</strong> Yes ( code = LA33-6 )<br /><br /> <strong>Question:</strong> (linkId = g1.q6) Does your spouse (or parents) ever complain about your involvement with drugs?<br /><strong>Response:</strong> Yes ( code = LA33-6 )<br /><br /> <strong>Question:</strong> (linkId = g1.q8) Have you engaged in illegal activities in order to obtain drugs?<br /><strong>Response:</strong> No ( code = LA 32-8 )<br /><br /> <strong>Question:</strong> (linkId = g1.q4) Have you ever had blackouts or flashbacks as a result of drug use?<br /><strong>Response:</strong> No ( code = LA 32-8 )<br /><br /> <strong>Question:</strong> (linkId = g1.q10) Have you had medical problems as a result of your drug use (e.g. memory loss, hepatitis, convulsions, bleeding)?<br /><strong>Response:</strong> No ( code = LA 32-8 )<br /><br /> <strong>Question:</strong> (linkId = g1.q3) Are you unable to stop abusing drugs when you want to?<br /><strong>Response:</strong> Yes ( code = LA33-6 )<br /><br /> <strong>Question:</strong> (linkId = g1.q9) Have you ever experienced withdrawal symptoms (felt sick) when you stopped taking drugs?<br /><strong>Response:</strong> No ( code = LA 32-8 )<br /><br /> <strong>Question:</strong> (linkId = g1.q5) Do you ever feel bad or guilty about your drug use?<br /><strong>Response:</strong> No ( code = LA 32-8 )<br />\n    </div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h3>Response Summary</h3>\n    <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast<br />\n    <strong>Date Completed:</strong> 2019-02-13T00:34:57.601979Z<br />\n    <hr /> <br /><strong>The following questions concern information about your possible involvement with drugs not including alcoholic beverages during the past 12 months. \"Drug abuse\" refers to (1) the use of prescribed or over-the-counter drugs in excess of the directions, and (2) any nonmedical use of drugs.\n\n The various classes of drugs may include cannabis (marijuana, hashish), solvents (e.g., paint thinner), tranquilizers (e.g., Valium), barbiturates, cocaine, stimulants (e.g., speed), hallucinogens (e.g., LSD) or narcotics (e.g., heroin). Remember that the questions do not include alcoholic beverages. \n\nPlease answer every question. If you have difficulty with a statement, then choose the response that is mostly right.</strong><br /><br /> <strong>Question:</strong> (linkID=g1.q1) Have you used drugs other than those required for medical reasons?<br /><strong>Response:</strong>  No ( code = LA32-8 , codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q2) Do you abuse more than one drug at a time?<br /><strong>Response:</strong>  No ( code = LA32-8 , codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q3) Are you unable to stop abusing drugs when you want to?<br /><strong>Response:</strong>  No ( code = LA32-8 , codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q4) Have you ever had blackouts or flashbacks as a result of drug use?<br /><strong>Response:</strong>  No ( code = LA32-8 , codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q5) Do you ever feel bad or guilty about your drug use?<br /><strong>Response:</strong>  No ( code = LA32-8 , codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q6) Does your spouse (or parents) ever complain about your involvement with drugs?<br /><strong>Response:</strong>  No ( code = LA32-8 , codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q7) Have you neglected your family because of your use of drugs?<br /><strong>Response:</strong>  No ( code = LA32-8 , codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q8) Have you engaged in illegal activities in order to obtain drugs?<br /><strong>Response:</strong>  No ( code = LA32-8 , codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q9) Have you ever experienced withdrawal symptoms (felt sick) when you stopped taking drugs?<br /><strong>Response:</strong>  No ( code = LA32-8 , codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=g1.q10) Have you had medical problems as a result of your drug use (e.g. memory loss, hepatitis, convulsions, bleeding)?<br /><strong>Response:</strong>  No ( code = LA32-8 , codesystem = http://loinc.org)<br /><br /><strong>Scoring: Score 1 point for each question answered “Yes,” except for question 3 for which\na “No” receives 1 point.\n\nInterpretation of Score:\nScore Degree of Problems Related to Drug Abuse Suggested Action\n0 No problems reported None at this time\n1‐2 Low level Monitor, re‐assess at a later date\n3‐5 Moderate level Further investigation\n6‐8 Substantial level Intensive assessment\n9‐10 Severe level Intensive assessment (this is hidden text/should not be displayed to the user)</strong><br /> <br /><br />\n    </div>"
   },
+  "extension": [
+    {
+      "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-responsePeriod",
+      "valuePeriod": {
+        "start": "2019-02-13T00:34:37.842016Z",
+        "end": "2019-02-13T00:34:57.601979Z"
+      }
+    }
+  ],
   "identifier": {
-    "value": "test"
+    "value": "questionnaireresponse-example-dast"
   },
   "questionnaire": {
     "reference": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-dast"
@@ -23,7 +32,7 @@
   "context": {
     "reference": "Encounter/encounter1"
   },
-  "authored": "2018-07-05T18:19:36.571848",
+  "authored": "2019-02-13T00:34:57.601979Z",
   "author": {
     "reference": "Practitioner/prov-admin1"
   },
@@ -33,7 +42,12 @@
   "item": [
     {
       "linkId": "g1",
+      "text": "Form (this is hidden text/should not be displayed to the user)",
       "item": [
+        {
+          "linkId": "g1.d",
+          "text": "The following questions concern information about your possible involvement with drugs not including alcoholic beverages during the past 12 months. \"Drug abuse\" refers to (1) the use of prescribed or over-the-counter drugs in excess of the directions, and (2) any nonmedical use of drugs.\n\n The various classes of drugs may include cannabis (marijuana, hashish), solvents (e.g., paint thinner), tranquilizers (e.g., Valium), barbiturates, cocaine, stimulants (e.g., speed), hallucinogens (e.g., LSD) or narcotics (e.g., heroin). Remember that the questions do not include alcoholic beverages. \n\nPlease answer every question. If you have difficulty with a statement, then choose the response that is mostly right."
+        },
         {
           "linkId": "g1.q1",
           "text": "Have you used drugs other than those required for medical reasons?",
@@ -41,20 +55,7 @@
             {
               "valueCoding": {
                 "system": "http://loinc.org",
-                "code": "LA33-6 ",
-                "display": "Yes"
-              }
-            }
-          ]
-        },
-        {
-          "linkId": "g1.q7",
-          "text": "Have you neglected your family because of your use of drugs?",
-          "answer": [
-            {
-              "valueCoding": {
-                "system": "http://loinc.org",
-                "code": "LA 32-8 ",
+                "code": "LA32-8",
                 "display": "No"
               }
             }
@@ -67,59 +68,7 @@
             {
               "valueCoding": {
                 "system": "http://loinc.org",
-                "code": "LA33-6 ",
-                "display": "Yes"
-              }
-            }
-          ]
-        },
-        {
-          "linkId": "g1.q6",
-          "text": "Does your spouse (or parents) ever complain about your involvement with drugs?",
-          "answer": [
-            {
-              "valueCoding": {
-                "system": "http://loinc.org",
-                "code": "LA33-6 ",
-                "display": "Yes"
-              }
-            }
-          ]
-        },
-        {
-          "linkId": "g1.q8",
-          "text": "Have you engaged in illegal activities in order to obtain drugs?",
-          "answer": [
-            {
-              "valueCoding": {
-                "system": "http://loinc.org",
-                "code": "LA 32-8 ",
-                "display": "No"
-              }
-            }
-          ]
-        },
-        {
-          "linkId": "g1.q4",
-          "text": "Have you ever had blackouts or flashbacks as a result of drug use?",
-          "answer": [
-            {
-              "valueCoding": {
-                "system": "http://loinc.org",
-                "code": "LA 32-8 ",
-                "display": "No"
-              }
-            }
-          ]
-        },
-        {
-          "linkId": "g1.q10",
-          "text": "Have you had medical problems as a result of your drug use (e.g. memory loss, hepatitis, convulsions, bleeding)?",
-          "answer": [
-            {
-              "valueCoding": {
-                "system": "http://loinc.org",
-                "code": "LA 32-8 ",
+                "code": "LA32-8",
                 "display": "No"
               }
             }
@@ -132,20 +81,20 @@
             {
               "valueCoding": {
                 "system": "http://loinc.org",
-                "code": "LA33-6 ",
-                "display": "Yes"
+                "code": "LA32-8",
+                "display": "No"
               }
             }
           ]
         },
         {
-          "linkId": "g1.q9",
-          "text": "Have you ever experienced withdrawal symptoms (felt sick) when you stopped taking drugs?",
+          "linkId": "g1.q4",
+          "text": "Have you ever had blackouts or flashbacks as a result of drug use?",
           "answer": [
             {
               "valueCoding": {
                 "system": "http://loinc.org",
-                "code": "LA 32-8 ",
+                "code": "LA32-8",
                 "display": "No"
               }
             }
@@ -158,11 +107,86 @@
             {
               "valueCoding": {
                 "system": "http://loinc.org",
-                "code": "LA 32-8 ",
+                "code": "LA32-8",
                 "display": "No"
               }
             }
           ]
+        },
+        {
+          "linkId": "g1.q6",
+          "text": "Does your spouse (or parents) ever complain about your involvement with drugs?",
+          "answer": [
+            {
+              "valueCoding": {
+                "system": "http://loinc.org",
+                "code": "LA32-8",
+                "display": "No"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "g1.q7",
+          "text": "Have you neglected your family because of your use of drugs?",
+          "answer": [
+            {
+              "valueCoding": {
+                "system": "http://loinc.org",
+                "code": "LA32-8",
+                "display": "No"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "g1.q8",
+          "text": "Have you engaged in illegal activities in order to obtain drugs?",
+          "answer": [
+            {
+              "valueCoding": {
+                "system": "http://loinc.org",
+                "code": "LA32-8",
+                "display": "No"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "g1.q9",
+          "text": "Have you ever experienced withdrawal symptoms (felt sick) when you stopped taking drugs?",
+          "answer": [
+            {
+              "valueCoding": {
+                "system": "http://loinc.org",
+                "code": "LA32-8",
+                "display": "No"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "g1.q10",
+          "text": "Have you had medical problems as a result of your drug use (e.g. memory loss, hepatitis, convulsions, bleeding)?",
+          "answer": [
+            {
+              "valueCoding": {
+                "system": "http://loinc.org",
+                "code": "LA32-8",
+                "display": "No"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "g2",
+      "text": "Scoring Instructions (this is hidden text/should not be displayed to the user)",
+      "item": [
+        {
+          "linkId": "g2.d",
+          "text": "Scoring: Score 1 point for each question answered “Yes,” except for question 3 for which\na “No” receives 1 point.\n\nInterpretation of Score:\nScore Degree of Problems Related to Drug Abuse Suggested Action\n0 No problems reported None at this time\n1‐2 Low level Monitor, re‐assess at a later date\n3‐5 Moderate level Further investigation\n6‐8 Substantial level Intensive assessment\n9‐10 Severe level Intensive assessment (this is hidden text/should not be displayed to the user)"
         }
       ]
     }

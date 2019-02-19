@@ -16,69 +16,11 @@
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <SupBook>
-   <Path>profile-derived-q-spreadsheet.xml</Path>
-   <SheetName>Instructions</SheetName>
-   <SheetName>Metadata</SheetName>
-   <SheetName>argo-adaptive-questionnaire</SheetName>
-   <SheetName>AQ-Inv</SheetName>
-   <SheetName>Extensions</SheetName>
-   <SheetName>Search</SheetName>
-   <SheetName>Operations</SheetName>
-   <SheetName>Bindings</SheetName>
-   <SheetName>blah-codes</SheetName>
-   <SheetName>Version Mapping</SheetName>
-   <SheetName>Sheet11</SheetName>
-   <Xct>
-    <Count>0</Count>
-    <SheetIndex>0</SheetIndex>
-   </Xct>
-   <Xct>
-    <Count>0</Count>
-    <SheetIndex>1</SheetIndex>
-   </Xct>
-   <Xct>
-    <Count>0</Count>
-    <SheetIndex>2</SheetIndex>
-   </Xct>
-   <Xct>
-    <Count>0</Count>
-    <SheetIndex>3</SheetIndex>
-   </Xct>
-   <Xct>
-    <Count>0</Count>
-    <SheetIndex>4</SheetIndex>
-   </Xct>
-   <Xct>
-    <Count>0</Count>
-    <SheetIndex>5</SheetIndex>
-   </Xct>
-   <Xct>
-    <Count>0</Count>
-    <SheetIndex>6</SheetIndex>
-   </Xct>
-   <Xct>
-    <Count>0</Count>
-    <SheetIndex>7</SheetIndex>
-   </Xct>
-   <Xct>
-    <Count>0</Count>
-    <SheetIndex>8</SheetIndex>
-   </Xct>
-   <Xct>
-    <Count>0</Count>
-    <SheetIndex>9</SheetIndex>
-   </Xct>
-   <Xct>
-    <Count>0</Count>
-    <SheetIndex>10</SheetIndex>
-   </Xct>
-  </SupBook>
-  <WindowHeight>11115</WindowHeight>
+  <WindowHeight>9315</WindowHeight>
   <WindowWidth>25200</WindowWidth>
   <WindowTopX>32767</WindowTopX>
   <WindowTopY>32767</WindowTopY>
-  <ActiveSheet>2</ActiveSheet>
+  <ActiveSheet>1</ActiveSheet>
   <RefModeR1C1/>
   <ProtectStructure>False</ProtectStructure>
   <ProtectWindows>False</ProtectWindows>
@@ -1064,7 +1006,7 @@
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="57">
     <Cell ss:StyleID="s74"><Data ss:Type="String">description</Data></Cell>
-    <Cell ss:StyleID="s77"><Data ss:Type="String">The Argonaut Adaptive QuestionnaireResponse Profile  is derived from the [Argonaut QuestionnaireResponse profile](StructureDefinition-argo-questionnaireresponse.html) requiring a [*contained*](http://hl7.org/fhir/STU3/references.html#contained)[Argonaut Questionnaire Profile](StructureDefinition-argo-questionnaire.html) to support the [adaptive questionnaire use case](adaptive.html).  This profile defines the structure that is passed between the Client and Server using the [`$next-question`](OperationDefinition-next-question.html) operation and records the question-answer pairs and questionnaire questions from the adaptive questionnaire.</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">The Argonaut Adaptive QuestionnaireResponse Profile supports the [adaptive questionnaire use case](adaptive.html) and is derived from the [Argonaut QuestionnaireResponse profile](StructureDefinition-argo-questionnaireresponse.html). This profile defines the structure that is passed between the Client and Server using the [`$next-question`](OperationDefinition-next-question.html) operation and records the question-answer pairs and questionnaire questions from the adaptive questionnaire.&#10;&#10;  **Mandatory Data Element:**&#10;  - A [*contained*](http://hl7.org/fhir/STU3/references.html#contained) [Argonaut Questionnaire Profile](StructureDefinition-argo-questionnaire.html)</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">status</Data></Cell>
@@ -1072,7 +1014,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">date</Data></Cell>
-    <Cell ss:StyleID="s79" ss:Formula="=NOW()"><Data ss:Type="DateTime">2019-02-11T21:38:03.550</Data></Cell>
+    <Cell ss:StyleID="s79" ss:Formula="=NOW()"><Data ss:Type="DateTime">2019-02-16T14:44:17.730</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">published.structure</Data></Cell>
@@ -1108,6 +1050,7 @@
     <HorizontalResolution>600</HorizontalResolution>
     <VerticalResolution>600</VerticalResolution>
    </Print>
+   <Selected/>
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>1</SplitHorizontal>
@@ -1127,8 +1070,7 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveRow>12</ActiveRow>
-     <ActiveCol>6</ActiveCol>
+     <ActiveRow>7</ActiveRow>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
@@ -1327,7 +1269,7 @@
     <Cell ss:StyleID="s109"><Data ss:Type="String">1..1</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s109"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s97"><Data ss:Type="String">Questionnaire{http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adaptive-questionnaire}</Data><NamedCell
+    <Cell ss:StyleID="s97"><Data ss:Type="String">Questionnaire{http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire}s</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s109"><Data ss:Type="String">Y</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1792,13 +1734,12 @@
     <HorizontalResolution>600</HorizontalResolution>
     <VerticalResolution>600</VerticalResolution>
    </Print>
-   <Selected/>
    <FreezePanes/>
    <FrozenNoSplit/>
    <SplitHorizontal>1</SplitHorizontal>
    <TopRowBottomPane>1</TopRowBottomPane>
    <SplitVertical>7</SplitVertical>
-   <LeftColumnRightPane>9</LeftColumnRightPane>
+   <LeftColumnRightPane>12</LeftColumnRightPane>
    <ActivePane>0</ActivePane>
    <Panes>
     <Pane>
@@ -1813,8 +1754,7 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveRow>10</ActiveRow>
-     <ActiveCol>0</ActiveCol>
+     <ActiveRow>2</ActiveRow>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>

@@ -1,28 +1,27 @@
-[^1]: This is called the 'Form Manager' in the [Structured Data Capture Initiative] (SDC)
-[^2]: This is called the 'Form Receiver/Archiver' in the [Structured Data Capture Initiative] (SDC)
-[^3]: This is called the 'Form Filler' and/or 'Form Response Handler' in the [Structured Data Capture Initiative] (SDC)
+[^1]: This corresponds to the 'Form Manager' in the [Structured Data Capture Initiative] (SDC)
+[^2]: This corresponds to the the 'Form Receiver/Archiver' in the [Structured Data Capture Initiative] (SDC)
+[^3]: This corresponds to the the 'Form Filler' and/or 'Form Response Handler' in the [Structured Data Capture Initiative] (SDC)
 [^4]: https://en.wikipedia.org/wiki/Questionnaire
 [^5]: How to implement Questionnaire  to design forms that adjust what information is displayed and/or that perform calculations based on user input is covered in the [SDC (Structured Data Capture)] implementation Guide.
 [Adaptive Questionnaire]: https://en.wikipedia.org/wiki/Computerized_adaptive_testing
 [Adaptive Forms Use Case]: adaptive.html
 [Answer-Bank]: CapabilityStatement-answerbank.html
 [Argonaut Adaptive QuestionnaireResponse Profile]: StructureDefinition-argo-adap-questionnaireresponse.html "The Argonaut Adaptive QuestionnaireResponse Profile  is derived from the Argonaut QR profile requiring a containedArgonaut Questionnaire Profile to support the adaptive questionnaire use case."
-[Argonaut Adaptive Questionnaire Profile]: StructureDefinition-argo-adaptive-questionnaire.html "The contained Argonaut Questionnaire Profile to support the adaptive questionnaire use case."
 [Argonaut Next Question Operation]: OperationDefinition-next-question.html "The Argonaut Next Question Operation is used for adaptive questionnaires forms where the next question is based on previous answers."
 [Argonaut Project]: http://argonautwiki.hl7.org/index.php?title=Main_Page
 [Argonaut Questionnaire Profile]: StructureDefinition-argo-questionnaire.html "Argonaut Questionnaire Profile"
 [Questionnaire Ordinal Value Extension]: {{site.data.fhir.path}}extension-questionnaire-ordinalvalue.html "A numeric value that allows the comparison (less than, greater than) or other numerical manipulation of a concept (e.g. adding up components of a score)."
 [Argonaut Questionnaire Contained ValueSet Profile]: StructureDefinition-argo-questionnaire-valueset.html "The Argonaut Questionnaire Contained ValueSet Profile is contained within the Argonaut Questionnaire Profile"
 [Argonaut Questionnaire Time Limit Extension]: StructureDefinition-extension-timeLimit.html
-[Argonaut Questionnaire Item Order Extension]: StructureDefinition-extension-itemOrder.html
-[Argonaut QuestionnaireResponse Response Period Extension]: StructureDefinition-extension-responsePeriod.html
+[Argonaut Questionnaire Item Order Extension]: StructureDefinition-extension-itemOrder.html "An integer representing the order of questions within Questionnaires groups, groups within groups and groups within questions and the order of answer choices for questions of type ‘choice’ and ‘open-choice using Questionnaire.item.option."
+[Argonaut QuestionnaireResponse Response Period Extension]: StructureDefinition-extension-responsePeriod.html "The start and stop date-times for completing a questionnaire or a questionnnaire item or group."
 [Argonaut QuestionnaireResponse Profile]: StructureDefinition-argo-questionnaireresponse.html  "Argonaut QuestionnaireResponse Profile"
 [Assessment-Bank]: CapabilityStatement-assessmentbank.html
 [Assumptions]: index.html#assumptions-and-preconditions  "Assumptions-and-Preconditions"
 [Black Box]: https://en.wikipedia.org/wiki/Black_box
-[client]: CapabilityStatement-client.html
+[client Application]: CapabilityStatement-argonaut-questionnaire-client.html
 [contained]: {{site.data.fhir.path}}references.html#contained
-[Custom search parameters]: searchparameters.html
+[search parameters]: searchparameters.html
 [Downloads]: downloads.html
 [expansion]: {{site.data.fhir.path}}valueset.html#expansion "The list of codes that are actually in the value set under a given set of conditions ("extension")"
 [FHIR RESTful API]: {{site.data.fhir.path}}http.html
@@ -33,7 +32,7 @@
 [Must Support]: {{site.data.fhir.uscore}}/guidance.html#must-support
 [Valuset Ordinal Value Extension]: {{site.data.fhir.path}}extension-valueset-ordinalvalue.html "ValueSet ordinalvalue extension: A numeric value that allows numerical manipulation of a concept."
 [Profiles]: profiles.html
-[Provider EHR]: CapabilityStatement-server.html
+[Provider EHR]: CapabilityStatement-argo-questionnaire-provider-ehr.html
 [Questionnaire examples]: StructureDefinition-argo-questionnaire.html#examples
 [Questionnaire Hidden Extension]: {{site.data.fhir.path}}extension-questionnaire-hidden.html "Questionnaire hidden extension: If true, indicates that the extended item should not be displayed to the user."
 [Questionnaire Option Exclusive Extension]: {{site.data.fhir.path}}extension-questionnaire-optionexclusive.html "Questionnaire optionexclusive  modifier extension: If true, indicates that if this option is selected, no other options may be selected."
@@ -60,3 +59,33 @@
  [Argonaut Questionnaire Test Renderer]: http://gettingstarte-cjfwz-env.us-west-2.elasticbeanstalk.com/
  [modifier extension]: {{site.data.fhir.path}}extensibility.html#modifierExtension "An extension that modifies the meaning of the element that contains it. Typically, this means information that qualifies or negates the primary meaning of the element that contains it."
  [described above]: #get-next-question
+ [Form Author Posts to Assessment Bank]: static.html#form-author-posts-to-assessment-bank
+ [Provider EHR Fetches Form]: static.html#provider-ehr-fetches-form
+ [Provider EHR Posts to Answer Bank]: static.html#provider-ehr-posts-to-answer-bank
+ [Provider EHR Searches Answer Bank]: static.html#provider-ehr-searches-answer-bank
+ [Initiate Adaptive Questionnaire]: adaptive.html#initiate-adaptive-questionnaire
+ [Get Next Question]: adaptive.html#get-next-question
+ [Adaptive Questionnaire is Complete]: adaptive.htmladaptive-questionnaire-is-complete
+ [Argonaut Questionnaire Profile Quick Start]: StructureDefinition-argo-questionnaire.html#quick-start
+ [Argonaut Adaptive QuestionnaireResponse Profile Quick Start]: StructureDefinition-argo-adap-questionnaireresponse.html#quick-start
+ [conceptOrder]: {site.data.fhir.path}}extension-valueset-conceptorder.html "Identifies the relative order in which concepts within the value set should be presented to a user."
+[Translation]: {{site.data.fhir.path}}extension-translation.html "Language translation from base language of resource to another language."
+[displayCategory]: {{site.data.fhir.path}}extension-questionnaire-displaycategory.html "Describes the intended purpose of the rendered text. For example instructions, guidance on access control, maintenance information, etc."
+[*completed* Adaptive forms]: adaptive.html
+[Adaptive Questionnaire Service]: CapabilityStatement-adaptive-q-service.html
+[`_id`]: {{site.data.fhir.path}}search.html#id "The search parameter _id refers to the logical id of the resource, and can be used when the search context specifies a resource type"
+[`url`]: {{site.data.fhir.path}}search.html#uri "The uri parameter refers to a URI (RFC 3986 ) element. Matches are precise (e.g. case, accent, and escape) sensitive, and the entire URI must match."
+[Search Param Registry]: {{site.data.fhir.path}}searchparameter-registry.html
+[`status` (Questionnaire)]: SearchParameter-Questionnaire-status.html
+[`title`]: SearchParameter-Questionnaire-title.html
+[`publisher`]: SearchParameter-Questionnaire-publisher.html
+[`version`]: SearchParameter-Questionnaire-version.html
+[`context`]: SearchParameter-Questionnaire-context.html
+[`context-type`]: SearchParameter-Questionnaire-context-type.html
+[`context-type-value`]: SearchParameter-Questionnaire-context-type-value.html
+[`questionnaire`]: SearchParameter-QuestionnaireResponse-questionnaire.html
+[`patient`]: SearchParameter-QuestionnaireResponse-patient.html
+[`context`]: SearchParameter-QuestionnaireResponse-context.html
+[`status` (QuestionnaireResponse)]: SearchParameter-QuestionnaireResponse-status.html
+[`author`]: SearchParameter-QuestionnaireResponse-author.html
+[`source`]: SearchParameter-QuestionnaireResponse-source.html

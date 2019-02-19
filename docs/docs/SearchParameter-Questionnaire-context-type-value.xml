@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+  <id value="Questionnaire-context-type-value"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: Questionnaire-context-type-value</p><p><b>url</b>: <a href="http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type-value">http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type-value</a></p><p><b>version</b>: 0.0.0</p><p><b>name</b>: context-type-value</p><p><b>status</b>: draft</p><p><b>experimental</b>: false</p><p><b>date</b>: Dec 13, 2018, 9:29:55 PM</p><p><b>publisher</b>: Argonaut Project</p><p><b>contact</b>: </p><p><b>code</b>: context-type-value</p><p><b>base</b>: Questionnaire</p><p><b>type</b>: composite</p><p><b>description</b>: A use context type and value assigned to the questionnaire, A use context type and value assigned to the questionnaire</p><p><b>expression</b>: Questionnaire.useContext</p><p><b>xpathUsage</b>: normal</p><p><b>modifier</b>: missing</p><blockquote><p><b>component</b></p><p><b>definition</b>: </p><p><b>expression</b>: code</p></blockquote><blockquote><p><b>component</b></p><p><b>definition</b>: </p><p><b>expression</b>: value.as(CodeableConcept)</p></blockquote><p><b>multipleOr Extension: </b>True</p><p><b>multipleAnd Extension: </b>False</p></div>
+  </text>
+  <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-multipleAnd">
+    <valueBoolean value="false"/>
+  </extension>
+  <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-multipleOr">
+    <valueBoolean value="true"/>
+  </extension>
+  <url value="http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type-value"/>
+  <version value="0.0.0"/>
+  <name value="context-type-value"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2018-12-13T21:29:55-08:00"/>
+  <publisher value="Argonaut Project"/>
+  <contact>
+  <!--  0..* ContactDetail Contact details for the publisher  -->
+    <telecom>
+      <system value="url"/>
+      <value value="http://argonautwiki.hl7.org"/>
+    </telecom>
+  </contact>
+  <code value="context-type-value"/>
+  <base value="Questionnaire"/>
+  <type value="composite"/>
+  <description value="A use context type and value assigned to the questionnaire"/>
+  <expression value="Questionnaire.useContext"/>
+  <xpathUsage value="normal"/>
+  <modifier value="missing"/>
+  <component>
+    <definition>
+      <reference value="http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type"/>
+    </definition>
+    <expression value="code"/>
+  </component>
+  <component>
+    <definition>
+      <reference value="http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context"/>
+    </definition>
+    <expression value="value.as(CodeableConcept)"/>
+  </component>
+</SearchParameter>

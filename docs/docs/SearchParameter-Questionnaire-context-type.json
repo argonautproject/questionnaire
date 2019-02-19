@@ -3,21 +3,51 @@
   "id": "Questionnaire-context-type",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: Questionnaire-context-type</p><p><b>url</b>: <a href=\"http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type\">http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type</a></p><p><b>name</b>: context-type</p><p><b>status</b>: draft</p><p><b>experimental</b>: false</p><p><b>date</b>: May 16, 2018, 3:49:01 PM</p><p><b>publisher</b>: Argonaut Project</p><p><b>code</b>: context-type</p><p><b>base</b>: Questionnaire</p><p><b>type</b>: token</p><p><b>description</b>: A type of use context assigned to the questionnaire. When searching for context should pair with [context-value](http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-value) parameter.</p><p><b>expression</b>: Questionnaire.useContext.code</p><p><b>xpath</b>: f:Questionnaire/f:useContext/f:code</p><p><b>xpathUsage</b>: normal</p></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: Questionnaire-context-type</p><p><b>url</b>: <a href=\"http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type\">http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type</a></p><p><b>version</b>: 0.0.0</p><p><b>name</b>: context-type</p><p><b>status</b>: active</p><p><b>experimental</b>: false</p><p><b>date</b>: Dec 13, 2018, 9:29:55 PM</p><p><b>publisher</b>: Argonaut Project</p><p><b>contact</b>: </p><p><b>code</b>: context-type</p><p><b>base</b>: Questionnaire</p><p><b>type</b>: token</p><p><b>description</b>: A type of use context assigned to the questionnaire</p><p><b>expression</b>: Questionnaire.useContext.code</p><p><b>xpath</b>: f:Questionnaire/f:useContext/f:code</p><p><b>xpathUsage</b>: normal</p><p><b>modifier</b>: missing, text, not, in, not-in, below, above</p><p><b>multipleOr Extension</b>True</p><p><b>multipleAnd Extension</b>True</p></div>"
   },
+  "extension": [
+    {
+      "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-multipleAnd",
+      "valueBoolean": true
+    },
+    {
+      "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-multipleOr",
+      "valueBoolean": true
+    }
+  ],
   "url": "http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type",
+  "version": "0.0.0",
   "name": "context-type",
-  "status": "draft",
+  "status": "active",
   "experimental": false,
-  "date": "2018-05-16T15:49:01+00:00",
+  "date": "2018-12-13T21:29:55-08:00",
   "publisher": "Argonaut Project",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://argonautwiki.hl7.org"
+        }
+      ]
+    }
+  ],
   "code": "context-type",
   "base": [
     "Questionnaire"
   ],
   "type": "token",
-  "description": "A type of use context assigned to the questionnaire. When searching for context should pair with [context-value](http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-value) parameter.",
+  "description": "A type of use context assigned to the questionnaire",
   "expression": "Questionnaire.useContext.code",
   "xpath": "f:Questionnaire/f:useContext/f:code",
-  "xpathUsage": "normal"
+  "xpathUsage": "normal",
+  "modifier": [
+    "missing",
+    "text",
+    "not",
+    "in",
+    "not-in",
+    "below",
+    "above"
+  ]
 }

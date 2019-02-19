@@ -1,0 +1,54 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut-questionnaire/SearchParameter/patient-birthdate> a fhir:SearchParameter;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "patient-birthdate"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: patient-birthdate</p><p><b>url</b>: <a href=\"http://fhir.org/guides/argonaut-questionnaire/patient-birthdate\">http://fhir.org/guides/argonaut-questionnaire/patient-birthdate</a></p><p><b>name</b>: patient_birthdate</p><p><b>status</b>: active</p><p><b>experimental</b>: false</p><p><b>date</b>: Feb 18, 2019, 11:57:46 PM</p><p><b>publisher</b>: The Argonaut Project</p><p><b>contact</b>: </p><p><b>code</b>: birthdate</p><p><b>base</b>: Patient</p><p><b>type</b>: date</p><p><b>derivedFrom</b>: <a href=\"http://hl7.org/fhir/SearchParameter/individual-birthdate\">http://hl7.org/fhir/SearchParameter/individual-birthdate</a></p><p><b>description</b>: [Patient](patient.html): The patient's date of birth\r\n</p><p><b>expression</b>: Patient.birthDate</p><p><b>xpath</b>: f:Patient/f:birthDate</p><p><b>xpathUsage</b>: normal</p><p><b>comparator</b>: le, ge</p></div>"
+  ];
+  fhir:SearchParameter.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/patient-birthdate"];
+  fhir:SearchParameter.name [ fhir:value "patient_birthdate"];
+  fhir:SearchParameter.status [ fhir:value "active"];
+  fhir:SearchParameter.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:SearchParameter.date [ fhir:value "2019-02-18T23:57:46.835306Z"^^xsd:dateTime];
+  fhir:SearchParameter.publisher [ fhir:value "The Argonaut Project"];
+  fhir:SearchParameter.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "https://github.com/argonautproject/questionnaire/issues" ]
+     ]
+  ];
+  fhir:SearchParameter.code [ fhir:value "birthdate"];
+  fhir:SearchParameter.base [
+     fhir:value "Patient";
+     fhir:index 0
+  ];
+  fhir:SearchParameter.type [ fhir:value "date"];
+  fhir:SearchParameter.derivedFrom [ fhir:value "http://hl7.org/fhir/SearchParameter/individual-birthdate"];
+  fhir:SearchParameter.description [ fhir:value "[Patient](patient.html): The patient's date of birth\r\n"];
+  fhir:SearchParameter.expression [ fhir:value "Patient.birthDate"];
+  fhir:SearchParameter.xpath [ fhir:value "f:Patient/f:birthDate"];
+  fhir:SearchParameter.xpathUsage [ fhir:value "normal"];
+  fhir:SearchParameter.comparator [
+     fhir:value "le";
+     fhir:index 0
+  ], [
+     fhir:value "ge";
+     fhir:index 1
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.org/guides/argonaut-questionnaire/SearchParameter/patient-birthdate.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

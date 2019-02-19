@@ -1053,7 +1053,7 @@
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="57">
     <Cell ss:StyleID="s74"><Data ss:Type="String">description</Data></Cell>
-    <Cell ss:StyleID="s77"><Data ss:Type="String">The  Argonaut Questionnaire Contained ValueSet Profile is contained within the Argonaut Questionnaire Profile:&#10;&#10;- It requires an [expansion] of the code set to constrains the concepts to particular set of conditions for a given questionnaire.&#10;&#10;- The [Ordinal Value] *extension* is added as a [Must Support] element to support the calculation of scores from the associated assessments.&#10;&#10; - The `ValueSet.url` element is constrained to a  [Must Support] element to provide an alternative literal address at which this value set is (or will be) published.  </Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">The  Argonaut Questionnaire Contained ValueSet Profile is contained within the Argonaut Questionnaire Profile:&#10;&#10;- It requires an [expansion] of the code set to constrains the concepts to particular set of conditions for a given questionnaire.&#10;&#10;- The [Valuset Ordinal Value Extension] is added as a [Must Support] element to support the calculation of scores from the associated assessments.&#10;&#10; - The `ValueSet.url` element is constrained to a  [Must Support] element to provide an alternative literal address at which this value set is (or will be) published.  </Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">status</Data></Cell>

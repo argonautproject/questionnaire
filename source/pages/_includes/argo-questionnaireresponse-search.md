@@ -1,7 +1,16 @@
+Static Forms Use Case:
 
-{% assign id = {{page.id}} %}
-source file: source/pages/\_includes/{{id}}-search.md
+- [Provider EHR Posts to Answer Bank]
+- [Provider EHR Searches Answer Bank]
 
-~~~
-This is the search markdown file that gets inserted into the sd.html Quick Start section for explanation of the search requirements.
-~~~
+Adaptive Forms Use Case:
+
+- The contained [Argonaut Adaptive QuestionnaireResponse Profile] is built on this profile.
+
+    - [Initiate Adaptive Questionnaire]
+    - [Get Next Question]
+    - [Adaptive Questionnaire is Complete]
+
+<br />
+
+{%include link-list.md %}

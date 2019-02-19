@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="extension-multipleOr"/>
+
+  <url value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-multipleOr"/>
+  <version value="1.0.0"/>
+  <name value="extension_multiple_or"/>
+  <title value="Argonaut SearchParameter Multiple OR Extension"/>
+  <status value="active"/>
+  <date value="2018-04-04T00:00:00-07:00"/>
+  <description value="Whether multiple parameters are allowed - e.g. more than one parameter with the same name. The search matches if all the parameters match."/>
+  <fhirVersion value="3.0.1"/>
+
+  <kind value="complex-type"/>
+  <abstract value="false"/>
+  <contextType value="datatype"/>
+  <context value="SearchParameter"/>
+  <type value="Extension"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+  <derivation value="constraint"/>
+
+  <differential>
+    <element id="Extension">
+      <path value="Extension"/>
+      <short value="Whether multiple parameters are allowed - e.g. more than one parameter with the same name. The search matches if all the parameters match."/>
+      <definition value="Whether multiple parameters are allowed - e.g. more than one parameter with the same name. The search matches if all the parameters match."/>
+      <min value="0"/>
+      <max value="1"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <fixedUri value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-multipleOr"/>
+    </element>
+    <element id="Extension.valueBoolean">
+      <path value="Extension.valueBoolean"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
