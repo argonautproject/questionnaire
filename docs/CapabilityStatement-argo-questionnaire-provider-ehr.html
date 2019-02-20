@@ -149,7 +149,7 @@
     <a href="CapabilityStatement-argonaut-questionnaire-client.html">Conformance requirements for Client</a>
   </li> -->
   <li>
-    <a href="CapabilityStatement-adaptive-q-service.html">Conformance requirements for Adaptive Questionnaire Service</a>
+    <a href="CapabilityStatement-adaptive-questionnaire-service.html">Conformance requirements for Adaptive Questionnaire Service</a>
   </li>
 </ul>
 </li>
@@ -296,38 +296,91 @@ This is the
 
   <!-- ============ConceptMap CapabilityStatement SearchParameter CONTENT CONTENT=============== -->
 
-  <div xmlns="http://www.w3.org/1999/xhtml">
-			<h2 id="argonaut-questionnaire-conformance-requirements">Argonaut Questionnaire Conformance Requirements</h2>
-			<p>This section outlines conformance requirements for the Argonaut questionnaire Server, identifying the specific profiles that need to be supported, the specific RESTful operations that need to be supported, and the search parameters that need to be supported. Note: The individual Argonaut questionnaire profiles identify the structural constraints, terminology bindings and invariants, however, implementers must refer to the conformance requirements for details on the RESTful operations, specific profiles and the search parameters applicable to each of the Argonaut questionnaire actors.</p>
-			<h3 id="conformance-requirements-for-the-argonaut-questionnaire-implementation-guide-server">Conformance requirements for the Argonaut questionnaire Implementation Guide Server</h3>
-			<ul>
-				<li>FHIR Version: 3.0.1</li>
-				<li>Supported formats: xml, json</li>
-				<li>Published: May 20, 2018</li>
-				<li>Published by: The Argonaut Project</li>
-			</ul>
-			<p>The Section describes the expected Capabilities of the Argonaut Questonnaire Server (Provider EHR)  which is responsible for fetching, rendering and displaying Questionnaires,  storing (scoring) and sharing QuestionnaireAnswers ( ...todo...) , RESTful operations, and search parameters supported by Argonaut questionnaire Servers are defined.</p>
-			<h4 id="behavior">Behavior</h4>
-			<p>Description:</p>
-			<p>The Argonaut questionnaire Server <strong>SHALL (...todo... review...)</strong>:</p>
-			<ol>
-				<li>Support at least one Argonaut questionnaire use case.</li>
-				<li>Implement the RESTful behavior according to the FHIR specification including returning the appropriate response classes as described in the FHIR specification for <a href="http://hl7.org/fhir/STU3/http.html">FHIR RESTful API</a> and <a href="http://hl7.org/fhir/STU3/operations.html">Extended Operations on the RESTful API</a>.</li>
-				<li><a name="0cfb3f35-8e51-4911-88a4-873231a2b502">​</a>Conform to the <a href="http://hl7.org/fhir/us/core/1.0.1/index.html">US Core Implementation Guide</a>.</li>
-				<li>Support <em>json</em> resource formats for all Argonaut questionnaire interactions.</li>
-				<li>Declare a CapabilityStatement identifying the list of profiles, operations, search parameter supported.</li>
-			</ol>
-			<p>The Argonaut questionnaire Server <strong>SHOULD (...todo... review...)</strong>:</p>
-			<ol>
-				<li>Support <em>xml</em> resource formats for all Argonaut questionnaire interactions.</li>
-				<li>Identify the Argonaut questionnaire profiles supported as part of the FHIR <code>meta.profile</code> attribute for each instance.</li>
-			</ol>
-			<h4 id="security-">Security:</h4>
-			<p>For general security consideration refer to the <a href="http://hl7.org/fhir/us/core/security.html">Security section</a> in the US Core Implementation Guide.</p>
-			<h4 id="profile-interaction-summary-">Profile Interaction Summary: (...todo... review...)</h4>
-			<h4 id="resource-details-">Resource  Details: (...todo... review...)</h4>
-			<hr/>
-		</div>
+  <div xmlns="http://www.w3.org/1999/xhtml"><h2 id="title">Argonaut Argo Questionnaire Provider Ehr CapabilityStatement</h2><p>This section outlines conformance requirements for the Argonaut Questionnaire Provider EHR.  It may be responsible for retrieving, rendering and displaying both static and adaptive Questionnaires and QuestionnairesResponses.  The Argonaut Questionnaire Profile,  Argonaut QuestionnaireResponse Profile and Argonaut Adaptive QuestionnaireResponse Profiles and all the interactions outlined in this guide are the RESTful artifacts and interactions that it supports.   Note that the Argonaut Profiles identify the structural constraints, terminology bindings and invariants and the individual Argonaut SearchParameter resources define the definitions, comparators, modifiers and usage constraints.</p><ul><li>FHIR Version: 3.0.1</li><li>Supported formats: xml, json</li><li>Published: 2019-02-20</li><li>Published by: The Argonaut Project</li></ul><h3 id="behavior">FHIR RESTful Capabilities</h3><p>The Argonaut Questionnaire Provider EHR <strong>SHOULD</strong></p><ol><li>Implement the RESTful behavior according to the FHIR specification as described in the FHIR specification for <a href="http://hl7.org/fhir/STU3/http.html">FHIR RESTful API</a>.</li><li>Support the 'next-question' operation for filling out adaptive questionnaires</li><li>Support json resource formats for all Argonaut Questionnaire interactions.</li></ol><p>The Argonaut Questionnaire Provider EHR <strong>MAY</strong>:</p><ol><li><p>Declare a CapabilityStatement identifying the list of profiles, operations, search parameter is supported.</p></li><li><p>Support xml resource formats for all Argonaut questionnaire interactions.</p></li></ol><p id="security"><strong>Security:</strong></p><p><p>For general security consideration refer to the <a href="https://argonautproject.github.io/questionnaire/index.html#security-and-privacy-considerations">Security and Privacy Considerations</a>.</p></p><h3 id="resource--details" class="no_toc">RESTful Capabilities by Resource/Profile:</h3><p><strong>Summary of Operations</strong></p><br/><li><a name="2e282459-b931-4a8f-a49a-774b9459aa43">​</a><strong>SHOULD</strong> support the	<a href="#&lt;fhirclient.models.fhirreference.FHIRReference object at 0x10AE8A30&gt;">next-question</a> operation.</li><p><strong>Summary of Search Criteria</strong></p><table class="grid"><thead><tr><th>Resource Type</th><th>Supported Profiles</th><th>Supported Searches</th><th>Supported Includes</th></tr></thead><tbody><tr><td><a href="#questionnaire">Questionnaire</a></td><td><p><a href="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire">Argonaut Questionnaire Profile</a></p></td><td>
+							
+							_id, 
+							url, 
+							status, 
+							title, 
+							publisher, 
+							version, 
+							context-type-value
+						</td><td>
+							
+						</td></tr><tr><td><a href="#questionnaireresponse">QuestionnaireResponse</a></td><td><p><a href="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaireresponse">Argonaut QuestionnaireResponse Profile</a>, <a href="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adap-questionnaireresponse">Argonaut Adaptive QuestionnaireResponse Profile</a></p></td><td>
+							
+							_id, 
+							questionnaire, 
+							patient, 
+							context, 
+							status, 
+							author, 
+							source
+						</td><td>
+							QuestionnaireResponse:questionnaire
+						</td></tr></tbody></table><br/><h4 id="questionnaire" class="no_toc">Questionnaire</h4><p>Supported Profiles:
+			<p><a href="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire">Argonaut Questionnaire Profile</a></p>
+
+				</p><p>Profile Interaction Summary:</p><ul><li><strong>SHOULD</strong> support 
+																							<code>search-type</code>, 
+																							<code>read</code>, 
+																							<code>vread</code>, 
+																							<code>history-instance</code>.</li><li><strong>MAY</strong> support 
+																							<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>
+					A server <strong>SHOULD</strong> be capable of returning a Questionnaire resource using:
+					<br/>
+						<code class="highlighter-rouge">GET [base]/Questionnaire/[id]</code>
+				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHOULD</strong></td><td><a href="http://hl7.org/fhir/SearchParameter/Resource-_id">_id</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/Questionnaire?_id=[id]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href="http://hl7.org/fhir/SearchParameter/Questionnaire-url">url</a></td><td>
+							uri
+						</td><td><code class="highlighter-rouge">GET [base]/Questionnaire?url=[uri]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href="http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-status">status</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/Questionnaire?status=[status]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href="http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-title">title</a></td><td>
+							string
+						</td><td><code class="highlighter-rouge">GET [base]/Questionnaire?title=[title]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href="http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-publisher">publisher</a></td><td>
+							string
+						</td><td><code class="highlighter-rouge">GET [base]/Questionnaire?publisher=[publisher]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href="http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-version">version</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/Questionnaire?version=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href="http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type-value">context-type-value</a></td><td>
+							composite
+						</td><td><code class="highlighter-rouge">GET [base]/Questionnaire?context-type-value=[code]&amp;[value]</code></td></tr></tbody></table><h4 id="questionnaireresponse" class="no_toc">QuestionnaireResponse</h4><p>Supported Profiles:
+			<p><a href="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaireresponse">Argonaut QuestionnaireResponse Profile</a>, <a href="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adap-questionnaireresponse">Argonaut Adaptive QuestionnaireResponse Profile</a></p>
+
+				</p><p>Profile Interaction Summary:</p><ul><li><strong>SHOULD</strong> support 
+																							<code>create</code>, 
+																							<code>search-type</code>, 
+																							<code>read</code>, 
+																							<code>vread</code>, 
+																							<code>update</code>, 
+																							<code>history-instance</code>.</li><li><strong>MAY</strong> support 
+																							<code>patch</code>, 
+																							<code>delete</code>, 
+																							<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>
+					A server <strong>SHOULD</strong> be capable of returning a QuestionnaireResponse resource using:
+					<br/>
+						<code class="highlighter-rouge">GET [base]/QuestionnaireResponse/[id]</code>
+				</li><br/><li>
+					A server <strong>SHOULD</strong> be capable of supporting the returning the following _includes:
+					<br/>
+					
+						QuestionnaireResponse:questionnaire - <code class="highlighter-rouge">GET [base]/QuestionnaireResponse?[parameter=value]&amp;_include=QuestionnaireResponse:questionnaire</code>
+					
+				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHOULD</strong></td><td><a href="http://hl7.org/fhir/SearchParameter/Resource-_id">_id</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/QuestionnaireResponse?_id=[id]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href="http://fhir.org/guides/argonaut-questionnaire/SearchParameter/QuestionnaireResponse-questionnaire">questionnaire</a></td><td>
+							reference
+						</td><td><code class="highlighter-rouge">GET [base]/QuestionnaireResponse?questionnaire=[questionnaire]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href="http://fhir.org/guides/argonaut-questionnaire/SearchParameter/QuestionnaireResponse-patient">patient</a></td><td>
+							reference
+						</td><td><code class="highlighter-rouge">GET [base]/QuestionnaireResponse?patient=[patient]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href="http://fhir.org/guides/argonaut-questionnaire/SearchParameter/QuestionnaireResponse-context">context</a></td><td>
+							reference
+						</td><td><code class="highlighter-rouge">GET [base]/QuestionnaireResponse?context=[context]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href="http://fhir.org/guides/argonaut-questionnaire/SearchParameter/QuestionnaireResponse-status">status</a></td><td>
+							token
+						</td><td><code class="highlighter-rouge">GET [base]/QuestionnaireResponse?status=[status]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href="http://fhir.org/guides/argonaut-questionnaire/SearchParameter/QuestionnaireResponse-author">author</a></td><td>
+							reference
+						</td><td><code class="highlighter-rouge">GET [base]/QuestionnaireResponse?author=[author]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href="http://fhir.org/guides/argonaut-questionnaire/SearchParameter/QuestionnaireResponse-source">source</a></td><td>
+							reference
+						</td><td><code class="highlighter-rouge">GET [base]/QuestionnaireResponse?source=[source]</code></td></tr></tbody></table><br/></div>
   
     <!-- ============CodeSystem ConceptMap CapabilityStatement CONTENT CONTENT=============== -->
 
@@ -379,7 +432,7 @@ Formats: <a href="CapabilityStatement-argo-questionnaire-provider-ehr.html">Narr
     <p>
       Argonaut Questionnaire 
           Continuous Integration Build
-          &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Mon, Feb 18, 2019 18:36-0800.
+          &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Wed, Feb 20, 2019 03:40-0800.
       | <a style="color: #81BEF7" href="#">History</a>
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a rel="license" style="color: #81BEF7" href="http://hl7.org/fhir/STU3/license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>

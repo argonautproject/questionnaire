@@ -149,7 +149,7 @@
     <a href="CapabilityStatement-argonaut-questionnaire-client.html">Conformance requirements for Client</a>
   </li> -->
   <li>
-    <a href="CapabilityStatement-adaptive-q-service.html">Conformance requirements for Adaptive Questionnaire Service</a>
+    <a href="CapabilityStatement-adaptive-questionnaire-service.html">Conformance requirements for Adaptive Questionnaire Service</a>
   </li>
 </ul>
 </li>
@@ -224,7 +224,7 @@
 
 <nav class="breadcrumb">
   
-    <a href="toc.html" class="breadcrumb-item btn btn-link btn-sm">TOC</a> <li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Adaptive Q Service</b></li>
+    <a href="toc.html" class="breadcrumb-item btn btn-link btn-sm">TOC</a> <li><a href="index.html"><b>Home</b></a></li><li><a href="capstatements.html"><b>Capability Statements</b></a></li><li><b>CapabilityStatement Adaptive Questionnaire Service</b></li>
 </nav>
 
 
@@ -246,7 +246,7 @@ This is the
 
 
   <style type="text/css">
-  h2,h3,h4,h5,h6{--pagenumber: "7.4"}
+  h2,h3,h4,h5,h6{--pagenumber: "7.2"}
   </style>
 
 
@@ -263,24 +263,24 @@ This is the
 	{ % if content == "definitions"  % }
 		<li class="active"><a href="#">Detailed Descriptions</a></li>
 	{ % else % }
-		<li><a href="CapabilityStatement-adaptive-q-service-definitions.html">Detailed Descriptions</a></li>
+		<li><a href="CapabilityStatement-adaptive-questionnaire-service-definitions.html">Detailed Descriptions</a></li>
 	{ % endif % }
 	{ % if content == "mappings" % }
 		<li class="active"><a href="#">Mappings</a></li>
 	{ % else % }
-		<li><a href="CapabilityStatement-adaptive-q-service-mappings.html">Mappings</a></li>
+		<li><a href="CapabilityStatement-adaptive-questionnaire-service-mappings.html">Mappings</a></li>
 	{ % endif % }
 { % endif % } -->
 
-<li><a href="CapabilityStatement-adaptive-q-service.xml.html">XML</a></li>
+<li><a href="CapabilityStatement-adaptive-questionnaire-service.xml.html">XML</a></li>
 
 
-	<li><a href="CapabilityStatement-adaptive-q-service.json.html">JSON</a></li>
+	<li><a href="CapabilityStatement-adaptive-questionnaire-service.json.html">JSON</a></li>
 
   <!-- { % if content == "turtle" % }
 	<li class="active"><a href="#">Turtle</a></li>
 { % else % }
-	<li><a href="CapabilityStatement-adaptive-q-service.ttl.html">Turtle</a></li>
+	<li><a href="CapabilityStatement-adaptive-questionnaire-service.ttl.html">Turtle</a></li>
 { % endif % } -->
 </ul>
 
@@ -296,38 +296,21 @@ This is the
 
   <!-- ============ConceptMap CapabilityStatement SearchParameter CONTENT CONTENT=============== -->
 
-  <div xmlns="http://www.w3.org/1999/xhtml">
-			<h2 id="argonaut-questionnaire-conformance-requirements">Argonaut Questionnaire Conformance Requirements</h2>
-			<p>This section outlines conformance requirements for the Argonaut questionnaire Answer-Bank Server, identifying the specific profiles that need to be supported, the specific RESTful operations that need to be supported, and the search parameters that need to be supported. Note: The individual Argonaut questionnaire profiles identify the structural constraints, terminology bindings and invariants, however, implementers must refer to the conformance requirements for details on the RESTful operations, specific profiles and the search parameters applicable to each of the Argonaut questionnaire actors.</p>
-			<h3 id="conformance-requirements-for-the-argonaut-questionnaire-implementation-guide-answerbank">Conformance requirements for the Argonaut questionnaire Implementation Guide Answer-Bank Server</h3>
-			<ul>
-				<li>FHIR Version: 3.0.1</li>
-				<li>Supported formats: xml, json</li>
-				<li>Published: May 20, 2018</li>
-				<li>Published by: The Argonaut Project</li>
-			</ul>
-			<p>The Section describes the expected Capabilities of the Argonaut Answer-Bank Server which is responsible for providing responses to the requests submitted by the Argonaut questionnaire clients (Form Author/Editor and Provider EHRs). The complete list of FHIR profiles, RESTful operations, and search parameters supported by Argonaut questionnaire Answer-Banks are defined.</p>
-			<h4 id="behavior">Behavior</h4>
-			<p>Description:</p>
-			<p>The Argonaut questionnaire Answer-Bank <strong>SHALL (...todo... review...)</strong>:</p>
-			<ol>
-				<li>Support at least one Argonaut questionnaireuse case.</li>
-				<li>Implement the RESTful behavior according to the FHIR specification including returning the appropriate response classes as described in the FHIR specification for <a href="http://hl7.org/fhir/STU3/http.html">FHIR RESTful API</a> and <a href="http://hl7.org/fhir/STU3/operations.html">Extended Operations on the RESTful API</a>.</li>
-				<li><a name="2f43a38c-1208-4fd1-8603-e70e979d7cfc">​</a>Conform to the <a href="http://hl7.org/fhir/us/core/1.0.1/index.html">US Core Implementation Guide</a>.</li>
-				<li>Support <em>json</em> resource formats for all Argonaut questionnaire interactions.</li>
-				<li>Declare a CapabilityStatement identifying the list of profiles, operations, search parameter supported.</li>
-			</ol>
-			<p>The Argonaut questionnaire Answer-Bank <strong>SHOULD (...todo... review...)</strong>:</p>
-			<ol>
-				<li>Support <em>xml</em> resource formats for all Argonaut questionnaire interactions.</li>
-				<li>Identify the Argonaut questionnaire profiles supported as part of the FHIR <code>meta.profile</code> attribute for each instance.</li>
-			</ol>
-			<h4 id="security-">Security:</h4>
-			<p>For general security consideration refer to the <a href="http://hl7.org/fhir/us/core/security.html">Security section</a> in the US Core Implementation Guide.</p>
-			<h4 id="profile-interaction-summary-">Profile Interaction Summary: (...todo... review...)</h4>
-			<h4 id="resource-details-">Resource  Details: (...todo... review...)</h4>
-			<hr/>
-		</div>
+  <div xmlns="http://www.w3.org/1999/xhtml"><h2 id="title">Argonaut Adaptive Questionnaire Service CapabilityStatement</h2><p>This section outlines conformance requirements for the Argonaut Questionnaire Adaptive QuestionService.  It is responsible for providing questions in response to requests and  determining the next question and calculation of the score for an Adaptive Questionnaires.  It supports the Argonaut Adaptive QuestionnaireResponse Profile and the transactions associated with the adaptive questionnaires.   Note that the Argonaut Profile and next-question OperationDefinition identify the structural constraints, terminology bindings and invariants.</p><ul><li>FHIR Version: 3.0.1</li><li>Supported formats: xml, json</li><li>Published: 2019-02-20</li><li>Published by: The Argonaut Project</li></ul><h3 id="behavior">FHIR RESTful Capabilities</h3><p>The Argonaut Adaptive Questionnaire Service <strong>SHALL</strong>:</p><ol><li>Implement the RESTful behavior according to the FHIR specification including returning the appropriate response classes as described in the FHIR specification for <a href="http://hl7.org/fhir/STU3/http.html">FHIR RESTful API</a>.</li><li>Support json resource formats for all Argonaut Questionnaire interactions.</li><li>Declare a CapabilityStatement identifying the list of profiles, operations, search parameter supported.</li></ol><p>The Argonaut Adaptive Questionnaire Service <strong>SHOULD</strong>:</p><ol><li>Support xml resource formats for all Argonaut questionnaire interactions.</li><li>Provide a mechanism for discovery of the adaptive forms it offers.</li></ol><p id="security"><strong>Security:</strong></p><p><p>For general security consideration refer to the <a href="https://argonautproject.github.io/questionnaire/index.html#security-and-privacy-considerations">Security and Privacy Considerations</a>.</p></p><h3 id="resource--details" class="no_toc">RESTful Capabilities by Resource/Profile:</h3><p><strong>Summary of Operations</strong></p><br/><li><a name="f57cc789-4bc3-4821-b6b4-25bddb6a31e2">​</a><strong>SHALL</strong> support the	<a href="#&lt;fhirclient.models.fhirreference.FHIRReference object at 0x10933950&gt;">next-question</a> operation.</li><p><strong>Summary of Search Criteria</strong></p><table class="grid"><thead><tr><th>Resource Type</th><th>Supported Profiles</th><th>Supported Searches</th><th>Supported Includes</th></tr></thead><tbody><tr><td><a href="#questionnaireresponse">QuestionnaireResponse</a></td><td><p><a href="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adap-questionnaireresponse">Argonaut Adaptive QuestionnaireResponse Profile</a></p></td><td>
+							
+						</td><td>
+							
+						</td></tr></tbody></table><br/><h4 id="questionnaireresponse" class="no_toc">QuestionnaireResponse</h4><p>Supported Profiles:
+			<p><a href="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adap-questionnaireresponse">Argonaut Adaptive QuestionnaireResponse Profile</a></p>
+
+				</p><p>Profile Interaction Summary:</p><ul><li><strong>MAY</strong> support 
+																							<code>search-type</code>, 
+																							<code>read</code>, 
+																							<code>vread</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>
+					A server <strong>MAY</strong> be capable of returning a QuestionnaireResponse resource using:
+					<br/>
+						<code class="highlighter-rouge">GET [base]/QuestionnaireResponse/[id]</code>
+				</li><br/></ul><br/></div>
   
     <!-- ============CodeSystem ConceptMap CapabilityStatement CONTENT CONTENT=============== -->
 
@@ -336,7 +319,7 @@ This is the
 
   <!-- simple format links
 <p>
-Formats: <a href="CapabilityStatement-adaptive-q-service.html">Narrative</a>, <a href="CapabilityStatement-adaptive-q-service.xml.html">XML</a>, <a href="CapabilityStatement-adaptive-q-service.json.html">JSON</a>, <a href="CapabilityStatement-adaptive-q-service.ttl.html">Turtle</a>
+Formats: <a href="CapabilityStatement-adaptive-questionnaire-service.html">Narrative</a>, <a href="CapabilityStatement-adaptive-questionnaire-service.xml.html">XML</a>, <a href="CapabilityStatement-adaptive-questionnaire-service.json.html">JSON</a>, <a href="CapabilityStatement-adaptive-questionnaire-service.ttl.html">Turtle</a>
 </p> -->
 
 
@@ -379,7 +362,7 @@ Formats: <a href="CapabilityStatement-adaptive-q-service.html">Narrative</a>, <a
     <p>
       Argonaut Questionnaire 
           Continuous Integration Build
-          &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Mon, Feb 18, 2019 18:36-0800.
+          &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Wed, Feb 20, 2019 03:40-0800.
       | <a style="color: #81BEF7" href="#">History</a>
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a rel="license" style="color: #81BEF7" href="http://hl7.org/fhir/STU3/license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a>

@@ -15,7 +15,7 @@
       "valueBoolean": true
     }
   ],
-  "url": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire-publisher",
+  "url": "http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-publisher",
   "name": "questionnaire_publisher",
   "status": "active",
   "experimental": false,

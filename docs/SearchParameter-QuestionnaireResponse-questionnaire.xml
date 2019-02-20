@@ -11,7 +11,7 @@
   <extension url="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-multipleOr">
     <valueBoolean value="true"/>
   </extension>
-  <url value="http://fhir.org/guides/argonaut-questionnaire/QuestionnaireResponse-questionnaire"/>
+  <url value="http://fhir.org/guides/argonaut-questionnaire/SearchParameter/QuestionnaireResponse-questionnaire"/>
   <name value="questionnaireresponse_questionnaire"/>
   <status value="active"/>
   <experimental value="false"/>

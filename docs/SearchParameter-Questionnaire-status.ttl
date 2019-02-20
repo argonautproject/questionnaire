@@ -21,7 +21,7 @@
      fhir:Extension.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-multipleOr" ];
      fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
   ];
-  fhir:SearchParameter.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/Questionnaire-status"];
+  fhir:SearchParameter.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-status"];
   fhir:SearchParameter.name [ fhir:value "questionnaire_status"];
   fhir:SearchParameter.status [ fhir:value "active"];
   fhir:SearchParameter.experimental [ fhir:value "false"^^xsd:boolean];

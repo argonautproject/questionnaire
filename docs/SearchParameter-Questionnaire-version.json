@@ -15,7 +15,7 @@
       "valueBoolean": true
     }
   ],
-  "url": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire-version",
+  "url": "http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-version",
   "name": "questionnaire_version",
   "status": "active",
   "experimental": false,

@@ -211,6 +211,15 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="CapabilityStatement-adaptive-questionnaire-service.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CapabilityStatement/adaptive-questionnaire-service"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="StructureDefinition-extension-multipleOr.html"/>
       </extension>
       <example value="false"/>
@@ -234,6 +243,15 @@
       <example value="false"/>
       <sourceReference>
         <reference value="SearchParameter/QuestionnaireResponse-status"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="CapabilityStatement-argo-questionnaire-provider-ehr.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CapabilityStatement/argo-questionnaire-provider-ehr"/>
       </sourceReference>
     </resource>
     <resource>
@@ -301,6 +319,15 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="CapabilityStatement-answerbank.html"/>
+      </extension>
+      <example value="false"/>
+      <sourceReference>
+        <reference value="CapabilityStatement/answerbank"/>
+      </sourceReference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="SearchParameter-patient-birthdate.html"/>
       </extension>
       <example value="false"/>
@@ -364,15 +391,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="CapabilityStatement-answerbank.html"/>
-      </extension>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="CapabilityStatement/answerbank"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="StructureDefinition-argo-questionnaire-valueset.html"/>
       </extension>
       <example value="false"/>
@@ -391,29 +409,11 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="CapabilityStatement-argo-questionnaire-provider-ehr.html"/>
-      </extension>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="CapabilityStatement/argo-questionnaire-provider-ehr"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
         <valueUri value="SearchParameter-Questionnaire-context-type.html"/>
       </extension>
       <example value="false"/>
       <sourceReference>
         <reference value="SearchParameter/Questionnaire-context-type"/>
-      </sourceReference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="CapabilityStatement-adaptive-q-service.html"/>
-      </extension>
-      <example value="false"/>
-      <sourceReference>
-        <reference value="CapabilityStatement/adaptive-q-service"/>
       </sourceReference>
     </resource>
     <resource>
@@ -646,8 +646,8 @@
         <kind value="resource"/>
       </page>
       <page>
-        <source value="CapabilityStatement-answerbank.html"/>
-        <title value="CapabilityStatement Answerbank"/>
+        <source value="CapabilityStatement-adaptive-questionnaire-service.html"/>
+        <title value="CapabilityStatement Adaptive Questionnaire Service"/>
         <kind value="resource"/>
       </page>
       <page>
@@ -656,8 +656,8 @@
         <kind value="resource"/>
       </page>
       <page>
-        <source value="CapabilityStatement-adaptive-q-service.html"/>
-        <title value="CapabilityStatement Adaptive Q Service"/>
+        <source value="CapabilityStatement-answerbank.html"/>
+        <title value="CapabilityStatement Answerbank"/>
         <kind value="resource"/>
       </page>
     </page>

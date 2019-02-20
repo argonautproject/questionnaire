@@ -162,7 +162,7 @@
   </li>
   -->
   <li>
-    <a href="CapabilityStatement-adaptive-q-service.html">Conformance requirements for Adaptive Questionnaire Service</a>
+    <a href="CapabilityStatement-adaptive-questionnaire-service.html">Conformance requirements for Adaptive Questionnaire Service</a>
   </li>
 </ul>
 </li>
@@ -237,7 +237,7 @@
 
 <nav class="breadcrumb">
   
-    <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a> <li><a href='index.html'><b>Home</b></a></li><li><a href='capstatements.html'><b>Capability Statements</b></a></li><li><b>CapabilityStatement Adaptive Q Service</b></li>
+    <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a> <li><a href='index.html'><b>Home</b></a></li><li><a href='capstatements.html'><b>Capability Statements</b></a></li><li><b>CapabilityStatement Adaptive Questionnaire Service</b></li>
 </nav>
 
 
@@ -259,7 +259,7 @@ This is the
 
 
   <style type="text/css">
-  h2,h3,h4,h5,h6{--pagenumber: "7.4"}
+  h2,h3,h4,h5,h6{--pagenumber: "7.2"}
   </style>
 
 
@@ -271,19 +271,19 @@ This is the
     <!--  - choose what you want  comment out or Change what you don't-->
 <ul class="nav nav-tabs">
 
-	<li><a href="CapabilityStatement-adaptive-q-service.html">Narrative Content</a></li>
+	<li><a href="CapabilityStatement-adaptive-questionnaire-service.html">Narrative Content</a></li>
 
 <!--
 { % if CapabilityStatement == "StructureDefinition"  % }
 	{ % if xml == "definitions"  % }
 		<li class="active"><a href="#">Detailed Descriptions</a></li>
 	{ % else % }
-		<li><a href="CapabilityStatement-adaptive-q-service-definitions.html">Detailed Descriptions</a></li>
+		<li><a href="CapabilityStatement-adaptive-questionnaire-service-definitions.html">Detailed Descriptions</a></li>
 	{ % endif % }
 	{ % if xml == "mappings" % }
 		<li class="active"><a href="#">Mappings</a></li>
 	{ % else % }
-		<li><a href="CapabilityStatement-adaptive-q-service-mappings.html">Mappings</a></li>
+		<li><a href="CapabilityStatement-adaptive-questionnaire-service-mappings.html">Mappings</a></li>
 	{ % endif % }
 { % endif % }
 -->
@@ -291,18 +291,18 @@ This is the
 	<li class="active"><a href="#">XML</a></li>
 
 
-	<li><a href="CapabilityStatement-adaptive-q-service.json.html">JSON</a></li>
+	<li><a href="CapabilityStatement-adaptive-questionnaire-service.json.html">JSON</a></li>
 
 <!--
 { % if xml == "turtle" % }
 	<li class="active"><a href="#">Turtle</a></li>
 { % else % }
-	<li><a href="CapabilityStatement-adaptive-q-service.ttl.html">Turtle</a></li>
+	<li><a href="CapabilityStatement-adaptive-questionnaire-service.ttl.html">Turtle</a></li>
 { % endif % }
 -->
 </ul>
 
-    <h2>XML Format: CapabilityStatement-adaptive-q-service</h2>
+    <h2>XML Format: CapabilityStatement-adaptive-questionnaire-service</h2>
   
 <!--
    { % elsif page.template == 'definitions'% }
@@ -319,60 +319,48 @@ This is the
 
   <!-- ============ default xml or json content for structuredefinition CONTENT CONTENT=============== -->
   <p>
-  Download Raw <a href="CapabilityStatement-adaptive-q-service.xml" download>xml</a>
+  Download Raw <a href="CapabilityStatement-adaptive-questionnaire-service.xml" download>xml</a>
   </p>
 
 <pre class="xml">
 
 &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement">CapabilityStatement</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;adaptive-q-service&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.id">id</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;adaptive-questionnaire-service&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.text">text</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;additional&quot;/&gt;
-    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
-			&lt;h2 id=&quot;argonaut-questionnaire-conformance-requirements&quot;&gt;Argonaut Questionnaire Conformance Requirements&lt;/h2&gt;
-			&lt;p&gt;This section outlines conformance requirements for the Argonaut questionnaire Answer-Bank Server, identifying the specific profiles that need to be supported, the specific RESTful operations that need to be supported, and the search parameters that need to be supported. Note: The individual Argonaut questionnaire profiles identify the structural constraints, terminology bindings and invariants, however, implementers must refer to the conformance requirements for details on the RESTful operations, specific profiles and the search parameters applicable to each of the Argonaut questionnaire actors.&lt;/p&gt;
-			&lt;h3 id=&quot;conformance-requirements-for-the-argonaut-questionnaire-implementation-guide-answerbank&quot;&gt;Conformance requirements for the Argonaut questionnaire Implementation Guide Answer-Bank Server&lt;/h3&gt;
-			&lt;ul&gt;
-				&lt;li&gt;FHIR Version: 3.0.1&lt;/li&gt;
-				&lt;li&gt;Supported formats: xml, json&lt;/li&gt;
-				&lt;li&gt;Published: May 20, 2018&lt;/li&gt;
-				&lt;li&gt;Published by: The Argonaut Project&lt;/li&gt;
-			&lt;/ul&gt;
-			&lt;p&gt;The Section describes the expected Capabilities of the Argonaut Answer-Bank Server which is responsible for providing responses to the requests submitted by the Argonaut questionnaire clients (Form Author/Editor and Provider EHRs). The complete list of FHIR profiles, RESTful operations, and search parameters supported by Argonaut questionnaire Answer-Banks are defined.&lt;/p&gt;
-			&lt;h4 id=&quot;behavior&quot;&gt;Behavior&lt;/h4&gt;
-			&lt;p&gt;Description:&lt;/p&gt;
-			&lt;p&gt;The Argonaut questionnaire Answer-Bank &lt;strong&gt;SHALL (...todo... review...)&lt;/strong&gt;:&lt;/p&gt;
-			&lt;ol&gt;
-				&lt;li&gt;Support at least one Argonaut questionnaireuse case.&lt;/li&gt;
-				&lt;li&gt;Implement the RESTful behavior according to the FHIR specification including returning the appropriate response classes as described in the FHIR specification for &lt;a href=&quot;http://hl7.org/fhir/STU3/http.html&quot;&gt;FHIR RESTful API&lt;/a&gt; and &lt;a href=&quot;http://hl7.org/fhir/STU3/operations.html&quot;&gt;Extended Operations on the RESTful API&lt;/a&gt;.&lt;/li&gt;
-				&lt;li&gt;Conform to the &lt;a href=&quot;http://hl7.org/fhir/us/core/1.0.1/index.html&quot;&gt;US Core Implementation Guide&lt;/a&gt;.&lt;/li&gt;
-				&lt;li&gt;Support &lt;em&gt;json&lt;/em&gt; resource formats for all Argonaut questionnaire interactions.&lt;/li&gt;
-				&lt;li&gt;Declare a CapabilityStatement identifying the list of profiles, operations, search parameter supported.&lt;/li&gt;
-			&lt;/ol&gt;
-			&lt;p&gt;The Argonaut questionnaire Answer-Bank &lt;strong&gt;SHOULD (...todo... review...)&lt;/strong&gt;:&lt;/p&gt;
-			&lt;ol&gt;
-				&lt;li&gt;Support &lt;em&gt;xml&lt;/em&gt; resource formats for all Argonaut questionnaire interactions.&lt;/li&gt;
-				&lt;li&gt;Identify the Argonaut questionnaire profiles supported as part of the FHIR &lt;code&gt;meta.profile&lt;/code&gt; attribute for each instance.&lt;/li&gt;
-			&lt;/ol&gt;
-			&lt;h4 id=&quot;security-&quot;&gt;Security:&lt;/h4&gt;
-			&lt;p&gt;For general security consideration refer to the &lt;a href=&quot;http://hl7.org/fhir/us/core/security.html&quot;&gt;Security section&lt;/a&gt; in the US Core Implementation Guide.&lt;/p&gt;
-			&lt;h4 id=&quot;profile-interaction-summary-&quot;&gt;Profile Interaction Summary: (...todo... review...)&lt;/h4&gt;
-			&lt;h4 id=&quot;resource-details-&quot;&gt;Resource  Details: (...todo... review...)&lt;/h4&gt;
-			&lt;hr/&gt;
-		&lt;/div&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2 id=&quot;title&quot;&gt;Argonaut Adaptive Questionnaire Service CapabilityStatement&lt;/h2&gt;&lt;p&gt;This section outlines conformance requirements for the Argonaut Questionnaire Adaptive QuestionService.  It is responsible for providing questions in response to requests and  determining the next question and calculation of the score for an Adaptive Questionnaires.  It supports the Argonaut Adaptive QuestionnaireResponse Profile and the transactions associated with the adaptive questionnaires.   Note that the Argonaut Profile and next-question OperationDefinition identify the structural constraints, terminology bindings and invariants.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;FHIR Version: 3.0.1&lt;/li&gt;&lt;li&gt;Supported formats: xml, json&lt;/li&gt;&lt;li&gt;Published: 2019-02-20&lt;/li&gt;&lt;li&gt;Published by: The Argonaut Project&lt;/li&gt;&lt;/ul&gt;&lt;h3 id=&quot;behavior&quot;&gt;FHIR RESTful Capabilities&lt;/h3&gt;&lt;p&gt;The Argonaut Adaptive Questionnaire Service &lt;strong&gt;SHALL&lt;/strong&gt;:&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Implement the RESTful behavior according to the FHIR specification including returning the appropriate response classes as described in the FHIR specification for &lt;a href=&quot;http://hl7.org/fhir/STU3/http.html&quot;&gt;FHIR RESTful API&lt;/a&gt;.&lt;/li&gt;&lt;li&gt;Support json resource formats for all Argonaut Questionnaire interactions.&lt;/li&gt;&lt;li&gt;Declare a CapabilityStatement identifying the list of profiles, operations, search parameter supported.&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;The Argonaut Adaptive Questionnaire Service &lt;strong&gt;SHOULD&lt;/strong&gt;:&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Support xml resource formats for all Argonaut questionnaire interactions.&lt;/li&gt;&lt;li&gt;Provide a mechanism for discovery of the adaptive forms it offers.&lt;/li&gt;&lt;/ol&gt;&lt;p id=&quot;security&quot;&gt;&lt;strong&gt;Security:&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;p&gt;For general security consideration refer to the &lt;a href=&quot;https://argonautproject.github.io/questionnaire/index.html#security-and-privacy-considerations&quot;&gt;Security and Privacy Considerations&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;&lt;h3 class=&quot;no_toc&quot; id=&quot;resource--details&quot;&gt;RESTful Capabilities by Resource/Profile:&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Summary of Operations&lt;/strong&gt;&lt;/p&gt;&lt;br&gt;&lt;/br&gt;&lt;li&gt;&lt;strong&gt;SHALL&lt;/strong&gt; support the	&lt;a href=&quot;#&amp;lt;fhirclient.models.fhirreference.FHIRReference object at 0x10933950&amp;gt;&quot;&gt;next-question&lt;/a&gt; operation.&lt;/li&gt;&lt;p&gt;&lt;strong&gt;Summary of Search Criteria&lt;/strong&gt;&lt;/p&gt;&lt;table class=&quot;grid&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Resource Type&lt;/th&gt;&lt;th&gt;Supported Profiles&lt;/th&gt;&lt;th&gt;Supported Searches&lt;/th&gt;&lt;th&gt;Supported Includes&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;#questionnaireresponse&quot;&gt;QuestionnaireResponse&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;a href=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adap-questionnaireresponse&quot;&gt;Argonaut Adaptive QuestionnaireResponse Profile&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;td&gt;
+							
+						&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;br&gt;&lt;/br&gt;&lt;h4 class=&quot;no_toc&quot; id=&quot;questionnaireresponse&quot;&gt;QuestionnaireResponse&lt;/h4&gt;&lt;p&gt;Supported Profiles:
+			&lt;p&gt;&lt;a href=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adap-questionnaireresponse&quot;&gt;Argonaut Adaptive QuestionnaireResponse Profile&lt;/a&gt;&lt;/p&gt;
+
+				&lt;/p&gt;&lt;p&gt;Profile Interaction Summary:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;MAY&lt;/strong&gt; support 
+																							&lt;code&gt;search-type&lt;/code&gt;, 
+																							&lt;code&gt;read&lt;/code&gt;, 
+																							&lt;code&gt;vread&lt;/code&gt;.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Fetch and Search Criteria:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;
+					A server &lt;strong&gt;MAY&lt;/strong&gt; be capable of returning a QuestionnaireResponse resource using:
+					&lt;br&gt;&lt;/br&gt;
+						&lt;code class=&quot;highlighter-rouge&quot;&gt;GET [base]/QuestionnaireResponse/[id]&lt;/code&gt;
+				&lt;/li&gt;&lt;br&gt;&lt;/br&gt;&lt;/ul&gt;&lt;br&gt;&lt;/br&gt;&lt;/div&gt;
   &lt;/text&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.url">url</a>
-       <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/CapabilityStatement/answerbank&quot;/&gt;
+       <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/CapabilityStatement/adaptive-questionnaire-service&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.version">version</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;0.0.0&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;adaptive_q_service&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.title">title</a>
-         <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Argonaut questionnaire Adaptive Questionnaire Service CapabilityStatement&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;draft&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;adaptive_questionnaire_service&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.title">title</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Argonaut Adaptive Questionnaire Service CapabilityStatement&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.status">status</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.experimental">experimental</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.date">date</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2018-05-18T00:00:00-07:00&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.publisher">publisher</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Argonaut Project&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.date">date</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#dateTime">value</a>=&quot;2019-02-20&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.publisher">publisher</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;The Argonaut Project&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.contact">contact</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;url&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;https://github.com/argonautproject/questionnaire/issues&quot;/&gt;
+    &lt;/telecom&gt;
+  &lt;/contact&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.description">description</a>
-               <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">value</a>=&quot;The Argonaut questionnaire Answer-Bank CapabilityStatement provides a for a complete list of supported RESTful interactions for the Argonaut questionnaire Implementation Guide&quot;/&gt;
+               <a href="http://hl7.org/fhir/STU3/datatypes.html#markdown">value</a>=&quot;This section outlines conformance requirements for the Argonaut Questionnaire Adaptive QuestionService.  It is responsible for providing questions in response to requests and  determining the next question and calculation of the score for an Adaptive Questionnaires.  It supports the Argonaut Adaptive QuestionnaireResponse Profile and the transactions associated with the adaptive questionnaires.   Note that the Argonaut Profile and next-question OperationDefinition identify the structural constraints, terminology bindings and invariants.&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.jurisdiction">jurisdiction</a>&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;urn:iso:std:iso:3166&quot;/&gt;
@@ -382,56 +370,80 @@ This is the
   &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.kind">kind</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;requirements&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.fhirVersion">fhirVersion</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#id">value</a>=&quot;3.0.1&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.acceptUnknown">acceptUnknown</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;both&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.format">format</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;application/fhir+xml&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.format">format</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;application/fhir+json&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.format">format</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;xml&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.format">format</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;json&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.patchFormat">patchFormat</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;application/json-patch+json&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.patchFormat">patchFormat</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;application/xml-patch+xml&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.patchFormat">patchFormat</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;application/fhirpath-patch+fhirpath&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.implementationGuide">implementationGuide</a>
                        <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.implementationGuide">implementationGuide</a>
                        <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/us/core/ImplementationGuide/ig&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.profile">profile</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.extension">extension</a>
+               <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;SHALL&quot;/&gt;
+    &lt;/extension&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>
-               <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire&quot;/&gt;
-  &lt;/profile&gt;
-  &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.profile">profile</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>
-               <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaireresponse&quot;/&gt;
+               <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adap-questionnaireresponse&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.display">display</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;Argonaut Adaptive QuestionnaireResponse Profile&quot;/&gt;
   &lt;/profile&gt;
   &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest">rest</a>&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.mode">mode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;server&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.documentation">documentation</a>
-                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;The [Argonaut](http://argonautwiki.hl7.org/) questionnaire Project is a vendor agnostic specification providing FHIR RESTful APIs and guidance for access to and booking of appointments for patients by both patient and practitioner end users. This specification is based on [FHIR Version 3.0.1](http://hl7.org/fhir/STU3/) and specifically the [Questionnaire](http://hl7.org/fhir/STU3/questionnaire.html)and QuestionnaireResponse](http://hl7.org/fhir/STU3/questionnaireresponse.html) resources.&quot;/&gt;
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;The Argonaut Adaptive Questionnaire Service **SHALL**:
+
+1. Implement the RESTful behavior according to the FHIR specification including returning the appropriate response classes as described in the FHIR specification for [FHIR RESTful API](http://hl7.org/fhir/STU3/http.html).
+1. Support json resource formats for all Argonaut Questionnaire interactions.
+1. Declare a CapabilityStatement identifying the list of profiles, operations, search parameter supported.
+
+The Argonaut Adaptive Questionnaire Service **SHOULD**:
+
+1. Support xml resource formats for all Argonaut questionnaire interactions.
+1. Provide a mechanism for discovery of the adaptive forms it offers.&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.security">security</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.security.service">service</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/restful-security-service&quot;/&gt;
-          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;SMART-on-FHIR&quot;/&gt;
-        &lt;/coding&gt;
-      &lt;/service&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.security.description">description</a>
-                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;For general security consideration refer to the [Security section](http://hl7.org/fhir/us/core/security.html) in the US Core Implementation Guide.&quot;/&gt;
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;For general security consideration refer to the [Security and Privacy Considerations](https://argonautproject.github.io/questionnaire/index.html#security-and-privacy-considerations).&quot;/&gt;
     &lt;/security&gt;
     &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;SHALL&quot;/&gt;
+      &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.type">type</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;QuestionnaireResponse&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
                    <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
         &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;create&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;search-type&quot;/&gt;
       &lt;/interaction&gt;
       &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
         &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
                    <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
-          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;SHOULD&quot;/&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
         &lt;/extension&gt;
-        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;update&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;read&quot;/&gt;
       &lt;/interaction&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.updateCreate">updateCreate</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
-      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.referencePolicy">referencePolicy</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;enforced&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction">interaction</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.extension">extension</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+          &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;MAY&quot;/&gt;
+        &lt;/extension&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.interaction.code">code</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;vread&quot;/&gt;
+      &lt;/interaction&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.readHistory">readHistory</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.resource.updateCreate">updateCreate</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
     &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.operation">operation</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.operation.extension">extension</a>
+                 <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Extension#Extension.value[x]">valueCode</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#code">value</a>=&quot;SHALL&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.operation.name">name</a> <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;next-question&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/STU3/capabilitystatement.html#CapabilityStatement.rest.operation.definition">definition</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/STU3/datatypes.html#Reference#Reference.reference">reference</a>
+                   <a href="http://hl7.org/fhir/STU3/datatypes.html#string">value</a>=&quot;http://fhir.org/guides/argonaut-questionnaire/OperationDefinition/next-question&quot;/&gt;
+      &lt;/definition&gt;
+    &lt;/operation&gt;
   &lt;/rest&gt;
 &lt;/CapabilityStatement&gt;</pre>
 
@@ -441,7 +453,7 @@ This is the
 
 <!-- simple format links
 <p>
-Formats: <a href="CapabilityStatement-adaptive-q-service.html">Narrative</a>, <a href="CapabilityStatement-adaptive-q-service.xml.html">XML</a>, <a href="CapabilityStatement-adaptive-q-service.json.html">JSON</a>, <a href="CapabilityStatement-adaptive-q-service.ttl.html">Turtle</a>
+Formats: <a href="CapabilityStatement-adaptive-questionnaire-service.html">Narrative</a>, <a href="CapabilityStatement-adaptive-questionnaire-service.xml.html">XML</a>, <a href="CapabilityStatement-adaptive-questionnaire-service.json.html">JSON</a>, <a href="CapabilityStatement-adaptive-questionnaire-service.ttl.html">Turtle</a>
 </p>
 -->
 
@@ -485,7 +497,7 @@ Formats: <a href="CapabilityStatement-adaptive-q-service.html">Narrative</a>, <a
     <p>
       Argonaut Questionnaire 
           Continuous Integration Build
-          &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Mon, Feb 18, 2019 18:36-0800.
+          &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Wed, Feb 20, 2019 03:40-0800.
       | <a style="color: #81BEF7" href="#">History</a>
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>

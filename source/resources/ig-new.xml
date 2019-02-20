@@ -187,6 +187,13 @@
     </resource>
     <resource>
       <reference>
+        <reference value="CapabilityStatement/adaptive-questionnaire-service"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/extension-multipleOr"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -202,6 +209,13 @@
     <resource>
       <reference>
         <reference value="SearchParameter/QuestionnaireResponse-status"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CapabilityStatement/argo-questionnaire-provider-ehr"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -257,6 +271,13 @@
     </resource>
     <resource>
       <reference>
+        <reference value="CapabilityStatement/answerbank"/>
+      </reference>
+      <exampleBoolean value="false"/>
+      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="SearchParameter/patient-birthdate"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -306,13 +327,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="CapabilityStatement/answerbank"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/argo-questionnaire-valueset"/>
       </reference>
       <exampleBoolean value="false"/>
@@ -327,21 +341,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="CapabilityStatement/argo-questionnaire-provider-ehr"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="SearchParameter/Questionnaire-context-type"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="CapabilityStatement/adaptive-q-service"/>
       </reference>
       <exampleBoolean value="false"/>
       <groupingId value="p1"/>
@@ -519,8 +519,8 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="CapabilityStatement-answerbank.html"/>
-          <title value="CapabilityStatement Answerbank"/>
+          <nameUrl value="CapabilityStatement-adaptive-questionnaire-service.html"/>
+          <title value="CapabilityStatement Adaptive Questionnaire Service"/>
           <generation value="generated"/>
         </page>
         <page>
@@ -529,8 +529,8 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="CapabilityStatement-adaptive-q-service.html"/>
-          <title value="CapabilityStatement Adaptive Q Service"/>
+          <nameUrl value="CapabilityStatement-answerbank.html"/>
+          <title value="CapabilityStatement Answerbank"/>
           <generation value="generated"/>
         </page>
       </page>

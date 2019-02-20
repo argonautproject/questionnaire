@@ -15,7 +15,7 @@
       "valueBoolean": true
     }
   ],
-  "url": "http://fhir.org/guides/argonaut-questionnaire/QuestionnaireResponse-source",
+  "url": "http://fhir.org/guides/argonaut-questionnaire/SearchParameter/QuestionnaireResponse-source",
   "name": "questionnaireresponse_source",
   "status": "active",
   "experimental": false,

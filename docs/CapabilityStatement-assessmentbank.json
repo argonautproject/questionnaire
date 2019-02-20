@@ -2,18 +2,28 @@
   "resourceType": "CapabilityStatement",
   "id": "assessmentbank",
   "text": {
-    "status": "additional",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t<h2 id=\"argonaut-questionnaire-conformance-requirements\">Argonaut Questionnaire Conformance Requirements</h2>\n\t\t\t<p>This section outlines conformance requirements for the Argonaut questionnaire Assessment-Bank Server, identifying the specific profiles that need to be supported, the specific RESTful operations that need to be supported, and the search parameters that need to be supported. Note: The individual Argonaut questionnaire profiles identify the structural constraints, terminology bindings and invariants, however, implementers must refer to the conformance requirements for details on the RESTful operations, specific profiles and the search parameters applicable to each of the Argonaut questionnaire actors.</p>\n\t\t\t<h3 id=\"conformance-requirements-for-the-argonaut-questionnaire-implementation-guide-assessmentbank\">Conformance requirements for the Argonaut questionnaire Implementation Guide Assessment-Bank Server</h3>\n\t\t\t<ul>\n\t\t\t\t<li>FHIR Version: 3.0.1</li>\n\t\t\t\t<li>Supported formats: xml, json</li>\n\t\t\t\t<li>Published: May 20, 2018</li>\n\t\t\t\t<li>Published by: The Argonaut Project</li>\n\t\t\t</ul>\n\t\t\t<p>The Section describes the expected Capabilities of the Argonaut Assessment-Bank Server which is responsible for providing responses to the requests submitted by the Argonaut questionnaire clients (Form Author/Editor and Provider EHRs). The complete list of FHIR profiles, RESTful operations, and search parameters supported by Argonaut questionnaire Assessment-Banks are defined.</p>\n\t\t\t<h4 id=\"behavior\">Behavior</h4>\n\t\t\t<p>Description:</p>\n\t\t\t<p>The Argonaut questionnaire Assessment-Bank <strong>SHALL (...todo... review...)</strong>:</p>\n\t\t\t<ol>\n\t\t\t\t<li>Support at least one Argonaut questionnaireuse case.</li>\n\t\t\t\t<li>Implement the RESTful behavior according to the FHIR specification including returning the appropriate response classes as described in the FHIR specification for <a href=\"{{site.data.fhir.path}}http.html\">FHIR RESTful API</a> and <a href=\"{{site.data.fhir.path}}operations.html\">Extended Operations on the RESTful API</a>.</li>\n\t\t\t\t<li>Conform to the <a href=\"http://hl7.org/fhir/us/core/1.0.1/index.html\">US Core Implementation Guide</a>.</li>\n\t\t\t\t<li>Support <em>json</em> resource formats for all Argonaut questionnaire interactions.</li>\n\t\t\t\t<li>Declare a CapabilityStatement identifying the list of profiles, operations, search parameter supported.</li>\n\t\t\t</ol>\n\t\t\t<p>The Argonaut questionnaire Assessment-Bank <strong>SHOULD (...todo... review...)</strong>:</p>\n\t\t\t<ol>\n\t\t\t\t<li>Support <em>xml</em> resource formats for all Argonaut questionnaire interactions.</li>\n\t\t\t\t<li>Identify the Argonaut questionnaire profiles supported as part of the FHIR <code>meta.profile</code> attribute for each instance.</li>\n\t\t\t</ol>\n\t\t\t<h4 id=\"security-\">Security:</h4>\n\t\t\t<p>For general security consideration refer to the <a href=\"http://hl7.org/fhir/us/core/security.html\">Security section</a> in the US Core Implementation Guide.</p>\n\t\t\t<h4 id=\"profile-interaction-summary-\">Profile Interaction Summary: (...todo... review...)</h4>\n\t\t\t<h4 id=\"resource-details-\">Resource  Details: (...todo... review...)</h4>\n\t\t\t<hr/>\n\t\t</div>"
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2 id=\"title\">Argonaut Assessmentbank CapabilityStatement</h2><p>This section outlines conformance requirements for the Argonaut Questionnaire Assessment-Bank Server.  It is responsible for storing Questionnaires and providing responses to the requests submitted by the  Form Author/Editor and Provider EHRs.   The Argonaut Questionnaire Profile and the various interactions outlined in this guide are the RESTful artifacts and interactions that it supports.   Note that the Argonaut Profiles identify the structural constraints, terminology bindings and invariants and the individual Argonaut SearchParameter resources define the definitions, comparators, modifiers and usage constraints.</p><ul><li>FHIR Version: 3.0.1</li><li>Supported formats: xml, json</li><li>Published: 2019-02-20</li><li>Published by: The Argonaut Project</li></ul><h3 id=\"behavior\">FHIR RESTful Capabilities</h3><p>The Argonaut questionnaire Assessment-Bank <strong>SHALL</strong>:</p><ol><li>Implement the RESTful behavior according to the FHIR specification including returning the appropriate response classes as described in the FHIR specification for <a href=\"http://hl7.org/fhir/STU3/http.html\">FHIR RESTful API</a>.</li><li>Support json resource formats for all Argonaut Questionnaire interactions.</li><li>Declare a CapabilityStatement identifying the list of profiles, operations, search parameter supported.</li></ol><p>The Argonaut questionnaire Assessment-Bank <strong>SHOULD</strong>:</p><ol><li>Support xml resource formats for all Argonaut questionnaire interactions.</li></ol><p id=\"security\"><strong>Security:</strong></p><p><p>For general security consideration refer to the <a href=\"https://argonautproject.github.io/questionnaire/index.html#security-and-privacy-considerations\">Security and Privacy Considerations</a>.</p></p><h3 class=\"no_toc\" id=\"resource--details\">RESTful Capabilities by Resource/Profile:</h3><p><strong>Summary of Argonaut Assessmentbank CapabilityStatement search criteria</strong></p><table class=\"grid\"><thead><tr><th>Resource Type</th><th>Supported Profiles</th><th>Supported Searches</th><th>Supported Includes</th></tr></thead><tbody><tr><td><a href=\"#questionnaire\">Questionnaire</a></td><td><p><a href=\"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire\">Argonaut Questionnaire Profile</a></p></td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t_id, \n\t\t\t\t\t\t\turl, \n\t\t\t\t\t\t\tstatus, \n\t\t\t\t\t\t\ttitle, \n\t\t\t\t\t\t\tpublisher, \n\t\t\t\t\t\t\tversion, \n\t\t\t\t\t\t\tcontext-type-value\n\t\t\t\t\t\t</td><td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</td></tr></tbody></table><br></br><h4 class=\"no_toc\" id=\"questionnaire\">Questionnaire</h4><p>Supported Profiles:\n\t\t\t<p><a href=\"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire\">Argonaut Questionnaire Profile</a></p>\n\n\t\t\t\t</p><p>Profile Interaction Summary:</p><ul>\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\n\n\n\t\t\t\t</ul><p>Fetch and Search Criteria:</p><ul><li>\n\t\t\t\t\tA server <strong>SHALL-Questionnaire</strong> be capable of returning a Questionnaire resource using:\n\t\t\t\t\t<br></br>\n\t\t\t\t\t\t<code class=\"highlighter-rouge\">GET [base]/Questionnaire/[id]</code>\n\t\t\t\t</li><br></br></ul><p>Search Parameter Summary:</p><table class=\"grid\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHALL</strong></td><td><a href=\"http://hl7.org/fhir/SearchParameter/Resource-_id\">_id</a></td><td>\n\t\t\t\t\t\t\ttoken\n\t\t\t\t\t\t</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?_id=[id]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a href=\"http://hl7.org/fhir/SearchParameter/Questionnaire-url\">url</a></td><td>\n\t\t\t\t\t\t\turi\n\t\t\t\t\t\t</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?url=[uri]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a href=\"http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-status\">status</a></td><td>\n\t\t\t\t\t\t\ttoken\n\t\t\t\t\t\t</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?status=[status]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a href=\"http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-title\">title</a></td><td>\n\t\t\t\t\t\t\tstring\n\t\t\t\t\t\t</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?title=[title]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a href=\"http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-publisher\">publisher</a></td><td>\n\t\t\t\t\t\t\tstring\n\t\t\t\t\t\t</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?publisher=[publisher]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href=\"http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-version\">version</a></td><td>\n\t\t\t\t\t\t\ttoken\n\t\t\t\t\t\t</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?version=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href=\"http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type-value\">context-type-value</a></td><td>\n\t\t\t\t\t\t\tcomposite\n\t\t\t\t\t\t</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?context-type-value=[code]&amp;[value]</code></td></tr></tbody></table><br></br></div>"
   },
   "url": "http://fhir.org/guides/argonaut-questionnaire/CapabilityStatement/assessmentbank",
   "version": "0.0.0",
   "name": "assessmentbank",
-  "title": "Argonaut questionnaire Assessment Bank CapabilityStatement",
-  "status": "draft",
+  "title": "Argonaut Assessmentbank CapabilityStatement",
+  "status": "active",
   "experimental": false,
-  "date": "2018-05-18T00:00:00-07:00",
-  "publisher": "Argonaut Project",
-  "description": "The Argonaut questionnaire Assessment-Bank CapabilityStatement provides a for a complete list of supported RESTful interactions for the Argonaut questionnaire Implementation Guide",
+  "date": "2019-02-20",
+  "publisher": "The Argonaut Project",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://github.com/argonautproject/questionnaire/issues"
+        }
+      ]
+    }
+  ],
+  "description": "This section outlines conformance requirements for the Argonaut Questionnaire Assessment-Bank Server.  It is responsible for storing Questionnaires and providing responses to the requests submitted by the  Form Author/Editor and Provider EHRs.   The Argonaut Questionnaire Profile and the various interactions outlined in this guide are the RESTful artifacts and interactions that it supports.   Note that the Argonaut Profiles identify the structural constraints, terminology bindings and invariants and the individual Argonaut SearchParameter resources define the definitions, comparators, modifiers and usage constraints.",
   "jurisdiction": [
     {
       "coding": [
@@ -28,13 +38,11 @@
   "fhirVersion": "3.0.1",
   "acceptUnknown": "both",
   "format": [
-    "application/fhir+xml",
-    "application/fhir+json"
+    "xml",
+    "json"
   ],
   "patchFormat": [
-    "application/json-patch+json",
-    "application/xml-patch+xml",
-    "application/fhirpath-patch+fhirpath"
+    "application/json-patch+json"
   ],
   "implementationGuide": [
     "http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig",
@@ -42,47 +50,58 @@
   ],
   "profile": [
     {
-      "reference": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode": "SHALL"
+        }
+      ],
+      "reference": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire-valueset",
+      "display": "Argonaut Questionnaire Contained ValueSet Profile"
     },
     {
-      "reference": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaireresponse"
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode": "SHALL"
+        }
+      ],
+      "reference": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire",
+      "display": "Argonaut Questionnaire Profile"
     }
   ],
   "rest": [
     {
       "mode": "server",
-      "documentation": "The [Argonaut](http://argonautwiki.hl7.org/) questionnaire Project is a vendor agnostic specification providing FHIR RESTful APIs and guidance for access to and booking of appointments for patients by both patient and practitioner end users. This specification is based on [FHIR Version 3.0.1]({{site.data.fhir.path}}) and specifically the [Questionnaire]({{site.data.fhir.path}}questionnaire.html)and QuestionnaireResponse]({{site.data.fhir.path}}questionnaireresponse.html) resources.",
+      "documentation": "The Argonaut questionnaire Assessment-Bank **SHALL**:\n\n1. Implement the RESTful behavior according to the FHIR specification including returning the appropriate response classes as described in the FHIR specification for [FHIR RESTful API](http://hl7.org/fhir/STU3/http.html).\n1. Support json resource formats for all Argonaut Questionnaire interactions.\n1. Declare a CapabilityStatement identifying the list of profiles, operations, search parameter supported.\n\nThe Argonaut questionnaire Assessment-Bank **SHOULD**:\n\n1. Support xml resource formats for all Argonaut questionnaire interactions.",
       "security": {
-        "service": [
-          {
-            "coding": [
-              {
-                "system": "http://hl7.org/fhir/restful-security-service",
-                "code": "SMART-on-FHIR"
-              }
-            ]
-          }
-        ],
-        "description": "For general security consideration refer to the [Security section](http://hl7.org/fhir/us/core/security.html) in the US Core Implementation Guide."
+        "description": "For general security consideration refer to the [Security and Privacy Considerations](https://argonautproject.github.io/questionnaire/index.html#security-and-privacy-considerations)."
       },
       "resource": [
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
           "type": "Questionnaire",
+          "documentation": "…todo…",
           "interaction": [
             {
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
+                  "valueCode": "SHALL-Questionnaire"
                 }
               ],
-              "code": "read"
+              "code": "create"
             },
             {
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
+                  "valueCode": "SHALL-Questionnaire"
                 }
               ],
               "code": "search-type"
@@ -91,14 +110,71 @@
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
+                  "valueCode": "SHALL-Questionnaire"
+                }
+              ],
+              "code": "read"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL-Questionnaire"
+                }
+              ],
+              "code": "vread"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL-Questionnaire"
+                }
+              ],
+              "code": "update"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "MAY-Questionnaire"
                 }
               ],
               "code": "patch"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL-Questionnaire"
+                }
+              ],
+              "code": "delete"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL-Questionnaire"
+                }
+              ],
+              "code": "history-instance"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "MAY-Questionnaire"
+                }
+              ],
+              "code": "history-type"
             }
           ],
+          "versioning": "versioned",
+          "readHistory": false,
+          "updateCreate": false,
           "referencePolicy": [
-            "enforced"
+            "resolves"
           ],
           "searchParam": [
             {
@@ -109,7 +185,29 @@
                 }
               ],
               "name": "_id",
-              "definition": "http://hl7.org/fhir/SearchParameter/_id",
+              "definition": "http://hl7.org/fhir/SearchParameter/Resource-_id",
+              "type": "token"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "url",
+              "definition": "http://hl7.org/fhir/SearchParameter/Questionnaire-url",
+              "type": "uri"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "status",
+              "definition": "http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-status",
               "type": "token"
             },
             {
@@ -120,7 +218,7 @@
                 }
               ],
               "name": "title",
-              "definition": "http://hl7.org/fhir/SearchParameter/title",
+              "definition": "http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-title",
               "type": "string"
             },
             {
@@ -130,9 +228,9 @@
                   "valueCode": "SHALL"
                 }
               ],
-              "name": "status",
-              "definition": "http://hl7.org/fhir/SearchParameter/status",
-              "type": "token"
+              "name": "publisher",
+              "definition": "http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-publisher",
+              "type": "string"
             },
             {
               "extension": [
@@ -142,8 +240,19 @@
                 }
               ],
               "name": "version",
-              "definition": "http://hl7.org/fhir/SearchParameter/version",
+              "definition": "http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-version",
               "type": "token"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHOULD"
+                }
+              ],
+              "name": "context-type-value",
+              "definition": "http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type-value",
+              "type": "composite"
             }
           ]
         }

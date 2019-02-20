@@ -283,6 +283,18 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "CapabilityStatement-adaptive-questionnaire-service.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "CapabilityStatement/adaptive-questionnaire-service"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "StructureDefinition-extension-multipleOr.html"
             }
           ],
@@ -313,6 +325,18 @@
           "example": false,
           "sourceReference": {
             "reference": "SearchParameter/QuestionnaireResponse-status"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "CapabilityStatement-argo-questionnaire-provider-ehr.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "CapabilityStatement/argo-questionnaire-provider-ehr"
           }
         },
         {
@@ -403,6 +427,18 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+              "valueUri": "CapabilityStatement-answerbank.html"
+            }
+          ],
+          "example": false,
+          "sourceReference": {
+            "reference": "CapabilityStatement/answerbank"
+          }
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "SearchParameter-patient-birthdate.html"
             }
           ],
@@ -487,18 +523,6 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "valueUri": "CapabilityStatement-answerbank.html"
-            }
-          ],
-          "example": false,
-          "sourceReference": {
-            "reference": "CapabilityStatement/answerbank"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "StructureDefinition-argo-questionnaire-valueset.html"
             }
           ],
@@ -523,36 +547,12 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "valueUri": "CapabilityStatement-argo-questionnaire-provider-ehr.html"
-            }
-          ],
-          "example": false,
-          "sourceReference": {
-            "reference": "CapabilityStatement/argo-questionnaire-provider-ehr"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
               "valueUri": "SearchParameter-Questionnaire-context-type.html"
             }
           ],
           "example": false,
           "sourceReference": {
             "reference": "SearchParameter/Questionnaire-context-type"
-          }
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-              "valueUri": "CapabilityStatement-adaptive-q-service.html"
-            }
-          ],
-          "example": false,
-          "sourceReference": {
-            "reference": "CapabilityStatement/adaptive-q-service"
           }
         },
         {
@@ -825,8 +825,8 @@
             "kind": "resource"
           },
           {
-            "source": "CapabilityStatement-answerbank.html",
-            "title": "CapabilityStatement Answerbank",
+            "source": "CapabilityStatement-adaptive-questionnaire-service.html",
+            "title": "CapabilityStatement Adaptive Questionnaire Service",
             "kind": "resource"
           },
           {
@@ -835,8 +835,8 @@
             "kind": "resource"
           },
           {
-            "source": "CapabilityStatement-adaptive-q-service.html",
-            "title": "CapabilityStatement Adaptive Q Service",
+            "source": "CapabilityStatement-answerbank.html",
+            "title": "CapabilityStatement Answerbank",
             "kind": "resource"
           }
         ]

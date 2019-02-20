@@ -27,7 +27,7 @@
    "publisher": "The Argonaut Project",
    "status": "active",
    "type": "date",
-   "url": "http://fhir.org/guides/argonaut-questionnaire/patient-birthdate",
+   "url": "http://fhir.org/guides/argonaut-questionnaire/SearchParameter/patient-birthdate",
    "xpath": "f:Patient/f:birthDate",
    "xpathUsage": "normal",
    "resourceType": "SearchParameter"

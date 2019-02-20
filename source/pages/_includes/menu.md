@@ -59,7 +59,7 @@
   </li>
   -->
   <li>
-    <a href="CapabilityStatement-adaptive-q-service.html">Conformance requirements for Adaptive Questionnaire Service</a>
+    <a href="CapabilityStatement-adaptive-questionnaire-service.html">Conformance requirements for Adaptive Questionnaire Service</a>
   </li>
 </ul>
 </li>

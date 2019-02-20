@@ -9,18 +9,26 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "argo-questionnaire-provider-ehr"];
   fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "additional" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n			<h2 id=\"argonaut-questionnaire-conformance-requirements\">Argonaut Questionnaire Conformance Requirements</h2>\n			<p>This section outlines conformance requirements for the Argonaut questionnaire Server, identifying the specific profiles that need to be supported, the specific RESTful operations that need to be supported, and the search parameters that need to be supported. Note: The individual Argonaut questionnaire profiles identify the structural constraints, terminology bindings and invariants, however, implementers must refer to the conformance requirements for details on the RESTful operations, specific profiles and the search parameters applicable to each of the Argonaut questionnaire actors.</p>\n			<h3 id=\"conformance-requirements-for-the-argonaut-questionnaire-implementation-guide-server\">Conformance requirements for the Argonaut questionnaire Implementation Guide Server</h3>\n			<ul>\n				<li>FHIR Version: 3.0.1</li>\n				<li>Supported formats: xml, json</li>\n				<li>Published: May 20, 2018</li>\n				<li>Published by: The Argonaut Project</li>\n			</ul>\n			<p>The Section describes the expected Capabilities of the Argonaut Questonnaire Server (Provider EHR)  which is responsible for fetching, rendering and displaying Questionnaires,  storing (scoring) and sharing QuestionnaireAnswers ( ...todo...) , RESTful operations, and search parameters supported by Argonaut questionnaire Servers are defined.</p>\n			<h4 id=\"behavior\">Behavior</h4>\n			<p>Description:</p>\n			<p>The Argonaut questionnaire Server <strong>SHALL (...todo... review...)</strong>:</p>\n			<ol>\n				<li>Support at least one Argonaut questionnaire use case.</li>\n				<li>Implement the RESTful behavior according to the FHIR specification including returning the appropriate response classes as described in the FHIR specification for <a href=\"{{site.data.fhir.path}}http.html\">FHIR RESTful API</a> and <a href=\"{{site.data.fhir.path}}operations.html\">Extended Operations on the RESTful API</a>.</li>\n				<li>Conform to the <a href=\"http://hl7.org/fhir/us/core/1.0.1/index.html\">US Core Implementation Guide</a>.</li>\n				<li>Support <em>json</em> resource formats for all Argonaut questionnaire interactions.</li>\n				<li>Declare a CapabilityStatement identifying the list of profiles, operations, search parameter supported.</li>\n			</ol>\n			<p>The Argonaut questionnaire Server <strong>SHOULD (...todo... review...)</strong>:</p>\n			<ol>\n				<li>Support <em>xml</em> resource formats for all Argonaut questionnaire interactions.</li>\n				<li>Identify the Argonaut questionnaire profiles supported as part of the FHIR <code>meta.profile</code> attribute for each instance.</li>\n			</ol>\n			<h4 id=\"security-\">Security:</h4>\n			<p>For general security consideration refer to the <a href=\"http://hl7.org/fhir/us/core/security.html\">Security section</a> in the US Core Implementation Guide.</p>\n			<h4 id=\"profile-interaction-summary-\">Profile Interaction Summary: (...todo... review...)</h4>\n			<h4 id=\"resource-details-\">Resource  Details: (...todo... review...)</h4>\n			<hr/>\n		</div>"
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2 id=\"title\">Argonaut Argo Questionnaire Provider Ehr CapabilityStatement</h2><p>This section outlines conformance requirements for the Argonaut Questionnaire Provider EHR.  It may be responsible for retrieving, rendering and displaying both static and adaptive Questionnaires and QuestionnairesResponses.  The Argonaut Questionnaire Profile,  Argonaut QuestionnaireResponse Profile and Argonaut Adaptive QuestionnaireResponse Profiles and all the interactions outlined in this guide are the RESTful artifacts and interactions that it supports.   Note that the Argonaut Profiles identify the structural constraints, terminology bindings and invariants and the individual Argonaut SearchParameter resources define the definitions, comparators, modifiers and usage constraints.</p><ul><li>FHIR Version: 3.0.1</li><li>Supported formats: xml, json</li><li>Published: 2019-02-20</li><li>Published by: The Argonaut Project</li></ul><h3 id=\"behavior\">FHIR RESTful Capabilities</h3><p>The Argonaut Questionnaire Provider EHR <strong>SHOULD</strong></p><ol><li>Implement the RESTful behavior according to the FHIR specification as described in the FHIR specification for <a href=\"http://hl7.org/fhir/STU3/http.html\">FHIR RESTful API</a>.</li><li>Support the 'next-question' operation for filling out adaptive questionnaires</li><li>Support json resource formats for all Argonaut Questionnaire interactions.</li></ol><p>The Argonaut Questionnaire Provider EHR <strong>MAY</strong>:</p><ol><li><p>Declare a CapabilityStatement identifying the list of profiles, operations, search parameter is supported.</p></li><li><p>Support xml resource formats for all Argonaut questionnaire interactions.</p></li></ol><p id=\"security\"><strong>Security:</strong></p><p><p>For general security consideration refer to the <a href=\"https://argonautproject.github.io/questionnaire/index.html#security-and-privacy-considerations\">Security and Privacy Considerations</a>.</p></p><h3 class=\"no_toc\" id=\"resource--details\">RESTful Capabilities by Resource/Profile:</h3><p><strong>Summary of Operations</strong></p><br></br><li><strong>SHOULD</strong> support the	<a href=\"#&lt;fhirclient.models.fhirreference.FHIRReference object at 0x10AE8A30&gt;\">next-question</a> operation.</li><p><strong>Summary of Search Criteria</strong></p><table class=\"grid\"><thead><tr><th>Resource Type</th><th>Supported Profiles</th><th>Supported Searches</th><th>Supported Includes</th></tr></thead><tbody><tr><td><a href=\"#questionnaire\">Questionnaire</a></td><td><p><a href=\"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire\">Argonaut Questionnaire Profile</a></p></td><td>\n							\n							_id, \n							url, \n							status, \n							title, \n							publisher, \n							version, \n							context-type-value\n						</td><td>\n							\n						</td></tr><tr><td><a href=\"#questionnaireresponse\">QuestionnaireResponse</a></td><td><p><a href=\"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaireresponse\">Argonaut QuestionnaireResponse Profile</a>, <a href=\"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adap-questionnaireresponse\">Argonaut Adaptive QuestionnaireResponse Profile</a></p></td><td>\n							\n							_id, \n							questionnaire, \n							patient, \n							context, \n							status, \n							author, \n							source\n						</td><td>\n							QuestionnaireResponse:questionnaire\n						</td></tr></tbody></table><br></br><h4 class=\"no_toc\" id=\"questionnaire\">Questionnaire</h4><p>Supported Profiles:\n			<p><a href=\"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire\">Argonaut Questionnaire Profile</a></p>\n\n				</p><p>Profile Interaction Summary:</p><ul><li><strong>SHOULD</strong> support \n																							<code>search-type</code>, \n																							<code>read</code>, \n																							<code>vread</code>, \n																							<code>history-instance</code>.</li><li><strong>MAY</strong> support \n																							<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>\n					A server <strong>SHOULD</strong> be capable of returning a Questionnaire resource using:\n					<br></br>\n						<code class=\"highlighter-rouge\">GET [base]/Questionnaire/[id]</code>\n				</li><br></br></ul><p>Search Parameter Summary:</p><table class=\"grid\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHOULD</strong></td><td><a href=\"http://hl7.org/fhir/SearchParameter/Resource-_id\">_id</a></td><td>\n							token\n						</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?_id=[id]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href=\"http://hl7.org/fhir/SearchParameter/Questionnaire-url\">url</a></td><td>\n							uri\n						</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?url=[uri]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href=\"http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-status\">status</a></td><td>\n							token\n						</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?status=[status]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href=\"http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-title\">title</a></td><td>\n							string\n						</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?title=[title]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href=\"http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-publisher\">publisher</a></td><td>\n							string\n						</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?publisher=[publisher]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href=\"http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-version\">version</a></td><td>\n							token\n						</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?version=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href=\"http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type-value\">context-type-value</a></td><td>\n							composite\n						</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?context-type-value=[code]&amp;[value]</code></td></tr></tbody></table><h4 class=\"no_toc\" id=\"questionnaireresponse\">QuestionnaireResponse</h4><p>Supported Profiles:\n			<p><a href=\"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaireresponse\">Argonaut QuestionnaireResponse Profile</a>, <a href=\"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adap-questionnaireresponse\">Argonaut Adaptive QuestionnaireResponse Profile</a></p>\n\n				</p><p>Profile Interaction Summary:</p><ul><li><strong>SHOULD</strong> support \n																							<code>create</code>, \n																							<code>search-type</code>, \n																							<code>read</code>, \n																							<code>vread</code>, \n																							<code>update</code>, \n																							<code>history-instance</code>.</li><li><strong>MAY</strong> support \n																							<code>patch</code>, \n																							<code>delete</code>, \n																							<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>\n					A server <strong>SHOULD</strong> be capable of returning a QuestionnaireResponse resource using:\n					<br></br>\n						<code class=\"highlighter-rouge\">GET [base]/QuestionnaireResponse/[id]</code>\n				</li><br></br><li>\n					A server <strong>SHOULD</strong> be capable of supporting the returning the following _includes:\n					<br></br>\n					\n						QuestionnaireResponse:questionnaire - <code class=\"highlighter-rouge\">GET [base]/QuestionnaireResponse?[parameter=value]&amp;_include=QuestionnaireResponse:questionnaire</code>\n					\n				</li><br></br></ul><p>Search Parameter Summary:</p><table class=\"grid\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHOULD</strong></td><td><a href=\"http://hl7.org/fhir/SearchParameter/Resource-_id\">_id</a></td><td>\n							token\n						</td><td><code class=\"highlighter-rouge\">GET [base]/QuestionnaireResponse?_id=[id]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href=\"http://fhir.org/guides/argonaut-questionnaire/SearchParameter/QuestionnaireResponse-questionnaire\">questionnaire</a></td><td>\n							reference\n						</td><td><code class=\"highlighter-rouge\">GET [base]/QuestionnaireResponse?questionnaire=[questionnaire]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href=\"http://fhir.org/guides/argonaut-questionnaire/SearchParameter/QuestionnaireResponse-patient\">patient</a></td><td>\n							reference\n						</td><td><code class=\"highlighter-rouge\">GET [base]/QuestionnaireResponse?patient=[patient]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href=\"http://fhir.org/guides/argonaut-questionnaire/SearchParameter/QuestionnaireResponse-context\">context</a></td><td>\n							reference\n						</td><td><code class=\"highlighter-rouge\">GET [base]/QuestionnaireResponse?context=[context]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href=\"http://fhir.org/guides/argonaut-questionnaire/SearchParameter/QuestionnaireResponse-status\">status</a></td><td>\n							token\n						</td><td><code class=\"highlighter-rouge\">GET [base]/QuestionnaireResponse?status=[status]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href=\"http://fhir.org/guides/argonaut-questionnaire/SearchParameter/QuestionnaireResponse-author\">author</a></td><td>\n							reference\n						</td><td><code class=\"highlighter-rouge\">GET [base]/QuestionnaireResponse?author=[author]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href=\"http://fhir.org/guides/argonaut-questionnaire/SearchParameter/QuestionnaireResponse-source\">source</a></td><td>\n							reference\n						</td><td><code class=\"highlighter-rouge\">GET [base]/QuestionnaireResponse?source=[source]</code></td></tr></tbody></table><br></br></div>"
   ];
   fhir:CapabilityStatement.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/CapabilityStatement/argo-questionnaire-provider-ehr"];
   fhir:CapabilityStatement.version [ fhir:value "0.0.0"];
   fhir:CapabilityStatement.name [ fhir:value "argo_questionnaire_provider_ehr"];
-  fhir:CapabilityStatement.title [ fhir:value "Argonaut Questionnaire Provider EHR Capability Statement"];
-  fhir:CapabilityStatement.status [ fhir:value "draft"];
+  fhir:CapabilityStatement.title [ fhir:value "Argonaut Argo Questionnaire Provider Ehr CapabilityStatement"];
+  fhir:CapabilityStatement.status [ fhir:value "active"];
   fhir:CapabilityStatement.experimental [ fhir:value "false"^^xsd:boolean];
-  fhir:CapabilityStatement.date [ fhir:value "2018-05-18T00:00:00-07:00"^^xsd:dateTime];
-  fhir:CapabilityStatement.publisher [ fhir:value "Argonaut Project"];
-  fhir:CapabilityStatement.description [ fhir:value "The Argonaut questionnaire Server CapabilityStatement provides a for a complete list of supported RESTful interactions for the Argonaut questionnaire Implementation Guide"];
+  fhir:CapabilityStatement.date [ fhir:value "2019-02-20"^^xsd:date];
+  fhir:CapabilityStatement.publisher [ fhir:value "The Argonaut Project"];
+  fhir:CapabilityStatement.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "https://github.com/argonautproject/questionnaire/issues" ]
+     ]
+  ];
+  fhir:CapabilityStatement.description [ fhir:value "This section outlines conformance requirements for the Argonaut Questionnaire Provider EHR.  It may be responsible for retrieving, rendering and displaying both static and adaptive Questionnaires and QuestionnairesResponses.  The Argonaut Questionnaire Profile,  Argonaut QuestionnaireResponse Profile and Argonaut Adaptive QuestionnaireResponse Profiles and all the interactions outlined in this guide are the RESTful artifacts and interactions that it supports.   Note that the Argonaut Profiles identify the structural constraints, terminology bindings and invariants and the individual Argonaut SearchParameter resources define the definitions, comparators, modifiers and usage constraints."];
   fhir:CapabilityStatement.jurisdiction [
      fhir:index 0;
      fhir:CodeableConcept.coding [
@@ -33,21 +41,15 @@
   fhir:CapabilityStatement.fhirVersion [ fhir:value "3.0.1"];
   fhir:CapabilityStatement.acceptUnknown [ fhir:value "both"];
   fhir:CapabilityStatement.format [
-     fhir:value "application/fhir+xml";
+     fhir:value "xml";
      fhir:index 0
   ], [
-     fhir:value "application/fhir+json";
+     fhir:value "json";
      fhir:index 1
   ];
   fhir:CapabilityStatement.patchFormat [
      fhir:value "application/json-patch+json";
      fhir:index 0
-  ], [
-     fhir:value "application/xml-patch+xml";
-     fhir:index 1
-  ], [
-     fhir:value "application/fhirpath-patch+fhirpath";
-     fhir:index 2
   ];
   fhir:CapabilityStatement.implementationGuide [
      fhir:value "http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig";
@@ -58,89 +60,132 @@
   ];
   fhir:CapabilityStatement.profile [
      fhir:index 0;
-     fhir:link <http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire>;
-     fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire" ]
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire-valueset>;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+       fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+     ];
+     fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire-valueset" ];
+     fhir:Reference.display [ fhir:value "Argonaut Questionnaire Contained ValueSet Profile" ]
   ], [
      fhir:index 1;
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire>;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+       fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+     ];
+     fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire" ];
+     fhir:Reference.display [ fhir:value "Argonaut Questionnaire Profile" ]
+  ], [
+     fhir:index 2;
      fhir:link <http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaireresponse>;
-     fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaireresponse" ]
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+       fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+     ];
+     fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaireresponse" ];
+     fhir:Reference.display [ fhir:value "Argonaut QuestionnaireResponse Profile" ]
+  ], [
+     fhir:index 3;
+     fhir:link <http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adap-questionnaireresponse>;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+       fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+     ];
+     fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adap-questionnaireresponse" ];
+     fhir:Reference.display [ fhir:value "Argonaut Adaptive QuestionnaireResponse Profile" ]
   ];
   fhir:CapabilityStatement.rest [
      fhir:index 0;
-     fhir:CapabilityStatement.rest.mode [ fhir:value "server" ];
-     fhir:CapabilityStatement.rest.documentation [ fhir:value "The [Argonaut](http://argonautwiki.hl7.org/) questionnaire Project is a vendor agnostic specification providing FHIR RESTful APIs and guidance for access to and booking of appointments for patients by both patient and practitioner end users. This specification is based on [FHIR Version 3.0.1]({{site.data.fhir.path}}) and specifically the [Questionnaire]({{site.data.fhir.path}}questionnaire.html)and QuestionnaireResponse]({{site.data.fhir.path}}questionnaireresponse.html) resources." ];
+     fhir:CapabilityStatement.rest.mode [ fhir:value "client" ];
+     fhir:CapabilityStatement.rest.documentation [ fhir:value "The Argonaut Questionnaire Provider EHR **SHOULD**\n\n1. Implement the RESTful behavior according to the FHIR specification as described in the FHIR specification for [FHIR RESTful API](http://hl7.org/fhir/STU3/http.html).\n1. Support the 'next-question' operation for filling out adaptive questionnaires\n1. Support json resource formats for all Argonaut Questionnaire interactions.\n\nThe Argonaut Questionnaire Provider EHR **MAY**:\n\n1. Declare a CapabilityStatement identifying the list of profiles, operations, search parameter is supported.\n\n1. Support xml resource formats for all Argonaut questionnaire interactions." ];
      fhir:CapabilityStatement.rest.security [
-       fhir:CapabilityStatement.rest.security.service [
-         fhir:index 0;
-         fhir:CodeableConcept.coding [
-           fhir:index 0;
-           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/restful-security-service" ];
-           fhir:Coding.code [ fhir:value "SMART-on-FHIR" ]
-         ]
-       ];
-       fhir:CapabilityStatement.rest.security.description [ fhir:value "For general security consideration refer to the [Security section](http://hl7.org/fhir/us/core/security.html) in the US Core Implementation Guide." ]
+       fhir:CapabilityStatement.rest.security.description [ fhir:value "For general security consideration refer to the [Security and Privacy Considerations](https://argonautproject.github.io/questionnaire/index.html#security-and-privacy-considerations)." ]
      ];
      fhir:CapabilityStatement.rest.resource [
        fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+         fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+       ];
        fhir:CapabilityStatement.rest.resource.type [ fhir:value "Questionnaire" ];
        fhir:CapabilityStatement.rest.resource.interaction [
          fhir:index 0;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
-           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
          ];
-         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "read" ]
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "search-type" ]
        ], [
          fhir:index 1;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
-           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
          ];
-         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "search-type" ]
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "read" ]
        ], [
          fhir:index 2;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
-           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
          ];
-         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "patch" ]
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "vread" ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "history-instance" ]
+       ], [
+         fhir:index 4;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "history-type" ]
        ];
-       fhir:CapabilityStatement.rest.resource.referencePolicy [
-         fhir:value "enforced";
-         fhir:index 0
-       ];
+       fhir:CapabilityStatement.rest.resource.readHistory [ fhir:value "false"^^xsd:boolean ];
+       fhir:CapabilityStatement.rest.resource.updateCreate [ fhir:value "false"^^xsd:boolean ];
        fhir:CapabilityStatement.rest.resource.searchParam [
          fhir:index 0;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
-           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
          ];
          fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_id" ];
-         fhir:CapabilityStatement.rest.resource.searchParam.definition [ fhir:value "http://hl7.org/fhir/SearchParameter/_id" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [ fhir:value "http://hl7.org/fhir/SearchParameter/Resource-_id" ];
          fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
        ], [
          fhir:index 1;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
-           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
          ];
-         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "title" ];
-         fhir:CapabilityStatement.rest.resource.searchParam.definition [ fhir:value "http://hl7.org/fhir/SearchParameter/title" ];
-         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "string" ]
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "url" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [ fhir:value "http://hl7.org/fhir/SearchParameter/Questionnaire-url" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "uri" ]
        ], [
          fhir:index 2;
          fhir:Element.extension [
            fhir:index 0;
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
-           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
          ];
          fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "status" ];
-         fhir:CapabilityStatement.rest.resource.searchParam.definition [ fhir:value "http://hl7.org/fhir/SearchParameter/status" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-status" ];
          fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
        ], [
          fhir:index 3;
@@ -149,12 +194,47 @@
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
            fhir:Extension.valueCode [ fhir:value "SHOULD" ]
          ];
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "title" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-title" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "string" ]
+       ], [
+         fhir:index 4;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "publisher" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-publisher" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "string" ]
+       ], [
+         fhir:index 5;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
          fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "version" ];
-         fhir:CapabilityStatement.rest.resource.searchParam.definition [ fhir:value "http://hl7.org/fhir/SearchParameter/version" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-version" ];
          fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index 6;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "context-type-value" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type-value" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "composite" ]
        ]
      ], [
        fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+         fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+       ];
        fhir:CapabilityStatement.rest.resource.type [ fhir:value "QuestionnaireResponse" ];
        fhir:CapabilityStatement.rest.resource.interaction [
          fhir:index 0;
@@ -171,12 +251,153 @@
            fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
            fhir:Extension.valueCode [ fhir:value "SHOULD" ]
          ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "search-type" ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "read" ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "vread" ]
+       ], [
+         fhir:index 4;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
          fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "update" ]
+       ], [
+         fhir:index 5;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "patch" ]
+       ], [
+         fhir:index 6;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "delete" ]
+       ], [
+         fhir:index 7;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "history-instance" ]
+       ], [
+         fhir:index 8;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "MAY" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.interaction.code [ fhir:value "history-type" ]
        ];
-       fhir:CapabilityStatement.rest.resource.updateCreate [ fhir:value "true"^^xsd:boolean ];
-       fhir:CapabilityStatement.rest.resource.referencePolicy [
-         fhir:value "enforced";
+       fhir:CapabilityStatement.rest.resource.readHistory [ fhir:value "false"^^xsd:boolean ];
+       fhir:CapabilityStatement.rest.resource.updateCreate [ fhir:value "false"^^xsd:boolean ];
+       fhir:CapabilityStatement.rest.resource.searchInclude [
+         fhir:value "QuestionnaireResponse:questionnaire";
          fhir:index 0
+       ];
+       fhir:CapabilityStatement.rest.resource.searchParam [
+         fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "_id" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [ fhir:value "http://hl7.org/fhir/SearchParameter/Resource-_id" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "questionnaire" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/SearchParameter/QuestionnaireResponse-questionnaire" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "reference" ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "patient" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/SearchParameter/QuestionnaireResponse-patient" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "reference" ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "context" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/SearchParameter/QuestionnaireResponse-context" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "reference" ]
+       ], [
+         fhir:index 4;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "status" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/SearchParameter/QuestionnaireResponse-status" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "token" ]
+       ], [
+         fhir:index 5;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "author" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/SearchParameter/QuestionnaireResponse-author" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "reference" ]
+       ], [
+         fhir:index 6;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ];
+         fhir:CapabilityStatement.rest.resource.searchParam.name [ fhir:value "source" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.definition [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/SearchParameter/QuestionnaireResponse-source" ];
+         fhir:CapabilityStatement.rest.resource.searchParam.type [ fhir:value "reference" ]
+       ]
+     ];
+     fhir:CapabilityStatement.rest.operation [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+         fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+       ];
+       fhir:CapabilityStatement.rest.operation.name [ fhir:value "next-question" ];
+       fhir:CapabilityStatement.rest.operation.definition [
+         fhir:link <http://fhir.org/guides/argonaut-questionnaire/OperationDefinition/next-question>;
+         fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/OperationDefinition/next-question" ]
        ]
      ]
   ] .

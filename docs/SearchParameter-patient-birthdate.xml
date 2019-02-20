@@ -3,10 +3,10 @@
 <SearchParameter xmlns="http://hl7.org/fhir">
   <id value="patient-birthdate"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: patient-birthdate</p><p><b>url</b>: <a href="http://fhir.org/guides/argonaut-questionnaire/patient-birthdate">http://fhir.org/guides/argonaut-questionnaire/patient-birthdate</a></p><p><b>name</b>: patient_birthdate</p><p><b>status</b>: active</p><p><b>experimental</b>: false</p><p><b>date</b>: Feb 18, 2019, 11:57:46 PM</p><p><b>publisher</b>: The Argonaut Project</p><p><b>contact</b>: </p><p><b>code</b>: birthdate</p><p><b>base</b>: Patient</p><p><b>type</b>: date</p><p><b>derivedFrom</b>: <a href="http://hl7.org/fhir/SearchParameter/individual-birthdate">http://hl7.org/fhir/SearchParameter/individual-birthdate</a></p><p><b>description</b>: [Patient](patient.html): The patient's date of birth
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: patient-birthdate</p><p><b>url</b>: <a href="http://fhir.org/guides/argonaut-questionnaire/SearchParameter/patient-birthdate">http://fhir.org/guides/argonaut-questionnaire/SearchParameter/patient-birthdate</a></p><p><b>name</b>: patient_birthdate</p><p><b>status</b>: active</p><p><b>experimental</b>: false</p><p><b>date</b>: Feb 18, 2019, 11:57:46 PM</p><p><b>publisher</b>: The Argonaut Project</p><p><b>contact</b>: </p><p><b>code</b>: birthdate</p><p><b>base</b>: Patient</p><p><b>type</b>: date</p><p><b>derivedFrom</b>: <a href="http://hl7.org/fhir/SearchParameter/individual-birthdate">http://hl7.org/fhir/SearchParameter/individual-birthdate</a></p><p><b>description</b>: [Patient](patient.html): The patient's date of birth
 </p><p><b>expression</b>: Patient.birthDate</p><p><b>xpath</b>: f:Patient/f:birthDate</p><p><b>xpathUsage</b>: normal</p><p><b>comparator</b>: le, ge</p></div>
   </text>
-  <url value="http://fhir.org/guides/argonaut-questionnaire/patient-birthdate"/>
+  <url value="http://fhir.org/guides/argonaut-questionnaire/SearchParameter/patient-birthdate"/>
   <name value="patient_birthdate"/>
   <status value="active"/>
   <experimental value="false"/>
