@@ -1,6 +1,7 @@
 # Welcome to the [Argonaut](http://argonautwiki.hl7.org/index.php?title=Main_Page) Argonaut Questionnaire Project Repository
 
-See the simulation and test Questionnaire rendering tool at : http://www.fhir.org/guides/argonaut/scheduling/StructureDefinition-argo-sub-notif.html
+See the simulation and test Questionnaire rendering tool at : http://gettingstarte-cjfwz-env.us-west-2.elasticbeanstalk.com/
+    (2019-2-23 : Note is not current and needs to be updated)
 
 Argonaut Lead: [Micky Tripathi](mtripathi@maehc.org)
 
