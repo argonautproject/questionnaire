@@ -1,7 +1,7 @@
 [^1]: This corresponds to the 'Form Manager' in the [Structured Data Capture Initiative] (SDC)
 [^2]: This corresponds to the the 'Form Receiver/Archiver' in the [Structured Data Capture Initiative] (SDC)
 [^3]: This corresponds to the the 'Form Filler' and/or 'Form Response Handler' in the [Structured Data Capture Initiative] (SDC)
-[^4]: https://en.wikipedia.org/wiki/Questionnaire
+[^4]: source: https://en.wikipedia.org/wiki/Questionnaire
 [^5]: How to implement Questionnaire  to design forms that adjust what information is displayed and/or that perform calculations based on user input is covered in the [SDC (Structured Data Capture)] implementation Guide.
 [Adaptive Questionnaire]: https://en.wikipedia.org/wiki/Computerized_adaptive_testing
 [Adaptive Forms Use Case]: adaptive.html
@@ -30,7 +30,7 @@
 [four uses cases]: http://argonautwiki.hl7.org/images/4/4c/Argonaut_UseCasesV1.pdf
 [LOINC]: http://loinc.org
 [Must Support]: {{site.data.fhir.uscore}}/guidance.html#must-support
-[Valuset Ordinal Value Extension]: {{site.data.fhir.path}}extension-valueset-ordinalvalue.html "ValueSet ordinalvalue extension: A numeric value that allows numerical manipulation of a concept."
+[ValueSet Ordinal Value Extension]: {{site.data.fhir.path}}extension-valueset-ordinalvalue.html "ValueSet ordinalvalue extension: A numeric value that allows numerical manipulation of a concept."
 [Profiles]: profiles.html
 [Provider EHR]: CapabilityStatement-argo-questionnaire-provider-ehr.html
 [Questionnaire examples]: StructureDefinition-argo-questionnaire.html#examples
@@ -50,7 +50,7 @@
 [US Core General Guidance]: {{site.data.fhir.uscore}}guidance.html "US Core General Guidance"
 [use case 5]: http://argonautwiki.hl7.org/images/4/4c/Argonaut_UseCasesV1.pdf
 [`_include`]: {{site.data.fhir.path}}search.html#revinclude
-[FHIR operations]: {site.data.fhir.path}}operations.html
+[FHIR operation]: {{site.data.fhir.path}}operations.html
 [PROMIS]: http://www.healthmeasures.net/explore-measurement-systems/promis "PROMIS® (Patient-Reported Outcomes Measurement Information System) is a set of person-centered measures that evaluates and monitors physical, mental, and social health in adults and children. It can be used with the general population and with individuals living with chronic conditions."
 [FHIR Version 4.0.0]: http://hl7.org/fhir/R4/ "FHIR Release #4: First Normative Content"
 [Patient Reported Outcomes (PRO)]: http://www.hl7.org/fhir/us/patient-reported-outcomes/history.cfml "Standardization in the creation, administration and sharing of PRO data"
@@ -89,3 +89,4 @@
 [`status` (QuestionnaireResponse)]: SearchParameter-QuestionnaireResponse-status.html
 [`author`]: SearchParameter-QuestionnaireResponse-author.html
 [`source`]: SearchParameter-QuestionnaireResponse-source.html
+[OperationOutcome]: {{site.data.fhir.path}}operationoutcome.html

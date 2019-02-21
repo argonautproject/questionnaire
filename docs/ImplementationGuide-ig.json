@@ -666,7 +666,19 @@
       {
         "source": "guidance.html",
         "title": "General Guidance",
-        "kind": "page"
+        "kind": "page",
+        "page": [
+          {
+            "source": "static.html",
+            "title": "Static ",
+            "kind": "page"
+          },
+          {
+            "source": "adaptive.html",
+            "title": "Adaptive ",
+            "kind": "page"
+          }
+        ]
       },
       {
         "source": "profiles.html",
@@ -731,11 +743,6 @@
             "kind": "resource"
           }
         ]
-      },
-      {
-        "source": "terminology.html",
-        "title": "Terminology",
-        "kind": "page"
       },
       {
         "source": "searchparameters.html",
@@ -840,11 +847,6 @@
             "kind": "resource"
           }
         ]
-      },
-      {
-        "source": "security.html",
-        "title": "Security",
-        "kind": "page"
       },
       {
         "source": "downloads.html",

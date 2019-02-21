@@ -495,6 +495,16 @@
       <source value="guidance.html"/>
       <title value="General Guidance"/>
       <kind value="page"/>
+      <page>
+        <source value="static.html"/>
+        <title value="Static "/>
+        <kind value="page"/>
+      </page>
+      <page>
+        <source value="adaptive.html"/>
+        <title value="Adaptive "/>
+        <kind value="page"/>
+      </page>
     </page>
     <page>
       <source value="profiles.html"/>
@@ -555,11 +565,6 @@
         <title value="OperationDefinition Next Question"/>
         <kind value="resource"/>
       </page>
-    </page>
-    <page>
-      <source value="terminology.html"/>
-      <title value="Terminology"/>
-      <kind value="page"/>
     </page>
     <page>
       <source value="searchparameters.html"/>
@@ -660,11 +665,6 @@
         <title value="CapabilityStatement Answerbank"/>
         <kind value="resource"/>
       </page>
-    </page>
-    <page>
-      <source value="security.html"/>
-      <title value="Security"/>
-      <kind value="page"/>
     </page>
     <page>
       <source value="downloads.html"/>

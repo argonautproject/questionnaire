@@ -372,7 +372,17 @@
       "page" : [{
         "nameUrl" : "guidance.html",
         "title" : "General Guidance",
-        "generation" : "html"
+        "generation" : "html",
+        "page" : [{
+          "nameUrl" : "static.html",
+          "title" : "Static ",
+          "generation" : "html"
+        },
+        {
+          "nameUrl" : "adaptive.html",
+          "title" : "Adaptive ",
+          "generation" : "html"
+        }]
       },
       {
         "nameUrl" : "profiles.html",
@@ -433,11 +443,6 @@
           "title" : "OperationDefinition Next Question",
           "generation" : "generated"
         }]
-      },
-      {
-        "nameUrl" : "terminology.html",
-        "title" : "Terminology",
-        "generation" : "html"
       },
       {
         "nameUrl" : "searchparameters.html",
@@ -538,11 +543,6 @@
           "title" : "CapabilityStatement Answerbank",
           "generation" : "generated"
         }]
-      },
-      {
-        "nameUrl" : "security.html",
-        "title" : "Security",
-        "generation" : "html"
       },
       {
         "nameUrl" : "downloads.html",

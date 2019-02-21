@@ -665,7 +665,18 @@
        fhir:index 0;
        fhir:ImplementationGuide.page.source [ fhir:value "guidance.html" ];
        fhir:ImplementationGuide.page.title [ fhir:value "General Guidance" ];
-       fhir:ImplementationGuide.page.kind [ fhir:value "page" ]
+       fhir:ImplementationGuide.page.kind [ fhir:value "page" ];
+       fhir:ImplementationGuide.page.page [
+         fhir:index 0;
+         fhir:ImplementationGuide.page.source [ fhir:value "static.html" ];
+         fhir:ImplementationGuide.page.title [ fhir:value "Static " ];
+         fhir:ImplementationGuide.page.kind [ fhir:value "page" ]
+       ], [
+         fhir:index 1;
+         fhir:ImplementationGuide.page.source [ fhir:value "adaptive.html" ];
+         fhir:ImplementationGuide.page.title [ fhir:value "Adaptive " ];
+         fhir:ImplementationGuide.page.kind [ fhir:value "page" ]
+       ]
      ], [
        fhir:index 1;
        fhir:ImplementationGuide.page.source [ fhir:value "profiles.html" ];
@@ -730,11 +741,6 @@
        ]
      ], [
        fhir:index 3;
-       fhir:ImplementationGuide.page.source [ fhir:value "terminology.html" ];
-       fhir:ImplementationGuide.page.title [ fhir:value "Terminology" ];
-       fhir:ImplementationGuide.page.kind [ fhir:value "page" ]
-     ], [
-       fhir:index 4;
        fhir:ImplementationGuide.page.source [ fhir:value "searchparameters.html" ];
        fhir:ImplementationGuide.page.title [ fhir:value "Search Parameters" ];
        fhir:ImplementationGuide.page.kind [ fhir:value "page" ];
@@ -810,7 +816,7 @@
          fhir:ImplementationGuide.page.kind [ fhir:value "resource" ]
        ]
      ], [
-       fhir:index 5;
+       fhir:index 4;
        fhir:ImplementationGuide.page.source [ fhir:value "capstatements.html" ];
        fhir:ImplementationGuide.page.title [ fhir:value "Capability Statements" ];
        fhir:ImplementationGuide.page.kind [ fhir:value "page" ];
@@ -836,22 +842,17 @@
          fhir:ImplementationGuide.page.kind [ fhir:value "resource" ]
        ]
      ], [
-       fhir:index 6;
-       fhir:ImplementationGuide.page.source [ fhir:value "security.html" ];
-       fhir:ImplementationGuide.page.title [ fhir:value "Security" ];
-       fhir:ImplementationGuide.page.kind [ fhir:value "page" ]
-     ], [
-       fhir:index 7;
+       fhir:index 5;
        fhir:ImplementationGuide.page.source [ fhir:value "downloads.html" ];
        fhir:ImplementationGuide.page.title [ fhir:value "Downloads" ];
        fhir:ImplementationGuide.page.kind [ fhir:value "page" ]
      ], [
-       fhir:index 8;
+       fhir:index 6;
        fhir:ImplementationGuide.page.source [ fhir:value "all-examples.html" ];
        fhir:ImplementationGuide.page.title [ fhir:value "All Examples" ];
        fhir:ImplementationGuide.page.kind [ fhir:value "page" ]
      ], [
-       fhir:index 9;
+       fhir:index 7;
        fhir:ImplementationGuide.page.source [ fhir:value "toc.html" ];
        fhir:ImplementationGuide.page.title [ fhir:value "Table of Contents" ];
        fhir:ImplementationGuide.page.kind [ fhir:value "resource" ]

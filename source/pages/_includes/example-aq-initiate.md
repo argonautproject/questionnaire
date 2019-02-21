@@ -1,10 +1,12 @@
+Note that these json examples are annotated with nonstandard comments and snipped for brevity.
+
 **request**
 
 `POST [base]/Questionnaire/questionnaire-example-adaptive-sampler/$next-question`
 
 **payload**
 
-~~~json
+~~~
  {
     "resourceType": "QuestionnaireResponse",
     "id": "questionnaireresponse-example-adaptive-sampler",
@@ -12,7 +14,7 @@
       "profile": [
         "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adap-questionnaireresponse"
       ],
-    // contained Questionnaire
+    //COMMENT - contained Questionnaire
     "contained": [
       {
         "resourceType": "Questionnaire",
@@ -25,25 +27,25 @@
         "url": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler",
         "title": "Argonaut Questionnaire Sampler",
         "status": "draft",
-        //no items since initiating the adaptive questionnaire
-      ...
+        //COMMENT - no items since initiating the adaptive questionnaire
+      ...[snipped for brevity]....
       }
     ]
     },
-    //references the contained Questionnaire
+    //COMMENT - references the contained Questionnaire
     "questionnaire": {
       "reference": "#questionnaire-example-adaptive-sampler"
     },
     "status": "in-progress",
-   ...
-   //no items since is just getting started
+   ..[snipped for brevity]....
+   //COMMENT - no items since is just getting started
    }
   }
 ~~~
 
 **response**
 
-~~~json
+~~~
 {
   "resourceType": "QuestionnaireResponse",
   "id": "questionnaireresponse-example-adaptive-sampler",
@@ -51,7 +53,7 @@
     "profile": [
       "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adap-questionnaireresponse"
     ],
-  // contained Questionnaire
+  //COMMENT - contained Questionnaire
   "contained": [
     {
       "resourceType": "Questionnaire",
@@ -61,11 +63,11 @@
           "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"
         ]
       },
-      //the 'url' element identifies the adaptive questionnaire - the set of questions for a particular adaptive questionnaire
+      //COMMENT - the 'url' element identifies the adaptive questionnaire - the set of questions for a particular adaptive questionnaire
       "url": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-adaptive-sampler",
       "title": "Argonaut Questionnaire Sampler",
       "status": "draft",
-      ...
+      ...[snipped for brevity]....
       //add first item group which is a display only not a questions
       "item": [
       {
@@ -90,12 +92,12 @@
     }
   ]
   },
-  //reference to contained Questionnaire
+  //COMMENT - reference to contained Questionnaire
   "questionnaire": {
     "reference": "#questionnaire-example-adaptive-sampler"
   },
   "status": "in-progress",
-...
-//no items since is just getting started
+...[snipped for brevity]....
+//COMMENT - no items since is just getting started
 }
 ~~~

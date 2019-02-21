@@ -368,6 +368,16 @@
         <nameUrl value="guidance.html"/>
         <title value="General Guidance"/>
         <generation value="html"/>
+        <page>
+          <nameUrl value="static.html"/>
+          <title value="Static "/>
+          <generation value="html"/>
+        </page>
+        <page>
+          <nameUrl value="adaptive.html"/>
+          <title value="Adaptive "/>
+          <generation value="html"/>
+        </page>
       </page>
       <page>
         <nameUrl value="profiles.html"/>
@@ -428,11 +438,6 @@
           <title value="OperationDefinition Next Question"/>
           <generation value="generated"/>
         </page>
-      </page>
-      <page>
-        <nameUrl value="terminology.html"/>
-        <title value="Terminology"/>
-        <generation value="html"/>
       </page>
       <page>
         <nameUrl value="searchparameters.html"/>
@@ -533,11 +538,6 @@
           <title value="CapabilityStatement Answerbank"/>
           <generation value="generated"/>
         </page>
-      </page>
-      <page>
-        <nameUrl value="security.html"/>
-        <title value="Security"/>
-        <generation value="html"/>
       </page>
       <page>
         <nameUrl value="downloads.html"/>

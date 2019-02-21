@@ -14,10 +14,10 @@ topofpage: true
 
 ## Introduction
 
-The Argonaut Questionnaire Implementation Guide defines a series of interactions which cover the basic workflow for the creation, discovery and retrieval of "**computer adaptive forms**" using FHIR Questionnaire and QuestionnaireResponse andbutton
+The Argonaut Questionnaire Implementation Guide defines a series of interactions which cover the basic workflow for the creation, discovery and retrieval of "**computer adaptive forms**" using FHIR Questionnaire and QuestionnaireResponse and
  the FHIR API.  The reader is encouraged to familiarize herself with the capabilities of the Questionnaire and QuestionnaireResponse Response resources by reviewing the guidance given in the FHIR specification and the guidance in [Static Forms Use Case].
 
-Argonaut Questionnaire Adaptive forms are dynamic forms that adjust what questions are asked based on previous answers. This is also known as Computerized Adaptive Testing (CAT). The logic to determine the questions are defined external to the Questionnaire resource.[^5]   Responses to questions are iteratively submitted to a FHIR API [FHIR operation] and the contained Questionnaire and QuestionnaireResponse resources are updated on the fly.  A score based on responses may calculate and recorded separately (e.g., a FHIR [Observation]) or as part of the QuestionnaireResponse
+Argonaut Questionnaire Adaptive forms are dynamic forms that adjust what questions are asked based on previous answers. This is also known as Computerized Adaptive Testing (CAT). The logic to determine the questions are defined external to the Questionnaire resource.[^5]   Responses to questions are iteratively submitted to a [FHIR operation] endpoint and the contained Questionnaire and QuestionnaireResponse resources are updated on the fly.  A score based on responses may calculate and recorded separately (e.g., a FHIR [Observation]) or as part of the QuestionnaireResponse.
 
 See the [HealthMeasures] website for further background, theory and use cases for adaptive forms.
 
@@ -27,10 +27,10 @@ See the [HealthMeasures] website for further background, theory and use cases fo
 1. Transactions are Stateless.  The Form Filler constructs a record of the transaction which is passed to service and the service adds to record and passed it back to Form Filler.  The Form Filler and service are free of keeping track of the session and a previously disrupted session can be restored if the session token expires.
 1. The Questionnaire may expire and the form may not be valid. Time limits for completion of a questionnaire or individual question can be defined and the Form Filler Application can record the start and stop date-times using the [Argonaut Questionnaire Time Limit Extension] and [Argonaut QuestionnaireResponse Response Period Extension].  Note that either Form Filler or Service could determine if the response is within a time limit. How this information modifies the behavior of the Form-filler or interpretation of results is an implementation detail outside of scope of this Implementation Guide.
 1. The assessment  are short - e.g., PROMIS forms have up to 12 transactions  (on average 4-12).
-1. The service may calculated and record score in the QuestionnaireResponse resource as "answers" to a "score" question itme in the Questionnaire.  The score item is flagged as [`readOnly`] and may be marked as 'hidden' using the [Questionnaire Hidden Extension] to direct the Form Filler that the item should not be displayed to the user.
-  - To assist in calculating scores the standard [Valuset Ordinal Value Extension] and [Questionnaire Ordinal Value Extension] may be used on items. *NOTE: This implementation quide extends the context of the Questionnaire Ordinal Value Extension to elements beyond that defined in the FHIR Specification.*
+1. The service may calculate and record scores in the QuestionnaireResponse resource as "answers" to a "score" question item in the Questionnaire.  The score item is flagged as [`readOnly`] and may be marked as *hidden* using the [Questionnaire Hidden Extension] to direct the Form Filler that the item should not be displayed to the user.
+  - To assist in calculating scores the standard [ValueSet Ordinal Value Extension] and [Questionnaire Ordinal Value Extension] may be used on items. *NOTE: This implementation quide extends the context of the Questionnaire Ordinal Value Extension to elements beyond that defined in the FHIR Specification.*
   - How and when scoring is done is an implementation detail and outside the scope of this guide.
-1.  The [Argonaut Questionnaire Item Order Extension] and conceptOrder] extension may be used by the service to ensure the relative order of Questionnaire items is maintained between transactions.
+1.  The [Argonaut Questionnaire Item Order Extension] and [conceptOrder] extension may be used by the service to ensure the relative order of Questionnaire items is maintained between transactions.
 1. There are no constraints on the nesting of item groups and there are several possible items and item groupings including:
     - *a single* question ('what is the capital of Assyria?') or
     - *a single* display  ('Answer these questions three!!') or
@@ -155,7 +155,7 @@ To retrieve the finished adaptive questionnaire:
 
 ###  QuestionnaireResponse and Scoring
 
-When the adaptive questionnaire is complete, the Form Filler processes the QuestionnaireResponse with a contained Questionnaire based on the questions it was returned by the service.  The Form Filler may represent the cumulative or intermediate scores as answers within the QuestionnaireResponse or as separate Observations.  The Form Filler may post the responses to an Answer Bank and perform searches on the QuestionnaireResponse as described in the [Static Forms Use Case].
+When the adaptive questionnaire is complete, the Form Filler processes the QuestionnaireResponse with a contained Questionnaire based on the questions it was returned by the service.  The Form Filler may represent the cumulative or intermediate scores as answers as separate Observations.  The Form Filler may post the responses to an Answer Bank and perform searches on the QuestionnaireResponse as described in the [Static Forms Use Case].
 
 
 ### Examples and Reference Implementation
@@ -166,12 +166,12 @@ Examples of completed Adaptive QuestionnaireResponses which demonstrate use of a
 
 #### End User wishes to go back and revise an answer to Question
 {:.no_toc}
-For adaptive forms it needs to be emphasized that it is a *stateless* process for both the “black box” service and the Form Filler.  That means that the service processes the entire question-answer tree each time from the beginning and the Form Filler re-render the informations each time.  So any question-answer pair or calculated results can change until the form is completed.  The black box may mark some question-answer pairs as [`readOnly`] which instruct the Form Filler that they can not be subsequently altered.   If not marked as a `readOnly`item any response can be changed at any time by the Form Filler and the service will process normally and may remove subsequent question-answers as necessary based on its logic.   The Form Filler will be presented with the presented with question-answer pairs and render it anew as well -i.e., it can not retained the previous information.
+For adaptive forms it needs to be emphasized that it is a *stateless* process for both the “black box” Service and the Form Filler.  That means that the Service processes the entire question-answer tree each time from the beginning and the Form Filler re-renders the informations each time.  So any question-answer pair or calculated results can change until the form is completed.  The Service may mark some question-answer pairs as [`readOnly`] which instruct the Form Filler that they can not be subsequently altered.   If not marked as `readOnly`, any response can be changed at any time by the Form Filler and the Service will process normally and may remove subsequent question-answers as necessary based on its logic.   The Form Filler will be presented with the question-answer pairs and render it anew as well - i.e., it shall not retained the previous information.
 
 #### Answer in Error and Needs to be Reentered
 {:.no_toc}
 
-For adaptive forms refer to the FHIR API.  An OperationOutcome with the location of the error represented in the ‘expression element’ and a human readable error message should be returned.
+For adaptive forms refer to the API on [FHIR operation].  An [OperationOutcome] with the location of the error represented in the ‘expression element’ and a human readable error message should be returned.
 
 #### Technical Error
 {:.no_toc}

@@ -24,21 +24,23 @@ These basic workflow steps and API are detailed below. This guidance covers more
 
 This simple scenario serves as an effective means to describe the Argonaut Questionnaire basic workflow and API
 
-~~~ text
+---
+
 A Jurisdiction (e.g, state or region) publicly funds a program to improve population health.  The program is instituted and a set of standard assessments are to filled out by the program participants (“subjects”) periodically in order to monitor the program’s success or failure.
 
 Example list of Assessment Categories:
 
-Demographic information
-Physical health review
-Substance use review
-Housing assessment  
-Suicide risk assessment  
-Universal screening using depression screening (PHQ 2 & 9)
+1. Demographic information
+1. Physical health review
+1. Substance use review
+1. Housing assessment  
+1. Suicide risk assessment  
+1. Universal screening using depression screening
 ...
 
 Each assessment tool (i.e., set of questions and answer choices) is created once as FHIR Questionnaires and centrally stored in an “Assessment Bank” which can be accessed the program participants (provider EHRS). The provider can then use them to create online questionnaires for their patients.  The responses are captured and processed by the provider EHRS and retrieved by the providers for review. These results are shared with the Agency overseeing the program.
-~~~
+
+---
 
 ## Workflow Steps
 
