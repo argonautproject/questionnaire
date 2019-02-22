@@ -57,11 +57,11 @@ How the discovery and preview of the service's adaptive questionnaire is done is
 
 To launch the adaptive questionnaire the Form Filler POSTs the operation `$next-question` to the Adaptive Questionnaire Service (“Black Box”) instance endpoint.  A QuestionnaireResponse with a *contained* Questionnaire representing only the resource metadata is provided as payload data.
 
-{% include img-narrow.html img="Slide1.png" %}
+{% include img-narrow.html img="aqr_diagrams_a.svg" %}
 
 The Service updates the contained Questionnaire with the first item and returns the QuestionnaireResponse in the payload.
 
-{% include img-narrow.html img="Slide2.png" %}
+{% include img-narrow.html img="aqr_diagrams_b.svg" %}
 
 
 #### APIs
@@ -90,11 +90,11 @@ To initiate an  adaptive questionnaire:
 
 The Form Filler renders the item, presents it to the end-user and records the response in the QuestionnaireResponse.  The Form Filler POSTs the operation `$next-question` to the Service to retrieve the next question.
 
-{% include img-narrow.html img="Slide3.png" %}
+{% include img-narrow.html img="aqr_diagrams_c.svg" %}
 
 As result of the operation, the Service updates the Questionnaire and returns it to the Form Filler.  It identifies the adaptive questionnaire items by their  `definiton` or `linkID` elements and determines the next question based on the responses.  It may also calculate intermediate and/or cumulative scores. The Service updates the contained Questionnaire with the next question and scores if scoring is done and returns it within the QuestionnaireResponse.
 
-{% include img-narrow.html img="Slide4.png" %}
+{% include img-narrow.html img="aqr_diagrams_d.svg" %}
 
  This step is repeated until the adaptive questionnaire is done or the Questionnaire has timed out or another error has occured.
 
@@ -126,13 +126,14 @@ To retrieve the next question:
 {% include img-narrow.html img="aw-step3.jpg" %}
 
 
-The Form Filler repeats the process to get the next question as [described above].
+The Form Filler and Service repeat the process to get the next questions and answers as [described above].
 
-{% include img-narrow.html img="Slide7.png" %}
+{% include img-narrow.html img="aqr_diagrams_e.svg" %}
+{% include img-narrow.html img="aqr_diagrams_f.svg" %}
 
-The Service repeats the process [described above]. However, if it determines that the adaptive questionnaire is complete, instead of updating the Questionnnaire with the next question, it updates the QuestionnaireResponse status to ‘completed'. The Service may update the contained Questionnaire with scores if scoring is done. The status of ‘completed’ is a signal to the Form Filler that the adaptive Questionnaire is done!
+When the Service determines that the adaptive questionnaire is complete, instead of updating the Questionnnaire with the next question, it updates the QuestionnaireResponse status to ‘completed'. The status of ‘completed’ signals to the Form Filler that the adaptive Questionnaire is done.  If scoring is done by the Service, the scores may be reported and updated for each transaction or reported once at the end as is shown in diagram below.
 
-{% include img-narrow.html img="Slide8.png" %}
+{% include img-narrow.html img="aqr_diagrams_g.svg" %}
 
 #### APIs
 {:.no_toc}
