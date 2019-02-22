@@ -122,7 +122,7 @@ The Patient Reported Outcomes (PRO) implementation guide focus on capturing and 
 
 In the basic workflow outlined below., an EHR system retrieves a standardized assessment represented by the Questionnaire resource from an assessment bank.  The Questionnaire is rendered/displayed to the end user - either the subject or provider administrator.  The end user enters responses to the assessment questions and these responses are captured.   The response may be processed (scored, aggregated, etc) and retrieved using the QuestionnaireResponse resource.
 
-{% include img.html img="static-workflow.png" caption="Basic Argonaut Questionnaire Workflow" %}
+{% include img-portrait-med.html img="static_overview.svg" caption="Basic Argonaut Questionnaire Workflow" %}
 
 {:.grid}
 |step|Description|
@@ -140,7 +140,7 @@ In the basic workflow outlined below., an EHR system retrieves a standardized as
 
 Adaptive Forms or Questionnaires such as [PROMIS] forms use a stateless model where a selection of items is presented on the computer to an end user based on the answers on the prior items. The server selects the following items optimized for the outcome of the assessment or testee's estimated ability or trait[^4]. This implementation guide provides the basic framework for using Questionnaire and QuestionnaireResponse to preserve the state of the Questionnaire as the client retrieves questions from a remote adaptive questionnaire service.
 
-{% include img.html img="adaptive-workflow.jpg" caption="Basic Argonaut Questionnaire Workflow" %}
+{% include img-portrait.html img="adaptive-workflow.jpg" caption="Basic Argonaut Questionnaire Workflow" %}
 
 {:.grid}
 |step|Description|

@@ -522,7 +522,12 @@ li a[href^="http://"]:not([no-external^="true"]):after, a[href^="https://"]:not(
 }
 
 .figure-img-portrait{
-  width: 100%%;
+  width: 100%;
+}
+
+.figure-img-portrait-med{
+  height: 1040px;
+  width: 740%;
 }
 
 .figure-img-small{
