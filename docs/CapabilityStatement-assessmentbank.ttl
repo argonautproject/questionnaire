@@ -10,7 +10,7 @@
   fhir:Resource.id [ fhir:value "assessmentbank"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2 id=\"title\">Argonaut Assessmentbank CapabilityStatement</h2><p>This section outlines conformance requirements for the Argonaut Questionnaire Assessment-Bank Server.  It is responsible for storing Questionnaires and providing responses to the requests submitted by the  Form Author/Editor and Provider EHRs.   The Argonaut Questionnaire Profile and the various interactions outlined in this guide are the RESTful artifacts and interactions that it supports.   Note that the Argonaut Profiles identify the structural constraints, terminology bindings and invariants and the individual Argonaut SearchParameter resources define the definitions, comparators, modifiers and usage constraints.</p><ul><li>FHIR Version: 3.0.1</li><li>Supported formats: xml, json</li><li>Published: 2019-02-21</li><li>Published by: The Argonaut Project</li></ul><h3 id=\"behavior\">FHIR RESTful Capabilities</h3><p>The Argonaut questionnaire Assessment-Bank <strong>SHALL</strong>:</p><ol><li>Implement the RESTful behavior according to the FHIR specification including returning the appropriate response classes as described in the FHIR specification for <a href=\"http://hl7.org/fhir/STU3/http.html\">FHIR RESTful API</a>.</li><li>Support json resource formats for all Argonaut Questionnaire interactions.</li><li>Declare a CapabilityStatement identifying the list of profiles, operations, search parameter supported.</li></ol><p>The Argonaut questionnaire Assessment-Bank <strong>SHOULD</strong>:</p><ol><li>Support xml resource formats for all Argonaut questionnaire interactions.</li></ol><p id=\"security\"><strong>Security:</strong></p><p>For general security consideration refer to the <a href=\"https://argonautproject.github.io/questionnaire/index.html#security-and-privacy-considerations\">Security and Privacy Considerations</a>.</p><h3 class=\"no_toc\" id=\"resource--details\">RESTful Capabilities by Resource/Profile:</h3><p><strong>Summary of Search Criteria</strong></p><table class=\"grid\"><thead><tr><th>Resource Type</th><th>Supported Profiles</th><th>Supported Searches</th><th>Supported Includes</th></tr></thead><tbody><tr><td><a href=\"#questionnaire\">Questionnaire</a></td><td><p><a href=\"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire\">Argonaut Questionnaire Profile</a></p></td><td>\n							\n							_id, \n							url, \n							status, \n							title, \n							publisher, \n							version, \n							context-type-value\n						</td><td>\n							\n						</td></tr></tbody></table><br></br><h4 class=\"no_toc\" id=\"questionnaire\">Questionnaire</h4><ul><li>A server <em>SHALL</em> be capable of supporting  the<a href=\"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire-valueset\"> Argonaut Questionnaire ValueSet Profile</a> as a contained resource with the Argonaut Questionnaire Profile.</li></ul><p>Supported Profiles:\n			<p><a href=\"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire\">Argonaut Questionnaire Profile</a></p>\n\n				</p><p>Profile Interaction Summary:</p><ul><li><strong>SHALL</strong> support \n																							<code>create</code>, \n																							<code>search-type</code>, \n																							<code>read</code>, \n																							<code>vread</code>, \n																							<code>update</code>, \n																							<code>delete</code>, \n																							<code>history-instance</code>.</li><li><strong>MAY</strong> support \n																							<code>patch</code>, \n																							<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>\n					A server <strong>SHALL</strong> be capable of returning a Questionnaire resource using:\n					<br></br>\n						<code class=\"highlighter-rouge\">GET [base]/Questionnaire/[id]</code>\n				</li><br></br></ul><p>Search Parameter Summary:</p><table class=\"grid\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHALL</strong></td><td><a href=\"http://hl7.org/fhir/SearchParameter/Resource-_id\">_id</a></td><td>\n							token\n						</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?_id=[id]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a href=\"http://hl7.org/fhir/SearchParameter/Questionnaire-url\">url</a></td><td>\n							uri\n						</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?url=[uri]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a href=\"http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-status\">status</a></td><td>\n							token\n						</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?status=[status]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a href=\"http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-title\">title</a></td><td>\n							string\n						</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?title=[title]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a href=\"http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-publisher\">publisher</a></td><td>\n							string\n						</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?publisher=[publisher]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href=\"http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-version\">version</a></td><td>\n							token\n						</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?version=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href=\"http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type-value\">context-type-value</a></td><td>\n							composite\n						</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?context-type-value=[code]&amp;[value]</code></td></tr></tbody></table><br></br></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2 id=\"title\">Argonaut Assessmentbank CapabilityStatement</h2><p>This section outlines conformance requirements for the Argonaut Questionnaire Assessment-Bank Server.  It is responsible for storing Questionnaires and providing responses to the requests submitted by the  Form Author/Editor and Provider EHRs.   The Argonaut Questionnaire Profile and the various interactions outlined in this guide are the RESTful artifacts and interactions that it supports.   Note that the Argonaut Profiles identify the structural constraints, terminology bindings and invariants and the individual Argonaut SearchParameter resources define the definitions, comparators, modifiers and usage constraints.</p><ul><li>FHIR Version: 3.0.1</li><li>Supported formats: xml, json</li><li>Published: 2019-02-25</li><li>Published by: The Argonaut Project</li></ul><h3 id=\"behavior\">FHIR RESTful Capabilities</h3><p>The Argonaut questionnaire Assessment-Bank <strong>SHALL</strong>:</p><ol><li>Implement the RESTful behavior according to the FHIR specification including returning the appropriate response classes as described in the FHIR specification for <a href=\"http://hl7.org/fhir/STU3/http.html\">FHIR RESTful API</a>.</li><li>Support json resource formats for all Argonaut Questionnaire interactions.</li><li>Declare a CapabilityStatement identifying the list of profiles, operations, search parameter supported.</li></ol><p>The Argonaut questionnaire Assessment-Bank <strong>SHOULD</strong>:</p><ol><li>Support xml resource formats for all Argonaut questionnaire interactions.</li></ol><p id=\"security\"><strong>Security:</strong></p><p>For general security consideration refer to the <a href=\"https://argonautproject.github.io/questionnaire/index.html#security-and-privacy-considerations\">Security and Privacy Considerations</a>.</p><h3 class=\"no_toc\" id=\"resource--details\">RESTful Capabilities by Resource/Profile:</h3><p><strong>Summary of Search Criteria</strong></p><table class=\"grid\"><thead><tr><th>Resource Type</th><th>Supported Profiles</th><th>Supported Searches</th><th>Supported Includes</th></tr></thead><tbody><tr><td><a href=\"#questionnaire\">Questionnaire</a></td><td><p><a href=\"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire\">Argonaut Questionnaire Profile</a></p></td><td>\n							\n							_id, \n							url, \n							status, \n							title, \n							publisher, \n							version, \n							context-type-value, context-type+publisher, context-type-value+status, publisher+status, publisher+status+version, publisher+version, status+title, status+title+version, status+version, title+version\n						</td><td>\n							\n						</td></tr></tbody></table><br></br><h4 class=\"no_toc\" id=\"questionnaire\">Questionnaire</h4><p>Supported Profiles:\n			<p><a href=\"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire\">Argonaut Questionnaire Profile</a></p>\n\n				</p><ul><li>A server <em>SHALL</em> be capable of supporting  the<a href=\"http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire-valueset\"> Argonaut Questionnaire ValueSet Profile</a> as a contained resource with the Argonaut Questionnaire Profile.</li></ul><p>Reference Policy: <code>resolves</code></p><p>Versioning Policy: <code>versioned</code></p><p>Profile Interaction Summary:</p><ul><li><strong>SHALL</strong> support \n																							<code>create</code>, \n																							<code>search-type</code>, \n																							<code>read</code>, \n																							<code>vread</code>, \n																							<code>update</code>, \n																							<code>delete</code>, \n																							<code>history-instance</code>.</li><li><strong>MAY</strong> support \n																							<code>patch</code>, \n																							<code>history-type</code>.</li></ul><p>Fetch and Search Criteria:</p><ul><li>\n					A server <strong>SHALL</strong> be capable of returning a Questionnaire resource using:\n					<br></br>\n						<code class=\"highlighter-rouge\">GET [base]/Questionnaire/[id]</code>\n				</li><br></br></ul><p>Search Parameter Summary:</p><table class=\"grid\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHALL</strong></td><td><a href=\"http://hl7.org/fhir/SearchParameter/Resource-_id\">_id</a></td><td>\n							token\n						</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?_id=[id]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a href=\"http://hl7.org/fhir/SearchParameter/Questionnaire-url\">url</a></td><td>\n							uri\n						</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?url=[uri]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a href=\"http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-status\">status</a></td><td>\n							token\n						</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?status=[status]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a href=\"http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-title\">title</a></td><td>\n							string\n						</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?title=[title]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a href=\"http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-publisher\">publisher</a></td><td>\n							string\n						</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?publisher=[publisher]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href=\"http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-version\">version</a></td><td>\n							token\n						</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?version=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href=\"http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type-value\">context-type-value</a></td><td>\n							composite\n						</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?context-type-value=[code]|[value]</code></td></tr></tbody></table><p>Search Parameter Combination Summary:</p><table class=\"grid\"><thead><tr><th>Conformance</th><th>Parameter Combination</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHALL</strong></td><td>context-type+publisher\n						</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?context-type=[context-type]&amp;publisher=[publisher]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>context-type-value+status\n						</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?context-type-value=[code]|[value]&amp;status=[status]</code></td></tr><tr><td><strong>SHALL</strong></td><td>publisher+status\n						</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?publisher=[publisher]&amp;status=[status]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>publisher+status+version\n						</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?publisher=[publisher]&amp;status=[status]&amp;version=[version]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>publisher+version\n						</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?publisher=[publisher]&amp;version=[version]</code></td></tr><tr><td><strong>SHALL</strong></td><td>status+title\n						</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?status=[status]&amp;title=[title]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>status+title+version\n						</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?status=[status]&amp;title=[title]&amp;version=[version]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>status+version\n						</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?status=[status]&amp;version=[version]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>title+version\n						</td><td><code class=\"highlighter-rouge\">GET [base]/Questionnaire?title=[title]&amp;version=[version]</code></td></tr></tbody></table><br></br></div>"
   ];
   fhir:CapabilityStatement.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/CapabilityStatement/assessmentbank"];
   fhir:CapabilityStatement.version [ fhir:value "0.0.0"];
@@ -18,7 +18,7 @@
   fhir:CapabilityStatement.title [ fhir:value "Argonaut Assessmentbank CapabilityStatement"];
   fhir:CapabilityStatement.status [ fhir:value "active"];
   fhir:CapabilityStatement.experimental [ fhir:value "false"^^xsd:boolean];
-  fhir:CapabilityStatement.date [ fhir:value "2019-02-21"^^xsd:date];
+  fhir:CapabilityStatement.date [ fhir:value "2019-02-25"^^xsd:date];
   fhir:CapabilityStatement.publisher [ fhir:value "The Argonaut Project"];
   fhir:CapabilityStatement.contact [
      fhir:index 0;
@@ -92,6 +92,158 @@
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
          fhir:Extension.valueCode [ fhir:value "SHALL" ]
+       ], [
+         fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ], [
+           fhir:index 1;
+           fhir:Extension.url [ fhir:value "required" ];
+           fhir:Extension.valueString [ fhir:value "context-type" ]
+         ], [
+           fhir:index 2;
+           fhir:Extension.url [ fhir:value "required" ];
+           fhir:Extension.valueString [ fhir:value "publisher" ]
+         ];
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination" ]
+       ], [
+         fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ], [
+           fhir:index 1;
+           fhir:Extension.url [ fhir:value "required" ];
+           fhir:Extension.valueString [ fhir:value "context-type-value" ]
+         ], [
+           fhir:index 2;
+           fhir:Extension.url [ fhir:value "required" ];
+           fhir:Extension.valueString [ fhir:value "status" ]
+         ];
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination" ]
+       ], [
+         fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ], [
+           fhir:index 1;
+           fhir:Extension.url [ fhir:value "required" ];
+           fhir:Extension.valueString [ fhir:value "publisher" ]
+         ], [
+           fhir:index 2;
+           fhir:Extension.url [ fhir:value "required" ];
+           fhir:Extension.valueString [ fhir:value "status" ]
+         ];
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination" ]
+       ], [
+         fhir:index 4;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ], [
+           fhir:index 1;
+           fhir:Extension.url [ fhir:value "required" ];
+           fhir:Extension.valueString [ fhir:value "publisher" ]
+         ], [
+           fhir:index 2;
+           fhir:Extension.url [ fhir:value "required" ];
+           fhir:Extension.valueString [ fhir:value "status" ]
+         ], [
+           fhir:index 3;
+           fhir:Extension.url [ fhir:value "required" ];
+           fhir:Extension.valueString [ fhir:value "version" ]
+         ];
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination" ]
+       ], [
+         fhir:index 5;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ], [
+           fhir:index 1;
+           fhir:Extension.url [ fhir:value "required" ];
+           fhir:Extension.valueString [ fhir:value "publisher" ]
+         ], [
+           fhir:index 2;
+           fhir:Extension.url [ fhir:value "required" ];
+           fhir:Extension.valueString [ fhir:value "version" ]
+         ];
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination" ]
+       ], [
+         fhir:index 6;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHALL" ]
+         ], [
+           fhir:index 1;
+           fhir:Extension.url [ fhir:value "required" ];
+           fhir:Extension.valueString [ fhir:value "status" ]
+         ], [
+           fhir:index 2;
+           fhir:Extension.url [ fhir:value "required" ];
+           fhir:Extension.valueString [ fhir:value "title" ]
+         ];
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination" ]
+       ], [
+         fhir:index 7;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ], [
+           fhir:index 1;
+           fhir:Extension.url [ fhir:value "required" ];
+           fhir:Extension.valueString [ fhir:value "status" ]
+         ], [
+           fhir:index 2;
+           fhir:Extension.url [ fhir:value "required" ];
+           fhir:Extension.valueString [ fhir:value "title" ]
+         ], [
+           fhir:index 3;
+           fhir:Extension.url [ fhir:value "required" ];
+           fhir:Extension.valueString [ fhir:value "version" ]
+         ];
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination" ]
+       ], [
+         fhir:index 8;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ], [
+           fhir:index 1;
+           fhir:Extension.url [ fhir:value "required" ];
+           fhir:Extension.valueString [ fhir:value "status" ]
+         ], [
+           fhir:index 2;
+           fhir:Extension.url [ fhir:value "required" ];
+           fhir:Extension.valueString [ fhir:value "version" ]
+         ];
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination" ]
+       ], [
+         fhir:index 9;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+           fhir:Extension.valueCode [ fhir:value "SHOULD" ]
+         ], [
+           fhir:index 1;
+           fhir:Extension.url [ fhir:value "required" ];
+           fhir:Extension.valueString [ fhir:value "title" ]
+         ], [
+           fhir:index 2;
+           fhir:Extension.url [ fhir:value "required" ];
+           fhir:Extension.valueString [ fhir:value "version" ]
+         ];
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination" ]
        ];
        fhir:CapabilityStatement.rest.resource.type [ fhir:value "Questionnaire" ];
        fhir:CapabilityStatement.rest.resource.documentation [ fhir:value "-  A server *SHALL* be capable of supporting  the[ Argonaut Questionnaire ValueSet Profile](http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire-valueset) as a contained resource with the Argonaut Questionnaire Profile." ];

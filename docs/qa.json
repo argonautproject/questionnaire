@@ -3,10 +3,10 @@
   "name": "Argonaut Questionnaire",
   "package-id": "argonaut.questionnaire",
   "ig-ver": "1.0.0",
-  "date": "Thu, 21 Feb, 2019 19:56:26 -0800",
+  "date": "Mon, 25 Feb, 2019 21:18:12 -0800",
   "errs": 94,
   "warnings": 98,
-  "hints": 0,
+  "hints": 80,
   "version": "3.0.1",
   "tool": "4.0.0 (3)"
 }

@@ -3,7 +3,7 @@
 <CapabilityStatement xmlns="http://hl7.org/fhir">
   <id value="argo-questionnaire-provider-ehr"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2 id="title">Argonaut Argo Questionnaire Provider Ehr CapabilityStatement</h2><p>This section outlines conformance requirements for the Argonaut Questionnaire Provider EHR.  It may be responsible for retrieving, rendering and displaying both static and adaptive Questionnaires and QuestionnairesResponses.  The Argonaut Questionnaire Profile,  Argonaut QuestionnaireResponse Profile and Argonaut Adaptive QuestionnaireResponse Profiles and all the interactions outlined in this guide are the RESTful artifacts and interactions that it supports.   Note that the Argonaut Profiles identify the structural constraints, terminology bindings and invariants and the individual Argonaut SearchParameter resources define the definitions, comparators, modifiers and usage constraints.</p><ul><li>FHIR Version: 3.0.1</li><li>Supported formats: xml, json</li><li>Published: 2019-02-20</li><li>Published by: The Argonaut Project</li></ul><h3 id="behavior">FHIR RESTful Capabilities</h3><p>The Argonaut Questionnaire Provider EHR <strong>SHOULD</strong></p><ol><li>Implement the RESTful behavior according to the FHIR specification as described in the FHIR specification for <a href="http://hl7.org/fhir/STU3/http.html">FHIR RESTful API</a>.</li><li>Support the 'next-question' operation for filling out adaptive questionnaires</li><li>Support json resource formats for all Argonaut Questionnaire interactions.</li></ol><p>The Argonaut Questionnaire Provider EHR <strong>MAY</strong>:</p><ol><li><p>Declare a CapabilityStatement identifying the list of profiles, operations, search parameter is supported.</p></li><li><p>Support xml resource formats for all Argonaut questionnaire interactions.</p></li></ol><p id="security"><strong>Security:</strong></p><p><p>For general security consideration refer to the <a href="https://argonautproject.github.io/questionnaire/index.html#security-and-privacy-considerations">Security and Privacy Considerations</a>.</p></p><h3 class="no_toc" id="resource--details">RESTful Capabilities by Resource/Profile:</h3><p><strong>Summary of Operations</strong></p><br></br><li><strong>SHOULD</strong> support the	<a href="#&lt;fhirclient.models.fhirreference.FHIRReference object at 0x10AE8A30&gt;">next-question</a> operation.</li><p><strong>Summary of Search Criteria</strong></p><table class="grid"><thead><tr><th>Resource Type</th><th>Supported Profiles</th><th>Supported Searches</th><th>Supported Includes</th></tr></thead><tbody><tr><td><a href="#questionnaire">Questionnaire</a></td><td><p><a href="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire">Argonaut Questionnaire Profile</a></p></td><td>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2 id="title">Argonaut Argo Questionnaire Provider Ehr CapabilityStatement</h2><p>This section outlines conformance requirements for the Argonaut Questionnaire Provider EHR.  It may be responsible for retrieving, rendering and displaying both static and adaptive Questionnaires and QuestionnairesResponses.  The Argonaut Questionnaire Profile,  Argonaut QuestionnaireResponse Profile and Argonaut Adaptive QuestionnaireResponse Profiles and all the interactions outlined in this guide are the RESTful artifacts and interactions that it supports.   Note that the Argonaut Profiles identify the structural constraints, terminology bindings and invariants and the individual Argonaut SearchParameter resources define the definitions, comparators, modifiers and usage constraints.</p><ul><li>FHIR Version: 3.0.1</li><li>Supported formats: xml, json</li><li>Published: 2019-02-25</li><li>Published by: The Argonaut Project</li></ul><h3 id="behavior">FHIR RESTful Capabilities</h3><p>The Argonaut Questionnaire Provider EHR <strong>SHOULD</strong></p><ol><li>Implement the RESTful behavior according to the FHIR specification as described in the FHIR specification for <a href="http://hl7.org/fhir/STU3/http.html">FHIR RESTful API</a>.</li><li>Support the 'next-question' operation for filling out adaptive questionnaires</li><li>Support json resource formats for all Argonaut Questionnaire interactions.</li></ol><p>The Argonaut Questionnaire Provider EHR <strong>MAY</strong>:</p><ol><li><p>Declare a CapabilityStatement identifying the list of profiles, operations, search parameter is supported.</p></li><li><p>Support xml resource formats for all Argonaut questionnaire interactions.</p></li></ol><p id="security"><strong>Security:</strong></p><p>For general security consideration refer to the <a href="https://argonautproject.github.io/questionnaire/index.html#security-and-privacy-considerations">Security and Privacy Considerations</a>.</p><h3 class="no_toc" id="resource--details">RESTful Capabilities by Resource/Profile:</h3><p><strong>Summary of Operations</strong></p><br></br><li><strong>SHOULD</strong> support the	<a href="#&lt;fhirclient.models.fhirreference.FHIRReference object at 0x014F7070&gt;">next-question</a> operation.</li><p><strong>Summary of Search Criteria</strong></p><table class="grid"><thead><tr><th>Resource Type</th><th>Supported Profiles</th><th>Supported Searches</th><th>Supported Includes</th></tr></thead><tbody><tr><td><a href="#questionnaire">Questionnaire</a></td><td><p><a href="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire">Argonaut Questionnaire Profile</a></p></td><td>
 							
 							_id, 
 							url, 
@@ -11,7 +11,7 @@
 							title, 
 							publisher, 
 							version, 
-							context-type-value
+							context-type-value, context-type+publisher, context-type-value+status, publisher+status, publisher+status+version, publisher+version, status+title, status+title+version, status+version, title+version
 						</td><td>
 							
 						</td></tr><tr><td><a href="#questionnaireresponse">QuestionnaireResponse</a></td><td><p><a href="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaireresponse">Argonaut QuestionnaireResponse Profile</a>, <a href="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adap-questionnaireresponse">Argonaut Adaptive QuestionnaireResponse Profile</a></p></td><td>
@@ -22,13 +22,13 @@
 							context, 
 							status, 
 							author, 
-							source
+							source, author+patient, author+patient+status, author+status, context+patient, context+patient+status, context+status, patient+source, patient+source+status, patient+status, questionnaire+status, source+status
 						</td><td>
 							QuestionnaireResponse:questionnaire
 						</td></tr></tbody></table><br></br><h4 class="no_toc" id="questionnaire">Questionnaire</h4><p>Supported Profiles:
 			<p><a href="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire">Argonaut Questionnaire Profile</a></p>
 
-				</p><p>Profile Interaction Summary:</p><ul><li><strong>SHOULD</strong> support 
+				</p><ul><li>Provider EHR <em>SHOULD</em> be capable of supporting  the<a href="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire-valueset"> Argonaut Questionnaire ValueSet Profile</a> as a contained resource with the Argonaut Questionnaire Profile.</li></ul><p>Profile Interaction Summary:</p><ul><li><strong>SHOULD</strong> support 
 																							<code>search-type</code>, 
 																							<code>read</code>, 
 																							<code>vread</code>, 
@@ -51,10 +51,19 @@
 							token
 						</td><td><code class="highlighter-rouge">GET [base]/Questionnaire?version=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href="http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type-value">context-type-value</a></td><td>
 							composite
-						</td><td><code class="highlighter-rouge">GET [base]/Questionnaire?context-type-value=[code]&amp;[value]</code></td></tr></tbody></table><h4 class="no_toc" id="questionnaireresponse">QuestionnaireResponse</h4><p>Supported Profiles:
+						</td><td><code class="highlighter-rouge">GET [base]/Questionnaire?context-type-value=[code]|[value]</code></td></tr></tbody></table><p>Search Parameter Combination Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter Combination</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHOULD</strong></td><td>context-type+publisher
+						</td><td><code class="highlighter-rouge">GET [base]/Questionnaire?context-type=[context-type]&amp;publisher=[publisher]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>context-type-value+status
+						</td><td><code class="highlighter-rouge">GET [base]/Questionnaire?context-type-value=[code]|[value]&amp;status=[status]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>publisher+status
+						</td><td><code class="highlighter-rouge">GET [base]/Questionnaire?publisher=[publisher]&amp;status=[status]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>publisher+status+version
+						</td><td><code class="highlighter-rouge">GET [base]/Questionnaire?publisher=[publisher]&amp;status=[status]&amp;version=[version]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>publisher+version
+						</td><td><code class="highlighter-rouge">GET [base]/Questionnaire?publisher=[publisher]&amp;version=[version]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>status+title
+						</td><td><code class="highlighter-rouge">GET [base]/Questionnaire?status=[status]&amp;title=[title]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>status+title+version
+						</td><td><code class="highlighter-rouge">GET [base]/Questionnaire?status=[status]&amp;title=[title]&amp;version=[version]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>status+version
+						</td><td><code class="highlighter-rouge">GET [base]/Questionnaire?status=[status]&amp;version=[version]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>title+version
+						</td><td><code class="highlighter-rouge">GET [base]/Questionnaire?title=[title]&amp;version=[version]</code></td></tr></tbody></table><h4 class="no_toc" id="questionnaireresponse">QuestionnaireResponse</h4><p>Supported Profiles:
 			<p><a href="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaireresponse">Argonaut QuestionnaireResponse Profile</a>, <a href="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adap-questionnaireresponse">Argonaut Adaptive QuestionnaireResponse Profile</a></p>
 
-				</p><p>Profile Interaction Summary:</p><ul><li><strong>SHOULD</strong> support 
+				</p><ul><li>Provider EHR <em>SHOULD</em> be capable of supporting  the<a href="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"> Argonaut Questionnaire Profile</a> as a contained resource with the Argonaut Adaptive QuestionnaireResponse Profile.</li><li>Provider EHR <em>SHOULD</em> be capable of supporting  the<a href="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire-valueset"> Argonaut Questionnaire ValueSet Profile</a> as a contained resource with the Argonaut Questionnaire Profile.</li></ul><p>Profile Interaction Summary:</p><ul><li><strong>SHOULD</strong> support 
 																							<code>create</code>, 
 																							<code>search-type</code>, 
 																							<code>read</code>, 
@@ -87,7 +96,18 @@
 							reference
 						</td><td><code class="highlighter-rouge">GET [base]/QuestionnaireResponse?author=[author]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a href="http://fhir.org/guides/argonaut-questionnaire/SearchParameter/QuestionnaireResponse-source">source</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/QuestionnaireResponse?source=[source]</code></td></tr></tbody></table><br></br></div>
+						</td><td><code class="highlighter-rouge">GET [base]/QuestionnaireResponse?source=[source]</code></td></tr></tbody></table><p>Search Parameter Combination Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter Combination</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHOULD</strong></td><td>author+patient
+						</td><td><code class="highlighter-rouge">GET [base]/QuestionnaireResponse?author=[author]&amp;patient=[patient]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>author+patient+status
+						</td><td><code class="highlighter-rouge">GET [base]/QuestionnaireResponse?author=[author]&amp;patient=[patient]&amp;status=[status]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>author+status
+						</td><td><code class="highlighter-rouge">GET [base]/QuestionnaireResponse?author=[author]&amp;status=[status]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>context+patient
+						</td><td><code class="highlighter-rouge">GET [base]/QuestionnaireResponse?context=[context]&amp;patient=[patient]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>context+patient+status
+						</td><td><code class="highlighter-rouge">GET [base]/QuestionnaireResponse?context=[context]&amp;patient=[patient]&amp;status=[status]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>context+status
+						</td><td><code class="highlighter-rouge">GET [base]/QuestionnaireResponse?context=[context]&amp;status=[status]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>patient+source
+						</td><td><code class="highlighter-rouge">GET [base]/QuestionnaireResponse?patient=[patient]&amp;source=[source]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>patient+source+status
+						</td><td><code class="highlighter-rouge">GET [base]/QuestionnaireResponse?patient=[patient]&amp;source=[source]&amp;status=[status]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>patient+status
+						</td><td><code class="highlighter-rouge">GET [base]/QuestionnaireResponse?patient=[patient]&amp;status=[status]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>questionnaire+status
+						</td><td><code class="highlighter-rouge">GET [base]/QuestionnaireResponse?questionnaire=[questionnaire]&amp;status=[status]</code></td></tr><tr><td><strong>SHOULD</strong></td><td>source+status
+						</td><td><code class="highlighter-rouge">GET [base]/QuestionnaireResponse?source=[source]&amp;status=[status]</code></td></tr></tbody></table><br></br></div>
   </text>
   <url value="http://fhir.org/guides/argonaut-questionnaire/CapabilityStatement/argo-questionnaire-provider-ehr"/>
   <version value="0.0.0"/>
@@ -95,7 +115,7 @@
   <title value="Argonaut Argo Questionnaire Provider Ehr CapabilityStatement"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2019-02-20"/>
+  <date value="2019-02-25"/>
   <publisher value="The Argonaut Project"/>
   <contact>
     <telecom>
@@ -156,7 +176,113 @@
       <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
         <valueCode value="SHOULD"/>
       </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <extension url="required">
+          <valueString value="context-type"/>
+        </extension>
+        <extension url="required">
+          <valueString value="publisher"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <extension url="required">
+          <valueString value="context-type-value"/>
+        </extension>
+        <extension url="required">
+          <valueString value="status"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <extension url="required">
+          <valueString value="publisher"/>
+        </extension>
+        <extension url="required">
+          <valueString value="status"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <extension url="required">
+          <valueString value="publisher"/>
+        </extension>
+        <extension url="required">
+          <valueString value="status"/>
+        </extension>
+        <extension url="required">
+          <valueString value="version"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <extension url="required">
+          <valueString value="publisher"/>
+        </extension>
+        <extension url="required">
+          <valueString value="version"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <extension url="required">
+          <valueString value="status"/>
+        </extension>
+        <extension url="required">
+          <valueString value="title"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <extension url="required">
+          <valueString value="status"/>
+        </extension>
+        <extension url="required">
+          <valueString value="title"/>
+        </extension>
+        <extension url="required">
+          <valueString value="version"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <extension url="required">
+          <valueString value="status"/>
+        </extension>
+        <extension url="required">
+          <valueString value="version"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <extension url="required">
+          <valueString value="title"/>
+        </extension>
+        <extension url="required">
+          <valueString value="version"/>
+        </extension>
+      </extension>
       <type value="Questionnaire"/>
+      <documentation value="-  Provider EHR *SHOULD* be capable of supporting  the[ Argonaut Questionnaire ValueSet Profile](http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire-valueset) as a contained resource with the Argonaut Questionnaire Profile."/>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHOULD"/>
@@ -250,7 +376,138 @@
       <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
         <valueCode value="SHOULD"/>
       </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <extension url="required">
+          <valueString value="author"/>
+        </extension>
+        <extension url="required">
+          <valueString value="patient"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <extension url="required">
+          <valueString value="author"/>
+        </extension>
+        <extension url="required">
+          <valueString value="patient"/>
+        </extension>
+        <extension url="required">
+          <valueString value="status"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <extension url="required">
+          <valueString value="author"/>
+        </extension>
+        <extension url="required">
+          <valueString value="status"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <extension url="required">
+          <valueString value="context"/>
+        </extension>
+        <extension url="required">
+          <valueString value="patient"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <extension url="required">
+          <valueString value="context"/>
+        </extension>
+        <extension url="required">
+          <valueString value="patient"/>
+        </extension>
+        <extension url="required">
+          <valueString value="status"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <extension url="required">
+          <valueString value="context"/>
+        </extension>
+        <extension url="required">
+          <valueString value="status"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <extension url="required">
+          <valueString value="patient"/>
+        </extension>
+        <extension url="required">
+          <valueString value="source"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <extension url="required">
+          <valueString value="patient"/>
+        </extension>
+        <extension url="required">
+          <valueString value="source"/>
+        </extension>
+        <extension url="required">
+          <valueString value="status"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <extension url="required">
+          <valueString value="patient"/>
+        </extension>
+        <extension url="required">
+          <valueString value="status"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <extension url="required">
+          <valueString value="questionnaire"/>
+        </extension>
+        <extension url="required">
+          <valueString value="status"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination">
+        <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+          <valueCode value="SHOULD"/>
+        </extension>
+        <extension url="required">
+          <valueString value="source"/>
+        </extension>
+        <extension url="required">
+          <valueString value="status"/>
+        </extension>
+      </extension>
       <type value="QuestionnaireResponse"/>
+      <documentation value="-  Provider EHR *SHOULD* be capable of supporting  the[ Argonaut Questionnaire Profile](http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire) as a contained resource with the Argonaut Adaptive QuestionnaireResponse Profile.&#xA;-  Provider EHR *SHOULD* be capable of supporting  the[ Argonaut Questionnaire ValueSet Profile](http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire-valueset) as a contained resource with the Argonaut Questionnaire Profile."/>
       <interaction>
         <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
           <valueCode value="SHOULD"/>
