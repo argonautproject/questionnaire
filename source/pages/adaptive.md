@@ -28,7 +28,7 @@ See the [HealthMeasures] website for further background, theory and use cases fo
 1. The Questionnaire may expire and the form may not be valid. Time limits for completion of a questionnaire or individual question can be defined and the Form Filler Application can record the start and stop date-times using the [Argonaut Questionnaire Time Limit Extension] and [Argonaut QuestionnaireResponse Response Period Extension].  Note that either Form Filler or Service could determine if the response is within a time limit. How this information modifies the behavior of the Form-filler or interpretation of results is an implementation detail outside of scope of this Implementation Guide.
 1. The assessment  are short - e.g., PROMIS forms have up to 12 transactions  (on average 4-12).
 1. The service may calculate and record scores in the QuestionnaireResponse resource as "answers" to a "score" question item in the Questionnaire.  The score item is flagged as [`readOnly`] and may be marked as *hidden* using the [Questionnaire Hidden Extension] to direct the Form Filler that the item should not be displayed to the user.
-  - To assist in calculating scores the standard [ValueSet Ordinal Value Extension] and [Questionnaire Ordinal Value Extension] may be used on items. *NOTE: This implementation quide extends the context of the Questionnaire Ordinal Value Extension to elements beyond that defined in the FHIR Specification.*
+  - To assist in calculating scores the standard [ValueSet Ordinal Value Extension] and [Questionnaire Ordinal Value Extension] may be used on items. *NOTE: This implementation guide extends the context of the Questionnaire Ordinal Value Extension to elements beyond that defined in the FHIR Specification.*
   - How and when scoring is done is an implementation detail and outside the scope of this guide.
 1.  The [Argonaut Questionnaire Item Order Extension] and [conceptOrder] extension may be used by the service to ensure the relative order of Questionnaire items is maintained between transactions.
 1. There are no constraints on the nesting of item groups and there are several possible items and item groupings including:
@@ -92,11 +92,11 @@ The Form Filler renders the item, presents it to the end-user and records the re
 
 {% include img-narrow.html img="aqr_diagrams_c.svg" %}
 
-As result of the operation, the Service updates the Questionnaire and returns it to the Form Filler.  It identifies the adaptive questionnaire items by their  `definiton` or `linkID` elements and determines the next question based on the responses.  It may also calculate intermediate and/or cumulative scores. The Service updates the contained Questionnaire with the next question and scores if scoring is done and returns it within the QuestionnaireResponse.
+As result of the operation, the Service updates the Questionnaire and returns it to the Form Filler.  It identifies the adaptive questionnaire items by their `definition` or `linkID` elements and determines the next question based on the responses.  It may also calculate intermediate and/or cumulative scores. The Service updates the contained Questionnaire with the next question and scores if scoring is done and returns it within the QuestionnaireResponse.
 
 {% include img-narrow.html img="aqr_diagrams_d.svg" %}
 
- This step is repeated until the adaptive questionnaire is done or the Questionnaire has timed out or another error has occured.
+ This step is repeated until the adaptive questionnaire is done or the Questionnaire has timed out or another error has occurred.
 
 
 #### APIs
@@ -131,7 +131,7 @@ The Form Filler and Service repeat the process to get the next questions and ans
 {% include img-narrow.html img="aqr_diagrams_e.svg" %}
 {% include img-narrow.html img="aqr_diagrams_f.svg" %}
 
-When the Service determines that the adaptive questionnaire is complete, instead of updating the Questionnnaire with the next question, it updates the QuestionnaireResponse status to ‘completed'. The status of ‘completed’ signals to the Form Filler that the adaptive Questionnaire is done.  If scoring is done by the Service, the scores may be reported and updated for each transaction or reported once at the end as is shown in diagram below.
+When the Service determines that the adaptive questionnaire is complete, instead of updating the Questionnaire with the next question, it updates the QuestionnaireResponse status to ‘completed'. The status of ‘completed’ signals to the Form Filler that the adaptive Questionnaire is done.  If scoring is done by the Service, the scores may be reported and updated for each transaction or reported once at the end as is shown in diagram below.
 
 {% include img-narrow.html img="aqr_diagrams_g.svg" %}
 

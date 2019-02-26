@@ -12,7 +12,7 @@ These value sets have been defined for use in the [Questionnaire examples] to de
 
 **Code systems published in this IG** - Includes US Core defined code systems and externally defined code systems
 
-This value sets hs been defined for use in the [Questionnaire examples] to demonstrate how valuesets can be used as choices list for certain questions using the `options` element:
+This value sets has been defined for use in the [Questionnaire examples] to demonstrate how valuesets can be used as choices list for certain questions using the `options` element:
 {% include list-simple-codesystems.xhtml %}
 
 

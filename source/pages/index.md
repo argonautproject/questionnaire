@@ -16,7 +16,7 @@ topofpage: true
 ##  Introduction
 
 The goal of the Argonaut Questionnaire Project is to develop guidance to support interchange of simple forms based on [FHIR Version 3.0.1] and specifically the [Questionnaire] and [QuestionnaireResponse] resources.  This implementation guide provides implementers with FHIR RESTful APIs and guidance to create, use and share between organizations standard assessment forms and the assessment responses.
-The requirements were developed and defined by the Argonaut Questionnaire project team and tested through pilot implementations, Argonaut virtual connectathons and HL7 sponsored Connectathons.
+The requirements were developed and defined by the Argonaut Questionnaire project team and tested through pilot implementations, Argonaut virtual connectathons and HL7 sponsored connectathons.
 
 This implementation Guide is organized as follows:
 
@@ -28,8 +28,8 @@ This implementation Guide is organized as follows:
 - The [Downloads] page contains many downloadable files to help with implementation of this specification.
 
 ## Scope
-Clinical Assessment used in healthcare can be very sophisticated and complex tools and there are many facets to them. (for example, automatic prepopulation of fields, rendering,  and interactive UIs).  However,
-there is clearly a need for a common form standard with a focus on simple assessments.  Clinical Assessments that are hand crafted lead to non standard responses and limited reuse.   Forms should be shareable between systems and across organizational boundaries. With this in mind, the Argonaut Questionnaire Poject's focus and scope is on *simple* clinical assessments for the provider with general applicability and question sets that are mostly unstructured in systems today.  The  following table summarizes the scope of this implementation's guide:
+Clinical Assessment used in healthcare can be very sophisticated and complex tools and there are many facets to them. (for example, automatic pre-population of fields, rendering,  and interactive UIs).  However,
+there is clearly a need for a common form standard with a focus on simple assessments.  Clinical Assessments that are hand crafted lead to non standard responses and limited reuse.   Forms should be shareable between systems and across organizational boundaries. With this in mind, the Argonaut Questionnaire Project's focus and scope is on *simple* clinical assessments for the provider with general applicability and question sets that are mostly unstructured in systems today.  The  following table summarizes the scope of this implementation's guide:
 
 <div class="row">
 <div class="col-sm-4" markdown="1" style="background-color: Lightcyan;">
@@ -56,7 +56,7 @@ there is clearly a need for a common form standard with a focus on simple assess
     - Embedded logic for "dynamic" question trees
     - Pre-population and rendering (up to the application)
     - Graphs, flow sheets, charts, video
-- CIMI and openEHR-like modelling efforts
+- CIMI and openEHR-like modeling efforts
 - How to elevate response data into structured data
 - Data sharing workflow considerations
 
@@ -67,7 +67,7 @@ there is clearly a need for a common form standard with a focus on simple assess
 </div>
 
 ### Prior and Concurrent Work
-The [SDC (Structured Data Capture)] implementation quide based on [FHIR Version 4.0.0] provides a set of guidance around the use of Questionnaire and QuestionnaireResponse for more advanced implementation of Questionnaires including:
+The [SDC (Structured Data Capture)] implementation guide based on [FHIR Version 4.0.0] provides a set of guidance around the use of Questionnaire and QuestionnaireResponse for more advanced implementation of Questionnaires including:
  - Advanced Rendering
  - Advanced Form behavior
  - Importation of Data into Forms
@@ -98,13 +98,14 @@ The Patient Reported Outcomes (PRO) implementation guide focus on capturing and 
 
 
 ## Assumptions and Preconditions
+
 - The Assessment is completed directly by the subject or by a "provider administer" on behalf of the subject or with input from the subject.
 - Patient consent management is out of scope.
-- Forms are created and shared within and across organizations
+- Forms are created and shared within and across organizations.
 - The questions, answers/answer choices and scoring information are agreed upon across all users of the assessment.
 - The appropriate copyright/licensing issues have been addressed.
-- This guides supports the four uses cases defined for Phase 1 of the Argonaut Project
-- If the patient Subject/Patient Administrator logs in via a third-party application or logged into an EHR’s patient portal, the subject ID is returned or known
+- This guides supports the four uses cases defined for Phase 1 of the Argonaut Project.
+- If the patient Subject/Patient Administrator logs in via a third-party application or logged into an EHR’s patient portal, the subject ID is returned or known.
   - User level login and trust exists between the EHR and a third party application.
       - A client application has been authorized by the health system and uses [SMART on FHIR] authorization for apps that connect to EHR data.
 <!--
@@ -156,9 +157,9 @@ Adaptive Forms or Questionnaires such as [PROMIS] forms use a stateless model wh
 
 ## Security and Privacy Considerations
 
-For general security consideration refer to the [Security section] in the US Core Implementation Guide and [FHIR Security] section in core FHIR Specification. See the [Assumptions] section above for a discussion of login and trust.
+For general security consideration refer to the [US Core Implementation Guide security section] and [FHIR Security] in core FHIR Specification. See the [Assumptions] section above for a discussion of login and trust.
 
-Responses to Questionnaires may be stored in an external ‘answer bank’ that is shared and may not be in a trusted environment. Therefore careful consideration to determine whether posting a QuestionnaireResponse to a shared answer bank is risking the patient's privacy. Guidance on how to maintain patient privacy and still be able to search the responses effectively is provided in [this section].
+Responses to Questionnaires may be stored in an external ‘answer bank’ that is shared and may not be in a trusted environment. Therefore careful consideration to determine whether posting a QuestionnaireResponse to a shared answer bank is risking the patient's privacy. Guidance on how to maintain patient privacy and still be able to search the responses effectively is provided in the section on [Patient Demographic Based Search].
 
 ---
 

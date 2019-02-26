@@ -16,9 +16,9 @@ topofpage: true
 
 The Argonaut Questionnaire Implementation Guide defines a series of interactions which cover the basic workflow for the creation, discovery and retrieval of simple static text-based forms using FHIR Questionnaire and QuestionnaireResponse and the FHIR API.  The reader is encouraged to familiarize herself with the capabilities of the Questionnaire and QuestionnaireResponse Response resources by reviewing the guidance given in the FHIR specification and the [Argonaut Questionnaire Profile] and [Argonaut QuestionnaireResponse Profile] pages.
 
-Each assessment tool (i.e., set of questions and answer choices) is created once as FHIR Questionnaires and centrally stored in an Assessment Bank which can be accessed by the Provider EHR. The Client Application can then render the form for the end user to complete.  The form responses are captured and processed by the Client and can be stored using the QuestionnaireResponse in an Answer Bank and subsequently retrieved by the Providers for review. Although out of scope for this guide, these results can be aggregated and shared within or across systems.
+Each assessment tool (i.e., set of questions and answer choices) is created once as FHIR Questionnaires and centrally stored in an Assessment Bank which can be accessed by the Provider EHR.  The Client Application can then render the form for the end user to complete.  The form responses are captured and processed by the Client and can be stored using the QuestionnaireResponse in an Answer Bank and subsequently retrieved by the Providers for review. Although out of scope for this guide, these results can be aggregated and shared within or across systems.
 
-These basic workflow steps and API are detailed below. This guidance covers more basic scenarios, but can be scaled up towards more complex scenarios ( for example, see [Structured Data Capture Initiative]). Note that the search guidance below is applicable [*completed* Adaptive forms] as well.
+These basic workflow steps and API are detailed below. This guidance covers more basic scenarios, but can be scaled up towards more complex scenarios ( for example, see the [Structured Data Capture Initiative]). Note that the search guidance below is applicable to the [*completed* Adaptive forms] as well.
 
 ## Example Scenario
 
@@ -36,7 +36,6 @@ Example list of Assessment Categories:
 1. Housing assessment  
 1. Suicide risk assessment  
 1. Universal screening using depression screening
-...
 
 Each assessment tool (i.e., set of questions and answer choices) is created once as FHIR Questionnaires and centrally stored in an “Assessment Bank” which can be accessed the program participants (provider EHRS). The provider can then use them to create online questionnaires for their patients.  The responses are captured and processed by the provider EHRS and retrieved by the providers for review. These results are shared with the Agency overseeing the program.
 
@@ -52,7 +51,7 @@ Before an assessment can retrieved it must be created.  This step MAY include up
 
 {% include img-narrow.html img="st-step1.jpg" %}
 
-The Author/Editor is able to upload the Questionnaires to a FHIR server which serves as a repository where all the program participants can search and download the standard assessment when they need them.  Multiple version of each assessment may be available. [see issues]
+The Author/Editor is able to upload the Questionnaires to a FHIR server which serves as a repository where all the program participants can search and download the standard assessment when they need them.  Multiple version of each assessment may be available.
 
 <!-- {% raw %}>{% include img.html img="diagrams/Slide30.png" caption="Appointment Availability Discovery and Search" %}{% endraw %} -->
 
@@ -220,7 +219,7 @@ create *multiple* QuestionnaireResponses using a [batch] transaction:
 
 Responses to the assessment are retrieved for a variety of purposes. QuestionnaireResponse can be searched using the standard QuestionnaireResponse search parameters listed below.  If the Answer Bank has access to the Questionnaire resource, searches may fetch the Questionnaire at the same time as well using the [`_include`] parameter.   **Note that individual responses are not directly searchable using the FHIR RESTful API**.  In order to search directly on responses, they must be "downloaded" into a searchable form - i.e. to a local  FHIR or non-FHIR data store such as a database or FHIR Observations.
 
-#### Patient Demographic Based Searches
+#### Patient Demographic Based Search
 
 It is common to search for responses based on patient demographic information such as such as age, sex, race, location. There are three options for searching based on the subject demographics:
 
