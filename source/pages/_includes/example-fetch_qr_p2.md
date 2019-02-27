@@ -3,7 +3,7 @@
 **Request**
 
 ~~~
-GET http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireResponse?patient.gender=male&patient.birthdate=le1975
+GET http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireResponse?patient.address-postalcode=945
 
 User-Agent: python-requests/2.20.0
 Accept: application/fhir+json

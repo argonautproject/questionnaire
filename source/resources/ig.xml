@@ -312,8 +312,8 @@
       <source value="guidance.html"/>
       <title value="General Guidance"/>
       <kind value="page"/>
-      <page><source value="static.html"/><title value="Static "/><kind value="page"/></page>
-      <page><source value="adaptive.html"/><title value="Adaptive "/><kind value="page"/></page>
+      <page><source value="static.html"/><title value="Static"/><kind value="page"/></page>
+      <page><source value="adaptive.html"/><title value="Adaptive"/><kind value="page"/></page>
     </page>
     <!-- ============ Profiles Page =============== -->
     <page>

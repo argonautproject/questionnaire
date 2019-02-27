@@ -375,12 +375,12 @@
         "generation" : "html",
         "page" : [{
           "nameUrl" : "static.html",
-          "title" : "Static ",
+          "title" : "Static",
           "generation" : "html"
         },
         {
           "nameUrl" : "adaptive.html",
-          "title" : "Adaptive ",
+          "title" : "Adaptive",
           "generation" : "html"
         }]
       },

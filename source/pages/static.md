@@ -155,7 +155,7 @@ Searching for *all* the active Questionnaires by a particular publisher :
 
   `GET [base]/Questionnaire?status=active&publisher=[publisher]`
 
-{% include examplebutton_default.html example="example-fetch_q_status" b_title = "Example Search by Status and Publisher..."%}
+{% include examplebutton_default.html example="example-fetch_q_status_pub" b_title = "Example Search by Status and Publisher..."%}
 
 Searching for a *collection* of Questionnaires based on context-type and context-value(think category):
 
@@ -280,7 +280,7 @@ Fetching a *single* QuestionnaireResponse:
 
     `GET [base]/QuestionnaireResponse?_id=[id]&_include=QuestionnaireResponse:questionnaire`
 
-{% include examplebutton_default.html example="example-fetch_qr_id_q" b_title = "Example Search by ID with Questionnaire..." %}
+{% include examplebutton_default.html example="example-fetch_qr_id_q" b_title = "Example Search by ID with included Questionnaire..." %}
 
 
 
@@ -306,11 +306,11 @@ Searching for *all* QuestionnaireResponses with any status
 
   `GET [base]/QuestionnaireResponse/?source=Practitioner/[practitioner]`
 
-{% include examplebutton_default.html example="example-fetch_qr_source" b_title = "Search QuestionnaireResponses by Provider" %}
+{% include examplebutton_default.html example="example-fetch_qr_source" b_title = "Search QuestionnaireResponses by Source" %}
 
   `GET [base]/QuestionnaireResponse/?author=Practitioner/[practitioner]`
 
-{% include examplebutton_default.html example="example-fetch_qr_author" b_title = "Search QuestionnaireResponses by Provider" %}
+{% include examplebutton_default.html example="example-fetch_qr_author" b_title = "Search QuestionnaireResponses by Author" %}
 
 Searching for all QuestionnaireResponses based upon patient demographics
 
@@ -324,19 +324,14 @@ Searching for all QuestionnaireResponses based upon patient demographics
 
     `GET [base]/QuestionnaireResponse/?patient.address-postalcode=[zip]`
 
-{% include examplebutton_default.html example="example-fetch_qr_p1" b_title = "Chained Search on QuestionnaireResponses by Patient Address" %}
+{% include examplebutton_default.html example="example-fetch_qr_p2" b_title = "Chained Search on QuestionnaireResponses by Patient Address" %}
 
-- based on ethnicity:
-
-    `GET [base]/QuestionnaireResponse/?patient.ethnicity=[ethnicity code]`
-
-{% include examplebutton_default.html example="example-fetch_qr_p1" b_title = "Chained Search on QuestionnaireResponses by Patient Ethnicity" %}
-
-- based on race:
+- based on race or ethnicity:
 
     `GET [base]/QuestionnaireResponse/?patient.race=[race code]`
+    `GET [base]/QuestionnaireResponse/?patient.ethnicity=[ethnicity code]`
 
-{% include examplebutton_default.html example="example-fetch_qr_p1" b_title = "Chained Search on QuestionnaireResponses by Patient Race" %}
+{% include examplebutton_default.html example="example-fetch_qr_p3" b_title = "Chained Search on QuestionnaireResponses by Patient Race" %}
 
 ### Examples and Reference Implementation
 

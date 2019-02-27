@@ -1,9 +1,9 @@
  [`readOnly`]:{{site.data.fhir.path}}questionnaire-definitions.html#Questionnaire.item.readOnly  "An indication, when true, that the value cannot be changed by a human respondent to the Questionnaire."
- [Adaptive Questionnaire is Complete]: adaptive.htmladaptive-questionnaire-is-complete
+ [Adaptive Questionnaire is Complete]: adaptive.html#adaptive-questionnaire-is-complete
  [Argonaut Adaptive QuestionnaireResponse Profile Quick Start]: StructureDefinition-argo-adap-questionnaireresponse.html#quick-start
  [Argonaut Questionnaire Profile Quick Start]: StructureDefinition-argo-questionnaire.html#quick-start
  [Argonaut Questionnaire Test Renderer]: http://gettingstarte-cjfwz-env.us-west-2.elasticbeanstalk.com/
- [conceptOrder]: {site.data.fhir.path}}extension-valueset-conceptorder.html "Identifies the relative order in which concepts within the value set should be presented to a user."
+ [conceptOrder]: {{site.data.fhir.path}}extension-valueset-conceptorder.html "Identifies the relative order in which concepts within the value set should be presented to a user."
  [described above]: #get-next-question
  [Form Author Posts to Assessment Bank]: static.html#form-author-posts-to-assessment-bank
  [Get Next Question]: adaptive.html#get-next-question
@@ -63,7 +63,7 @@
 [FHIR Version 4.0.0]: http://hl7.org/fhir/R4/ "FHIR Release #4: First Normative Content"
 [four uses cases]: http://argonautwiki.hl7.org/images/4/4c/Argonaut_UseCasesV1.pdf
 [LOINC]: http://loinc.org
-[Must Support]: {{site.data.fhir.uscore}}//guidance.html#must-support
+[Must Support]: {{site.data.fhir.uscore}}/guidance.html#must-support
 [Observation]: {{site.data.fhir.path}}observation.html "Observation resource"
 [OperationOutcome]: {{site.data.fhir.path}}operationoutcome.html
 [Patient Reported Outcomes (PRO)]: http://www.hl7.org/fhir/us/patient-reported-outcomes/history.cfml "Standardization in the creation, administration and sharing of PRO data"
@@ -82,7 +82,7 @@
 [US Core Implementation Guide security section]: {{site.data.fhir.uscore}}/security.html "US Core Security"
 [server]: CapabilityStatement-server.html
 [SMART Backend Services]: http://docs.smarthealthit.org/authorization/backend-services/
-[SMART on FHIR]: {{site.data.fhir.path}}smart-app-launch/
+[SMART on FHIR]: http://hl7.org/fhir/smart-app-launch/1.0.0/
 [Static Forms Use Case]: static.html
 [Structured Data Capture Initiative]: http://build.fhir.org/ig/HL7/sdc/ "SDC"
 [Terminology]: terminology.html "Defines expectations for sharing of Questionnaires and answers, including mechanisms for automatically populating portions of a questionnaire based on embedded mappings to underlying data elements"

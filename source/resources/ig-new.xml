@@ -370,12 +370,12 @@
         <generation value="html"/>
         <page>
           <nameUrl value="static.html"/>
-          <title value="Static "/>
+          <title value="Static"/>
           <generation value="html"/>
         </page>
         <page>
           <nameUrl value="adaptive.html"/>
-          <title value="Adaptive "/>
+          <title value="Adaptive"/>
           <generation value="html"/>
         </page>
       </page>

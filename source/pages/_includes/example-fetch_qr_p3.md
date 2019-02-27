@@ -3,7 +3,7 @@
 **Request**
 
 ~~~
-GET http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireResponse?patient.gender=male&patient.birthdate=le1975
+GET http://sqlonfhir-stu3.azurewebsites.net/fhir/QuestionnaireResponse?patient.patient.race=2028-9
 
 User-Agent: python-requests/2.20.0
 Accept: application/fhir+json
@@ -47,7 +47,7 @@ Content-Type: application/fhir+json; charset=utf-8
                         {
                            "url": "ombCategory",
                            "valueCoding": {
-                              "code": "asian",
+                              "code": "2028-9",
                               "display": "Asian",
                               "system": "urn:oid:2.16.840.1.113883.6.238"
                            }

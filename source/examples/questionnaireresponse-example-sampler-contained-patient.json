@@ -18,7 +18,7 @@
                   {
                      "url": "ombCategory",
                      "valueCoding": {
-                        "code": "asian",
+                        "code": "2028-9",
                         "display": "Asian",
                         "system": "urn:oid:2.16.840.1.113883.6.238"
                      }
