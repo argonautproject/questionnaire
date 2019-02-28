@@ -670,12 +670,12 @@
         "page": [
           {
             "source": "static.html",
-            "title": "Static ",
+            "title": "Static",
             "kind": "page"
           },
           {
             "source": "adaptive.html",
-            "title": "Adaptive ",
+            "title": "Adaptive",
             "kind": "page"
           }
         ]

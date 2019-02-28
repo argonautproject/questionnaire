@@ -669,12 +669,12 @@
        fhir:ImplementationGuide.page.page [
          fhir:index 0;
          fhir:ImplementationGuide.page.source [ fhir:value "static.html" ];
-         fhir:ImplementationGuide.page.title [ fhir:value "Static " ];
+         fhir:ImplementationGuide.page.title [ fhir:value "Static" ];
          fhir:ImplementationGuide.page.kind [ fhir:value "page" ]
        ], [
          fhir:index 1;
          fhir:ImplementationGuide.page.source [ fhir:value "adaptive.html" ];
-         fhir:ImplementationGuide.page.title [ fhir:value "Adaptive " ];
+         fhir:ImplementationGuide.page.title [ fhir:value "Adaptive" ];
          fhir:ImplementationGuide.page.kind [ fhir:value "page" ]
        ]
      ], [

@@ -1,0 +1,18 @@
+﻿{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Argonaut Argo Questionnaire Provider Ehr CapabilityStatement",
+    "description": "This section outlines conformance requirements for the Argonaut Questionnaire Provider EHR.  It may be responsible for retrieving, rendering and displaying both static and adaptive Questionnaires and QuestionnairesResponses.  The Argonaut Questionnaire Profile,  Argonaut QuestionnaireResponse Profile and Argonaut Adaptive QuestionnaireResponse Profiles and all the interactions outlined in this guide are the RESTful artifacts and interactions that it supports.   Note that the Argonaut Profiles identify the structural constraints, terminology bindings and invariants and the individual Argonaut SearchParameter resources define the definitions, comparators, modifiers and usage constraints.",
+    "license": {
+      "name": "CC0-1.0"
+    },
+    "version": "1.0.0",
+    "contact": {
+      "url": "https://github.com/argonautproject/questionnaire/issues"
+    }
+  },
+  "externalDocs": {
+    "url": "http://fhir.org/guides/argonaut-questionnaire/CapabilityStatement/argo-questionnaire-provider-ehr",
+    "description": "FHIR CapabilityStatement"
+  }
+}

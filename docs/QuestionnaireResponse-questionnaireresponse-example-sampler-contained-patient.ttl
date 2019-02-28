@@ -33,7 +33,7 @@
          fhir:Extension.url [ fhir:value "ombCategory" ];
          fhir:Extension.valueCoding [
            fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
-           fhir:Coding.code [ fhir:value "asian" ];
+           fhir:Coding.code [ fhir:value "2028-9" ];
            fhir:Coding.display [ fhir:value "Asian" ]
          ]
        ];
