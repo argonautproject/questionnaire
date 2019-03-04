@@ -8,7 +8,7 @@
 	<status value="active"/>
 	<date value="2019-02-04"/>
 	<publisher value="The Argonaut Project"/>
-	<description value="An integer representing the order of questions within Questionnaires groups, groups within groups and groups within questions and the order of answer choices for questions of type 'choice' and 'open-choice using `Questionnaire.item.option`."/>
+	<description value="A non-negative integer representing the order of questions within Questionnaires groups, groups within groups and groups within questions and the order of answer choices for questions of type 'choice' and 'open-choice using `Questionnaire.item.option`. The order values should be consecutive and start at 0 or 1."/>
 	<purpose value="The order of questions within groups, groups within groups and groups within questions is relevant and must be retained for display and capture for both Questionnaire.  The order of answer choices may also be significant."/>
 	<fhirVersion value="3.0.1"/>
 	<kind value="complex-type"/>
@@ -24,8 +24,10 @@
 		<element id="Extension">
 			<path value="Extension"/>
 			<short value="Questions and answer choice order rank."/>
-			<definition value="An integer representing the order of questions within Questionnaires groups, groups within groups and groups within questions and the order of answer choices for questions of type 'choice' and 'open-choice using `Questionnaire.item.option`."/>
-			<comment value="Note that a the order within an array *SHALL* be maintained in conformant FHIR implementation.  However, this is difficult to validate.  An explicit order element for Questionnaires item groups and answer choices helps the renderer to maintain the proper order as well as when the resource instance is reassembled from an application's internal format.  When using a contained value set representing permitted answers for a 'choice' or 'open-choice' question use the standard FHIR extension [valueset-conceptOrder](http://hl7.org/fhir/STU3/extension-valueset-conceptorder.html) to indicate the order."/>
+			<definition value="A non-negative integer representing the order of questions within Questionnaires groups, groups within groups and groups within questions and the order of answer choices for questions of type 'choice' and 'open-choice using `Questionnaire.item.option`. The order values should be consecutive and start at 0 or 1"/>
+			<comment value="Note that a the order within an array *SHALL* be maintained in conformant FHIR implementation.  However in practice, this can be difficult to validate and maintain. An explicit order element for Questionnaires item groups and answer choices helps the renderer to preserve the proper order.  For example when the resource instance is split up and then reassembled from an application's internal format.
+
+ 			When using a contained value set representing permitted answers for a 'choice' or 'open-choice' question use the standard FHIR extension [valueset-conceptOrder](http://hl7.org/fhir/STU3/extension-valueset-conceptorder.html) to indicate the order rank in the same manner as with this extension"/>
 			<min value="0"/>
 			<max value="1"/>
 			<isModifier value="false"/>

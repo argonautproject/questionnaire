@@ -1468,8 +1468,8 @@
         "path": "Questionnaire.item.extension",
         "sliceName": "item-order",
         "short": "Questions and answer choice order rank.",
-        "definition": "An integer representing the order of questions within Questionnaires groups, groups within groups and groups within questions and the order of answer choices for questions of type 'choice' and 'open-choice using `Questionnaire.item.option`.",
-        "comment": "Note that a the order within an array *SHALL* be maintained in conformant FHIR implementation.  However, this is difficult to validate.  An explicit order element for Questionnaires item groups and answer choices helps the renderer to maintain the proper order as well as when the resource instance is reassembled from an application's internal format.  When using a contained value set representing permitted answers for a 'choice' or 'open-choice' question use the standard FHIR extension [valueset-conceptOrder](http://hl7.org/fhir/STU3/extension-valueset-conceptorder.html) to indicate the order.",
+        "definition": "A non-negative integer representing the order of questions within Questionnaires groups, groups within groups and groups within questions and the order of answer choices for questions of type 'choice' and 'open-choice using `Questionnaire.item.option`. The order values should be consecutive and start at 0 or 1",
+        "comment": "Note that a the order within an array *SHALL* be maintained in conformant FHIR implementation.  However in practice, this can be difficult to validate and maintain. An explicit order element for Questionnaires item groups and answer choices helps the renderer to preserve the proper order.  For example when the resource instance is split up and then reassembled from an application's internal format.      When using a contained value set representing permitted answers for a 'choice' or 'open-choice' question use the standard FHIR extension [valueset-conceptOrder](http://hl7.org/fhir/STU3/extension-valueset-conceptorder.html) to indicate the order rank in the same manner as with this extension",
         "min": 0,
         "max": "1",
         "base": {
@@ -2386,8 +2386,8 @@
         "path": "Questionnaire.item.option.extension",
         "sliceName": "option-order",
         "short": "Questions and answer choice order rank.",
-        "definition": "An integer representing the order of questions within Questionnaires groups, groups within groups and groups within questions and the order of answer choices for questions of type 'choice' and 'open-choice using `Questionnaire.item.option`.",
-        "comment": "Note that a the order within an array *SHALL* be maintained in conformant FHIR implementation.  However, this is difficult to validate.  An explicit order element for Questionnaires item groups and answer choices helps the renderer to maintain the proper order as well as when the resource instance is reassembled from an application's internal format.  When using a contained value set representing permitted answers for a 'choice' or 'open-choice' question use the standard FHIR extension [valueset-conceptOrder](http://hl7.org/fhir/STU3/extension-valueset-conceptorder.html) to indicate the order.",
+        "definition": "A non-negative integer representing the order of questions within Questionnaires groups, groups within groups and groups within questions and the order of answer choices for questions of type 'choice' and 'open-choice using `Questionnaire.item.option`. The order values should be consecutive and start at 0 or 1",
+        "comment": "Note that a the order within an array *SHALL* be maintained in conformant FHIR implementation.  However in practice, this can be difficult to validate and maintain. An explicit order element for Questionnaires item groups and answer choices helps the renderer to preserve the proper order.  For example when the resource instance is split up and then reassembled from an application's internal format.      When using a contained value set representing permitted answers for a 'choice' or 'open-choice' question use the standard FHIR extension [valueset-conceptOrder](http://hl7.org/fhir/STU3/extension-valueset-conceptorder.html) to indicate the order rank in the same manner as with this extension",
         "min": 0,
         "max": "1",
         "base": {
