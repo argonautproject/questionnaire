@@ -17,6 +17,7 @@
   fhir:StructureDefinition.name [ fhir:value "argo_questionnaire_valueset"];
   fhir:StructureDefinition.title [ fhir:value "Argonaut Questionnaire Contained ValueSet Profile"];
   fhir:StructureDefinition.status [ fhir:value "active"];
+  fhir:StructureDefinition.experimental [ fhir:value "false"^^xsd:boolean];
   fhir:StructureDefinition.date [ fhir:value "2018-05-30T00:00:00-07:00"^^xsd:dateTime];
   fhir:StructureDefinition.description [ fhir:value "The  Argonaut Questionnaire Contained ValueSet Profile is contained within the Argonaut Questionnaire Profile:\n\n- It requires an [expansion] of the code set to constrains the concepts to particular set of conditions for a given questionnaire.\n\n- The [Valuset Ordinal Value Extension] is added as a [Must Support] element to support the calculation of scores from the associated assessments.\n\n - The `ValueSet.url` element is constrained to a  [Must Support] element to provide an alternative literal address at which this value set is (or will be) published."];
   fhir:StructureDefinition.fhirVersion [ fhir:value "3.0.1"];
@@ -353,7 +354,7 @@
        fhir:Element.id [ fhir:value "ValueSet.url" ];
        fhir:ElementDefinition.path [ fhir:value "ValueSet.url" ];
        fhir:ElementDefinition.short [ fhir:value "Logical URI to reference this value set (globally unique)" ];
-       fhir:ElementDefinition.definition [ fhir:value "An absolute URI that is used to identify this value set when it is referenced in a specification, model, design or an instance. This SHALL be a URL, SHOULD be globally unique, and SHOULD be an address at which this value set is (or will be) published. The URL SHOULD include the major version of the value set. For more information see [Technical and Business Versions](resource.html#versions)." ];
+       fhir:ElementDefinition.definition [ fhir:value "An absolute URI that is used to identify this value set when it is referenced in a specification, model, design or an instance. This SHALL be a URL, SHOULD be globally unique, and SHOULD be an address at which this value set is (or will be) published. The URL SHOULD include the major version of the value set. For more information see [Technical and Business Versions](http://hl7.org/fhir/STU3/resource.html#versions)." ];
        fhir:ElementDefinition.comment [ fhir:value "Can be a urn:uuid: or a urn:oid:, but real http: addresses are preferred.  Multiple instances may share the same url if they have a distinct version." ];
        fhir:ElementDefinition.requirements [ fhir:value "The literal reference  can be used to reference the source valueset for external mappings." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];

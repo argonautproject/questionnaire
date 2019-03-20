@@ -172,41 +172,6 @@
 </ul>
 
 
-             <!--        <ul class="nav navbar-nav">
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="guidance.html">General Guidance</a>
-          </li>
-          <li>
-            <a href="profiles.html">Profiles and Logical Models</a>
-          </li>
-          <li>
-            <a href="structuremaps.html">Mappings</a>
-          </li>
-          <li>
-            <a href="extensions.html">Extensions</a>
-          </li>
-          <li>
-            <a href="terminology.html">Terminology</a>
-          </li>
-          <li>
-            <a href="searchparams.html">Search Parameters</a>
-          </li>
-          <li>
-            <a href="capstatements.html">Capability Statements</a>
-          </li>
-          <li>
-            <a href="security.html">Security</a>
-          </li>
-          <li>
-            <a href="examples.html">Examples</a>
-          </li>
-          <li>
-            <a href="downloads.html">Downloads</a>
-          </li>
-        </ul> -->
       </div>
       <!-- /.nav-collapse -->
     </div>
@@ -267,38 +232,38 @@ This is the
     <!--  - choose what you want  comment out or Change what you don't-->
 <ul class="nav nav-tabs">
 
-	<li><a href="ImplementationGuide-ig.html">Narrative Content</a></li>
+	<li><a href="ImplementationGuide-argonaut.us.questionnaire-1.0.0.html">Narrative Content</a></li>
 
 <!--
 { % if ImplementationGuide == "StructureDefinition"  % }
 	{ % if turtle == "definitions"  % }
 		<li class="active"><a href="#">Detailed Descriptions</a></li>
 	{ % else % }
-		<li><a href="ImplementationGuide-ig-definitions.html">Detailed Descriptions</a></li>
+		<li><a href="ImplementationGuide-argonaut.us.questionnaire-1.0.0-definitions.html">Detailed Descriptions</a></li>
 	{ % endif % }
 	{ % if turtle == "mappings" % }
 		<li class="active"><a href="#">Mappings</a></li>
 	{ % else % }
-		<li><a href="ImplementationGuide-ig-mappings.html">Mappings</a></li>
+		<li><a href="ImplementationGuide-argonaut.us.questionnaire-1.0.0-mappings.html">Mappings</a></li>
 	{ % endif % }
 { % endif % }
 -->
 
-<li><a href="ImplementationGuide-ig.xml.html">XML</a></li>
+<li><a href="ImplementationGuide-argonaut.us.questionnaire-1.0.0.xml.html">XML</a></li>
 
 
-	<li><a href="ImplementationGuide-ig.json.html">JSON</a></li>
+	<li><a href="ImplementationGuide-argonaut.us.questionnaire-1.0.0.json.html">JSON</a></li>
 
 <!--
 { % if turtle == "turtle" % }
 	<li class="active"><a href="#">Turtle</a></li>
 { % else % }
-	<li><a href="ImplementationGuide-ig.ttl.html">Turtle</a></li>
+	<li><a href="ImplementationGuide-argonaut.us.questionnaire-1.0.0.ttl.html">Turtle</a></li>
 { % endif % }
 -->
 </ul>
 
-    <h2>Turtle Format: ImplementationGuide-ig</h2>
+    <h2>Turtle Format: ImplementationGuide-argonaut.us.questionnaire-1.0.0</h2>
   
 <!--
    { % elsif page.template == 'definitions'% }
@@ -315,7 +280,7 @@ This is the
 
   <!-- ============ default xml or json content for structuredefinition CONTENT CONTENT=============== -->
   <p>
-  Download Raw <a href="ImplementationGuide-ig.ttl" download>ttl</a>
+  Download Raw <a href="ImplementationGuide-argonaut.us.questionnaire-1.0.0.ttl" download>ttl</a>
   </p>
 
 <pre class="rdf">
@@ -328,12 +293,12 @@ This is the
 
  a fhir:ImplementationGuide;
   <a href="http://hl7.org/fhir/STU3/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
-  <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;ig&quot;];
+  <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#id">fhir:value</a> &quot;argonaut.us.questionnaire-1.0.0&quot;];
   <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.text">fhir:DomainResource.text</a> [
      <a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;generated&quot; ];
-     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;Argonaut Questionnaire&lt;/h2&gt;&lt;p&gt;The official URL for this implementation guide is: &lt;/p&gt;&lt;pre&gt;http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig&lt;/pre&gt;&lt;/div&gt;&quot;
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;Argonaut Questionnaire&lt;/h2&gt;&lt;p&gt;The official URL for this implementation guide is: &lt;/p&gt;&lt;pre&gt;http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/argonaut.us.questionnaire-1.0.0&lt;/pre&gt;&lt;/div&gt;&quot;
   ];
-  <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.url">fhir:ImplementationGuide.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig&quot;];
+  <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.url">fhir:ImplementationGuide.url</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/argonaut.us.questionnaire-1.0.0&quot;];
   <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.version">fhir:ImplementationGuide.version</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;1.0.0&quot;];
   <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.name">fhir:ImplementationGuide.name</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#string">fhir:value</a> &quot;Argonaut Questionnaire&quot;];
   <a href="http://hl7.org/fhir/STU3/implementationguide.html#ImplementationGuide.status">fhir:ImplementationGuide.status</a> [ <a href="http://hl7.org/fhir/STU3/datatypes.html#code">fhir:value</a> &quot;draft&quot;];
@@ -955,7 +920,7 @@ This is the
 
 <!-- simple format links
 <p>
-Formats: <a href="ImplementationGuide-ig.html">Narrative</a>, <a href="ImplementationGuide-ig.xml.html">XML</a>, <a href="ImplementationGuide-ig.json.html">JSON</a>, <a href="ImplementationGuide-ig.ttl.html">Turtle</a>
+Formats: <a href="ImplementationGuide-argonaut.us.questionnaire-1.0.0.html">Narrative</a>, <a href="ImplementationGuide-argonaut.us.questionnaire-1.0.0.xml.html">XML</a>, <a href="ImplementationGuide-argonaut.us.questionnaire-1.0.0.json.html">JSON</a>, <a href="ImplementationGuide-argonaut.us.questionnaire-1.0.0.ttl.html">Turtle</a>
 </p>
 -->
 
@@ -997,12 +962,12 @@ Formats: <a href="ImplementationGuide-ig.html">Narrative</a>, <a href="Implement
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      Argonaut Questionnaire 
-          Continuous Integration Build
-          &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Mon, Mar 4, 2019 12:46-0800.
-      | <a style="color: #81BEF7" href="#">History</a>
+     <a href="http://argonautwiki.hl7.org">Argonaut Project </a> #1.0.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR v3.0.1</a> generated Mar 19, 2019. <br/>
+      Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a>
+      | <a style="color: #81BEF7" href="qa.html">QA Report</a>
+      | <a style="color: #81BEF7" href="#">Version History</a>
+      | <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
       | <a style="color: #81BEF7" href="https://github.com/argonautproject/questionnaire/issues" target="_blank">Propose a change</a>
-        <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->

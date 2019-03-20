@@ -1,7 +1,7 @@
  [`readOnly`]:{{site.data.fhir.path}}questionnaire-definitions.html#Questionnaire.item.readOnly  "An indication, when true, that the value cannot be changed by a human respondent to the Questionnaire."
  [Adaptive Questionnaire is Complete]: adaptive.html#adaptive-questionnaire-is-complete
- [Argonaut Adaptive QuestionnaireResponse Profile Quick Start]: StructureDefinition-argo-adap-questionnaireresponse.html#quick-start
- [Argonaut Questionnaire Profile Quick Start]: StructureDefinition-argo-questionnaire.html#quick-start
+ [Argonaut Adaptive QuestionnaireResponse Profile Quick Start]: StructureDefinition-argo-adap-questionnaireresponse.html#search
+ [Argonaut Questionnaire Profile Quick Start]: StructureDefinition-argo-questionnaire.html#search
  [Argonaut Questionnaire Test Renderer]: http://gettingstarte-cjfwz-env.us-west-2.elasticbeanstalk.com/
  [conceptOrder]: {{site.data.fhir.path}}extension-valueset-conceptorder.html "Identifies the relative order in which concepts within the value set should be presented to a user."
  [described above]: #get-next-question
@@ -63,7 +63,7 @@
 [FHIR Version 4.0.0]: http://hl7.org/fhir/R4/ "FHIR Release #4: First Normative Content"
 [four uses cases]: http://argonautwiki.hl7.org/images/4/4c/Argonaut_UseCasesV1.pdf
 [LOINC]: http://loinc.org
-[Must Support]: {{site.data.fhir.uscore}}/guidance.html#must-support
+[Must Support]: {{site.data.fhir.uscore}}guidance.html#must-support
 [Observation]: {{site.data.fhir.path}}observation.html "Observation resource"
 [OperationOutcome]: {{site.data.fhir.path}}operationoutcome.html
 [Patient Reported Outcomes (PRO)]: http://www.hl7.org/fhir/us/patient-reported-outcomes/history.cfml "Standardization in the creation, administration and sharing of PRO data"
@@ -79,7 +79,7 @@
 [SDC (Structured Data Capture)]: http://hl7.org/fhir/us/sdc/history.html "Defines expectations for sharing of Questionnaires and answers, including mechanisms for automatically populating portions of a questionnaire based on embedded mappings to underlying data elements"
 [Search Param Registry]: {{site.data.fhir.path}}searchparameter-registry.html
 [search parameters]: searchparameters.html
-[US Core Implementation Guide security section]: {{site.data.fhir.uscore}}/security.html "US Core Security"
+[US Core Implementation Guide security section]: {{site.data.fhir.uscore}}security.html "US Core Security"
 [server]: CapabilityStatement-server.html
 [SMART Backend Services]: http://docs.smarthealthit.org/authorization/backend-services/
 [SMART on FHIR]: http://hl7.org/fhir/smart-app-launch/1.0.0/
@@ -87,7 +87,7 @@
 [Structured Data Capture Initiative]: http://build.fhir.org/ig/HL7/sdc/ "SDC"
 [Terminology]: terminology.html "Defines expectations for sharing of Questionnaires and answers, including mechanisms for automatically populating portions of a questionnaire based on embedded mappings to underlying data elements"
 [Translation]: {{site.data.fhir.path}}extension-translation.html "Language translation from base language of resource to another language."
-[US Core General Guidance]: {{site.data.fhir.uscore}}/guidance.html "US Core General Guidance"
+[US Core General Guidance]: {{site.data.fhir.uscore}}guidance.html "US Core General Guidance"
 [use case 5]: http://argonautwiki.hl7.org/images/4/4c/Argonaut_UseCasesV1.pdf
 [ValueSet Ordinal Value Extension]: {{site.data.fhir.path}}extension-valueset-ordinalvalue.html "ValueSet ordinalvalue extension: A numeric value that allows numerical manipulation of a concept."
 [Patient Demographic Based Search]: static.html#patient-demographic-based-search

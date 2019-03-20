@@ -1,11 +1,11 @@
 {
   "resourceType": "ImplementationGuide",
-  "id": "ig",
+  "id": "argonaut.us.questionnaire-1.0.0",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Argonaut Questionnaire</h2><p>The official URL for this implementation guide is: </p><pre>http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig</pre></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Argonaut Questionnaire</h2><p>The official URL for this implementation guide is: </p><pre>http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/argonaut.us.questionnaire-1.0.0</pre></div>"
   },
-  "url": "http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig",
+  "url": "http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/argonaut.us.questionnaire-1.0.0",
   "version": "1.0.0",
   "name": "Argonaut Questionnaire",
   "status": "draft",

@@ -299,7 +299,7 @@
   ],
   "igtemplate-dir": "/Users/ehaas/Documents/FHIR/IG-Template2/",
   "publisher": "Argonaut Project",
-  "npm-name": "argonaut.questionnaire",
+  "npm-name": "argonaut.us.questionnaire",
   "sct-edition": "http://snomed.info/sct/731000124108",
   "contact_system": "url",
   "tool": "jekyll",

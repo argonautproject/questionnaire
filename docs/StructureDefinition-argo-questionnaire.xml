@@ -40,6 +40,7 @@
   <name value="argo_questionnaire"/>
   <title value="Argonaut Questionnaire Profile"/>
   <status value="active"/>
+  <experimental value="false"/>
   <date value="2018-04-04T00:00:00-07:00"/>
   <description value="The  Argonaut Questionnaire Profile sets the minimum expectations for the Questionnaire resource to record, search and fetch Questionnaires for simple assessments, surveys, etc as defined in this implementation guide.  It defines  the structure for both the  [Static Forms Use Case] and the [Adaptive Forms Use Case].   For adaptive forms this profile is contained within the [Argonaut Adaptive QuestionnaireResponse Profile]."/>
   <fhirVersion value="3.0.1"/>
@@ -422,7 +423,7 @@
     <element id="Questionnaire.url">
       <path value="Questionnaire.url"/>
       <short value="Logical URI to reference this questionnaire (globally unique)"/>
-      <definition value="An absolute URI that is used to identify this questionnaire when it is referenced in a specification, model, design or an instance. This SHALL be a URL, SHOULD be globally unique, and SHOULD be an address at which this questionnaire is (or will be) published. The URL SHOULD include the major version of the questionnaire. For more information see [Technical and Business Versions](resource.html#versions)."/>
+      <definition value="An absolute URI that is used to identify this questionnaire when it is referenced in a specification, model, design or an instance. This SHALL be a URL, SHOULD be globally unique, and SHOULD be an address at which this questionnaire is (or will be) published. The URL SHOULD include the major version of the questionnaire. For more information see [Technical and Business Versions](http://hl7.org/fhir/STU3/resource.html#versions)."/>
       <comment value="Can be a urn:uuid: or a urn:oid:, but real http: addresses are preferred.  Multiple instances may share the same url if they have a distinct version."/>
       <requirements value="This is the id that will be used to link a QuestionnaireResponse to the Questionnaire ."/>
       <min value="1"/>
@@ -1333,7 +1334,7 @@
       <short value="Unique id for item in questionnaire"/>
       <definition value="An identifier that is unique within the Questionnaire allowing linkage to the equivalent item in a QuestionnaireResponse resource."/>
       <comment value="This &#39;&#39;can&#39;&#39; be a meaningful identifier (e.g. a LOINC code) but is not intended to have any meaning.  GUIDs or sequential numbers are appropriate here."/>
-      <requirements value="[QuestionnaireResponse](questionnaireresponse.html#) does not require omitted items to be included and may have some items that repeat, so linkage based on position alone is not sufficient."/>
+      <requirements value="[QuestionnaireResponse](http://hl7.org/fhir/STU3/questionnaireresponse.html#) does not require omitted items to be included and may have some items that repeat, so linkage based on position alone is not sufficient."/>
       <min value="1"/>
       <max value="1"/>
       <base>
@@ -1361,8 +1362,8 @@
     <element id="Questionnaire.item.definition">
       <path value="Questionnaire.item.definition"/>
       <short value="ElementDefinition - details for the item"/>
-      <definition value="A reference to an [ElementDefinition](elementdefinition.html) that provides the details for the item. If a definition is provided, then the following element values can be inferred from the definition: &#xA;&#xA;* code (ElementDefinition.code)&#xA;* type (ElementDefinition.type)&#xA;* required (ElementDefinition.min)&#xA;* repeats (ElementDefinition.max)&#xA;* maxLength (ElementDefinition.maxLength)&#xA;* options (ElementDefinition.binding)&#xA;&#xA;Any information provided in these elements on a Questionnaire Item overrides the information from the definition."/>
-      <comment value="the URI refers to an ElementDefinition in either a [StructureDefinition](structuredefinition.html#) or a [DataElement](dataelement.html#), and always starts with the canonical URL for the target resource. When referring to a StructureDefinition, a fragment identifier is used to specify the element definition by its id [Element.id](element-definitions.html#Element.id). E.g. http://hl7.org/fhir/StructureDefinition/Observation#Observation.value[x]. In the absence of a fragment identifier, the first/root element definition in the target is the matching element definition. Note that [LOINC codes](loinc.html#dataelements) implicitly define DataElement resources."/>
+      <definition value="A reference to an [ElementDefinition](http://hl7.org/fhir/STU3/elementdefinition.html) that provides the details for the item. If a definition is provided, then the following element values can be inferred from the definition: &#xA;&#xA;* code (ElementDefinition.code)&#xA;* type (ElementDefinition.type)&#xA;* required (ElementDefinition.min)&#xA;* repeats (ElementDefinition.max)&#xA;* maxLength (ElementDefinition.maxLength)&#xA;* options (ElementDefinition.binding)&#xA;&#xA;Any information provided in these elements on a Questionnaire Item overrides the information from the definition."/>
+      <comment value="the URI refers to an ElementDefinition in either a [StructureDefinition](http://hl7.org/fhir/STU3/structuredefinition.html#) or a [DataElement](http://hl7.org/fhir/STU3/dataelement.html#), and always starts with the canonical URL for the target resource. When referring to a StructureDefinition, a fragment identifier is used to specify the element definition by its id [Element.id](http://hl7.org/fhir/STU3/element-definitions.html#Element.id). E.g. http://hl7.org/fhir/StructureDefinition/Observation#Observation.value[x]. In the absence of a fragment identifier, the first/root element definition in the target is the matching element definition. Note that [LOINC codes](http://hl7.org/fhir/STU3/loinc.html#dataelements) implicitly define DataElement resources."/>
       <requirements value="A common pattern is to define a set of data elements and then build multiple questionnaires for different circumstances to gather the data. This element provides traceability to the common definition and allows the content for the question to come from the underlying definition."/>
       <min value="0"/>
       <max value="1"/>

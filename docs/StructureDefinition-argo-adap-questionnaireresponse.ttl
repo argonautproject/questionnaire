@@ -17,6 +17,7 @@
   fhir:StructureDefinition.name [ fhir:value "argo_adap_questionnaireresponse"];
   fhir:StructureDefinition.title [ fhir:value "Argonaut Adaptive QuestionnaireResponse Profile"];
   fhir:StructureDefinition.status [ fhir:value "active"];
+  fhir:StructureDefinition.experimental [ fhir:value "false"^^xsd:boolean];
   fhir:StructureDefinition.date [ fhir:value "2019-02-16T00:00:00-08:00"^^xsd:dateTime];
   fhir:StructureDefinition.description [ fhir:value "The Argonaut Adaptive QuestionnaireResponse Profile supports the [adaptive questionnaire use case](adaptive.html) and is derived from the [Argonaut QuestionnaireResponse profile](StructureDefinition-argo-questionnaireresponse.html). This profile defines the structure that is passed between the Client and Server using the [`$next-question`](OperationDefinition-next-question.html) operation and records the question-answer pairs and questionnaire questions from the adaptive questionnaire.\n\n  **Mandatory Data Element:**\n  - A [*contained*](http://hl7.org/fhir/STU3/references.html#contained) [Argonaut Questionnaire Profile](StructureDefinition-argo-questionnaire.html)"];
   fhir:StructureDefinition.fhirVersion [ fhir:value "3.0.1"];
@@ -1124,8 +1125,8 @@
        fhir:Element.id [ fhir:value "QuestionnaireResponse.item.definition" ];
        fhir:ElementDefinition.path [ fhir:value "QuestionnaireResponse.item.definition" ];
        fhir:ElementDefinition.short [ fhir:value "ElementDefinition - details for the item" ];
-       fhir:ElementDefinition.definition [ fhir:value "A reference to an [ElementDefinition](elementdefinition.html) that provides the details for the item." ];
-       fhir:ElementDefinition.comment [ fhir:value "The ElementDefinition must be in a [StructureDefinition](structuredefinition.html) or a [DataElement](dataelement.html), and must have a fragment identifier that identifies the specific data element by its id (Element.id). E.g. http://hl7.org/fhir/StructureDefinition/Observation#Observation.value[x].\n\nThere is no need for this element if the item pointed to by the linkId has a definition listed." ];
+       fhir:ElementDefinition.definition [ fhir:value "A reference to an [ElementDefinition](http://hl7.org/fhir/STU3/elementdefinition.html) that provides the details for the item." ];
+       fhir:ElementDefinition.comment [ fhir:value "The ElementDefinition must be in a [StructureDefinition](http://hl7.org/fhir/STU3/structuredefinition.html) or a [DataElement](http://hl7.org/fhir/STU3/dataelement.html), and must have a fragment identifier that identifies the specific data element by its id (Element.id). E.g. http://hl7.org/fhir/StructureDefinition/Observation#Observation.value[x].\n\nThere is no need for this element if the item pointed to by the linkId has a definition listed." ];
        fhir:ElementDefinition.requirements [ fhir:value "A common pattern is to define a set of data elements, and then build multiple different questionnaires for different circumstances to gather the data. This element provides traceability to the common definition." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "1" ];

@@ -5,14 +5,14 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig> a fhir:ImplementationGuide;
+<http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/argonaut.us.questionnaire-1.0.0> a fhir:ImplementationGuide;
   fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "ig"];
+  fhir:Resource.id [ fhir:value "argonaut.us.questionnaire-1.0.0"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Argonaut Questionnaire</h2><p>The official URL for this implementation guide is: </p><pre>http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig</pre></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Argonaut Questionnaire</h2><p>The official URL for this implementation guide is: </p><pre>http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/argonaut.us.questionnaire-1.0.0</pre></div>"
   ];
-  fhir:ImplementationGuide.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig"];
+  fhir:ImplementationGuide.url [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/argonaut.us.questionnaire-1.0.0"];
   fhir:ImplementationGuide.version [ fhir:value "1.0.0"];
   fhir:ImplementationGuide.name [ fhir:value "Argonaut Questionnaire"];
   fhir:ImplementationGuide.status [ fhir:value "draft"];
@@ -861,7 +861,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig.ttl> a owl:Ontology;
+<http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/argonaut.us.questionnaire-1.0.0.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

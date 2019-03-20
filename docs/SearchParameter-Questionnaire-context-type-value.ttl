@@ -53,14 +53,14 @@
      fhir:index 0;
      fhir:SearchParameter.component.definition [
        fhir:link <http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type>;
-       fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type" ]
+       fhir:Reference.reference [ fhir:value "SearchParameter/Questionnaire-context-type" ]
      ];
      fhir:SearchParameter.component.expression [ fhir:value "code" ]
   ], [
      fhir:index 1;
      fhir:SearchParameter.component.definition [
        fhir:link <http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context>;
-       fhir:Reference.reference [ fhir:value "http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context" ]
+       fhir:Reference.reference [ fhir:value "SearchParameter/Questionnaire-context" ]
      ];
      fhir:SearchParameter.component.expression [ fhir:value "value.as(CodeableConcept)" ]
   ] .

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="ig"/>
+  <id value="argonaut.us.questionnaire-1.0.0"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
     <valueString value="/Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources"/>
   </extension>
@@ -14,7 +14,7 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
     <valueString value="/Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/pages"/>
   </extension>
-  <url value="http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig"/>
+  <url value="http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/argonaut.us.questionnaire-1.0.0"/>
   <version value="1.0.0"/>
   <name value="Argonaut Questionnaire"/>
   <status value="draft"/>
@@ -26,7 +26,7 @@
       <value value="http://argonautwiki.hl7.org"/>
     </telecom>
   </contact>
-  <packageId value="argonaut.questionnaire"/>
+  <packageId value="argonaut.us.questionnaire"/>
   <license value="CC0-1.0"/>
   <fhirVersion value="3.0.1"/>
   <dependsOn id="uscore">

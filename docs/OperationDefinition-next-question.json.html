@@ -172,41 +172,6 @@
 </ul>
 
 
-             <!--        <ul class="nav navbar-nav">
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="guidance.html">General Guidance</a>
-          </li>
-          <li>
-            <a href="profiles.html">Profiles and Logical Models</a>
-          </li>
-          <li>
-            <a href="structuremaps.html">Mappings</a>
-          </li>
-          <li>
-            <a href="extensions.html">Extensions</a>
-          </li>
-          <li>
-            <a href="terminology.html">Terminology</a>
-          </li>
-          <li>
-            <a href="searchparams.html">Search Parameters</a>
-          </li>
-          <li>
-            <a href="capstatements.html">Capability Statements</a>
-          </li>
-          <li>
-            <a href="security.html">Security</a>
-          </li>
-          <li>
-            <a href="examples.html">Examples</a>
-          </li>
-          <li>
-            <a href="downloads.html">Downloads</a>
-          </li>
-        </ul> -->
       </div>
       <!-- /.nav-collapse -->
     </div>
@@ -328,10 +293,7 @@ This is the
   "<a href="http://hl7.org/fhir/STU3/operationdefinition.html#OperationDefinition.id">id</a>" : "next-question",
   "<a href="http://hl7.org/fhir/STU3/operationdefinition.html#OperationDefinition.text">text</a>" : {
     "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;h2&gt;Argonaut Next Question Operation&lt;/h2&gt;&lt;p&gt;OPERATION: Argonaut Next Question Operation&lt;/p&gt;&lt;p&gt;The official URL for this operation definition is: &lt;/p&gt;&lt;pre&gt;http://fhir.org/guides/argonaut-questionnaire/OperationDefinition/next-question&lt;/pre&gt;&lt;div&gt;&lt;p&gt;The Argonaut Next Question Operation is used for &lt;em&gt;adaptive questionnaires&lt;/em&gt; forms where the next question is based on previous answers.  The result of this operation is to return the next question and optionally the questionnaire scoring for an adaptive questionnaire.  This operation uses the &lt;a href=&quot;http://hl7.org/fhir/STU3/questionnaireresponse.html&quot;&gt;QuestionnaireResponse&lt;/a&gt; resource with a &lt;a href=&quot;http://hl7.org/fhir/STU3/references.html#contained&quot;&gt;&lt;em&gt;contained&lt;/em&gt;&lt;/a&gt; &lt;a href=&quot;http://hl7.org/fhir/STU3/questionnaire.html&quot;&gt;Questionnaire&lt;/a&gt; as both the input and output parameter. The Client initiates and queries for the next question supplying the answer to the previous question.  The Server updates the contained Questionnaire in the  QuestionnaireResponse in the with the next question.  When the questionnaire is complete, the Server updates the status element of the QuestionnaireResponse resource to &lt;code&gt;completed&lt;/code&gt;.  If the questionnaire has exceeded the time limit, the  Client or Server may return an &lt;a href=&quot;http://hl7.org/fhir/STU3/operationoutcome.html&quot;&gt;OperationOutcome&lt;/a&gt; with an error.&lt;/p&gt;
-&lt;/div&gt;&lt;p&gt;URL: [base]/Questionnaire/$next-question&lt;/p&gt;&lt;p&gt;Parameters&lt;/p&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Use&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Cardinality&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Binding&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Documentation&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;IN&lt;/td&gt;&lt;td&gt;questionnaire-response&lt;/td&gt;&lt;td&gt;1..1&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/STU3/resource.html&quot;&gt;Resource&lt;/a&gt;&lt;/td&gt;&lt;td/&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;The &lt;a href=&quot;StructureDefinition-argo-adap-questionnaireresponse.html&quot;&gt;Argo Adaptive QuestionnaireResponse Profile&lt;/a&gt; of the QuestionnaireResponse resource with a &lt;em&gt;contained&lt;/em&gt; Questionnaire.  The &lt;code&gt;url&lt;/code&gt; element in the &lt;em&gt;contained&lt;/em&gt; Questionnaire identifies which set of questions are being requested.  When initiating an adaptive questionnaire, the resource represents only metadata, because it precedes the first question.  For subsequent transactions the Client updates the QuestionnaireResponse with the previous question-answer pair and posts it to the Server.&lt;/p&gt;
-&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OUT&lt;/td&gt;&lt;td&gt;return&lt;/td&gt;&lt;td&gt;1..1&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;http://hl7.org/fhir/STU3/resource.html&quot;&gt;Resource&lt;/a&gt;&lt;/td&gt;&lt;td/&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;The &lt;a href=&quot;StructureDefinition-argo-adap-questionnaireresponse.html&quot;&gt;Argo Adaptive QuestionnaireResponse Profile&lt;/a&gt; of the QuestionnaireResponse resource with a &lt;em&gt;contained&lt;/em&gt; Questionnaire.  The Server updates the QuestionnaireResponse's contained Questionnaire with the next question and optionally scoring or other data and returns it as this parameter.  When the questionnaire is complete, the Server updates the status element of the QuestionnaireResponse to &lt;code&gt;completed&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+    "<a href="http://hl7.org/fhir/STU3/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;Argonaut Next Question Operation&lt;/h2&gt;&lt;p&gt;OPERATION: Argonaut Next Question Operation&lt;/p&gt;&lt;p&gt;The official URL for this operation definition is: &lt;/p&gt;&lt;pre&gt;http://fhir.org/guides/argonaut-questionnaire/OperationDefinition/next-question&lt;/pre&gt;&lt;div&gt;&lt;p&gt;The Argonaut Next Question Operation is used for &lt;em&gt;adaptive questionnaires&lt;/em&gt; forms where the next question is based on previous answers.  The result of this operation is to return the next question and optionally the questionnaire scoring for an adaptive questionnaire.  This operation uses the &lt;a href=\&quot;http://hl7.org/fhir/STU3/questionnaireresponse.html\&quot;&gt;QuestionnaireResponse&lt;/a&gt; resource with a &lt;a href=\&quot;http://hl7.org/fhir/STU3/references.html#contained\&quot;&gt;&lt;em&gt;contained&lt;/em&gt;&lt;/a&gt; &lt;a href=\&quot;http://hl7.org/fhir/STU3/questionnaire.html\&quot;&gt;Questionnaire&lt;/a&gt; as both the input and output parameter. The Client initiates and queries for the next question supplying the answer to the previous question.  The Server updates the contained Questionnaire in the  QuestionnaireResponse in the with the next question.  When the questionnaire is complete, the Server updates the status element of the QuestionnaireResponse resource to &lt;code&gt;completed&lt;/code&gt;.  If the questionnaire has exceeded the time limit, the  Client or Server may return an &lt;a href=\&quot;http://hl7.org/fhir/STU3/operationoutcome.html\&quot;&gt;OperationOutcome&lt;/a&gt; with an error.&lt;/p&gt;\n&lt;/div&gt;&lt;p&gt;URL: [base]/Questionnaire/$next-question&lt;/p&gt;&lt;p&gt;Parameters&lt;/p&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Use&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Cardinality&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Binding&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Documentation&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;IN&lt;/td&gt;&lt;td&gt;questionnaire-response&lt;/td&gt;&lt;td&gt;1..1&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/STU3/resource.html\&quot;&gt;Resource&lt;/a&gt;&lt;/td&gt;&lt;td/&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;The &lt;a href=\&quot;StructureDefinition-argo-adap-questionnaireresponse.html\&quot;&gt;Argo Adaptive QuestionnaireResponse Profile&lt;/a&gt; of the QuestionnaireResponse resource with a &lt;em&gt;contained&lt;/em&gt; Questionnaire.  The &lt;code&gt;url&lt;/code&gt; element in the &lt;em&gt;contained&lt;/em&gt; Questionnaire identifies which set of questions are being requested.  When initiating an adaptive questionnaire, the resource represents only metadata, because it precedes the first question.  For subsequent transactions the Client updates the QuestionnaireResponse with the previous question-answer pair and posts it to the Server.&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OUT&lt;/td&gt;&lt;td&gt;return&lt;/td&gt;&lt;td&gt;1..1&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://hl7.org/fhir/STU3/resource.html\&quot;&gt;Resource&lt;/a&gt;&lt;/td&gt;&lt;td/&gt;&lt;td&gt;&lt;div&gt;&lt;p&gt;The &lt;a href=\&quot;StructureDefinition-argo-adap-questionnaireresponse.html\&quot;&gt;Argo Adaptive QuestionnaireResponse Profile&lt;/a&gt; of the QuestionnaireResponse resource with a &lt;em&gt;contained&lt;/em&gt; Questionnaire.  The Server updates the QuestionnaireResponse's contained Questionnaire with the next question and optionally scoring or other data and returns it as this parameter.  When the questionnaire is complete, the Server updates the status element of the QuestionnaireResponse to &lt;code&gt;completed&lt;/code&gt;.&lt;/p&gt;\n&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
   },
   "<a href="http://hl7.org/fhir/STU3/operationdefinition.html#OperationDefinition.url">url</a>" : "http://fhir.org/guides/argonaut-questionnaire/OperationDefinition/next-question",
   "<a href="http://hl7.org/fhir/STU3/operationdefinition.html#OperationDefinition.version">version</a>" : "1.0.0",
@@ -422,12 +384,12 @@ Formats: <a href="OperationDefinition-next-question.html">Narrative</a>, <a href
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      Argonaut Questionnaire 
-          Continuous Integration Build
-          &reg;&copy;   <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/index.html">FHIR Version: 3.0.1</a> generated on Mon, Mar 4, 2019 12:46-0800.
-      | <a style="color: #81BEF7" href="#">History</a>
+     <a href="http://argonautwiki.hl7.org">Argonaut Project </a> #1.0.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/STU3/">FHIR v3.0.1</a> generated Mar 19, 2019. <br/>
+      Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a>
+      | <a style="color: #81BEF7" href="qa.html">QA Report</a>
+      | <a style="color: #81BEF7" href="#">Version History</a>
+      | <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
       | <a style="color: #81BEF7" href="https://github.com/argonautproject/questionnaire/issues" target="_blank">Propose a change</a>
-        <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/STU3/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
    </div>  <!-- /inner-wrapper -->
   </div>  <!-- /container -->

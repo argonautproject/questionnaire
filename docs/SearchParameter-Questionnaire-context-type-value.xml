@@ -34,13 +34,13 @@
   <modifier value="missing"/>
   <component>
     <definition>
-      <reference value="http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type"/>
+      <reference value="SearchParameter/Questionnaire-context-type"/>
     </definition>
     <expression value="code"/>
   </component>
   <component>
     <definition>
-      <reference value="http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context"/>
+      <reference value="SearchParameter/Questionnaire-context"/>
     </definition>
     <expression value="value.as(CodeableConcept)"/>
   </component>

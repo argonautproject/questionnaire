@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Hidden IG for de facto IG publishing-->
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="ig"/>
-  <url value="http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig"/>
+  <id value="argonaut.us.questionnaire-1.0.0"/>
+  <url value="http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/argonaut.us.questionnaire-1.0.0"/>
   <name value="Argonaut Questionnaire"/>
   <status value="draft"/>
   <experimental value="true"/>

@@ -1,10 +1,10 @@
 ﻿Argonaut Questionnaire : Validation Results
 =========================================
 
-err = 32, warn = 94, info = 84
-Generated Mon Mar 04 12:47:20 PST 2019. FHIR version 4.1.0 for 3.0.1
+err = 36, warn = 90, info = 84
+Generated Tue Mar 19 19:34:09 PDT 2019. FHIR version 4.1.0 for 3.0.1
 
- Build Errors : 2 / 0
+ Build Errors : 0 / 0
  /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/adaptive-questionnaireresponse-example-audit-c : 0 / 7
  /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/adaptive-questionnaireresponse-example-dast : 0 / 3
  /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/adaptive-questionnaireresponse-example-phq9 : 0 / 3
@@ -17,10 +17,10 @@ Generated Mon Mar 04 12:47:20 PST 2019. FHIR version 4.1.0 for 3.0.1
  /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/questionnaire-example-housing : 0 / 0
  /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/questionnaire-example-phq9 : 0 / 2
  /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/questionnaire-example-sampler : 0 / 13
- /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/questionnaireresponse-example-audit-c : 1 / 1
+ /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/questionnaireresponse-example-audit-c : 3 / 0
  /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/questionnaireresponse-example-dast : 5 / 0
  /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/questionnaireresponse-example-housing : 0 / 0
- /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/questionnaireresponse-example-phq9 : 2 / 1
+ /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/questionnaireresponse-example-phq9 : 4 / 0
  /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/questionnaireresponse-example-sampler : 2 / 0
  /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/questionnaireresponse-example-sampler-contained-patient : 4 / 0
  /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/StructureDefinition-extension-itemorder : 0 / 0
@@ -36,7 +36,7 @@ Generated Mon Mar 04 12:47:20 PST 2019. FHIR version 4.1.0 for 3.0.1
  /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/operationdefinition-next-q : 0 / 0
  /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/searchparameter-patient-birthdate : 0 / 0
  /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/searchparameter-questionnaire-context-type : 0 / 0
- /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/searchparameter-questionnaire-context-type-value : 2 / 0
+ /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/searchparameter-questionnaire-context-type-value : 0 / 0
  /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/searchparameter-questionnaire-context-value : 0 / 0
  /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/searchparameter-questionnaire-publisher : 0 / 0
  /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/searchparameter-questionnaire-status : 0 / 0
@@ -54,8 +54,6 @@ Generated Mon Mar 04 12:47:20 PST 2019. FHIR version 4.1.0 for 3.0.1
  argo_questionnaireresponse : 0 / 0
 </table>
 == n/a ==
-ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/StructureDefinition-argo-questionnaire.html#/html/head/body/div/div/div/div/div/div/hr/p/a at Line 925, column 13: The link 'StructureDefinition-argo-adap-questionnaireresponse.html#quick-start' for "Argonaut Adaptive QuestionnaireResponse Profile Quick Start" cannot be resolved (valid targets: [page-content-wrapper, QuestionnaireResponse.item.text, tbl-snap-inner, copy-button, QuestionnaireResponse.modifierExtension, all-tbl-diff, QuestionnaireResponse.text, tabs-summ, QuestionnaireResponse.basedOn, tbl-summ, stripe, QuestionnaireResponse.contained, segment-footer, QuestionnaireResponse.authored, QuestionnaireResponse.item.item, all-tbl-snap-inner, QuestionnaireResponse.context, segment-header, QuestionnaireResponse.implicitRules, profile, tabs-diff, all-tbl-summ, tbl-diff, QuestionnaireResponse.meta, all-tbl-summ-inner, QuestionnaireResponse.id, QuestionnaireResponse.language, QuestionnaireResponse.item.answer.id, examples, QuestionnaireResponse.item.answer.value_x_, tabs-all, back-to-top, QuestionnaireResponse.item.answer.item, tbl-diff-inner, segment-navbar, QuestionnaireResponse.item.extension, QuestionnaireResponse.item.definition, QuestionnaireResponse.item.id, QuestionnaireResponse.item, QuestionnaireResponse.parent, publish-box, tabs, segment-post-footer, all-tbl-snap, search, downloads, QuestionnaireResponse.extension, QuestionnaireResponse.subject, QuestionnaireResponse.identifier, QuestionnaireResponse.item.subject, tabs-snap, QuestionnaireResponse.item.answer.modifierExtension, introduction, tbl-snap, summary, QuestionnaireResponse.author, QuestionnaireResponse.status, QuestionnaireResponse.item.linkId, QuestionnaireResponse, QuestionnaireResponse.item.answer.extension, QuestionnaireResponse.item.modifierExtension, QuestionnaireResponse.questionnaire, all-tbl-diff-inner, project-status, QuestionnaireResponse.source, QuestionnaireResponse.item.answer])
-ERROR: /Users/ehaas/Documents/FHIR/IG-Template2/docs/StructureDefinition-argo-questionnaire-valueset.html#/html/head/body/div/div/div/div/div/div/hr/p/a at Line 751, column 15: The link 'StructureDefinition-argo-questionnaire.html#quick-start' for "Argonaut Questionnaire Profile Quick Start" cannot be resolved (valid targets: [page-content-wrapper, mandatory-data-elements-and-terminology, tbl-snap-inner, Questionnaire.item.text, Questionnaire, Questionnaire.item.extension, Questionnaire.identifier, Questionnaire.experimental, Questionnaire.item.option.extension, copy-button, Questionnaire.item.option.id, Questionnaire.item.type, Questionnaire.copyright, Questionnaire.subjectType, all-tbl-diff, Questionnaire.version, Questionnaire.item.prefix, Questionnaire.useContext, Questionnaire.id, Questionnaire.contact, Questionnaire.item.option.value_x_, Questionnaire.item.enableWhen.hasAnswer, tabs-summ, tbl-summ, stripe, segment-footer, Questionnaire.item.item, Questionnaire.contained, Questionnaire.item.linkId, Questionnaire.item.enableWhen.extension, Questionnaire.modifierExtension, Questionnaire.item.enableWhen.answer_x_, all-tbl-snap-inner, segment-header, profile, Questionnaire.code, Questionnaire.effectivePeriod, tabs-diff, all-tbl-summ, Questionnaire.status, tbl-diff, Questionnaire.description, Questionnaire.title, all-tbl-summ-inner, examples, Questionnaire.item.repeats, Questionnaire.item.option.modifierExtension, tabs-all, back-to-top, tbl-diff-inner, Questionnaire.item.enableWhen.question, segment-navbar, Questionnaire.language, Questionnaire.item.code, publish-box, Questionnaire.publisher, tabs, segment-post-footer, Questionnaire.item.initial_x_, all-tbl-snap, search, downloads, Questionnaire.jurisdiction, Questionnaire.item.maxLength, Questionnaire.extension, tabs-snap, introduction, tbl-snap, Questionnaire.text, Questionnaire.item.definition, summary, Questionnaire.item.enableWhen, Questionnaire.item.enableWhen.id, scope-and-usage, Questionnaire.url, Questionnaire.item.required, Questionnaire.item.options, Questionnaire.date, Questionnaire.item.option, Questionnaire.item.modifierExtension, Questionnaire.item.enableWhen.modifierExtension, Questionnaire.item.readOnly, Questionnaire.name, Questionnaire.meta, Questionnaire.implicitRules, Questionnaire.purpose, all-tbl-diff-inner, Questionnaire.approvalDate, Questionnaire.item.id, Questionnaire.item, Questionnaire.lastReviewDate, project-status])
 == /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/adaptive-questionnaireresponse-example-audit-c.json ==
 WARNING: QuestionnaireResponse/adaptive-questionnaireresponse-example-audit-c: QuestionnaireResponse: The questionnaire "#contained-adaptive-questionnaire-example-audit-c" could not be resolved, so no validation can be performed against the base questionnaire
 WARNING: QuestionnaireResponse/adaptive-questionnaireresponse-example-audit-c: QuestionnaireResponse.contained.item[3].code: The display "How often do you have a drink containing alcohol" is not a valid display for the code {http://loinc.org}68518-0 - should be one of ["How often do you have a drink containing alcohol [SAMHSA]",]
@@ -102,7 +100,8 @@ WARNING: Questionnaire/questionnaire-example-sampler: Questionnaire.item[11].pre
 WARNING: Questionnaire/questionnaire-example-sampler: Questionnaire.item[12].prefix: value should not start or finish with whitespace
 WARNING: Questionnaire/questionnaire-example-sampler: Questionnaire.item[13].prefix: value should not start or finish with whitespace
 == /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/questionnaireresponse-example-audit-c.json ==
-WARNING: QuestionnaireResponse/questionnaireresponse-example-audit-c: QuestionnaireResponse.item.answer: Error null validating Coding against Questionnaire Options
+ERROR: QuestionnaireResponse/questionnaireresponse-example-audit-c: QuestionnaireResponse.item.answer: The value provided (http://loinc.org::LA6270-8) is not in the options value set in the questionnaire
+ERROR: QuestionnaireResponse/questionnaireresponse-example-audit-c: QuestionnaireResponse.item.answer: The value provided (http://loinc.org::LA15694-5) is not in the options value set in the questionnaire
 ERROR: QuestionnaireResponse/questionnaireresponse-example-audit-c: QuestionnaireResponse.item: If text exists, it must match the questionnaire definition for linkId d1
 == /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/questionnaireresponse-example-dast.json ==
 ERROR: QuestionnaireResponse/questionnaireresponse-example-dast: QuestionnaireResponse.item: If text exists, it must match the questionnaire definition for linkId g1
@@ -113,8 +112,9 @@ ERROR: QuestionnaireResponse/questionnaireresponse-example-dast: QuestionnaireRe
 == /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/questionnaireresponse-example-housing.json ==
 == /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/questionnaireresponse-example-phq9.json ==
 ERROR: QuestionnaireResponse/questionnaireresponse-example-phq9: QuestionnaireResponse.item.item: No response answer found for required item g1.d
-WARNING: QuestionnaireResponse/questionnaireresponse-example-phq9: QuestionnaireResponse.item.item.answer: Error null validating Coding against Questionnaire Options
+ERROR: QuestionnaireResponse/questionnaireresponse-example-phq9: QuestionnaireResponse.item.item.answer: The value provided (http://loinc.org::LA6568-5) is not in the options value set in the questionnaire
 ERROR: QuestionnaireResponse/questionnaireresponse-example-phq9: QuestionnaireResponse.item.item: If text exists, it must match the questionnaire definition for linkId g1.s
+ERROR: QuestionnaireResponse/questionnaireresponse-example-phq9: QuestionnaireResponse.item.item.answer: The value provided (http://loinc.org::LA6572-7) is not in the options value set in the questionnaire
 == /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/examples/questionnaireresponse-example-sampler.json ==
 ERROR: QuestionnaireResponse/questionnaireresponse-example-sampler: QuestionnaireResponse.item.item: If text exists, it must match the questionnaire definition for linkId g1.d
 ERROR: QuestionnaireResponse/questionnaireresponse-example-sampler: QuestionnaireResponse.item.item: No response answer found for required item g1.d
@@ -191,8 +191,6 @@ INFORMATION: CapabilityStatement/assessmentbank: CapabilityStatement.rest.resour
 == /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/searchparameter-patient-birthdate.json ==
 == /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/searchparameter-questionnaire-context-type.xml ==
 == /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/searchparameter-questionnaire-context-type-value.xml ==
-ERROR: SearchParameter/Questionnaire-context-type-value: SearchParameter.component[1].definition: Unable to resolve resource 'http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type'
-ERROR: SearchParameter/Questionnaire-context-type-value: SearchParameter.component[2].definition: Unable to resolve resource 'http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context'
 == /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/searchparameter-questionnaire-context-value.xml ==
 == /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/searchparameter-questionnaire-publisher.json ==
 == /Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/resources/searchparameter-questionnaire-status.json ==

@@ -17,6 +17,7 @@
   fhir:StructureDefinition.name [ fhir:value "argo_questionnaire"];
   fhir:StructureDefinition.title [ fhir:value "Argonaut Questionnaire Profile"];
   fhir:StructureDefinition.status [ fhir:value "active"];
+  fhir:StructureDefinition.experimental [ fhir:value "false"^^xsd:boolean];
   fhir:StructureDefinition.date [ fhir:value "2018-04-04T00:00:00-07:00"^^xsd:dateTime];
   fhir:StructureDefinition.description [ fhir:value "The  Argonaut Questionnaire Profile sets the minimum expectations for the Questionnaire resource to record, search and fetch Questionnaires for simple assessments, surveys, etc as defined in this implementation guide.  It defines  the structure for both the  [Static Forms Use Case] and the [Adaptive Forms Use Case].   For adaptive forms this profile is contained within the [Argonaut Adaptive QuestionnaireResponse Profile]."];
   fhir:StructureDefinition.fhirVersion [ fhir:value "3.0.1"];
@@ -463,7 +464,7 @@
        fhir:Element.id [ fhir:value "Questionnaire.url" ];
        fhir:ElementDefinition.path [ fhir:value "Questionnaire.url" ];
        fhir:ElementDefinition.short [ fhir:value "Logical URI to reference this questionnaire (globally unique)" ];
-       fhir:ElementDefinition.definition [ fhir:value "An absolute URI that is used to identify this questionnaire when it is referenced in a specification, model, design or an instance. This SHALL be a URL, SHOULD be globally unique, and SHOULD be an address at which this questionnaire is (or will be) published. The URL SHOULD include the major version of the questionnaire. For more information see [Technical and Business Versions](resource.html#versions)." ];
+       fhir:ElementDefinition.definition [ fhir:value "An absolute URI that is used to identify this questionnaire when it is referenced in a specification, model, design or an instance. This SHALL be a URL, SHOULD be globally unique, and SHOULD be an address at which this questionnaire is (or will be) published. The URL SHOULD include the major version of the questionnaire. For more information see [Technical and Business Versions](http://hl7.org/fhir/STU3/resource.html#versions)." ];
        fhir:ElementDefinition.comment [ fhir:value "Can be a urn:uuid: or a urn:oid:, but real http: addresses are preferred.  Multiple instances may share the same url if they have a distinct version." ];
        fhir:ElementDefinition.requirements [ fhir:value "This is the id that will be used to link a QuestionnaireResponse to the Questionnaire ." ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
@@ -1509,7 +1510,7 @@
        fhir:ElementDefinition.short [ fhir:value "Unique id for item in questionnaire" ];
        fhir:ElementDefinition.definition [ fhir:value "An identifier that is unique within the Questionnaire allowing linkage to the equivalent item in a QuestionnaireResponse resource." ];
        fhir:ElementDefinition.comment [ fhir:value "This ''can'' be a meaningful identifier (e.g. a LOINC code) but is not intended to have any meaning.  GUIDs or sequential numbers are appropriate here." ];
-       fhir:ElementDefinition.requirements [ fhir:value "[QuestionnaireResponse](questionnaireresponse.html#) does not require omitted items to be included and may have some items that repeat, so linkage based on position alone is not sufficient." ];
+       fhir:ElementDefinition.requirements [ fhir:value "[QuestionnaireResponse](http://hl7.org/fhir/STU3/questionnaireresponse.html#) does not require omitted items to be included and may have some items that repeat, so linkage based on position alone is not sufficient." ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.base [
@@ -1540,8 +1541,8 @@
        fhir:Element.id [ fhir:value "Questionnaire.item.definition" ];
        fhir:ElementDefinition.path [ fhir:value "Questionnaire.item.definition" ];
        fhir:ElementDefinition.short [ fhir:value "ElementDefinition - details for the item" ];
-       fhir:ElementDefinition.definition [ fhir:value "A reference to an [ElementDefinition](elementdefinition.html) that provides the details for the item. If a definition is provided, then the following element values can be inferred from the definition: \n\n* code (ElementDefinition.code)\n* type (ElementDefinition.type)\n* required (ElementDefinition.min)\n* repeats (ElementDefinition.max)\n* maxLength (ElementDefinition.maxLength)\n* options (ElementDefinition.binding)\n\nAny information provided in these elements on a Questionnaire Item overrides the information from the definition." ];
-       fhir:ElementDefinition.comment [ fhir:value "the URI refers to an ElementDefinition in either a [StructureDefinition](structuredefinition.html#) or a [DataElement](dataelement.html#), and always starts with the canonical URL for the target resource. When referring to a StructureDefinition, a fragment identifier is used to specify the element definition by its id [Element.id](element-definitions.html#Element.id). E.g. http://hl7.org/fhir/StructureDefinition/Observation#Observation.value[x]. In the absence of a fragment identifier, the first/root element definition in the target is the matching element definition. Note that [LOINC codes](loinc.html#dataelements) implicitly define DataElement resources." ];
+       fhir:ElementDefinition.definition [ fhir:value "A reference to an [ElementDefinition](http://hl7.org/fhir/STU3/elementdefinition.html) that provides the details for the item. If a definition is provided, then the following element values can be inferred from the definition: \n\n* code (ElementDefinition.code)\n* type (ElementDefinition.type)\n* required (ElementDefinition.min)\n* repeats (ElementDefinition.max)\n* maxLength (ElementDefinition.maxLength)\n* options (ElementDefinition.binding)\n\nAny information provided in these elements on a Questionnaire Item overrides the information from the definition." ];
+       fhir:ElementDefinition.comment [ fhir:value "the URI refers to an ElementDefinition in either a [StructureDefinition](http://hl7.org/fhir/STU3/structuredefinition.html#) or a [DataElement](http://hl7.org/fhir/STU3/dataelement.html#), and always starts with the canonical URL for the target resource. When referring to a StructureDefinition, a fragment identifier is used to specify the element definition by its id [Element.id](http://hl7.org/fhir/STU3/element-definitions.html#Element.id). E.g. http://hl7.org/fhir/StructureDefinition/Observation#Observation.value[x]. In the absence of a fragment identifier, the first/root element definition in the target is the matching element definition. Note that [LOINC codes](http://hl7.org/fhir/STU3/loinc.html#dataelements) implicitly define DataElement resources." ];
        fhir:ElementDefinition.requirements [ fhir:value "A common pattern is to define a set of data elements and then build multiple questionnaires for different circumstances to gather the data. This element provides traceability to the common definition and allows the content for the question to come from the underlying definition." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "1" ];

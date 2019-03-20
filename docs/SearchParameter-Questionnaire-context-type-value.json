@@ -46,13 +46,13 @@
   "component": [
     {
       "definition": {
-        "reference": "http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context-type"
+        "reference": "SearchParameter/Questionnaire-context-type"
       },
       "expression": "code"
     },
     {
       "definition": {
-        "reference": "http://fhir.org/guides/argonaut-questionnaire/SearchParameter/Questionnaire-context"
+        "reference": "SearchParameter/Questionnaire-context"
       },
       "expression": "value.as(CodeableConcept)"
     }
