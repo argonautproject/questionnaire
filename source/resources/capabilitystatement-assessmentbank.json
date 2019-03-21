@@ -24,7 +24,7 @@
       "json"
    ],
    "implementationGuide": [
-      "http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig",
+      "http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/argonaut.us.questionnaire-1.0.0",
       "http://hl7.org/fhir/us/core/ImplementationGuide/ig"
    ],
    "jurisdiction": [

@@ -52,7 +52,7 @@
      fhir:index 0
   ];
   fhir:CapabilityStatement.implementationGuide [
-     fhir:value "http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig";
+     fhir:value "http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/argonaut.us.questionnaire-1.0.0";
      fhir:index 0
   ], [
      fhir:value "http://hl7.org/fhir/us/core/ImplementationGuide/ig";

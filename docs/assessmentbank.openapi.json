@@ -1,0 +1,212 @@
+﻿{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Argonaut Assessmentbank CapabilityStatement",
+    "description": "This section outlines conformance requirements for the Argonaut Questionnaire Assessment-Bank Server.  It is responsible for storing Questionnaires and providing responses to the requests submitted by the  Form Author/Editor and Provider EHRs.   The Argonaut Questionnaire Profile and the various interactions outlined in this guide are the RESTful artifacts and interactions that it supports.   Note that the Argonaut Profiles identify the structural constraints, terminology bindings and invariants and the individual Argonaut SearchParameter resources define the definitions, comparators, modifiers and usage constraints.",
+    "license": {
+      "name": "CC0-1.0"
+    },
+    "version": "1.0.0",
+    "contact": {
+      "url": "https://github.com/argonautproject/questionnaire/issues"
+    }
+  },
+  "externalDocs": {
+    "url": "http://fhir.org/guides/argonaut-questionnaire/CapabilityStatement/assessmentbank",
+    "description": "FHIR CapabilityStatement"
+  },
+  "paths": {
+    "/Questionnaire": {
+      "summary": "manage the collection of resources of type Questionnaire",
+      "description": "Access to services to manage the collection of all resources of type Questionnaire",
+      "get": {
+        "summary": "Search all resources based on a set of criteria",
+        "operationId": "searchQuestionnaire",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/fhir.json.schema#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag"
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/fhir.json.schema#/definitions/Bundle"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/Bundle.xsd"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Questionnaire/{rid}": {
+      "summary": "Read/Write/etc resource instance of type Questionnaire",
+      "description": "Access to services to manage the state of a single resource of type Questionnaire",
+      "get": {
+        "summary": "Read the current state of the resource",
+        "operationId": "readQuestionnaire",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/fhir.json.schema#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag"
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/fhir.json.schema#/definitions/Questionnaire"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/Questionnaire.xsd"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Update the current state of the resource",
+        "operationId": "updateQuestionnaire",
+        "requestBody": {
+          "description": "The new state of the resource",
+          "required": true,
+          "content": {
+            "application/fhir+json": {
+              "schema": {
+                "$ref": "http://hl7.org/fhir/STU3/fhir.json.schema#/definitions/Questionnaire"
+              }
+            },
+            "application/fhir+xml": {
+              "schema": {
+                "$ref": "http://hl7.org/fhir/STU3/Questionnaire.xsd"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/fhir.json.schema#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned after being updated",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag"
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/fhir.json.schema#/definitions/Questionnaire"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/Questionnaire.xsd"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Questionnaire/{rid}/_history/{hid}": {
+      "summary": "Read past versions of resource instance of type Questionnaire",
+      "description": "Access to previous versions of a single resource of type Questionnaire",
+      "get": {
+        "summary": "Read a past state of the resource",
+        "operationId": "vreadQuestionnaire",
+        "responses": {
+          "default": {
+            "description": "Error, with details",
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/fhir.json.schema#/definitions/OperationOutcome"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/OperationOutcome.xsd"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "the resource being returned",
+            "headers": {
+              "ETag": {
+                "description": "Version from Resource.meta.version as a weak ETag for that version"
+              }
+            },
+            "content": {
+              "application/fhir+json": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/fhir.json.schema#/definitions/Questionnaire"
+                }
+              },
+              "application/fhir+xml": {
+                "schema": {
+                  "$ref": "http://hl7.org/fhir/STU3/Questionnaire.xsd"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

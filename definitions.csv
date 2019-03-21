@@ -21,7 +21,7 @@ paths.output,docs
 paths.txCache,generated_output/txCache
 paths.qa,generated_output/qa
 paths.specification,http://hl7.org/fhir/STU3
-jurisdiction,
+jurisdiction,US
 sct-edition,
 no-inactive-codes,FALSE
 broken-links,warning
@@ -29,9 +29,10 @@ gen-examples,FALSE
 do-transforms,FALSE
 canonicalBase,http://fhir.org/guides/argonaut-questionnaire
 dependencyList.name,uscore
+dependencyList.package,hl7.fhir.us.core
 dependencyList.location,http://hl7.org/fhir/us/core
 dependencyList.version,2.0.0
 special-urls,
 tool,jekyll
 logging,progress
-npm-name,argonaut.questionnaire
+npm-name,argonaut.us.questionnaire
