@@ -5,7 +5,7 @@
   </button>
 </p>
 
-<div class="collapse" id="{{include.example}}">
+<div class="collapse visible-print" id="{{include.example}}">
   <div class="card card-body">
       {% capture my-include %}{% include {{include.example}}.md %}{% endcapture %}{{ my-include | markdownify }}
   </div>
