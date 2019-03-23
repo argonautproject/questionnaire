@@ -1,8 +1,7 @@
 # Welcome to the [Argonaut](http://argonautwiki.hl7.org/index.php?title=Main_Page) Argonaut Questionnaire Project Repository
 
-See the simulation and test Questionnaire rendering tool at : http://gettingstarte-cjfwz-env.us-west-2.elasticbeanstalk.com/
-    (2019-2-23 : Note is not current and needs to be updated)
 
+## Publishing Information
 
 **IG code:** `guides/argonaut/questionnaire`
 <!--Proposed IG realm and code
@@ -28,6 +27,9 @@ FHIR SME and Facilitator: [Brett Marquard](brett@waveoneassociates.com)
 ## Scope of Work
 
 Support Guidance on creating and using basic FHIR Questionnaires for simple Assessments.
+
+See the simulation and test Questionnaire rendering tool at : http://gettingstarte-cjfwz-env.us-west-2.elasticbeanstalk.com/
+    (2019-2-23 : Note is not current and needs to be updated)
 
 ## TimeLine
 
