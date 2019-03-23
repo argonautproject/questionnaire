@@ -1,0 +1,518 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "72109-2",
+  "display" : "Alcohol Use Disorder Identification Test - Consumption [AUDIT-C]"
+}, "valueSet" :null}####
+v: {
+  "display" : "Alcohol Use Disorder Identification Test - Consumption [AUDIT-C]",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "68518-0",
+  "display" : "How often do you have a drink containing alcohol"
+}, "valueSet" :null}####
+v: {
+  "display" : "How often do you have a drink containing alcohol [SAMHSA]",
+  "severity" : "warning",
+  "error" : "The display \"How often do you have a drink containing alcohol\" is not a valid display for the code {http://loinc.org}68518-0 - should be one of [\"How often do you have a drink containing alcohol [SAMHSA]\",]"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "68519-8",
+  "display" : "How many standard drinks containing alcohol do you have on a typical day"
+}, "valueSet" :null}####
+v: {
+  "display" : "How many standard drinks containing alcohol do you have on a typical day [SAMHSA]",
+  "severity" : "warning",
+  "error" : "The display \"How many standard drinks containing alcohol do you have on a typical day\" is not a valid display for the code {http://loinc.org}68519-8 - should be one of [\"How many standard drinks containing alcohol do you have on a typical day [SAMHSA]\",]"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "68520-6",
+  "display" : "How often do you have 6 or more drinks on 1 occasion"
+}, "valueSet" :null}####
+v: {
+  "display" : "How often do you have 6 or more drinks on 1 occasion [SAMHSA]",
+  "severity" : "warning",
+  "error" : "The display \"How often do you have 6 or more drinks on 1 occasion\" is not a valid display for the code {http://loinc.org}68520-6 - should be one of [\"How often do you have 6 or more drinks on 1 occasion [SAMHSA]\",]"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "82666-9",
+  "display" : "Drug Abuse Screening Test-10 [DAST-10]"
+}, "valueSet" :null}####
+v: {
+  "display" : "Drug Abuse Screening Test-10 [DAST-10]",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "68525-5"
+}, "valueSet" :null}####
+v: {
+  "display" : "In the past year, have you used drugs other than those required for medical reasons [SAMHSA]",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA32-8",
+  "display" : "No"
+}, "valueSet" :null}####
+v: {
+  "display" : "No",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA33-6",
+  "display" : "Yes"
+}, "valueSet" :null}####
+v: {
+  "display" : "Yes",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "68526-3"
+}, "valueSet" :null}####
+v: {
+  "display" : "Do you abuse more than one drug at a time [SAMHSA]",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "68527-1"
+}, "valueSet" :null}####
+v: {
+  "display" : "Are you always able to stop using drugs when you want to [SAMHSA]",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "68528-9"
+}, "valueSet" :null}####
+v: {
+  "display" : "Have you had blackouts or flashbacks as a result for drug use [SAMHSA]",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "68529-7"
+}, "valueSet" :null}####
+v: {
+  "display" : "Do you ever feel bad or guilty about your drug use [SAMHSA]",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "68530-5"
+}, "valueSet" :null}####
+v: {
+  "display" : "Does your spouse or parent ever complain about your involvement with drugs [SAMHSA]",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "68531-3"
+}, "valueSet" :null}####
+v: {
+  "display" : "Have you neglected your family because of your use of drugs [SAMHSA]",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "68532-1"
+}, "valueSet" :null}####
+v: {
+  "display" : "Have you engaged in illegal activities in order to obtain drugs [SAMHSA]",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "68533-9"
+}, "valueSet" :null}####
+v: {
+  "display" : "Have you ever experienced withdrawal symptoms, felt sick, when you stopped taking drugs [SAMHSA]",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "68534-7"
+}, "valueSet" :null}####
+v: {
+  "display" : "Have you had medical problems as a result of your drug use [SAMHSA]",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "44249-1",
+  "display" : "PHQ-9 quick depression assessment panel"
+}, "valueSet" :null}####
+v: {
+  "display" : "PHQ-9 quick depression assessment panel [Reported.PHQ]",
+  "severity" : "warning",
+  "error" : "The display \"PHQ-9 quick depression assessment panel\" is not a valid display for the code {http://loinc.org}44249-1 - should be one of [\"PHQ-9 quick depression assessment panel [Reported.PHQ]\",]"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "44249-1"
+}, "valueSet" :null}####
+v: {
+  "display" : "PHQ-9 quick depression assessment panel [Reported.PHQ]",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "44250-9"
+}, "valueSet" :null}####
+v: {
+  "display" : "Little interest or pleasure in doing things in last 2 weeks [Reported.PHQ]",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "44255-8"
+}, "valueSet" :null}####
+v: {
+  "display" : "Feeling down, depressed, or hopeless in last 2 weeks [Reported.PHQ]",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "44259-0"
+}, "valueSet" :null}####
+v: {
+  "display" : "Trouble falling or staying asleep, or sleeping too much in last 2 weeks [Reported.PHQ]",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "44254-1"
+}, "valueSet" :null}####
+v: {
+  "display" : "Feeling tired or having little energy in last 2 weeks [Reported.PHQ]",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "44251-7"
+}, "valueSet" :null}####
+v: {
+  "display" : "Poor appetite or overeating in last 2 weeks [Reported.PHQ]",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "44258-2"
+}, "valueSet" :null}####
+v: {
+  "display" : "Feeling bad about yourself - or that you are a failure or have let yourself or your family down in last 2 weeks [Reported.PHQ]",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "44252-5"
+}, "valueSet" :null}####
+v: {
+  "display" : "Trouble concentrating on things, such as reading the newspaper or watching television in last 2 weeks [Reported.PHQ]",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "44253-3"
+}, "valueSet" :null}####
+v: {
+  "display" : "Moving or speaking so slowly that other people could have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual in last 2 weeks [Reported.PHQ]",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "44260-8"
+}, "valueSet" :null}####
+v: {
+  "display" : "Thoughts that you would be better off dead, or of hurting yourself in some way in last 2 weeks [Reported.PHQ]",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "44261-6"
+}, "valueSet" :null}####
+v: {
+  "display" : "Patient Health Questionnaire 9 item (PHQ-9) total score [Reported]",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "69722-7"
+}, "valueSet" :null}####
+v: {
+  "display" : "How difficult have these made it for you to do your work, take care of things at home, or get along with other people [Reported.PHQ]",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA6270-8",
+  "display" : "Never"
+}, "valueSet" :null}####
+v: {
+  "display" : "Never",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA18926-8",
+  "display" : "Monthly or less"
+}, "valueSet" :null}####
+v: {
+  "display" : "Monthly or less",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA18927-6",
+  "display" : "2-4 times a month"
+}, "valueSet" :null}####
+v: {
+  "display" : "2-4 times a month",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA18928-4",
+  "display" : "2-3 times a week"
+}, "valueSet" :null}####
+v: {
+  "display" : "2-3 times a week",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA18929-2",
+  "display" : "4 or more times a week"
+}, "valueSet" :null}####
+v: {
+  "display" : "4 or more times a week",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA15694-5",
+  "display" : "1 or 2"
+}, "valueSet" :null}####
+v: {
+  "display" : "1 or 2",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA15695-2",
+  "display" : "3 or 4"
+}, "valueSet" :null}####
+v: {
+  "display" : "3 or 4",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA18930-0",
+  "display" : "5 or 6"
+}, "valueSet" :null}####
+v: {
+  "display" : "5 or 6",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA18931-8",
+  "display" : "7 to 9"
+}, "valueSet" :null}####
+v: {
+  "display" : "7 to 9",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA18932-6",
+  "display" : "10 or more"
+}, "valueSet" :null}####
+v: {
+  "display" : "10 or more",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA18933-4",
+  "display" : "Less than monthly"
+}, "valueSet" :null}####
+v: {
+  "display" : "Less than monthly",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA18876-5",
+  "display" : "Monthly"
+}, "valueSet" :null}####
+v: {
+  "display" : "Monthly",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA18891-4",
+  "display" : "Weekly"
+}, "valueSet" :null}####
+v: {
+  "display" : "Weekly",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA18934-2",
+  "display" : "Daily or almost daily"
+}, "valueSet" :null}####
+v: {
+  "display" : "Daily or almost daily",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA6568-5",
+  "display" : "Not at all"
+}, "valueSet" :null}####
+v: {
+  "display" : "Not at all",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA6572-7",
+  "display" : "Not difficult at all"
+}, "valueSet" :null}####
+v: {
+  "display" : "Not difficult at all",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA6569-3",
+  "display" : "Several days"
+}, "valueSet" :null}####
+v: {
+  "display" : "Several days",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA6570-1",
+  "display" : "More than half the days"
+}, "valueSet" :null}####
+v: {
+  "display" : "More than half the days",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA6571-9",
+  "display" : "Nearly every day"
+}, "valueSet" :null}####
+v: {
+  "display" : "Nearly every day",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

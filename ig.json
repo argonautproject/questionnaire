@@ -18,7 +18,7 @@
   ],
   "working-dir": "/Users/ehaas/Documents/FHIR/Argonaut-Questionnaire/",
   "paths": {
-    "output": "docs",
+    "output": "output",
     "qa": "generated_output/qa",
     "pages": [
       "framework",
