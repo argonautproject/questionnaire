@@ -1,7 +1,7 @@
 {
    "package-id": "argonaut.us.questionnaire",
    "title": "Argonaut Questionnaire Implementation Guide",
-   "canonical": "http://fhir.org/guides/argonaut-questionnaire",
+   "canonical": "http://fhir.org/guides/argonaut/questionnaire",
    "introduction": "The goal of the Argonaut Questionnaire Project is to develop guidance to support interchange of simple forms based on [FHIR Version 3.0.1](http://hl7.org/fhir/STU3/) and specifically the [Questionnaire](http://hl7.org/fhir/STU3/questionnaire.html) and [QuestionnaireResponse](http://hl7.org/fhir/STU3/questionnaireresponse.html) resources.  This implementation guide provides implementers with FHIR RESTful APIs and guidance to create, use and share between organizations standard assessment forms and the assessment responses.  The requirements were developed and defined by the Argonaut Questionnaire project team and tested through pilot implementations, Argonaut virtual connectathons and HL7 sponsored connectathons.",
    "list": [
       {
@@ -15,7 +15,7 @@
          "version": "1.0.0",
          "date": "2019-05-01 00:00:00",
          "desc": " First published version ( 1.0.0 )",
-         "path": "http://build.fhir.org/ig/argonautproject/questionnaire/1.0.0",
+         "path": "http://fhir.org/guides/argonaut/questionnaire/1.0.0",
          "status": "published",
          "sequence": "Release 1"
       }
