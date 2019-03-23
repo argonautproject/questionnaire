@@ -8,7 +8,7 @@
    },
    "extension": [
       {
-         "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-responsePeriod",
+         "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-responsePeriod",
          "valuePeriod": {
             "end": "2019-02-13T00:31:20.708405Z",
             "start": "2019-02-13T00:31:11.329331Z"
@@ -66,11 +66,11 @@
    ],
    "meta": {
       "profile": [
-         "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaireresponse"
+         "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-questionnaireresponse"
       ]
    },
    "questionnaire": {
-      "reference": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit-c"
+      "reference": "http://fhir.org/guides/argonaut/questionnaire/Questionnaire/questionnaire-example-audit-c"
    },
    "resourceType": "QuestionnaireResponse",
    "source": {
@@ -81,7 +81,7 @@
       "reference": "Patient/subject1"
    },
    "text": {
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h3>Response Summary</h3>\n    <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit-c<br />\n    <strong>Date Completed:</strong> 2019-02-13T00:31:20.708405Z<br />\n    <hr /> <br /> <strong>Question:</strong> (linkID=q1) How often do you have a drink containing alcohol<br /><strong>Response:</strong>  Never ( code = LA6270-8, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=q2) How many standard drinks containing alcohol do you have on a typical day<br /><strong>Response:</strong>  1 or 2 ( code = LA15694-5, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=q3) How often do you have 6 or more drinks on 1 occasion<br /><strong>Response:</strong>  Never ( code = LA6270-8, codesystem = http://loinc.org)<br /><br /><strong>The Alcohol Use Disorders Identification Test C (AUDIT-C) is scored on a scale of 0-12 where the higher the score, the more likely the patient's drinking is hazardous. A score of 4 ormore for men and 3 or more for women is considered positive for hazardous drinking or active alcohol use disorders. If the points are all from Question 1 alone where 2 and 3 are 0, it is likely the patient is drinking below recommended limits. The care provider may review the patientsalcohol intake over that past few months to confirm accuracy. (this is hidden text/should not be displayed to the user)</strong><br /> <br /><br />\n    </div>",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h3>Response Summary</h3>\n    <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut/questionnaire/Questionnaire/questionnaire-example-audit-c<br />\n    <strong>Date Completed:</strong> 2019-02-13T00:31:20.708405Z<br />\n    <hr /> <br /> <strong>Question:</strong> (linkID=q1) How often do you have a drink containing alcohol<br /><strong>Response:</strong>  Never ( code = LA6270-8, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=q2) How many standard drinks containing alcohol do you have on a typical day<br /><strong>Response:</strong>  1 or 2 ( code = LA15694-5, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=q3) How often do you have 6 or more drinks on 1 occasion<br /><strong>Response:</strong>  Never ( code = LA6270-8, codesystem = http://loinc.org)<br /><br /><strong>The Alcohol Use Disorders Identification Test C (AUDIT-C) is scored on a scale of 0-12 where the higher the score, the more likely the patient's drinking is hazardous. A score of 4 ormore for men and 3 or more for women is considered positive for hazardous drinking or active alcohol use disorders. If the points are all from Question 1 alone where 2 and 3 are 0, it is likely the patient is drinking below recommended limits. The care provider may review the patientsalcohol intake over that past few months to confirm accuracy. (this is hidden text/should not be displayed to the user)</strong><br /> <br /><br />\n    </div>",
       "status": "generated"
    }
 }

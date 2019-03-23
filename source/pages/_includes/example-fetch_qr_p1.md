@@ -68,7 +68,7 @@ Content-Type: application/fhir+json; charset=utf-8
          ],
         ...[snipped for brevity]....
          "questionnaire": {
-            "reference": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-sampler"
+            "reference": "http://fhir.org/guides/argonaut/questionnaire/Questionnaire/questionnaire-example-sampler"
          },
          "source": {
             "reference": "Patient/subject1"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OperationDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file://Mac/Home/Documents/FHIR/FHIR%20tools/STU3Schema/fhir-all.xsd">
 	<id value="next-question"/>
-	<url value="http://fhir.org/guides/argonaut-questionnaire/OperationDefinition/next-question"/>
+	<url value="http://fhir.org/guides/argonaut/questionnaire/OperationDefinition/next-question"/>
 	<name value="Argonaut Next Question Operation"/>
 	<status value="draft"/>
 	<kind value="operation"/>
@@ -21,7 +21,7 @@
 		<documentation value="The [Argo Adaptive QuestionnaireResponse Profile](StructureDefinition-argo-adap-questionnaireresponse.html) of the QuestionnaireResponse resource with a *contained* Questionnaire.  The `url` element in the *contained* Questionnaire identifies which set of questions are being requested.  When initiating an adaptive questionnaire, the resource represents only metadata, because it precedes the first question.  For subsequent transactions the Client updates the QuestionnaireResponse with the previous question-answer pair and posts it to the Server."/>
 		<type value="Resource"/>
 		<profile>
-			<reference value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adap-questionnaireresponse"/>
+			<reference value="http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-adap-questionnaireresponse"/>
 		</profile>
 	</parameter>
 	<parameter>
@@ -32,7 +32,7 @@
 		<documentation value="The [Argo Adaptive QuestionnaireResponse Profile](StructureDefinition-argo-adap-questionnaireresponse.html) of the QuestionnaireResponse resource with a *contained* Questionnaire.  The Server updates the QuestionnaireResponse&#39;s contained Questionnaire with the next question and optionally scoring or other data and returns it as this parameter.  When the questionnaire is complete, the Server updates the status element of the QuestionnaireResponse to `completed`."/>
 		<type value="Resource"/>
 		<profile>
-			<reference value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adap-questionnaireresponse"/>
+			<reference value="http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-adap-questionnaireresponse"/>
 		</profile>
 	</parameter>
 </OperationDefinition>

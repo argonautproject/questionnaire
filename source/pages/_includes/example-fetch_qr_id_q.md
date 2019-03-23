@@ -50,7 +50,7 @@ Content-Type: application/fhir+json; charset=utf-8
       "versionId": "1",
       "lastUpdated": "2019-02-13T05:57:59.507-05:00",
       "profile": [
-        "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"
+        "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-questionnaire"
       ]
     },
   "text": {

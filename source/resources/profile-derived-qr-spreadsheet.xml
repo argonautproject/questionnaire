@@ -1026,7 +1026,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">extension.uri</Data></Cell>
-    <Cell ss:StyleID="Default"><Data ss:Type="String">http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s80"><Data ss:Type="String">introduction</Data></Cell>
@@ -1237,7 +1237,7 @@
     <Cell ss:StyleID="s97"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s98"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s98"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s97"><Data ss:Type="String">QuestionnaireResponse{http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaireresponse}</Data><NamedCell
+    <Cell ss:StyleID="s97"><Data ss:Type="String">QuestionnaireResponse{http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-questionnaireresponse}</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s98"><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s99"><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -1269,7 +1269,7 @@
     <Cell ss:StyleID="s109"><Data ss:Type="String">1..1</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s109"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s97"><Data ss:Type="String">Questionnaire{http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire}s</Data><NamedCell
+    <Cell ss:StyleID="s97"><Data ss:Type="String">Questionnaire{http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-questionnaire}s</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s109"><Data ss:Type="String">Y</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>

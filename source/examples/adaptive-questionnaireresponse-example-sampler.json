@@ -9,7 +9,7 @@
          "date": "2019-02-13T00:40:08.804800Z",
          "extension": [
             {
-               "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timeLimit",
+               "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-timeLimit",
                "valueDuration": {
                   "code": "min",
                   "system": "http://unitsofmeasure.org",
@@ -27,7 +27,7 @@
                      "valueBoolean": true
                   },
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 1
                   }
                ],
@@ -44,7 +44,7 @@
                      "valueBoolean": true
                   },
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 2
                   }
                ],
@@ -55,14 +55,14 @@
                "type": "decimal"
             },
             {
-               "definition": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-sampler-g2.q1",
+               "definition": "http://fhir.org/guides/argonaut/questionnaire/Questionnaire/questionnaire-example-sampler-g2.q1",
                "extension": [
                   {
                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
                      "valueDecimal": 17
                   },
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 3
                   }
                ],
@@ -73,14 +73,14 @@
                "type": "boolean"
             },
             {
-               "definition": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-sampler-g6.q1",
+               "definition": "http://fhir.org/guides/argonaut/questionnaire/Questionnaire/questionnaire-example-sampler-g6.q1",
                "extension": [
                   {
                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
                      "valueDecimal": 3
                   },
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 4
                   }
                ],
@@ -91,14 +91,14 @@
                "type": "dateTime"
             },
             {
-               "definition": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-sampler-g4.q1",
+               "definition": "http://fhir.org/guides/argonaut/questionnaire/Questionnaire/questionnaire-example-sampler-g4.q1",
                "extension": [
                   {
                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-ordinalValue",
                      "valueDecimal": 3
                   },
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 5
                   }
                ],
@@ -111,13 +111,13 @@
          ],
          "meta": {
             "profile": [
-               "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"
+               "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-questionnaire"
             ]
          },
          "resourceType": "Questionnaire",
          "status": "active",
          "title": "Contained Adaptive Argonaut Questionnaire Sampler",
-         "url": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-sampler"
+         "url": "http://fhir.org/guides/argonaut/questionnaire/Questionnaire/questionnaire-example-sampler"
       }
    ],
    "context": {
@@ -125,7 +125,7 @@
    },
    "extension": [
       {
-         "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-responsePeriod",
+         "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-responsePeriod",
          "valuePeriod": {
             "end": "2019-02-13T00:40:50.850571Z",
             "start": "2019-02-13T00:40:07.366415Z"
@@ -161,7 +161,7 @@
                "valueBoolean": false
             }
          ],
-         "definition": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-sampler-g2.q1",
+         "definition": "http://fhir.org/guides/argonaut/questionnaire/Questionnaire/questionnaire-example-sampler-g2.q1",
          "linkId": "g2.q1",
          "text": "Check the box if the following statement is true.  The average air speed velocity of a laden European swallow is greater than a laden African swallow."
       },
@@ -171,7 +171,7 @@
                "valueDateTime": "2019-02-12T01:01:00Z"
             }
          ],
-         "definition": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-sampler-g6.q1",
+         "definition": "http://fhir.org/guides/argonaut/questionnaire/Questionnaire/questionnaire-example-sampler-g6.q1",
          "linkId": "g6.q1",
          "text": "If a laden swallow left Camelot on 7/5/2018 and noon when would it reach Castle Anthrax?"
       },
@@ -181,14 +181,14 @@
                "valueInteger": 11
             }
          ],
-         "definition": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-sampler-g4.q1",
+         "definition": "http://fhir.org/guides/argonaut/questionnaire/Questionnaire/questionnaire-example-sampler-g4.q1",
          "linkId": "g4.q1",
          "text": "What is the average air speed velocity of a laden swallow in m/sec?"
       }
    ],
    "meta": {
       "profile": [
-         "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adap-questionnaireresponse"
+         "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-adap-questionnaireresponse"
       ]
    },
    "questionnaire": {
@@ -203,7 +203,7 @@
       "reference": "Patient/subject1"
    },
    "text": {
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h3>Argonaut Questionnaire Sampler Adaptive View</h3>\n    <p><em>NOTE: These examples are for educational and testing purposes,\n     see the form copyright statement and do not redistribute without expressed\n     permission from the form author.</em></p>\n    <p>This simulates is a simple adaptive questionnaire implementation.\n     After answering and submitting the first question another question is randomly\n     returned from the selected questionnaire. This is repeated two more times and\n     then the adaptive questionnaire will finish by changing the status to completed\n     and returning a score. Note that although these questionnaires are designed as forms and\n     are not really appropriate for the adaptive questionnaire use case,  they are used here to\n      demonstrate a proof of concept implementation.<br />\n    <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-sampler<br />\n    <strong>Date Completed:</strong> 2018-07-26<br /><br />\n    <em>Copyright: You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.</em></p>\n    <hr /><hr /><br /> <strong>Question:</strong> (linkID=score) Cumulative Score is ... (this is hidden text/should not be displayed to the user)<br /><strong>Response:</strong> 0<br /><br /> <strong>Question:</strong> (linkID=std_dev) Standard Deviation is ... (this is hidden text/should not be displayed to the user)<br /><strong>Response:</strong> 0.0<br /><br /> <strong>Question:</strong> (linkID=g2.q1) Check the box if the following statement is true.  The average air speed velocity of a laden European swallow is greater than a laden African swallow.<br /><strong>Response:</strong> False<br /><br /> <strong>Question:</strong> (linkID=g6.q1) If a laden swallow left Camelot on 7/5/2018 and noon when would it reach Castle Anthrax?<br /><strong>Response:</strong> 2019-02-12T01:01<br /><br /> <strong>Question:</strong> (linkID=g4.q1) What is the average air speed velocity of a laden swallow in m/sec?<br /><strong>Response:</strong> 11<br /></div>",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h3>Argonaut Questionnaire Sampler Adaptive View</h3>\n    <p><em>NOTE: These examples are for educational and testing purposes,\n     see the form copyright statement and do not redistribute without expressed\n     permission from the form author.</em></p>\n    <p>This simulates is a simple adaptive questionnaire implementation.\n     After answering and submitting the first question another question is randomly\n     returned from the selected questionnaire. This is repeated two more times and\n     then the adaptive questionnaire will finish by changing the status to completed\n     and returning a score. Note that although these questionnaires are designed as forms and\n     are not really appropriate for the adaptive questionnaire use case,  they are used here to\n      demonstrate a proof of concept implementation.<br />\n    <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut/questionnaire/Questionnaire/questionnaire-example-sampler<br />\n    <strong>Date Completed:</strong> 2018-07-26<br /><br />\n    <em>Copyright: You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.</em></p>\n    <hr /><hr /><br /> <strong>Question:</strong> (linkID=score) Cumulative Score is ... (this is hidden text/should not be displayed to the user)<br /><strong>Response:</strong> 0<br /><br /> <strong>Question:</strong> (linkID=std_dev) Standard Deviation is ... (this is hidden text/should not be displayed to the user)<br /><strong>Response:</strong> 0.0<br /><br /> <strong>Question:</strong> (linkID=g2.q1) Check the box if the following statement is true.  The average air speed velocity of a laden European swallow is greater than a laden African swallow.<br /><strong>Response:</strong> False<br /><br /> <strong>Question:</strong> (linkID=g6.q1) If a laden swallow left Camelot on 7/5/2018 and noon when would it reach Castle Anthrax?<br /><strong>Response:</strong> 2019-02-12T01:01<br /><br /> <strong>Question:</strong> (linkID=g4.q1) What is the average air speed velocity of a laden swallow in m/sec?<br /><strong>Response:</strong> 11<br /></div>",
       "status": "generated"
    }
 }

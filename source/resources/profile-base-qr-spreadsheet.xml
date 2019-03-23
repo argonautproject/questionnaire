@@ -1568,7 +1568,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">extension.uri</Data></Cell>
-    <Cell ss:StyleID="Default"><Data ss:Type="String">http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s80"><Data ss:Type="String">introduction</Data></Cell>
@@ -1836,7 +1836,7 @@
       ss:Type="Error">#N/A</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:Index="11"><Data ss:Type="String">0..1</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:Index="13"><Data ss:Type="String">Extension{http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-responsePeriod}</Data><NamedCell
+    <Cell ss:Index="13"><Data ss:Type="String">Extension{http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-responsePeriod}</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">Y</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s99"><NamedCell ss:Name="_FilterDatabase"/></Cell>
@@ -1903,7 +1903,7 @@
     <Cell ss:StyleID="s114"><Data ss:Type="String">1..1</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s114"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s114"><Data ss:Type="String">Reference(Questionnaire){http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire}</Data><NamedCell
+    <Cell ss:StyleID="s114"><Data ss:Type="String">Reference(Questionnaire){http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-questionnaire}</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s114"><Data ss:Type="String">Y</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -2168,7 +2168,7 @@
       ss:Type="Error">#N/A</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:Index="11"><Data ss:Type="String">0..1</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:Index="13"><Data ss:Type="String">Extension{http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-responsePeriod}</Data><NamedCell
+    <Cell ss:Index="13"><Data ss:Type="String">Extension{http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-responsePeriod}</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell><Data ss:Type="String">Y</Data><NamedCell ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s123"><NamedCell ss:Name="_FilterDatabase"/></Cell>

@@ -2,12 +2,12 @@
    "id": "questionnaire-example-sampler",
    "meta": {
       "profile": [
-         "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"
+         "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-questionnaire"
       ]
    },
    "extension": [
       {
-         "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timeLimit",
+         "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-timeLimit",
          "valueDuration": {
             "code": "min",
             "system": "http://unitsofmeasure.org",
@@ -49,7 +49,7 @@
       {
          "extension": [
             {
-               "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+               "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                "valueInteger": 0
             }
          ],
@@ -57,7 +57,7 @@
             {
                "extension": [
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 0
                   }
                ],
@@ -75,7 +75,7 @@
       {
          "extension": [
             {
-               "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+               "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                "valueInteger": 1
             }
          ],
@@ -87,7 +87,7 @@
                      "valueDecimal": 17
                   },
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 0
                   }
                ],
@@ -107,7 +107,7 @@
       {
          "extension": [
             {
-               "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+               "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                "valueInteger": 2
             }
          ],
@@ -119,7 +119,7 @@
                      "valueDecimal": 7
                   },
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 0
                   }
                ],
@@ -139,7 +139,7 @@
       {
          "extension": [
             {
-               "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+               "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                "valueInteger": 3
             }
          ],
@@ -151,7 +151,7 @@
                      "valueDecimal": 3
                   },
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 0
                   }
                ],
@@ -171,7 +171,7 @@
       {
          "extension": [
             {
-               "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+               "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                "valueInteger": 4
             }
          ],
@@ -183,7 +183,7 @@
                      "valueDecimal": 27
                   },
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 0
                   }
                ],
@@ -203,7 +203,7 @@
       {
          "extension": [
             {
-               "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+               "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                "valueInteger": 5
             }
          ],
@@ -215,7 +215,7 @@
                      "valueDecimal": 3
                   },
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 0
                   }
                ],
@@ -235,7 +235,7 @@
       {
          "extension": [
             {
-               "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+               "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                "valueInteger": 6
             }
          ],
@@ -247,7 +247,7 @@
                      "valueDecimal": 8
                   },
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 0
                   }
                ],
@@ -267,7 +267,7 @@
       {
          "extension": [
             {
-               "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+               "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                "valueInteger": 7
             }
          ],
@@ -279,7 +279,7 @@
                      "valueDecimal": 1
                   },
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 0
                   }
                ],
@@ -299,7 +299,7 @@
       {
          "extension": [
             {
-               "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+               "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                "valueInteger": 8
             }
          ],
@@ -311,7 +311,7 @@
                      "valueDecimal": 0
                   },
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 0
                   }
                ],
@@ -331,7 +331,7 @@
       {
          "extension": [
             {
-               "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+               "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                "valueInteger": 9
             }
          ],
@@ -343,7 +343,7 @@
                      "valueDecimal": 11
                   },
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 0
                   }
                ],
@@ -363,7 +363,7 @@
       {
          "extension": [
             {
-               "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+               "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                "valueInteger": 10
             }
          ],
@@ -371,7 +371,7 @@
             {
                "extension": [
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 0
                   }
                ],
@@ -384,7 +384,7 @@
                            "valueDecimal": 0
                         },
                         {
-                           "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                           "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                            "valueInteger": 0
                         }
                      ],
@@ -397,7 +397,7 @@
                            "valueDecimal": 43
                         },
                         {
-                           "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                           "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                            "valueInteger": 1
                         }
                      ],
@@ -410,7 +410,7 @@
                            "valueDecimal": 0
                         },
                         {
-                           "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                           "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                            "valueInteger": 2
                         }
                      ],
@@ -432,7 +432,7 @@
       {
          "extension": [
             {
-               "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+               "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                "valueInteger": 11
             }
          ],
@@ -440,7 +440,7 @@
             {
                "extension": [
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 0
                   }
                ],
@@ -453,7 +453,7 @@
                            "valueDecimal": 0
                         },
                         {
-                           "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                           "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                            "valueInteger": 0
                         }
                      ],
@@ -466,7 +466,7 @@
                            "valueDecimal": 43
                         },
                         {
-                           "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                           "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                            "valueInteger": 1
                         }
                      ],
@@ -479,7 +479,7 @@
                            "valueDecimal": 0
                         },
                         {
-                           "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                           "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                            "valueInteger": 2
                         }
                      ],
@@ -501,7 +501,7 @@
       {
          "extension": [
             {
-               "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+               "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                "valueInteger": 12
             }
          ],
@@ -513,7 +513,7 @@
                      "valueDecimal": 3
                   },
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 0
                   }
                ],
@@ -548,7 +548,7 @@
       "Patient"
    ],
    "title": "Argonaut Questionnaire Sampler",
-   "url": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-sampler",
+   "url": "http://fhir.org/guides/argonaut/questionnaire/Questionnaire/questionnaire-example-sampler",
    "useContext": [
       {
          "code": {

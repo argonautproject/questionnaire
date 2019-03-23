@@ -36,7 +36,7 @@
 			<hr/>
 		</div>
 	</text>
-	<url value="http://fhir.org/guides/argonaut-questionnaire/CapabilityStatement/assessmentbank"/>
+	<url value="http://fhir.org/guides/argonaut/questionnaire/CapabilityStatement/assessmentbank"/>
 	<version value="0.0.0"/>
 	<name value="assessmentbank"/>
 	<title value="Argonaut questionnaire Assessment Bank CapabilityStatement"/>
@@ -59,13 +59,13 @@
 	<patchFormat value="application/json-patch+json"/>
 	<patchFormat value="application/xml-patch+xml"/>
 	<patchFormat value="application/fhirpath-patch+fhirpath"/>
-	<implementationGuide value="http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/ig"/>
+	<implementationGuide value="http://fhir.org/guides/argonaut/questionnaire/ImplementationGuide/ig"/>
 	<implementationGuide value="http://hl7.org/fhir/us/core/ImplementationGuide/ig"/>
 	<profile>
-		<reference value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"/>
+		<reference value="http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-questionnaire"/>
 	</profile>
 	<profile>
-		<reference value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaireresponse"/>
+		<reference value="http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-questionnaireresponse"/>
 	</profile>
 	<rest>
 		<mode value="server"/>

@@ -8,7 +8,7 @@
 	</identifier>
 	<!--put the canonical reference to questionnaire here so is globally discoverable -->
 	<questionnaire>
-		<reference value="http://fhir.org/guides/argonaut-questionnaire/Questionnaire/phq9"/>
+		<reference value="http://fhir.org/guides/argonaut/questionnaire/Questionnaire/phq9"/>
 	</questionnaire>
 	<status value="completed"/>
 	<!-- who this assessment is all about == subject-->

@@ -1178,7 +1178,7 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s74"><Data ss:Type="String">extension.uri</Data></Cell>
-    <Cell ss:StyleID="s80"><Data ss:Type="String">http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-</Data></Cell>
+    <Cell ss:StyleID="s80"><Data ss:Type="String">http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell ss:StyleID="s81"><Data ss:Type="String">introduction</Data></Cell>
@@ -1421,7 +1421,7 @@
     <Cell ss:StyleID="s110"><Data ss:Type="String">0..*</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s110"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s110"><Data ss:Type="String">ValueSet{http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire-valueset}</Data><NamedCell
+    <Cell ss:StyleID="s110"><Data ss:Type="String">ValueSet{http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-questionnaire-valueset}</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s110"><Data ss:Type="String">Y</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1456,7 +1456,7 @@
     <Cell ss:StyleID="s110"><Data ss:Type="String">0..1</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s110"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s110"><Data ss:Type="String">Extension{http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timeLimit}</Data><NamedCell
+    <Cell ss:StyleID="s110"><Data ss:Type="String">Extension{http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-timeLimit}</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s110"><Data ss:Type="String">Y</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -1969,7 +1969,7 @@
     <Cell ss:StyleID="s110"><Data ss:Type="String">0..1</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s110"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s110"><Data ss:Type="String">Extension{http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timeLimit}</Data><NamedCell
+    <Cell ss:StyleID="s110"><Data ss:Type="String">Extension{http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-timeLimit}</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s110"><Data ss:Type="String">Y</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -2077,7 +2077,7 @@
     <Cell ss:StyleID="s110"><Data ss:Type="String">0..1</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s110"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s110"><Data ss:Type="String">Extension{http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder}</Data><NamedCell
+    <Cell ss:StyleID="s110"><Data ss:Type="String">Extension{http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder}</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s110"><Data ss:Type="String">Y</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
@@ -2567,7 +2567,7 @@
     <Cell ss:StyleID="s110"><Data ss:Type="String">0..1</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s110"><NamedCell ss:Name="_FilterDatabase"/></Cell>
-    <Cell ss:StyleID="s110"><Data ss:Type="String">Extension{http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder}</Data><NamedCell
+    <Cell ss:StyleID="s110"><Data ss:Type="String">Extension{http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder}</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>
     <Cell ss:StyleID="s110"><Data ss:Type="String">Y</Data><NamedCell
       ss:Name="_FilterDatabase"/></Cell>

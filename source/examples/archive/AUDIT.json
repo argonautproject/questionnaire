@@ -95,13 +95,13 @@
       ],
       "meta": {
         "profile": [
-          "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire-valueset"
+          "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-questionnaire-valueset"
         ]
       },
       "resourceType": "ValueSet",
       "status": "active",
       "title": "SAMHSA-6-drinks",
-      "url": "http://fhir.org/guides/argonaut-questionnaire/ValueSet/SAMHSA-6",
+      "url": "http://fhir.org/guides/argonaut/questionnaire/ValueSet/SAMHSA-6",
       "version": "0.0.0"
     },
     {
@@ -182,13 +182,13 @@
       ],
       "meta": {
         "profile": [
-          "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire-valueset"
+          "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-questionnaire-valueset"
         ]
       },
       "resourceType": "ValueSet",
       "status": "active",
       "title": "SAMHSA-drinks-a-day",
-      "url": "http://fhir.org/guides/argonaut-questionnaire/ValueSet/SAMHSA-dad",
+      "url": "http://fhir.org/guides/argonaut/questionnaire/ValueSet/SAMHSA-dad",
       "version": "0.0.0"
     },
     {
@@ -217,7 +217,7 @@
                 "valueDecimal": 2
               }
             ],
-            "system": "http://fhir.org/guides/argonaut-questionnaire/CodeSystem/answer-codes",
+            "system": "http://fhir.org/guides/argonaut/questionnaire/CodeSystem/answer-codes",
             "version": "0.0.0"
           },
           {
@@ -245,13 +245,13 @@
       ],
       "meta": {
         "profile": [
-          "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire-valueset"
+          "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-questionnaire-valueset"
         ]
       },
       "resourceType": "ValueSet",
       "status": "active",
       "title": "Argonaut Example Answer List 1",
-      "url": "http://fhir.org/guides/argonaut-questionnaire/ValueSet/example-answerlist1",
+      "url": "http://fhir.org/guides/argonaut/questionnaire/ValueSet/example-answerlist1",
       "version": "0.0.0"
     }
   ],
@@ -454,7 +454,7 @@
   ],
   "meta": {
     "profile": [
-      "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"
+      "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-questionnaire"
     ]
   },
   "publisher": "Argonaut Project",
@@ -468,7 +468,7 @@
     "status": "additional"
   },
   "title": "The Alcohol Use Disorder Identification Test (AUDIT) Form",
-  "url": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit",
+  "url": "http://fhir.org/guides/argonaut/questionnaire/Questionnaire/questionnaire-example-audit",
   "useContext": [
     {
       "code": {

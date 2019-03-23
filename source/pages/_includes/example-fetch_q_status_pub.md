@@ -43,7 +43,7 @@ Content-Type: application/fhir+json; charset=utf-8
                "versionId": "19",
                "lastUpdated": "2019-02-13T08:37:05.202+00:00",
                "profile": [
-                  "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"
+                  "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-questionnaire"
                ]
             },
             "text": {
@@ -52,7 +52,7 @@ Content-Type: application/fhir+json; charset=utf-8
             },
             "extension": [
                {
-                  "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timeLimit",
+                  "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-timeLimit",
                   "valueDuration": {
                      "value": 5,
                      "unit": "minute",
@@ -61,7 +61,7 @@ Content-Type: application/fhir+json; charset=utf-8
                   }
                }
             ],
-            "url": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-search",
+            "url": "http://fhir.org/guides/argonaut/questionnaire/Questionnaire/questionnaire-example-search",
             "identifier": [
                {
                   "system": "http://acme.org/q-identifiers",

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
 	<id value="extension-timeLimit"/>
-	<url value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timeLimit"/>
+	<url value="http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-timeLimit"/>
 	<version value="0.0.0"/>
 	<name value="argonaut_questionnaire_time_limit"/>
 	<title value="Argonaut Questionnaire Time Limit Extension"/>
@@ -34,7 +34,7 @@
 			<type>
 				<code value="uri"/>
 			</type>
-			<fixedUri value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timeLimit"/>
+			<fixedUri value="http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-timeLimit"/>
 		</element>
 		<element id="Extension.value[x]:valueDuration">
 			<path value="Extension.valueDuration"/>

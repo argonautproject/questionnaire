@@ -9,7 +9,7 @@
          "date": "2019-02-13T00:33:09.090670Z",
          "extension": [
             {
-               "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timeLimit",
+               "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-timeLimit",
                "valueDuration": {
                   "code": "h",
                   "system": "http://unitsofmeasure.org",
@@ -27,7 +27,7 @@
                      "valueBoolean": true
                   },
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 1
                   }
                ],
@@ -44,7 +44,7 @@
                      "valueBoolean": true
                   },
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 2
                   }
                ],
@@ -62,10 +62,10 @@
                      "system": "http://loinc.org"
                   }
                ],
-               "definition": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit-c-q1",
+               "definition": "http://fhir.org/guides/argonaut/questionnaire/Questionnaire/questionnaire-example-audit-c-q1",
                "extension": [
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 3
                   }
                ],
@@ -171,10 +171,10 @@
                      "system": "http://loinc.org"
                   }
                ],
-               "definition": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit-c-q2",
+               "definition": "http://fhir.org/guides/argonaut/questionnaire/Questionnaire/questionnaire-example-audit-c-q2",
                "extension": [
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 4
                   }
                ],
@@ -280,10 +280,10 @@
                      "system": "http://loinc.org"
                   }
                ],
-               "definition": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit-c-q3",
+               "definition": "http://fhir.org/guides/argonaut/questionnaire/Questionnaire/questionnaire-example-audit-c-q3",
                "extension": [
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 5
                   }
                ],
@@ -384,13 +384,13 @@
          ],
          "meta": {
             "profile": [
-               "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"
+               "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-questionnaire"
             ]
          },
          "resourceType": "Questionnaire",
          "status": "active",
          "title": "Contained Adaptive Alcohol Use Disorder Identification Test - Consumption [AUDIT-C]",
-         "url": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit-c"
+         "url": "http://fhir.org/guides/argonaut/questionnaire/Questionnaire/questionnaire-example-audit-c"
       }
    ],
    "context": {
@@ -398,7 +398,7 @@
    },
    "extension": [
       {
-         "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-responsePeriod",
+         "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-responsePeriod",
          "valuePeriod": {
             "end": "2019-02-13T00:33:32.202676Z",
             "start": "2019-02-13T00:33:06.209791Z"
@@ -438,7 +438,7 @@
                }
             }
          ],
-         "definition": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit-c-q1",
+         "definition": "http://fhir.org/guides/argonaut/questionnaire/Questionnaire/questionnaire-example-audit-c-q1",
          "linkId": "q1",
          "text": "How often do you have a drink containing alcohol"
       },
@@ -452,7 +452,7 @@
                }
             }
          ],
-         "definition": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit-c-q2",
+         "definition": "http://fhir.org/guides/argonaut/questionnaire/Questionnaire/questionnaire-example-audit-c-q2",
          "linkId": "q2",
          "text": "How many standard drinks containing alcohol do you have on a typical day"
       },
@@ -466,14 +466,14 @@
                }
             }
          ],
-         "definition": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit-c-q3",
+         "definition": "http://fhir.org/guides/argonaut/questionnaire/Questionnaire/questionnaire-example-audit-c-q3",
          "linkId": "q3",
          "text": "How often do you have 6 or more drinks on 1 occasion"
       }
    ],
    "meta": {
       "profile": [
-         "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-adap-questionnaireresponse"
+         "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-adap-questionnaireresponse"
       ]
    },
    "questionnaire": {
@@ -488,7 +488,7 @@
       "reference": "Patient/subject1"
    },
    "text": {
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h3>Alcohol Use Disorder Identification Test - Consumption [AUDIT-C] Adaptive View</h3>\n    <p><em>NOTE: These examples are for educational and testing purposes,\n     see the form copyright statement and do not redistribute without expressed\n     permission from the form author.</em></p>\n    <p>This simulates is a simple adaptive questionnaire implementation.\n     After answering and submitting the first question another question is randomly\n     returned from the selected questionnaire. This is repeated two more times and\n     then the adaptive questionnaire will finish by changing the status to completed\n     and returning a score. Note that although these questionnaires are designed as forms and\n     are not really appropriate for the adaptive questionnaire use case,  they are used here to\n      demonstrate a proof of concept implementation.<br />\n    <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit-c<br />\n    <strong>Date Completed:</strong> 2019-02-06<br /><br />\n    <em>Copyright: Copyright 2001 World Health Organization. Terms of Use: WHO exercises copyright over its information to make sure that it is used in accordance with the Organization's principles. Extracts of WHO information can be used for private study or for educational purposes without permission. Wider use requires permission to be obtained from WHO.  http://www.who.int/about/licensing/en/</em></p>\n    <hr /><hr /><br /> <strong>Question:</strong> (linkID=score) Cumulative Score is ... (this is hidden text/should not be displayed to the user)<br /><strong>Response:</strong> 0<br /><br /> <strong>Question:</strong> (linkID=std_dev) Standard Deviation is ... (this is hidden text/should not be displayed to the user)<br /><strong>Response:</strong> 0.0<br /><br /> <strong>Question:</strong> (linkID=q1) How often do you have a drink containing alcohol<br /><strong>Response:</strong>  Never ( code = LA6270-8, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=q2) How many standard drinks containing alcohol do you have on a typical day<br /><strong>Response:</strong>  1 or 2 ( code = LA15694-5, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=q3) How often do you have 6 or more drinks on 1 occasion<br /><strong>Response:</strong>  Never ( code = LA6270-8, codesystem = http://loinc.org)<br /></div>",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    <h3>Alcohol Use Disorder Identification Test - Consumption [AUDIT-C] Adaptive View</h3>\n    <p><em>NOTE: These examples are for educational and testing purposes,\n     see the form copyright statement and do not redistribute without expressed\n     permission from the form author.</em></p>\n    <p>This simulates is a simple adaptive questionnaire implementation.\n     After answering and submitting the first question another question is randomly\n     returned from the selected questionnaire. This is repeated two more times and\n     then the adaptive questionnaire will finish by changing the status to completed\n     and returning a score. Note that although these questionnaires are designed as forms and\n     are not really appropriate for the adaptive questionnaire use case,  they are used here to\n      demonstrate a proof of concept implementation.<br />\n    <strong>Questionnaire URL:</strong> http://fhir.org/guides/argonaut/questionnaire/Questionnaire/questionnaire-example-audit-c<br />\n    <strong>Date Completed:</strong> 2019-02-06<br /><br />\n    <em>Copyright: Copyright 2001 World Health Organization. Terms of Use: WHO exercises copyright over its information to make sure that it is used in accordance with the Organization's principles. Extracts of WHO information can be used for private study or for educational purposes without permission. Wider use requires permission to be obtained from WHO.  http://www.who.int/about/licensing/en/</em></p>\n    <hr /><hr /><br /> <strong>Question:</strong> (linkID=score) Cumulative Score is ... (this is hidden text/should not be displayed to the user)<br /><strong>Response:</strong> 0<br /><br /> <strong>Question:</strong> (linkID=std_dev) Standard Deviation is ... (this is hidden text/should not be displayed to the user)<br /><strong>Response:</strong> 0.0<br /><br /> <strong>Question:</strong> (linkID=q1) How often do you have a drink containing alcohol<br /><strong>Response:</strong>  Never ( code = LA6270-8, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=q2) How many standard drinks containing alcohol do you have on a typical day<br /><strong>Response:</strong>  1 or 2 ( code = LA15694-5, codesystem = http://loinc.org)<br /><br /> <strong>Question:</strong> (linkID=q3) How often do you have 6 or more drinks on 1 occasion<br /><strong>Response:</strong>  Never ( code = LA6270-8, codesystem = http://loinc.org)<br /></div>",
       "status": "generated"
    }
 }

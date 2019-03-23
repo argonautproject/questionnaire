@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
 	<id value="answer-codes"/>
-	<url value="http://fhir.org/guides/argonaut-questionnaire/CodeSystem/answer-codes"/>
+	<url value="http://fhir.org/guides/argonaut/questionnaire/CodeSystem/answer-codes"/>
 	<version value="1.0.0"/>
 	<name value="Argonaut_Answer_Codes"/>
 	<title value="Argonaut Answer Codes"/>
@@ -17,7 +17,7 @@
 		</coding>
 	</jurisdiction>
 	<caseSensitive value="true"/>
-	<valueSet value="http://fhir.org/guides/argonaut-questionnaire/ValueSet/answer-codes"/>
+	<valueSet value="http://fhir.org/guides/argonaut/questionnaire/ValueSet/answer-codes"/>
 	<content value="complete"/>
 	<concept>
 		<code value="not-last-year"/>

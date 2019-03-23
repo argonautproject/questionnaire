@@ -3,7 +3,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="extension-multipleOr"/>
 
-  <url value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-multipleOr"/>
+  <url value="http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-multipleOr"/>
   <version value="1.0.0"/>
   <name value="extension_multiple_or"/>
   <title value="Argonaut SearchParameter Multiple OR Extension"/>
@@ -33,7 +33,7 @@
       <type>
         <code value="uri"/>
       </type>
-      <fixedUri value="http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-multipleOr"/>
+      <fixedUri value="http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-multipleOr"/>
     </element>
     <element id="Extension.valueBoolean">
       <path value="Extension.valueBoolean"/>

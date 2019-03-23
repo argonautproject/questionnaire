@@ -2,7 +2,7 @@
    "id": "questionnaire-example-phq9",
    "meta": {
       "profile": [
-         "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"
+         "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-questionnaire"
       ]
    },
    "contained": [
@@ -10,7 +10,7 @@
          "id": "LL358-3",
          "meta": {
             "profile": [
-               "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire-valueset"
+               "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-questionnaire-valueset"
             ]
          },
          "copyright": "This content LOINC is copyright 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use .",
@@ -93,7 +93,7 @@
          ],
          "status": "active",
          "title": "Patient Health Questionnaire (PHQ-9)",
-         "url": "http://fhir.org/guides/argonaut-questionnaire/ValueSet/LL358-3",
+         "url": "http://fhir.org/guides/argonaut/questionnaire/ValueSet/LL358-3",
          "version": "0.0.0",
          "resourceType": "ValueSet"
       },
@@ -101,7 +101,7 @@
          "id": "LL359-1",
          "meta": {
             "profile": [
-               "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire-valueset"
+               "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-questionnaire-valueset"
             ]
          },
          "copyright": "This content LOINC is copyright 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use .",
@@ -168,14 +168,14 @@
          ],
          "status": "active",
          "title": "PHQ.10 / Not difficult at all/Somewhat difficult/Very difficult/Extremely difficult-Perceived difficulty (PHQ-9)",
-         "url": "http://fhir.org/guides/argonaut-questionnaire/ValueSet/LL359-1",
+         "url": "http://fhir.org/guides/argonaut/questionnaire/ValueSet/LL359-1",
          "version": "0.0.0",
          "resourceType": "ValueSet"
       }
    ],
    "extension": [
       {
-         "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timeLimit",
+         "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-timeLimit",
          "valueDuration": {
             "code": "wk",
             "system": "http://unitsofmeasure.org",
@@ -213,7 +213,7 @@
       {
          "extension": [
             {
-               "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+               "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                "valueInteger": 0
             }
          ],
@@ -227,7 +227,7 @@
             {
                "extension": [
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 0
                   }
                ],
@@ -239,7 +239,7 @@
             {
                "extension": [
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 1
                   }
                ],
@@ -263,7 +263,7 @@
             {
                "extension": [
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 2
                   }
                ],
@@ -287,7 +287,7 @@
             {
                "extension": [
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 3
                   }
                ],
@@ -311,7 +311,7 @@
             {
                "extension": [
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 4
                   }
                ],
@@ -335,7 +335,7 @@
             {
                "extension": [
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 5
                   }
                ],
@@ -359,7 +359,7 @@
             {
                "extension": [
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 6
                   }
                ],
@@ -383,7 +383,7 @@
             {
                "extension": [
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 7
                   }
                ],
@@ -407,7 +407,7 @@
             {
                "extension": [
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 8
                   }
                ],
@@ -431,7 +431,7 @@
             {
                "extension": [
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 9
                   }
                ],
@@ -459,7 +459,7 @@
                      "valueBoolean": true
                   },
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 10
                   }
                ],
@@ -482,7 +482,7 @@
       {
          "extension": [
             {
-               "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+               "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                "valueInteger": 1
             }
          ],
@@ -490,7 +490,7 @@
             {
                "extension": [
                   {
-                     "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+                     "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
                      "valueInteger": 0
                   }
                ],
@@ -533,7 +533,7 @@
       "Patient"
    ],
    "title": "Patient Health Questionnaire (PHQ-9)",
-   "url": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-phq9",
+   "url": "http://fhir.org/guides/argonaut/questionnaire/Questionnaire/questionnaire-example-phq9",
    "useContext": [
       {
          "code": {

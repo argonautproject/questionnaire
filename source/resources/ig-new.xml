@@ -14,7 +14,7 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
     <valueString value="/Users/ehaas/Documents/FHIR/Argo-Questionnaire/source/pages"/>
   </extension>
-  <url value="http://fhir.org/guides/argonaut-questionnaire/ImplementationGuide/argonaut.us.questionnaire-1.0.0"/>
+  <url value="http://fhir.org/guides/argonaut/questionnaire/ImplementationGuide/argonaut.us.questionnaire-1.0.0"/>
   <version value="1.0.0"/>
   <name value="Argonaut Questionnaire"/>
   <status value="draft"/>

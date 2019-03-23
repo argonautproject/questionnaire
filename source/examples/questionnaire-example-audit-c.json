@@ -2,7 +2,7 @@
   "id": "questionnaire-example-audit-c",
   "meta": {
     "profile": [
-      "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire"
+      "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-questionnaire"
     ]
   },
   "contained": [
@@ -10,7 +10,7 @@
       "id": "LL2179-1",
       "meta": {
         "profile": [
-          "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire-valueset"
+          "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-questionnaire-valueset"
         ]
       },
       "compose": {
@@ -117,14 +117,14 @@
         "total": 5
       },
       "status": "active",
-      "url": "http://fhir.org/guides/argonaut-questionnaire/ValueSet/LL2179-1",
+      "url": "http://fhir.org/guides/argonaut/questionnaire/ValueSet/LL2179-1",
       "resourceType": "ValueSet"
     },
     {
       "id": "LL2180-9",
       "meta": {
         "profile": [
-          "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire-valueset"
+          "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-questionnaire-valueset"
         ]
       },
       "compose": {
@@ -231,14 +231,14 @@
         "total": 5
       },
       "status": "active",
-      "url": "http://fhir.org/guides/argonaut-questionnaire/ValueSet/LL2180-9",
+      "url": "http://fhir.org/guides/argonaut/questionnaire/ValueSet/LL2180-9",
       "resourceType": "ValueSet"
     },
     {
       "id": "LL2181-7",
       "meta": {
         "profile": [
-          "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/argo-questionnaire-valueset"
+          "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-questionnaire-valueset"
         ]
       },
       "compose": {
@@ -345,13 +345,13 @@
         "total": 5
       },
       "status": "active",
-      "url": "http://fhir.org/guides/argonaut-questionnaire/ValueSet/LL2181-7",
+      "url": "http://fhir.org/guides/argonaut/questionnaire/ValueSet/LL2181-7",
       "resourceType": "ValueSet"
     }
   ],
   "extension": [
     {
-      "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-timeLimit",
+      "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-timeLimit",
       "valueDuration": {
         "code": "h",
         "system": "http://unitsofmeasure.org",
@@ -394,7 +394,7 @@
     {
       "extension": [
         {
-          "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+          "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
           "valueInteger": 0
         }
       ],
@@ -419,7 +419,7 @@
     {
       "extension": [
         {
-          "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+          "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
           "valueInteger": 1
         }
       ],
@@ -444,7 +444,7 @@
     {
       "extension": [
         {
-          "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+          "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
           "valueInteger": 2
         }
       ],
@@ -473,7 +473,7 @@
           "valueBoolean": true
         },
         {
-          "url": "http://fhir.org/guides/argonaut-questionnaire/StructureDefinition/extension-itemOrder",
+          "url": "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/extension-itemOrder",
           "valueInteger": 3
         }
       ],
@@ -499,7 +499,7 @@
     "Patient"
   ],
   "title": "Alcohol Use Disorder Identification Test - Consumption [AUDIT-C]",
-  "url": "http://fhir.org/guides/argonaut-questionnaire/Questionnaire/questionnaire-example-audit-c",
+  "url": "http://fhir.org/guides/argonaut/questionnaire/Questionnaire/questionnaire-example-audit-c",
   "useContext": [
     {
       "code": {
