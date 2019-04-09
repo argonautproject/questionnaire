@@ -99,7 +99,7 @@
             }
          ],
          "linkId": "g2",
-         "prefix": "1. ",
+         "prefix": "1.",
          "required": true,
          "text": "boolean",
          "type": "group"
@@ -131,7 +131,7 @@
             }
          ],
          "linkId": "g3",
-         "prefix": "2. ",
+         "prefix": "2.",
          "required": true,
          "text": "decimal",
          "type": "group"
@@ -163,7 +163,7 @@
             }
          ],
          "linkId": "g4",
-         "prefix": "3. ",
+         "prefix": "3.",
          "required": true,
          "text": "integer",
          "type": "group"
@@ -195,7 +195,7 @@
             }
          ],
          "linkId": "g5",
-         "prefix": "4. ",
+         "prefix": "4.",
          "required": true,
          "text": "date",
          "type": "group"
@@ -227,7 +227,7 @@
             }
          ],
          "linkId": "g6",
-         "prefix": "5. ",
+         "prefix": "5.",
          "required": true,
          "text": "dateTime",
          "type": "group"
@@ -259,7 +259,7 @@
             }
          ],
          "linkId": "g7",
-         "prefix": "6. ",
+         "prefix": "6.",
          "required": true,
          "text": "time",
          "type": "group"
@@ -291,7 +291,7 @@
             }
          ],
          "linkId": "g8",
-         "prefix": "7. ",
+         "prefix": "7.",
          "required": true,
          "text": "string",
          "type": "group"
@@ -323,7 +323,7 @@
             }
          ],
          "linkId": "g9",
-         "prefix": "8. ",
+         "prefix": "8.",
          "required": true,
          "text": "text",
          "type": "group"
@@ -355,7 +355,7 @@
             }
          ],
          "linkId": "g10",
-         "prefix": "9. ",
+         "prefix": "9.",
          "required": true,
          "text": "url",
          "type": "group"
@@ -424,7 +424,7 @@
             }
          ],
          "linkId": "g11",
-         "prefix": "10. ",
+         "prefix": "10.",
          "required": true,
          "text": "choice",
          "type": "group"
@@ -493,7 +493,7 @@
             }
          ],
          "linkId": "g12",
-         "prefix": "11. ",
+         "prefix": "11.",
          "required": true,
          "text": "open-choice",
          "type": "group"
@@ -525,7 +525,7 @@
             }
          ],
          "linkId": "g13",
-         "prefix": "12. ",
+         "prefix": "12.",
          "required": true,
          "text": "quantity",
          "type": "group"

@@ -254,7 +254,7 @@
                   "display": "Patient Health Questionnaire (PHQ-9) Not at all/Several days/More than half the days/Nearly every day",
                   "reference": "#LL358-3"
                },
-               "prefix": "1. ",
+               "prefix": "1.",
                "repeats": false,
                "required": true,
                "text": "Little interest or pleasure in doing things,",
