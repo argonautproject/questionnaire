@@ -60,7 +60,7 @@
 	<patchFormat value="application/xml-patch+xml"/>
 	<patchFormat value="application/fhirpath-patch+fhirpath"/>
 	<implementationGuide value="http://fhir.org/guides/argonaut/questionnaire/ImplementationGuide/ig"/>
-	<implementationGuide value="http://hl7.org/fhir/us/core/ImplementationGuide/ig"/>
+	<implementationGuide value="http://hl7.org/fhir/us/core/STU2/ImplementationGuide/us-core-ig"/>
 	<profile>
 		<reference value="http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-questionnaire"/>
 	</profile>

@@ -24,7 +24,7 @@
          "item": [
             {
                "linkId": "g1.d",
-               "text": "The Argonaut Questionnaire Sampler is designed to show all the question types that can be used in the Argonaut Questionnaire Project:\n\n1 boolean\n2 decimal\n3 integer\n4 dateDate\n5 dateTime\n6 timeTime\n7 string\n8 textText\n9 urlUrl\n10 choice\n11 open-choice\n12 quantity"
+               "text": "The Argonaut Questionnaire Sampler is designed to show all the question types that can be used in the Argonaut Questionnaire Project: 1. boolean, 2. decimal, 3. integer, 4. dateDate, 5. dateTime, 6. timeTime, 7. string, 8. textText, 9. urlUrl, 10. choice, 11. open-choice, 12. quantity"
             }
          ],
          "linkId": "g1",

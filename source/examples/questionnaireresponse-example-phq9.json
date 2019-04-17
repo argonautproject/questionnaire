@@ -145,7 +145,7 @@
             },
             {
                "linkId": "g1.s",
-               "text": "Scoring: \nAdd up all checked boxes on PHQ-9. \n\nFor every:\nNot at all = 0;\nSeveral days = 1;\nMore than half the days = 2;\nNearly every day = 3\n\nInterpretation of Total Score\nTotal Score Depression Severity\n1-4 Minimal depression\n5-9 Mild depression\n10-14 Moderate depression\n15-19 Moderately severe depression\n20-27 Severe depression (this is hidden text/should not be displayed to the user)"
+               "text": "Scoring: \nAdd up all checked boxes on PHQ-9. \n\nFor every:\nNot at all = 0;\nSeveral days = 1;\nMore than half the days = 2;\nNearly every day = 3\n\nInterpretation of Total Score\nTotal Score Depression Severity\n1-4 Minimal depression\n5-9 Mild depression\n10-14 Moderate depression\n15-19 Moderately severe depression\n20-27 Severe depression"
             }
          ],
          "linkId": "g1"

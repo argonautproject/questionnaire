@@ -144,7 +144,7 @@
             }
          ],
          "linkId": "score",
-         "text": "Cumulative Score is ... (this is hidden text/should not be displayed to the user)"
+         "text": "Cumulative Score is ..."
       },
       {
          "answer": [
@@ -153,7 +153,7 @@
             }
          ],
          "linkId": "std_dev",
-         "text": "Standard Deviation is ... (this is hidden text/should not be displayed to the user)"
+         "text": "Standard Deviation is ..."
       },
       {
          "answer": [

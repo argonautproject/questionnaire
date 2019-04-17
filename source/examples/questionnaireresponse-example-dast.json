@@ -158,17 +158,17 @@
             }
          ],
          "linkId": "g1",
-         "text": "Form (this is hidden text/should not be displayed to the user)"
+         "text": "Form"
       },
       {
          "item": [
             {
                "linkId": "g2.d",
-               "text": "Scoring: Score 1 point for each question answered \u201cYes,\u201d except for question 3 for which\na \u201cNo\u201d receives 1 point.\n\nInterpretation of Score:\nScore Degree of Problems Related to Drug Abuse Suggested Action\n0 No problems reported None at this time\n1\u20102 Low level Monitor, re\u2010assess at a later date\n3\u20105 Moderate level Further investigation\n6\u20108 Substantial level Intensive assessment\n9\u201010 Severe level Intensive assessment (this is hidden text/should not be displayed to the user)"
+               "text": "Scoring: Score 1 point for each question answered \u201cYes,\u201d except for question 3 for which\na \u201cNo\u201d receives 1 point.\n\nInterpretation of Score:\nScore Degree of Problems Related to Drug Abuse Suggested Action\n0 No problems reported None at this time\n1\u20102 Low level Monitor, re\u2010assess at a later date\n3\u20105 Moderate level Further investigation\n6\u20108 Substantial level Intensive assessment\n9\u201010 Severe level Intensive assessment"
             }
          ],
          "linkId": "g2",
-         "text": "Scoring Instructions (this is hidden text/should not be displayed to the user)"
+         "text": "Scoring Instructions"
       }
    ],
    "meta": {

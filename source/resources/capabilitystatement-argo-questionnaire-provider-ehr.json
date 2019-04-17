@@ -25,7 +25,7 @@
    ],
    "implementationGuide": [
       "http://fhir.org/guides/argonaut/questionnaire/ImplementationGuide/argonaut.us.questionnaire-1.0.0",
-      "http://hl7.org/fhir/us/core/ImplementationGuide/ig"
+      "http://hl7.org/fhir/us/core/STU2/ImplementationGuide/us-core-ig"
    ],
    "jurisdiction": [
       {
