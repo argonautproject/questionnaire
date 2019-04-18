@@ -27,6 +27,7 @@
     ],
     "txCache": "generated_output/txCache",
     "temp": "generated_output/temp",
+    "history" : "http://fhir.org/guides/argonaut/questionnaire/history.html",
     "specification": "http://hl7.org/fhir/STU3",
     "resources": [
       "source/resources",

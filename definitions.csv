@@ -21,6 +21,7 @@ paths.output,output
 paths.txCache,generated_output/txCache
 paths.qa,generated_output/qa
 paths.specification,http://hl7.org/fhir/STU3
+paths.history,http://fhir.org/guides/argonaut/questionnaire/history.html
 jurisdiction,US
 sct-edition,
 no-inactive-codes,FALSE
