@@ -3,6 +3,8 @@
 
 ## Publishing Information
 
+**Publishing history** http://www.fhir.org/guides/argonaut/questionnaire/history.shtml
+
 **IG code:** `guides/argonaut/questionnaire`
 <!--Proposed IG realm and code
 What is the realm code (2-character country code or 'uv') and IG code to use for the path when the IG is published under http://hl7.org/fhir? E.g. us/ccda -->
