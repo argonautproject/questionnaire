@@ -1,4 +1,5 @@
 Configuration Parameter,Configuration Value ( use '|' for lists)
+onlyJson,FALSE
 igtemplate-dir,/Users/ehaas/Documents/FHIR/IG-Template2/
 working-dir,/Users/ehaas/Documents/FHIR/Argonaut-Questionnaire/
 title,Argonaut Questionnaire
