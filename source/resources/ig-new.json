@@ -535,12 +535,12 @@
         },
         {
           "nameUrl" : "CapabilityStatement-argo-questionnaire-provider-ehr.html",
-          "title" : "CapabilityStatement Argo Questionnaire Provider Ehr",
+          "title" : "CapabilityStatement Argo Questionnaire Provider EHR",
           "generation" : "generated"
         },
         {
           "nameUrl" : "CapabilityStatement-answerbank.html",
-          "title" : "CapabilityStatement Answerbank",
+          "title" : "CapabilityStatement Answer Bank",
           "generation" : "generated"
         }]
       },

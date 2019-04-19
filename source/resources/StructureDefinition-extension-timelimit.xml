@@ -24,7 +24,7 @@
 			<path value="Extension"/>
 			<short value="Questions and answer time limit"/>
 			<definition value="A duration associated with completion of a Questionnaire or Questionnaire item.  This is used to determine if the end user has completed the Questionnaire or individual questions or groups of questions within the specified time-period."/>
-			<comment value="To determine whether the questionnaire or items were answered within the time limit defined by the extension, the Form Filler can record the start and stop date-times in the [Argonaut QuestionnaireResponse responsePeriod Extension]. How this information modifies the behavior of the Form-filler or interpretation of results is an implementation detail outside of scope of this Implementation Guide."/>
+			<comment value="To determine whether the questionnaire or items were answered within the time limit defined by the extension, the Form Filler can record the start and stop date-times in the [Argonaut QuestionnaireResponse Response Period Extension]. How this information modifies the behavior of the Form-filler or interpretation of results is an implementation detail outside of scope of this Implementation Guide."/>
 			<min value="0"/>
 			<max value="1"/>
 			<isModifier value="false"/>

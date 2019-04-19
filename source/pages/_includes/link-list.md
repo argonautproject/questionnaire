@@ -82,9 +82,9 @@
 [US Core Implementation Guide security section]: {{site.data.fhir.uscore}}security.html "US Core Security"
 [server]: CapabilityStatement-server.html
 [SMART Backend Services]: http://docs.smarthealthit.org/authorization/backend-services/
-[SMART on FHIR]: http://hl7.org/fhir/smart-app-launch/1.0.0/
+[SMART on FHIR]: http://www.hl7.org/fhir/smart-app-launch/history.cfml
 [Static Forms Use Case]: static.html
-[Structured Data Capture Initiative]: http://build.fhir.org/ig/HL7/sdc/ "SDC"
+[Structured Data Capture Initiative]: http://www.hl7.org/fhir/uv/sdc/history.cfml "SDC"
 [Terminology]: terminology.html "Defines expectations for sharing of Questionnaires and answers, including mechanisms for automatically populating portions of a questionnaire based on embedded mappings to underlying data elements"
 [Translation]: {{site.data.fhir.path}}extension-translation.html "Language translation from base language of resource to another language."
 [US Core General Guidance]: {{site.data.fhir.uscore}}guidance.html "US Core General Guidance"
@@ -92,3 +92,4 @@
 [ValueSet Ordinal Value Extension]: {{site.data.fhir.path}}extension-valueset-ordinalvalue.html "ValueSet ordinalvalue extension: A numeric value that allows numerical manipulation of a concept."
 [Patient Demographic Based Search]: static.html#patient-demographic-based-search
 [FHIR Security]: {{site.data.fhir.path}}security.html
+[chained]: {{site.data.fhir.path}}search.html#chaining

@@ -530,12 +530,12 @@
         </page>
         <page>
           <nameUrl value="CapabilityStatement-argo-questionnaire-provider-ehr.html"/>
-          <title value="CapabilityStatement Argo Questionnaire Provider Ehr"/>
+          <title value="CapabilityStatement Argo Questionnaire Provider EHR"/>
           <generation value="generated"/>
         </page>
         <page>
           <nameUrl value="CapabilityStatement-answerbank.html"/>
-          <title value="CapabilityStatement Answerbank"/>
+          <title value="CapabilityStatement Answer Bank"/>
           <generation value="generated"/>
         </page>
       </page>

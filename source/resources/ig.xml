@@ -500,12 +500,12 @@
       </page>
       <page>
         <source value="CapabilityStatement-argo-questionnaire-provider-ehr.html"/>
-        <title value="CapabilityStatement Argo Questionnaire Provider Ehr"/>
+        <title value="CapabilityStatement Argo Questionnaire Provider EHR"/>
         <kind value="resource"/>
       </page>
       <page>
         <source value="CapabilityStatement-answerbank.html"/>
-        <title value="CapabilityStatement Answerbank"/>
+        <title value="CapabilityStatement Answer Bank"/>
         <kind value="resource"/>
       </page>
       <!-- ============ End CapabilityStatements    =============== -->

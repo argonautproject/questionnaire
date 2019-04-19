@@ -56,6 +56,28 @@ Content-Type: application/fhir+json; charset=utf-8
                      "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
                   }
                ],
+               "name" : [
+                {
+                  "_family" : {
+                    "extension" : [
+                      {
+                        "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                        "valueCode" : "masked"
+                      }
+                    ]
+                  },
+                  "_given" : [
+                    {
+                      "extension" : [
+                        {
+                          "url" : "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                          "valueCode" : "masked"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
                "address": [
                   {
                      "postalCode": "945"

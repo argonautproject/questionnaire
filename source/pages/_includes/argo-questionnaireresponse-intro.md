@@ -33,7 +33,7 @@ The following data-elements are mandatory:
 1. A reference to the envcounter
 1. Who or what recorded the answers
 1. Who answered the questions
-1. Nesting or grouping of answers tha correspond to the structure and grouping of the Questionnaire
+1. Nesting or grouping of answers that correspond to the structure and grouping of the Questionnaire
     1. The text of the question
     1. The actual response to the question
 
