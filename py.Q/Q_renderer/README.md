@@ -1,14 +1,7 @@
 # FHIR-FlaskApp
-Test python flask application that acts as an intermediate server for FHIR Searches and Operations.  Fetches resources from the FHIR reference server.
+Test python flask application that acts as an intermediate server for FHIR Searches and Operations.  Fetches resources from the FHIR reference server where example Questionnaires are stored.
 
-Works best with Postman or Fiddler.
+Python 3.4
 
-#### The FHIR endpoint is: `http://testpy-env.us-west-2.elasticbeanstalk.com`
+Application is located at: http://gettingstarte-cjfwz-env.us-west-2.elasticbeanstalk.com/
 
-Examples
-
-Get a Patient by id:
-
-`GET http://testpy-env.us-west-2.elasticbeanstalk.com/Patient?_id=101`
-
-![Screenshot](Flask-ss1.png)
