@@ -1,7 +1,8 @@
 # FHIR-FlaskApp
-Test python flask application that acts as an intermediate server for FHIR Searches and Operations.  Fetches resources from the FHIR reference server where example Questionnaires are stored.
 
-Python 3.4
+The test python flask applicationt demonstrates the implementation of the Argonaut questionnaire implementation guide.  It fetches a questionnaire from a FHIR reference server, renders them as online forms using HTML5 and Flask based templatesm and displays the completed forms.  Both single page forms and adaptive forms are demonstrated.  In addition to rendering questionnaires and results, the application calculates scores, self documents each step and renders the relevent FHIR artifacts in serialized JSON.  
+
+It is based on python 3.4 Flask library and functionally as a "FHIR Facade" interacting with a FHIR STU3 reference server retrieving and storing data to the server using FHIR RESTful interactions.
 
 Application is located at: http://gettingstarte-cjfwz-env.us-west-2.elasticbeanstalk.com/
 
