@@ -4,5 +4,5 @@ The test python flask application demonstrates the implementation of the Argonau
 
 It is based on python 3.4 Flask library and functionally as a "FHIR Facade" interacting with a FHIR STU3 reference server retrieving and storing data to the server using FHIR RESTful interactions.
 
-Application is located at: http://gettingstarte-cjfwz-env.us-west-2.elasticbeanstalk.com/
+Application is currently down and undergoing maintenance
 
