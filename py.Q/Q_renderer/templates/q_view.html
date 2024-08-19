@@ -8,8 +8,8 @@
 
 <!-- Q  views  -->
 {% if q %}
-<a href="{{session['form_url']}}">Questionnaire as XML</a>
-<br />
+<!--{%raw%} <a href="{{ url_for("qxml_view") }}">Questionnaire as XML</a>
+<br /> {%endraw%}-->
 <a href="{{ url_for("qjson_view") }}">Questionnaire as JSON</a>
 <br />
 <!-- end  Q  views  -->
@@ -26,34 +26,45 @@
 <form action='{{url_for('qr_view') }}' method='POST'>
 
 <ol style = 'list-style-type: none;'>
-<!-- ********root level**********-->
+<!-- ********root level**********<br/> -->
+
 {% for i in q.item %}
 
-<!-- ********outer group**********-->
-     {% if i.type == "group" %}
 
+     {% if i.type == "group" %}
+     <!-- ********outer group**********<br/> -->
+     <hr>
       {% if i.text and not i.extension %}  <!-- check if hidden stub in for now need to add url later -->
         <h4>{{i.text}}</h4>
       {% endif %}
-
-
-
       <!-- iterate through all the questions in the groups -->
       <ol style = 'list-style-type: none;'>
 
-<!-- **********group level items********** -->
+<!-- **********  outer group items**********<br/> -->
 
             {% for j in i.item %}
 
-{% include 'questions.html' %}
+              {% if j.type == "group" %}
+              <li id='{{j.linkId}}'><strong>{{j.prefix|default('', true)}}{{j.text}}</strong></li>
 
-              {% endfor %}
+              <!-- ********inner group********** <br/> -->
+                <hr>
+                {% for k in j.item %}
+                <!-- ********** inner group items **********<br/> -->
+                {% set j = k %}
+                {% include 'questions.html' %}
+                {% endfor %}
+              {% else %}
+              <!-- ****************** questions ******************* <br/> -->
+              {% include 'questions.html' %}
+              {% endif %}  <!-- end outer group -->
+            {% endfor %}
           </ol>
-<!-- **********end inner group level items********** -->
+<!-- ********** end  group level items********** -->
 
 <!-- iterate through all the questions outside the group level - at the root level -->
 
-<!-- display items -->
+<!-- ************** display items ***************** -->
       {% elif i.type == "display" and i.extension %}
         <li style = 'color: grey;' id='{{i.linkId}}'>{{i.prefix|default('', true)}}{{i.text}} (Hidden text: extension {{i.extension[0].url}} = true)</li>
         <br />
@@ -61,7 +72,7 @@
       <li id='{{i.linkId}}'><strong>{{i.prefix|default('', true)}}{{i.text}}</strong></li>
       <br />
 
-<!-- questions -->
+<!-- ****************** questions ******************* -->
     {% else %}
         {% set j = i %}
         {% include 'questions.html' %}
@@ -69,7 +80,7 @@
 
 
 
-    {% endif %}  <!-- end outer group -->
+    {% endif %}  <!-- end root -->
 
   <br /><br /><hr /><br />
 

@@ -1,27 +1,56 @@
-<p>
-  This application uses the <i>{{ref_server_name}}</i> FHIR reference implementation at <code>{{ref_server}}</code> as the Assessment Bank.</p>
+<p  style="background-color: #eff0f1; border: 1px solid #aaa; padding: 10px;">
+   This Page lists the questionnaires to be completed. New questionnaires can be submitted by POSTing to the application's <code>/Task</code> endpoint using the following JSON payload:
+   <br/><br/>
+   <code>
+    {"task": "[URL to CDex Task Resource]"}
+   </code>
+<br/><br/>
+For example: 
+<br/><br/>
+<code>
+  {"task": "https://cdex-provider-server.davinci.hl7.org/fhir/Task/118"}
+ </code>
+ <br/><br/>
+<a href="https://build.fhir.org/ig/HL7/davinci-ecdx/requesting-attachments-questionnaire.html">CDex's Requesting Attachments Using Questionnaires</a> describes the technical workflow of the DTR app that this app is simulating.
 
-<h4>Example Questionnaires available for testing:</h4>
+In a future version, this app will follow the SMART on FHIR launch and get the Questionnaires after it is launched</p>
+
+
+
+<h4>Questionnaires to be completed:</h4>
 <em>NOTE: These examples are for educational and testing purposes, see the form copyright statement and do not redistribute without expressed permission from the form author.</em>
+<br /><br />
+
 <form name="myForm" action='{{url_for('q_view') }}' method="post">
-  <!-- <input type="radio" name="options" id="option1" value="{{ ref_server }}Questionnaire/eTAtxwTlJcwLaR-aif62yGg3" required> Rand 36-Item Health Survey 1.0</input><br>
+
+{% for row in q_list %}
+
+<input type="radio" name="options" id="row[0]" value="{{row[0]}}" required>{{row[0]}} - {{row[3]}} (<em>(From Task: {{row[1]}}</em>)</input><br>
+
+<!-- add a link to view the Task -->
+
+{% endfor %}
+
+
+
+  <!-- examples
+  <input type="radio" name="options" id="option1" value="{{ ref_server }}Questionnaire/eTAtxwTlJcwLaR-aif62yGg3" required> Rand 36-Item Health Survey 1.0</input><br>
   <input type="radio" name="options" id="option1" value="{{ ref_server }}Questionnaire/questionnaire-example-audit" required> The Alcohol Use Disorder Identification Test (AUDIT) Form</input><br>
-  <input type="radio" name="options" id="option2" value="{{ ref_server }}Questionnaire/questionnaire-example-asq3"> Ages and Stages Questionnaire (ASQ-3) Sample 16 Month Questionnaire</input><br> -->
-  <input type="radio" name="options" id="option1" value="{{ ref_server }}Questionnaire/questionnaire-example-audit-c"> Alcohol Use Disorder Identification Test - Consumption [AUDIT-C] Form</input><br>
+  <input type="radio" name="options" id="option2" value="{{ ref_server }}Questionnaire/questionnaire-example-asq3"> Ages and Stages Questionnaire (ASQ-3) Sample 16 Month Questionnaire</input><br>
+  <input type="radio" name="options" id="option1" value="{{ ref_server }}Questionnaire/38"> Home Oxygen Therapy Questionnaire</input><br>
   <input type="radio" name="options" id="option3" value="{{ ref_server }}Questionnaire/questionnaire-example-dast"> Drug Abuse Screening Test (DAST-10)</input><br>
   <input type="radio" name="options" id="option4" value="{{ ref_server }}Questionnaire/questionnaire-example-housing"> Housing Instability Questionnaire</input><br>
   <input type="radio" name="options" id="option5" value="{{ ref_server }}Questionnaire/questionnaire-example-phq9"> Patient Health Questionnaire-9 (PHQ-9)</input><br>
-  <input type="radio" name="options" id="option6" value="{{ ref_server }}Questionnaire/questionnaire-example-sampler" required>Argonaut Questionnaire Sampler</input><br>
+  <input type="radio" name="options" id="option6" value="{{ ref_server }}Questionnaire/questionnaire-example-sampler" required>Argonaut Questionnaire Sampler</input><br>-->
 
 <!-- ===========not available in 3.4 for AWS deployment
 <br />
 <input type="checkbox" name="translate" value="es"> Spanish Language Version
--->
+
 
 <br /><br />
-<input type="checkbox" name="adaptive" value="Questionnaire presented as Adaptive Questionnaire"><strong>Questionnaire presented as Adaptive Questionnaire</strong>
+<input type="checkbox" name="adaptive" value="Questionnaire presented as Adaptive Questionnaire"><strong>Questionnaire presented as Adaptive Questionnaire</strong>-->
 
 <br /><br />
-
-<input type="submit" value="Submit" style="color:blue;font-size:150%;"/>
+<input type="submit" value="Fill out Questionnaire" style="color:blue;font-size:150%;"/>
 </form>

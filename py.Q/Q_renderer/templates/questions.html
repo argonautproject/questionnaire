@@ -1,15 +1,15 @@
-<!--display items-->
+<!-- ======display items====== -->
 {% if j.type == "display"%}
 <li id='{{j.linkId}}'><strong>{{j.prefix|default('', true)}}{{j.text}}</strong>{{ get_hidden(j)|default('') }}{{ get_readonly(j)|default('') }}</li>
 <br />
 
-<!-- questions -->
+<!-- ===== questions ===== -->
 {% else %}
   <li id='{{j.linkId}}'><strong>{{j.prefix|default('', true)}}</strong>  {{j.text}}{{ get_hidden(j)|default('') }}{{ get_readonly(j)|default('') }}</li>
   <br />
   <!--multiple choice question -->
-  {% if (j.type == "choice" or j.type == "open-choice") and j.option %}
-       {%if j.repeats %}
+  {% if (j.type == "choice" or j.type == "open-choice") and j.answerOption %}
+       {% if j.repeats %}
         {{ anyof_type(j) }}  <!--any of macro -->
        {% else %}
         {{ choice_type(j) }}  <!--one of macro -->

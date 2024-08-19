@@ -62,11 +62,11 @@
 
 
 {% macro choice_type(j) %}
-  {% for k in j.option %}
+  {% for k in j.answerOption %}
      {% if k.valueCoding %}
-       <input type='radio' name='{{j.linkId}}' value='{{k.valueCoding.display}}|{{k.valueCoding.system}}|{{k.valueCoding.code}}' {{ is_required(j) }}/>{{ k.valueCoding.display}} {{ get_score(k)|default('') }}  <br />
+       <input type='radio' name='{{j.linkId}}' value='{{k.valueCoding.display}}|{{k.valueCoding.system}}|{{k.valueCoding.code}}' {{ is_required(j) }}/>{{ k.valueCoding.display}} {{get_score(k)}}  <br />
     {% else %}
-        <input type='radio' name='{{j.linkId}}' value='{{k.valueString}}' {{ is_required(j) }}/>{{k.valueString}} {{ get_score(k)|default('') }} <br />
+        <input type='radio' name='{{j.linkId}}' value='{{k.valueString}}' {{ is_required(j) }}/>{{k.valueString}} {{ get_score(k)}} <br />
     {% endif %}
   {% endfor %}
   {% if j.type == 'open-choice' %}
@@ -76,7 +76,7 @@
 
 
 {% macro anyof_type(j) %}
-    {% for k in j.option %}
+    {% for k in j.answerOption %}
       <!-- on the item - for codings -->
       {% if k.valueCoding %}
          <input type='checkbox' name='{{j.linkId}}' value='{{k.valueCoding.display}}|{{k.valueCoding.system}}|{{k.valueCoding.code}}'{{ is_required(j) }} />{{ k.valueCoding.display}} {{ get_score(k)|default('') }} {{get_exclusive(k)}}<br />

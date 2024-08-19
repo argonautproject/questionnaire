@@ -4,6 +4,7 @@
 <h3>{{qr_id}} status = {{r.status_code}} </h3>
 {% if r.status_code < 300 %}
 <h3>Posted to the Answer Bank: <i>{{ref_server_name}}</i> FHIR reference implementation at <code>{{r.headers['Location']}}</code>
+{% else %} <span style='font-size:100px;'>&#128533;</span>
 {% endif %}
 
 <h4>Headers:</h4>
@@ -14,14 +15,9 @@
 <li>Content-Length: {{r.headers['Content-Length']}}</li>
 </ul>
 
-{% if r.status_code >= 300 %}
-{{r.json()}}
-{% endif %}
-
 <hr />
-<h3>Posted QuestionnaireResponse</h3>
+<h3>Post Response Body</h3>
 <pre style="white-space: pre-wrap;">
-<!-- {{qr_string}} -->
 {{posted_qr}}
 </pre>
 {% endblock %}

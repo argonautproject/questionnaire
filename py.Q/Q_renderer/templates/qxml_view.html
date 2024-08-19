@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- Q content -->
+
+<!-- as form --->
+<a href="{{ url_for("q_view") }}"><strong>Questionnaire presented as Form</strong></a>
+<!-- end as form  -->
+
+{% if q %}
+<pre>
+{{q}}
+</pre>
+{% endif %}
+{% endblock %}
+<!-- End Q content ---->

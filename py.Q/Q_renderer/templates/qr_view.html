@@ -12,6 +12,7 @@
 
 <img src="static/images/Slide{{ session['step'] }}.png">
 
+
 {% endif %}
 <!-- just show the narrative -->
 
@@ -20,7 +21,7 @@
 <hr />
 <h3>Resulting QuestionnaireResponse</h3>
 <pre style="white-space: pre-wrap;">
-{{qr_string}}
+{{qr.json(indent=4)}}
 </pre>
 
 {% endblock %}
